@@ -17,7 +17,8 @@
   ],
   "notification_subscribers": [
     "jocontr@microsoft.com",
-    " martinek@microsoft.com"
+    " martinek@microsoft.com",
+    " jasonr@microsoft.com"
   ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
