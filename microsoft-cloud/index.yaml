@@ -1,4 +1,5 @@
-### YamlMime:Marketing
+### YamlMime:Hub
+
 title: Microsoft Cloud Hub
 
 metadata:
@@ -14,250 +15,21 @@ metadata:
   ms.author: dwahlin 
   ms.date: 02/02/2023 
 
-sections:
-  # Learn hero
-  - componentType: hero-learn
-    supertitle: Microsoft Cloud Hub
-    title: Microsoft Cloud Hub
-    summary: "Dive deep into the Microsoft Cloud with sample architectures, best practices, and interactive tutorials. Find programs that help build your career and meet your organizational needs."
-    heroImage: 
-      componentType: hero-image
-      lightImageSrc: /media/student-hub-hero_light.png
-      darkImageSrc: /media/student-hub-hero_dark.png
+# highlightedContent section (Optional; Remove if not applicable.)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: cardtitle1
+      itemType: tutorial
+      url: https://microsoft.com
+    # Card
+    - title: cardtitle2
+      itemType: tutorial
+      url: https://microsoft.com
+    # Card
+    - title: cardtitle3
+      itemType: tutorial
+      url: https://microsoft.com
 
-  # Summary card grid - Microsoft Cloud Building Blocks
-  - componentType: grid
-    backgroundColor: "alternating-grey"
-    title: Microsoft Cloud building blocks
-    blocks:
-      - componentType: icon-card
-        title: "Build applications on the Microsoft Cloud"
-        summary: "Learn how you can build and deploy applications on the Microsoft Cloud."
-        url: "https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-      - componentType: icon-card
-        title: "Azure"
-        summary: "Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more."
-        url: "https://learn.microsoft.com/azure"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-      - componentType: icon-card
-        title: "Github"
-        summary: "Learn how to start building, shipping, and maintaining software with GitHub.​"
-        url: "https://docs.github.com"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/azure-devops-devtest-labs.svg" 
-      - componentType: icon-card
-        title: "Microsoft 365"
-        summary: "Find the solutions, scenarios, and resources you need to get started with Microsoft 365 for your business or organization.​"
-        url: "https://learn.microsoft.com/microsoft-365"
-        icon:
-          componentType: image
-          src: "/media/Office_256x256.png" 
-      - componentType: icon-card
-        title: "Power Platform"
-        summary: "Learn how to quickly and easily build custom apps using Power Apps, automate workflows to improve business productivity using Power Automate, analyze data for insights using Power BI, rapidly design, configure, and publish modern websites using Power Pages, and build intelligent bots with a no-code interface using Power Virtual Agents.​"
-        url: "https://learn.microsoft.com/power-platform/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/understand-concepts-of-data-analytics.svg"
-
-  # Summary card grid - Microsoft Cloud Hands-On Tutorials 
-  - componentType: grid
-    backgroundColor: "alternating-grey"
-    title: Microsoft Cloud hands-on tutorials
-    blocks:
-      - componentType: icon-card
-        title: "Audio/Video Calling from a Custom App into a Teams Meeting"
-        summary: "Learn how Azure Communication Services can be used in a custom application to allow a user to make an audio/video call into a Microsoft Teams meeting."
-        url: "https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-      - componentType: icon-card
-        title: "Automate Data Reporting with Azure Functions and Power Automate"
-        summary: "Learn how to migrate a local Node.js script to Azure Functions using Visual Studio Code so that data can be retrieved more easily for reporting purposes.​"
-        url: "https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/azure-devops-devtest-labs.svg" 
-      - componentType: icon-card
-        title: "Build Productivity Apps by using Microsoft Graph Toolkit"
-        summary: "The One Productivity Hub tutorial shows you how to build a tab for viewing your calendar events, to-do tasks and files by using Microsoft Graph Toolkit components and TeamsFx Provider.​"
-        url: "https://learn.microsoft.com/en-us/graph/toolkit/get-started/building-one-productivity-hub"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg" 
-      - componentType: icon-card
-        title: "Data Analyst"
-        summary: "You make data easy to understand through designing and building data models to drive meaningful business value.​"
-        url: "https://learn.microsoft.com/training/roles/data-analyst"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/understand-concepts-of-data-analytics.svg"
-    addendum:
-      text: Explore 
-      link:
-        text: all learning paths and modules
-        url: https://learn.microsoft.com/en-us/training/browse/?terms=microsoft%20cloud
-  # Summary card grid - Student Learn Modules 
-  - componentType: grid
-    backgroundColor: "alternating-grey"
-    title: Microsoft Cloud critical area guides 
-    blocks:
-      - componentType: icon-card
-        title: "Industry"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/paths/machine-learning-foundations-using-data-science/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com//training/achievements/machine-learning/machine-learning-foundations-using-data-science.svg"
-      - componentType: icon-card
-        title: "Digital and App Innovation"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/modules/web-development-101-introduction-programming/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/student-evangelism/web-development-101-introduction.svg"
-      - componentType: icon-card
-        title: "Security"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/paths/beginner-python"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/beginner-python.svg"
-      - componentType: icon-card
-        title: "Microsoft Azure Fundamentals: Describe core Azure concepts"
-        summary: "With Azure fundamentals, you learn basic cloud concepts, get an overview of Azure services, and deploy your first free service using hands on exercises."
-        url: "https://learn.microsoft.com/training/paths/az-900-describe-cloud-concepts/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/intro-to-azure-fundamentals.svg"
-    addendum:
-      text: Explore
-      link:
-        text: all student learning paths and modules
-        url: /training/browse/?roles=student 
-  # Summary card grid - Career Preperation
-  - componentType: grid
-    backgroundColor: "alternating-grey"
-    title: How to jumpstart your career
-    blocks:
-      - componentType: icon-card
-        title: "1. How to get noticed"
-        summary: "This module offers Learn helpful tips and strategies to get noticed by prospective employers and landing a job in tech."
-        url: "https://learn.microsoft.com/training/modules/career-get-noticed/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/student-evangelism/career-get-noticed.svg" 
-      - componentType: icon-card
-        title: "2. Successful interviewing"
-        summary: "Learn how to prepare for technical and nontechnical interviews. You'll also get recommendations on how to best carry out an interview.​"
-        url: "https://learn.microsoft.com/training/modules/career-interview/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/student-evangelism/career-interview.svg" 
-      - componentType: icon-card
-        title: "3. From intern to full-time position"
-        summary: "Learn strategies to growth-hack your career to ensure that you'll get an offer to join the company full-time after the internship is over.​"
-        url: "https://learn.microsoft.com/training/modules/career-growth/"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/student-evangelism/career-growth.svg" 
-      - componentType: icon-card
-        title: "4. Microsoft Learn Career Connected"
-        summary: "Let us help you get the skills you need, meet the employers that are hiring through our LinkedIn private group, and get the job you want.​"
-        url: "https://learn.microsoft.com/en-gb/training/career-paths/career-connected"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/start-career-in-tech.svg"
-    addendum:
-      text: Explore 
-      link:
-        text: careers at Microsoft
-        url: "https://careers.microsoft.com/students/"
-  # cards section (3) - Student Hub Offers
-  - componentType: cards
-    isShadowless: true
-    backgroundColor: "alternating-grey"
-    title: More free resources
-    blocks:
-      - componentType: card
-        title: "Github Codespaces"
-        summary: "The Codespaces primer will guide you through the process of running, testing, debugging, and pushing code with this instant cloud developer environment by providing templates, videos, and step-by-step guides."
-        imageUrl: /training/media/student-hub/GH-SC-New.png
-        url: "https://education.github.com/experiences/primer_codespaces"
-      - componentType: card
-        title: Student Certifications
-        summary: "Build technical skills and prove your commitment to learning the latest technologies when you earn Microsoft Certifications, which are free to all eligible students!"
-        imageUrl: /training/media/student-hub/ms-kickstart-freeoffer_579x324_f.png
-        url: "https://learn.microsoft.com/training/student-hub/certifications"
-      - componentType: card
-        title: Azure for Students
-        summary: "Build in the cloud free with Azure for Students."
-        imageUrl: /training/media/student-hub/azure-fundamentals.png
-        url: "https://azure.microsoft.com/free/students/"
-      - componentType: card
-        title: GitHub Student Developer Pack
-        summary: "As a student, you can get offers and benefits from GitHub partners."
-        imageUrl: /training/media/student-hub/backpack.png
-        url: "https://education.github.com/pack"
-      - componentType: card
-        title: Visual Studio Code
-        summary: "Popular among students, this code editor has been redefined and optimized for building and debugging modern web and cloud applications."
-        imageUrl: /training/media/student-hub/introducing-vs-code.png
-        url: "https://code.visualstudio.com/"
-  # cards section (4) - Student Engagement
-  - componentType: cards
-    isShadowless: true
-    backgroundColor: "alternating-grey"
-    title: Stay connected to the Microsoft student developer community
-    blocks:     
-      - componentType: card
-        title: Imagine Cup
-        summary: "Register now to collaborate, code, and compete in this global student technology competition that encourages students to make a difference in the world through tech."
-        imageUrl: /training/media/student-hub/IC23-DreamIt-Register.png
-        url: https://imaginecup.microsoft.com/
-      - componentType: card
-        title: Microsoft Learn Student Ambassadors
-        summary: "Amplify your impact and bring together your peers to learn new skills, solve real-world problems, and build communities across the globe."
-        imageUrl: /training/media/student-hub/learn-student-ambassadors.png
-        url: https://studentambassadors.microsoft.com/
-      - componentType: card
-        title: Microsoft Reactor
-        summary: "Whether you’re building your career or your next amazing idea, connect with the developers and startups that share your goals.  Learn new skills, meet new peers, and find career mentorship."
-        imageUrl: /training/media/student-hub/reactor.png
-        url: https://developer.microsoft.com/reactor/
-      - componentType: card
-        title: Microsoft for Startups Founders Hub
-        summary: "A digital platform that provides all founders, at any stage, with free resources to build a successful startup. Sign up today to get Azure credits, access to mentors and experts, dev tools, software and more. Open to all."
-        imageUrl: /training/media/student-hub/MS_Startups_FH_Crosspromo_Image_579x324_RGB_V1b.png
-        url: https://www.microsoft.com/startups?rtc=1&WT.mc_id=mfs_1p-site_students/
-      - componentType: card
-        title: Windows Insider Program for Student Ambassadors
-        summary: "As a Microsoft Learn Student Ambassador, join Windows Insider Program to enjoy exclusive benefits, including digital swags that are designed for you."
-        imageUrl: /training\media\student-hub\579x324_WIP & Student Ambassador_GearUp.png
-        url: https://insider.windows.com/studentambassadors?utm_source=microsoft-learn&utm_medium=student-hub&utm_campaign=wip_sa&utm_content=community
-   # social section
-  - componentType: social
-    title: Follow us on the web
-    links:
-      - componentType: social-link
-        url: https://www.facebook.com/MSFTImagine
-        destination: facebook
-      - componentType: social-link
-        url: https://twitter.com/MSFTImagine
-        destination: twitter
-      - componentType: social-link
-        url: https://www.linkedin.com/groups/13893743/
-        destination: linkedin
-      - componentType: social-link
-        url: https://www.instagram.com/microsoftimaginecup/
-        destination: instagram
-      - componentType: social-link
-        url: https://www.youtube.com/@MSFTImagine
-        destination: youtube
