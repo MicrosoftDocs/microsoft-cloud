@@ -4,7 +4,8 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -25,7 +26,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -46,6 +48,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "microsoft-cloud"
+    "dest": "microsoft-cloud",
+    "markdownEngineName": "markdig"
   }
 }
