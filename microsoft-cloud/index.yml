@@ -43,7 +43,7 @@ sections:
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
     backgroundColor: "alternating-grey"
-    title: Microsoft Cloud building blocks
+    title: Microsoft Cloud foundations
     blocks:
       - componentType: icon-card
         title: "Azure"
