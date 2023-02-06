@@ -46,13 +46,6 @@ sections:
     title: Microsoft Cloud building blocks
     blocks:
       - componentType: icon-card
-        title: "Build applications on the Microsoft Cloud"
-        summary: "Learn how you can build and deploy applications on the Microsoft Cloud."
-        url: "https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-      - componentType: icon-card
         title: "Azure"
         summary: "Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more."
         url: "https://learn.microsoft.com/azure"
