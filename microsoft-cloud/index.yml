@@ -25,6 +25,21 @@ sections:
       lightImageSrc: /microsoft-cloud/media/student-hub-hero_light.png
       darkImageSrc: /microsoft-cloud/media/student-hub-hero_dark.png
 
+  # bifold with image and text blocks - ME
+  - componentType: bifold
+    alignment: center
+    blocks:
+      - src: /microsoft-cloud/media/build-apps-on-microsoft-cloud.png
+        alt: Build applications on the Microsoft Cloud
+        componentType: image
+      - title: "Build applications on the Microsoft Cloud"
+        summary: "The Microsoft Cloud provides a unified collection of services for creating applications. Enterprise application development leaders can combine these services to deliver more value in less time with better security. This guide describes the big picture of Microsoft Cloud from an application development perspective, focusing on what leaders must do to be successful."
+        componentType: text
+        links:
+          - componentType: link
+            url: "/azure/architecture/guide/microsoft-cloud/overview"
+            text: View
+
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
     backgroundColor: "alternating-grey"
