@@ -22,8 +22,8 @@ sections:
     summary: "Dive deep into the Microsoft Cloud with sample architectures, best practices, and interactive tutorials. Find programs that help build your career and meet your organizational needs."
     heroImage: 
       componentType: hero-image
-      lightImageSrc: /microsoft-cloud/media/student-hub-hero_light.png?branch=pr-en-us-2
-      darkImageSrc: /microsoft-cloud/media/student-hub-hero_dark.png?branch=pr-en-us-2
+      lightImageSrc: /microsoft-cloud/media/student-hub-hero_light.png
+      darkImageSrc: /microsoft-cloud/media/student-hub-hero_dark.png
 
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
