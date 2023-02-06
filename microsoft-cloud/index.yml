@@ -57,7 +57,7 @@ sections:
         url: "https://learn.microsoft.com/microsoft-365"
         icon:
           componentType: image
-          src: "/media/Office_256x256.png" 
+          src: "/microsoft-cloud/media/Office_256x256.png" 
       - componentType: icon-card
         title: "Power Platform"
         summary: "Learn how to quickly and easily build custom apps using Power Apps, automate workflows to improve business productivity using Power Automate, analyze data for insights using Power BI, rapidly design, configure, and publish modern websites using Power Pages, and build intelligent bots with a no-code interface using Power Virtual Agents.​"
