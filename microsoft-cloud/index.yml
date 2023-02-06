@@ -101,9 +101,9 @@ sections:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg" 
       - componentType: icon-card
-        title: "Data Analyst"
-        summary: "You make data easy to understand through designing and building data models to drive meaningful business value.​"
-        url: "https://learn.microsoft.com/training/roles/data-analyst"
+        title: "Discover and use Web APIs with Power Apps"
+        summary: "Has your organization developed a web API and need to use it within a Power Apps application? In this module, you'll learn how you can build custom connectors to have your Power Apps applications interact with your web APIs.​"
+        url: "/training/modules/discover-web-apis-power-apps"
         icon:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/understand-concepts-of-data-analytics.svg"
@@ -118,38 +118,38 @@ sections:
     title: Microsoft Cloud critical area guides 
     blocks:
       - componentType: icon-card
-        title: "Industry"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/paths/machine-learning-foundations-using-data-science/"
+        title: "Industry Clouds"
+        summary: "Learn about the solutions, guidance, and resources available for your industry from Microsoft, including information about the Microsoft Clouds for Healthcare, Financial Services, Retail, Manufacturing, Nonprofit, and Sustainability."
+        url: "/industry"
         icon:
           componentType: image
           src: "https://learn.microsoft.com//training/achievements/machine-learning/machine-learning-foundations-using-data-science.svg"
       - componentType: icon-card
-        title: "Digital and App Innovation"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/modules/web-development-101-introduction-programming/"
+        title: "Digital & App Innovation"
+        summary: "Digital and application innovation drive business outcomes. The ability to deliver differentiated and flexible customer experiences, improve teamwork and well-being, and adapt and scale to new business models and ways of working will determine your organization's success. Build your next stage of growth with the advantage of a complete cloud innovation ecosystem on Azure."
+        url: "/training/topics/digital-and-app-innovation"
         icon:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/student-evangelism/web-development-101-introduction.svg"
       - componentType: icon-card
         title: "Security"
-        summary: "..."
-        url: "https://learn.microsoft.com/training/paths/beginner-python"
+        summary: "Technical guidance to help security professionals build and implement cybersecurity strategy, architecture, and prioritized roadmaps"
+        url: "/security/"
         icon:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/beginner-python.svg"
       - componentType: icon-card
-        title: "Microsoft Azure Fundamentals: Describe core Azure concepts"
+        title: "Infrastructure"
         summary: "With Azure fundamentals, you learn basic cloud concepts, get an overview of Azure services, and deploy your first free service using hands on exercises."
         url: "https://learn.microsoft.com/training/paths/az-900-describe-cloud-concepts/"
         icon:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/intro-to-azure-fundamentals.svg"
-    addendum:
-      text: Explore
-      link:
-        text: all student learning paths and modules
-        url: /training/browse/?roles=student 
+    # addendum:
+    #   text: Explore
+    #   link:
+    #     text: all student learning paths and modules
+    #     url: /training/browse/?roles=student 
 
   # Summary card grid - Career Preperation
   - componentType: grid
