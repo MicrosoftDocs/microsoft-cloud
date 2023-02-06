@@ -38,7 +38,7 @@ sections:
         links:
           - componentType: link
             url: "/azure/architecture/guide/microsoft-cloud/overview"
-            text: View
+            text: View Document
 
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
