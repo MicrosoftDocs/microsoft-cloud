@@ -1,4 +1,4 @@
-### YamlMime:Marketing
+### YamlMime:Hub
 title: Microsoft Cloud Hub
 
 metadata:
@@ -40,7 +40,7 @@ sections:
             url: "/azure/architecture/guide/microsoft-cloud/overview"
             text: View Document
 
-  - productDirectory:
+  - componentType: productDirectory
     title: Browse Azure products
     items:
       # Card
