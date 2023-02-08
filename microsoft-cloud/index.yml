@@ -24,10 +24,10 @@ sections:
       componentType: hero-image
       lightImageSrc: /microsoft-cloud/media/student-hub-hero_light.png
       darkImageSrc: /microsoft-cloud/media/student-hub-hero_dark.png
-    links:
-      - componentType: link
-        url: "/azure/architecture/guide/microsoft-cloud/overview"
-        text: View Document
+    # links:
+    #   - componentType: link
+    #     url: "/azure/architecture/guide/microsoft-cloud/overview"
+    #     text: View Document
 
   # bifold with image and text blocks - ME
   - componentType: bifold
