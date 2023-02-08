@@ -52,10 +52,6 @@ sections:
         icon:
           componentType: image
           src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-        links:
-          - componentType: link
-            url: "/azure/architecture/guide/microsoft-cloud/overview"
-            text: View Document
       - componentType: icon-card
         title: "Github"
         summary: "Learn how to start building, shipping, and maintaining software with GitHub.​"
