@@ -40,16 +40,19 @@ sections:
             url: "/azure/architecture/guide/microsoft-cloud/overview"
             text: View Document
 
-  - componentType: productdirectory
-    title: Browse Azure products
-    items:
-      # Card
-      - title: Azure Percept
-        summary: Edge intelligence from silicon to service
-        imageSrc: ./media/index/azure-percept.svg
-        azureCategories:
-          - iot
-        url: azure-percept/index.yml
+  - componentType: grid
+    title: Testing
+    blocks:
+      - componentType: productdirectory
+        title: Browse Azure products
+        items:
+          # Card
+          - title: Azure Percept
+            summary: Edge intelligence from silicon to service
+            imageSrc: ./media/index/azure-percept.svg
+            azureCategories:
+              - iot
+            url: azure-percept/index.yml
 
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
