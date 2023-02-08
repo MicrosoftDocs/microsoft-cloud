@@ -40,7 +40,7 @@ sections:
             url: "/azure/architecture/guide/microsoft-cloud/overview"
             text: View Document
 
-  - componentType: product-directory
+  - componentType: productdirectory
     title: Browse Azure products
     items:
       # Card
