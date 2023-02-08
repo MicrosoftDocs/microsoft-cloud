@@ -41,6 +41,7 @@ sections:
             text: View Document
 
   - componentType: grid
+    backgroundColor: "alternating-grey"
     title: Testing
     blocks:
       - componentType: productdirectory
