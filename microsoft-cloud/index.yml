@@ -18,7 +18,7 @@ sections:
   # Hero
   - componentType: hero-learn
     supertitle: Microsoft Cloud Hub
-    title: Microsoft Cloud Hub
+    title: Microsoft Cloud for Developers
     summary: "Dive deep into the Microsoft Cloud with sample architectures, best practices, and interactive tutorials. Find programs that help build your career, meet your organizational needs, and help you Build applications on the Microsoft Cloud."
     heroImage: 
       componentType: hero-image
