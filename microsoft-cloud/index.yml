@@ -40,28 +40,6 @@ sections:
             url: "/azure/architecture/guide/microsoft-cloud/overview"
             text: View Document
 
-  - componentType: grid
-    backgroundColor: "alternating-grey"
-    title: Testing
-    blocks:
-      - componentType: icon-card
-        title: "Azure"
-        summary: "Learn how to build and manage powerful applications using Microsoft Azure cloud services. Get documentation, example code, tutorials, and more."
-        url: "https://learn.microsoft.com/azure"
-        icon:
-          componentType: image
-          src: "https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg" 
-      # - componentType: productdirectory
-      #   title: Browse Azure products
-      #   items:
-      #     # Card
-      #     - title: Azure Percept
-      #       summary: Edge intelligence from silicon to service
-      #       imageSrc: ./media/index/azure-percept.svg
-      #       azureCategories:
-      #         - iot
-      #       url: azure-percept/index.yml
-
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
     backgroundColor: "alternating-grey"
