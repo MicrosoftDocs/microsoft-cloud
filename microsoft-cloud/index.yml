@@ -90,5 +90,46 @@ tools:
       url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
     # Card
     - title: Discover and use Web APIs with Power Apps
-      imageSrc: https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg
+      imageSrc: https://learn.microsoft.com/training/achievements/understand-concepts-of-data-analytics.svg
       url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+
+# additionalContent section (Optional; Remove if not applicable.)
+# Card with summary style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: Microsoft Cloud critical area guides
+      summary: Help your organization reach its full potential by relying on an integrated and open cloud platform that spans six critical areas—security, infrastructure, digital and app innovation, data and AI, business applications, and modern work.
+      items:
+        # Card
+        - title: Industry Clouds
+          summary: Learn about the solutions, guidance, and resources available for your industry from Microsoft, including information about the Microsoft Clouds for Healthcare, Financial Services, Retail, Manufacturing, Nonprofit, and Sustainability.
+          url: https://learn.microsoft.com/industry
+        # Card
+        - title: Digital & App Innovation
+          summary: Digital and application innovation drive business outcomes. The ability to deliver differentiated and flexible customer experiences, improve teamwork and well-being, and adapt and scale to new business models and ways of working will determine your organization's success. Build your next stage of growth with the advantage of a complete cloud innovation ecosystem on Azure.
+          url: https://learn.microsoft.com/training/topics/digital-and-app-innovation
+        # Card
+        - title: Security
+          summary: Technical guidance to help security professionals build and implement cybersecurity strategy, architecture, and prioritized roadmaps
+          url: https://learn.microsoft.com/security
+        # Card
+        - title: Infrastructure
+          summary: Improve time-to-value and reduce costs with the most complete tech stack from cloud to edge. Build, monitor, and manage your critical infrastructure using trusted Microsoft cloud technology.
+          url: https://learn.microsoft.com/security
+        # Card
+        - title: Digital and App Innovation
+          summary: Elevate and enhance every stage of software development.​
+          url: https://learn.microsoft.com/security
+        # Card
+        - title: Data and AI
+          summary: Maximize the value of your data with the Microsoft Intelligent Data Platform, a comprehensive platform for databases, analytics, and data governance.​
+          url: https://learn.microsoft.com/security
+        # Card
+        - title: Business Applications
+          summary: Empower exceptional customer experiences and operational agility with applications that unite people, insights, and processes across every line of business.
+          url: https://learn.microsoft.com/security
+        # Card
+        - title: Modern Work
+          summary: Empower team members to focus on, build, share, and protect their most important ideas so that they can make the greatest impact possible from anywhere, on any device.
+          url: https://learn.microsoft.com/security
