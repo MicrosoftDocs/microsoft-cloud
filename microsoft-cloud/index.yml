@@ -16,6 +16,14 @@ metadata:
   ms.author: dwahlin 
   ms.date: 02/02/2023 
 
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Build applications on the Microsoft Cloud
+      itemType: get-started
+      url: https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview
+
 productDirectory:
   title: The Microsoft Cloud
   items:
