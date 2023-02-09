@@ -77,7 +77,7 @@ productDirectory:
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   title: Microsoft Cloud Resources
-  summary: Hands-on tutorials, videos, and tooling
+  summary: Hands-on tutorials, videos, and code samples.
   items:
       - title: Hands-on Tutorials
         links:
