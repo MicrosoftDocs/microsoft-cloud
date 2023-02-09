@@ -25,11 +25,11 @@ productDirectory:
       imageSrc: ./media/azure-blue.svg
       links:
         - url: https://learn.microsoft.com/azure
-          text: Azure Services Documentation
+          text: Azure Services
         - url: https://learn.microsoft.com/azure/architecture/
           text: Azure Architecture Center
         - url: https://learn.microsoft.com/azure/governance/blueprints/
-          text: Azure Blueprints Documentation
+          text: Azure Blueprints
         - url: https://learn.microsoft.com/azure/architecture/framework/
           text: Azure Well-Architected Framework
     # Card
@@ -51,20 +51,20 @@ productDirectory:
       imageSrc: ./media/microsoft-365.svg
       links:
         - url: https://learn.microsoft.com/microsoft-365
-          text: Microsoft 365 Documentation
+          text: Microsoft 365
         - url: https://learn.microsoft.com/graph
-          text: Microsoft Graph Documentation
+          text: Microsoft Graph
         - url: https://learn.microsoft.com/en-us/microsoftteams/platform
-          text: Microsoft Teams Developer Documentation
+          text: Microsoft Teams Developer
         - url: https://learn.microsoft.com/sharepoint/dev
-          text: SharePoint Developer Documentation
+          text: SharePoint Developer
     # Card
     - title: Power Platform
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/powerapps.svg
       links:
         - url: https://learn.microsoft.com/power-platform
-          text: Power Platform Documentation
+          text: Power Platform
         - url: https://powerplatform.microsoft.com/training-workshops/
           text: Power Platform In a Day Workshops
         - url: https://make.preview.powerapps.com/
