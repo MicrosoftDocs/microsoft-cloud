@@ -118,21 +118,13 @@ conceptualContent:
       - title: Sample Code
         links:
 
-        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
           itemType: download
-          url: https://www.youtube.com/watch?v=MXq-M6qRffE
+          url: https://github.com/microsoft/microsoftcloud
 
-        - text: All Things Microsoft Cloud - Power Platform
+        - text: Building Real-Time Collaborative Apps
           itemType: download
-          url: https://www.youtube.com/watch?v=z19QZwmy1yg
-       
-        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
-          itemType: download
-          url: https://mybuild.microsoft.com/en-US/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
-
-        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
-          itemType: download
-          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
+          url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
 tools:
   title: Microsoft Cloud Tooling
@@ -142,15 +134,18 @@ tools:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/github.svg
       url: https://docs.github.com/en/codespaces
+
     # Card
     - title: Visual Studio
       # imageSrc should be square in ratio with no white space
       imageSrc: ./visualstudio.svg
       url: https://learn.microsoft.com/visualstudio/windows
+
     # Card
     - title: Visual Studio Code
       imageSrc: ./media/vscode.svg
       url: https://code.visualstudio.com/docs
+      
     # Card
     - title: Visual Studio for Mac
       imageSrc: ./media/visualstudiomac.svg
