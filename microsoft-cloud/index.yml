@@ -99,7 +99,7 @@ additionalContent:
   # Supports up to 4 subsections
   sections:
     - title: Microsoft Cloud critical area guides
-      summary: Help your organization reach its full potential by relying on an integrated and open cloud platform that spans six critical areas—security, infrastructure, digital and app innovation, data and AI, business applications, and modern work.
+      summary: Help your organization reach its full potential by relying on an integrated and open cloud platform that spans critical areas — security, infrastructure, digital and app innovation, data and AI, business applications, and modern work.
       items:
         # Card
         - title: Industry Clouds
