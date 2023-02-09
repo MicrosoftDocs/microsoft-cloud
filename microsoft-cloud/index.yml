@@ -17,7 +17,7 @@ metadata:
   ms.date: 02/02/2023 
 
 productDirectory:
-  title: Microsoft Cloud foundations
+  title: Microsoft Cloud Foundations
   items:
     # Card
     - title: Azure
@@ -135,25 +135,26 @@ conceptualContent:
           url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
 
 tools:
-  title: Microsoft Cloud hands-on tutorials
+  title: Microsoft Cloud Tooling
   items:
     # Card
-    - title: Audio/Video Calling from a Custom App into a Teams Meeting
+    - title: GitHub Codespaces
       # imageSrc should be square in ratio with no white space
-      imageSrc: https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg
-      url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting
+      imageSrc: ./media/github.svg
+      url: https://docs.github.com/en/codespaces
     # Card
-    - title: Automate Data Reporting with Azure Functions and Power Automate
-      imageSrc: https://learn.microsoft.com/training/achievements/azure-devops-devtest-labs.svg
-      url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+    - title: Visual Studio
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./visualstudio.svg
+      url: https://learn.microsoft.com/visualstudio/windows
     # Card
-    - title: Build Productivity Apps by using Microsoft Graph Toolkit
-      imageSrc: https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg
-      url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+    - title: Visual Studio Code
+      imageSrc: ./media/vscode.svg
+      url: https://code.visualstudio.com/docs
     # Card
-    - title: Discover and use Web APIs with Power Apps
-      imageSrc: https://learn.microsoft.com/training/achievements/understand-concepts-of-data-analytics.svg
-      url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+    - title: Visual Studio for Mac
+      imageSrc: ./media/visualstudiomac.svg
+      url: https://learn.microsoft.com/en-us/visualstudio/mac
 
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
