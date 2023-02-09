@@ -25,10 +25,49 @@ productDirectory:
       imageSrc: ./media/azure-blue-1.svg
       links:
         - url: https://learn.microsoft.com/azure
-          text: Azure Services
+          text: Azure Services Documentation
         - url: https://learn.microsoft.com/azure/architecture/
           text: Azure Architecture Center
         - url: https://learn.microsoft.com/azure/governance/blueprints/
           text: Azure Blueprints Documentation
         - url: https://learn.microsoft.com/azure/architecture/framework/
           text: Azure Well-Architected Framework
+    # Card
+    - title: GitHub
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/github.svg
+      links:
+        - url: https://github.com/
+          text: Github.com
+        - url: https://docs.github.com/
+          text: GitHub Documentation
+        - url: https://docs.github.com/actions
+          text: GitHub Actions
+        - url: https://docs.github.com/copilot
+          text: GitHub Copilot
+    # Card
+    - title: Microsoft 365
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/microsoft-365.svg
+      links:
+        - url: https://learn.microsoft.com/microsoft-365
+          text: Microsoft 365 Documentation
+        - url: https://learn.microsoft.com/graph
+          text: Microsoft Graph Documentation
+        - url: https://learn.microsoft.com/en-us/microsoftteams/platform
+          text: Microsoft Teams Developer Documentation
+        - url: https://learn.microsoft.com/sharepoint/dev
+          text: SharePoint Developer Documentation
+    # Card
+    - title: Power Platform
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/powerapps.svg
+      links:
+        - url: https://learn.microsoft.com/power-platform
+          text: Power Platform Documentation
+        - url: https://powerplatform.microsoft.com/training-workshops/
+          text: Power Platform In a Day Workshops
+        - url: https://make.preview.powerapps.com/
+          text: Power Platform Sample Apps
+        - url: https://www.youtube.com/c/mspowerplatform
+          text: Power Platform Videos
