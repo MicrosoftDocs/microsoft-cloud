@@ -54,7 +54,7 @@ productDirectory:
           text: Microsoft 365
         - url: https://learn.microsoft.com/graph
           text: Microsoft Graph
-        - url: https://learn.microsoft.com/en-us/microsoftteams/platform
+        - url: https://learn.microsoft.com/microsoftteams/platform
           text: Microsoft Teams Developer
         - url: https://learn.microsoft.com/sharepoint/dev
           text: SharePoint Developer
@@ -71,3 +71,24 @@ productDirectory:
           text: Power Platform Sample Apps
         - url: https://www.youtube.com/c/mspowerplatform
           text: Power Platform Videos
+
+tools:
+  title: Microsoft Cloud hands-on tutorials
+  items:
+    # Card
+    - title: Audio/Video Calling from a Custom App into a Teams Meeting
+      # imageSrc should be square in ratio with no white space
+      imageSrc: https://learn.microsoft.com/training/achievements/machine-learning/machine-learning-essentials.svg
+      url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting
+    # Card
+    - title: Automate Data Reporting with Azure Functions and Power Automate
+      imageSrc: https://learn.microsoft.com/training/achievements/azure-devops-devtest-labs.svg
+      url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+    # Card
+    - title: Build Productivity Apps by using Microsoft Graph Toolkit
+      imageSrc: https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg
+      url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+    # Card
+    - title: Discover and use Web APIs with Power Apps
+      imageSrc: https://learn.microsoft.com/training/achievements/describe-azure-management-governance.svg
+      url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
