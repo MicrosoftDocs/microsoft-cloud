@@ -22,7 +22,7 @@ productDirectory:
     # Card
     - title: Azure
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/azure-blue-1.svg.svg
+      imageSrc: ./media/azure-blue-1.svg
       links:
         - url: https://learn.microsoft.com/azure
           text: Azure Services

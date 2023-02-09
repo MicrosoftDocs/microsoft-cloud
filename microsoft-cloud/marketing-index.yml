@@ -44,8 +44,6 @@ sections:
             url: "/azure/architecture/guide/microsoft-cloud/overview"
             text: View Document
 
-  - componentType: productDirectory
-
   # Summary card grid - Microsoft Cloud Building Blocks
   - componentType: grid
     backgroundColor: "alternating-grey"
