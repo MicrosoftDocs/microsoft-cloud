@@ -106,10 +106,6 @@ additionalContent:
           summary: Learn about the solutions, guidance, and resources available for your industry from Microsoft, including information about the Microsoft Clouds for Healthcare, Financial Services, Retail, Manufacturing, Nonprofit, and Sustainability.
           url: https://learn.microsoft.com/industry
         # Card
-        - title: Digital & App Innovation
-          summary: Digital and application innovation drive business outcomes. The ability to deliver differentiated and flexible customer experiences, improve teamwork and well-being, and adapt and scale to new business models and ways of working will determine your organization's success. Build your next stage of growth with the advantage of a complete cloud innovation ecosystem on Azure.
-          url: https://learn.microsoft.com/training/topics/digital-and-app-innovation
-        # Card
         - title: Security
           summary: Technical guidance to help security professionals build and implement cybersecurity strategy, architecture, and prioritized roadmaps
           url: https://learn.microsoft.com/security
