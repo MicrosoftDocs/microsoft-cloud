@@ -36,8 +36,8 @@ productDirectory:
           text: Azure Services
         - url: https://learn.microsoft.com/azure/architecture/
           text: Azure Architecture Center
-        - url: https://learn.microsoft.com/azure/governance/blueprints/
-          text: Azure Blueprints
+        # - url: https://learn.microsoft.com/azure/governance/blueprints/
+        #   text: Azure Blueprints
         - url: https://learn.microsoft.com/azure/architecture/framework/
           text: Azure Well-Architected Framework
         - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
