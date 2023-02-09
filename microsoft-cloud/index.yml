@@ -51,7 +51,9 @@ productDirectory:
       imageSrc: ./media/microsoft-365.svg
       links:
         - url: https://learn.microsoft.com/microsoft-365
-          text: Microsoft 365
+          text: Microsoft 365        
+        - url: https://developer.microsoft.com/microsoft-365/dev-program
+          text: Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/graph
           text: Microsoft Graph
         - url: https://learn.microsoft.com/microsoftteams/platform
@@ -109,7 +111,7 @@ conceptualContent:
        
         - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
           itemType: video
-          url: https://mybuild.microsoft.com/en-US/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+          url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
 
         - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
           itemType: video
@@ -145,11 +147,11 @@ tools:
     - title: Visual Studio Code
       imageSrc: ./media/vscode.svg
       url: https://code.visualstudio.com/docs
-      
+
     # Card
     - title: Visual Studio for Mac
       imageSrc: ./media/visualstudiomac.svg
-      url: https://learn.microsoft.com/en-us/visualstudio/mac
+      url: https://learn.microsoft.com/visualstudio/mac
 
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
