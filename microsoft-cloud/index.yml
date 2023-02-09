@@ -72,6 +72,30 @@ productDirectory:
         - url: https://www.youtube.com/c/mspowerplatform
           text: Power Platform Videos
 
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  title: Microsoft Cloud Resources
+  summary: Hands-on tutorials, videos, and tooling
+  items:
+      - title: Hands-on Tutorials
+        links:
+
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          itemType: tutorial
+          url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting
+
+        - text: Automate Data Reporting with Azure Functions and Power Automate
+          itemType: tutorial
+          url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+
+        - text: Build Productivity Apps by using Microsoft Graph Toolkit
+          itemType: tutorial
+          url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+
+        - text: Discover and use Web APIs with Power Apps
+          itemType: tutorial
+          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+
 tools:
   title: Microsoft Cloud hands-on tutorials
   items:
