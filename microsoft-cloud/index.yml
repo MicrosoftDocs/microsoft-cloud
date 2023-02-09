@@ -17,7 +17,7 @@ metadata:
   ms.date: 02/02/2023 
 
 productDirectory:
-  title: Microsoft Cloud Foundations
+  title: The Microsoft Cloud
   items:
     # Card
     - title: Azure
@@ -32,6 +32,8 @@ productDirectory:
           text: Azure Blueprints
         - url: https://learn.microsoft.com/azure/architecture/framework/
           text: Azure Well-Architected Framework
+        - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
+          text: Cloud Adoption Framework for Azure
     # Card
     - title: GitHub
       # imageSrc should be square in ratio with no white space
@@ -54,6 +56,8 @@ productDirectory:
           text: Microsoft 365        
         - url: https://developer.microsoft.com/microsoft-365/dev-program
           text: Microsoft 365 Developer Program
+        - url: https://learn.microsoft.com/dynamics365/
+          text: Dynamics 365
         - url: https://learn.microsoft.com/graph
           text: Microsoft Graph
         - url: https://learn.microsoft.com/microsoftteams/platform
