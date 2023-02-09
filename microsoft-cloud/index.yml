@@ -68,12 +68,12 @@ productDirectory:
           text: Microsoft 365        
         - url: https://developer.microsoft.com/microsoft-365/dev-program
           text: Microsoft 365 Developer Program
-        - url: https://learn.microsoft.com/dynamics365/
-          text: Dynamics 365
         - url: https://learn.microsoft.com/graph
           text: Microsoft Graph
         - url: https://learn.microsoft.com/microsoftteams/platform
           text: Microsoft Teams Developer
+        - url: https://learn.microsoft.com/dynamics365/
+          text: Dynamics 365
         - url: https://learn.microsoft.com/sharepoint/dev
           text: SharePoint Developer
     # Card
