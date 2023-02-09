@@ -96,6 +96,44 @@ conceptualContent:
           itemType: tutorial
           url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
 
+      - title: Videos
+        links:
+
+        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+          itemType: video
+          url: https://www.youtube.com/watch?v=MXq-M6qRffE
+
+        - text: All Things Microsoft Cloud - Power Platform
+          itemType: video
+          url: https://www.youtube.com/watch?v=z19QZwmy1yg
+       
+        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
+          itemType: video
+          url: https://mybuild.microsoft.com/en-US/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+
+        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
+          itemType: video
+          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
+
+      - title: Sample Code
+        links:
+
+        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+          itemType: download
+          url: https://www.youtube.com/watch?v=MXq-M6qRffE
+
+        - text: All Things Microsoft Cloud - Power Platform
+          itemType: download
+          url: https://www.youtube.com/watch?v=z19QZwmy1yg
+       
+        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
+          itemType: download
+          url: https://mybuild.microsoft.com/en-US/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+
+        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
+          itemType: download
+          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
+
 tools:
   title: Microsoft Cloud hands-on tutorials
   items:
