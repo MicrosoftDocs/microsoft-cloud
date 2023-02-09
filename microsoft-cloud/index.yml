@@ -92,7 +92,7 @@ productDirectory:
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-  title: Microsoft Cloud Resources
+  title: Microsoft Cloud Learning Resources
   summary: Hands-on tutorials, videos, and code samples.
   items:
       - title: Hands-on Tutorials
@@ -133,7 +133,7 @@ conceptualContent:
           itemType: video
           url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
 
-      - title: Sample Code
+      - title: Code Samples
         links:
 
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
