@@ -144,7 +144,7 @@ tools:
     # Card
     - title: Visual Studio
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./visualstudio.svg
+      imageSrc: ./media/visualstudio.svg
       url: https://learn.microsoft.com/visualstudio/windows
 
     # Card
