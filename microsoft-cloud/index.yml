@@ -23,6 +23,10 @@ highlightedContent:
     - title: Build applications on the Microsoft Cloud
       itemType: get-started
       url: https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview
+    # Card
+    - title: Microsoft Assessments
+      itemType: concept
+      url: https://learn.microsoft.com/assessments/browse
 
 productDirectory:
   title: The Microsoft Cloud
