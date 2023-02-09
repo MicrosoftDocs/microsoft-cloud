@@ -128,6 +128,10 @@ conceptualContent:
           itemType: download
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
+        - text: Microsoft Teams App Camp
+          itemType: download
+          url: https://github.com/microsoft/app-camp
+
 tools:
   title: Microsoft Cloud Tooling
   items:
