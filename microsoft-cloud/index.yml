@@ -81,14 +81,18 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/powerapps.svg
       links:
-        - url: https://learn.microsoft.com/power-platform
-          text: Power Platform
-        - url: https://powerplatform.microsoft.com/training-workshops/
-          text: Power Platform In a Day Workshops
-        - url: https://make.preview.powerapps.com/
-          text: Power Platform Sample Apps
-        - url: https://www.youtube.com/c/mspowerplatform
-          text: Power Platform Videos
+        - url: https://learn.microsoft.com/power-platform/developer
+          text: Power Platform Developer Documentation
+        - url: https://powerapps.microsoft.com/developerplan
+          text: Power Platform Developer Plan
+        - url: https://pnp.github.io/powerplatform-samples
+          text: Power Platform Samples
+        - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
+          text: Independent Publisher Connectors
+        - url: https://powerusers.microsoft.com
+          text: Power Platform Community
+        - url: https://learn.microsoft.com/shows/the-low-code-revolution/
+          text: Low Code Revolution
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
