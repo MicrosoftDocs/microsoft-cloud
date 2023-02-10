@@ -29,95 +29,70 @@ highlightedContent:
       url: https://learn.microsoft.com/assessments/browse
 
 productDirectory:
-  title: Browse Azure products
+  title: The Microsoft Cloud
   items:
     # Card
-    - title: Azure Percept
-      summary: Edge intelligence from silicon to service
-      imageSrc: ./media/index/azure-percept.svg
-      azureCategories:
-        - video
-      url: https://microsoft.com
+    - title: Azure
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/azure-blue.svg
+      links:
+        - url: https://learn.microsoft.com/azure
+          text: Azure Services
+        - url: https://learn.microsoft.com/azure/architecture/
+          text: Azure Architecture Center
+        # - url: https://learn.microsoft.com/azure/governance/blueprints/
+        #   text: Azure Blueprints
+        - url: https://learn.microsoft.com/azure/architecture/framework/
+          text: Azure Well-Architected Framework
+        - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
+          text: Cloud Adoption Framework for Azure
     # Card
-    - title: Anomaly Detector
-      summary: Easily add anomaly detection capabilities to your apps
-      imageSrc: https://static.docs.com/ui/media/product/azure/anomaly-detector.svg
-      azureCategories:
-        - video
-      url: https://microsoft.com
+    - title: GitHub
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/github.svg
+      links:
+        - url: https://github.com/
+          text: Github.com
+        - url: https://docs.github.com/
+          text: GitHub Documentation
+        - url: https://docs.github.com/actions
+          text: GitHub Actions
+        - url: https://docs.github.com/copilot
+          text: GitHub Copilot
     # Card
-    - title: Azure Applied AI Services
-      summary: Specialized services that enable organizations to accelerate time to value in applying AI to solve common scenarios
-      imageSrc: https://static.docs.com/ui/media/product/azure/cognitive-services.svg
-      azureCategories:
-        - code-sample
-      url: https://microsoft.com
-
-# productDirectory:
-#   title: The Microsoft Cloud
-#   items:
-    # # Card
-    # - title: Azure
-    #   # imageSrc should be square in ratio with no white space
-    #   imageSrc: ./media/azure-blue.svg
-    #   links:
-    #     - url: https://learn.microsoft.com/azure
-    #       text: Azure Services
-    #     - url: https://learn.microsoft.com/azure/architecture/
-    #       text: Azure Architecture Center
-    #     # - url: https://learn.microsoft.com/azure/governance/blueprints/
-    #     #   text: Azure Blueprints
-    #     - url: https://learn.microsoft.com/azure/architecture/framework/
-    #       text: Azure Well-Architected Framework
-    #     - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
-    #       text: Cloud Adoption Framework for Azure
-    # # Card
-    # - title: GitHub
-    #   # imageSrc should be square in ratio with no white space
-    #   imageSrc: ./media/github.svg
-    #   links:
-    #     - url: https://github.com/
-    #       text: Github.com
-    #     - url: https://docs.github.com/
-    #       text: GitHub Documentation
-    #     - url: https://docs.github.com/actions
-    #       text: GitHub Actions
-    #     - url: https://docs.github.com/copilot
-    #       text: GitHub Copilot
-    # # Card
-    # - title: Microsoft 365
-    #   # imageSrc should be square in ratio with no white space
-    #   imageSrc: ./media/microsoft-365.svg
-    #   links:
-    #     - url: https://learn.microsoft.com/microsoft-365
-    #       text: Microsoft 365        
-    #     - url: https://developer.microsoft.com/microsoft-365/dev-program
-    #       text: Microsoft 365 Developer Program
-    #     - url: https://learn.microsoft.com/graph
-    #       text: Microsoft Graph
-    #     - url: https://learn.microsoft.com/microsoftteams/platform
-    #       text: Microsoft Teams Developer
-    #     - url: https://learn.microsoft.com/dynamics365/
-    #       text: Dynamics 365
-    #     - url: https://learn.microsoft.com/sharepoint/dev
-    #       text: SharePoint Developer
-    # # Card
-    # - title: Power Platform
-    #   # imageSrc should be square in ratio with no white space
-    #   imageSrc: ./media/powerapps.svg
-    #   links:
-    #     - url: https://learn.microsoft.com/power-platform/developer
-    #       text: Power Platform Developer Documentation
-    #     - url: https://powerapps.microsoft.com/developerplan
-    #       text: Power Platform Developer Plan
-    #     - url: https://pnp.github.io/powerplatform-samples
-    #       text: Power Platform Samples
-    #     - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
-    #       text: Independent Publisher Connectors
-    #     - url: https://powerusers.microsoft.com
-    #       text: Power Platform Community
-    #     - url: https://learn.microsoft.com/shows/the-low-code-revolution/
-    #       text: Low Code Revolution
+    - title: Microsoft 365
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/microsoft-365.svg
+      links:
+        - url: https://learn.microsoft.com/microsoft-365
+          text: Microsoft 365        
+        - url: https://developer.microsoft.com/microsoft-365/dev-program
+          text: Microsoft 365 Developer Program
+        - url: https://learn.microsoft.com/graph
+          text: Microsoft Graph
+        - url: https://learn.microsoft.com/microsoftteams/platform
+          text: Microsoft Teams Developer
+        - url: https://learn.microsoft.com/dynamics365/
+          text: Dynamics 365
+        - url: https://learn.microsoft.com/sharepoint/dev
+          text: SharePoint Developer
+    # Card
+    - title: Power Platform
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/powerapps.svg
+      links:
+        - url: https://learn.microsoft.com/power-platform/developer
+          text: Power Platform Developer Documentation
+        - url: https://powerapps.microsoft.com/developerplan
+          text: Power Platform Developer Plan
+        - url: https://pnp.github.io/powerplatform-samples
+          text: Power Platform Samples
+        - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
+          text: Independent Publisher Connectors
+        - url: https://powerusers.microsoft.com
+          text: Power Platform Community
+        - url: https://learn.microsoft.com/shows/the-low-code-revolution/
+          text: Low Code Revolution
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
