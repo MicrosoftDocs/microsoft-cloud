@@ -13,7 +13,7 @@ metadata:
   ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript
   ms.service: azure-communication-services
 items:
-  - title: Overview - Audio/Video Calling from a Custom App into a Teams Meeting
+  - title: Overview
     durationInMinutes: 2
     content: |
       [!INCLUDE [](includes/01-Overview.md)]
