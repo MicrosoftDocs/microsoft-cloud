@@ -6,7 +6,7 @@ In this tutorial you'll learn how Azure Communication Services can be used in a 
 
 Here's an overview of the application solution:
 
-![ACS Audio/Video Solution](/img/acs-to-teams/architecture-no-title.png "Scenario Architecture")
+![ACS Audio/Video Solution](./media/acs-to-teams/architecture-no-title.png "Scenario Architecture")
 
 ### Pre-requisites
 
