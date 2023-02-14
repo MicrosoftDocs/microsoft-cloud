@@ -1,8 +1,8 @@
-# Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
+<!-- markdownlint-disable MD041 -->
 
 In this exercise, you'll automate the process of creating a Microsoft Teams meeting link and passing to the ACS by using Azure Functions and Microsoft Graph.
 
-![Create Teams Meeting](./media/3-create-teams-meeting-link.png "Create Teams Meeting")
+:::image type="content" source="./media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
 
 1. You'll need to create an Azure Active Directory (AAD) app for Daemon app authentication. In this step, authentication will be handled in the background with `app credentials`, and AAD app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
 
@@ -30,7 +30,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
     You can get your User ID from [Azure Portal](https://portal.azure.com). Select `Azure Active Directory` and navigate to the `Users` tab on the side bar. Search for your user name and select it to see the user details. Inside the user details, Object ID represents the User ID. Copy the `Object ID` value and use it for the `USER_ID` value in `local.settings.json`.
 
-    ![Getting User ID from Azure Active Directory](./media/aad-user-id.png "Getting User ID from Azure Active Directory")
+    :::image type="content" source="./media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
 
 
     ```json

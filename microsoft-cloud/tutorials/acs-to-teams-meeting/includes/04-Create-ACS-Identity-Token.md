@@ -1,8 +1,8 @@
-# Dynamically Create an Azure Communication Services Identity and Token
+<!-- markdownlint-disable MD041 -->
 
 In this exercise you'll learn how to dynamically retrieve user identity and token values from Azure Communication Services using Azure Functions. Once retrieved, the values will be passed to the ACS UI composite to enable a call to be made by a customer.
 
-![Create ACS Identity and Token](./media/4-acs-identity-token.png "Create ACS Identity and Token")
+:::image type="content" source="./media/4-acs-identity-token.png" alt-text="Create ACS Identity and Token":::
 
 1. Open `local.settings.json` and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
 

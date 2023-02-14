@@ -1,8 +1,8 @@
-# Create an Azure Communication Services Resource
+<!-- markdownlint-disable MD041 -->
 
 In this exercise you'll create an Azure Communication Services (ACS) resource in the Azure Portal.
 
-![ACS in the Azure Portal](./media/1-acs-azure-portal.png "ACS in the Azure Portal")
+:::image type="content" source="./media/1-acs-azure-portal.png" alt-text="ACS in the Azure Portal":::
 
 To get started, perform the following tasks:
 
@@ -10,7 +10,7 @@ To get started, perform the following tasks:
 
 1. Type `communication services` in the top search bar and select `Communication Services` from the options that appear.
 
-    ![ACS in the Azure Portal](./media/search-acs-portal.png "Azure Communication Services")
+    :::image type="content" source="./media/search-acs-portal.png" alt-text="ACS in the Azure Portal":::
 
 1. Select `Create` in the toolbar.
 
@@ -30,11 +30,11 @@ To get started, perform the following tasks:
 
 1. Copy the `Identity` and `User Access token` values to a local file. You'll need the values later in this exercise.
 
-    ![User identity and token](./media/user-identity-token.png "User identity and token")
+    :::image type="content" source="./media/user-identity-token.png" alt-text="User identity and token" border="false":::
 
 1. Select `Settings --> Keys` and copy the `Primary key` connection string value to the local file where you copied the user identity and token values.
 
-1. To run the application you'll need a Teams meeting link. Go to [Microsoft Teams](https://teams.microsoft.com), sign in with your Microsoft 365 developer tenant, and select the `Calendar` option on the left. 
+1. To run the application you'll need a Teams meeting link. Go to [Microsoft Teams](https://teams.microsoft.com), sign in with your Microsoft 365 developer tenant, and select the `Calendar` option on the left.
 
     > [!TIP]
     > If you don't currently have a Microsoft 365 account, you can sign up for the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity. If you have a Visual Studio *Enterprise* or *Professional* subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription.
@@ -43,6 +43,6 @@ To get started, perform the following tasks:
 
 1. Select the new meeting you added in the calendar and copy the Teams meeting link that is displayed into the same file where you stored the ACS user identity, token, and connection string.
 
-    ![Teams Meeting Join Link](./media/teams-meeting-link.png "Teams Meeting Join Link")
+    :::image type="content" source="./media/teams-meeting-link.png" alt-text="Teams Meeting Join Link":::
 
 1. Now that your ACS resource is setup and you have a Teams meeting join link, let's get the React application up and running.

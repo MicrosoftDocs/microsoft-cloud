@@ -1,8 +1,8 @@
-# Integrate Azure Communication Services Calling into a React App
+<!-- markdownlint-disable MD041 -->
 
 In this exercise you'll add the [ACS UI calling composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-joinexistingcall--join-existing-call) into a React app to enable making audio/video calls from a custom app into a Microsoft Teams meeting.
 
-![ACS in React](./media/2-acs-react.png "ACS in React")
+:::image type="content" source="./media/2-acs-react.png" alt-text="ACS in React":::
 
 1. Visit [GitHub](https://github.com) and sign in. If you don't already have a GitHub account, you can select the `Sign up` option to create one.
 
@@ -10,7 +10,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Select the `Fork` option to add the repository to your desired GitHub organization/account.
 
-    ![Fork a Repository](./media/fork-repo.png "Fork a Repository")
+    :::image type="content" source="Fork a Repository" alt-text="./media/fork-repo.png":::
 
 1. Run the following command to clone this repository to your machine. Replace `<YOUR_ORG_NAME>` with your GitHub organization/account name.
 
