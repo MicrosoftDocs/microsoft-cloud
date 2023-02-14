@@ -18,7 +18,7 @@ items:
     content: |
       [!INCLUDE [](includes/01-Overview.md)]
 
-  - title: Audio/Video Calling from a Custom App into a Teams Meeting
+  - title: Create an Azure Communication Services Resource
     durationInMinutes: 10
     content: |
       [!INCLUDE [](includes/02-Create-ACS-Resource.md)]
