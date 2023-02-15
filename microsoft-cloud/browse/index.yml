@@ -1,13 +1,12 @@
 ### YamlMime:ContentBrowser
-title: Browse Azure Architectures
+title: Browse Microsoft Cloud Resources
 browseType: architecture
-summary: Find architecture diagrams and technology descriptions for reference architectures, real world examples of cloud architectures, and solution ideas for common workloads on Azure.
+summary: Browse Microsoft Cloud resources that can help you learn how to integrate services across the Microsoft Cloud (Azure, Microsoft 365, Power Platform, GitHub).
 metadata:
   ms.topic: hub-page
   keywords:
-    - "azure architecture"
-    - "architecture diagrams"
-    - "cloud architecture"
-    - "reference architecture"
-    - "example scenarios"
-    - "solution ideas"
+    - "microsoft cloud"
+    - "azure"
+    - "microsoft 365"
+    - "power platform"
+    - "github"

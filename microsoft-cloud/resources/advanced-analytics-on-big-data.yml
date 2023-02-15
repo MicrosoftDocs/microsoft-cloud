@@ -35,4 +35,4 @@ products:
   - power-bi
 thumbnailUrl: /microsoft-cloud/browse/thumbs/advanced-analytics-on-big-data.png
 content: |
-   [!include[](analytics.md)]
+   [!include[](advanced-analytics-on-big-data-content.md)]
