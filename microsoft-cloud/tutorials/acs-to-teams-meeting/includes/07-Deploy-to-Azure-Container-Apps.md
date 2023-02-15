@@ -165,19 +165,14 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
     - Select the **Enabled** checkbox.
     - Select the **Accepting traffic from anywhere** radio button.
 
-    > [!NOTE]
-    > This will create an entry point (ingress) for your React application and allow it to be called from anywhere. Azure Container Apps redirects all traffic to HTTPS.
+    This will create an entry point (ingress) for your React application and allow it to be called from anywhere. Azure Container Apps redirects all traffic to HTTPS.
 
     - **Target Port**: `80`
 
-    > [!NOTE]
-    > This is the default port for the nginx server.
-
 1. Select **Review + create**. Once validation passes, select the **Create** button.
 
-   > [!NOTE]
-   > If you get an error it may be due to your container apps environment being inactive for too long. The simplest solution will be to go through the
-   > process of creating the container app again. Alternatively, you can run the following command to create the container app using the Azure CLI:
+   If you get an error it may be due to your container apps environment being inactive for too long. The simplest solution will be to go through the
+   process of creating the container app again. Alternatively, you can run the following command to create the container app using the Azure CLI:
 
     # [Bash](#tab/bash)
 
