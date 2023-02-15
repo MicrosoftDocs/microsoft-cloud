@@ -21,7 +21,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Open the VS Code command pallet (`shift + cmd + p` on Mac | `shift + ctrl + p` on Windows), and select **Azure Functions: Create Function App in Azure**.
 
-    :::image type="content" source="./media/automate-data-azure-functions-power-automate/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
+    :::image type="content" source="./media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
 
 1. You'll be prompted to enter the following information:
 
@@ -53,13 +53,13 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Open a command window and run the following command to login to your Azure subscription:
 
-    ```bash
+    ```text
     az login
     ```
 
 1. Add the following shell variables substituting your values for the placeholders. Add your `<GITHUB_USERNAME>` as a lowercase value and subsitute your Azure Functions domain for the `<AZURE_FUNCTIONS_DOMAIN>` value (include the `https://` in the domain value).
 
-    [Bash](#tab/bash)
+    # [Bash](#tab/bash)
 
     ```bash
     GITHUB_USERNAME="<YOUR_GITHUB_USERNAME>"
@@ -69,7 +69,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
     ```
 
 
-    [PowerShell](#tab/powershell)
+    # [PowerShell](#tab/powershell)
 
     ```powershell
     $GITHUB_USERNAME="<YOUR_GITHUB_USERNAME>"
@@ -80,7 +80,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Create a new ACR resource by running the following command:
 
-    [Bash](#tab/bash)
+    # [Bash](#tab/bash)
 
     ```bash
     az acr create \
@@ -90,7 +90,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
         --admin-enabled true
     ```
 
-    [PowerShell](#tab/powershell)
+    # [PowerShell](#tab/powershell)
 
     ```powershell
     az acr create `
@@ -107,7 +107,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Build the container image in Azure by running the following command from the root of the `samples/acs-video-to-teams-meeting/client/react` folder. Replace `<YOUR_FUNCTIONS_DOMAIN>` with your Azure Functions domain that you copied to a local file earlier in this exercise.
 
-    [Bash](#tab/bash)
+    # [Bash](#tab/bash)
 
     ```bash
     az acr build --registry $ACR_NAME --image acs-to-teams-meeting \
@@ -115,7 +115,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
       --build-arg REACT_APP_TEAMS_MEETING_FUNCTION=$AZURE_FUNCTIONS_DOMAIN/api/TeamsMeetingFunction .
     ```
 
-    [PowerShell](#tab/powershell)
+    # [PowerShell](#tab/powershell)
 
     ```powershell
     az acr build --registry $ACR_NAME --image acs-to-teams-meeting `
@@ -125,7 +125,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Run the following command to list the images in your registry. You should see your new image listed.
     
-    ```bash
+    ```text
     az acr repository list --name $ACR_NAME --output table
     ```
 
@@ -179,7 +179,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
    > If you get an error it may be due to your container apps environment being inactive for too long. The simplest solution will be to go through the
    > process of creating the container app again. Alternatively, you can run the following command to create the container app using the Azure CLI:
 
-    [Bash](#tab/bash)
+    # [Bash](#tab/bash)
 
     ```bash
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP \
@@ -189,7 +189,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
         --ingress-protocol Https --ingress-traffic Anywhere
     ```
 
-    [PowerShell](#tab/powershell)
+    # [PowerShell](#tab/powershell)
 
     ```powershell
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP `
