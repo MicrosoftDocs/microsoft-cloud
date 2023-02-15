@@ -60,7 +60,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 1. Open the `package.json` file in VS Code and note that the following Microsoft Graph and Identity packages are included:
 
-    ```bash
+    ```console
     @azure/communication-identity
     @azure/identity
     @microsoft/microsoft-graph-client
@@ -181,7 +181,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 1. Go back to the `samples/acs-to-teams-meeting/client/react` folder in VS Code. Add a `.env` file into the folder with the following values:
 
-    ```bash
+    ```console
     REACT_APP_TEAMS_MEETING_FUNCTION=http://localhost:7071/api/TeamsMeetingFunction
 
     REACT_APP_ACS_USER_FUNCTION=http://localhost:7071/api/ACSTokenFunction

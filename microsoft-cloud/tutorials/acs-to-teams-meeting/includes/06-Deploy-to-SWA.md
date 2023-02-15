@@ -42,7 +42,7 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 
 1. Add all of the following key/value pairs into the `Application settings` by selecting the `+ Add` button. Get the values from your `local.settings.json` in the `server/typescript` folder.
 
-    ```bash
+    ```text
     # Get the values from your local.settings.json file
     TENANT_ID: <YOUR_VALUE>
     CLIENT_ID: <YOUR_VALUE>

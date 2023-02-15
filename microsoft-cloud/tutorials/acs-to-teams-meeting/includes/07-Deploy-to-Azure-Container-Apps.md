@@ -53,7 +53,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Open a command window and run the following command to login to your Azure subscription:
 
-    ```text
+    ```console
     az login
     ```
 
@@ -125,7 +125,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Run the following command to list the images in your registry. You should see your new image listed.
     
-    ```text
+    ```console
     az acr repository list --name $ACR_NAME --output table
     ```
 
@@ -181,22 +181,18 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
     # [Bash](#tab/bash)
 
-    ```bash
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP \
         --location westus --image acs-to-teams-meeting \
         --cpu 0.25 --memory 0.5 --environment-name acs-to-teams-meeting-env \
         --ingress-enabled true --ingress-target-port 80 --ingress-type External \
         --ingress-protocol Https --ingress-traffic Anywhere
-    ```
 
     # [PowerShell](#tab/powershell)
 
-    ```powershell
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP `
         --location westus --image acs-to-teams-meeting `
         --cpu 0.25 --memory 0.5 --environment-name acs-to-teams-meeting-env `
         --ingress-enabled true --ingress-target-port 80 --ingress-type External `
         --ingress-protocol Https --ingress-traffic Anywhere
-    ```    
 
 1. Once your container app deployment completes, navigate to it in the Azure Portal and select the **Application Url** on the **Overview** screen to view the application running in the nginx container!

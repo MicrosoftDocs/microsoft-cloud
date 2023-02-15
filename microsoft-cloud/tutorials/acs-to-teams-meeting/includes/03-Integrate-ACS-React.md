@@ -14,7 +14,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Run the following command to clone this repository to your machine. Replace `<YOUR_ORG_NAME>` with your GitHub organization/account name.
 
-    ```bash
+    ```console
     git clone https://github.com/<YOUR_ORG_NAME>/MicrosoftCloud
     ```
 
@@ -22,14 +22,14 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Open the `package.json` file in VS Code and note the following ACS packages are included:
 
-    ```bash
+    ```console
     @azure/communication-common 
     @azure/communication-react
     ``` 
 
 1. Double-check that you have `npm 7` or higher installed by opening a terminal window and running the following command:
 
-    ```bash
+    ```console
     npm --version
     ```
 
