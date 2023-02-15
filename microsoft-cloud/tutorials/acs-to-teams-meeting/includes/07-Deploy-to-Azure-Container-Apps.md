@@ -176,18 +176,22 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
     # [Bash](#tab/bash)
 
+    ```bash
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP \
         --location westus --image acs-to-teams-meeting \
         --cpu 0.25 --memory 0.5 --environment-name acs-to-teams-meeting-env \
         --ingress-enabled true --ingress-target-port 80 --ingress-type External \
         --ingress-protocol Https --ingress-traffic Anywhere
+    ```
 
     # [PowerShell](#tab/powershell)
 
+    ```powershell
     az containerapp create --name acs-to-teams-meeting --resource-group $RESOURCE_GROUP `
         --location westus --image acs-to-teams-meeting `
         --cpu 0.25 --memory 0.5 --environment-name acs-to-teams-meeting-env `
         --ingress-enabled true --ingress-target-port 80 --ingress-type External `
         --ingress-protocol Https --ingress-traffic Anywhere
+    ```
 
 1. Once your container app deployment completes, navigate to it in the Azure Portal and select the **Application Url** on the **Overview** screen to view the application running in the nginx container!
