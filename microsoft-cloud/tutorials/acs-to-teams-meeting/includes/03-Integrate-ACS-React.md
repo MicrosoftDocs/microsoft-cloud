@@ -10,7 +10,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Select the `Fork` option to add the repository to your desired GitHub organization/account.
 
-    :::image type="content" source="Fork a Repository" alt-text="./media/fork-repo.png":::
+    :::image type="content" source="./media/fork-repo.png" alt-text="Fork a Repository":::
 
 1. Run the following command to clone this repository to your machine. Replace `<YOUR_ORG_NAME>` with your GitHub organization/account name.
 
