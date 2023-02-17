@@ -85,7 +85,7 @@ productDirectory:
     # Card
     - title: Power Platform
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/powerapps.svg
+      imageSrc: ./media/powerplatform.svg
       links:
         - url: https://learn.microsoft.com/power-platform/developer
           text: Power Platform Developer Documentation
