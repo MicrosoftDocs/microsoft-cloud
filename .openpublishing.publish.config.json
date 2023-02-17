@@ -12,7 +12,7 @@
         "Conceptual": "Content",
         "Architecture": "Content"
       },
-      "build_entry_point": "./",
+      "build_entry_point": "microsoft-cloud",
       "template_folder": "_themes"
     }
   ],
