@@ -12,7 +12,7 @@
         "Conceptual": "Content",
         "Architecture": "Content"
       },
-      "build_entry_point": "docs",
+      "build_entry_point": "./",
       "template_folder": "_themes"
     }
   ],
