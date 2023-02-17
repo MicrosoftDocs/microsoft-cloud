@@ -9,7 +9,8 @@
       "moniker_ranges": [],
       "open_to_public_contributors": false,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "Architecture": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
