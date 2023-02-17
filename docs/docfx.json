@@ -18,7 +18,8 @@
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "**/**/*-content.md"
         ]
       }
     ],
