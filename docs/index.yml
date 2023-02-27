@@ -200,10 +200,20 @@ tools:
   title: Microsoft Cloud Tooling
   items:
     # Card
+    - title: Azure CLI
+      imageSrc: ./media/azure-blue.svg
+      url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
+
+    # Card
     - title: GitHub Codespaces
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/github.svg
       url: https://docs.github.com/en/codespaces
+
+    # Card
+    - title: Powershell
+      imageSrc: ./media/powershell.svg
+      url: https://learn.microsoft.com/powershell/
 
     # Card
     - title: Visual Studio
@@ -221,28 +231,27 @@ tools:
       imageSrc: ./media/visualstudiomac.svg
       url: https://learn.microsoft.com/visualstudio/mac
 
-    # Card
-    - title: Azure CLI
-      imageSrc: ./media/azure-blue.svg
-      url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
-
-    # Card
-    - title: Powershell
-      imageSrc: ./media/powershell.svg
-      url: https://learn.microsoft.com/powershell/
-
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
 additionalContent:
-  # Supports up to 4 subsections
   sections:
-    - title: Microsoft Cloud SDKs and Tools
+    - title: Microsoft Cloud SDKs and Additional Tooling
       summary: Software Developer Kits (SDKs) to simplify the process if integrating your applications with the Microsoft Cloud.
       items:
         # Card
         - title: Azure SDKs and Tools
-          summary: he Azure SDKs are collections of libraries built to make it easier to use Azure services from your language of choice.
+          summary: The Azure SDKs are collections of libraries built to make it easier to use Azure services from your language of choice.
           url: https://azure.microsoft.com/downloads
+
+        # Card
+        - title: CLI for Microsoft 365
+          summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
+          url: https://pnp.github.io/cli-microsoft365/
+
+        # Card
+        - title: Microsoft Graph Developer Proxy
+          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
+          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
 
         # Card 
         - title: Microsoft Graph SDKs
@@ -250,16 +259,6 @@ additionalContent:
           url: https://learn.microsoft.com/graph/sdks/sdks-overview
 
         # Card
-        - title: Microsoft Graph Developer Proxy
-          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
-          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
-
-        # Card
         - title: Power Platform CLI
           summary: Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and more.
           url: https://learn.microsoft.com/power-platform/developer/cli/introduction
-
-        # Card
-        - title: CLI for Microsoft 365
-          summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
-          url: https://pnp.github.io/cli-microsoft365/
