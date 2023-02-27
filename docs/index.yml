@@ -44,12 +44,12 @@ productDirectory:
       links:
         - url: https://azure.microsoft.com/free
           text: Create an Azure Account
+        - url: https://portal.azure.com
+          text: Azure Portal
         - url: https://learn.microsoft.com/azure
           text: Azure Services
         - url: https://learn.microsoft.com/azure/architecture/
           text: Azure Architecture Center
-        # - url: https://learn.microsoft.com/azure/governance/blueprints/
-        #   text: Azure Blueprints
         - url: https://learn.microsoft.com/azure/architecture/framework/
           text: Azure Well-Architected Framework
         - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
