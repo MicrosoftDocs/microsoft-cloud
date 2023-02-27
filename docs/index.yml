@@ -211,11 +211,6 @@ tools:
       url: https://docs.github.com/en/codespaces
 
     # Card
-    - title: Powershell
-      imageSrc: ./media/powershell.svg
-      url: https://learn.microsoft.com/powershell/
-
-    # Card
     - title: Visual Studio
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/visualstudio.svg
@@ -235,7 +230,7 @@ tools:
 # Card with summary style
 additionalContent:
   sections:
-    - title: Microsoft Cloud SDKs and Additional Tooling
+    - title: Microsoft Cloud SDKs and Additional Tools
       summary: Software Developer Kits (SDKs) to simplify the process if integrating your applications with the Microsoft Cloud.
       items:
         # Card
@@ -262,3 +257,8 @@ additionalContent:
         - title: Power Platform CLI
           summary: Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and more.
           url: https://learn.microsoft.com/power-platform/developer/cli/introduction
+
+        # Card
+        - title: Powershell
+          summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. 
+          url: https://learn.microsoft.com/powershell/
