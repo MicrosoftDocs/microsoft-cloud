@@ -5,7 +5,7 @@ brand: azure
 
 metadata:
   title: Microsoft Cloud for Developers
-  description: Microsoft Cloud sample architectures, best practices, and interactive tutorials.
+  description: Microsoft Cloud documentation, sample architectures, best practices, and interactive tutorials.
   products:
   - azure
   - power-platform
@@ -59,8 +59,8 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/github.svg
       links:
-        - url: https://github.com/
-          text: Github.com
+        - url: https://github.com/signup
+          text: Create a GitHub Account
         - url: https://docs.github.com/
           text: GitHub Documentation
         - url: https://docs.github.com/actions
