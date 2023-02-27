@@ -230,7 +230,7 @@ tools:
 # Card with summary style
 additionalContent:
   sections:
-    - title: Microsoft Cloud SDKs and Additional Tools
+    - title: Microsoft Cloud SDKs and Additional Tooling
       summary: Software Developer Kits (SDKs) and additional tools to integrate applications with the Microsoft Cloud.
       items:
         # Card
