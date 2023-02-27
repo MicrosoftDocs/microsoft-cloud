@@ -122,20 +122,20 @@ productDirectory:
       links:
         - url: https://learn.microsoft.com/industry/
           text: Microsoft Industry Clouds Documentation
-        - url: https://learn.microsoft.com/industry/financial-services/
-          text: Financial Services
-        - url: https://learn.microsoft.com/industry/healthcare/
-          text: Healthcare
-        - url: https://www.microsoft.com/industry/manufacturing/microsoft-cloud-for-manufacturing?rtc=1
-          text: Manufacturing
-        - url: https://learn.microsoft.com/industry/nonprofit/
-          text: Nonprofit
-        - url: https://learn.microsoft.com/industry/retail/
-          text: Retail
-        - url: https://learn.microsoft.com/industry/sustainability/
-          text: Sustainability
-        - url: https://www.microsoft.com/en-us/industry?rtc=1
-          text: Addition Industry Clouds
+        # - url: https://learn.microsoft.com/industry/financial-services/
+        #   text: Financial Services
+        # - url: https://learn.microsoft.com/industry/healthcare/
+        #   text: Healthcare
+        # - url: https://www.microsoft.com/industry/manufacturing/microsoft-cloud-for-manufacturing?rtc=1
+        #   text: Manufacturing
+        # - url: https://learn.microsoft.com/industry/nonprofit/
+        #   text: Nonprofit
+        # - url: https://learn.microsoft.com/industry/retail/
+        #   text: Retail
+        # - url: https://learn.microsoft.com/industry/sustainability/
+        #   text: Sustainability
+        # - url: https://www.microsoft.com/en-us/industry?rtc=1
+        #   text: Addition Industry Clouds
 
 
 conceptualContent:
