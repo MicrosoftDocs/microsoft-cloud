@@ -198,6 +198,7 @@ conceptualContent:
 
 tools:
   title: Microsoft Cloud Tooling
+  summary: Tools to help you build on the Microsoft Cloud.
   items:
     # Card
     - title: Azure CLI
