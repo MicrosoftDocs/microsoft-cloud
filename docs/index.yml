@@ -42,6 +42,8 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/azure-blue.svg
       links:
+        - url: https://azure.microsoft.com/free
+          text: Create an Azure Account
         - url: https://learn.microsoft.com/azure
           text: Azure Services
         - url: https://learn.microsoft.com/azure/architecture/
@@ -70,6 +72,8 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/microsoft-365.svg
       links:
+        - url: https://developer.microsoft.com/microsoft-365/dev-program
+          text: Join the Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/microsoft-365
           text: Microsoft 365        
         - url: https://developer.microsoft.com/microsoft-365/dev-program
@@ -87,10 +91,10 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/powerplatform.svg
       links:
-        - url: https://learn.microsoft.com/power-platform/developer
-          text: Power Platform Developer Documentation
         - url: https://powerapps.microsoft.com/developerplan
           text: Power Platform Developer Plan
+        - url: https://learn.microsoft.com/power-platform/developer
+          text: Power Platform Developer Documentation
         - url: https://pnp.github.io/powerplatform-samples
           text: Power Platform Samples
         - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
@@ -99,6 +103,40 @@ productDirectory:
           text: Power Platform Community
         - url: https://learn.microsoft.com/shows/the-low-code-revolution/
           text: Low Code Revolution
+    # Card
+    - title: Dynamics 365
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/dynamics365.svg
+      links:
+        - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
+          text: Dynamics 365 Free Trial
+        - url: https://learn.microsoft.com/dynamics365/
+          text: Dynamics 365 Documentation
+        - url: https://learn.microsoft.com/training/dynamics365/
+          text: Dynamics 365 Learning Paths
+
+    # Card
+    - title: Industry Clouds
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/dynamics365.svg
+      links:
+        - url: https://learn.microsoft.com/industry/
+          text: Microsoft Industry Clouds Documentation
+        - url: https://learn.microsoft.com/industry/financial-services/
+          text: Financial Services
+        - url: https://learn.microsoft.com/industry/healthcare/
+          text: Healthcare
+        - url: https://www.microsoft.com/industry/manufacturing/microsoft-cloud-for-manufacturing?rtc=1
+          text: Manufacturing
+        - url: https://learn.microsoft.com/industry/nonprofit/
+          text: Nonprofit
+        - url: https://learn.microsoft.com/industry/retail/
+          text: Retail
+        - url: https://learn.microsoft.com/industry/sustainability/
+          text: Sustainability
+        - url: https://www.microsoft.com/en-us/industry?rtc=1
+          text: Addition Industry Clouds
+
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -183,39 +221,45 @@ tools:
       imageSrc: ./media/visualstudiomac.svg
       url: https://learn.microsoft.com/visualstudio/mac
 
+    # Card
+    - title: Azure CLI
+      imageSrc: ./media/azure-blue.svg
+      url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
+
+    # Card
+    - title: Powershell
+      imageSrc: ./media/powershell.svg
+      url: https://learn.microsoft.com/powershell/
+
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: Microsoft Cloud Critical Area Guides
-      summary: Help your organization reach its full potential by relying on an integrated and open cloud platform that spans critical areas — security, infrastructure, digital and app innovation, data and AI, business applications, and modern work.
+    - title: Microsoft Cloud SDKs and Tools
+      summary: Software Developer Kits (SDKs) to simplify the process if integrating your applications with the Microsoft Cloud.
       items:
         # Card
-        - title: Industry Clouds
-          summary: Learn about the solutions, guidance, and resources available for your industry from Microsoft, including information about the Microsoft Clouds for Healthcare, Financial Services, Retail, Manufacturing, Nonprofit, and Sustainability.
-          url: https://learn.microsoft.com/industry
+        - title: Azure SDKs and Tools
+          summary: he Azure SDKs are collections of libraries built to make it easier to use Azure services from your language of choice.
+          url: https://azure.microsoft.com/downloads
+
+        # Card 
+        - title: Microsoft Graph SDKs
+          summary: The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
+          url: https://learn.microsoft.com/graph/sdks/sdks-overview
+
         # Card
-        - title: Security
-          summary: Technical guidance to help security professionals build and implement cybersecurity strategy, architecture, and prioritized roadmaps
-          url: https://learn.microsoft.com/security
+        - title: Microsoft Graph Developer Proxy
+          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
+          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
+
         # Card
-        - title: Infrastructure
-          summary: Improve time-to-value and reduce costs with the most complete tech stack from cloud to edge. Build, monitor, and manage your critical infrastructure using trusted Microsoft cloud technology.
-          url: https://learn.microsoft.com/security
+        - title: Power Platform CLI
+          summary: Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and more.
+          url: https://learn.microsoft.com/power-platform/developer/cli/introduction
+
         # Card
-        - title: Digital and App Innovation
-          summary: Elevate and enhance every stage of software development.​
-          url: https://learn.microsoft.com/security
-        # Card
-        - title: Data and AI
-          summary: Maximize the value of your data with the Microsoft Intelligent Data Platform, a comprehensive platform for databases, analytics, and data governance.​
-          url: https://learn.microsoft.com/security
-        # Card
-        - title: Business Applications
-          summary: Empower exceptional customer experiences and operational agility with applications that unite people, insights, and processes across every line of business.
-          url: https://learn.microsoft.com/security
-        # Card
-        - title: Modern Work
-          summary: Empower team members to focus on, build, share, and protect their most important ideas so that they can make the greatest impact possible from anywhere, on any device.
-          url: https://learn.microsoft.com/security
+        - title: CLI for Microsoft 365
+          summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
+          url: https://pnp.github.io/cli-microsoft365/
