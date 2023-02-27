@@ -122,8 +122,8 @@ productDirectory:
       links:
         - url: https://learn.microsoft.com/industry/
           text: Microsoft Industry Clouds Documentation
-        # - url: https://learn.microsoft.com/industry/financial-services/
-        #   text: Financial Services
+        - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
+          text: Browse Industry Clouds
         # - url: https://learn.microsoft.com/industry/healthcare/
         #   text: Healthcare
         # - url: https://www.microsoft.com/industry/manufacturing/microsoft-cloud-for-manufacturing?rtc=1
