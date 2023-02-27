@@ -118,7 +118,7 @@ productDirectory:
     # Card
     - title: Industry Clouds
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/dynamics365.svg
+      imageSrc: ./media/industry-cloud.svg
       links:
         - url: https://learn.microsoft.com/industry/
           text: Microsoft Industry Clouds Documentation
