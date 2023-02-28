@@ -76,8 +76,6 @@ productDirectory:
           text: Join the Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/microsoft-365
           text: Microsoft 365 Developer Documentation      
-        - url: https://developer.microsoft.com/microsoft-365/dev-program
-          text: Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/graph
           text: Microsoft Graph
         - url: https://learn.microsoft.com/microsoftteams/platform
