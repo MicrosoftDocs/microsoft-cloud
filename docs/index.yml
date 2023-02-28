@@ -116,7 +116,7 @@ productDirectory:
           text: Dynamics 365 Learning Paths
 
     # Card
-    - title: Industry Clouds
+    - title: Industry and Government
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/industry-cloud.svg
       links:
@@ -124,19 +124,12 @@ productDirectory:
           text: Microsoft Industry Clouds Documentation
         - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
           text: Browse Industry Clouds
-        # - url: https://learn.microsoft.com/industry/healthcare/
-        #   text: Healthcare
-        # - url: https://www.microsoft.com/industry/manufacturing/microsoft-cloud-for-manufacturing?rtc=1
-        #   text: Manufacturing
-        # - url: https://learn.microsoft.com/industry/nonprofit/
-        #   text: Nonprofit
-        # - url: https://learn.microsoft.com/industry/retail/
-        #   text: Retail
-        # - url: https://learn.microsoft.com/industry/sustainability/
-        #   text: Sustainability
-        # - url: https://www.microsoft.com/en-us/industry?rtc=1
-        #   text: Addition Industry Clouds
-
+        - url: https://azure.microsoft.com/global-infrastructure/government/request/
+          text: Azure Government Free Trial
+        - url: https://learn.microsoft.com/azure/azure-government/
+          text: Azure Government Documentation
+        - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
+          text: Compare Azure Government and Global Azure
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
