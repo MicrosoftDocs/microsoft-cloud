@@ -14,7 +14,7 @@ metadata:
   ms.topic: hub-page
   author: danwahlin 
   ms.author: dwahlin 
-  ms.date: 02/02/2023 
+  ms.date: 03/01/2023 
 
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -75,7 +75,7 @@ productDirectory:
         - url: https://developer.microsoft.com/microsoft-365/dev-program
           text: Join the Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/microsoft-365
-          text: Microsoft 365        
+          text: Microsoft 365 Developer Documentation      
         - url: https://developer.microsoft.com/microsoft-365/dev-program
           text: Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/graph
