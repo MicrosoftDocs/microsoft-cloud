@@ -77,11 +77,9 @@ productDirectory:
         - url: https://learn.microsoft.com/microsoft-365
           text: Microsoft 365 Developer Documentation      
         - url: https://learn.microsoft.com/graph
-          text: Microsoft Graph
+          text: Microsoft Graph Documentation
         - url: https://learn.microsoft.com/microsoftteams/platform
-          text: Microsoft Teams Developer
-        # - url: https://learn.microsoft.com/dynamics365/
-        #   text: Dynamics 365
+          text: Microsoft Teams Developer Documentation
         - url: https://learn.microsoft.com/sharepoint/dev
           text: SharePoint Developer
     # Card
@@ -234,11 +232,6 @@ additionalContent:
         - title: CLI for Microsoft 365
           summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
           url: https://pnp.github.io/cli-microsoft365/
-
-        # Card
-        - title: Microsoft Graph Developer Proxy
-          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
-          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
 
         # Card 
         - title: Microsoft Graph SDKs
