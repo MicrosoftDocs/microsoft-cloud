@@ -21,16 +21,19 @@ highlightedContent:
   items:
     # Card
     - title: Build applications on the Microsoft Cloud
+      description: Learn what the Microsoft Cloud is and the benefits it provides.
       itemType: get-started
       url: https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview
 
     # Card
     - title: GitHub Copilot
+      description: Get autocomplete-style suggestions from an AI pair programmer as you code.
       itemType: how-to-guide
       url: https://docs.github.com/copilot
 
     # Card
     - title: Microsoft Assessments
+      description: Adopt, optimize, and combine Microsoft products and services using a self-guided, streamlined questionnaire experience.
       itemType: concept
       url: https://learn.microsoft.com/assessments/browse
 
