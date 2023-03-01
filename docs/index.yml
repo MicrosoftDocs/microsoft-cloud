@@ -95,7 +95,6 @@ conceptualContent:
 
 productDirectory:
   title: The Microsoft Cloud
-  description: Join Microsoft Cloud developer programs and access documentation about different Microsoft Cloud services.
   items:
     # Card
     - title: Azure
