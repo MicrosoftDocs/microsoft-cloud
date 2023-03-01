@@ -94,97 +94,97 @@ conceptualContent:
 
 
 # productDirectory:
-  title: The Microsoft Cloud
-  items:
-    # Card
-    - title: Azure
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/azure-blue.svg
-      links:
-        - url: https://azure.microsoft.com/free
-          text: Create an Azure Account
-        - url: https://portal.azure.com
-          text: Azure Portal
-        - url: https://learn.microsoft.com/azure
-          text: Azure Services
-        - url: https://learn.microsoft.com/azure/architecture/
-          text: Azure Architecture Center
-        - url: https://learn.microsoft.com/azure/architecture/framework/
-          text: Azure Well-Architected Framework
-        - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
-          text: Cloud Adoption Framework for Azure
-    # Card
-    - title: GitHub
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/github.svg
-      links:
-        - url: https://github.com/signup
-          text: Create a GitHub Account
-        - url: https://docs.github.com/
-          text: GitHub Documentation
-        - url: https://docs.github.com/actions
-          text: GitHub Actions
-        - url: https://docs.github.com/copilot
-          text: GitHub Copilot
-    # Card
-    - title: Microsoft 365
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/microsoft-365.svg
-      links:
-        - url: https://developer.microsoft.com/microsoft-365/dev-program
-          text: Join the Microsoft 365 Developer Program
-        - url: https://learn.microsoft.com/microsoft-365
-          text: Microsoft 365 Developer Documentation      
-        - url: https://learn.microsoft.com/graph
-          text: Microsoft Graph Documentation
-        - url: https://learn.microsoft.com/microsoftteams/platform
-          text: Microsoft Teams Developer Documentation
-        - url: https://learn.microsoft.com/sharepoint/dev
-          text: SharePoint Developer
-    # Card
-    - title: Power Platform
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/powerplatform.svg
-      links:
-        - url: https://powerapps.microsoft.com/developerplan
-          text: Join the Power Platform Developer Plan
-        - url: https://learn.microsoft.com/power-platform/developer
-          text: Power Platform Developer Documentation
-        - url: https://pnp.github.io/powerplatform-samples
-          text: Power Platform Samples
-        - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
-          text: Independent Publisher Connectors
-        - url: https://powerusers.microsoft.com
-          text: Power Platform Community
-        - url: https://learn.microsoft.com/shows/the-low-code-revolution/
-          text: Low Code Revolution
-    # Card
-    - title: Dynamics 365
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/dynamics365.svg
-      links:
-        - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
-          text: Dynamics 365 Free Trial
-        - url: https://learn.microsoft.com/dynamics365/
-          text: Dynamics 365 Documentation
-        - url: https://learn.microsoft.com/training/dynamics365/
-          text: Dynamics 365 Learning Paths
+#   title: The Microsoft Cloud
+#   items:
+#     # Card
+#     - title: Azure
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/azure-blue.svg
+#       links:
+#         - url: https://azure.microsoft.com/free
+#           text: Create an Azure Account
+#         - url: https://portal.azure.com
+#           text: Azure Portal
+#         - url: https://learn.microsoft.com/azure
+#           text: Azure Services
+#         - url: https://learn.microsoft.com/azure/architecture/
+#           text: Azure Architecture Center
+#         - url: https://learn.microsoft.com/azure/architecture/framework/
+#           text: Azure Well-Architected Framework
+#         - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
+#           text: Cloud Adoption Framework for Azure
+#     # Card
+#     - title: GitHub
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/github.svg
+#       links:
+#         - url: https://github.com/signup
+#           text: Create a GitHub Account
+#         - url: https://docs.github.com/
+#           text: GitHub Documentation
+#         - url: https://docs.github.com/actions
+#           text: GitHub Actions
+#         - url: https://docs.github.com/copilot
+#           text: GitHub Copilot
+#     # Card
+#     - title: Microsoft 365
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/microsoft-365.svg
+#       links:
+#         - url: https://developer.microsoft.com/microsoft-365/dev-program
+#           text: Join the Microsoft 365 Developer Program
+#         - url: https://learn.microsoft.com/microsoft-365
+#           text: Microsoft 365 Developer Documentation      
+#         - url: https://learn.microsoft.com/graph
+#           text: Microsoft Graph Documentation
+#         - url: https://learn.microsoft.com/microsoftteams/platform
+#           text: Microsoft Teams Developer Documentation
+#         - url: https://learn.microsoft.com/sharepoint/dev
+#           text: SharePoint Developer
+#     # Card
+#     - title: Power Platform
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/powerplatform.svg
+#       links:
+#         - url: https://powerapps.microsoft.com/developerplan
+#           text: Join the Power Platform Developer Plan
+#         - url: https://learn.microsoft.com/power-platform/developer
+#           text: Power Platform Developer Documentation
+#         - url: https://pnp.github.io/powerplatform-samples
+#           text: Power Platform Samples
+#         - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
+#           text: Independent Publisher Connectors
+#         - url: https://powerusers.microsoft.com
+#           text: Power Platform Community
+#         - url: https://learn.microsoft.com/shows/the-low-code-revolution/
+#           text: Low Code Revolution
+#     # Card
+#     - title: Dynamics 365
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/dynamics365.svg
+#       links:
+#         - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
+#           text: Dynamics 365 Free Trial
+#         - url: https://learn.microsoft.com/dynamics365/
+#           text: Dynamics 365 Documentation
+#         - url: https://learn.microsoft.com/training/dynamics365/
+#           text: Dynamics 365 Learning Paths
 
-    # Card
-    - title: Industry and Government
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/industry-cloud.svg
-      links:
-        - url: https://learn.microsoft.com/industry/
-          text: Microsoft Industry Clouds Documentation
-        - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
-          text: Browse Industry Clouds
-        - url: https://azure.microsoft.com/global-infrastructure/government/request/
-          text: Azure Government Free Trial
-        - url: https://learn.microsoft.com/azure/azure-government/
-          text: Azure Government Documentation
-        - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
-          text: Compare Azure Government and Global Azure
+#     # Card
+#     - title: Industry and Government
+#       # imageSrc should be square in ratio with no white space
+#       imageSrc: ./media/industry-cloud.svg
+#       links:
+#         - url: https://learn.microsoft.com/industry/
+#           text: Microsoft Industry Clouds Documentation
+#         - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
+#           text: Browse Industry Clouds
+#         - url: https://azure.microsoft.com/global-infrastructure/government/request/
+#           text: Azure Government Free Trial
+#         - url: https://learn.microsoft.com/azure/azure-government/
+#           text: Azure Government Documentation
+#         - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
+#           text: Compare Azure Government and Global Azure
 
 tools:
   title: Microsoft Cloud Tooling
