@@ -34,8 +34,68 @@ highlightedContent:
       itemType: concept
       url: https://learn.microsoft.com/assessments/browse
 
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  title: Microsoft Cloud Learning Resources
+  summary: Learn how to integrate services across the Microsoft Cloud with our hands-on tutorials, videos, and code samples.
+  items:
+      - title: Hands-on Tutorials
+        links:
+
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          itemType: tutorial
+          url: /microsoft-cloud/tutorials/acs-to-teams-meeting
+
+        - text: Automate Data Reporting with Azure Functions and Power Automate
+          itemType: tutorial
+          url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+
+        - text: Build Productivity Apps by using Microsoft Graph Toolkit
+          itemType: tutorial
+          url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+
+        - text: Discover and use Web APIs with Power Apps
+          itemType: tutorial
+          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+
+      - title: Videos
+        links:
+
+        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+          itemType: video
+          url: https://www.youtube.com/watch?v=MXq-M6qRffE
+
+        - text: All Things Microsoft Cloud - Power Platform
+          itemType: video
+          url: https://www.youtube.com/watch?v=z19QZwmy1yg
+       
+        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
+          itemType: video
+          url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+
+        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
+          itemType: video
+          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
+
+      - title: Code Samples
+        links:
+
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          itemType: download
+          url: https://github.com/microsoft/microsoftcloud
+
+        - text: Building Real-Time Collaborative Apps
+          itemType: download
+          url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
+
+        - text: Microsoft Teams App Camp
+          itemType: download
+          url: https://github.com/microsoft/app-camp
+
+
 productDirectory:
   title: The Microsoft Cloud
+  description: Join Microsoft Cloud developer programs and access documentation about different Microsoft Cloud services.
   items:
     # Card
     - title: Azure
@@ -126,64 +186,6 @@ productDirectory:
           text: Azure Government Documentation
         - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
           text: Compare Azure Government and Global Azure
-
-conceptualContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-  title: Microsoft Cloud Learning Resources
-  summary: Hands-on tutorials, videos, and code samples.
-  items:
-      - title: Hands-on Tutorials
-        links:
-
-        - text: Audio/Video Calling from a Custom App into a Teams Meeting
-          itemType: tutorial
-          url: /microsoft-cloud/tutorials/acs-to-teams-meeting
-
-        - text: Automate Data Reporting with Azure Functions and Power Automate
-          itemType: tutorial
-          url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
-
-        - text: Build Productivity Apps by using Microsoft Graph Toolkit
-          itemType: tutorial
-          url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
-
-        - text: Discover and use Web APIs with Power Apps
-          itemType: tutorial
-          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
-
-      - title: Videos
-        links:
-
-        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
-          itemType: video
-          url: https://www.youtube.com/watch?v=MXq-M6qRffE
-
-        - text: All Things Microsoft Cloud - Power Platform
-          itemType: video
-          url: https://www.youtube.com/watch?v=z19QZwmy1yg
-       
-        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
-          itemType: video
-          url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
-
-        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
-          itemType: video
-          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
-
-      - title: Code Samples
-        links:
-
-        - text: Audio/Video Calling from a Custom App into a Teams Meeting
-          itemType: download
-          url: https://github.com/microsoft/microsoftcloud
-
-        - text: Building Real-Time Collaborative Apps
-          itemType: download
-          url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
-
-        - text: Microsoft Teams App Camp
-          itemType: download
-          url: https://github.com/microsoft/app-camp
 
 tools:
   title: Microsoft Cloud Tooling
