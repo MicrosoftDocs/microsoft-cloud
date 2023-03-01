@@ -234,6 +234,11 @@ additionalContent:
           summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
           url: https://pnp.github.io/cli-microsoft365/
 
+        # Card
+        - title: Microsoft Graph Developer Proxy
+          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
+          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
+
         # Card 
         - title: Microsoft Graph SDKs
           summary: The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
