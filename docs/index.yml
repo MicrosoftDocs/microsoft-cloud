@@ -93,7 +93,7 @@ conceptualContent:
           url: https://github.com/microsoft/app-camp
 
 
-productDirectory:
+# productDirectory:
   title: The Microsoft Cloud
   items:
     # Card
