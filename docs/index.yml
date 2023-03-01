@@ -40,7 +40,7 @@ productDirectory:
     # Card
     - title: Hands-on Tutorials
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/azure-blue.svg
+      imageSrc: ./media/tutorial.svg
       links:
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
           url: /microsoft-cloud/tutorials/acs-to-teams-meeting
@@ -57,7 +57,7 @@ productDirectory:
     # Card
     - title: Videos
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/github.svg
+      imageSrc: ./media/video.svg
       links:
         - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
           url: https://www.youtube.com/watch?v=MXq-M6qRffE
@@ -74,7 +74,7 @@ productDirectory:
     # Card
     - title: Code Samples
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/microsoft-365.svg
+      imageSrc: ./media/code.svg
       links:
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
           url: https://github.com/microsoft/microsoftcloud
