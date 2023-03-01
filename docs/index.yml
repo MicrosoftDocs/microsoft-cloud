@@ -146,19 +146,19 @@ conceptualContent:
 
       - title: Power Platform
         links:
-        - url: https://powerapps.microsoft.com/developerplan
+        - url: https://powerapps.microsoft.com/developerplan/
           itemType: get-started
           text: Join the Power Platform Developer Plan
-        - url: https://learn.microsoft.com/power-platform/developer
+        - url: https://learn.microsoft.com/power-platform/developer/
           itemType: reference
           text: Power Platform Developer Documentation
-        - url: https://pnp.github.io/powerplatform-samples
+        - url: https://pnp.github.io/powerplatform-samples/
           itemType: download
           text: Power Platform Samples
-        - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
+        - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip/
           itemType: how-to-guide
           text: Independent Publisher Connectors
-        - url: https://powerusers.microsoft.com
+        - url: https://powerusers.microsoft.com/
           itemType: concept
           text: Power Platform Community
         - url: https://learn.microsoft.com/shows/the-low-code-revolution/
