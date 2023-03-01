@@ -34,165 +34,156 @@ highlightedContent:
       itemType: concept
       url: https://learn.microsoft.com/assessments/browse
 
-productDirectory:
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   title: Microsoft Cloud Learning Resources
+  summary: Learn how to integrate services across the Microsoft Cloud with our hands-on tutorials, videos, and code samples.
   items:
-    # Card
-    - title: Hands-on Tutorials
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/azure-blue.svg
-      links:
+      - title: Hands-on Tutorials
+        links:
+
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          itemType: tutorial
           url: /microsoft-cloud/tutorials/acs-to-teams-meeting
 
         - text: Automate Data Reporting with Azure Functions and Power Automate
+          itemType: tutorial
           url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
 
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
+          itemType: tutorial
           url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
 
         - text: Discover and use Web APIs with Power Apps
+          itemType: tutorial
           url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
 
-    # Card
-    - title: Videos
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/github.svg
-      links:
+      - title: Videos
+        links:
+
         - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+          itemType: video
           url: https://www.youtube.com/watch?v=MXq-M6qRffE
 
         - text: All Things Microsoft Cloud - Power Platform
+          itemType: video
           url: https://www.youtube.com/watch?v=z19QZwmy1yg
        
         - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
+          itemType: video
           url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
 
         - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
+          itemType: video
           url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
 
-    # Card
-    - title: Code Samples
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/microsoft-365.svg
-      links:
+      - title: Code Samples
+        links:
+
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          itemType: download
           url: https://github.com/microsoft/microsoftcloud
 
         - text: Building Real-Time Collaborative Apps
+          itemType: download
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
         - text: Microsoft Teams App Camp
+          itemType: download
           url: https://github.com/microsoft/app-camp
 
-conceptualContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+productDirectory:
   title: The Microsoft Cloud
   items:
-      - title: Azure
-        links:
+    # Card
+    - title: Azure
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/azure-blue.svg
+      links:
         - url: https://azure.microsoft.com/free
-          itemType: get-started
           text: Create an Azure Account
         - url: https://portal.azure.com
-          itemType: deploy
           text: Azure Portal
         - url: https://learn.microsoft.com/azure
-          itemType: reference
           text: Azure Services
         - url: https://learn.microsoft.com/azure/architecture/
-          itemType: architecture
           text: Azure Architecture Center
         - url: https://learn.microsoft.com/azure/architecture/framework/
-          itemType: architecture
           text: Azure Well-Architected Framework
         - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
-          itemType: architecture
           text: Cloud Adoption Framework for Azure
-
-      - title: GitHub
-        links:
+    # Card
+    - title: GitHub
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/github.svg
+      links:
         - url: https://github.com/signup
-          itemType: get-started
           text: Create a GitHub Account
         - url: https://docs.github.com/
-          itemType: reference
           text: GitHub Documentation
         - url: https://docs.github.com/actions
-          itemType: reference
           text: GitHub Actions
         - url: https://docs.github.com/copilot
-          itemType: reference
           text: GitHub Copilot
-
-
-      - title: Microsoft 365
-        links:
+    # Card
+    - title: Microsoft 365
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/microsoft-365.svg
+      links:
         - url: https://developer.microsoft.com/microsoft-365/dev-program
-          itemType: get-started
           text: Join the Microsoft 365 Developer Program
         - url: https://learn.microsoft.com/microsoft-365
-          itemType: reference
           text: Microsoft 365 Developer Documentation      
         - url: https://learn.microsoft.com/graph
-          itemType: reference
           text: Microsoft Graph Documentation
         - url: https://learn.microsoft.com/microsoftteams/platform
-          itemType: reference
           text: Microsoft Teams Developer Documentation
         - url: https://learn.microsoft.com/sharepoint/dev
-          itemType: reference
           text: SharePoint Developer
-
-      - title: Power Platform
-        links:
+    # Card
+    - title: Power Platform
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/powerplatform.svg
+      links:
         - url: https://powerapps.microsoft.com/developerplan
-          itemType: get-started
           text: Join the Power Platform Developer Plan
         - url: https://learn.microsoft.com/power-platform/developer
-          itemType: reference
           text: Power Platform Developer Documentation
         - url: https://pnp.github.io/powerplatform-samples
-          itemType: download
           text: Power Platform Samples
         - url: https://learn.microsoft.com/connectors/custom-connectors/certification-submission-ip
-          itemType: how-to-guide
           text: Independent Publisher Connectors
         - url: https://powerusers.microsoft.com
-          itemType: concept
           text: Power Platform Community
         - url: https://learn.microsoft.com/shows/the-low-code-revolution/
-          itemType: video
           text: Low Code Revolution
-
-      - title: Dynamics 365
-        links:
+    # Card
+    - title: Dynamics 365
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/dynamics365.svg
+      links:
         - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
-          itemType: get-started
           text: Dynamics 365 Free Trial
         - url: https://learn.microsoft.com/dynamics365/
-          itemType: reference
           text: Dynamics 365 Documentation
         - url: https://learn.microsoft.com/training/dynamics365/
-          itemType: learn
           text: Dynamics 365 Learning Paths
 
-      - title: Industry and Government
-        links:
+    # Card
+    - title: Industry and Government
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/industry-cloud.svg
+      links:
         - url: https://learn.microsoft.com/industry/
-          itemType: overview
           text: Microsoft Industry Clouds Documentation
         - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
-          itemType: overview
           text: Browse Industry Clouds
         - url: https://azure.microsoft.com/global-infrastructure/government/request/
-          itemType: get-started
           text: Azure Government Free Trial
         - url: https://learn.microsoft.com/azure/azure-government/
-          itemType: reference
           text: Azure Government Documentation
         - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
-          itemType: reference
           text: Compare Azure Government and Global Azure
 
 tools:
