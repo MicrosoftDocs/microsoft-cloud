@@ -39,7 +39,7 @@ productDirectory:
   items:
 
     # Card
-    - title: Solutions Across Microsoft Platforms
+    - title: Solutions Across the Microsoft Cloud
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/architecture.svg
       links:
