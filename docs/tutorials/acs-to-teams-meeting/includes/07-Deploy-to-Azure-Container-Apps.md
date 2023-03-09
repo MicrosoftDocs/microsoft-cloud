@@ -15,7 +15,7 @@ to Azure Functions. You'll also build a container image and deploy it to Azure C
 
 Let's get started by using VS Code to deploy the functions code to Azure Functions.
 
-1. Open the `samples/acs-video-to-teams-meeting/server/typescript` project folder in Visual Studio Code.
+1. Open the `samples/acs-to-teams-meeting/server/typescript` project folder in Visual Studio Code.
 
 1. You should already have run `npm install` and see a `node_modules` folder in the project root. If not, open a command window and run `npm install` to install the dependencies.
 
@@ -100,12 +100,12 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
         --admin-enabled true
     ```
 
-1. Open the `samples/acs-video-to-teams-meeting/client/react/Dockerfile` file in your editor and notice that the following tasks are performed:
+1. Open the `samples/acs-to-teams-meeting/client/react/Dockerfile` file in your editor and notice that the following tasks are performed:
 
     - The React application is built and assigned to the `build` stage.
     - The nginx server is configured and the output of the `build` stage is copied into the nginx server image.
 
-1. Build the container image in Azure by running the following command from the root of the `samples/acs-video-to-teams-meeting/client/react` folder. Replace `<YOUR_FUNCTIONS_DOMAIN>` with your Azure Functions domain that you copied to a local file earlier in this exercise.
+1. Build the container image in Azure by running the following command from the root of the `samples/acs-to-teams-meeting/client/react` folder. Replace `<YOUR_FUNCTIONS_DOMAIN>` with your Azure Functions domain that you copied to a local file earlier in this exercise.
 
     # [Bash](#tab/bash)
 
