@@ -12,7 +12,7 @@ metadata:
   ms.topic: tutorial
   ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript
   ms.service: azure-communication-services
-  zone_pivot_groups: acs-azcli-azp-java-net-python-csharp-js-ts
+  zone_pivot_groups: programming-languages
 items:
   - title: Overview
     durationInMinutes: 2

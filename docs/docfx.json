@@ -45,11 +45,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/microsoft-cloud/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "zone_pivot_group_filename":
-      {
-      "tutorials/**/*.md": "tutorials/zone-pivot-groups.json"
-      }
+      "feedback_system": "GitHub"
     },
     "fileMetadata": {},
     "template": [],

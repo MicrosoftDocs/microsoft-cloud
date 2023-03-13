@@ -1,7 +1,6 @@
 ### YamlMime:ZonePivotGroups
 groups:
 # Owner: dwahlin
-# Programming language groups
 - id: programming-languages
   title: Programming languages
   prompt: Choose a programming language
