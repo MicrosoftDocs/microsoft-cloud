@@ -7,13 +7,5 @@ groups:
   pivots:
   - id: programming-language-csharp
     title: C#
-  - id: programming-language-go
-    title: Go
-  - id: programming-language-java
-    title: Java
-  - id: programming-language-javascript
-    title: JavaScript
   - id: programming-language-typescript
     title: TypeScript
-  - id: programming-language-python
-    title: Python
