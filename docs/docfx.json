@@ -4,7 +4,8 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -17,7 +18,8 @@
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "**/**/*-content.md"
         ]
       }
     ],
@@ -25,7 +27,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -42,10 +45,11 @@
     "globalMetadata": {
       "breadcrumb_path": "/microsoft-cloud/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub"
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "microsoft-cloud"
+    "dest": "microsoft-cloud",
+    "markdownEngineName": "markdig"
   }
 }
