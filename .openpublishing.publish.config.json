@@ -9,6 +9,8 @@
         "moniker_ranges": [],
         "open_to_public_contributors": true,
         "type_mapping": {
+          "Conceptual": "Content",
+          "Architecture": "Content",
           "ZonePivotGroups": "Toc"
         },
         "build_entry_point": "docs",
@@ -25,14 +27,8 @@
     "contribution_branch_mappings": {},
     "dependent_repositories": [
       {
-        "path_to_root": "_themes",
-        "url": "https://github.com/Microsoft/templates.docs.msft",
-        "branch": "main",
-        "branch_mapping": {}
-      },
-      {
         "path_to_root": "_themes.pdf",
-        "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+        "url": "https://github.com/Microsoft/templates.docs.msft",
         "branch": "main",
         "branch_mapping": {}
       }
@@ -40,7 +36,8 @@
     "branch_target_mapping": {
       "live": [
         "Publish",
-        "Pdf"
+        "Pdf",
+        "Intellisense"
       ],
       "main": [
         "Publish",
