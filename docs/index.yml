@@ -228,20 +228,10 @@ tools:
       url: https://docs.github.com/en/codespaces
 
     # Card
-    - title: Visual Studio
+    - title: Visual Studio Family
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/visualstudio.svg
-      url: https://learn.microsoft.com/visualstudio/windows
-
-    # Card
-    - title: Visual Studio Code
-      imageSrc: ./media/vscode.svg
-      url: https://code.visualstudio.com/docs
-
-    # Card
-    - title: Visual Studio for Mac
-      imageSrc: ./media/visualstudiomac.svg
-      url: https://learn.microsoft.com/visualstudio/mac
+      url: https://visualstudio.microsoft.com
 
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
