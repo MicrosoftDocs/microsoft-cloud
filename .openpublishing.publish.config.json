@@ -52,4 +52,46 @@
     "docs_build_engine": {
       "name": "docfx_v3"
     }
+  ],
+  "notification_subscribers": [
+    "jocontr@microsoft.com",
+    "martinek@microsoft.com",
+    "jasonr@microsoft.com"
+  ],
+  "sync_notification_subscribers": [],
+  "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/microsoft-cloud",
+  "git_repository_branch_open_to_public_contributors": "main",
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
+  "contribution_branch_mappings": {},
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf",
+      "Intellisense"
+    ],
+    "main": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf": true,
+  "need_generate_pdf_url_template": true,
+  "targets": {
+    "PDF": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "docs_build_engine": {
+    "name": "docfx_v3"
   }
+}
