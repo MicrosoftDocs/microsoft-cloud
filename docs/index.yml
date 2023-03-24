@@ -30,9 +30,9 @@ highlightedContent:
       url: https://docs.github.com/copilot
 
     # Card
-    - title: Microsoft Assessments
-      itemType: concept
-      url: https://learn.microsoft.com/assessments/browse
+    - title: Azure OpenAI Service
+      itemType: overview
+      url: https://learn.microsoft.com/azure/cognitive-services/openai/
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
