@@ -30,9 +30,9 @@ highlightedContent:
       url: https://docs.github.com/copilot
 
     # Card
-    - title: Microsoft Assessments
-      itemType: concept
-      url: https://learn.microsoft.com/assessments/browse
+    - title: Azure OpenAI Service
+      itemType: overview
+      url: https://learn.microsoft.com/azure/cognitive-services/openai/
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -212,37 +212,6 @@ conceptualContent:
           itemType: reference
           text: Compare Azure Government and Global Azure
 
-tools:
-  title: Microsoft Cloud Tooling
-  summary: Tools to help you build on the Microsoft Cloud.
-  items:
-    # Card
-    - title: Azure CLI
-      imageSrc: ./media/azure-blue.svg
-      url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
-
-    # Card
-    - title: GitHub Codespaces
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/github.svg
-      url: https://docs.github.com/en/codespaces
-
-    # Card
-    - title: Visual Studio
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/visualstudio.svg
-      url: https://learn.microsoft.com/visualstudio/windows
-
-    # Card
-    - title: Visual Studio Code
-      imageSrc: ./media/vscode.svg
-      url: https://code.visualstudio.com/docs
-
-    # Card
-    - title: Visual Studio for Mac
-      imageSrc: ./media/visualstudiomac.svg
-      url: https://learn.microsoft.com/visualstudio/mac
-
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
 additionalContent:
@@ -250,6 +219,21 @@ additionalContent:
     - title: Microsoft Cloud SDKs and Additional Tooling
       summary: Software Developer Kits (SDKs) and additional tools to integrate applications with the Microsoft Cloud.
       items:
+        # Card
+        - title: Azure CLI
+          summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources.
+          url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
+        
+        # Card
+        - title: GitHub Codespaces
+          summary: A codespace is a development environment that's hosted in the cloud.
+          url: https://docs.github.com/codespaces
+
+        # Card
+        - title: Visual Studio Family
+          summary: Download and install Visual Studio, Visual Studio for Mac, or Visual Studio Code
+          url: https://visualstudio.microsoft.com
+
         # Card
         - title: Azure SDKs and Tools
           summary: The Azure SDKs are collections of libraries built to make it easier to use Azure services from your language of choice.
