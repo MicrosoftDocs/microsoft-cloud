@@ -40,7 +40,7 @@ productDirectory:
     # Card
     - title: Solutions Across the Microsoft Cloud
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/architecture.svg
+      imageSrc: ./media/across.svg
       links:
         - text: Azure and Dynamics 365 Scenarios
           url: https://learn.microsoft.com/en-us/azure/architecture/solutions/dynamics-365-scenarios
@@ -54,7 +54,7 @@ productDirectory:
     # Card
     - title: Hands-on Tutorials
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/tutorial.svg
+      imageSrc: ./media/handson.svg
       links:
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
           url: /microsoft-cloud/tutorials/acs-to-teams-meeting
@@ -88,7 +88,7 @@ productDirectory:
     # Card
     - title: Code Samples
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/code.svg
+      imageSrc: ./media/codesample.svg
       links:
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
           url: https://github.com/microsoft/microsoftcloud
