@@ -2,13 +2,13 @@
 
 In this exercise you'll learn how to deploy the ACS React app and the Azure Functions to the cloud using Azure Static Web Apps.
 
-:::image type="content" source="./media/5-deploy-swa.png" alt-text="Azure Static Web Apps":::
+:::image type="content" source="../media/5-deploy-swa.png" alt-text="Azure Static Web Apps":::
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type `static web apps` in the top search bar and select `Static Web Apps` from the options that appear.
 
-    :::image type="content" source="./media/search-swa-portal.png" alt-text="Azure Static Web Apps":::
+    :::image type="content" source="../media/search-swa-portal.png" alt-text="Azure Static Web Apps":::
 
 1. Select `Create` in the toolbar.
 

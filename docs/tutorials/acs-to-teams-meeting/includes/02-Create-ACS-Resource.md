@@ -2,7 +2,7 @@
 
 In this exercise you'll create an Azure Communication Services (ACS) resource in the Azure Portal.
 
-:::image type="content" source="./media/1-acs-azure-portal.png" alt-text="ACS in the Azure Portal":::
+:::image type="content" source="../media/1-acs-azure-portal.png" alt-text="ACS in the Azure Portal":::
 
 To get started, perform the following tasks:
 
@@ -10,7 +10,7 @@ To get started, perform the following tasks:
 
 1. Type `communication services` in the top search bar and select `Communication Services` from the options that appear.
 
-    :::image type="content" source="./media/search-acs-portal.png" alt-text="ACS in the Azure Portal":::
+    :::image type="content" source="../media/search-acs-portal.png" alt-text="ACS in the Azure Portal":::
 
 1. Select `Create` in the toolbar.
 
@@ -30,7 +30,7 @@ To get started, perform the following tasks:
 
 1. Copy the `Identity` and `User Access token` values to a local file. You'll need the values later in this exercise.
 
-    :::image type="content" source="./media/user-identity-token.png" alt-text="User identity and token" border="false":::
+    :::image type="content" source="../media/user-identity-token.png" alt-text="User identity and token" border="false":::
 
 1. Select `Settings --> Keys` and copy the `Primary key` connection string value to the local file where you copied the user identity and token values.
 
@@ -43,6 +43,6 @@ To get started, perform the following tasks:
 
 1. Select the new meeting you added in the calendar and copy the Teams meeting link that is displayed into the same file where you stored the ACS user identity, token, and connection string.
 
-    :::image type="content" source="./media/teams-meeting-link.png" alt-text="Teams Meeting Join Link":::
+    :::image type="content" source="../media/teams-meeting-link.png" alt-text="Teams Meeting Join Link":::
 
 1. Now that your ACS resource is setup and you have a Teams meeting join link, let's get the React application up and running.
