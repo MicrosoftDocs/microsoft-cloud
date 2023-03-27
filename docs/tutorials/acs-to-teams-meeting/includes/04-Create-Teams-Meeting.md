@@ -2,7 +2,7 @@
 
 In this exercise, you'll automate the process of creating a Microsoft Teams meeting link and passing to the ACS by using Azure Functions and Microsoft Graph.
 
-:::image type="content" source="./media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
+:::image type="content" source="../media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
 
 1. You'll need to create an Azure Active Directory (AAD) app for Daemon app authentication. In this step, authentication will be handled in the background with `app credentials`, and AAD app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
 

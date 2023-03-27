@@ -29,7 +29,7 @@
 
     You can get the User ID from the [Azure Portal](https://portal.azure.com). Select `Azure Active Directory` and navigate to the `Users` tab on the side bar. Search for your user name and select it to see the user details. Inside the user details, Object ID represents the User ID. Copy the `Object ID` value and use it for the `USER_ID` value in `local.settings.json`.
 
-    :::image type="content" source="./media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
+    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
 
     > [!NOTE]
     > `ACS_CONNECTION_STRING` will be used in the next exercise so you don't need to update it yet.

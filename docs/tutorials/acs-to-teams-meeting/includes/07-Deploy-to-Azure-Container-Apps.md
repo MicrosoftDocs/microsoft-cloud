@@ -9,7 +9,7 @@
 In this exercise you'll learn how to deploy the Microsoft Graph and ACS functions discussed in earlier exercises 
 to Azure Functions. You'll also build a container image and deploy it to Azure Container Apps.
 
-:::image type="content" source="./media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
+:::image type="content" source="../media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
 
 ## Deploy to Azure Functions
 
@@ -21,7 +21,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Open the VS Code command pallet (`shift + cmd + p` on Mac | `shift + ctrl + p` on Windows), and select **Azure Functions: Create Function App in Azure**.
 
-    :::image type="content" source="./media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
+    :::image type="content" source="../media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
 
 1. You'll be prompted to enter the following information:
 
