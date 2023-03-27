@@ -65,8 +65,8 @@ productDirectory:
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
           url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
 
-        - text: Discover and use Web APIs with Power Apps
-          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+        - text: Transform your Business Applications with Fusion Development
+          url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development
 
     # Card
     - title: Videos
