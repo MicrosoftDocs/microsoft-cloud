@@ -1,0 +1,261 @@
+### YamlMime:Hub
+title: Microsoft Cloud for Developers
+summary: Learn how to integrate services across the Microsoft Cloud with tutorials, videos, code samples, documentation and more.
+brand: azure
+
+metadata:
+  title: Microsoft Cloud for Developers
+  description: Microsoft Cloud documentation, sample architectures, best practices, and interactive tutorials.
+  products:
+    - azure
+    - power-platform
+    - github
+    - m365
+  ms.topic: hub-page
+  author: danwahlin
+  ms.author: dwahlin
+  ms.date: 03/01/2023
+
+highlightedContent:
+  # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Build applications on the Microsoft Cloud
+      itemType: get-started
+      url: https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview
+
+    # Card
+    - title: GitHub Copilot
+      itemType: how-to-guide
+      url: https://docs.github.com/copilot
+
+    # Card
+    - title: Azure OpenAI Service
+      itemType: overview
+      url: https://learn.microsoft.com/azure/cognitive-services/openai/
+
+productDirectory:
+  title: Microsoft Cloud Learning Resources
+  items:
+    # Card
+    - title: Solutions Across the Microsoft Cloud
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/across.svg
+      links:
+        - text: Azure and Dynamics 365 Scenarios
+          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/dynamics-365-scenarios
+
+        - text: Azure and Microsoft 365 Scenarios
+          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/microsoft-365-scenarios
+
+        - text: Azure and Power Platform Scenarios
+          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/power-platform-scenarios
+
+    # Card
+    - title: Hands-on Tutorials
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/handson.svg
+      links:
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          url: /microsoft-cloud/tutorials/acs-to-teams-meeting
+
+        - text: Automate Data Reporting with Azure Functions and Power Automate
+          url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+
+        - text: Build Productivity Apps by using Microsoft Graph Toolkit
+          url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+
+        - text: Discover and use Web APIs with Power Apps
+          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+
+    # Card
+    - title: Videos
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/video.svg
+      links:
+        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
+          url: https://www.youtube.com/watch?v=MXq-M6qRffE
+
+        - text: All Things Microsoft Cloud - Power Platform
+          url: https://www.youtube.com/watch?v=z19QZwmy1yg
+
+        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
+          url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+
+        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
+          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
+
+    # Card
+    - title: Code Samples
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/codesample.svg
+      links:
+        - text: Audio/Video Calling from a Custom App into a Teams Meeting
+          url: https://github.com/microsoft/microsoftcloud
+
+        - text: Building Real-Time Collaborative Apps
+          url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
+
+        - text: Microsoft Teams App Camp
+          url: https://github.com/microsoft/app-camp
+
+conceptualContent:
+  # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  title: The Microsoft Cloud
+  items:
+    - title: Azure
+      links:
+        - url: https://azure.microsoft.com/free
+          itemType: get-started
+          text: Create an Azure Account
+        - url: https://portal.azure.com
+          itemType: deploy
+          text: Azure Portal
+        - url: https://learn.microsoft.com/azure
+          itemType: reference
+          text: Azure Services
+        - url: https://learn.microsoft.com/azure/architecture/
+          itemType: architecture
+          text: Azure Architecture Center
+        - url: https://learn.microsoft.com/azure/architecture/framework/
+          itemType: architecture
+          text: Azure Well-Architected Framework
+        - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
+          itemType: architecture
+          text: Cloud Adoption Framework for Azure
+
+    - title: GitHub
+      links:
+        - url: https://github.com/signup
+          itemType: get-started
+          text: Create a GitHub Account
+        - url: https://docs.github.com/
+          itemType: reference
+          text: GitHub Documentation
+        - url: https://docs.github.com/actions
+          itemType: reference
+          text: GitHub Actions
+        - url: https://docs.github.com/copilot
+          itemType: reference
+          text: GitHub Copilot
+
+    - title: Microsoft 365
+      links:
+        - url: https://developer.microsoft.com/microsoft-365/dev-program
+          itemType: get-started
+          text: Join the Microsoft 365 Developer Program
+        - url: https://learn.microsoft.com/microsoft-365
+          itemType: reference
+          text: Microsoft 365 Developer Documentation
+        - url: https://learn.microsoft.com/graph
+          itemType: reference
+          text: Microsoft Graph Documentation
+        - url: https://learn.microsoft.com/microsoftteams/platform
+          itemType: reference
+          text: Microsoft Teams Developer Documentation
+        - url: https://learn.microsoft.com/sharepoint/dev
+          itemType: reference
+          text: SharePoint Developer
+
+    - title: Power Platform
+      links:
+        - url: https://learn.microsoft.com/power-platform/developer/create-developer-environment
+          itemType: get-started
+          text: Create a developer environment
+        - url: https://learn.microsoft.com/power-platform/developer/
+          itemType: reference
+          text: Power Platform Developer Documentation
+        - url: https://learn.microsoft.com/training/browse/?products=power-platform&roles=developer&resource_type=learning%20path
+          itemType: learn
+          text: Power Platform Developer Training
+        - url: https://powerusers.microsoft.com/
+          itemType: concept
+          text: Power Platform Community
+
+    - title: Dynamics 365
+      links:
+        - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
+          itemType: get-started
+          text: Dynamics 365 Free Trial
+        - url: https://learn.microsoft.com/dynamics365/get-started/developers
+          itemType: reference
+          text: Dynamics 365 Developer Documentation
+        - url: https://learn.microsoft.com/training/browse/?products=dynamics-365&roles=developer&resource_type=learning%20path
+          itemType: learn
+          text: Dynamics 365 Developer Training
+        - url: https://community.dynamics.com/
+          itemType: concept
+          text: Dynamics 365 Community
+
+    - title: Industry and Government
+      links:
+        - url: https://www.microsoft.com/industry
+          itemType: get-started
+          text: Get Microsoft Industry Clouds
+        - url: https://learn.microsoft.com/industry/
+          itemType: overview
+          text: Microsoft Industry Clouds Documentation
+        - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
+          itemType: overview
+          text: Browse Industry Clouds
+        - url: https://azure.microsoft.com/global-infrastructure/government/request/
+          itemType: get-started
+          text: Azure Government Free Trial
+        - url: https://learn.microsoft.com/azure/azure-government/
+          itemType: reference
+          text: Azure Government Documentation
+        - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
+          itemType: reference
+          text: Compare Azure Government and Global Azure
+
+# additionalContent section (Optional; Remove if not applicable.)
+# Card with summary style
+additionalContent:
+  sections:
+    - title: Microsoft Cloud SDKs and Additional Tooling
+      summary: Software Developer Kits (SDKs) and additional tools to integrate applications with the Microsoft Cloud.
+      items:
+        # Card
+        - title: Azure CLI
+          summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources.
+          url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
+
+        # Card
+        - title: GitHub Codespaces
+          summary: A codespace is a development environment that's hosted in the cloud.
+          url: https://docs.github.com/codespaces
+
+        # Card
+        - title: Visual Studio Family
+          summary: Download and install Visual Studio, Visual Studio for Mac, or Visual Studio Code
+          url: https://visualstudio.microsoft.com
+
+        # Card
+        - title: Azure SDKs and Tools
+          summary: The Azure SDKs are collections of libraries built to make it easier to use Azure services from your language of choice.
+          url: https://azure.microsoft.com/downloads
+
+        # Card
+        - title: CLI for Microsoft 365
+          summary: The CLI for Microsoft 365 can help you can manage your Microsoft 365 tenant and SharePoint Framework projects on any platform.
+          url: https://pnp.github.io/cli-microsoft365/
+
+        # Card
+        - title: Microsoft Graph Developer Proxy
+          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
+          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
+
+        # Card
+        - title: Microsoft Graph SDKs
+          summary: The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
+          url: https://learn.microsoft.com/graph/sdks/sdks-overview
+
+        # Card
+        - title: Power Platform CLI
+          summary: Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and more.
+          url: https://learn.microsoft.com/power-platform/developer/cli/introduction
+
+        # Card
+        - title: Powershell
+          summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
+          url: https://learn.microsoft.com/powershell/

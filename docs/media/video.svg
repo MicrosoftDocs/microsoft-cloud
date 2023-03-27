@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="icons" xmlns="http://www.w3.org/2000/svg" width="64" height="64" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" x1="32" y1="51.5" x2="32" y2="12.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004dae"/>
+      <stop offset=".21" stop-color="#0061c4"/>
+      <stop offset=".51" stop-color="#0078dd"/>
+      <stop offset=".78" stop-color="#0086ec"/>
+      <stop offset="1" stop-color="#008bf1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="m42.4,43.05c0,4.667-3.783,8.45-8.45,8.45H14.45c-4.667,0-8.45-3.783-8.45-8.45v-22.1c0-4.667,3.783-8.45,8.45-8.45h19.5c4.667,0,8.45,3.783,8.45,8.45v22.1Zm14.981-26.927c.399.47.619,1.067.619,1.684v28.386c0,1.436-1.164,2.6-2.6,2.6-.617,0-1.214-.219-1.684-.619l-8.716-7.41v-17.532l8.716-7.407c1.094-.93,2.735-.797,3.665.297Z" fill="url(#linear-gradient)"/>
+    <path d="m14.45,31.948c0-5.385,4.365-9.75,9.75-9.75s9.75,4.365,9.75,9.75-4.365,9.75-9.75,9.75-9.75-4.365-9.75-9.75Zm8.634-3.749c-.812-.45-1.809.138-1.809,1.066v5.366c0,.929.997,1.516,1.809,1.066l5.614-3.109c.233-.129.377-.374.377-.64s-.144-.511-.377-.64l-5.614-3.109Z" fill="#42e8ca"/>
+  </g>
+  <rect width="64" height="64" fill="none"/>
+</svg>
