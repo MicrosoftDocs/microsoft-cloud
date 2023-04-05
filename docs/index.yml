@@ -14,7 +14,7 @@ metadata:
   ms.topic: hub-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 03/01/2023
+  ms.date: 04/05/2023
 
 highlightedContent:
   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -30,9 +30,9 @@ highlightedContent:
       url: https://docs.github.com/copilot
 
     # Card
-    - title: Azure OpenAI Service
+    - title: Azure OpenAI Service Prompt Engineering
       itemType: overview
-      url: https://learn.microsoft.com/azure/cognitive-services/openai/
+      url: https://learn.microsoft.com/azure/cognitive-services/openai/concepts/prompt-engineering
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -65,8 +65,8 @@ productDirectory:
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
           url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
 
-        - text: Discover and use Web APIs with Power Apps
-          url: https://learn.microsoft.com/training/modules/discover-web-apis-power-apps
+        - text: Transform your Business Applications with Fusion Development
+          url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development
 
     # Card
     - title: Videos
