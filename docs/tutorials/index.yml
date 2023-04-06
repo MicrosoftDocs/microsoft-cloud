@@ -14,7 +14,7 @@ metadata:
 landingContent:
   - title: Layouts
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: tutorial
         links:
           - text: Azure Communication Services to Teams
             url: acs-to-teams-meeting/index.yml
