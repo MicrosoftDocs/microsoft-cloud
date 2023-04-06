@@ -3,9 +3,7 @@ groups:
 # Owner: dwahlin
 - id: programming-languages
   title: Programming languages
-  prompt: Choose a programming language
+  prompt: Language
   pivots:
-  - id: programming-language-csharp
-    title: C#
   - id: programming-language-typescript
     title: TypeScript
