@@ -16,7 +16,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
     1. After the app is registered, go to **API permissions** and select **+ Add a permission**.
     1. Select **Microsoft Graph** followed by **Application permissions**.
     1. Select the `Calendars.ReadWrite` permission and then select **Add**.
-    1. After adding the permissions, select **Grant admin consent for <your organization name>**.
+    1. After adding the permissions, select **Grant admin consent for <YOUR_ORGANIZATION_NAME>**.
     1. Go to the **Certificates & secrets** tab, select **+ New client secret**, and then select **Add**. 
     1. Copy the value of the secret into a local file. You'll use the value later in this exercise.
     1. Go to the **Overview** tab and copy the `Application (client) ID` and `Directory (tenant) ID` values into the same local file that you used in the previous step.
