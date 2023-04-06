@@ -2,5 +2,5 @@
   href: tutorials/index.yml
   expanded: true
   items:
-    - name: ACS to Teams
+    - name: Audio/Video Calling into a Teams Meeting
       href: tutorials/acs-to-teams-meeting/index.yml
