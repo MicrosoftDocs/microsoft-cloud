@@ -21,11 +21,16 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
     1. Copy the value of the secret into a local file. You'll use the value later in this exercise.
     1. Go to the `Overview` tab and copy the `Application (client) ID` and `Directory (tenant) ID` values into the same local file that you used in the previous step.
 
-<!-- ::: zone pivot="programming-language-csharp"
-[!INCLUDE [C#](./04-Create-Teams-Meeting-CS.md)]
-::: zone-end -->
+<!-- 
+Need to add this to the .openpublishing.publish.config.json file "type_mapping" property:
 
-<!-- ::: zone pivot="programming-language-typescript"
+        "ZonePivotGroups": "Toc"
+
+::: zone pivot="programming-language-csharp"
+[!INCLUDE [C#](./04-Create-Teams-Meeting-CS.md)]
+::: zone-end
+
+ ::: zone pivot="programming-language-typescript"
 [!INCLUDE [TypeScript](./04-Create-Teams-Meeting-TS.md)]
 ::: zone-end -->
 
