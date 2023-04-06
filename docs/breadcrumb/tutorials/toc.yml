@@ -1,0 +1,11 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Microsoft Cloud
+    tocHref: /microsoft-cloud/
+    topicHref: /microsoft-cloud/
+    items:
+    - name: Tutorials
+      tocHref: /microsoft-cloud/tutorials/
+      topicHref: /microsoft-cloud/tutorials/
