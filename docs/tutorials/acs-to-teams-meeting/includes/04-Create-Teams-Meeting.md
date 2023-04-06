@@ -25,9 +25,11 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 [!INCLUDE [C#](./04-Create-Teams-Meeting-CS.md)]
 ::: zone-end -->
 
-::: zone pivot="programming-language-typescript"
+<!-- ::: zone pivot="programming-language-typescript"
 [!INCLUDE [TypeScript](./04-Create-Teams-Meeting-TS.md)]
-::: zone-end
+::: zone-end -->
+
+[!INCLUDE [TypeScript](./04-Create-Teams-Meeting-TS.md)]
 
 
 

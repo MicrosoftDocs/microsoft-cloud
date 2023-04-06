@@ -5,5 +5,7 @@ groups:
   title: Programming languages
   prompt: Language
   pivots:
+  - id: programming-language-csharp
+    title: C#
   - id: programming-language-typescript
     title: TypeScript
