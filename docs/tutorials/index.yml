@@ -16,7 +16,7 @@ landingContent:
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Azure Communication Services to Teams
+          - text: Audio/Video Calling from a Custom App into a Teams Meeting
             url: acs-to-teams-meeting/index.yml
 
   
