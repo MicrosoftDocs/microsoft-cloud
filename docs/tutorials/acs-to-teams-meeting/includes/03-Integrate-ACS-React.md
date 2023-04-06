@@ -4,41 +4,41 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 :::image type="content" source="../media/2-acs-react.png" alt-text="ACS in React":::
 
-1. Visit [GitHub](https://github.com) and sign in. If you don't already have a GitHub account, you can select the `Sign up` option to create one.
+1. Visit [GitHub](https://github.com) and sign in. If you don't already have a GitHub account, you can select the **Sign up** option to create one.
 
 1. Visit the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud).
 
-1. Select the `Fork` option to add the repository to your desired GitHub organization/account.
+1. Select the **Fork** option to add the repository to your desired GitHub organization/account.
 
     :::image type="content" source="../media/fork-repo.png" alt-text="Fork a Repository":::
 
-1. Run the following command to clone this repository to your machine. Replace `<YOUR_ORG_NAME>` with your GitHub organization/account name.
+1. Run the following command to clone this repository to your machine. Replace *<YOUR_ORG_NAME>* with your GitHub organization/account name.
 
     ```console
     git clone https://github.com/<YOUR_ORG_NAME>/MicrosoftCloud
     ```
 
-1. Open the `samples/acs-to-teams-meeting/client/react` project folder in Visual Studio Code. 
+1. Open the *samples/acs-to-teams-meeting/client/react* project folder in Visual Studio Code. 
 
-1. Open the `package.json` file in VS Code and note the following ACS packages are included:
+1. Open the *package.json* file in VS Code and note the following ACS packages are included:
 
     ```console
     @azure/communication-common 
     @azure/communication-react
     ``` 
 
-1. Double-check that you have `npm 7` or higher installed by opening a terminal window and running the following command:
+1. Double-check that you have *npm 7* or higher installed by opening a terminal window and running the following command:
 
     ```console
     npm --version
     ```
 
     > [!TIP]
-    > If you don't have `npm 7` or higher installed you can update npm to the latest version by running `npm install -g npm`.
+    > If you don't have *npm 7* or higher installed you can update npm to the latest version by running `npm install -g npm`.
 
-1. Open a terminal window and run the `npm install` command in the `react` folder to install the application dependencies.
+1. Open a terminal window and run the `npm install` command in the *react* folder to install the application dependencies.
 
-1. Open `App.tsx` and take a moment to explore the imports at the top of the file. These handle importing ACS security and audio/video calling symbols that will be used in the app.
+1. Open *App.tsx* and take a moment to explore the imports at the top of the file. These handle importing ACS security and audio/video calling symbols that will be used in the app.
 
     ```typescript
     import { 
@@ -103,7 +103,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
     ```
 
     > [!NOTE]
-    > `useMemo` is used in this scenario because we only want the `AzureCommunicationTokenCredential` object and the call adapter args to be created once as the necessary parameters are passed in. View additional details about [useMemo here](https://reactjs.org/docs/hooks-reference.html#usememo).
+    > `useMemo` is used in this scenario because we only want the `AzureCommunicationTokenCredential` object and the call adapter args to be created once as the necessary parameters are passed in. View additional details about [useMemo here](https://react.dev/reference/react/useMemo).
 
 1. Once the `credentials` and `callAdapterArgs` are ready, the following line handles creating an ACS call adapter using the `useAzureCommunicationCallAdapter` React hook provided by ACS. The `callAdapter` object will be used later in the UI calling composite component.
 
@@ -119,6 +119,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
     ```typescript
     useEffect(() => {
         /* Commenting out for now
+
         const init = async () => {
             setMessage('Getting ACS user');
             //Call Azure Function to get the ACS user identity and token
@@ -136,6 +137,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
             console.log('Teams meeting link', link);
         }
         init();
+
         */
     }, []);
     ```
@@ -159,8 +161,8 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Save the file before continuing.
 
-1. Run `npm start` in your terminal window to run the application. Ensure you run the command within the `react` folder.
+1. Run `npm start` in your terminal window to run the application. Ensure you run the command within the *react* folder.
 
 1. After the applications builds you should see a calling UI displayed. Enable selecting your microphone and camera and initiate the call. You should see that you're placed in a waiting room. If you join the meeting you setup earlier in Microsoft Teams, you can allow the guest to enter the meeting.
 
-1. Press `ctrl+c` to stop the application. Now that you've successfully run it, let's explore how you can dynamically get the ACS user identity and token and automatically create a Microsoft Teams meeting and return the join URL using Microsoft Graph.
+1. Press <kbd>Ctrl + C</kbd> to stop the application. Now that you've successfully run it, let's explore how you can dynamically get the ACS user identity and token and automatically create a Microsoft Teams meeting and return the join URL using Microsoft Graph.

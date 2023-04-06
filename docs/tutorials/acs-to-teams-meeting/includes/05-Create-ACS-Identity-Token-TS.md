@@ -1,6 +1,6 @@
-1. Open `local.settings.json` and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
+1. Open *local.settings.json* and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
 
-1. Open `samples/acs-to-teams-meeting/server/typescript/ACSTokenFunction/index.ts` in VS Code. It has the following code:
+1. Open *samples/acs-to-teams-meeting/server/typescript/ACSTokenFunction/index.ts* in Visual Studio Code. It has the following code:
 
     ```typescript
     import { CommunicationIdentityClient } from '@azure/communication-identity';
@@ -31,7 +31,7 @@
         ```
 
     > [!NOTE]
-    > This is the connection string value you added into the `local.settings.json` file earlier.
+    > This is the connection string value you added into the *local.settings.json* file earlier.
 
     - Creates a new `CommunicationIdentityClient` instance and passes the ACS connection string to it.
 
@@ -54,11 +54,11 @@
         };
         ```
 
-1. Go to the `samples/acs-to-teams-meeting/server/typescript` folder in a terminal window and run `npm start`.
+1. Go to the *samples/acs-to-teams-meeting/server/typescript* folder in a terminal window and run `npm start`.
 
 1. Now that the Azure Functions are running locally, the client needs to be able to call into them to get the ACS user identity and token values.
 
-1. Open `samples/acs-to-teams-meeting/client/react/App.tsx` file in your editor.
+1. Open *samples/acs-to-teams-meeting/client/react/App.tsx* file in your editor.
 
 1. Locate the `userId` and `token` state variables in the component. Remove the hardcoded values and replace them with empty quotes:
 
@@ -94,11 +94,11 @@
 
 1. Save the file before continuing.
 
-1. Open a separate terminal and run `npm start` in the `react` folder. After it builds you should see the ACS calling UI displayed and you can call into the Teams meeting that was dynamically created by Microsoft Graph.
+1. Open a separate terminal and run `npm start` in the *react* folder. After it builds you should see the ACS calling UI displayed and you can call into the Teams meeting that was dynamically created by Microsoft Graph.
 
-1. Stop both of the terminal processes (React and Azure Functions) by selecting `ctrl + c`.
+1. Stop both of the terminal processes (React and Azure Functions) by selecting <kbd>Ctrl + C</kbd>.
 
-1. Commit your git changes and push them to your GitHub repository using VS Code:
-    - Select the git icon (3rd one down in the VS Code toolbar).
-    - Enter a commit message and select `Commit`.
-    - Select `Sync Changes`.
+1. Commit your git changes and push them to your GitHub repository using Visual Studio Code:
+    - Select the **Source Control** icon (3rd one down in the Visual Studio Code toolbar).
+    - Enter a commit message and select **Commit**.
+    - Select **Sync Changes**.
