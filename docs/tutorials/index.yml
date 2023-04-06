@@ -1,0 +1,22 @@
+### YamlMime:Landing
+
+title: Microsoft Cloud tutorials
+summary: Learn how to integrate services across the Microsoft Cloud.
+
+metadata:
+  title: Microsoft Cloud tutorials
+  description: Learn how to integrate services across the Microsoft Cloud.
+  ms.topic: landing-page
+  author: danwahlin
+  ms.author: dwahlin
+  ms.date: 04/05/2023
+
+landingContent:
+  - title: Layouts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Communication Services to Teams
+            url: acs-to-teams-meeting/index.yml
+
+  
