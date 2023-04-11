@@ -17,6 +17,6 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: acs-to-teams-meeting/index.yml
+            url: tutorial/acs-to-teams-meeting.yml
 
   

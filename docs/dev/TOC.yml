@@ -3,4 +3,4 @@
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
-      href: tutorial/acs-to-teams-meeting/index.yml
+      href: tutorial/acs-to-teams-meeting.yml
