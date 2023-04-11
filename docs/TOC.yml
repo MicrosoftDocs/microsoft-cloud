@@ -1,6 +1,25 @@
+- name: Microsoft Cloud Developer Documentation
+  href: index.yml 
+- name: Overview 
+  items:
+  - name: Introduction  
+    href: /overview/overview.md
+  - name: Create and deploy apps in less time  
+    href: /overview/create-deploy-more-applications-less-time.md
+  - name: Get the most value from technical talent  
+    href: /overview/get-most-value-technical-talent.md
+  - name: Integrate apps with existing solutions  
+    href: /overview/integrate-new-applications-existing-solutions.md
+  - name: Create and run secure apps  
+    href: /overview/create-run-security-applications.md
+  - name: Summary  
+    href: /overview/summary.md
 - name: Tutorials
   href: tutorials/index.yml
   expanded: true
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
       href: tutorials/acs-to-teams-meeting/index.yml
+- Concepts 
+- Reference 
+- Resources 
