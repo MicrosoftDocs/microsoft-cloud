@@ -1,3 +1,19 @@
+- name: Microsoft Cloud Developer Documentation
+  href: index.yml 
+- name: Overview 
+  items:
+  - name: Introduction  
+    href: overview/introduction.md
+  - name: Create and deploy apps in less time  
+    href: overview/create-deploy-more-applications-less-time.md
+  - name: Get the most value from technical talent  
+    href: overview/get-most-value-technical-talent.md
+  - name: Integrate apps with existing solutions  
+    href: overview/integrate-new-applications-existing-solutions.md
+  - name: Create and run secure apps  
+    href: overview/create-run-secure-applications.md
+  - name: Summary  
+    href: overview/summary.md  
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
@@ -6,3 +22,17 @@
     #   href: ./tutorials/openai-msgraph-acs.yml
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
+- name: Related
+  items:
+    - name: Azure Architecture Center 
+      href: /azure/architecture
+    - name: Dynamics 365 developer docs 
+      href: /dynamics365/get-started/developers
+    - name: GitHub developer docs 
+      href: https://docs.github.com/
+    - name: Microsoft 365 developer docs 
+      href: /microsoft-365/developer/
+    - name: Microsoft industry docs
+      href: /industry/
+    - name: Microsoft Power Platform developer docs 
+      href: /power-platform/developer/
