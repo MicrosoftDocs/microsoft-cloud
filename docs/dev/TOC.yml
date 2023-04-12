@@ -1,7 +1,7 @@
 - name: Microsoft Cloud Developer Documentation
   href: index.yml 
 - name: Overview 
-  items:
+  items:s
   - name: Introduction  
     href: overview/overview.md
   - name: Create and deploy apps in less time  
@@ -11,7 +11,7 @@
   - name: Integrate apps with existing solutions  
     href: overview/integrate-new-applications-existing-solutions.md
   - name: Create and run secure apps  
-    href: overview/create-run-security-applications.md
+    href: overview/create-run-secure-applications.md
   - name: Summary  
     href: overview/summary.md  
 - name: Tutorials
