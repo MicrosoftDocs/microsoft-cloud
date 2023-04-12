@@ -22,7 +22,7 @@ highlightedContent:
     # Card
     - title: Build applications on the Microsoft Cloud
       itemType: get-started
-      url: /microsoft-cloud/overview/introduction.md
+      url: /microsoft-cloud/dev/overview/introduction
 
     # Card
     - title: GitHub Copilot
