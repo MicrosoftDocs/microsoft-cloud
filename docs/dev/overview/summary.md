@@ -70,11 +70,10 @@ Other contributors:
 
 ## Related resources
 
-These are the other articles in **Build applications on the Microsoft cloud**:
-
-- [1. Build applications on the Microsoft Cloud](overview.md)
-- [2. Create and deploy more applications in less time](create-deploy-more-applications-less-time.md)
-- [3. Get the most value from technical talent](get-most-value-technical-talent.md)
-- [4. Integrate new applications with existing solutions](integrate-new-applications-existing-solutions.md)
-- [5. Create and run secure applications](create-run-secure-applications.md)
+- These are the other articles in **Build applications on the Microsoft cloud**:
+  - [1. Introduction](introduction.md)
+  - [2. Create and deploy more applications in less time](create-deploy-more-applications-less-time.md)
+  - [3. Get the most value from technical talent](get-most-value-technical-talent.md)
+  - [4. Integrate new applications with existing solutions](integrate-new-applications-existing-solutions.md)
+  - [5. Create and run secure applications](create-run-secure-applications.md)
 - [Video: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform](https://aka.ms/microsoft-cloud-build22-video)
