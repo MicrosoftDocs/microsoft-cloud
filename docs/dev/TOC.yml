@@ -18,3 +18,17 @@
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
       href: tutorial/acs-to-teams-meeting.yml
+- name: Related
+  items:
+    - name: Azure Architecture Center 
+      href: /azure/architecture
+    - name: Dynamics 365 developer docs 
+      href: /dynamics365/get-started/developers
+    - name: GitHub developer docs 
+      href: https://docs.github.com/
+    - name: Microsoft 365 developer docs 
+      href: /microsoft-365/developer/
+    - name: Microsoft industry docs
+      href: /industry/
+    - name: Microsoft Power Platform developer docs 
+      href: /power-platform/developer/
