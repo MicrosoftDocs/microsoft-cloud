@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Cloud tutorials
+title: Microsoft Cloud Development
 summary: Learn how to integrate services across the Microsoft Cloud.
 
 metadata:
-  title: Microsoft Cloud tutorials
+  title: Microsoft Cloud Development
   description: Learn how to integrate services across the Microsoft Cloud.
   ms.topic: landing-page
   author: danwahlin
@@ -17,6 +17,6 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: acs-to-teams-meeting/index.yml
+            url: tutorial/acs-to-teams-meeting.yml
 
   
