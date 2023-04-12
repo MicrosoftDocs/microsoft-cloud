@@ -22,7 +22,7 @@ highlightedContent:
     # Card
     - title: Build applications on the Microsoft Cloud
       itemType: get-started
-      url: https://learn.microsoft.com/azure/architecture/guide/microsoft-cloud/overview
+      url: /microsoft-cloud/overview/introduction.md
 
     # Card
     - title: GitHub Copilot
