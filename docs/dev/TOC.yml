@@ -1,9 +1,9 @@
 - name: Microsoft Cloud Developer Documentation
   href: index.yml 
 - name: Overview 
-  items:s
+  items:
   - name: Introduction  
-    href: overview/overview.md
+    href: overview/introduction.md
   - name: Create and deploy apps in less time  
     href: overview/create-deploy-more-applications-less-time.md
   - name: Get the most value from technical talent  
