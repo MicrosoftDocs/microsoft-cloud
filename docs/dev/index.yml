@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Cloud Development
+title: Microsoft Cloud tutorials
 summary: Learn how to integrate services across the Microsoft Cloud.
 
 metadata:
-  title: Microsoft Cloud Development
+  title: Microsoft Cloud tutorials
   description: Learn how to integrate services across the Microsoft Cloud.
   ms.topic: landing-page
   author: danwahlin
@@ -18,5 +18,15 @@ landingContent:
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
             url: tutorial/acs-to-teams-meeting.yml
+
+          - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
+            url: tutorial/openai-msgraph-acs.yml
+
+  - title: Azure and Power Platform
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Transform your Business Applications with Fusion Development
+            url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development/
 
   
