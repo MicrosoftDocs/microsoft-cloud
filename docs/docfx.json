@@ -46,7 +46,8 @@
       "breadcrumb_path": "/microsoft-cloud/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/microsoft-cloud"
+      "feedback_github_repo": "MicrosoftDocs/microsoft-cloud",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftCloud"
     },
     "fileMetadata": {},
     "template": [],

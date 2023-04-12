@@ -1,5 +1,5 @@
 - name: Microsoft Cloud Developer Documentation
-  href: index.yml 
+  href: /microsoft-cloud
 - name: Overview 
   items:
   - name: Introduction  
@@ -17,7 +17,11 @@
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
-      href: tutorial/acs-to-teams-meeting.yml
+      href: ./tutorials/acs-to-teams-meeting.yml
+    # - name: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
+    #   href: ./tutorials/openai-msgraph-acs.yml
+    - name: Transform your Business Applications with Fusion Development
+      href: /training/paths/transform-business-applications-with-fusion-development/
 - name: Related
   items:
     - name: Azure Architecture Center 

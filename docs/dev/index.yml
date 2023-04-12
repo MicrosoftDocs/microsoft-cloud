@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Cloud Development
+title: Microsoft Cloud Developer Docs
 summary: Learn how to integrate services across the Microsoft Cloud.
 
 metadata:
-  title: Microsoft Cloud Development
+  title: Microsoft Cloud Developer Docs
   description: Learn how to integrate services across the Microsoft Cloud.
   ms.topic: landing-page
   author: danwahlin
@@ -12,11 +12,38 @@ metadata:
   ms.date: 04/05/2023
 
 landingContent:
-  - title: Azure and Microsoft 365
+  - title: Azure and Microsoft 365 Tutorials
     linkLists:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: tutorial/acs-to-teams-meeting.yml
+            url: tutorials/acs-to-teams-meeting.yml
+
+          # - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
+          #   url: tutorials/openai-msgraph-acs.yml
+
+  - title: Azure and Power Platform Tutorials
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Transform your Business Applications with Fusion Development
+            url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development/
+
+  - title: Build Applications on the Microsoft Cloud 
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Introduction  
+            url: overview/introduction.md
+          - text: Create and deploy apps in less time  
+            url: overview/create-deploy-more-applications-less-time.md
+          - text: Get the most value from technical talent  
+            url: overview/get-most-value-technical-talent.md
+          - text: Integrate apps with existing solutions  
+            url: overview/integrate-new-applications-existing-solutions.md
+          - text: Create and run secure apps  
+            url: overview/create-run-secure-applications.md
+          - text: Summary  
+            url: overview/summary.md  
 
   
