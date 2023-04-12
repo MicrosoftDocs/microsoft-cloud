@@ -5,3 +5,7 @@
   - name: Microsoft Cloud
     tocHref: /microsoft-cloud/
     topicHref: /microsoft-cloud
+    items:
+    - name: Development
+      tocHref: /microsoft-cloud/dev/
+      topicHref: /microsoft-cloud/dev/

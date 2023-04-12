@@ -13,13 +13,8 @@
   - name: Create and run secure apps  
     href: /overview/create-run-security-applications.md
   - name: Summary  
-    href: /overview/summary.md
+    href: /overview/summary.md  
 - name: Tutorials
-  href: tutorials/index.yml
-  expanded: true
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
-      href: tutorials/acs-to-teams-meeting/index.yml
-- Concepts 
-- Reference 
-- Resources 
+      href: tutorial/acs-to-teams-meeting.yml
