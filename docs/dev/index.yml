@@ -17,10 +17,10 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: /microsoft-cloud/tutorials/acs-to-teams-meeting.yml
+            url: ./tutorials/acs-to-teams-meeting.yml
 
           # - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
-          #   url: /microsoft-cloud/tutorials/openai-msgraph-acs.yml
+          #   url: ./tutorials/openai-msgraph-acs.yml
 
   - title: Azure and Power Platform
     linkLists:

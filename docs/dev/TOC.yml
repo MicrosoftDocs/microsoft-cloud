@@ -1,12 +1,12 @@
-- name: Tutorials
-  href: tutorials/index.yml
+- name: Developer Docs
+  href: /microsoft-cloud/dev/tutorials/index.yml
   expanded: true
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
-      href: tutorials/acs-to-teams-meeting.yml
+      href: ./tutorials/acs-to-teams-meeting.yml
 
     # - name: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
-    #   href: tutorials/openai-msgraph-acs.yml
+    #   href: ./tutorials/openai-msgraph-acs.yml
 
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
