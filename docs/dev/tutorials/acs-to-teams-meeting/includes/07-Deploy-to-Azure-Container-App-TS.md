@@ -1,40 +1,29 @@
 <!-- markdownlint-disable MD041 -->
 
-> [!IMPORTANT]
-> In addition to the [pre-requisites listed for this tutorial](/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting/), you'll also need to install the Azure CLI on your machine to complete this exercise.
->
-> - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
->
-
-In this exercise you'll learn how to deploy the Microsoft Graph and ACS functions discussed in earlier exercises 
-to Azure Functions. You'll also build a container image and deploy it to Azure Container Apps.
-
-:::image type="content" source="../media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
-
 ## Deploy to Azure Functions
 
 Let's get started by using VS Code to deploy the functions code to Azure Functions.
 
-1. Open the `samples/acs-to-teams-meeting/server/typescript` project folder in Visual Studio Code.
+1. Open the *samples/acs-to-teams-meeting/server/typescript* project folder in Visual Studio Code.
 
-1. You should already have run `npm install` and see a `node_modules` folder in the project root. If not, open a command window and run `npm install` to install the dependencies.
+1. You should have already run `npm install` and see a *node_modules* folder in the project root. If not, open a command window and run `npm install` to install the dependencies.
 
-1. Open the VS Code command pallet (`shift + cmd + p` on Mac | `shift + ctrl + p` on Windows), and select **Azure Functions: Create Function App in Azure**.
+1. Open the VS Code command pallet (<kbd>Shift+Cmd+P</kbd> on Mac | <kbd>Shift+Ctrl+P</kbd> on Windows), and select **Azure Functions: Create Function App in Azure**.
 
     :::image type="content" source="../media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
 
 1. You'll be prompted to enter the following information:
 
     - Your Azure subscription name.
-    - The function name - enter `acsFunctions<YOUR_LAST_NAME>`.
+    - The function name: **acsFunctions<YOUR_LAST_NAME>**.
 
     > [!NOTE]
     > A globally unique name is required. You can make the name more unique by adding a number or your last name to the end of the name.
 
-    - The runtime stack - Select the latest `Node.js LTS` version.
+    - The runtime stack - Select the latest **Node.js LTS** version.
     - The region (select any region you'd like).
 
-1. Once the Azure Function App is created you'll see a message about viewing the details. 
+1. Once the Azure Function App is created, you'll see a message about viewing the details. 
 
 1. Go back to the command pallet in VS Code and select **Azure Functions: Deploy to Function App**. You'll be asked to select your subscription and the Function App name you created earlier.
 
@@ -57,7 +46,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
     az login
     ```
 
-1. Add the following shell variables substituting your values for the placeholders. Add your `<GITHUB_USERNAME>` as a lowercase value and subsitute your Azure Functions domain for the `<AZURE_FUNCTIONS_DOMAIN>` value (include the `https://` in the domain value).
+1. Add the following shell variables substituting your values for the placeholders as appropriate. Add your *<GITHUB_USERNAME>* as a lowercase value and substitute your Azure Functions domain for the *<AZURE_FUNCTIONS_DOMAIN>* value (include the `https://` in the domain value).
 
     # [Bash](#tab/bash)
 
@@ -78,7 +67,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
     $AZURE_FUNCTIONS_DOMAIN="<YOUR_AZURE_FUNCTIONS_URL>"
     ```
 
-1. Create a new ACR resource by running the following command:
+1. Create a new *Azure Container Registry* resource by running the following command:
 
     # [Bash](#tab/bash)
 
@@ -100,12 +89,12 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
         --admin-enabled true
     ```
 
-1. Open the `samples/acs-to-teams-meeting/client/react/Dockerfile` file in your editor and notice that the following tasks are performed:
+1. Open the *samples/acs-to-teams-meeting/client/react/Dockerfile* file in your editor and notice that the following tasks are performed:
 
-    - The React application is built and assigned to the `build` stage.
-    - The nginx server is configured and the output of the `build` stage is copied into the nginx server image.
+    - The React application is built and assigned to the *build* stage.
+    - The nginx server is configured and the output of the *build* stage is copied into the nginx server image.
 
-1. Build the container image in Azure by running the following command from the root of the `samples/acs-to-teams-meeting/client/react` folder. Replace `<YOUR_FUNCTIONS_DOMAIN>` with your Azure Functions domain that you copied to a local file earlier in this exercise.
+1. Build the container image in Azure by running the following command from the root of the *samples/acs-to-teams-meeting/client/react* folder. Replace *<YOUR_FUNCTIONS_DOMAIN>* with your Azure Functions domain that you copied to a local file earlier in this exercise.
 
     # [Bash](#tab/bash)
 
@@ -133,9 +122,9 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 
-1. Type `container apps` in the top search bar and select `Container Apps` from the options that appear.
+1. Type *container apps* in the top search bar and select **Container Apps** from the options that appear.
 
-1. Select `Create` in the toolbar.
+1. Select **Create** in the toolbar.
 
     > [!NOTE]
     > Although you're using the Azure Portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](https://learn.microsoft.com/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
@@ -143,22 +132,22 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 1. Perform the following tasks:
     - Select your subscription.
     - Select the resource group to use (create a new one if needed). You can use the same resource group that you used for your ACS resource if you'd like. Copy your resource group name to the same local file where you stored your Azure Functions domain.
-    - Enter a Container app name of `acs-to-teams-meeting`.
+    - Enter a Container app name of **acs-to-teams-meeting**.
     - Select a region.
     - Select **Create new** in the **Container Apps Environment** section.
-    - Enter an **Environment name** of `acs-to-teams-meeting-env`.
+    - Enter an **Environment name** of **acs-to-teams-meeting-env**.
     - Select the **Create** button.
     - Select **Next: App settings >**.
 
 1. Enter the following values in the **Create Container App** screen:
 
     - Deselect the **Use quickstart image** checkbox.
-    - **Name**: `acs-to-teams-meeting`
-    - **Image source**: `Azure Container Registry`
-    - **Registry**: `<YOUR_ACR_REGISTRY_NAME>.azurecr.io`
-    - **Image**: `acs-to-teams-meeting`
-    - **Image tag**: `latest`
-    - **CPU and Memory**: `0.25 CPU cores, -.5 Gi memory`
+    - Name: **acs-to-teams-meeting**
+    - Image source: **Azure Container Registry**
+    - Registry: **<YOUR_ACR_REGISTRY_NAME>.azurecr.io**
+    - Image: **acs-to-teams-meeting**
+    - Image tag: **latest**
+    - CPU and Memory: **0.25 CPU cores, -.5 Gi memory**
 
 1. In the **Application ingress settings** section, do the following:
 
@@ -167,7 +156,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
     This will create an entry point (ingress) for your React application and allow it to be called from anywhere. Azure Container Apps redirects all traffic to HTTPS.
 
-    - **Target Port**: `80`
+    - Target Port: **80**
 
 1. Select **Review + create**. Once validation passes, select the **Create** button.
 

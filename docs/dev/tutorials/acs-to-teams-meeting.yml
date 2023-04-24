@@ -12,44 +12,44 @@ metadata:
   ms.topic: tutorial
   ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript
   ms.service: azure-communication-services
-  zone_pivot_groups: programming-languages
+
 items:
   - title: Overview
     durationInMinutes: 2
     content: |
-      [!INCLUDE [](includes/01-Overview.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/01-Overview.md)]
 
   - title: Create an Azure Communication Services Resource
     durationInMinutes: 10
     content: |
-      [!INCLUDE [](includes/02-Create-ACS-Resource.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/02-Create-ACS-Resource.md)]
 
   - title: Integrate Azure Communication Services Calling into a React App
     durationInMinutes: 10
     content: |
-      [!INCLUDE [](includes/03-Integrate-ACS-React.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/03-Integrate-ACS-React.md)]
 
   - title: Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
     durationInMinutes: 10
     content: |
-      [!INCLUDE [](includes/04-Create-Teams-Meeting.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/04-Create-Teams-Meeting.md)]
 
   - title: Dynamically Create an Azure Communication Services Identity and Token
     durationInMinutes: 10
     content: |
-      [!INCLUDE [](includes/05-Create-ACS-Identity-Token.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/05-Create-ACS-Identity-Token.md)]
 
   - title: Deploy the App to Azure Static Web Apps
     durationInMinutes: 15
     content: |
-      [!INCLUDE [](includes/06-Deploy-to-SWA.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/06-Deploy-to-SWA.md)]
 
   - title: Deploy the App to Azure Functions and Azure Container Apps
     durationInMinutes: 15
     content: |
-      [!INCLUDE [](includes/07-Deploy-to-Azure-Container-Apps.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/07-Deploy-to-Azure-Container-Apps.md)]
 
   - title: Congratulations!
     durationInMinutes: 2
     content: |
-      [!INCLUDE [](includes/08-Congratulations.md)]
+      [!INCLUDE [](acs-to-teams-meeting/includes/08-Congratulations.md)]
