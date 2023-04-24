@@ -21,7 +21,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Create and deploy more applications in less time 
+# Create and deploy more applications in less time  
 
 > [!Note]
 > This is article 2 of 6 in **Build applications on the Microsoft Cloud**.
