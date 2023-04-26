@@ -1,6 +1,12 @@
 <!-- markdownlint-disable MD041 -->
 
-In this exercise you'll create an Azure OpenAI Service resource and deploy a model using the Azure Portal. You'll also update the *.env* file with required data.
+In this exercise you will:
+
+- Create an Azure OpenAI Service resource.
+- Deploy a model.
+- Update the `.env` file with values from your Azure OpenAI Service resource.
+
+Perform the following tasks:
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 

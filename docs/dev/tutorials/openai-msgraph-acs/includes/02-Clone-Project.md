@@ -1,6 +1,11 @@
 <!-- markdownlint-disable MD041 -->
 
-In this exercise you'll clone a GitHub repository and add an *.env* file into the project. To get started, perform the following tasks:
+In this exercise you will:
+
+- Clone a GitHub repository.
+- Add an *.env* file into the project and update it.
+
+Perform the following tasks:
 
 1. Run the following command to clone the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud) repository to your machine.
 

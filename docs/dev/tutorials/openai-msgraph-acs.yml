@@ -24,22 +24,32 @@ items:
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/02-Clone-Project.md)]
 
-  - title: Azure OpenAI - Create a Resource and Deploy a Model 
+  - title: AI - Create an Azure OpenAI Resource and Deploy a Model 
     durationInMinutes: 5
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/03-OpenAI-Create-Resource.md)]
 
-  - title: Azure OpenAI - Natural Language to SQL
+  - title: AI - Natural Language to SQL
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/04-OpenAI-NL-SQL.md)]
 
-  - title: Azure OpenAI - Generating Completions
+  - title: AI - Generating Completions
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/05-OpenAI-Completions.md)]
 
+  - title: Communication - Creating an Azure Communication Services Resource
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/06-Communication-Create-ACS-Resource.md)]
+
+  - title: Organizational Data - Creating an Azure Active Directory App Registration
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/08-OrgData-Create-AAD-App.md)]
+
   - title: Congratulations!
     durationInMinutes: 1
     content: |
-      [!INCLUDE [](openai-msgraph-acs/includes/08-Congratulations.md)]
+      [!INCLUDE [](openai-msgraph-acs/includes/09-Congratulations.md)]
