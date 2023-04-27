@@ -9,7 +9,7 @@ In this exercise, you will:
 
 Let's get started by experimenting with different rules that can be used to generate email and SMS messages. Perform the following tasks:
 
-1. In a [previous exercise](/microsoft-cloud/tutorials/openai-msgraph-acs/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** on any row in the datagrid followed by **Email/SMS Customer** to get to the **Message Generator** screen. 
 

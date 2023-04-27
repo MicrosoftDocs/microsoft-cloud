@@ -92,4 +92,6 @@ In this exercise, you will:
     - `CUSTOMER_EMAIL_ADDRESS`: Assign an email address you'd like email to be sent to from the app (since the customer data in the app's database is only sample data). You can use a personal email address.
 
     - `CUSTOMER_PHONE_NUMBER`: You'll need to provide a United States based phone number (as of today) due to additional verification that is required in other countries for sending SMS messages. If you don't have a US-based number, you can leave it empty. 
+
+[!INCLUDE [](./Start-Restart-Services.md)
     

@@ -49,3 +49,5 @@ Perform the following tasks:
     POSTGRES_USER=web
     POSTGRES_PASSWORD=web-password
     ```
+
+1. Now that you have the project in place, let's try out some of the application features and learn how they're built.

@@ -50,3 +50,5 @@ Perform the following tasks:
     TEAM_ID=<TEAMS_TEAM_ID>
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
+
+[!INCLUDE [](./Start-Restart-Services.md)
