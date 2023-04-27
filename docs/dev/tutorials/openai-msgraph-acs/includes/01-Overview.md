@@ -8,7 +8,7 @@ This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and M
 - **Communication**: Enable in-app phone calling to customers and Email/SMS functionality using Azure Communication Services.
 - **Organizational Data**: Pull in related organizational data that users may need (documents, chats, emails, calendar events) as they work with customers to avoid context switching. Providing access to this type of organizational data reduces the need for the user to switch to Outlook, Teams, OneDrive, other custom apps, their phone, etc. since the specific data and functionality they need is provided directly in the app. Microsoft Graph and Microsoft Graph Toolkit are used for this feature.
 
-The application is a simple customer management app that allows users to manage their customers and related data. The app consists of a front-end built using TypeScript that calls into back-end APIs to retrieve data, interact with AI functionality, send email/SMS messages, and pull in organizational data. Here's an overview of the application solution that you'll walk through in this tutorial:
+The application is a simple customer management app that allows users to manage their customers and related data. It consists of a front-end built using TypeScript that calls back-end APIs to retrieve data, interact with AI functionality, send email/SMS messages, and pull in organizational data. The features that are demonstrated show how you can "Here's an overview of the application solution that you'll walk through in this tutorial:
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 

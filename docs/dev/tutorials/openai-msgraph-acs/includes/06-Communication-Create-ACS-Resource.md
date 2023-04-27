@@ -1,13 +1,13 @@
 <!-- markdownlint-disable MD041 -->
 
+Effective communication is essential for successful custom business applications. By using Azure Communication Services (ACS), you can add features like phone calls, live chat, audio/video calls, and email and SMS messaging to your applications. Earlier, you learned how Azure OpenAI can automatically generate personalized messages. Now, you'll learn how to send them. Together, ACS and OpenAI enhance your applications by simplifying communication, improving interactions, and boosting business productivity.
+
 In this exercise, you will:
 
  - Create an Azure Communication Services (ACS) resource.
  - Add a toll-free phone number with calling and SMS capabilities.
  - Connect an email domain.
  - Update the project's `.env` file with values from your ACS resource.
-
-Effective communication is essential for successful custom business applications. By using Azure Communication Services (ACS), you can add features like phone calls, live chat, audio/video calls, and email and SMS messaging to your applications. Earlier, you learned how Azure OpenAI can automatically generate personalized messages. Now, you'll learn how to send them. Together, ACS and OpenAI enhance your applications by simplifying communication, improving interactions, and boosting business productivity.
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 

@@ -1,7 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 
-Enhance user productivity by integrating organizational data — including emails, files, chats, and calendar events — directly into your custom applications. By leveraging Microsoft Graph APIs and Azure Active Directory, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch contexts. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
-
 In this exercise, you will:
 
 - Create an Azure Active Directory (AAD) app registration so that Microsoft Graph can access organizational data and bring it into the app.
@@ -9,9 +7,11 @@ In this exercise, you will:
 - Locate `team` and `channel` Ids from Microsoft Teams that are needed to send chat messages to a specific channel.
 - Update the project's `.env` file with values from your AAD app registration.
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+Enhance user productivity by integrating organizational data — including emails, files, chats, and calendar events — directly into your custom applications. By leveraging Microsoft Graph APIs and Azure Active Directory, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch contexts. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
 
 Perform the following tasks:
+
+:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 1. Go to [Azure Portal](https://portal.azure.com) and select **Azure Active Directory**.
 1. Select the **App registration** tab followed by **+ New registration**.

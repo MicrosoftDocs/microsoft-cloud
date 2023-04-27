@@ -44,6 +44,11 @@ items:
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/06-Communication-Create-ACS-Resource.md)]
 
+  - title: Communication - Making a Phone Call with Azure Communication Services
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/07-Communication-Phone-Call.md)]
+
   - title: Organizational Data - Creating an Azure Active Directory App Registration
     durationInMinutes: 8
     content: |
@@ -52,4 +57,4 @@ items:
   - title: Congratulations!
     durationInMinutes: 1
     content: |
-      [!INCLUDE [](openai-msgraph-acs/includes/09-Congratulations.md)]
+      [!INCLUDE [](openai-msgraph-acs/includes/100-Congratulations.md)]

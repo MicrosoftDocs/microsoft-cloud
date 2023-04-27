@@ -1,5 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 
+The sample project referenced in this tutorial is available at https://github.com/microsoft/MicrosoftCloud. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as a valuable resource to inspire and guide you in incorporating similar features into your own applications.
+
 In this exercise you will:
 
 - Clone a GitHub repository.
@@ -7,7 +9,7 @@ In this exercise you will:
 
 Perform the following tasks:
 
-1. Run the following command to clone the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud) repository to your machine.
+1. Run the following command to clone the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud) to your machine.
 
     ```console
     git clone https://github.com/microsoft/MicrosoftCloud

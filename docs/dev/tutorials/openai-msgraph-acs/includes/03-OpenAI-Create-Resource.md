@@ -1,5 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 
+To get started using OpenAI in your applications, you need to create an Azure OpenAI Service and deploy a model that can be used to perform tasks such as converting natural language to SQL, generating email/SMS message content, and more.
+
 In this exercise you will:
 
 - Create an Azure OpenAI Service resource.
