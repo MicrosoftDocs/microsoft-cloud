@@ -83,7 +83,7 @@ productDirectory:
           url: https://www.youtube.com/watch?v=z19QZwmy1yg
 
         - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
-          url: https://mybuild.microsoft.com/sessions/a330735b-d4cf-4be0-a8bc-4ceb17c49558?source=sessions
+          url: /events/build-2022/od102-building-real-time-collaborative-apps-with-azure-microsoft-365-power-platm
 
         - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
           url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
