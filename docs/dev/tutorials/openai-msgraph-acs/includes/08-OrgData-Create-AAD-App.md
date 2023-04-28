@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-Enhance user productivity by integrating organizational data — including emails, files, chats, and calendar events — directly into your custom applications. By leveraging Microsoft Graph APIs and Azure Active Directory, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch contexts. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
+Enhance user productivity by integrating organizational data (emails, files, chats, and calendar events) directly into your custom applications. By using Microsoft Graph APIs and Azure Active Directory, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch contexts. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
 
 In this exercise, you will:
 
@@ -38,7 +38,7 @@ Perform the following tasks:
 
 1. In the channel header, click on the three dots (...) and select `Get link to channel.`
 
-1. A pop-up window will appear with a link to the channel. The link will contain the Team ID and Channel ID.
+1. A pop-up window appears with a link to the channel. The link contains the Team ID and Channel ID.
 
 1. The Team ID is the string of letters and numbers after `teams/` in the link. For example, in the link "https://teams.microsoft.com/l/team/19%3ae9b9...", the Team ID is "19:e9b9...".
 
