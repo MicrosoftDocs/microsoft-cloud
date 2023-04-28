@@ -16,12 +16,10 @@ The application is a simple customer management app that allows users to manage 
 
 You can complete the entire tutorial or specific exercises that interest you. The tutorial is broken down into the following sections:
 
-- Clone the project.
+- Clone the project (required exercise).
 - AI: Work with Azure OpenAI features to convert natural language to SQL and generate email/SMS message content.
 - Communication: Work with Azure Communication Services features to make phone calls from the app and send email/SMS messages.
 - Organizational Data: Work with Microsoft Graph and Microsoft Graph Toolkit to authenticate and pull organizational data into the application.
-
-You'll start by going through the first exercise to clone the project. After that, you can choose to complete all exercises in the tutorial or complete exercises for specific sections (AI, communication, organizational data) that you're interested in.
 
 ### Pre-requisites
 
@@ -34,6 +32,7 @@ You'll start by going through the first exercise to clone the project. After tha
 
 ### Microsoft Cloud technologies used in this tutorial include
 
+- Azure Active Directory
 - Azure Communication Services
 - Azure OpenAI Service
 - Microsoft Graph
