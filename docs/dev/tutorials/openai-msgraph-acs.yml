@@ -51,7 +51,7 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/06-Communication-Create-ACS-Resource.md)]
 
   - title: |
-      Communication:Making a Phone Call with Azure Communication Services
+      Communication: Making a Phone Call with Azure Communication Services
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/07-Communication-Phone-Call.md)]
