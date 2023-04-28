@@ -18,6 +18,8 @@ landingContent:
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
             url: tutorials/acs-to-teams-meeting.yml
+          - text: Build productivity apps by using Microsoft Graph Toolkit
+            url: /graph/toolkit/get-started/building-one-productivity-hub
 
           # - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
           #   url: tutorials/openai-msgraph-acs.yml
@@ -26,6 +28,8 @@ landingContent:
     linkLists:
       - linkListType: tutorial
         links:
+          - text: Automate Data Reporting with Azure Functions and Power Automate
+            url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate/
           - text: Transform your Business Applications with Fusion Development
             url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development/
 
