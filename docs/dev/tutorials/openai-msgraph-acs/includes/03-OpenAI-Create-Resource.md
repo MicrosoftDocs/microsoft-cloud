@@ -68,7 +68,7 @@ Perform the following tasks:
 
 It's time to start up your application services including the database, web server, and API server.
 
-[!INCLUDE [Start-Services](acs-to-teams-meeting/includes/Start-Services.md)
+[!INCLUDE [Start-Services](./Start-Services.md)]
 
 
 
