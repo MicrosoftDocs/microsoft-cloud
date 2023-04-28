@@ -51,4 +51,4 @@ Perform the following tasks:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-[!INCLUDE [](./Start-Restart-Services.md)
+[!INCLUDE [](acs-to-teams-meeting/includes/Start-Restart-Services.md)
