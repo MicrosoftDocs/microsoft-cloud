@@ -18,6 +18,10 @@
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
       href: ./tutorials/acs-to-teams-meeting.yml
+    - name: Automate Data Reporting with Azure Functions and Power Automate
+      href: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
+    - name: Build productivity apps by using Microsoft Graph Toolkit
+      href: /graph/toolkit/get-started/building-one-productivity-hub
     # - name: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
     #   href: ./tutorials/openai-msgraph-acs.yml
     - name: Transform your Business Applications with Fusion Development
@@ -26,13 +30,17 @@
   items:
     - name: Azure Architecture Center 
       href: /azure/architecture
-    - name: Dynamics 365 developer docs 
+    - name: Azure Developer Docs
+      href: /azure/developer/
+    - name: Azure Government
+      href: /azure/azure-government
+    - name: Dynamics 365 Developer Docs 
       href: /dynamics365/get-started/developers
-    - name: GitHub developer docs 
+    - name: GitHub Developer Docs 
       href: https://docs.github.com/
-    - name: Microsoft 365 developer docs 
+    - name: Microsoft 365 Developer Docs 
       href: /microsoft-365/developer/
-    - name: Microsoft industry docs
+    - name: Microsoft Industry Docs
       href: /industry/
-    - name: Microsoft Power Platform developer docs 
+    - name: Microsoft Power Platform Developer Docs 
       href: /power-platform/developer/
