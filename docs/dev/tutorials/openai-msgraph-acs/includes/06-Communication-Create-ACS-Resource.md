@@ -11,6 +11,8 @@ In this exercise, you will:
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
+### Create an Azure Communication Services Resource
+
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
@@ -27,7 +29,9 @@ In this exercise, you will:
 
 1. Select **Review + Create** followed by **Create**.
 
-1. Now that your ACS resource is created, you'll need to enable phone calling and SMS capabilities and connect an email domain to the resource.
+1. You've successfully created a new Azure Communication Services resource! Next, you'll  enable phone calling and SMS capabilities and connect an email domain to the resource.
+
+### Enable Phone Calling and SMS Capabilities
 
 1. Add a phone number and ensure that the phone number has calling capabilities enabled. You'll use this phone number to call out to a phone from the app. 
 
@@ -59,7 +63,9 @@ In this exercise, you will:
 
 1. Copy the phone number value into a file for later use.
 
-1. Create a connected email domain for your ACS resource. This will be used to send email from the app.
+### Connect an Email Domain
+
+1. Perform the following tasks to create a connected email domain for your ACS resource. This will be used to send email from the app.
 
     - Select **Domains** from the sidebar menu.
     - Select **Connect domain** from the toolbar.

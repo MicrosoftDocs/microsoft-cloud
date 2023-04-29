@@ -8,7 +8,7 @@ In this exercise you will:
 - Deploy a model.
 - Update the `.env` file with values from your Azure OpenAI Service resource.
 
-Perform the following tasks:
+### Creating an Azure OpenAI Service Resource
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 
@@ -48,7 +48,9 @@ Perform the following tasks:
 
     :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
 
-1. Open the *tutorials/openai-msgraph-acs/.env* file in Visual Studio Code.
+### Update the Project's `.env` File
+
+1. Open the `samples/openai-msgraph-acs/.env` file in Visual Studio Code.
 
 1. Copy the **KEY 1** value and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *tutorials/openai-msgraph-acs* folder:
 

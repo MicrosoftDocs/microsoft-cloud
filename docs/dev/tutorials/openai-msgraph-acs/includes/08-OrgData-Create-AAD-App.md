@@ -11,7 +11,7 @@ In this exercise, you will:
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
-Perform the following tasks:
+### Create an Azure Active Directory App Registration
 
 1. Go to [Azure Portal](https://portal.azure.com) and select **Azure Active Directory**.
 1. Select the **App registration** tab followed by **+ New registration**.
@@ -26,6 +26,9 @@ Perform the following tasks:
 1. Go back to the **Select permissions** input and enter `Files.Read.All`, expand the **Files** node, select the **Files.Read.All** permission.
 1. Select **Add permissions** at the bottom of the panel to add the permissions to the app.
 1. Go to **Overview** in the sidebar and copy the `Application (client) ID` value to your clipboard.
+
+### Update the Project's `.env` File
+
 1. Open the `.env` file in your editor and assign the `Application (client) ID` value to `AAD_CLIENT_ID`.
 
     ```

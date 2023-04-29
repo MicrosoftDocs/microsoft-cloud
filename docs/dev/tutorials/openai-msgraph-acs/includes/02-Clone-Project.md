@@ -7,7 +7,7 @@ In this exercise you will:
 - Clone a GitHub repository.
 - Add an *.env* file into the project and update it.
 
-Perform the following tasks:
+### Clone the GitHub Repository and Create an `.env` File
 
 1. Run the following command to clone the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud) to your machine.
 
@@ -15,7 +15,7 @@ Perform the following tasks:
     git clone https://github.com/microsoft/MicrosoftCloud
     ```
 
-1. Open the *MicrosoftCloud/tutorials/openai-msgraph-acs* folder in Visual Studio Code.
+1. Open the *MicrosoftCloud/samples/openai-msgraph-acs* folder in Visual Studio Code.
 
 1. Notice the following folders and files:
 
