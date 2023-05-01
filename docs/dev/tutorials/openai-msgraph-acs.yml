@@ -57,6 +57,12 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/07-Communication-Phone-Call.md)]
 
   - title: |
+      Communication: Sending Email and SMS Messages using Azure Communication Services
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/08-Communication-Email-SMS.md)]
+
+  - title: |
       Organizational Data: Creating an Azure Active Directory App Registration
     durationInMinutes: 8
     content: |

@@ -1,18 +1,14 @@
 <!-- markdownlint-disable MD041 -->
 
-Integrating Azure Communication Services' phone calling capabilities into a custom Line of Business (LOB) application offers several key benefits to businesses and their users:
-
-- Enables seamless and real-time communication between employees, customers, and partners, directly from within the LOB application, eliminating the need to switch between multiple platforms or devices. 
-- Enhances the user experience and improves overall operational efficiency. 
-- Facilitates rapid problem resolution, as users can quickly connect with relevant support teams or subject matter experts quickly and easily.
+In addition to phone calls, Azure Communication Services can also be used to send email and SMS messages. This can be useful when you want to send a message to a customer or other user directly from the application.
 
 In this exercise, you will:
-- Explore the phone calling feature in the application.
-- Walk through the code to learn how the phone calling feature is built.
+- Explore how email and SMS messages can be sent from the application.
+- Walk through the code to learn how the email and SMS functionality is implemented.
 
-### Exploring the Phone Calling Feature
+### Exploring the Email Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. This included adding an ACS phone number into the project's `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. This included adding an ACS email address, customer email address, and customer phone number into the project's `.env` file.
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
 
@@ -24,9 +20,7 @@ In this exercise, you will:
 
 1. Select **Hang Up** to end the call and **Close** to close the phone call component.
 
-### Exploring the Phone Calling Code
-
-In the following steps you'll walk through the code that enables phone calling functionality. If you're using Visual Studio Code, you can open files directly by selecting <kbd>Ctrl + P</kdb> on Windows/Linux or <kbd>Cmd + P</kdb> on Mac and typing the name of the file. 
+### Exploring the Email Code
 
 1. Select <kbd>Ctrl + P</kdb> (Windows/Linux) or <kbd>Cmd + P</kdb> (Mac) based on your machine, and select the `customers-list.component.ts` file. The full path to the file is `openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts`.
 
