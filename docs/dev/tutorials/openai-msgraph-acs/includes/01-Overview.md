@@ -2,7 +2,7 @@
 
 **Level**: Intermediate
 
-This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level.
+This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level. 
 
 - **AI**: Enable users to ask questions in natural language and convert their answers to SQL that can be used to query a database. Allow users to define rules that can be used to automatically generate email and SMS messages. Azure OpenAI is used for these features.
 - **Communication**: Enable in-app phone calling to customers and Email/SMS functionality using Azure Communication Services.
@@ -12,9 +12,11 @@ The application is a simple customer management app that allows users to manage 
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
+The tutorial will walk you through the process of setting up the required Azure and Microsoft 365 resources. It'll also walk you through the code that is used to implement the AI, communication, and organizational data features. While you won't be required to copy and paste code, some of the exercises will have you modify code to try out different scenarios.
+
 ### Choose Your Own Adventure
 
-You can complete the entire tutorial or specific exercises that interest you. The tutorial is broken down into the following sections:
+You can complete the entire tutorial from start to finish or complete specific exercises that interest you. The tutorial is broken down into the following sections:
 
 - Clone the project (required exercise).
 - AI: Work with Azure OpenAI features to convert natural language to SQL and generate email/SMS message content.
