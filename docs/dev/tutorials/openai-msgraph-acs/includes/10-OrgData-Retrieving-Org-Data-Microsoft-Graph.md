@@ -28,6 +28,10 @@ In this exercise, you will:
 
 ### Exploring the Sign In Code
 
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
+
+1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
+
 1. Open *client/package.json* and notice that the `@microsoft/mgt` package is included in the dependencies. This package contains MSAL (Microsoft Authentication Library) provider features as well as web components such as `mgt-login` and others that can be used to sign in users and retrieve and display organizational data.
 
 1. To use the `mgt-login` component to sign in users, the Azure AD app's client Id (stored in the *.env* file as `AAD_CLIENT_ID`) needs to be referenced and used.

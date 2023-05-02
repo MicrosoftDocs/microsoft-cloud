@@ -26,9 +26,9 @@ In this exercise, you will:
 
 ### Exploring the Phone Calling Code
 
-In the following steps you'll walk through the code that enables phone calling functionality. If you're using Visual Studio Code, you can open files directly by selecting <kbd>Ctrl + P</kdb> on Windows/Linux or <kbd>Cmd + P</kdb> on Mac and typing the name of the file. 
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
 
-1. Select <kbd>Ctrl + P</kdb> (Windows/Linux) or <kbd>Cmd + P</kdb> (Mac) based on your machine, and select the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
+1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
 
 1. Note that `openCallDialog()` sends a `CustomerCall` message and the customer phone number using an event bus.
     

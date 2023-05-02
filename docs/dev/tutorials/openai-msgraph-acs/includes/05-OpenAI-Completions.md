@@ -28,6 +28,10 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Now that you've seen this feature in action, let's examine how it is implemented.
 
+### Exploring the GPT Completions Code
+
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
+
 1. Open the *server/openAI.ts* file and located the `completeEmailSMSMessages()` function. The prompt has the following features:
 
     - It establishes that email and SMS messages will be generated.

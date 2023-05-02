@@ -36,12 +36,11 @@ In this exercise, you will:
 
 ### Exploring the Email Code
 
-In the following steps you'll walk through the code that enables email and SMS sending functionality. If you're using Visual Studio Code, you can open files directly by selecting:
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
 
-    - Windows/Linux: <kbd>Ctrl + P</kdb>
-    - Mac: <kbd>Cmd + P</kdb>
+1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
 
-    Then type the name of the file you want to open. 
+### Exploring the SMS Code
 
 1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
 

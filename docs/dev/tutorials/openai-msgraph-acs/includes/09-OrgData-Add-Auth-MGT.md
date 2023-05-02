@@ -28,13 +28,7 @@ In this exercise, you will:
 
 ### Exploring the Sign In Code
 
-> [!NOTE]
-> If you're using Visual Studio Code, you can open files directly by selecting:
->
->   - Windows/Linux: <kbd>Ctrl + P</kdb>
->   - Mac: <kbd>Cmd + P</kdb>
->
-> Then type the name of the file you want to open. 
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
 
 1. Open *client/package.json* and notice that the `@microsoft/mgt` package is included in the dependencies. This package contains MSAL (Microsoft Authentication Library) provider features as well as web components such as `mgt-login` and others that can be used to sign in users and retrieve and display organizational data.
 

@@ -33,6 +33,10 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
     :::image type="content" source="../media/nl-sql-terminal-output.png" alt-text="Natural language to SQL query output to the terminal window.":::
 
+### Exploring the Natural Language to SQL Code
+
+[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
+
 1. Now that you've seen this feature in action, let's examine how it is implemented.
 
 1. Open the *server/apiRoutes.ts* file and locate the `generatesql` route. This API route is called by the client-side application running in the browser and used to generate SQL from a natural language query. Once the SQL query is retrieved, it's used to query the database and return results. 
