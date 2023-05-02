@@ -23,6 +23,8 @@ You can complete the entire tutorial from start to finish or complete specific t
 - Communication: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) and use it to make phone calls from the app and send email/SMS messages.
 - Organizational Data: [Create an Azure Active Directory app registration](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=7) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
 
+:::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
+
 ### Pre-requisites
 
 - [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
