@@ -69,6 +69,12 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/08-OrgData-Create-AAD-App.md)]
 
   - title: |
+      Organizational Data: Signing In a User and Getting an Access Token using Microsoft Graph Toolkit
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/09-OrgData-Add-Auth-MGT.md)]
+
+  - title: |
       Congratulations!
     durationInMinutes: 1
     content: |

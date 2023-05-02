@@ -6,7 +6,7 @@ In this exercise you will:
 
 - Create an Azure OpenAI Service resource.
 - Deploy a model.
-- Update the `.env` file with values from your Azure OpenAI Service resource.
+- Update the *.env* file with values from your Azure OpenAI Service resource.
 
 ### Creating an Azure OpenAI Service Resource
 

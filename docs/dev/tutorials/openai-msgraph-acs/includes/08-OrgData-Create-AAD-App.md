@@ -4,10 +4,10 @@ Enhance user productivity by integrating organizational data (emails, files, cha
 
 In this exercise, you will:
 
-- Create an Azure Active Directory (AAD) app registration so that Microsoft Graph can access organizational data and bring it into the app.
+- Create an Azure Active Directory (Azure AD) app registration so that Microsoft Graph can access organizational data and bring it into the app.
 - Add permissions to the app registration so that it can read and write chat messages and read files.
 - Locate `team` and `channel` Ids from Microsoft Teams that are needed to send chat messages to a specific channel.
-- Update the project's `.env` file with values from your AAD app registration.
+- Update the project's *.env* file with values from your Azure AD app registration.
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
@@ -27,9 +27,9 @@ In this exercise, you will:
 1. Select **Add permissions** at the bottom of the panel to add the permissions to the app.
 1. Go to **Overview** in the sidebar and copy the `Application (client) ID` value to your clipboard.
 
-### Update the Project's `.env` File
+### Update the Project's *.env* File
 
-1. Open the `.env` file in your editor and assign the `Application (client) ID` value to `AAD_CLIENT_ID`.
+1. Open the *.env* file in your editor and assign the `Application (client) ID` value to `AAD_CLIENT_ID`.
 
     ```
     AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -47,11 +47,13 @@ In this exercise, you will:
 
 1. The Channel ID is the string of letters and numbers after `/channel/` in the link. For example, in the link "https://teams.microsoft.com/l/channel/19%3a....", the Channel ID is "19:...".
 
-1. Add the Team ID and Channel ID values into the `.env` file.
+1. Add the Team ID and Channel ID values into the *.env* file.
 
     ```
     TEAM_ID=<TEAMS_TEAM_ID>
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
+
+### Start/Restart the Application and API Servers
 
 [!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]

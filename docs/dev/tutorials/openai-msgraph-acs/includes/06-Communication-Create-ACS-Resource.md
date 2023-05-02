@@ -7,7 +7,7 @@ In this exercise, you will:
  - Create an Azure Communication Services (ACS) resource.
  - Add a toll-free phone number with calling and SMS capabilities.
  - Connect an email domain.
- - Update the project's `.env` file with values from your ACS resource.
+ - Update the project's *.env* file with values from your ACS resource.
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
@@ -75,11 +75,11 @@ In this exercise, you will:
     - Select `Review + create` followed by `Create`.
     - Once the deployment completes, select `Go to resource`, and select `1-click add` to add a free Azure subdomain.
     - After the subdomain is added (it'll take a few moments to be deployed), select it.
-    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the sidebar menu. Copy the **MailFrom** value to a file. You'll use it later as you update the `.env` file.
+    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the sidebar menu. Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
     - Go back to your Azure Communication Services resource and select `Domains` from the left-hand menu.
     - Select `Add domain` and enter the `MailFrom` value from the previous step (ensure you select the correct subscription, resource group, and email service). Select the `Connect` button.
 
-1. Now that your ACS phone number (with calling and SMS enabled) and email domain are ready, update the following keys/values in the `.env` file in your project:
+1. Now that your ACS phone number (with calling and SMS enabled) and email domain are ready, update the following keys/values in the *.env* file in your project:
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -98,6 +98,8 @@ In this exercise, you will:
     - `CUSTOMER_EMAIL_ADDRESS`: Assign an email address you'd like email to be sent to from the app (since the customer data in the app's database is only sample data). You can use a personal email address.
 
     - `CUSTOMER_PHONE_NUMBER`: You'll need to provide a United States based phone number (as of today) due to additional verification that is required in other countries for sending SMS messages. If you don't have a US-based number, you can leave it empty. 
+
+### Start/Restart the Application and API Servers
 
 [!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]
     
