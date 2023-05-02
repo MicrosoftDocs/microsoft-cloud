@@ -16,9 +16,9 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 ### Choose Your Own Adventure
 
-You can complete the entire tutorial from start to finish or complete specific exercises that interest you. The tutorial is broken down into the following sections:
+You can complete the entire tutorial from start to finish or complete specific topics that interest you. The tutorial is broken down into the following topic areas:
 
-- [Clone the project](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=1) (required exercise).
+- [Clone the project (required exercise)](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=1).
 - AI: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=2) and use it to convert natural language to SQL and to generate email/SMS messages.
 - Communication: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) and use it to make phone calls from the app and send email/SMS messages.
 - Organizational Data: [Create an Azure Active Directory app registration](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=7) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
