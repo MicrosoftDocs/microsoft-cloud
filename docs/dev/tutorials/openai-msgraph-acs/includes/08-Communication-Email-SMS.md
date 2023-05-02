@@ -6,19 +6,23 @@ In this exercise, you will:
 - Explore how email and SMS messages can be sent from the application.
 - Walk through the code to learn how the email and SMS functionality is implemented.
 
-### Exploring the Email Feature
+### Exploring the Email and SMS Features
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. This included adding an ACS email address, customer email address, and customer phone number into the project's `.env` file.
 
-1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
+1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
-    :::image type="content" source="../media/acs-call-customer.png" alt-text="ACS phone calling component":::
+    :::image type="content" source="../media/acs-email-sms-customer.png" alt-text="Send an email or SMS message using ACS.":::
 
-1. A phone call component will be added into the header. Enter your phone number (ensure it starts with + and includes the country code) and select **Call**. You may be prompted to allow access to your microphone.
+1. In the Email/SMS tab, perform the following tasks:
 
-    :::image type="content" source="../media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
+    - Enter an Email **Subject** and **Body** and select the **Send Email** button.
+    - Enter an SMS message and select the **Send SMS** button.
 
-1. Select **Hang Up** to end the call and **Close** to close the phone call component.
+1. Check the email address and phone number you defined in the *.env* file to view the messages. 
+
+    > [!NOTE]
+    > If you don't see the email message in your inbox for the address you defined in the `.env` file, check your spam folder.
 
 ### Exploring the Email Code
 

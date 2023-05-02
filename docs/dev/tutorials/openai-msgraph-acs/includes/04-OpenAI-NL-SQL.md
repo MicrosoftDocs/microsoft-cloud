@@ -2,9 +2,9 @@
 
 Before getting started, it's important to understand the benefits of incorporating natural language to SQL functionality into applications. By harnessing the capabilities of natural language processing (NLP) technology, you can enable users without SQL expertise to query databases using everyday language, such as plain English. For example, they may enter:
 
-    ```
-    Get the the total revenue for all companies in London.
-    ```    
+```
+Get the the total revenue for all companies in London.
+```    
 
 Azure OpenAI Service will convert this query to SQL and you can then use the SQL to return results from the database. As a result, non-technical stakeholders including business analysts, marketers, and executives can more effortlessly retrieve valuable information from databases without grappling with intricate SQL syntax or relying on constrained datagrids and filters. This streamlined approach can boost productivity by eliminating the need for users to seek assistance from technical experts. Finally, by capitalizing on advanced language models like GPT, you can design applications that are not only intuitive but also adaptable to a diverse user base. 
 
