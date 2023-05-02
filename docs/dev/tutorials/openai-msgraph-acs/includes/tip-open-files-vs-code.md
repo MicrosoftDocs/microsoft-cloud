@@ -1,4 +1,4 @@
-> [!NOTE]
+> [!TIP]
 > If you're using Visual Studio Code, you can open files directly by selecting:
 >
 >   - Windows/Linux: <kbd>Ctrl + P</kdb>

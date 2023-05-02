@@ -30,7 +30,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 ### Exploring the GPT Completions Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
 1. Open the *server/openAI.ts* file and located the `completeEmailSMSMessages()` function. The prompt has the following features:
 

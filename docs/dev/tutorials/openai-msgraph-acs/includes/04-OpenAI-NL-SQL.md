@@ -35,7 +35,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
 ### Exploring the Natural Language to SQL Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./note-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
 1. Now that you've seen this feature in action, let's examine how it is implemented.
 
