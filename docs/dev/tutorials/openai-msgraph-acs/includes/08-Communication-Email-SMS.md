@@ -8,7 +8,7 @@ In this exercise, you will:
 
 ### Exploring the Email and SMS Features
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. This included adding an ACS connection string, ACS email address, customer email address, and customer phone number into the project's `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also added an ACS connection string, ACS phone number, ACS email address, customer email address, and customer phone number into the project's `.env` file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -17,6 +17,8 @@ In this exercise, you will:
     CUSTOMER_EMAIL_ADDRESS=<EMAIL_ADDRESS_TO_SEND_EMAIL_TO>
     CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
     ```
+
+    Ensure that you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
