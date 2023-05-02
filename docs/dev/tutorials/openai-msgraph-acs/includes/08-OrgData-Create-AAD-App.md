@@ -54,6 +54,4 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-### Start/Restart the Application and API Servers
-
 [!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]

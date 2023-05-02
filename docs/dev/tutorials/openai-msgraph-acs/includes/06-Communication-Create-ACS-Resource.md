@@ -99,7 +99,5 @@ In this exercise, you will:
 
     - `CUSTOMER_PHONE_NUMBER`: You'll need to provide a United States based phone number (as of today) due to additional verification that is required in other countries for sending SMS messages. If you don't have a US-based number, you can leave it empty. 
 
-### Start/Restart the Application and API Servers
-
 [!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]
     

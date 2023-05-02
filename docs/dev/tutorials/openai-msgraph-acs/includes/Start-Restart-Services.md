@@ -1,4 +1,4 @@
-### Start/Restart the Application Services
+### Start/Restart the Application and API Servers
 
 Perform one of the following steps based on the exercises you've completed up to this point:
 
