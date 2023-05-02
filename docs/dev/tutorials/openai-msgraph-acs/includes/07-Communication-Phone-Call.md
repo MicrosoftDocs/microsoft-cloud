@@ -10,7 +10,7 @@ In this exercise, you will:
 - Explore the phone calling feature in the application.
 - Walk through the code to learn how the phone calling feature is built.
 
-### Exploring the Phone Calling Feature
+### Using the Phone Calling Feature
 
 1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 

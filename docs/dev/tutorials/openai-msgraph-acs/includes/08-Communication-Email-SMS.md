@@ -6,7 +6,7 @@ In this exercise, you will:
 - Explore how email and SMS messages can be sent from the application.
 - Walk through the code to learn how the email and SMS functionality is implemented.
 
-### Exploring the Email and SMS Features
+### Using the Email and SMS Features
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 

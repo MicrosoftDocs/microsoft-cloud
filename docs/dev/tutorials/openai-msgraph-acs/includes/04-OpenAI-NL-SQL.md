@@ -17,7 +17,7 @@ In this exercise, you will:
 
 Let's get started by experimenting with different GPT prompts that can be used to convert natural language to SQL.
 
-### Exploring the Natural Language to SQL Feature
+### Using the Natural Language to SQL Feature
 
 1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 

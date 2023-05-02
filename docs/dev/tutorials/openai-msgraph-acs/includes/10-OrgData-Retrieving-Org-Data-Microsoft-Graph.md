@@ -7,7 +7,7 @@ In this exercise, you will:
 - Learn how to associate an Azure AD app with the Microsoft Graph Toolkit so that it can be used to authenticate users and retrieve organizational data.
 - Learn how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token.
 
-### Exploring the Sign In Feature
+### Using the Sign In Feature
 
 1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=7) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
 
