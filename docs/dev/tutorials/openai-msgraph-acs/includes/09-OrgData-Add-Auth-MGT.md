@@ -17,7 +17,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using an account that is a member of your Microsoft 365 Developer tenant. 
+1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using a user that is a member of your Microsoft 365 Developer tenant. 
 
     > [!NOTE]
     > You can view the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
@@ -51,7 +51,7 @@ In this exercise, you will:
     <mgt-login *ngIf="featureFlags.microsoft365Enabled" class="mgt-dark" (loginCompleted)="loginCompleted()"></mgt-login>
     ```
 
-    The `mgt-login` component is used to sign in users and retrieve an access token that can be used with Microsoft Graph. The `loginCompleted` event is emitted when the user has successfully signed in. The `mgt-login` component is only displayed if the `featureFlags.microsoft365Enabled` value is set to `true`.
+    The `mgt-login` component is used to sign in users and retrieve an access token that can be used with Microsoft Graph. The `loginCompleted` event is emitted when the user has successfully signed in. When the event fires, the `loginCompleted()` function is called. The `mgt-login` component is only displayed if the `featureFlags.microsoft365Enabled` value is set to `true`. While the `mgt-login` component is being inside of an Angular component in this scenario, it can be used in any web application.
 
 1. Open *header.component.ts* and locate the `loginCompleted` function. This function is called when the `loginCompleted` event is emitted and used to retrieve the signed in user's profile using `Providers.globalProvider`. 
 
