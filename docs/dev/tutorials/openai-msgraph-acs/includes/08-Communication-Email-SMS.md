@@ -130,7 +130,7 @@ In this exercise, you will:
     - Calls the `http.post()` function and passes the email subject, message, customer name, and customer email address to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Now let's examine how the application interactions with the ACS email send feature. Open the *api.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/api.js* and locate the `sendEmail()` function.
+1. Now let's examine how the application interactions with the ACS email feature. Open the *acs.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/acs.js* and locate the `sendEmail()` function.
 
 1. The `sendEmail()` function performs the following tasks:
 
@@ -139,7 +139,8 @@ In this exercise, you will:
         ```typescript
         const emailClient = new EmailClient(connectionString);
         ```
-    - Create a new `EmailMessage` object and passes the content and recipient information.
+
+    - Creates a new `EmailMessage` object and passes the content and recipient information.
 
         ```typescript
         const msgObject: EmailMessage = {
@@ -158,10 +159,11 @@ In this exercise, you will:
             },
         };
         ```
+
     - Sends the email using the `emailClient.beginSend()` function and returns the response. Although the function is only sending to one recipient in this example, the `beginSend()` function can be used to multiple recipients as well.
 
         ```typescript
-        const poller = await emailClient.beginSend(msgObject, { updateIntervalInMs: 100 });
+        const poller = await emailClient.beginSend(msgObject);
         ```
 
     - Waits for the `poller` object to signal it's done and sends the response to the caller.
@@ -214,7 +216,7 @@ In this exercise, you will:
     - Calls the `http.post()` function and passes the message and customer phone number to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Finally, let's examine how the application interactions with the ACS SMS feature. Open the *api.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/api.js* and locate the `sendSms()` function.
+1. Finally, let's examine how the application interactions with the ACS SMS feature. Open the *acs.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/acs.js* and locate the `sendSms()` function.
 
 1. The `sendSms()` function performs the following tasks:
 
@@ -236,4 +238,6 @@ In this exercise, you will:
         ```
 
     - Returns the response to the caller.
+
+
 
