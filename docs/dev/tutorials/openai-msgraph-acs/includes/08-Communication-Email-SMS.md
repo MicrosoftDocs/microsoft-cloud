@@ -239,5 +239,10 @@ In this exercise, you will:
 
     - Returns the response to the caller.
 
+1. You can learn more about ACS email and SMS functionality in the following articles:
+
+    - [Email in Azure Communication Services](/azure/communication-services/concepts/email/email-overview)
+    - [SMS in Azure Communication Services](/azure/communication-services/concepts/sms/concepts)
+
 
 
