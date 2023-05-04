@@ -75,6 +75,12 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/09-OrgData-Add-Auth-MGT.md)]
 
   - title: |
+      Organizational Data: Retrieving Files, Emails, Chats, and Calendar Events using Microsoft Graph
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-msgraph-acs/includes/10-OrgData-Retrieving-Org-Data-Microsoft-Graph.md)]
+
+  - title: |
       Congratulations!
     durationInMinutes: 1
     content: |
