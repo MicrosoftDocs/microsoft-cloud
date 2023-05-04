@@ -28,6 +28,8 @@ In this exercise, you will:
 
 ### Exploring the Sign In Code
 
+Now that you've signed in, let's look at the code used to sign in the user and retrieve an access token and user profile. You'll learn about the `mgt-login` web component that's part of the Microsoft Graph Toolkit.
+
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
 1. Open *client/package.json* and notice that the `@microsoft/mgt` package is included in the dependencies. This package contains MSAL (Microsoft Authentication Library) provider features as well as web components such as `mgt-login` and others that can be used to sign in users and retrieve and display organizational data.

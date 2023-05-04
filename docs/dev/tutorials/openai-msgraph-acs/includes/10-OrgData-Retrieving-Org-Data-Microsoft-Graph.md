@@ -34,23 +34,23 @@ In this exercise, you will:
     >   });
     >   ```
 
-1. Select **View Related Content** for *Adatum Corporation* in the datagrid. This will use Microsoft Graph to retrieve related files, chats, emails, and calendar events. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. You'll see the following tabs (note that you won't have any data at this point):
+1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will trigger Microsoft Graph to retrieve related files, chats, emails, and calendar events. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. Note that you won't have any data at this point.
 
     :::image type="content" source="../media/display-org-data.png" alt-text="Displaying Organizational Data":::
 
-1. Click on each of the tabs and notice that no data is displayed. Your Microsoft 365 tenant doesn't have any related organizational data loaded for *Adatum Corporation* at this point. To fix this, perform at least one of the following actions:
+1. Your Microsoft 365 tenant doesn't have any related organizational data for *Adatum Corporation* at this point. To fix this, perform at least one of the following actions:
 
     - Add files:
         - Visit https://onedrive.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **My files** in the left navigation.
         - Select **Upload** and then **Folder** from the menu.
-        - Select the *openai-msgraph-acs/customer documents* folder from the project.
+        - Select the *openai-msgraph-acs/customer documents* folder from the project you cloned.
     - Add chat messages and calendar events:
         - Visit https://teams.microsoft.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **Teams** in the left navigation.
         - Select a team and channel and then select **New conversation**.
         - Enter *New order placed for Adatum Corporation* and select the **Send** button.
-        - Feel free to add additional messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
+        - Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
         - Select **Calendar** in the left navigation.
         - Select **New meeting**.
         - Enter "Meet with Adatum Corporation about project schedule" for the title.
@@ -63,8 +63,12 @@ In this exercise, you will:
         - Enter *Please review the latest order.* for the body.
         - Select **Send**.
 
-1. Go back to the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon the steps you performed in the previous step.
+1. Go back to the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which steps you performed in the previous step.
 
 ### Exploring the Organizational Data Code
 
+Let's expore some of the key code that enables the organizational data feature in the sample application. To retrieve the data, the client-side portion of the application uses the access token in combination with Microsoft Graph. Note that you can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?tabs=bash) to learn more about that option.
 
+[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+
+1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-msgraph-acs/client/src/app/core/graph.service.ts*.
