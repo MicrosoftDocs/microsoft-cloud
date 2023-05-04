@@ -27,55 +27,55 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/02-Clone-Project.md)]
 
   - title: |
-      AI: Create an Azure OpenAI Resource and Deploy a Model 
+      **AI:** Create an Azure OpenAI Resource and Deploy a Model 
     durationInMinutes: 5
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/03-OpenAI-Create-Resource.md)]
 
   - title: | 
-      AI: Natural Language to SQL
+      **AI:** Natural Language to SQL
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/04-OpenAI-NL-SQL.md)]
 
   - title: | 
-      AI: Generating Completions
+      **AI:** Generating Completions
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/05-OpenAI-Completions.md)]
 
   - title: |
-      Communication: Creating an Azure Communication Services Resource
+      **Communication:** Creating an Azure Communication Services Resource
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/06-Communication-Create-ACS-Resource.md)]
 
   - title: |
-      Communication: Making a Phone Call with Azure Communication Services
+      **Communication:** Making a Phone Call with Azure Communication Services
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/07-Communication-Phone-Call.md)]
 
   - title: |
-      Communication: Sending Email and SMS Messages using Azure Communication Services
+      **Communication:** Sending Email and SMS Messages using Azure Communication Services
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/08-Communication-Email-SMS.md)]
 
   - title: |
-      Organizational Data: Creating an Azure Active Directory App Registration
+      **Organizational Data:** Creating an Azure Active Directory App Registration
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/08-OrgData-Create-AAD-App.md)]
 
   - title: |
-      Organizational Data: Signing In a User and Getting an Access Token using Microsoft Graph Toolkit
+      **Organizational Data:** Signing In a User and Getting an Access Token using Microsoft Graph Toolkit
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/09-OrgData-Add-Auth-MGT.md)]
 
   - title: |
-      Organizational Data: Retrieving Files, Emails, Chats, and Calendar Events using Microsoft Graph
+      **Organizational Data:** Retrieving Files, Emails, Chats, and Calendar Events using Microsoft Graph
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/10-OrgData-Retrieving-Org-Data-Microsoft-Graph.md)]
