@@ -17,9 +17,9 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using a user that is a member of your Microsoft 365 Developer tenant. 
+1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
 
-    > [!NOTE]
+    > [!TIP]
     > You can view the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
 
 1. Once you're signed in, you should see the name of the user displayed in the header.
