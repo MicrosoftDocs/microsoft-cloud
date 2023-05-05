@@ -209,3 +209,31 @@ Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query p
         this.data = await this.graphService.searchAgendaEvents(query);
     }
     ```
+
+### Sending a Message to a Teams Channel
+
+In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
+
+    ```typescript
+      async sendTeamsChat(message: string): Promise<TeamsDialogData> {
+        if (!message) new Error('No message to send.');
+        if (!TEAM_ID || !CHANNEL_ID) new Error('Team ID or Channel ID not set in environment variables. Please set TEAM_ID and CHANNEL_ID in the .env file.');
+
+        const url = `https://graph.microsoft.com/v1.0/teams/${TEAM_ID}/channels/${CHANNEL_ID}/messages`;
+        const body = {
+            "body": {
+                "contentType": "html",
+                "content": message
+            }
+        };
+        const response = await Providers.globalProvider.graph.client.api(url).post(body);
+        return {
+            id: response.id,
+            teamId: response.channelIdentity.teamId,
+            channelId: response.channelIdentity.channelId,
+            message: response.body.content,
+            webUrl: response.webUrl,
+            title: 'Send Teams Chat'
+        };
+    }
+    ```
