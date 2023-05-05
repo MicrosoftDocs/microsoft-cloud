@@ -51,13 +51,13 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/06-Communication-Create-ACS-Resource.md)]
 
   - title: |
-      Communication: Making a Phone Call with Azure Communication Services
+      Communication: Making a Phone Call
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/07-Communication-Phone-Call.md)]
 
   - title: |
-      Communication: Sending Email and SMS Messages using Azure Communication Services
+      Communication: Sending Email and SMS Messages
     durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/08-Communication-Email-SMS.md)]
@@ -69,13 +69,13 @@ items:
       [!INCLUDE [](openai-msgraph-acs/includes/08-OrgData-Create-AAD-App.md)]
 
   - title: |
-      Organizational Data: Signing In a User and Getting an Access Token using Microsoft Graph Toolkit
+      Organizational Data: Signing In a User and Getting an Access Token
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/09-OrgData-Add-Auth-MGT.md)]
 
   - title: |
-      Organizational Data: Retrieving Files, Emails, Chats, and Calendar Events using Microsoft Graph
+      Organizational Data: Retrieving Files, Emails, Chats, and Calendar Events
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/10-OrgData-Retrieving-Org-Data-Microsoft-Graph.md)]
