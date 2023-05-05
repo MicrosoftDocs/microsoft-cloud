@@ -7,7 +7,7 @@ To enhance efficiency, there is growing interest in integrating organizational d
 In this exercise, you will:
 
 - Learn how to Microsoft Graph can be used to retrieve organizational data.
-- Walk through code examples of retrieving organizational data using Microsoft Graph.
+- Walk through code examples of retrieving data using Microsoft Graph.
 
 ### Using the Organizational Data Feature
 
@@ -140,7 +140,7 @@ In this exercise, you will:
 
 1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/files/files.component.ts*. 
 
-This function is called when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. The *files.component.html* file then uses the `data` property to display the search results.
+    This function is called when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. The *files.component.html* file then uses the `data` property to display the search results.
 
     ```typescript
     override async search(query: string) {
