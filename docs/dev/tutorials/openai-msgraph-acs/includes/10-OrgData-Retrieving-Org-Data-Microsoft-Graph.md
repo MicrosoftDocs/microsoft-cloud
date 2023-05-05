@@ -188,7 +188,7 @@ In this exercise, you will:
 
 1. As with the email search functionality, Microsoft Graph provides an API to search calendar events (agenda items) as well. Locate the `searchAgendaEvents()` function in *graph.service.ts*. It creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
 
-Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query parameters to filter the results and order them by the `start/dateTime` property. The `$filter` parameter uses the `contains()` function to search the `subject` field for the `query` parameter value.
+    Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query parameters to filter the results and order them by the `start/dateTime` property. The `$filter` parameter uses the `contains()` function to search the `subject` field for the `query` parameter value.
 
     ```typescript
     async searchAgendaEvents(query:string) {
@@ -212,7 +212,7 @@ Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query p
 
 ### Sending a Message to a Teams Channel
 
-In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
+1. In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
 
     ```typescript
       async sendTeamsChat(message: string): Promise<TeamsDialogData> {
