@@ -65,10 +65,147 @@ In this exercise, you will:
 
 1. Go back to the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which steps you performed in the previous step.
 
-### Exploring the Organizational Data Code
+1. Let's explore some of the key code that enables the organizational data feature in the sample application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the `mgt-login` web component to make calls to Microsoft Graph APIs. If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path.
 
-Let's expore some of the key code that enables the organizational data feature in the sample application. To retrieve the data, the client-side portion of the application uses the access token in combination with Microsoft Graph. Note that you can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?tabs=bash) to learn more about that option.
+    > [!NOTE]
+    > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?tabs=bash) to see an example.
+
+### Exploring File and Chat Search Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-msgraph-acs/client/src/app/core/graph.service.ts*.
+1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-msgraph-acs/client/src/app/core/graph.service.ts*. Key functions include:
+
+    - `searchFiles()` - Searches files in OneDrive for Business.
+    - `searchChats()` - Searches chat messages in Microsoft Teams.
+    - `searchEmail()` - Searches email messages.
+    - `searchAgendaEvents()` - Searches calendar events.
+    - `sendTeamsChat()` - Sends a chat message to a Microsoft Teams channel.
+
+1. Let's break down the functionality provided by the `searchFiles()` function.
+
+    - A `query` parameter is passed to the function. This is the search term passed by the user as they select **View Related Content** for a row in the datagrid.
+
+        ```typescript
+        async searchFiles(query: string) {
+            const files: DriveItem[] = [];
+            if (!query) return files;
+
+            ...
+        }
+        ```
+
+    - A filter is created that defines the type of search to perform. In this case the code is searching for files in OneDrive for Business so `driveItem` is used. The `query` parameter is then added to the `queryString` filter along with `ContentType:Document`.
+
+        ```typescript
+        const filter = {
+        "requests": [
+            {
+                "entityTypes": [
+                    "driveItem"
+                ],
+                "query": {
+                    "queryString": `${query} AND ContentType:Document`
+                }
+            }
+        ]
+        };
+        ```
+
+    - A call is made to the `/search/query` Microsoft Graph API using the `Providers.globalProvider.graph.client.api()` function. A POST request by calling the `post()` function and passing the `filter`.
+
+        ```typescript
+        const searchResults = await Providers.globalProvider.graph.client.api('/search/query').post(filter);
+        ```
+
+    - The search results are then iterated through. If there are "hits" (results), the document is added to the `files` array. 
+
+        ```typescript
+        if (searchResults.value.length !== 0) {
+            for (const hitContainer of searchResults.value[0].hitsContainers) {
+                if (hitContainer.hits) {
+                for (const hit of hitContainer.hits) {
+                    files.push(hit.resource);
+                }
+                }
+            }
+        }
+        ```
+
+    - The `files` array is then returned to the caller.
+
+        ```typescript
+        return files;
+        ```
+
+1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/files/files.component.ts*. 
+
+This function is called when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. The *files.component.html* file then uses the `data` property to display the search results.
+
+    ```typescript
+    override async search(query: string) {
+        this.data = await this.graphService.searchFiles(query);
+    }
+    ```
+
+1. Go back to *graph.service.ts* and locate the `searchChats()` function . You'll see that it's similar to `searchFiles()`. 
+
+    - It calls Microsoft Graph's `/search/query` API and converts the results into an array of objects that have information about the `teamId`, `channelId`, and `messageId` that match the search term.
+    - To retrieve the channel messages, a call is made to  `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` and the `teamId`, `channelId`, and `messageId` are passed. 
+    - Additional filtering tasks are performed and the resulting messages are returned to the caller.
+
+1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChats()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
+
+    ```typescript
+    override async search(query: string) {
+        this.data = await this.graphService.searchChats(query);
+    }
+    ```
+
+### Exploring Email Search Code
+
+1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmail()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
+
+    ```typescript
+    async searchEmail(query:string) {
+        if (!query) return [];
+        // The $search operator will search the subject, body, and sender fields automatically
+        const url = `https://graph.microsoft.com/v1.0/me/messages?$search="${query}"&$select=subject,bodyPreview,from,toRecipients,receivedDateTime,webLink`;
+        const response = await Providers.globalProvider.graph.client.api(url).get();
+        return response.value;
+    }
+    ```
+
+1. The emails component located in *emails.component.ts* then calls `searchEmail()` and displays the results.
+
+    ```typescript
+    override async search(query: string) {
+        this.data = await this.graphService.searchEmail(query);
+    }
+    ```
+
+### Exploring Calendar Event Search Code
+
+1. As with the email search functionality, Microsoft Graph provides an API to search calendar events (agenda items) as well. Locate the `searchAgendaEvents()` function in *graph.service.ts*. It creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
+
+Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query parameters to filter the results and order them by the `start/dateTime` property. The `$filter` parameter uses the `contains()` function to search the `subject` field for the `query` parameter value.
+
+    ```typescript
+    async searchAgendaEvents(query:string) {
+        if (!query) return [];
+        const startDateTime = new Date();
+        const endDateTime = new Date(startDateTime.getTime() + (7 * 24 * 60 * 60 * 1000));
+        const url = `/me/events?startdatetime=${startDateTime.toISOString()}&enddatetime=${endDateTime.toISOString()}&$filter=contains(subject,'${query}')&orderby=start/dateTime`;
+
+        const response = await Providers.globalProvider.graph.client.api(url).get();
+        return response.value;
+    }
+    ```
+
+1. As with the previous components, the agenda component (*agenda.component.ts* file) calls `search()` and displays the results.
+
+    ```typescript
+    override async search(query: string) {
+        this.data = await this.graphService.searchAgendaEvents(query);
+    }
+    ```
