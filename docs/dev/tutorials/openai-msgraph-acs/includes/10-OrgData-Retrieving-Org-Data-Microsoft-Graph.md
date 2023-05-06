@@ -46,16 +46,25 @@ In this exercise, you will:
         - Select **My files** in the left navigation.
         - Select **Upload** and then **Folder** from the menu.
         - Select the *openai-msgraph-acs/customer documents* folder from the project you cloned.
+
+        :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
+
     - Add chat messages and calendar events:
         - Visit https://teams.microsoft.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **Teams** in the left navigation.
         - Select a team and channel and then select **New conversation**.
         - Enter *New order placed for Adatum Corporation* and select the **Send** button.
         - Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
+
+        :::image type="content" source="../media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
+
         - Select **Calendar** in the left navigation.
         - Select **New meeting**.
-        - Enter "Meet with Adatum Corporation about project schedule" for the title.
+        - Enter "Meet with Adatum Corporation about project schedule" for the title and body.
         - Select **Save**.
+
+        :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
+
     - Add emails:
         - Visit https://outlook.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **New mail**.
@@ -63,6 +72,8 @@ In this exercise, you will:
         - Enter *New order placed for Adatum Corporation* for the subject.
         - Enter *Please review the latest order.* for the body.
         - Select **Send**.
+
+        :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
 1. Go back to the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which steps you performed in the previous step.
 
