@@ -1,13 +1,14 @@
 <!-- markdownlint-disable MD041 -->
 
-In today's digital environment, users manage a wide array of organizational data, including emails, chats, files, calendar events, and more, often across multiple platforms. This can lead to frequent context shifts—switching between tasks or applications—which can disrupt focus and reduce productivity.
+In today's digital environment, users work with a wide array of organizational data, including emails, chats, files, calendar events, and more. This can lead to frequent context shifts—switching between tasks or applications—which can disrupt focus and reduce productivity. For example, a user working on a project might need to switch from their current application to Outlook to find crucial details in an email or switch to OneDrive for Business to find a file. This back-and-forth action disrupts focus and wastes time that could be better spent on the task at hand.
 
-To enhance efficiency, there is growing interest in integrating organizational data directly into the applications users use daily. By unifying data from various sources into one interface, users can access and manage information more seamlessly, minimizing context shifts and improving productivity. Additionally, this integration provides valuable insights and context, enabling users to make informed decisions and work more effectively.
+To enhance efficiency, you can integrate organizational data directly into the applications users use daily. By bringing in organizational data, users can access and manage information more seamlessly, minimizing context shifts and improving productivity. Additionally, this integration provides valuable insights and context, enabling users to make informed decisions and work more effectively.
 
 In this exercise, you will:
 
 - Learn how to Microsoft Graph can be used to retrieve organizational data.
 - Walk through code examples of retrieving data using Microsoft Graph.
+- Understand how to send chat messages to Microsoft Teams channels using Microsoft Graph.
 
 ### Using the Organizational Data Feature
 
@@ -162,6 +163,34 @@ In this exercise, you will:
     }
     ```
 
+### Sending a Message to a Teams Channel
+
+1. In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
+
+    ```typescript
+    async sendTeamsChat(message: string): Promise<TeamsDialogData> {
+        if (!message) new Error('No message to send.');
+        if (!TEAM_ID || !CHANNEL_ID) new Error('Team ID or Channel ID not set in environment variables. Please set TEAM_ID and CHANNEL_ID in the .env file.');
+
+        const url = `https://graph.microsoft.com/v1.0/teams/${TEAM_ID}/channels/${CHANNEL_ID}/messages`;
+        const body = {
+            "body": {
+                "contentType": "html",
+                "content": message
+            }
+        };
+        const response = await Providers.globalProvider.graph.client.api(url).post(body);
+        return {
+            id: response.id,
+            teamId: response.channelIdentity.teamId,
+            channelId: response.channelIdentity.channelId,
+            message: response.body.content,
+            webUrl: response.webUrl,
+            title: 'Send Teams Chat'
+        };
+    }
+    ```
+
 ### Exploring Email Search Code
 
 1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmail()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
@@ -207,33 +236,5 @@ In this exercise, you will:
     ```typescript
     override async search(query: string) {
         this.data = await this.graphService.searchAgendaEvents(query);
-    }
-    ```
-
-### Sending a Message to a Teams Channel
-
-1. In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
-
-    ```typescript
-      async sendTeamsChat(message: string): Promise<TeamsDialogData> {
-        if (!message) new Error('No message to send.');
-        if (!TEAM_ID || !CHANNEL_ID) new Error('Team ID or Channel ID not set in environment variables. Please set TEAM_ID and CHANNEL_ID in the .env file.');
-
-        const url = `https://graph.microsoft.com/v1.0/teams/${TEAM_ID}/channels/${CHANNEL_ID}/messages`;
-        const body = {
-            "body": {
-                "contentType": "html",
-                "content": message
-            }
-        };
-        const response = await Providers.globalProvider.graph.client.api(url).post(body);
-        return {
-            id: response.id,
-            teamId: response.channelIdentity.teamId,
-            channelId: response.channelIdentity.channelId,
-            message: response.body.content,
-            webUrl: response.webUrl,
-            title: 'Send Teams Chat'
-        };
     }
     ```
