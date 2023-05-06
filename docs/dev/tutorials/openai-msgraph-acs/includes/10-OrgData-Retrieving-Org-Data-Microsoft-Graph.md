@@ -75,7 +75,7 @@ In this exercise, you will:
 
         :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
-1. Go back to the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which steps you performed in the previous step.
+1. Go back to the application in the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which tasks you performed in the previous step.
 
 1. Let's explore some of the key code that enables the organizational data feature in the sample application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the `mgt-login` web component to make calls to Microsoft Graph APIs. If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path.
 
