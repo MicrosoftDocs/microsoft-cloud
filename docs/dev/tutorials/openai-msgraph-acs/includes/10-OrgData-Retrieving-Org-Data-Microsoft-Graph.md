@@ -69,8 +69,7 @@ In this exercise, you will:
         - Visit https://outlook.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **New mail**.
         - Enter your personal email address in the **To** field.
-        - Enter *New order placed for Adatum Corporation* for the subject.
-        - Enter *Please review the latest order.* for the body.
+        - Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
         - Select **Send**.
 
         :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
@@ -89,12 +88,12 @@ In this exercise, you will:
 1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-msgraph-acs/client/src/app/core/graph.service.ts*. Key functions include:
 
     - `searchFiles()` - Searches files in OneDrive for Business.
-    - `searchChats()` - Searches chat messages in Microsoft Teams.
+    - `searchChatMessages()` - Searches chat messages in Microsoft Teams.
     - `searchEmailMessages()` - Searches email messages.
     - `searchAgendaEvents()` - Searches calendar events.
     - `sendTeamsChat()` - Sends a chat message to a Microsoft Teams channel.
 
-1. Let's break down the functionality provided by the `searchFiles()` function.
+1. Let's start by analyzing the functionality provided by the `searchFiles()` function.
 
     - A `query` parameter is passed to the function. This is the search term passed by the user as they select **View Related Content** for a row in the datagrid.
 
@@ -160,17 +159,17 @@ In this exercise, you will:
     }
     ```
 
-1. Go back to *graph.service.ts* and locate the `searchChats()` function . You'll see that it's similar to `searchFiles()`. 
+1. Go back to *graph.service.ts* and locate the `searchChatMessages()` function . You'll see that it's similar to `searchFiles()`. 
 
     - It calls Microsoft Graph's `/search/query` API and converts the results into an array of objects that have information about the `teamId`, `channelId`, and `messageId` that match the search term.
     - To retrieve the channel messages, a call is made to  `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` and the `teamId`, `channelId`, and `messageId` are passed. 
     - Additional filtering tasks are performed and the resulting messages are returned to the caller.
 
-1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChats()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
+1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
 
     ```typescript
     override async search(query: string) {
-        this.data = await this.graphService.searchChats(query);
+        this.data = await this.graphService.searchChatMessages(query);
     }
     ```
 
