@@ -90,7 +90,7 @@ In this exercise, you will:
 
     - `searchFiles()` - Searches files in OneDrive for Business.
     - `searchChats()` - Searches chat messages in Microsoft Teams.
-    - `searchEmail()` - Searches email messages.
+    - `searchEmails()` - Searches email messages.
     - `searchAgendaEvents()` - Searches calendar events.
     - `sendTeamsChat()` - Sends a chat message to a Microsoft Teams channel.
 
@@ -204,10 +204,10 @@ In this exercise, you will:
 
 ### Exploring Email Search Code
 
-1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmail()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
+1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmails()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
 
     ```typescript
-    async searchEmail(query:string) {
+    async searchEmails(query:string) {
         if (!query) return [];
         // The $search operator will search the subject, body, and sender fields automatically
         const url = `https://graph.microsoft.com/v1.0/me/messages?$search="${query}"&$select=subject,bodyPreview,from,toRecipients,receivedDateTime,webLink`;
@@ -216,11 +216,11 @@ In this exercise, you will:
     }
     ```
 
-1. The emails component located in *emails.component.ts* then calls `searchEmail()` and displays the results.
+1. The emails component located in *emails.component.ts* then calls `searchEmails()` and displays the results.
 
     ```typescript
     override async search(query: string) {
-        this.data = await this.graphService.searchEmail(query);
+        this.data = await this.graphService.searchEmails(query);
     }
     ```
 
