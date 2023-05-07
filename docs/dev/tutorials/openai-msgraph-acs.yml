@@ -70,13 +70,13 @@ items:
 
   - title: |
       Organizational Data: Signing In a User and Getting an Access Token
-    durationInMinutes: 8
+    durationInMinutes: 10
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/09-OrgData-Add-Auth-MGT.md)]
 
   - title: |
       Organizational Data: Retrieving Files, Emails, Chats, and Calendar Events
-    durationInMinutes: 8
+    durationInMinutes: 15
     content: |
       [!INCLUDE [](openai-msgraph-acs/includes/10-OrgData-Retrieving-Org-Data-Microsoft-Graph.md)]
 
