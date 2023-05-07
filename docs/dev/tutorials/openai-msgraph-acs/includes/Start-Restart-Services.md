@@ -6,4 +6,4 @@ Perform one of the following steps based on the exercises you've completed up to
 
 - If you haven't started the database, web server, and API server yet, complete the following steps:
 
-[!INCLUDE [Start-Services](./Start-Services.md)]
+    [!INCLUDE [Start-Services](./Start-Services.md)]
