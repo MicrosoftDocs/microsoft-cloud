@@ -16,7 +16,7 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 ### Choose Your Own Adventure
 
-You can complete the entire tutorial from start to finish or complete specific topics that interest you. The tutorial is broken down into the following topic areas:
+You can complete the entire tutorial from start to finish or complete specific topics of interest you. The tutorial is broken down into the following topic areas:
 
 - [Clone the project](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=1) (required exercise).
 - **AI**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=2) and use it to convert natural language to SQL and to generate email/SMS messages.
@@ -34,7 +34,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
 - [Docker Desktop](https://www.docker.com/get-started/) - or an equivalent container runtime environment capable of running `docker-compose` commands
 
-### Microsoft Cloud technologies used in this tutorial include
+### Microsoft Cloud Technologies used in this Tutorial
 
 - Azure Active Directory
 - Azure Communication Services
