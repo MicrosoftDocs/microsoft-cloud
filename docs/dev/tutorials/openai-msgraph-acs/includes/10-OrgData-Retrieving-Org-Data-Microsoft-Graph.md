@@ -81,7 +81,7 @@ In this exercise, you will:
     > [!NOTE]
     > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?tabs=bash) to see an example.
 
-### Exploring File and Chat Search Code
+### Exploring Files and Teams Chat Messages Search Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
@@ -90,7 +90,7 @@ In this exercise, you will:
     - `searchFiles()` - Searches files in OneDrive for Business.
     - `searchChatMessages()` - Searches chat messages in Microsoft Teams.
     - `searchEmailMessages()` - Searches email messages.
-    - `searchAgendaEvents()` - Searches calendar events.
+    - `searchCalendarEvents()` - Searches calendar events.
     - `sendTeamsChat()` - Sends a chat message to a Microsoft Teams channel.
 
 1. Let's start by analyzing the functionality provided by the `searchFiles()` function.
@@ -173,7 +173,7 @@ In this exercise, you will:
     }
     ```
 
-### Sending a Message to a Teams Channel
+### Sending a Message to a Microsoft Teams Channel
 
 1. In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
 
@@ -201,7 +201,7 @@ In this exercise, you will:
     }
     ```
 
-### Exploring Email Search Code
+### Exploring Email Messages Search Code
 
 1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmailMessages()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
 
@@ -223,14 +223,14 @@ In this exercise, you will:
     }
     ```
 
-### Exploring Calendar Event Search Code
+### Exploring Calendar Events Search Code
 
-1. As with the email search functionality, Microsoft Graph provides an API to search calendar events (agenda items) as well. Locate the `searchAgendaEvents()` function in *graph.service.ts*. It creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
+1. As with the email search functionality, Microsoft Graph provides an API to search calendar events (agenda items) as well. Locate the `searchCalendarEvents()` function in *graph.service.ts*. It creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
 
     Looking at the URL, you'll see that it uses the `$filter` and `$orderby` query parameters to filter the results and order them by the `start/dateTime` property. The `$filter` parameter uses the `contains()` function to search the `subject` field for the `query` parameter value.
 
     ```typescript
-    async searchAgendaEvents(query:string) {
+    async searchCalendarEvents(query:string) {
         if (!query) return [];
         const startDateTime = new Date();
         const endDateTime = new Date(startDateTime.getTime() + (7 * 24 * 60 * 60 * 1000));
@@ -241,10 +241,10 @@ In this exercise, you will:
     }
     ```
 
-1. As with the previous components, the agenda component (*agenda.component.ts* file) calls `search()` and displays the results.
+1. As with the previous components, the *calendar-events* component (*calendar-events.component.ts* file) calls `search()` and displays the results.
 
     ```typescript
     override async search(query: string) {
-        this.data = await this.graphService.searchAgendaEvents(query);
+        this.data = await this.graphService.searchCalendarEvents(query);
     }
     ```
