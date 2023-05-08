@@ -25,6 +25,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 
 :::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
+<a id="pre-requisites"></a>
 ### Pre-requisites
 
 - [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
@@ -32,7 +33,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 - [Visual Studio Code](https://code.visualstudio.com) (while we'll reference Visual Studio Code in this tutorial, any editor can be used)
 - [Azure subscription](https://azure.microsoft.com/free/search)
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
-- [Docker Desktop](https://www.docker.com/get-started/) - or an equivalent container runtime environment capable of running `docker-compose` commands
+- [Docker Desktop](https://www.docker.com/get-started/), [Podman](https://podman-desktop.io/downloads), [nerdctl](https://github.com/containerd/nerdctl) or another Open Container Initiative (OCI) compliant container runtime.
 
 ### Microsoft Cloud Technologies used in this Tutorial
 

@@ -7,6 +7,8 @@ In this exercise you will:
 - Clone a GitHub repository.
 - Add an *.env* file into the project and update it.
 
+Before proceeding, ensure that you have all of the pre-requisites installed and configured as outlined in the [Pre-requisites](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/#pre-requisites) section of this tutorial.
+
 ### Clone the GitHub Repository and Create an `.env` File
 
 1. Run the following command to clone the [Microsoft Cloud GitHub Repository](https://github.com/microsoft/MicrosoftCloud) to your machine.
