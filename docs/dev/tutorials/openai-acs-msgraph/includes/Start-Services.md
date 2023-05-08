@@ -22,7 +22,7 @@
            [docker | podman] run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v ${PWD}/data:/var/lib/postgresql/data -p 5432:5432 postgres
            ```
 
-1. Press the **+** icon in the Visual Studio Code **Terminal toolbar** to create a second terminal window. 
+1. Once the database container starts, press the **+** icon in the Visual Studio Code **Terminal toolbar** to create a second terminal window. 
 
     :::image type="content" source="../media/vs-code-terminal-plus-icon.png" alt-text="Visual Studio Code + icon in the terminal toolbar.":::
 
