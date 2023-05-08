@@ -8,8 +8,11 @@
 
     > [!NOTE]
     > If you aren't able to run the `docker-compose up` command, you can run the container directly using the following command:
-    >   - Mac/Linux: `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v "$(pwd)/data:/var/lib/postgresql/data" -p 5432:5432 postgres`
-    >   - Windows with PowerShell: `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v ${PWD}/data:/var/lib/postgresql/data -p 5432:5432 postgres`
+    >   - Mac/Linux: 
+            `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v "$(pwd)/data:/var/lib/postgresql/data" -p 5432:5432 postgres`
+
+    >   - Windows with PowerShell: 
+            `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v ${PWD}/data:/var/lib/postgresql/data -p 5432:5432 postgres`
 
 1. Press the **+** icon in the Visual Studio Code **Terminal toolbar** to create a second terminal window. 
 
