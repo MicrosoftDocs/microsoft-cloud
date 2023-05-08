@@ -4,7 +4,12 @@
 
 1. Right-click on the *.env* file in the Visual Studio Code file list and select **Open in Integrated Terminal**. Ensure that your terminal is at the root of the project before continuing.
 
-1. Run `docker-compose up` in the window and press <kbd>Enter</kbd> to start the Postgresql server.
+1. Run `docker-compose up` in the window and press <kbd>Enter</kbd> to start the PostgreSQL server.
+
+    > [!NOTE]
+    > If you aren't able to run the `docker-compose up` command, you can run the container directly using the following command:
+    >   - Mac/Linux: `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v "$(pwd)/data:/var/lib/postgresql/data" -p 5432:5432 postgres`
+    >   - Windows with PowerShell: `docker run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v ${PWD}/data:/var/lib/postgresql/data -p 5432:5432 postgres`
 
 1. Press the **+** icon in the Visual Studio Code **Terminal toolbar** to create a second terminal window. 
 
