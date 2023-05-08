@@ -12,7 +12,7 @@ In this exercise, you will:
 
 ### Using the Organizational Data Feature
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=7) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -45,7 +45,7 @@ In this exercise, you will:
         - Visit https://onedrive.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **My files** in the left navigation.
         - Select **Upload** and then **Folder** from the menu.
-        - Select the *openai-msgraph-acs/customer documents* folder from the project you cloned.
+        - Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
 
         :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
 
@@ -85,7 +85,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-msgraph-acs/client/src/app/core/graph.service.ts*. Key functions include:
+1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-acs-msgraph/client/src/app/core/graph.service.ts*. Key functions include:
 
     - `searchFiles()` - Searches files in OneDrive for Business.
     - `searchChatMessages()` - Searches chat messages in Microsoft Teams.
@@ -149,7 +149,7 @@ In this exercise, you will:
         return files;
         ```
 
-1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/files/files.component.ts*. 
+1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/files/files.component.ts*. 
 
     This function is called when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. The *files.component.html* file then uses the `data` property to display the search results.
 
@@ -165,7 +165,7 @@ In this exercise, you will:
     - To retrieve the channel messages, a call is made to  `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` and the `teamId`, `channelId`, and `messageId` are passed. 
     - Additional filtering tasks are performed and the resulting messages are returned to the caller.
 
-1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-msgraph-acs/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
+1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
 
     ```typescript
     override async search(query: string) {

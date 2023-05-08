@@ -12,7 +12,7 @@ In this exercise, you will:
 
 ### Using the Phone Calling Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
 
@@ -28,7 +28,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
+1. Open the *customers-list.component.ts* file. The full path to the file is *openai-acs-msgraph/client/src/app/customers-list/customers-list.component.ts*.
 
 1. Note that `openCallDialog()` sends a `CustomerCall` message and the customer phone number using an event bus.
     
@@ -39,7 +39,7 @@ In this exercise, you will:
     ```
     
     > [!NOTE]
-    > The event bus code can be found in the *eventbus.service.ts* file if you're interested in exploring it more. The full path to the file is *openai-msgraph-acs/client/src/app/core/eventbus.service.ts*.
+    > The event bus code can be found in the *eventbus.service.ts* file if you're interested in exploring it more. The full path to the file is *openai-acs-msgraph/client/src/app/core/eventbus.service.ts*.
 
 1. The header component's `ngOnInit()` function subscribes to the `CustomerCall` event sent by the event bus and displays the phone call component. You can find this code in *header.component.ts*.
 
@@ -54,7 +54,7 @@ In this exercise, you will:
     }
     ```
 
-1. Open *phone-call.component.ts* in your editor using the keyboard shortcuts mentioned earlier. The full path to the file is *openai-msgraph-acs/client/src/app/phone-call/phone-call.component.ts*. Take a moment to expore the code. Note the following key features:
+1. Open *phone-call.component.ts* in your editor using the keyboard shortcuts mentioned earlier. The full path to the file is *openai-acs-msgraph/client/src/app/phone-call/phone-call.component.ts*. Take a moment to expore the code. Note the following key features:
 
     - Retrieves an Azure Communication Services access token by calling the `acsService.getAcsToken()` function in `ngOnInit()`;
     - Adds a "phone dialer" to the page. You can see the dialer by clicking on the phone number input in the header.
@@ -83,7 +83,7 @@ In this exercise, you will:
         - Creates a new instance of `CallClient` and `AzureCommunicationTokenCredential` using the access token.
         - Creates a new instance of `CallAgent` using the `CallClient` and `AzureCommunicationTokenCredential` objects. Later you'll see that `CallAgent` is used to start and end a call.
 
-1. Open *acs.services.ts* and locate the `getAcsToken()` function. The full path to the file is *openai-msgraph-acs/client/src/app/core/acs.service.ts*. Note that the function makes an HTTP GET request to the API server to retrieve the ACS access token.
+1. Open *acs.services.ts* and locate the `getAcsToken()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*. Note that the function makes an HTTP GET request to the API server to retrieve the ACS access token.
 
     ```typescript
     getAcsToken(): Observable<AcsUser> {
@@ -94,7 +94,7 @@ In this exercise, you will:
     }
     ```
 
-1. An API server function named `createACSToken()` retrieves the access token and returns it to the client. It can be found in the *openai-msgraph-acs/server/typescript/acs.ts* file. 
+1. An API server function named `createACSToken()` retrieves the access token and returns it to the client. It can be found in the *openai-acs-msgraph/server/typescript/acs.ts* file. 
 
     ```typescript
     const connectionString = process.env.ACS_CONNECTION_STRING as string;

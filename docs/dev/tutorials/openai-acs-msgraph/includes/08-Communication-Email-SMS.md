@@ -8,7 +8,7 @@ In this exercise, you will:
 
 ### Using the Email and SMS Features
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -18,7 +18,7 @@ In this exercise, you will:
     CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
     ```
 
-    Ensure that you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=5) before continuing.
+    Ensure that you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
@@ -40,7 +40,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *customers-list.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/customers-list/customers-list.component.ts*.
+1. Open the *customers-list.component.ts* file. The full path to the file is *openai-acs-msgraph/client/src/app/customers-list/customers-list.component.ts*.
 
 1. When you selected **Contact Customer** followed by **Email/SMS Customer** in the datagrid, the `customer-list` component displayed a dialog box. This is handled by the `openEmailSmsDialog()` function in the *customer-list.component.ts* file.
 
@@ -81,7 +81,7 @@ In this exercise, you will:
     - Opens the `EmailSmsDialogComponent` dialog box and passes the `dialogData` object to it.
     - Subscribes to the `afterClosed()` event of the dialog box. This event is fired when the dialog box is closed. The `response` object contains the information that was entered into the dialog box.
 
-1. Open the *email-sms-dialog.component.ts* file. The full path to the file is *openai-msgraph-acs/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
+1. Open the *email-sms-dialog.component.ts* file. The full path to the file is *openai-acs-msgraph/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
 
 1. Locate the `sendEmail()` function:
 
@@ -114,7 +114,7 @@ In this exercise, you will:
 
 1. To provide better code encapsulation and reuse, client-side services such as *acs.service.ts* are used throughout the application. This allows all ACS functionality to be consolidated into a single place.
 
-1. Open *acs.service.ts* and locate the `sendEmail()` function. The full path to the file is *openai-msgraph-acs/client/src/app/core/acs.service.ts*.
+1. Open *acs.service.ts* and locate the `sendEmail()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*.
 
     ```typescript
     sendEmail(subject: string, message: string, customerName: string, customerEmailAddress: string) : Observable<EmailSmsResponse> {
@@ -130,7 +130,7 @@ In this exercise, you will:
     - Calls the `http.post()` function and passes the email subject, message, customer name, and customer email address to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Now let's examine how the application interactions with the ACS email feature. Open the *acs.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/acs.js* and locate the `sendEmail()` function.
+1. Now let's examine how the application interactions with the ACS email feature. Open the *acs.js* file. The full path to the file is *openai-acs-msgraph/server/typescript/acs.js* and locate the `sendEmail()` function.
 
 1. The `sendEmail()` function performs the following tasks:
 
@@ -171,7 +171,7 @@ In this exercise, you will:
 
 ### Exploring the SMS Code
 
-1. Go back to the *email-sms-dialog.component.ts* file that you opened earlier. The full path to the file is *openai-msgraph-acs/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
+1. Go back to the *email-sms-dialog.component.ts* file that you opened earlier. The full path to the file is *openai-acs-msgraph/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
 
 1. Locate the `sendSms()` function:
 
@@ -200,7 +200,7 @@ In this exercise, you will:
     - Subscribes to the `sendSms()` function in the `acsService` service. This function returns an RxJS observable that contains the response from the client-side service.
     - If the SMS message was sent successfully, it sets the `smsSent` property to `true`.
 
-1. Open *acs.service.ts* and locate the `sendSms()` function. The full path to the file is *openai-msgraph-acs/client/src/app/core/acs.service.ts*.
+1. Open *acs.service.ts* and locate the `sendSms()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*.
 
     ```typescript
     sendSms(message: string, customerPhoneNumber: string) : Observable<EmailSmsResponse> {
@@ -216,7 +216,7 @@ In this exercise, you will:
     - Calls the `http.post()` function and passes the message and customer phone number to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Finally, let's examine how the application interactions with the ACS SMS feature. Open the *acs.js* file. The full path to the file is *openai-msgraph-acs/server/typescript/acs.js* and locate the `sendSms()` function.
+1. Finally, let's examine how the application interactions with the ACS SMS feature. Open the *acs.js* file. The full path to the file is *openai-acs-msgraph/server/typescript/acs.js* and locate the `sendSms()` function.
 
 1. The `sendSms()` function performs the following tasks:
 

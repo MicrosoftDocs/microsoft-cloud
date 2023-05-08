@@ -19,7 +19,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
 ### Using the Natural Language to SQL Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-msgraph-acs/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid.
 

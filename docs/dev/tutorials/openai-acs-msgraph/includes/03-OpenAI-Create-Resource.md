@@ -50,9 +50,9 @@ In this exercise you will:
 
 ### Update the Project's `.env` File
 
-1. Open the `samples/openai-msgraph-acs/.env` file in Visual Studio Code.
+1. Open the `samples/openai-acs-msgraph/.env` file in Visual Studio Code.
 
-1. Copy the **KEY 1** value and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *tutorials/openai-msgraph-acs* folder:
+1. Copy the **KEY 1** value and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *tutorials/openai-acs-msgraph* folder:
 
     ```
     OPENAI_API_KEY=<KEY_1_VALUE>
