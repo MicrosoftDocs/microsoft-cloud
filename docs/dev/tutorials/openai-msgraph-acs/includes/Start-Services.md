@@ -23,7 +23,7 @@
     - `npm install`
     - `npm start`
 
-1. Press the **+** icon again in the Visual Studio Code **Terminal toolbar** to create a third terminal window. `cd` into the *client* folder and run the following commands to install the dependencies and start the client application.
+1. Press the **+** icon again in the Visual Studio Code **Terminal toolbar** to create a third terminal window. `cd` into the *client* folder and run the following commands to install the dependencies and start the web server.
 
     - `npm install`
     - `npm start` 
