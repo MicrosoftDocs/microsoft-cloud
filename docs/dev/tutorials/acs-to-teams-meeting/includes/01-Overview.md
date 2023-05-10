@@ -12,9 +12,9 @@ In this tutorial, you'll learn how Azure Communication Services can be used in a
 
 ![ACS Audio/Video Solution](../media/architecture-no-title.png "Scenario Architecture")
 
-### Pre-requisites
+### Prerequisites
 
-- [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
+- [Node](https://nodejs.org) - Node 16+ and npm 7+ are used for this project
 - [git](https://learn.microsoft.com/devops/develop/git/install-and-set-up-git)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Functions Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
