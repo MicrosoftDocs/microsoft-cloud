@@ -1,8 +1,11 @@
 <!-- markdownlint-disable MD041 -->
 
-Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. The Microsoft Graph Toolkit Login component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
+Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. The Microsoft Graph Toolkit `mgt-login`` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
-In this exercise, you will:
+    > [!NOTE]
+    > If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path. 
+
+In this exercise, you will:https://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-listhttps://learn.microsoft.com/en-us/graph/toolkit/components/file-list
 
 - Learn how to associate an Azure AD app with the Microsoft Graph Toolkit so that it can be used to authenticate users and retrieve organizational data.
 - Learn how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token.
@@ -20,7 +23,9 @@ In this exercise, you will:
 1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
 
     > [!TIP]
-    > You can view the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
+    > You can view all of the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
+
+1. If you're signing in to the application for the first time, you'll be prompted to consent to the permissions requested by the application. You'll learn more about these permissions (also called "scopes") in the next section as you explore the code. Select **Accept** to continue.`
 
 1. Once you're signed in, you should see the name of the user displayed in the header.
 
@@ -41,11 +46,12 @@ Now that you've signed in, let's look at the code used to sign in the user and r
     ```typescript
     Providers.globalProvider = new Msal2Provider({
         clientId: AAD_CLIENT_ID, // retrieved from .env file
-        scopes: ['User.Read', 'Chat.ReadWrite', 'Calendars.Read', 'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read',]
+        scopes: ['User.Read', 'Presence.Read', 'Chat.ReadWrite', 'Calendars.Read', 
+                 'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read']
     });
     ```
 
-    This code creates a new `Msal2Provider` object and passes the Azure AD client Id and the scopes that the app will request access to. The scopes are used to request access to the Microsoft Graph resources that the app will access. The `Msal2Provider` object is then assigned to the `Providers.globalProvider` object which is used by Microsoft Graph Toolkit components to retrieve data from Microsoft Graph.
+    This code creates a new `Msal2Provider` object, passing the Azure AD client Id from your app registration and the `scopes` for which the app will request access. The `scopes` are used to request access to Microsoft Graph resources that the app will access. After the `Msal2Provider` object is created, it's assigned to the `Providers.globalProvider` object which is used by Microsoft Graph Toolkit components to retrieve data from Microsoft Graph.
 
 1. Open *header.component.html* in your editor and locate the `mgt-login` component. The full path to the file is *client/src/app/header/header.component.html*.
 
@@ -53,8 +59,10 @@ Now that you've signed in, let's look at the code used to sign in the user and r
     <mgt-login *ngIf="featureFlags.microsoft365Enabled" class="mgt-dark" (loginCompleted)="loginCompleted()"></mgt-login>
     ```
 
-    The `mgt-login` component is used to sign in users and retrieve an access token that can be used with Microsoft Graph. The `loginCompleted` event is emitted when the user has successfully signed in. When the event fires, the `loginCompleted()` function is called. The `mgt-login` component is only displayed if the `featureFlags.microsoft365Enabled` value is set to `true`. While the `mgt-login` component is being inside of an Angular component in this scenario, it can be used in any web application.
+    The `mgt-login` component enables user sign in and access token retrieval for use with Microsoft Graph. Upon successful sign in, the `loginCompleted` event is triggered, subsequently calling the `loginCompleted()` function. Although the `mgt-login` web component is used within an Angular component in this example, it is compatible with any web application.
 
+    Display of the `mgt-login` component depends on the `featureFlags.microsoft365Enabled` value being set to `true`. This custom flag checks for the presence of the `AAD_CLIENT_ID` environment variable to confirm that the application is properly configured and able to authenticate against Azure AD. The flag is added to accommodate cases where users opt to complete only the AI or Communication exercises within the tutorial, rather than following the entire sequence.
+    
 1. Open *header.component.ts* and locate the `loginCompleted` function. This function is called when the `loginCompleted` event is emitted and used to retrieve the signed in user's profile using `Providers.globalProvider`. 
 
     ```typescript
@@ -64,6 +72,8 @@ Now that you've signed in, let's look at the code used to sign in the user and r
     }
     ```
 
-    In this example, a call is being made to the `me` API in Microsoft Graph (`me` represents the current signed in user). The `userLoggedIn` event is emitted after the profile is retrieved to pass the data to the parent component so that it can access the user's display name.
+    In this example, a call is being made to the Microsoft Graph `me` API to retrieve their user profile (`me` represents the current signed in user). The `this.userLoggedIn.emit(me)` code statement emits an event from the component to pass the profile data to the parent component. The parent component is the *app.component.ts* file in this case, which is the root component for the application.
+
+    To learn more about the `mgt-login` component visit the [Microsoft Graph Toolkit]((https://learn.microsoft.com/graph/toolkit/components/login) documentation.
 
 1. Now that you've logged into the application, let's look at how organizational data can be retrieved.

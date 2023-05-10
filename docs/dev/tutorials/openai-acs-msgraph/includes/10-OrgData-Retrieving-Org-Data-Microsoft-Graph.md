@@ -6,8 +6,8 @@ To enhance efficiency, you can integrate organizational data directly into the a
 
 In this exercise, you will:
 
-- Learn how to Microsoft Graph can be used to retrieve organizational data.
-- Walk through code examples of retrieving data using Microsoft Graph.
+- Learn how the `mgt-search-results` web component in the Microsoft Graph Toolkit can be used to search for organizational data.
+- Learn how to call Microsoft Graph directly to retrieve organizational data.
 - Understand how to send chat messages to Microsoft Teams channels using Microsoft Graph.
 
 ### Using the Organizational Data Feature
@@ -26,20 +26,21 @@ In this exercise, you will:
     > You can view the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
 
     > [!NOTE]
-    > In addition to authenticating the user, the Microsoft Graph Toolkit's `mgt-login` component also retrieves an access token that can be used by Microsoft Graph to access files, chats, emails, and calendar events, and other organizational data. The access token contains the scopes (permissions) such as `User.Read`, `Calendars.Read`, and others that you saw earlier:
+    > In addition to authenticating the user, the Microsoft Graph Toolkit's `mgt-login` component also retrieves an access token that can be used by Microsoft Graph to access files, chats, emails, calendar events, and other organizational data. The access token contains the scopes (permissions) such as `User.Read`, `Calendars.Read`, and others that you saw earlier:
     >
     >   ```typescript
     >   Providers.globalProvider = new Msal2Provider({
     >       clientId: AAD_CLIENT_ID, // retrieved from .env file
-    >       scopes: ['User.Read', 'Chat.ReadWrite', 'Calendars.Read', 'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read',]
+    >       scopes: ['User.Read', 'Presence.Read', 'Chat.ReadWrite', 'Calendars.Read', 
+    >                'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read']
     >   });
     >   ```
 
-1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will trigger Microsoft Graph to retrieve related files, chats, emails, and calendar events. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. Note that you won't have any data at this point.
+1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will cause organizational data such as files, chats, emails, and calendar events to be retrieved using Microsoft Graph. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. Note that you probably won't see any data at this point since you haven't added any files, chats, emails, or calendar events for the user in your Microsoft 365 developer tenant yet. Let's fix that in the next step.
 
     :::image type="content" source="../media/display-org-data.png" alt-text="Displaying Organizational Data":::
 
-1. Your Microsoft 365 tenant doesn't have any related organizational data for *Adatum Corporation* at this point. To fix this, perform at least one of the following actions:
+1. Your Microsoft 365 tenant may not have any related organizational data for *Adatum Corporation* at this point. To add some sample data, perform at least one of the following actions:
 
     - Add files:
         - Visit https://onedrive.com and login using your Microsoft 365 Developer tenant credentials.
@@ -76,26 +77,36 @@ In this exercise, you will:
 
 1. Go back to the application in the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which tasks you performed in the previous step.
 
-1. Let's explore some of the key code that enables the organizational data feature in the sample application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the `mgt-login` web component to make calls to Microsoft Graph APIs. If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path.
+1. Let's explore some of the code that enables the organizational data feature in the application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the `mgt-login` web component you looked at earlier to make calls to Microsoft Graph APIs. 
 
-    > [!NOTE]
-    > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?tabs=bash) to see an example.
-
-### Exploring Files and Teams Chat Messages Search Code
+### Exploring Files Search Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open *graph.service.ts* and take a moment to look through the included functions. The full path to the file is *openai-acs-msgraph/client/src/app/core/graph.service.ts*. Key functions include:
+1. Let's start by looking at how file data is retrieved from OneDrive for Business. Open *files.component.html* and take a moment to look through the code. The full path to the file is *openai-acs-msgraph/client/src/app/files/files.component.html*.
 
-    - `searchFiles()` - Searches files in OneDrive for Business.
-    - `searchChatMessages()` - Searches chat messages in Microsoft Teams.
-    - `searchEmailMessages()` - Searches email messages.
-    - `searchCalendarEvents()` - Searches calendar events.
-    - `sendTeamsChat()` - Sends a chat message to a Microsoft Teams channel.
+1. Locate the `mgt-search-results` component:
 
-1. Let's start by analyzing the functionality provided by the `searchFiles()` function.
+    ```html
+    <mgt-search-results 
+        class="search-results" 
+        entity-types="driveItem" 
+        [queryString]="searchText"
+        (dataChange)="dataChange($any($event))" 
+    />
+    ```
 
-    - A `query` parameter is passed to the function. This is the search term passed by the user as they select **View Related Content** for a row in the datagrid.
+    The `mgt-search-results` component is part of the Microsoft Graph Toolkit and as the name implies, it's used to display search results from Microsoft Graph. The component uses the following features in this example:
+
+        - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
+        - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `driveItem` which is used to search for files in OneDrive for Business. 
+        - The `queryString` attribute is used to specify the search term. In this case, the value is bound to the `searchText` property which is passed to the files component when the user selects **View Related Content** for a row in the datagrid. The square brackets around `queryString` indicate that the property is bound to the `searchText` value.
+        - The `dataChange` event fires when the search results change. In this case, a customer function named `dataChange()` is called in the files component and the event data is passed to the function. The parenthesis around `dataChange` indicate that the event is bound to the `dataChange()` function.
+        - Since no custom template is supplied, the default template built into `mgt-search-results` is used to display the search results. 
+
+1. An alternative to using components such as `mgt-search-results` is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/graph.service.ts*.
+
+    - You'll notice that a `query` parameter is passed to the function. This is the search term that's passed as the user selects **View Related Content** for a row in the datagrid. If no search term is passed, an empty array is returned.
 
         ```typescript
         async searchFiles(query: string) {
@@ -106,7 +117,7 @@ In this exercise, you will:
         }
         ```
 
-    - A filter is created that defines the type of search to perform. In this case the code is searching for files in OneDrive for Business so `driveItem` is used. The `query` parameter is then added to the `queryString` filter along with `ContentType:Document`.
+    - A filter is then created that defines the type of search to perform. In this case the code is searching for files in OneDrive for Business so `driveItem` is used. This is the same as passing `driveItem` to `entity-types` in the `mgt-search-results` component that you saw earlier. The `query` parameter is then added to the `queryString` filter along with `ContentType:Document`.
 
         ```typescript
         const filter = {
@@ -123,13 +134,13 @@ In this exercise, you will:
         };
         ```
 
-    - A call is made to the `/search/query` Microsoft Graph API using the `Providers.globalProvider.graph.client.api()` function. A POST request by calling the `post()` function and passing the `filter`.
+    - A call is then made to the `/search/query` Microsoft Graph API using the `Providers.globalProvider.graph.client.api()` function. The `filter` object is passed to the `post()` function which sends the data to the API.
 
         ```typescript
         const searchResults = await Providers.globalProvider.graph.client.api('/search/query').post(filter);
         ```
 
-    - The search results are then iterated through. If there are "hits" (results), the document is added to the `files` array. 
+    - The search results are then iterated through to locate `hits`. Each `hit` contains information about the document that was found. A property named `resource` contains the document metadata and is added to the `files` array.
 
         ```typescript
         if (searchResults.value.length !== 0) {
@@ -149,23 +160,35 @@ In this exercise, you will:
         return files;
         ```
 
+1. Looking through this code you can see that the `mgt-search-results` web component you explored earlier does a lot of work for you and significantly reduces the amount of code you have to write! However, there may be scenarios where you want to call Microsoft Graph directly to have more control over the data that's sent to the API or how the results are processed.
+
 1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/files/files.component.ts*. 
 
-    This function is called when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. The *files.component.html* file then uses the `data` property to display the search results.
-
+    Although the body of this function is commented out due to the `mgt-search-results` component being used, the function could be used to make the call to Microsoft Graph when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. 
+    
     ```typescript
     override async search(query: string) {
         this.data = await this.graphService.searchFiles(query);
     }
     ```
+    
+    The files component can then use the `data` property to display the search results. You could handle this using custom HTML bindings or by using another Microsoft Graph Toolkit control named [`mgt-file-list`](https://learn.microsoft.com/en-us/graph/toolkit/components/file-list). Here's an example of binding the `data` property to one of the component's properties named `files` and handling the `itemClick` event as the user interacts with a file.
 
-1. Go back to *graph.service.ts* and locate the `searchChatMessages()` function . You'll see that it's similar to `searchFiles()`. 
+    ```html
+    <mgt-file-list (itemClick)="itemClick($any($event))" [files]="data"></mgt-file-list>
+    ```
 
-    - It calls Microsoft Graph's `/search/query` API and converts the results into an array of objects that have information about the `teamId`, `channelId`, and `messageId` that match the search term.
-    - To retrieve the channel messages, a call is made to  `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` and the `teamId`, `channelId`, and `messageId` are passed. 
-    - Additional filtering tasks are performed and the resulting messages are returned to the caller.
+1. Whether you choose to use the `mgt-search-results` component shown earlier or write custom code to call Microsoft Graph will depend on your scenario. In this example, the `mgt-search-results` component is used to simplify the code and reduce the amount of work you have to do.
 
-1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. The results of the search are then assigned to the `data` property of the component. The *chats.component.html* file then uses the `data` property to display the search results.
+### Exploring Teams Chat Messages Search Code
+
+1. Go back to *graph.service.ts* and locate the `searchChatMessages()` function. You'll see that it's similar to the `searchFiles()` function you looked at previously.
+
+    - It posts filter data to Microsoft Graph's `/search/query` API and converts the results into an array of objects that have information about the `teamId`, `channelId`, and `messageId` that match the search term.
+    - To retrieve the Teams channel messages, a second call is made to the `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` API and the `teamId`, `channelId`, and `messageId` are passed. This returns the full message details.
+    - Additional filtering tasks are performed and the resulting messages are returned from `searchChatMessages()` to the caller.
+
+1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. 
 
     ```typescript
     override async search(query: string) {
@@ -173,9 +196,24 @@ In this exercise, you will:
     }
     ```
 
+    The results of the search are assigned to the `data` property of the component and data binding is used to iterate through the results array and render the data. This example uses an Angular Material card component to display the search results.
+
+    ```html
+    <div *ngIf="data.length">
+        <mat-card *ngFor="let chatMessage of data">
+            <mat-card-header>
+                <mat-card-title [innerHTML]="chatMessage.summary"></mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <a mat-stroked-button color="basic" [href]="chatMessage.webUrl" target="_blank">View Message</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    ```
+
 ### Sending a Message to a Microsoft Teams Channel
 
-1. In addition to searching for Microsoft Teams chat messages, the application also allows the user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment values provide these values). The `body` variable contains the message to send. A POST request is then made and the results are returned to the caller.
+1. In addition to searching for Microsoft Teams chat messages, the application also allows a user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment variable values are used for the TeamsId and ChannelId in this example). The `body` constant contains the message to send. A POST request is then made and the results are returned to the caller.
 
     ```typescript
     async sendTeamsChat(message: string): Promise<TeamsDialogData> {
@@ -201,9 +239,49 @@ In this exercise, you will:
     }
     ```
 
+1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams without leaving the application. 
+
 ### Exploring Email Messages Search Code
 
-1. Microsoft Graph provides an API to search email messages that is quite straightforward to use. Go back to *graph.service.ts* and locate the `searchEmailMessages()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
+1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *openai-acs-msgraph/client/src/app/emails/emails.component.html*.
+
+1. Locate the `mgt-search-results` component:
+
+    ```html
+    <mgt-search-results 
+      class="search-results" 
+      entity-types="message" 
+      [queryString]="searchText"
+      (dataChange)="dataChange($any($event))">
+      <template data-type="result-message"></template>
+    </mgt-search-results>
+    ```
+
+    This example of the `mgt-search-results` component is configured the same way as the one you looked at previously. The only difference is that the `entity-types` attribute is set to `message` which is used to search for email messages and an empty template is supplied.
+
+        - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
+        - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `message`. 
+        - The `queryString` attribute is used to specify the search term.
+        - The `dataChange` event fires when the search results change. The `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the emails component. 
+        - An empty template is defined for the component. This type of template is normally used to define how the search results will be rendered. However, in this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
+
+1. Look below the `mgt-search-results` component in *emails.component.html* to find the data bindings used to render the email messages. This example iterates through the `data` property and writes out the email subject, body preview, and a link to view the full email message.
+
+    ```html
+    <div *ngIf="data.length">
+        <mat-card *ngFor="let email of data">
+            <mat-card-header>
+                <mat-card-title>{{email.resource.subject}}</mat-card-title>
+                <mat-card-subtitle [innerHTML]="email.resource.bodyPreview"></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+                <a mat-stroked-button color="basic" [href]="email.resource.webLink" target="_blank">View Email Message</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    ```
+        
+1. In addition to using the `mgt-search-results` component, Microsoft Graph provides an API to search email messages that is quite straightforward to use. To see how to call this API, go back to *graph.service.ts* and locate the `searchEmailMessages()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
 
     ```typescript
     async searchEmailMessages(query:string) {
@@ -215,7 +293,7 @@ In this exercise, you will:
     }
     ```
 
-1. The emails component located in *emails.component.ts* then calls `searchEmailMessages()` and displays the results.
+1. The emails component located in *emails.component.ts* then calls `searchEmailMessages()` and displays the results in the UI.
 
     ```typescript
     override async search(query: string) {
@@ -248,3 +326,6 @@ In this exercise, you will:
         this.data = await this.graphService.searchCalendarEvents(query);
     }
     ```
+
+    > [!NOTE]
+    > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting) to see an example of calling a Microsoft Graph API from an Azure Function.
