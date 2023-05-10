@@ -4,7 +4,11 @@
 
 In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
 
-Here's an overview of the application solution:
+### Tutorial Demo
+
+>[!VIDEO https://www.youtube.com/embed/5-Na9fgpVM8]
+
+### Overview of the Application Solution
 
 ![ACS Audio/Video Solution](../media/architecture-no-title.png "Scenario Architecture")
 
