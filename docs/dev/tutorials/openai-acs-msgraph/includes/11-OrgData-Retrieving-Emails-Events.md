@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams Channels. In this exercise, you will learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
+In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=10) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams Channels. In this exercise, you will learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
 
 In this exercise, you will:
 
