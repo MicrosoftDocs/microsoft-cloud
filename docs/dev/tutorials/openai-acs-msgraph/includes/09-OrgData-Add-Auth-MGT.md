@@ -2,8 +2,8 @@
 
 Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. The Microsoft Graph Toolkit `mgt-login`` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
-    > [!NOTE]
-    > If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path. 
+> [!NOTE]
+> If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path. 
 
 In this exercise, you will:
 

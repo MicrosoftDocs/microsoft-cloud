@@ -98,11 +98,11 @@ In this exercise, you will:
 
     The *mgt-search-results* component is part of the Microsoft Graph Toolkit and as the name implies, it's used to display search results from Microsoft Graph. The component uses the following features in this example:
 
-        - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
-        - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `driveItem` which is used to search for files in OneDrive for Business. 
-        - The `queryString` attribute is used to specify the search term. In this case, the value is bound to the `searchText` property which is passed to the *files* component when the user selects **View Related Content** for a row in the datagrid. The square brackets around `queryString` indicate that the property is bound to the `searchText` value.
-        - The `dataChange` event fires when the search results change. In this case, a customer function named `dataChange()` is called in the *files* component and the event data is passed to the function. The parenthesis around `dataChange` indicate that the event is bound to the `dataChange()` function.
-        - Since no custom template is supplied, the default template built into `mgt-search-results` is used to display the search results. 
+    - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
+    - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `driveItem` which is used to search for files in OneDrive for Business. 
+    - The `queryString` attribute is used to specify the search term. In this case, the value is bound to the `searchText` property which is passed to the *files* component when the user selects **View Related Content** for a row in the datagrid. The square brackets around `queryString` indicate that the property is bound to the `searchText` value.
+    - The `dataChange` event fires when the search results change. In this case, a customer function named `dataChange()` is called in the *files* component and the event data is passed to the function. The parenthesis around `dataChange` indicate that the event is bound to the `dataChange()` function.
+    - Since no custom template is supplied, the default template built into `mgt-search-results` is used to display the search results. 
 
     :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
 
@@ -267,11 +267,11 @@ In this exercise, you will:
 
     This example of the *mgt-search-results* component is configured the same way as the one you looked at previously. The only difference is that the `entity-types` attribute is set to `message` which is used to search for email messages and an empty template is supplied.
 
-        - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
-        - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `message`. 
-        - The `queryString` attribute is used to specify the search term.
-        - The `dataChange` event fires when the search results change. The emails component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
-        - An empty template is defined for the component. This type of template is normally used to define how the search results will be rendered. However, in this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
+    - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
+    - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `message`. 
+    - The `queryString` attribute is used to specify the search term.
+    - The `dataChange` event fires when the search results change. The emails component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
+    - An empty template is defined for the component. This type of template is normally used to define how the search results will be rendered. However, in this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
 
 1. Look below the *mgt-search-results* component in *emails.component.html* to find the data bindings used to render the email messages. This example iterates through the `data` property and writes out the email subject, body preview, and a link to view the full email message.
 
@@ -329,11 +329,11 @@ In this exercise, you will:
 
     This example of the *mgt-search-results* component is configured the same way as the one you looked at previously with files and emails. The only difference is that the `entity-types` attribute is set to `event` which is used to search for calendar events and an empty template is supplied.
 
-        - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
-        - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `event`. 
-        - The `queryString` attribute is used to specify the search term.
-        - The `dataChange` event fires when the search results change. The calendar *event* component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
-        - An empty template is defined for the component. In this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
+    - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
+    - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `event`. 
+    - The `queryString` attribute is used to specify the search term.
+    - The `dataChange` event fires when the search results change. The calendar *event* component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
+    - An empty template is defined for the component. In this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
 
 1. Immediately below the `mgt-search-results` component in *calendar-events.component.html* you'll find the data bindings used to render the calendar events. This example iterates through the `data` property and writes out the start date, time, and subject of the event. Custom functions included in the component such as `dayFromDateTime()` and `timeRangeFromEvent()` are called to format data properly. The HTML bindings also include a link to view the event in Outlook and the location of the event if one is specified.
 
