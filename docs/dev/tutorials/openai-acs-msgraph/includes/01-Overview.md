@@ -25,8 +25,8 @@ You can complete the entire tutorial from start to finish or complete specific t
 
 :::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
-<a id="pre-requisites"></a>
-### Pre-requisites
+<a id="prerequisites"></a>
+### Prerequisites
 
 - [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
 - [git](https://learn.microsoft.com/devops/develop/git/install-and-set-up-git)
