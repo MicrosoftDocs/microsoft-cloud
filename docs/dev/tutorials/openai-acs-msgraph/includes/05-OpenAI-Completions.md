@@ -32,7 +32,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *server/openAI.ts* file and located the `completeEmailSMSMessages()` function. The prompt has the following features:
+1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. The prompt has the following features:
 
     - It establishes that email and SMS messages will be generated.
     - It defines the user prompt (the rules the user inputs) and a contact name.
@@ -61,7 +61,7 @@ Let's get started by experimenting with different rules that can be used to gene
         Example JSON object: { "emailSubject": "", "emailBody": "", "sms": "" }
         `;
         
-        const content = await getOpenAICompletion(prompt, 0.5);
+        const content =  await callOpenAI(prompt, 0.5);
         return content;
     }
     ```
@@ -87,11 +87,11 @@ Let's get started by experimenting with different rules that can be used to gene
 1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI ensures that any negativity is removed. 
 
     > [!NOTE]
-    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/prompt-engineering) documentation. Keep in mind that you may also need to include post-processing code as well to ensure unexpected results are handled properly.
+    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation. Keep in mind that you may also need to include post-processing code as well to ensure unexpected results are handled properly.
 
 1. A few final points to consider before moving on to the next exercise:
 
     - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they are sent. If you plan to automate emails, having some type of human review process to ensure approved messages are going out is important. View AI as being a copilot, not an autopilot.
     - Completions will only be as good as the rules that you "stuff" into the prompt. Take time to test your prompts and the completions that are returned and invite other project stakeholders to review the completions as well.
 
-1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](https://learn.microsoft.com/training/modules/get-started-openai/) training content.
+1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content.

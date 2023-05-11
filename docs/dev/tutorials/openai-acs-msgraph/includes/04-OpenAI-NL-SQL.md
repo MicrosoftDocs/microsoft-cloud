@@ -97,7 +97,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
         let queryData: QueryData = { sql: '', paramValues: [] };
         try {
-            const results = await getOpenAICompletion(prompt);
+            const results = await callOpenAI(prompt);
             if (results) {
                 queryData = JSON.parse(results);
                 if (isProhibitedQuery(queryData.sql)) { 
@@ -148,48 +148,69 @@ Let's get started by experimenting with different GPT prompts that can be used t
     `;
     ```
 
-1. The `getSQL()` function sends the prompt to a function named `getOpenAICompletion()` which is also located in the *server/openAI.ts* file. 
+1. The `getSQL()` function sends the prompt to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables, Azure OpenAI is called.
+
+    ```typescript
+    function callOpenAI(prompt: string, temperature = 0) {
+        const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
+        if (isAzureOpenAI) {
+            return getAzureOpenAICompletion(prompt, temperature);
+        }
+        else {
+            return getOpenAICompletion(prompt, temperature);
+        }
+    }
+    ```
+
+    > [!NOTE]
+    > Although we'll focus on Azure OpenAI here, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead.
 
 1. Locate the `getOpenAICompletion()` function and note that it does the following:
 
-    - Ensures that a valid OpenAI API key is available.
-    - Creates a configuration object that includes the API key.
-    - Defines the OpenAI model to use. If no model parameter is passed into the function it defaults to `gpt-3.5-turbo`.
-    - Defines other parameters such as `max_tokens` and `temperature`. 
+    - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available.
+    - Creates a `url` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
+    - Creates a data object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
         - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
         - `temperature`: What sampling temperature to use, between 0 and 2. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
+        - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example `messages` is assigned a `role` of `user` and `content` is assigned to the `prompt` parameter value passed into the function. In addition to the `user` role, the roles of `system` and `assistant` are also available to use.
     
         > [!NOTE]
-        > You can learn more about these parameters and others in the [reference documentation](https://learn.microsoft.com/azure/cognitive-services/openai/reference#completions).
-
-    - Defines the messages to send to the Azure OpenAI API. The `role` for the author of the message is set to `user` and the `content` property is set to the prompt parameter passed into the function. In addition to the `user` role, the roles of `system` and `assistant` are also available to use.
+        > You can learn more about these parameters and others in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
 
     ```typescript
-    // TODO: Convert from OpenAI API to Azure OpenAI
-    async function getOpenAICompletion(prompt: string, temperature=0, model='gpt-3.5-turbo') {
+    async function getAzureOpenAICompletion(prompt: string, temperature = 0) : Promise<string> {
 
-        if (!apiKey) {
-            throw new Error('Missing OpenAI API key in environment variables.');
+        if (!OPENAI_API_KEY || !OPENAI_ENDPOINT || !OPENAI_MODEL) {
+            throw new Error('Missing Azure OpenAI API key, endpoint, or model in environment variables.');
         }
 
-        const configuration = new Configuration({ apiKey });
+        // While it's possible to use the OpenAI SDK (as of today) with a little work, we'll use the REST API directly for Azure OpenAI calls.
+        // https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference
+        const url = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
+        const data = {
+            max_tokens: 1024,
+            temperature,
+            messages: [{ role: 'user', content: prompt }]
+        };
 
         try {
-            const openai = new OpenAIApi(configuration);
-            const completion = await openai.createChatCompletion({
-                model, // gpt-3.5-turbo, gpt-4
-                max_tokens: 1024,
-                temperature,
-                messages: [{ role: 'user', content: prompt }]
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': `${OPENAI_API_KEY}`,
+                },
+                body: JSON.stringify(data),
             });
 
+            const completion = await response.json() as AzureOpenAIResponse;
             let content = '';
-            if (completion.data.choices.length) {
-                content = completion.data.choices[0].message?.content.trim() as string;
+            if (completion.choices.length) {
+                content = completion.choices[0].message?.content.trim();
                 console.log('Output:', content);
             }
             return content;
-        } 
+        }
         catch (e) {
             console.error('Error getting data:', e);
             throw e;

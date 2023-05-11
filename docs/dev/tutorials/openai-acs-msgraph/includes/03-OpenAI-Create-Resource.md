@@ -58,11 +58,14 @@ In this exercise you will:
     OPENAI_API_KEY=<KEY_1_VALUE>
     ```
 
-1. Copy the **Endpoint* value and assign it to `OPENAI_ENDPOINT` in the *.env* file:
+1. Copy the **Endpoint* value and assign it to `OPENAI_ENDPOINT` in the *.env* file. Ensure that you include the trailing `/` character:
 
     ```
     OPENAI_ENDPOINT=<ENDPOINT_VALUE>
     ```
+
+    > [!NOTE]
+    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which you created earlier when you deployed a new model. The API version is set to a valid value as defined in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
 
 1. Save the *.env* file.
 

@@ -35,12 +35,14 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     CHANNEL_ID=
     OPENAI_API_KEY=
     OPENAI_ENDPOINT=
+    OPENAI_API_VERSION=2023-03-15-preview
+    OPENAI_MODEL=gpt-35-turbo
     POSTGRES_USER=
     POSTGRES_PASSWORD=
     ACS_CONNECTION_STRING=
     ACS_PHONE_NUMBER=
     ACS_EMAIL_ADDRESS=
-    CUSTOMER_EMAIL_ADDRESS=>
+    CUSTOMER_EMAIL_ADDRESS=
     CUSTOMER_PHONE_NUMBER=
     API_BASE_URL=http://localhost:3000/api/
     ```
