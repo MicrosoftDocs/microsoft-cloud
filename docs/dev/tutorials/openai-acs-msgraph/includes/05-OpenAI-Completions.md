@@ -15,7 +15,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** on any row in the datagrid followed by **Email/SMS Customer** to get to the **Message Generator** screen. 
 
-1. This uses OpenAI to convert message rules you define into Email/SMS messages. Perform the following tasks:
+1. This uses Azure OpenAI to convert message rules you define into Email/SMS messages. Perform the following tasks:
 
     - Enter a rule such as *Order is delayed 5 days* into the input and select the **Generate Email/SMS Messages** button. 
 
@@ -84,7 +84,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Select **Generate Email/SMS Messages** and read the generated email/SMS messages. How have they changed? You should see that a negative tone is now allowed.
 
-1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI ensures that any negativity is removed. 
+1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI should have negativity removed. 
 
     > [!NOTE]
     > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation. Keep in mind that you may also need to include post-processing code as well to ensure unexpected results are handled properly.
