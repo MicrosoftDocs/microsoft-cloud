@@ -20,15 +20,16 @@ In this exercise, you will:
     - Supported account types: *Accounts in any organizational directory (Any Azure AD directory - Multitenant)*
     - Redirect URI: 
         - Select **Single-page application (SPA)** and enter `http://localhost:4200` in the **Redirect URI** field.
+    - Select **Register** to create the app registration.
 
     :::image type="content" source="../media/aad-app-registration.png" alt-text="Azure AD app registration form" border="true":::
 
-<!-- 1. After the app is registered, select **API permissions**, locate the **Configured permissions** section, and select **+ Add a permission**.
+<!-- 1. After the app is registered, select **API permissions** in the Resource menu, locate the **Configured permissions** section, and select **+ Add a permission**.
 1. Select **Microsoft Graph** followed by **Delegated permissions**.
 1. In the **Select permissions** input enter `Chat.ReadWrite`, expand the **Chat** node, select the **Chat.ReadWrite** permission.
 1. Go back to the **Select permissions** input and enter `Files.Read.All`, expand the **Files** node, select the **Files.Read.All** permission.
 1. Select **Add permissions** at the bottom of the panel to add the permissions to the app. -->
-1. Select **Overview** in the left menu and copy the `Application (client) ID` value to your clipboard.
+1. Select **Overview** in the Resource menu and copy the `Application (client) ID` value to your clipboard.
 
 ### Update the Project's *.env* File
 

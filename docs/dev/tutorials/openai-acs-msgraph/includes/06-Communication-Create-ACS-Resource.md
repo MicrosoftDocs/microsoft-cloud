@@ -35,7 +35,7 @@ In this exercise, you will:
 
 1. Add a phone number and ensure that the phone number has calling capabilities enabled. You'll use this phone number to call out to a phone from the app. 
 
-    - Select `Phone numbers` from the left menu.
+    - Select `Phone numbers` from the Resource menu.
     - Select `+ Get` in the toolbar (or select the **Get a number** button) and enter the following information:
         - **Country or region**: `United States`
         - **Use case**: Select `An application will be making calls or sending SMS mesages`
@@ -67,7 +67,7 @@ In this exercise, you will:
 
 1. Perform the following tasks to create a connected email domain for your ACS resource. This will be used to send email from the app.
 
-    - Select **Domains** from the left menu.
+    - Select **Domains** from the Resource menu.
     - Select **Connect domain** from the toolbar.
     - Select your **Subscription** and **Resource group**. 
     - Under the **Email Service** dropdown, select `Add an email service`.
@@ -75,7 +75,7 @@ In this exercise, you will:
     - Select `Review + create` followed by `Create`.
     - Once the deployment completes, select `Go to resource`, and select `1-click add` to add a free Azure subdomain.
     - After the subdomain is added (it'll take a few moments to be deployed), select it.
-    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the left menu. Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
+    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the Resource menu. Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
     - Go back to your Azure Communication Services resource and select `Domains` from the left-hand menu.
     - Select `Add domain` and enter the `MailFrom` value from the previous step (ensure you select the correct subscription, resource group, and email service). Select the `Connect` button.
 
