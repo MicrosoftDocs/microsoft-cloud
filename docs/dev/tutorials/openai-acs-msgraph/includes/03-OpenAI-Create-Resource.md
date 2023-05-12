@@ -46,7 +46,7 @@ In this exercise you will:
 
 1. Select **Save**.
 
-1. Select **Keys and Endpoint**. Locate the **KEY 1** and **Endpoint** values.
+1. Select **Keys and Endpoint** in the **Resource Management** and locate the **KEY 1** and **Endpoint** values.
 
     :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
 
