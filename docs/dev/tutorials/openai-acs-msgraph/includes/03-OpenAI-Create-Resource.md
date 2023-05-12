@@ -21,7 +21,7 @@ In this exercise you will:
     > [!NOTE]
     > If you see a message about completing an application form to enable Azure OpenAI on your subscription, select the **Click here to request access to Azure OpenAI service** link and complete the form. Once you've completed the form, you'll need to wait for the Azure OpenAI team to approve your request. After receiving your approval notice, you can go back through this exercise and create the resource. 
     >
-    > If you have an OpenAI API key and would like to use that while you're waiting for access to Azure OpenAI, you can skip this section and go directly to the **Update the Project's .env File** section in this exercise. Assign your OpenAI API key to `OPENAI_API_KEY` in the *.env* file and ignore any other steps. Once you have access to Azure OpenAI, come back to this section and create the resource and model.
+    > If you have an OpenAI API key and would like to use that while you're waiting for access to Azure OpenAI, you can skip this section and go directly to the **Update the Project's .env File** below. Assign your OpenAI API key to `OPENAI_API_KEY` in the *.env* file and ignore any other steps. Once you have access to Azure OpenAI, come back to this section and create the resource and model and update the *.env* file with the values from your Azure OpenAI resource.
 
 1. Perform the following tasks:
     - Select your Azure subscription.
