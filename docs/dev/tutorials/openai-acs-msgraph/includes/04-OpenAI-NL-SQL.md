@@ -1,12 +1,12 @@
 <!-- markdownlint-disable MD041 -->
 
-Before getting started, it's important to understand the benefits of incorporating natural language to SQL functionality into applications. By harnessing the capabilities of natural language processing (NLP) technology, you can enable users without SQL expertise to query databases using everyday language, such as plain English. For example, they may enter:
+Now that you have your Azure OpenAI Service resource setup, let's learn about how it can be used for natural language to SQL scenarios. By harnessing the capabilities of natural language processing (NLP) technology, you can enable users without SQL expertise to query databases using everyday language, such as plain English. For example, they may enter:
 
 ```
 Get the the total revenue for all companies in London.
 ```    
 
-Azure OpenAI Service will convert this query to SQL and you can then use the SQL to return results from the database. As a result, non-technical stakeholders including business analysts, marketers, and executives can more effortlessly retrieve valuable information from databases without grappling with intricate SQL syntax or relying on constrained datagrids and filters. This streamlined approach can boost productivity by eliminating the need for users to seek assistance from technical experts. Finally, by capitalizing on advanced language models like GPT, you can design applications that are not only intuitive but also adaptable to a diverse user base. 
+Azure OpenAI will convert this query to SQL and you can then use the SQL to return results from the database. As a result, non-technical users including business analysts, marketers, and executives can more easily retrieve valuable information from databases without grappling with intricate SQL syntax or relying on constrained datagrids and filters. This streamlined approach can boost productivity by eliminating the need for users to seek assistance from technical experts. Finally, by capitalizing on advanced language models like GPT (Generative Pre-training Transformer) provided by Azure OpenAI, you can design applications that are not only intuitive, but also adaptable to a diverse user base. 
 
 In this exercise, you will:
 
@@ -15,21 +15,19 @@ In this exercise, you will:
 - Use the generated SQL to query the PostgreSQL database started earlier.
 - Return query results.
 
-Let's get started by experimenting with different GPT prompts that can be used to convert natural language to SQL.
+Let's start by experimenting with different GPT prompts that can be used to convert natural language to SQL.
 
 ### Using the Natural Language to SQL Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
-1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid.
+1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid. Notice that a sample query value is already included: *Get the total revenue for all orders. Group by company and include the city.*
 
     :::image type="content" source="../media/openai-custom-query.png" alt-text="Natural language to SQL query.":::
 
-1. Notice that a sample query value is already included: "Get the total revenue for all orders. Group by company and include the city." 
-
 1. Select the **Run Query** button. This will pass the user's natural language query to Azure OpenAI which will convert it to SQL. The SQL query will then be used to query the database and return any potential results.
 
-1. View the terminal window running the APIs and notice it displays the SQL query that is returned from Azure OpenAI.
+1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query that is returned from Azure OpenAI.
 
     :::image type="content" source="../media/nl-sql-terminal-output.png" alt-text="Natural language to SQL query output to the terminal window.":::
 
@@ -37,13 +35,16 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Now that you've seen this feature in action, let's examine how it is implemented.
+> [!NOTE]
+> The goal of this exercise is to show what's possible with NLP to SQL functionality and how to get started using it. It's important to discuss if NLP to SQL is appropriate for your organization before proceeding with any implementation. It's also **imperative to plan for proper database security measures** to prevent unauthorized access and protect sensitive data.
+
+1. Now that you've seen the natural language to SQL feature in action, let's examine how it is implemented.
 
 1. Open the *server/apiRoutes.ts* file and locate the `generatesql` route. This API route is called by the client-side application running in the browser and used to generate SQL from a natural language query. Once the SQL query is retrieved, it's used to query the database and return results. 
 
-1. Notice the following functionality in the function:
+1. Notice the following functionality in the `generatesql` route:
 
-    - It accepts a user query parameter which is used in the GPT prompt.
+    - It retrieves the user query value from `req.body.query` and assigns it to a variable named `userQuery`. This value will be used in the GPT prompt.
     - It calls a `getSQL()` function to convert natural language to SQL.
     - It passes the generated SQL to a function named `queryDb` that executes the SQL query and returns results from the database.
 
@@ -56,7 +57,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
         }
 
         try {
-            // Call OpenAI to convert the user query into a SQL query
+            // Call Azure OpenAI to convert the user query into a SQL query
             const sqlCommandObject = await getSQL(userQuery);
 
             let result = [];
@@ -125,7 +126,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
     ```
 
     > [!NOTE]
-    > In a real-world scenario, the schema would be updated as the database schema changes and only include tables that users are allowed to query using natural language processing. Additionally, it is imperative to plan for proper database security measures to prevent unauthorized access and protect sensitive data.
+    > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
 
     - The natural language query created by the end user is embedded into the prompt.
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
@@ -163,9 +164,9 @@ Let's get started by experimenting with different GPT prompts that can be used t
     ```
 
     > [!NOTE]
-    > Although we'll focus on Azure OpenAI here, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead.
+    > Although we'll focus on Azure OpenAI, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead.
 
-1. Locate the `getOpenAICompletion()` function and note that it does the following:
+1. Locate the `getAzureOpenAICompletion()` function and note that it does the following:
 
     - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available.
     - Creates a `url` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
@@ -175,7 +176,7 @@ Let's get started by experimenting with different GPT prompts that can be used t
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example `messages` is assigned a `role` of `user` and `content` is assigned to the `prompt` parameter value passed into the function. In addition to the `user` role, the roles of `system` and `assistant` are also available to use.
     
         > [!NOTE]
-        > You can learn more about these parameters and others in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
+        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
 
     ```typescript
     async function getAzureOpenAICompletion(prompt: string, temperature = 0) : Promise<string> {
@@ -232,20 +233,17 @@ Let's get started by experimenting with different GPT prompts that can be used t
     // }
     ```
 
-1. The API server will automatically rebuild the TypeScript code and restart the server after you save the *openAI.ts* file.
+1. Save *openAI.ts*. The API server will automatically rebuild the TypeScript code and restart the server.
 
 1. Go back to the browser, and enter *Select all table names* into the **Custom Query** input. Select **Run Query**. Are table names displayed? 
 
 1. Enter *Select all function names.* into the **Custom Query** input and select **Run Query** again. Are function names displayed?
 
-1. QUESTION: You added a rule into the GPT prompt that said to not allow table, function, or procedure names, so why did the Azure OpenAI model still return a SQL query to retrieve those values?
+1. QUESTION: You added a rule into the GPT prompt that said to not allow table, function, or procedure names. Why did the Azure OpenAI model return a SQL query to retrieve those values?
 
     ANSWER: AI may generate unexpected results even if you have specific rules in place. This is a good example of why you need to plan your prompt text carefully, but also plan to add a post-processing step into your code to handle cases where you receive unexpected results.
 
 1. Go back to *server/openAI.ts* and locate the `isProhibitedQuery()` function. This is an example of post-processing code that can be run after Azure OpenAI returns results. Notice that it sets the `sql` property to an empty string if prohibited keywords are returned in the generated SQL query. 
-
-    > [!NOTE]
-    > It's important to note that this is only demo code. There may be other prohibited keywords required to cover your specific use cases if you choose to convert natural language to SQL. This is a feature that you must plan for and use with care to ensure that only valid SQL queries are returned and run against the database. In addition to prohibited keywords, you will also need to factor in security as well.
 
     ```typescript
     function isProhibitedQuery(query: string): boolean {
@@ -262,7 +260,10 @@ Let's get started by experimenting with different GPT prompts that can be used t
     }
     ```
 
-1. Go back to *server/openAI.ts* and uncomment the following code in the `getSQL()` function:
+    > [!NOTE]
+    > It's important to note that this is only demo code. There may be other prohibited keywords required to cover your specific use cases if you choose to convert natural language to SQL. This is a feature that you must plan for and use with care to ensure that only valid SQL queries are returned and run against the database. In addition to prohibited keywords, you will also need to factor in security as well.
+
+1. Go back to *server/openAI.ts* and uncomment the following code in the `getSQL()` function. Save the file.
 
     ```typescript
     if (isProhibitedQuery(queryData.sql)) { 
@@ -274,8 +275,8 @@ Let's get started by experimenting with different GPT prompts that can be used t
 
 1. A few final points to consider before moving on to the next exercise:
 
+    - It's important to discuss if natural language to SQL is the right solution for your use case and if it will provide value to your customers.
     - While natural language to SQL can be very powerful, careful planning must go into it to ensure prompts have required rules and that post-processing functionality is included.
     - Security should be a primary concern and built into the planning, development, and deployment process.
     - There are no guarantees that the SQL returned from a natural language query will be efficient. In some cases, additional calls to Azure OpenAI may be required if post-processing rules detect issues with SQL queries.
-    - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering.
-    - Learn more about [Data, privacy, and security for Azure OpenAI Service](https://learn.microsoft.com/legal/cognitive-services/openai/data-privacy?context=%2Fazure%2Fcognitive-services%2Fopenai%2Fcontext%2Fcontext).
+    - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).

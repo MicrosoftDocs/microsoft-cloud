@@ -67,10 +67,11 @@ In this exercise you will:
     ```
 
     > [!NOTE]
-    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which should match the model name you created earlier in this exercise. The API version is set to a supported value defined in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
+    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which should match the model name you created earlier in this exercise. The API version is set to a supported value defined in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
 
 1. Save the *.env* file.
 
+<a id="start-app-services"></a>
 ### Start the Application Services
 
 It's time to start up your application services including the database, web server, and API server.

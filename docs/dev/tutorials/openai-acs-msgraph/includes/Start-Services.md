@@ -2,9 +2,9 @@
 
     :::image type="content" source="../media/vs-code-terminals.png" alt-text="Three terminal windows in Visual Studio Code":::
 
-1. Right-click on the *.env* file in the Visual Studio Code file list and select **Open in Integrated Terminal**. Ensure that your terminal is at the root of the project before continuing.
+1. Right-click on the *.env* file in the Visual Studio Code file list and select **Open in Integrated Terminal**. Ensure that your terminal is at the root of the project - *openai-acs-msgraph* - before continuing.
 
-1. Choose from one of the following options to start the PostgreSQL database:
+1. Choose from **one** of the following options to start the PostgreSQL database:
 
     - If you have [Docker Desktop](https://www.docker.com/get-started/) installed and running, run `docker-compose up` in the terminal window and press <kbd>Enter</kbd>.
     - If you have Podman with [podman-compose](https://podman-desktop.io/docs/compose/podman-compose) installed and running, run `podman-compose up` in the terminal window and press <kbd>Enter</kbd>.
