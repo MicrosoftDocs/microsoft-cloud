@@ -1,17 +1,20 @@
 <!-- markdownlint-disable MD041 -->
 
-Leveraging Azure OpenAI Service to generate email and SMS messages offers a powerful solution for enhancing user productivity and streamlining communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. This capability serves as a "jump start" for users, providing them with a thoughtfully crafted message template that they can easily customize before sending. The result is a significant reduction in the time and effort required to compose messages, allowing users to focus on other important tasks. Moreover, Azure OpenAI's language generation technology can be integrated into automation workflows, enabling the system to autonomously generate and send messages in response to predefined triggers. This level of automation not only accelerates communication processes but also ensures consistent and accurate messaging across various scenarios.
+In addition to the natural language to SQL feature, you can also use Azure OpenAI Service to generate email and SMS messages to enhance user productivity and streamline communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. 
+
+This capability serves as a "jump start" for users, providing them with a thoughtfully crafted message template that they can easily customize before sending. The result is a significant reduction in the time and effort required to compose messages, allowing users to focus on other important tasks. Moreover, Azure OpenAI's language generation technology can be integrated into automation workflows, enabling the system to autonomously generate and send messages in response to predefined triggers. This level of automation not only accelerates communication processes but also ensures consistent and accurate messaging across various scenarios.
 
 In this exercise, you will:
 
 - Experiment with different GPT prompts.
 - Use GPT prompts to generate completions for email and SMS messages.
+- Explore code that enables GPT completions.
 
 Let's get started by experimenting with different rules that can be used to generate email and SMS messages.
 
 ### Using the GPT Completions Feature
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** on any row in the datagrid followed by **Email/SMS Customer** to get to the **Message Generator** screen. 
 
@@ -21,12 +24,10 @@ Let's get started by experimenting with different rules that can be used to gene
 
         :::image type="content" source="../media/openai-order-delayed.png" alt-text="Azure OpenAI email/SMS message generator.":::
 
-    - You will see a subject and body generated for the email.
-    - You will also see a short message generated for the SMS. 
+    - You will see a subject and body generated for the email and a short message generated for the SMS. 
     - Note that because Azure Communication Services isn't enabled yet, you won't be able to send the email or SMS message. 
-    - Close the dialog window.
 
-1. Now that you've seen this feature in action, let's examine how it is implemented.
+1. Close the dialog window. Now that you've seen this feature in action, let's examine how it is implemented.
 
 ### Exploring the GPT Completions Code
 
@@ -73,9 +74,9 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and read the email and SMS messages. Is the negative message included? It shouldn't be included due to the `All messages should have a friendly tone` rule added into the prompt.
+1. Select **Generate Email/SMS Messages** and read the email and SMS messages. Is the negative message included? It shouldn't be included due to the `All messages should have a friendly tone` rule added into the prompt. Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned.
 
-1. Go back to *server.openAI.ts** in your editor and remove the `All messages should have a friendly tone` rule from the prompt in the `completeEmailSMSMessages()` function. 
+1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
 
 1. Go back to the email/SMS message generator in the browser and enter the same rules again:
 
@@ -84,14 +85,15 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Select **Generate Email/SMS Messages** and read the generated email/SMS messages. How have they changed? You should see that a negative tone is now allowed.
 
-1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI should have negativity removed. 
+1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function in *server/openAI.ts**, and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI should have negativity removed. 
 
     > [!NOTE]
-    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation. Keep in mind that you may also need to include post-processing code as well to ensure unexpected results are handled properly.
+    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation.
 
 1. A few final points to consider before moving on to the next exercise:
 
-    - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they are sent. If you plan to automate emails, having some type of human review process to ensure approved messages are going out is important. View AI as being a copilot, not an autopilot.
-    - Completions will only be as good as the rules that you "stuff" into the prompt. Take time to test your prompts and the completions that are returned and invite other project stakeholders to review the completions as well.
+    - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they're sent. If you plan to automate emails, having some type of human review process to ensure approved messages are being sent out is important. View AI as being a copilot, not an autopilot.
+    - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
+    - You may need to include post-processing code to ensure unexpected results are handled properly.
 
 1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content.
