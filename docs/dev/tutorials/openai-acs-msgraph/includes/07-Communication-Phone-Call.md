@@ -12,17 +12,25 @@ In this exercise, you will:
 
 ### Using the Phone Calling Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+
+    ```
+    ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
+    ACS_PHONE_NUMBER=<ACS_PHONE_NUMBER>
+    ACS_EMAIL_ADDRESS=<ACS_EMAIL_ADDRESS>
+    CUSTOMER_EMAIL_ADDRESS=<EMAIL_ADDRESS_TO_SEND_EMAIL_TO>
+    CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
+    ```
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
 
     :::image type="content" source="../media/acs-call-customer.png" alt-text="ACS phone calling component":::
 
-1. A phone call component will be added into the header. Enter your phone number (ensure it starts with + and includes the country code) and select **Call**. You may be prompted to allow access to your microphone.
+1. A phone call component will be added into the header. Enter your phone number (ensure it starts with + and includes the country code) and select **Call**. You will be prompted to allow access to your microphone.
 
     :::image type="content" source="../media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
 
-1. Select **Hang Up** to end the call and **Close** to close the phone call component.
+1. Select **Hang Up** to end the call. Select **Close** to close the phone call component.
 
 ### Exploring the Phone Calling Code
 
@@ -54,7 +62,7 @@ In this exercise, you will:
     }
     ```
 
-1. Open *phone-call.component.ts* in your editor using the keyboard shortcuts mentioned earlier. The full path to the file is *openai-acs-msgraph/client/src/app/phone-call/phone-call.component.ts*. Take a moment to expore the code. Note the following key features:
+1. Open *phone-call.component.ts*. Take a moment to expore the code. The full path to the file is *openai-acs-msgraph/client/src/app/phone-call/phone-call.component.ts*. Note the following key features:
 
     - Retrieves an Azure Communication Services access token by calling the `acsService.getAcsToken()` function in `ngOnInit()`;
     - Adds a "phone dialer" to the page. You can see the dialer by clicking on the phone number input in the header.
@@ -78,12 +86,12 @@ In this exercise, you will:
 
     This function performs the following actions:
 
-    - Retrieves an ACS access token by calling the `acsService.getAcsToken()` function.
+    - Retrieves an ACS userId and access token by calling the `acsService.getAcsToken()` function.
     - Once the access token is retrieved, the code performs the following actions:
         - Creates a new instance of `CallClient` and `AzureCommunicationTokenCredential` using the access token.
         - Creates a new instance of `CallAgent` using the `CallClient` and `AzureCommunicationTokenCredential` objects. Later you'll see that `CallAgent` is used to start and end a call.
 
-1. Open *acs.services.ts* and locate the `getAcsToken()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*. Note that the function makes an HTTP GET request to the API server to retrieve the ACS access token.
+1. Open *acs.services.ts* and locate the `getAcsToken()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*. The function makes an HTTP GET request to the `/acstoken` route exposed by the API server.
 
     ```typescript
     getAcsToken(): Observable<AcsUser> {
@@ -94,9 +102,11 @@ In this exercise, you will:
     }
     ```
 
-1. An API server function named `createACSToken()` retrieves the access token and returns it to the client. It can be found in the *openai-acs-msgraph/server/typescript/acs.ts* file. 
+1. An API server function named `createACSToken()` retrieves the userId and access token and returns it to the client. It can be found in the *server/typescript/acs.ts* file. 
 
     ```typescript
+    import { CommunicationIdentityClient } from '@azure/communication-identity';
+ 
     const connectionString = process.env.ACS_CONNECTION_STRING as string;
 
     async function createACSToken() {
@@ -117,9 +127,9 @@ In this exercise, you will:
     - Gets a token for the new user with the "voip" scope using `tokenClient.getToken()`.
     - Returns an object containing the `userId` and `token` values.
 
-1. Now that you've seen how the token is retrieved, go back to `phone-call.component.ts` and locate the `startCall()` function. 
+1. Now that you've seen how the userId and token are retrieved, go back to `phone-call.component.ts` and locate the `startCall()` function. 
 
-1. This function is called when **Call** is selected in the phone call component. It uses the `CallAgent` object (located in the `@azure/communication-calling` library) mentioned earlier to start a call. The `callAgent.startCall()` function accepts an object representing the number to call and the ACS phone number used to make the call.
+1. This function is called when **Call** is selected in the phone call component. It uses the `CallAgent` object mentioned earlier to start a call. The `callAgent.startCall()` function accepts an object representing the number to call and the ACS phone number used to make the call.
 
     ```typescript
     startCall() {
@@ -148,11 +158,11 @@ In this exercise, you will:
     }
     ```
 
-    If a call is in progress, the `call.hangUp()` function is called to end the call. If no call is in progress, the `hangup` event is emitted to the parent component to change the button text from **Hang Up** to **Close**.
+    If a call is in progress, the `call.hangUp()` function is called to end the call. If no call is in progress, the `hangup` event is emitted to the header parent component to hide the phone call component.
 
-1. Before moving on to the next exercise, let's review the key concepts covered covered:
+1. Before moving on to the next exercise, let's review the key concepts covered in this exercise:
 
-    - An ACS access token is retrieved from the API server using the `acsService.getAcsToken()` function. 
+    - An ACS userId and access token are retrieved from the API server using the `acsService.getAcsToken()` function. 
     - The token is used to create a `CallClient` and `CallAgent` object.
     - The `CallAgent` object is used to start and end a call by calling the `callAgent.startCall()` and `callAgent.hangUp()` functions respectively.
 
