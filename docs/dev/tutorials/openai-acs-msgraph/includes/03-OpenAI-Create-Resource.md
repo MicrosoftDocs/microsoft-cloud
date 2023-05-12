@@ -8,6 +8,8 @@ In this exercise you will:
 - Deploy a model.
 - Update the *.env* file with values from your Azure OpenAI Service resource.
 
+:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+
 ### Create an Azure OpenAI Service Resource
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.

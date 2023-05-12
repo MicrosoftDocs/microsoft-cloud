@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-Effective communication is essential for successful custom business applications. By using Azure Communication Services (ACS), you can add features like phone calls, live chat, audio/video calls, and email and SMS messaging to your applications. Earlier, you learned how Azure OpenAI can automatically generate personalized messages. Now, you'll learn how to send them. Together, ACS and OpenAI enhance your applications by simplifying communication, improving interactions, and boosting business productivity.
+Effective communication is essential for successful custom business applications. By using Azure Communication Services (ACS), you can add features such as phone calls, live chat, audio/video calls, and email and SMS messaging to your applications. Earlier, you learned how Azure OpenAI can generate completions for email and SMS messages. Now, you'll learn how to send the messages. Together, ACS and OpenAI can enhance your applications by simplifying communication, improving interactions, and boosting business productivity.
 
 In this exercise, you will:
 
@@ -13,7 +13,7 @@ In this exercise, you will:
 
 ### Create an Azure Communication Services Resource
 
-1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
+1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in if you haven't already.
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
 
@@ -29,7 +29,7 @@ In this exercise, you will:
 
 1. Select **Review + Create** followed by **Create**.
 
-1. You've successfully created a new Azure Communication Services resource! Next, you'll  enable phone calling and SMS capabilities and connect an email domain to the resource.
+1. You've successfully created a new Azure Communication Services resource! Next, you'll  enable phone calling and SMS capabilities. You'll also connect an email domain to the resource.
 
 ### Enable Phone Calling and SMS Capabilities
 
@@ -65,7 +65,7 @@ In this exercise, you will:
 
 ### Connect an Email Domain
 
-1. Perform the following tasks to create a connected email domain for your ACS resource. This will be used to send email from the app.
+1. Perform the following tasks to create a connected email domain for your ACS resource so that you can send email. This will be used to send email from the app.
 
     - Select **Domains** from the Resource menu.
     - Select **Connect domain** from the toolbar.
@@ -75,9 +75,12 @@ In this exercise, you will:
     - Select `Review + create` followed by `Create`.
     - Once the deployment completes, select `Go to resource`, and select `1-click add` to add a free Azure subdomain.
     - After the subdomain is added (it'll take a few moments to be deployed), select it.
-    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the Resource menu. Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
-    - Go back to your Azure Communication Services resource and select `Domains` from the left-hand menu.
+    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the Resource menu. 
+    - Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
+    - Go back to your Azure Communication Services resource and select `Domains` from the Resource menu.
     - Select `Add domain` and enter the `MailFrom` value from the previous step (ensure you select the correct subscription, resource group, and email service). Select the `Connect` button.
+
+### Update the `.env` File
 
 1. Now that your ACS phone number (with calling and SMS enabled) and email domain are ready, update the following keys/values in the *.env* file in your project:
 
@@ -93,7 +96,7 @@ In this exercise, you will:
 
     - `ACS_PHONE_NUMBER`: Assign your toll-free number to the `ACS_PHONE_NUMBER` value.
 
-    - `ACS_EMAIL_ADDRESS`: Assign your email "MailTo" address.
+    - `ACS_EMAIL_ADDRESS`: Assign your email "MailTo" address value.
 
     - `CUSTOMER_EMAIL_ADDRESS`: Assign an email address you'd like email to be sent to from the app (since the customer data in the app's database is only sample data). You can use a personal email address.
 
