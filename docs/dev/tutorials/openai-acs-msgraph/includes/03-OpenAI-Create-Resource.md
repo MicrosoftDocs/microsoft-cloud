@@ -8,7 +8,7 @@ In this exercise you will:
 - Deploy a model.
 - Update the *.env* file with values from your Azure OpenAI Service resource.
 
-### Creating an Azure OpenAI Service Resource
+### Create an Azure OpenAI Service Resource
 
 1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
 
@@ -19,7 +19,9 @@ In this exercise you will:
 1. Select **Create** in the toolbar.
 
     > [!NOTE]
-    > If you see a message about completing an application form to enable Azure OpenAI on your subscription, select the **Click here to request access to Azure OpenAI service** link and complete the form. Once you've completed the form, you'll need to wait for the Azure OpenAI team to approve your request. After receiving your approval notice, you can go back through this exercise and create the resource.
+    > If you see a message about completing an application form to enable Azure OpenAI on your subscription, select the **Click here to request access to Azure OpenAI service** link and complete the form. Once you've completed the form, you'll need to wait for the Azure OpenAI team to approve your request. After receiving your approval notice, you can go back through this exercise and create the resource. 
+    >
+    > If you have an OpenAI API key and would like to use that while you're waiting for access to Azure OpenAI, you can skip this section and go directly to the **Update the Project's .env File** section in this exercise. Assign your OpenAI API key to `OPENAI_API_KEY` in the *.env* file and ignore any other steps. Once you have access to Azure OpenAI, come back to this section and create the resource and model.
 
 1. Perform the following tasks:
     - Select your Azure subscription.
@@ -50,9 +52,9 @@ In this exercise you will:
 
 ### Update the Project's `.env` File
 
-1. Open the `samples/openai-acs-msgraph/.env` file in Visual Studio Code.
+1. Open the `.env` file at the root of the project.
 
-1. Copy the **KEY 1** value and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *tutorials/openai-acs-msgraph* folder:
+1. Copy the **KEY 1** value from your Azure OpenAI resource and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *openai-acs-msgraph* folder:
 
     ```
     OPENAI_API_KEY=<KEY_1_VALUE>
@@ -65,7 +67,7 @@ In this exercise you will:
     ```
 
     > [!NOTE]
-    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which you created earlier when you deployed a new model. The API version is set to a valid value as defined in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
+    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which should match the model name you created earlier in this exercise. The API version is set to a supported value defined in the [reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
 
 1. Save the *.env* file.
 

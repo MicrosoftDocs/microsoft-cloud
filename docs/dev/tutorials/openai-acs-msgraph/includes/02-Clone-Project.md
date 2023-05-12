@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-The sample project referenced in this tutorial is available at https://github.com/microsoft/MicrosoftCloud. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as a valuable resource to inspire and guide you in incorporating similar features into your own applications.
+The sample project referenced in this tutorial is available at https://github.com/microsoft/MicrosoftCloud. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
 
 In this exercise you will:
 
@@ -18,6 +18,9 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     ```
 
 1. Open the *MicrosoftCloud/samples/openai-acs-msgraph* folder in Visual Studio Code.
+
+    > [!NOTE]
+    > Although we'll use Visual Studio Code throughout this tutorial, any code editor can be used to work with the sample project.
 
 1. Notice the following folders and files:
 
@@ -47,14 +50,14 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     API_BASE_URL=http://localhost:3000/api/
     ```
 
-1. Assign the following values to `POSTGRES_USER` and `POSTGRES_PASSWORD` in *.env*.
+1. Assign the following values to `POSTGRES_USER` and `POSTGRES_PASSWORD` in *.env*. These values will be used by the API server to connect to the local PostgreSQL database.
 
     ```
     POSTGRES_USER=web
     POSTGRES_PASSWORD=web-password
     ```
 
-1. Many of the exercises that follow walk you through code that enables different application features. If you're using Visual Studio Code, you can open files directly by selecting:
+1. Many of the exercises that follow walk you through code that enables different application features. In Visual Studio Code you can open files directly by selecting:
 
     - Windows/Linux: <kbd>Ctrl + P</kdb>
     - Mac: <kbd>Cmd + P</kdb>

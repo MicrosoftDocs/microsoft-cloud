@@ -1,4 +1,4 @@
-1. In the following steps, you create three terminal windows in Visual Studio Code. 
+1. In the following steps you'll create three terminal windows in Visual Studio Code. 
 
     :::image type="content" source="../media/vs-code-terminals.png" alt-text="Three terminal windows in Visual Studio Code":::
 
@@ -8,9 +8,9 @@
 
     - If you have [Docker Desktop](https://www.docker.com/get-started/) installed and running, run `docker-compose up` in the terminal window and press <kbd>Enter</kbd>.
     - If you have Podman with [podman-compose](https://podman-desktop.io/docs/compose/podman-compose) installed and running, run `podman-compose up` in the terminal window and press <kbd>Enter</kbd>.
-    - To run the PostgreSQL container directly using either Docker Desktop, Podman, nerdctl, or another container runtime, run the following command in the terminal window:
+    - To run the PostgreSQL container directly using either Docker Desktop, Podman, nerdctl, or another container runtime you have installed, run the following command in the terminal window:
 
-       - Mac, Linux, or Windows with WSL: 
+       - Mac, Linux, or Windows Subsystem for Linux (WSL): 
 
            ```
            [docker | podman | nerdctl] run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v "$(pwd)/data:/var/lib/postgresql/data" -p 5432:5432 postgres
@@ -36,6 +36,6 @@
     - `npm install`
     - `npm start` 
 
-1. A browser launches and you are taken to *http://localhost:4200*. 
+1. A browser will launch and you'll be taken to *http://localhost:4200*. 
 
     :::image type="content" source="../media/openai-enabled-screenshot.png" alt-text="Application screenshot with Azure OpenAI enabled":::
