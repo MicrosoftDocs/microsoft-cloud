@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-In addition to phone calls, Azure Communication Services can also be used to send email and SMS messages. This can be useful when you want to send a message to a customer or other user directly from the application.
+In addition to phone calls, Azure Communication Services can also send email and SMS messages. This can be useful when you want to send a message to a customer or other user directly from the application.
 
 In this exercise, you will:
 - Explore how email and SMS messages can be sent from the application.
@@ -8,7 +8,7 @@ In this exercise, you will:
 
 ### Using the Email and SMS Features
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -18,20 +18,20 @@ In this exercise, you will:
     CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
     ```
 
-    Ensure that you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) before continuing.
+    Ensure you've completed the [exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) before continuing.
 
-1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
+1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
     :::image type="content" source="../media/acs-email-sms-customer.png" alt-text="Send an email or SMS message using ACS.":::
 
-1. In the **Email/SMS** tab, perform the following tasks:
+1. Select the **Email/SMS** tab and perform the following tasks:
 
     - Enter an Email **Subject** and **Body** and select the **Send Email** button.
     - Enter an SMS message and select the **Send SMS** button.
 
     :::image type="content" source="../media/acs-email-sms-customer-dialog.png" alt-text="Email/SMS Customer dialog box.":::
 
-1. Check that you received the email and SMS messages. As a reminder, the email message will be sent to the value defined for `CUSTOMER_EMAIL_ADDRESS` and the SMS message will be went to the value defined for `CUSTOMER_PHONE_NUMBER` in the *.env* file. If you weren't able to supply a United States based phone number to use for SMS messages you can skip that step.
+1. Check that you received the email and SMS messages. As a reminder, the email message will be sent to the value defined for `CUSTOMER_EMAIL_ADDRESS` and the SMS message will be sent to the value defined for `CUSTOMER_PHONE_NUMBER` in the *.env* file. If you weren't able to supply a United States based phone number to use for SMS messages you can skip that step.
 
     > [!NOTE]
     > If you don't see the email message in your inbox for the address you defined for `CUSTOMER_EMAIL_ADDRESS` in the *.env* file, check your spam folder.
@@ -40,13 +40,14 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *customers-list.component.ts* file. The full path to the file is *openai-acs-msgraph/client/src/app/customers-list/customers-list.component.ts*.
+1. Open the *customers-list.component.ts* file. The full path to the file is *client/src/app/customers-list/customers-list.component.ts*.
 
 1. When you selected **Contact Customer** followed by **Email/SMS Customer** in the datagrid, the `customer-list` component displayed a dialog box. This is handled by the `openEmailSmsDialog()` function in the *customer-list.component.ts* file.
 
     ```typescript
     openEmailSmsDialog(data: any) {
         if (data.phone && data.email) {
+            // Create the data for the dialog
             let dialogData: EmailSmsDialogData = {
                 prompt: '',
                 title: `Contact ${data.company}`,
@@ -56,10 +57,12 @@ In this exercise, you will:
                 customerPhoneNumber: data.phone
             }
 
+            // Open the dialog
             const dialogRef = this.dialog.open(EmailSmsDialogComponent, {
                 data: dialogData
             });
 
+            // Subscribe to the dialog afterClosed observable to get the dialog result
             this.subscriptions.push(
                 dialogRef.afterClosed().subscribe((response: EmailSmsDialogData) => {
                     console.log('SMS dialog result:', response);
@@ -81,7 +84,7 @@ In this exercise, you will:
     - Opens the `EmailSmsDialogComponent` dialog box and passes the `dialogData` object to it.
     - Subscribes to the `afterClosed()` event of the dialog box. This event is fired when the dialog box is closed. The `response` object contains the information that was entered into the dialog box.
 
-1. Open the *email-sms-dialog.component.ts* file. The full path to the file is *openai-acs-msgraph/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
+1. Open the *email-sms-dialog.component.ts* file. The full path to the file is *client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
 
 1. Locate the `sendEmail()` function:
 
@@ -90,7 +93,8 @@ In this exercise, you will:
         if (this.featureFlags.acsEmailEnabled) {
             // Using CUSTOMER_EMAIL_ADDRESS instead of this.data.email for testing purposes
             this.subscriptions.push(
-                this.acsService.sendEmail(this.emailSubject, this.emailBody, this.getFirstName(this.data.customerName), CUSTOMER_EMAIL_ADDRESS /* this.data.email */)
+                this.acsService.sendEmail(this.emailSubject, this.emailBody, 
+                    this.getFirstName(this.data.customerName), CUSTOMER_EMAIL_ADDRESS /* this.data.email */)
                 .subscribe(res => {
                     console.log('Email sent:', res);
                     if (res.status) {
@@ -107,14 +111,14 @@ In this exercise, you will:
 
     The `sendEmail()` function performs the following tasks:
 
-    - Checks to see if the `acsEmailEnabled` feature flag is set to `true`. 
-    - If `acsEmailEnabled` is true, the `acsService.sendEmail()` function is called and the email subject, body, customer name, and customer email address are passed. Because the database contains sample data, the `CUSTOMER_EMAIL_ADDRESS` value from the `.env` file is used instead of `this.data.email`. In a real-world application the `this.data.email` value would be used.
+    - Checks to see if the `acsEmailEnabled` feature flag is set to `true`. This flag checks to see if the `ACS_EMAIL_ADDRESS` environment variable has an assigned value.
+    - If `acsEmailEnabled` is true, the `acsService.sendEmail()` function is called and the email subject, body, customer name, and customer email address are passed. Because the database contains sample data, the `CUSTOMER_EMAIL_ADDRESS` environment variable is used instead of `this.data.email`. In a real-world application the `this.data.email` value would be used.
     - Subscribes to the `sendEmail()` function in the `acsService` service. This function returns an RxJS observable that contains the response from the client-side service.
-    - If the email was sent successfully, it sets the `emailSent` property to `true`.
+    - If the email was sent successfully, the `emailSent` property is set to `true`.
 
 1. To provide better code encapsulation and reuse, client-side services such as *acs.service.ts* are used throughout the application. This allows all ACS functionality to be consolidated into a single place.
 
-1. Open *acs.service.ts* and locate the `sendEmail()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*.
+1. Open *acs.service.ts* and locate the `sendEmail()` function. The full path to the file is *client/src/app/core/acs.service.ts*.
 
     ```typescript
     sendEmail(subject: string, message: string, customerName: string, customerEmailAddress: string) : Observable<EmailSmsResponse> {
@@ -130,7 +134,7 @@ In this exercise, you will:
     - Calls the `http.post()` function and passes the email subject, message, customer name, and customer email address to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Now let's examine how the application interactions with the ACS email feature. Open the *acs.js* file. The full path to the file is *openai-acs-msgraph/server/typescript/acs.js* and locate the `sendEmail()` function.
+1. Now let's examine how the application interacts with the ACS email feature. Open the *acs.ts* file and locate the `sendEmail()` function. The full path to the file is *server/typescript/acs.ts*.
 
 1. The `sendEmail()` function performs the following tasks:
 
@@ -140,7 +144,7 @@ In this exercise, you will:
         const emailClient = new EmailClient(connectionString);
         ```
 
-    - Creates a new `EmailMessage` object and passes the content and recipient information.
+    - Creates a new `EmailMessage` object and passes the sender, subject, message, and recipient information.
 
         ```typescript
         const msgObject: EmailMessage = {
@@ -160,7 +164,7 @@ In this exercise, you will:
         };
         ```
 
-    - Sends the email using the `emailClient.beginSend()` function and returns the response. Although the function is only sending to one recipient in this example, the `beginSend()` function can be used to multiple recipients as well.
+    - Sends the email using the `emailClient.beginSend()` function and returns the response. Although the function is only sending to one recipient in this example, the `beginSend()` function can be used to send to multiple recipients as well.
 
         ```typescript
         const poller = await emailClient.beginSend(msgObject);
@@ -171,7 +175,7 @@ In this exercise, you will:
 
 ### Exploring the SMS Code
 
-1. Go back to the *email-sms-dialog.component.ts* file that you opened earlier. The full path to the file is *openai-acs-msgraph/client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
+1. Go back to the *email-sms-dialog.component.ts* file that you opened earlier. The full path to the file is *client/src/app/email-sms-dialog/email-sms-dialog.component.ts*.
 
 1. Locate the `sendSms()` function:
 
@@ -195,12 +199,12 @@ In this exercise, you will:
 
     The `sendSMS()` function performs the following tasks:
 
-    - Checks to see if the `acsPhoneEnabled` feature flag is set to `true`. 
-    - If `acsPhoneEnabled` is true, the `acsService.SendSms()` function is called and the SMS message and customer phone number are passed. Because the database contains sample data, the `CUSTOMER_PHONE_NUMBER` value from the `.env` file is used instead of `this.data.customerPhoneNumber`. In a real-world application the `this.data.customerPhoneNumber` value would be used.
+    - Checks to see if the `acsPhoneEnabled` feature flag is set to `true`. This flag checks to see if the `ACS_PHONE_NUMBER` environment variable has an assigned value.
+    - If `acsPhoneEnabled` is true, the `acsService.SendSms()` function is called and the SMS message and customer phone number are passed. Because the database contains sample data, the `CUSTOMER_PHONE_NUMBER` environment variable is used instead of `this.data.customerPhoneNumber`. In a real-world application the `this.data.customerPhoneNumber` value would be used.
     - Subscribes to the `sendSms()` function in the `acsService` service. This function returns an RxJS observable that contains the response from the client-side service.
     - If the SMS message was sent successfully, it sets the `smsSent` property to `true`.
 
-1. Open *acs.service.ts* and locate the `sendSms()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/acs.service.ts*.
+1. Open *acs.service.ts* and locate the `sendSms()` function. The full path to the file is *client/src/app/core/acs.service.ts*.
 
     ```typescript
     sendSms(message: string, customerPhoneNumber: string) : Observable<EmailSmsResponse> {
@@ -211,12 +215,12 @@ In this exercise, you will:
     }  
     ```
 
-    The `sendSms()` function in `AcsService` performs the following tasks:
+    The `sendSms()` function performs the following tasks:
 
     - Calls the `http.post()` function and passes the message and customer phone number to it. The `http.post()` function returns an RxJS observable that contains the response from the API call.
     - Handles any errors returned by the `http.post()` function using the RxJS `catchError` operator.
 
-1. Finally, let's examine how the application interactions with the ACS SMS feature. Open the *acs.js* file. The full path to the file is *openai-acs-msgraph/server/typescript/acs.js* and locate the `sendSms()` function.
+1. Finally, let's examine how the application interacts with the ACS SMS feature. Open the *acs.ts* file. The full path to the file is *server/typescript/acs.ts* and locate the `sendSms()` function.
 
 1. The `sendSms()` function performs the following tasks:
 
@@ -243,6 +247,13 @@ In this exercise, you will:
 
     - [Email in Azure Communication Services](/azure/communication-services/concepts/email/email-overview)
     - [SMS in Azure Communication Services](/azure/communication-services/concepts/sms/concepts)
+
+1. Before moving on to the next exercise, let's review the key concepts covered in this exercise:
+
+    - The *acs.service.ts* file encapsulates the ACS email and SMS functionality used by the client-side application. It handles the API calls to the server and returns the response to the caller. 
+    - The server-side API uses the ACS `EmailClient` and `SmsClient` objects to send email and SMS messages.
+
+1. Now that you've learned how email and SMS messages can be sent, let's switch our focus to integrating organizational data into the application.
 
 
 

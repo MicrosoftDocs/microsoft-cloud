@@ -46,7 +46,7 @@ In this exercise, you will:
         - Visit https://onedrive.com and login using your Microsoft 365 Developer tenant credentials.
         - Select **My files** in the left navigation.
         - Select **Upload** and then **Folder** from the menu.
-        - Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
+        - Select the *customer documents* folder from the project you cloned.
 
         :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
 
@@ -83,7 +83,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Let's start by looking at how file data is retrieved from OneDrive for Business. Open *files.component.html* and take a moment to look through the code. The full path to the file is *openai-acs-msgraph/client/src/app/files/files.component.html*.
+1. Let's start by looking at how file data is retrieved from OneDrive for Business. Open *files.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/files/files.component.html*.
 
 1. Locate the *mgt-search-results* component and note the following attributes:
 
@@ -106,7 +106,7 @@ In this exercise, you will:
 
     :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
 
-1. An alternative to using components such as *mgt-search-results* is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *openai-acs-msgraph/client/src/app/core/graph.service.ts*.
+1. An alternative to using components such as *mgt-search-results* is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *client/src/app/core/graph.service.ts*.
 
     - You'll notice that a `query` parameter is passed to the function. This is the search term that's passed as the user selects **View Related Content** for a row in the datagrid. If no search term is passed, an empty array is returned.
 
@@ -164,7 +164,7 @@ In this exercise, you will:
 
 1. Looking through this code you can see that the *mgt-search-results* web component you explored earlier does a lot of work for you and significantly reduces the amount of code you have to write! However, there may be scenarios where you want to call Microsoft Graph directly to have more control over the data that's sent to the API or how the results are processed.
 
-1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/files/files.component.ts*. 
+1. Open the *files.component.ts* file and locate the `search()` function. The full path to the file is *client/src/app/files/files.component.ts*. 
 
     Although the body of this function is commented out due to the *mgt-search-results* component being used, the function could be used to make the call to Microsoft Graph when the user selects **View Related Content** for a row in the datagrid. The `search()` function calls `searchFiles()` in *graph.service.ts* and passes the `query` parameter to it (the name of the company in this example). The results of the search are then assigned to the `data` property of the component. 
     
@@ -190,7 +190,7 @@ In this exercise, you will:
     - To retrieve the Teams channel messages, a second call is made to the `/teams/${chat.teamId}/channels/${chat.channelId}/messages/${chat.messageId}` API and the `teamId`, `channelId`, and `messageId` are passed. This returns the full message details.
     - Additional filtering tasks are performed and the resulting messages are returned from `searchChatMessages()` to the caller.
 
-1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *openai-acs-msgraph/client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. 
+1. Open the *chats.component.ts* file and locate the `search()` function. The full path to the file is *client/src/app/chats/chats.component.ts*. The `search()` function calls `searchChatMessages()` in *graph.service.ts* and passes the `query` parameter to it. 
 
     ```typescript
     override async search(query: string) {

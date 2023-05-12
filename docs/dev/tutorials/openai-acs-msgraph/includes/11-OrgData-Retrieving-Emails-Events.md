@@ -10,7 +10,7 @@ In this exercise, you will:
 
 ### Exploring Email Messages Search Code
 
-1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *openai-acs-msgraph/client/src/app/emails/emails.component.html*.
+1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 
 1. Locate the *mgt-search-results* component:
 
@@ -74,7 +74,7 @@ In this exercise, you will:
 
 1. Searching for calendar events can also be accomplished using the *mgt-search-results* component. It will handle rendering the results for you, but you can also define your own template as well which you'll see later in this exercise.
 
-1. Open *calendar-events.component.html* and take a moment to look through the code. The full path to the file is *openai-acs-msgraph/client/src/app/calendar-events/calendar-events.component.html*. You'll see that it's very similar to the files and emails component you looked at previously.
+1. Open *calendar-events.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/calendar-events/calendar-events.component.html*. You'll see that it's very similar to the files and emails component you looked at previously.
 
     ```html
     <mgt-search-results 
