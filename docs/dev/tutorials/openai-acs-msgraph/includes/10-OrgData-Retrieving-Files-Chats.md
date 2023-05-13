@@ -63,7 +63,7 @@ In this exercise, you will:
         - Enter "Meet with Adatum Corporation about project schedule" for the title and body.
         - Select **Save**.
 
-        :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
+            :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
 
     - Add emails by visiting https://outlook.com and signing in using your Microsoft 365 Developer tenant credentials.
         - Select **New mail**.
@@ -71,7 +71,7 @@ In this exercise, you will:
         - Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
         - Select **Send**.
 
-        :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
+            :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
 1. Go back to the application in the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which tasks you performed in the previous step.
 
