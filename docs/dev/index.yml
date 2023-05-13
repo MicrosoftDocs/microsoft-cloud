@@ -20,9 +20,8 @@ landingContent:
             url: tutorials/acs-to-teams-meeting.yml
           - text: Build productivity apps by using Microsoft Graph Toolkit
             url: /graph/toolkit/get-started/building-one-productivity-hub
-
-          # - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
-          #   url: tutorials/openai-msgraph-acs.yml
+          - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+            url: tutorials/openai-acs-msgraph.yml
 
   - title: Azure and Power Platform Tutorials
     linkLists:

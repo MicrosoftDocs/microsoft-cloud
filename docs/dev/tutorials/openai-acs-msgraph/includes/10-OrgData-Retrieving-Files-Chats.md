@@ -42,34 +42,34 @@ In this exercise, you will:
 1. Your Microsoft 365 tenant may not have any related organizational data for *Adatum Corporation* at this stage. To add some sample data, perform at least one of the following actions:
 
     - Add files by visiting https://onedrive.com and signing in using your Microsoft 365 Developer tenant credentials.
-        1. Select **My files** in the left navigation.
-        1. Select **Upload** and then **Folder** from the menu.
-        1. Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
+        - Select **My files** in the left navigation.
+        - Select **Upload** and then **Folder** from the menu.
+        - Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
 
         :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
 
     - Add chat messages and calendar events by visiting https://teams.microsoft.com and signing in using your Microsoft 365 Developer tenant credentials.
-        1. Select **Teams** in the left navigation.
-        1. Select a team and channel.
-        1. Select **New conversation**.
-        1. Enter *New order placed for Adatum Corporation* and select the **Send** button.
+        - Select **Teams** in the left navigation.
+        - Select a team and channel.
+        - Select **New conversation**.
+        - Enter *New order placed for Adatum Corporation* and select the **Send** button.
 
             Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
 
-        :::image type="content" source="../media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
+            :::image type="content" source="../media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
 
-        1. Select **Calendar** in the left navigation.
-        1. Select **New meeting**.
-        1. Enter "Meet with Adatum Corporation about project schedule" for the title and body.
-        1. Select **Save**.
+        - Select **Calendar** in the left navigation.
+        - Select **New meeting**.
+        - Enter "Meet with Adatum Corporation about project schedule" for the title and body.
+        - Select **Save**.
 
         :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
 
     - Add emails by visiting https://outlook.com and signing in using your Microsoft 365 Developer tenant credentials.
-        1. Select **New mail**.
-        1. Enter your personal email address in the **To** field.
-        1. Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
-        1. Select **Send**.
+        - Select **New mail**.
+        - Enter your personal email address in the **To** field.
+        - Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
+        - Select **Send**.
 
         :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
