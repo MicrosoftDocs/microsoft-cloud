@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-The sample project referenced in this tutorial is available at https://github.com/microsoft/MicrosoftCloud. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
+The sample project referenced in this tutorial is available at <a href="https://github.com/microsoft/MicrosoftCloud" target="_blank" rel="noopener">https://github.com/microsoft/MicrosoftCloud</a>. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
 
 In this exercise you will:
 
