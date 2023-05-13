@@ -17,11 +17,11 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: tutorials/acs-to-teams-meeting.yml
+            url: tutorials/acs-to-teams-meeting
           - text: Build productivity apps by using Microsoft Graph Toolkit
             url: /graph/toolkit/get-started/building-one-productivity-hub
           - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
-            url: tutorials/openai-acs-msgraph.yml
+            url: tutorials/openai-acs-msgraph
 
   - title: Azure and Power Platform Tutorials
     linkLists:
