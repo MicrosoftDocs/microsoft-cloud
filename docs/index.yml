@@ -99,6 +99,9 @@ productDirectory:
         - text: Building Real-Time Collaborative Apps
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
+        - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+          url: https://github.com/microsoft/microsoftcloud
+
         - text: Microsoft Teams App Camp
           url: https://github.com/microsoft/app-camp
 
