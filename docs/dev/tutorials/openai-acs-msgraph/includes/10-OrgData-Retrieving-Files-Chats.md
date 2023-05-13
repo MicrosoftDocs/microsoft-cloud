@@ -1,8 +1,8 @@
 <!-- markdownlint-disable MD041 -->
 
-In today's digital environment, users work with a wide array of organizational data, including emails, chats, files, calendar events, and more. This can lead to frequent context shifts—switching between tasks or applications—which can disrupt focus and reduce productivity. For example, a user working on a project might need to switch from their current application to Outlook to find crucial details in an email or switch to OneDrive for Business to find a file. This back-and-forth action disrupts focus and wastes time that could be better spent on the task at hand.
+In today's digital environment, users work with a wide array of organizational data, including emails, chats, files, calendar events, and more. This can lead to frequent context shifts—switching between tasks or applications—which can disrupt focus and reduce productivity. For example, a user working on a project might need to switch from their current application to Outlook to find crucial details in an email or switch to OneDrive for Business to find a related file. This back-and-forth action disrupts focus and wastes time that could be better spent on the task at hand.
 
-To enhance efficiency, you can integrate organizational data directly into the applications users use daily. By bringing in organizational data, users can access and manage information more seamlessly, minimizing context shifts and improving productivity. Additionally, this integration provides valuable insights and context, enabling users to make informed decisions and work more effectively.
+To enhance efficiency, you can integrate organizational data directly into the applications users use everyday. By bringing in organizational data to your applications, users can access and manage information more seamlessly, minimizing context shifts and improving productivity. Additionally, this integration provides valuable insights and context, enabling users to make informed decisions and work more effectively.
 
 In this exercise, you will:
 
@@ -20,13 +20,12 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) before continuing.
+
 1. Go back to the browser (*http://localhost:4200*). If you haven't already signed in, select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
 
-    > [!TIP]
-    > You can view the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
-
     > [!NOTE]
-    > In addition to authenticating the user, the Microsoft Graph Toolkit's *mgt-login* web component also retrieves an access token that can be used by Microsoft Graph to access files, chats, emails, calendar events, and other organizational data. The access token contains the scopes (permissions) such as `User.Read`, `Calendars.Read`, and others that you saw earlier:
+    > In addition to authenticating the user, the *mgt-login* web component also retrieves an access token that can be used by Microsoft Graph to access files, chats, emails, calendar events, and other organizational data. The access token contains the scopes (permissions) such as `Chat.ReadWrite`, `Files.Read.All`, and others that you saw earlier:
     >
     >   ```typescript
     >   Providers.globalProvider = new Msal2Provider({
@@ -36,48 +35,47 @@ In this exercise, you will:
     >   });
     >   ```
 
-1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will cause organizational data such as files, chats, emails, and calendar events to be retrieved using Microsoft Graph. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. Note that you probably won't see any data at this point since you haven't added any files, chats, emails, or calendar events for the user in your Microsoft 365 developer tenant yet. Let's fix that in the next step.
+1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will cause organizational data such as files, chats, emails, and calendar events to be retrieved using Microsoft Graph. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. It's important to mention that you may not see any data at this point since you haven't added any files, chats, emails, or calendar events for the user in your Microsoft 365 developer tenant yet. Let's fix that in the next step.
 
     :::image type="content" source="../media/display-org-data.png" alt-text="Displaying Organizational Data":::
 
-1. Your Microsoft 365 tenant may not have any related organizational data for *Adatum Corporation* at this point. To add some sample data, perform at least one of the following actions:
+1. Your Microsoft 365 tenant may not have any related organizational data for *Adatum Corporation* at this stage. To add some sample data, perform at least one of the following actions:
 
-    - Add files:
-        - Visit https://onedrive.com and login using your Microsoft 365 Developer tenant credentials.
-        - Select **My files** in the left navigation.
-        - Select **Upload** and then **Folder** from the menu.
-        - Select the *customer documents* folder from the project you cloned.
+    - Add files by visiting https://onedrive.com and signing in using your Microsoft 365 Developer tenant credentials.
+        1. Select **My files** in the left navigation.
+        1. Select **Upload** and then **Folder** from the menu.
+        1. Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
 
         :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
 
-    - Add chat messages and calendar events:
-        - Visit https://teams.microsoft.com and login using your Microsoft 365 Developer tenant credentials.
-        - Select **Teams** in the left navigation.
-        - Select a team and channel and then select **New conversation**.
-        - Enter *New order placed for Adatum Corporation* and select the **Send** button.
-        - Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
+    - Add chat messages and calendar events by visiting https://teams.microsoft.com and signing in using your Microsoft 365 Developer tenant credentials.
+        1. Select **Teams** in the left navigation.
+        1. Select a team and channel.
+        1. Select **New conversation**.
+        1. Enter *New order placed for Adatum Corporation* and select the **Send** button.
+
+            Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
 
         :::image type="content" source="../media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
 
-        - Select **Calendar** in the left navigation.
-        - Select **New meeting**.
-        - Enter "Meet with Adatum Corporation about project schedule" for the title and body.
-        - Select **Save**.
+        1. Select **Calendar** in the left navigation.
+        1. Select **New meeting**.
+        1. Enter "Meet with Adatum Corporation about project schedule" for the title and body.
+        1. Select **Save**.
 
         :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
 
-    - Add emails:
-        - Visit https://outlook.com and login using your Microsoft 365 Developer tenant credentials.
-        - Select **New mail**.
-        - Enter your personal email address in the **To** field.
-        - Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
-        - Select **Send**.
+    - Add emails by visiting https://outlook.com and signing in using your Microsoft 365 Developer tenant credentials.
+        1. Select **New mail**.
+        1. Enter your personal email address in the **To** field.
+        1. Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
+        1. Select **Send**.
 
         :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
 1. Go back to the application in the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which tasks you performed in the previous step.
 
-1. Let's explore some of the code that enables the organizational data feature in the application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the *mgt-login* web component you looked at earlier to make calls to Microsoft Graph APIs. 
+1. Let's explore the code that enables the organizational data feature in the application. To retrieve the data, the client-side portion of the application uses the access token retrieved by the *mgt-login* component you looked at earlier to make calls to Microsoft Graph APIs. 
 
 ### Exploring Files Search Code
 
@@ -106,7 +104,7 @@ In this exercise, you will:
 
     :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
 
-1. An alternative to using components such as *mgt-search-results* is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *client/src/app/core/graph.service.ts*.
+1. An alternative to using components such as *mgt-search-results*, is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *client/src/app/core/graph.service.ts*.
 
     - You'll notice that a `query` parameter is passed to the function. This is the search term that's passed as the user selects **View Related Content** for a row in the datagrid. If no search term is passed, an empty array is returned.
 
@@ -119,20 +117,20 @@ In this exercise, you will:
         }
         ```
 
-    - A filter is then created that defines the type of search to perform. In this case the code is searching for files in OneDrive for Business so `driveItem` is used. This is the same as passing `driveItem` to `entity-types` in the *mgt-search-results* component that you saw earlier. The `query` parameter is then added to the `queryString` filter along with `ContentType:Document`.
+    - A filter is then created that defines the type of search to perform. In this case the code is searching for files in OneDrive for Business so `driveItem` is used just as you saw earlier with the `mgt-search-results` component. This is the same as passing `driveItem` to `entity-types` in the *mgt-search-results* component that you saw earlier. The `query` parameter is then added to the `queryString` filter along with `ContentType:Document`.
 
         ```typescript
         const filter = {
-        "requests": [
-            {
-                "entityTypes": [
-                    "driveItem"
-                ],
-                "query": {
-                    "queryString": `${query} AND ContentType:Document`
+            "requests": [
+                {
+                    "entityTypes": [
+                        "driveItem"
+                    ],
+                    "query": {
+                        "queryString": `${query} AND ContentType:Document`
+                    }
                 }
-            }
-        ]
+            ]
         };
         ```
 
@@ -142,7 +140,7 @@ In this exercise, you will:
         const searchResults = await Providers.globalProvider.graph.client.api('/search/query').post(filter);
         ```
 
-    - The search results are then iterated through to locate `hits`. Each `hit` contains information about the document that was found. A property named `resource` contains the document metadata and is added to the `files` array.
+    - The search results are then iterated through to locate `hits`. Each `hit` contains information about a document that was found. A property named `resource` contains the document metadata and is added to the `files` array.
 
         ```typescript
         if (searchResults.value.length !== 0) {
@@ -180,7 +178,7 @@ In this exercise, you will:
     <mgt-file-list (itemClick)="itemClick($any($event))" [files]="data"></mgt-file-list>
     ```
 
-1. Whether you choose to use the *mgt-search-results* component shown earlier or write custom code to call Microsoft Graph will depend on your scenario. In this example, the *mgt-search-results* component is used to simplify the code and reduce the amount of work you have to do.
+1. Whether you choose to use the *mgt-search-results* component shown earlier or write custom code to call Microsoft Graph will depend on your specific scenario. In this example, the *mgt-search-results* component is used to simplify the code and reduce the amount of work you have to do.
 
 ### Exploring Teams Chat Messages Search Code
 
@@ -217,11 +215,11 @@ In this exercise, you will:
 
 ### Sending a Message to a Microsoft Teams Channel
 
-1. In addition to searching for Microsoft Teams chat messages, the application also allows a user to send messages to a Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. 
+1. In addition to searching for Microsoft Teams chat messages, the application also allows a user to send messages to a Microsoft Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. 
 
     :::image type="content" source="../media/viewing-teams-chat-dialog.png" alt-text="Sending a Teams Chat Message to a Channel":::
 
-1. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values (environment variable values are used for the TeamsId and ChannelId in this example). The `body` constant contains the message to send. A POST request is then made and the results are returned to the caller.
+1. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values. Environment variable values are used for the team ID and channel ID in this example but those values could be dynamically retrieved as well using Microsoft Graph. The `body` constant contains the message to send. A POST request is then made and the results are returned to the caller.
 
     ```typescript
     async sendTeamsChat(message: string): Promise<TeamsDialogData> {
@@ -247,4 +245,4 @@ In this exercise, you will:
     }
     ```
 
-1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams without leaving the application. 
+1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams directly from the application they're already using. 

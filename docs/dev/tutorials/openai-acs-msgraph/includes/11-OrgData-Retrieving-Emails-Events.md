@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=10) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams Channels. In this exercise, you will learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
+In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=10) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams channels. In this exercise, you'll learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
 
 In this exercise, you will:
 
@@ -9,6 +9,8 @@ In this exercise, you will:
 - Learn how to call Microsoft Graph directly to retrieve emails and calendar events.
 
 ### Exploring Email Messages Search Code
+
+[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
 1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 
@@ -30,7 +32,7 @@ In this exercise, you will:
     - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `message`. 
     - The `queryString` attribute is used to specify the search term.
     - The `dataChange` event fires when the search results change. The emails component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
-    - An empty template is defined for the component. This type of template is normally used to define how the search results will be rendered. However, in this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
+    - An empty template is defined for the component. This type of template is normally used to define how the search results will be rendered. However, in this scenario we're telling the component not to render any message data. Instead, we'll render the data ourselves using standard data binding (Angular is used in this case, but you can use any library/framework you want).
 
 1. Look below the *mgt-search-results* component in *emails.component.html* to find the data bindings used to render the email messages. This example iterates through the `data` property and writes out the email subject, body preview, and a link to view the full email message.
 
@@ -50,7 +52,9 @@ In this exercise, you will:
 
     :::image type="content" source="../media/viewing-emails.png" alt-text="Viewing Email Messages":::
         
-1. In addition to using the *mgt-search-results* component, Microsoft Graph provides several APIs that can be used to search email messages. The `/search/query` API that you saw earlier could certainly be used, but a more straightforward option is the `messages` API. To see how to call this API, go back to *graph.service.ts* and locate the `searchEmailMessages()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and embeds the `query` parameter in it. The code then makes a GET request and returns the results to the caller.
+1. In addition to using the *mgt-search-results* component to retrieve messages, Microsoft Graph provides several APIs that can be used to search emails as well. The `/search/query` API that you saw earlier could certainly be used, but a more straightforward option is the `messages` API. 
+
+1. To see how to call this API, go back to *graph.service.ts* and locate the `searchEmailMessages()` function. It creates a URL that can be used to call the `messages` endpoint of Microsoft Graph and assigns the `query` value to the `$search` parameter. The code then makes a GET request and returns the results to the caller. The `$search` operator searches for the `query` value in the subject, body, and sender fields automatically.
 
     ```typescript
     async searchEmailMessages(query:string) {
@@ -72,9 +76,9 @@ In this exercise, you will:
 
 ### Exploring Calendar Events Search Code
 
-1. Searching for calendar events can also be accomplished using the *mgt-search-results* component. It will handle rendering the results for you, but you can also define your own template as well which you'll see later in this exercise.
+1. Searching for calendar events can also be accomplished using the *mgt-search-results* component. It can handle rendering the results for you, but you can also define your own template which you'll see later in this exercise.
 
-1. Open *calendar-events.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/calendar-events/calendar-events.component.html*. You'll see that it's very similar to the files and emails component you looked at previously.
+1. Open *calendar-events.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/calendar-events/calendar-events.component.html*. You'll see that it's very similar to the files and emails components you looked at previously.
 
     ```html
     <mgt-search-results 
@@ -86,15 +90,15 @@ In this exercise, you will:
     </mgt-search-results>
     ```
 
-    This example of the *mgt-search-results* component is configured the same way as the one you looked at previously with files and emails. The only difference is that the `entity-types` attribute is set to `event` which is used to search for calendar events and an empty template is supplied.
+    This example of the *mgt-search-results* component is configured the same way as the ones you looked at previously. The only difference is that the `entity-types` attribute is set to `event` which is used to search for calendar events and an empty template is supplied.
 
     - The `class` attribute is used to specify that the `search-results` CSS class should be applied to the component.
     - The `entity-types` attribute is used to specify the type of data to search for. In this case, the value is `event`. 
     - The `queryString` attribute is used to specify the search term.
     - The `dataChange` event fires when the search results change. The calendar *event* component's `dataChange()` function is called, the results are passed to it, and a property named `data` is updated in the component. 
-    - An empty template is defined for the component. In this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding (Angular in this case but you could use any library/framework you want).
+    - An empty template is defined for the component. In this scenario we're telling the component not to render any data. Instead, we'll render the data ourselves using standard data binding.
 
-1. Immediately below the `mgt-search-results` component in *calendar-events.component.html* you'll find the data bindings used to render the calendar events. This example iterates through the `data` property and writes out the start date, time, and subject of the event. Custom functions included in the component such as `dayFromDateTime()` and `timeRangeFromEvent()` are called to format data properly. The HTML bindings also include a link to view the event in Outlook and the location of the event if one is specified.
+1. Immediately below the `mgt-search-results` component in *calendar-events.component.html* you'll find the data bindings used to render the calendar events. This example iterates through the `data` property and writes out the start date, time, and subject of the event. Custom functions included in the component such as `dayFromDateTime()` and `timeRangeFromEvent()` are called to format data properly. The HTML bindings also include a link to view the calendar event in Outlook and the location of the event if one is specified.
 
     ```html
     <div *ngIf="data.length">
@@ -139,7 +143,9 @@ In this exercise, you will:
 
     :::image type="content" source="../media/viewing-calendar-events.png" alt-text="Viewing Calendar Events":::
 
-1. In addition to searching for calendar events using the `search/query` API, Microsoft Graph also provides an `events` API that can be used to search calendar events as well. Locate the `searchCalendarEvents()` function in *graph.service.ts*. It creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
+1. In addition to searching for calendar events using the `search/query` API, Microsoft Graph also provides an `events` API that can be used to search calendar events as well. Locate the `searchCalendarEvents()` function in *graph.service.ts*. 
+
+1. The `searchCalendarEvents()` function creates start and end date/time values that are used to define the time period to search. It then creates a URL that can be used to call the `events` endpoint of Microsoft Graph and includes the `query` parameter and start and end date/time variables. A GET request is then made and the results are returned to the caller.
 
     ```typescript
     async searchCalendarEvents(query:string) {
@@ -172,3 +178,8 @@ In this exercise, you will:
 
     > [!NOTE]
     > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting) to see an example of calling a Microsoft Graph API from an Azure Function.
+
+1. You've now seen example of using Microsoft Graph to retrieve files, chats, email messages, and calendar events. The same concepts can be applied to other Microsoft Graph APIs as well. For example, you could use the Microsoft Graph *users* API to search for users in your organization. You could also use the Microsoft Graph *groups* API to search for groups in your organization. There are many other APIs available as well.
+
+    > [!NOTE]
+    > You can view the full list of Microsoft Graph APIs [in the documentation](learn.microsoft.com/graph/api/overview).

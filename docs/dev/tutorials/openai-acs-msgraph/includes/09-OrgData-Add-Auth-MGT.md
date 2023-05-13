@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. The Microsoft Graph Toolkit `mgt-login`` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
+Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. In this exercise you'll see how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
 > [!NOTE]
 > If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path. 
@@ -8,6 +8,7 @@ Users need to authenticate with Azure Active Directory (Azure AD) in order for M
 In this exercise, you will:
 
 - Learn how to associate an Azure AD app with the Microsoft Graph Toolkit so that it can be used to authenticate users and retrieve organizational data.
+- Learn about the importance of scopes.
 - Learn how the Microsoft Graph Toolkit's *mgt-login* component can be used to authenticate users and retrieve an access token.
 
 ### Using the Sign In Feature
@@ -20,12 +21,14 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) before continuing.
+
 1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
 
     > [!TIP]
-    > You can view all of the users in your Microsoft 365 tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
+    > You can sign in with your Microsoft 365 developer tenant admin account. You can view other users in your developer tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
 
-1. If you're signing in to the application for the first time, you'll be prompted to consent to the permissions requested by the application. You'll learn more about these permissions (also called "scopes") in the next section as you explore the code. Select **Accept** to continue.`
+1. If you're signing in to the application for the first time, you'll be prompted to consent to the permissions requested by the application. You'll learn more about these permissions (also called "scopes") in the next section as you explore the code. Select **Accept** to continue.
 
 1. Once you're signed in, you should see the name of the user displayed in the header.
 
@@ -74,6 +77,6 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
     In this example, a call is being made to the Microsoft Graph `me` API to retrieve their user profile (`me` represents the current signed in user). The `this.userLoggedIn.emit(me)` code statement emits an event from the component to pass the profile data to the parent component. The parent component is *app.component.ts* file in this case, which is the root component for the application.
 
-    To learn more about the *mgt-login* component visit the [Microsoft Graph Toolkit]((https://learn.microsoft.com/graph/toolkit/components/login) documentation.
+    To learn more about the *mgt-login* component visit the [Microsoft Graph Toolkit](https://learn.microsoft.com/graph/toolkit/components/login) documentation.
 
 1. Now that you've logged into the application, let's look at how organizational data can be retrieved.
