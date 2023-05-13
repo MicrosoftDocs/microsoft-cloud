@@ -19,7 +19,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 ### Using the Natural Language to SQL Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid. Notice that a sample query value is already included: *Get the total revenue for all orders. Group by company and include the city.*
 
@@ -125,7 +125,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - reviews (id, customer_id, review, date, comment)
     ```
 
-    > [!NOTE]
+    > [!TIP]
     > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
 
     - The natural language query created by the end user is embedded into the prompt.

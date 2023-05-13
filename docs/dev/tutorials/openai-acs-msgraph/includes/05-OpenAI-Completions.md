@@ -14,7 +14,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 ### Using the GPT Completions Feature
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=2) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** on any row in the datagrid followed by **Email/SMS Customer** to get to the **Message Generator** screen. 
 

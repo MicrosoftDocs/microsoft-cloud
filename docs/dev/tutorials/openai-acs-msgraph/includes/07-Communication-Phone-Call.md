@@ -12,7 +12,7 @@ In this exercise, you will:
 
 ### Using the Phone Calling Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph#start-app-services?tutorial-step=5) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=5#start-app-services) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
