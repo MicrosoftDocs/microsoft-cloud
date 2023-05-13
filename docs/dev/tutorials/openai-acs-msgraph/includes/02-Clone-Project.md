@@ -57,16 +57,4 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     POSTGRES_PASSWORD=web-password
     ```
 
-<!--
-1. Many of the exercises that follow walk you through code that enables different application features. In Visual Studio Code you can open files directly by selecting:
-
-    - Windows/Linux: <kbd>Ctrl + P</kdb>
-    - Mac: <kbd>Cmd + P</kdb>
-
-    Then type the name of the file you want to open. 
-
-    > [!TIP]
-    > You can view a Visual Studio Code keyboard shortcuts reference sheet at https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_keyboard-reference-sheets.
--->
-
 1. Now that you have the project in place, let's try out some of the application features and learn how they're built. Select the **Next** button below to continue or jump to a specific exercise using the table of contents.
