@@ -44,21 +44,21 @@ In this exercise, you will:
 
 1. If you'd like to enable the ability to send a message from the app into a Teams Channel, sign in to [Microsoft Teams](https://teams.microsoft.com) using your Microsoft 365 dev tenant account.
 
-1. Once you're signed in, expand a team, and find a channel that you want to send messages to from the app. For example, you might select the **Company** team and the **General** channel (or whatever exists in your Teams tenant).
+1. Once you're signed in, expand a team, and find a channel that you want to send messages to from the app. For example, you might select the **Company** team and the **General** channel (or whatever team/channel you'd like to use).
 
     :::image type="content" source="../media/teams-team-channel-get-link.png" alt-text="Get link to Teams channel" border="true":::
 
 1. In the team header, click on the three dots (...) and select `Get link to team`.
 
-1. In the link that appears in the popup window, the Team ID is the string of letters and numbers after `team/` in the link. For example, in the link "https://teams.microsoft.com/l/team/19%3ae9b9.../", the Team ID is "19%3ae9b9..." up to the following `/` character. 
+1. In the link that appears in the popup window, the team ID is the string of letters and numbers after `team/`. For example, in the link "https://teams.microsoft.com/l/team/19%3ae9b9.../", the team ID is *19%3ae9b9...* up to the following `/` character. 
 
-1. Copy the Team ID and assign it to `TEAM_ID` in the *.env* file.
+1. Copy the team ID and assign it to `TEAM_ID` in the *.env* file.
 
 1. In the channel header, click on the three dots (...) and select `Get link to channel`.
 
-1. In the link that appears in the popup window, the Channel ID is the string of letters and numbers after `channel/` in the link. For example, in the link "https://teams.microsoft.com/l/channel/19%3aQK02.../", the Channel ID is "19%3aQK02..." up to the following `/` character.
+1. In the link that appears in the popup window, the channel ID is the string of letters and numbers after `channel/`. For example, in the link "https://teams.microsoft.com/l/channel/19%3aQK02.../", the channel ID is *19%3aQK02...* up to the following `/` character.
 
-1. Copy the Channel ID and assign it to `CHANNEL_ID` in the *.env* file.
+1. Copy the channel ID and assign it to `CHANNEL_ID` in the *.env* file.
 
 1. Save the *env* file before continuing.
 
