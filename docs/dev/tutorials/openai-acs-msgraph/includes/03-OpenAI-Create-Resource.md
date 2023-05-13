@@ -44,7 +44,7 @@ In this exercise you will:
     - Version: **1**
 
     > [!NOTE]
-    > Azure OpenAI supports [several different types of models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) such as text-ada-001, text-curie-001, text-divinci-003, and gpt-35-turbo. Each model can be used to handle different scenarios.
+    > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models) such as text-ada-001, text-curie-001, text-divinci-003, and gpt-35-turbo. Each model can be used to handle different scenarios.
 
 1. Select **Save**.
 

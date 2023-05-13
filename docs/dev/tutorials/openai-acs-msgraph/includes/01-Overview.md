@@ -29,7 +29,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 ### Prerequisites
 
 - [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
-- [git](https://learn.microsoft.com/devops/develop/git/install-and-set-up-git)
+- [git](/devops/develop/git/install-and-set-up-git)
 - [Visual Studio Code](https://code.visualstudio.com) (while we'll reference Visual Studio Code in this tutorial, any editor can be used)
 - [Azure subscription](https://azure.microsoft.com/free/search)
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)

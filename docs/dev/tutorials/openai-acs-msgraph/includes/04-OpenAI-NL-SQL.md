@@ -171,7 +171,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available.
     - Creates a `url` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
     - Creates a data object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
-        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
+        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
         - `temperature`: What sampling temperature to use, between 0 and 2. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example `messages` is assigned a `role` of `user` and `content` is assigned to the `prompt` parameter value passed into the function. In addition to the `user` role, the roles of `system` and `assistant` are also available to use.
     
@@ -186,7 +186,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         }
 
         // While it's possible to use the OpenAI SDK (as of today) with a little work, we'll use the REST API directly for Azure OpenAI calls.
-        // https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference
+        // https://learn.microsoft.com/azure/cognitive-services/openai/reference
         const url = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
         const data = {
             max_tokens: 1024,
