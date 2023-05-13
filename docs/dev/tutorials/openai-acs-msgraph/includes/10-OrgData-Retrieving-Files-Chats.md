@@ -102,7 +102,7 @@ In this exercise, you will:
     - The `dataChange` event fires when the search results change. In this case, a customer function named `dataChange()` is called in the *files* component and the event data is passed to the function. The parenthesis around `dataChange` indicate that the event is bound to the `dataChange()` function.
     - Since no custom template is supplied, the default template built into `mgt-search-results` is used to display the search results. 
 
-    :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
+        :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
 
 1. An alternative to using components such as *mgt-search-results*, is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *client/src/app/core/graph.service.ts*.
 
