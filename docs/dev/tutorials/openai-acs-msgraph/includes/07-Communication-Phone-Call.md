@@ -97,7 +97,7 @@ In this exercise, you will:
 
     ```typescript
     getAcsToken(): Observable<AcsUser> {
-        return this.http.get<AcsUser>(API_BASE_URL + 'acstoken')
+        return this.http.get<AcsUser>(this.apiUrl + 'acstoken')
         .pipe(
             catchError(this.handleError)
         );

@@ -47,7 +47,7 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     ACS_EMAIL_ADDRESS=
     CUSTOMER_EMAIL_ADDRESS=
     CUSTOMER_PHONE_NUMBER=
-    API_BASE_URL=http://localhost:3000/api/
+    API_PORT=3000
     ```
 
 1. Assign the following values to `POSTGRES_USER` and `POSTGRES_PASSWORD` in *.env*. These values will be used by the API server to connect to the local PostgreSQL database.

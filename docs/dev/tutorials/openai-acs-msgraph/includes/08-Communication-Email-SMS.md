@@ -122,7 +122,7 @@ In this exercise, you will:
 
     ```typescript
     sendEmail(subject: string, message: string, customerName: string, customerEmailAddress: string) : Observable<EmailSmsResponse> {
-        return this.http.post<EmailSmsResponse>(API_BASE_URL + 'sendemail', { subject, message, customerName, customerEmailAddress })
+        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendemail', { subject, message, customerName, customerEmailAddress })
         .pipe(
             catchError(this.handleError)
         );
@@ -208,7 +208,7 @@ In this exercise, you will:
 
     ```typescript
     sendSms(message: string, customerPhoneNumber: string) : Observable<EmailSmsResponse> {
-        return this.http.post<EmailSmsResponse>(API_BASE_URL + 'sendsms', { message, customerPhoneNumber })
+        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendsms', { message, customerPhoneNumber })
         .pipe(
             catchError(this.handleError)
         );
