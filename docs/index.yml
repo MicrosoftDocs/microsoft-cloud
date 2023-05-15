@@ -99,6 +99,9 @@ productDirectory:
         - text: Building Real-Time Collaborative Apps
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
+        - text: Java + Power Apps Workshop
+          url: https://github.com/microsoft/PowerPlatformAdvocates/tree/main/Workshops/JavaAndPowerApps
+
         - text: Microsoft Teams App Camp
           url: https://github.com/microsoft/app-camp
 
