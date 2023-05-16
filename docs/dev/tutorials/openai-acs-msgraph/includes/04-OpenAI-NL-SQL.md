@@ -89,33 +89,29 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         Assistant is a natural language to SQL bot that returns a JSON object with the SQL query and 
         the parameter values in it. The SQL will query a PostgreSQL database.
 
-        PostgreSQL tables, with their properties:
+        PostgreSQL tables, with their columns:
 
         ${dbSchema}
 
         Rules:
         - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-        - Return a JSON object with the SQL query and the parameter values in it. 
+        - Always return a JSON object with the SQL query and the parameter values in it. 
         
-            Example JSON object to return: { "sql": "", "paramValues": [] }
+        Example JSON object to return: { "sql": "", "paramValues": [] }
         `;
 
         let queryData: QueryData = { sql: '', paramValues: [], error: '' };
         try {
             const results = await callOpenAI(systemPrompt, userPrompt);
-            console.log('sqlQuery', results);
-            if (results && results.startsWith('{') && results.endsWith('}')) {
-                queryData = JSON.parse(results);
-                if (isProhibitedQuery(queryData.sql)) {
-                    queryData.sql = '';
-                    queryData.error = 'Prohibited query.';
-                }
+        
+            queryData = (results && results.startsWith('{') && results.endsWith('}')) ? 
+                JSON.parse(results) : { sql: results, paramValues: [], error: results };
+        
+            if (isProhibitedQuery(queryData.sql) || isProhibitedQuery(queryData.error)) {
+                queryData.sql = '';
+                queryData.error = 'Prohibited query.';
             }
-            else {
-                queryData.error = results;
-            }
-        }
-        catch (e) {
+        } catch (e) {
             console.log(e);
         }
 
@@ -141,9 +137,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     Rules:
     - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-    - Return a JSON object with the SQL query and the parameter values in it. 
+    - Always return a JSON object with the SQL query and the parameter values in it. 
     
-        Example JSON object to return: { "sql": "", "paramValues": [] }
+    Example JSON object to return: { "sql": "", "paramValues": [] }
     `;
     ```
 
@@ -178,7 +174,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     ```
 
     > [!NOTE]
-    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. If you choose to use OpenAI instead of Azure OpenAI you may see different results. This is because Azure OpenAI uses the same models as OpenAI, but has additional security and responsible AI features built-in.
+    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. **If you choose to use OpenAI instead of Azure OpenAI you may see different results.**
 
 1. Locate the `getAzureOpenAICompletion()` function.
 
