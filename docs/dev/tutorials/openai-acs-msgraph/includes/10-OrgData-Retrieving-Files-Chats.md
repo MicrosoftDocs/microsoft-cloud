@@ -10,6 +10,9 @@ In this exercise, you will:
 - Learn how to call Microsoft Graph directly to retrieve files from OneDrive for Business and chat messages from Microsoft Teams.
 - Understand how to send chat messages to Microsoft Teams channels using Microsoft Graph.
 
+> [!NOTE]
+> The *mgt-search-results* component is currently in preview and is subject to change. In addition to showing usage of *mgt-search-results*, the exercises also show how to perform the same tasks using Microsoft Graph directly as well.
+
 ### Using the Organizational Data Feature
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
