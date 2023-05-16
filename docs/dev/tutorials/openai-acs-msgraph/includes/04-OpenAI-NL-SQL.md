@@ -150,15 +150,15 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - The type of AI assistant to be used is defined. In this case a "natural language to SQL bot".
     - Table names and columns in the database are defined. The high-level schema included in the prompt can be found in the *server/db.schema* file and looks like the following.
 
-    ```
-    - customers (id, company, city, email)
-    - orders (id, customer_id, date, total)
-    - order_items (id, order_id, product_id, quantity, price)
-    - reviews (id, customer_id, review, date, comment)
-    ```
+        ```
+        - customers (id, company, city, email)
+        - orders (id, customer_id, date, total)
+        - order_items (id, order_id, product_id, quantity, price)
+        - reviews (id, customer_id, review, date, comment)
+        ```
 
-    > [!TIP]
-    > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
+        > [!TIP]
+        > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
 
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
     - An example is given for the type of JSON object to return.
@@ -305,7 +305,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Remove the rule you added earlier into the `getSql()` from the system prompt and save the file.
 
-1. Go back to the browser, enter *Select all table names from the database* into the **Custom Query** input again and select the **Run Query** button. Do any table results display? Even without the rule in place, the `isProhibitedQuery()` post-processing code prohibits that type of query from being run against the database.
+1. Go back to the browser, enter *Select all table names from the database* into the **Custom Query** input again and select the **Run Query** button. 
+
+1. Do any table results display? Even without the rule in place, the `isProhibitedQuery()` post-processing code prohibits that type of query from being run against the database.
 
 1. A few final points to consider before moving on to the next exercise:
 
