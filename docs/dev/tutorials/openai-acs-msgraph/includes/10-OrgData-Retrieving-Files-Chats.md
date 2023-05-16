@@ -11,7 +11,7 @@ In this exercise, you will:
 - Understand how to send chat messages to Microsoft Teams channels using Microsoft Graph.
 
 > [!NOTE]
-> The *mgt-search-results* component is currently in preview and is subject to change. In addition to showing usage of *mgt-search-results*, the exercises also show how to perform the same tasks using Microsoft Graph directly as well.
+> The *mgt-search-results* component is currently in preview and is subject to change. In addition to showing how *mgt-search-results* can be used, the exercises also show how to perform the same tasks using Microsoft Graph directly.
 
 ### Using the Organizational Data Feature
 
