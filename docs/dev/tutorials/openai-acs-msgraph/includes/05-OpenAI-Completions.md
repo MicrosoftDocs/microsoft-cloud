@@ -98,7 +98,9 @@ Let's get started by experimenting with different rules that can be used to gene
 1. Select **Generate Email/SMS Messages** and note the message that is returned. No email or SMS message was generated due to the inclusion of the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt. Instead, Azure OpenAI returns a message similar to the following:
 
     ```
-    I'm sorry, but I cannot generate a message with such inappropriate content. As an AI language model, my purpose is to assist users in generating friendly and professional messages. Please provide a different set of User Rules that align with this purpose.
+    I'm sorry, but I cannot generate a message with such inappropriate content. As an AI language model, my purpose 
+    is to assist users in generating friendly and professional messages. Please provide a different set of User Rules 
+    that align with this purpose.
     ```
 
     Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned as well.
@@ -116,7 +118,9 @@ Let's get started by experimenting with different rules that can be used to gene
 1. Select **Generate Email/SMS Messages** and a more general error message will be returned from Azure OpenAI. It should be similar to the following:
 
     ```
-    Based on the user rules provided, generating a message that tells the customer never to order from us again is not professional or appropriate. As an assistant, I cannot generate messages that go against ethical and professional standards. Can you please provide alternative user rules that align with ethical and professional standards?
+    Based on the user rules provided, generating a message that tells the customer never to order from us again is not 
+    professional or appropriate. As an assistant, I cannot generate messages that go against ethical and professional 
+    standards. Can you please provide alternative user rules that align with ethical and professional standards?
     ```
 
     > [!NOTE]
