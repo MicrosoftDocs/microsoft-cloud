@@ -13,7 +13,7 @@ In this exercise, you will:
 
 ### Using the Sign In Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -21,7 +21,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
 
