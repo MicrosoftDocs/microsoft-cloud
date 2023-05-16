@@ -33,36 +33,55 @@ Let's get started by experimenting with different rules that can be used to gene
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. The prompt has the following features:
+1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. It has the following features:
 
-    - It establishes that email and SMS messages will be generated.
-    - It defines the user prompt (the rules the user inputs) and a contact name.
-    - It defines several rules to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
-    - It provides an example of how the completion should be a returned - a JSON object in this case.
+    - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
+        - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
+        - Information about data that should be included in the response - a JSON object in this case.
+    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated.
+    - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 
     ```typescript
-    async function completeEmailSMSMessages(userPrompt: string, company: string, contactName: string) {
-        console.log('Inputs:', userPrompt, company, contactName);
-        const prompt =
-        `Create Email and SMS messages from the following data:
-
-        User Prompt: ${userPrompt}
-        Contact Name: ${contactName}
+    async function completeEmailSMSMessages(prompt: string, company: string, contactName: string) {
+        console.log('Inputs:', prompt, company, contactName);
+        
+        const systemPrompt = `
+        Assistant is a bot designed to help users create email and SMS messages from data and 
+        return a JSON object with the message information in it.
 
         Rules:
         - Generate a subject line for the email message.
-        - Use the User Prompt to generate the messages. 
-        - All messages should have a friendly tone. 
+        - Use the User Rules to generate the messages. 
+        - All messages should have a friendly tone and never use inappropriate language.
         - SMS messages should be in plain text format and no more than 160 characters. 
-        - Start the message with "Hi <Contact Name>,\n\n". 
+        - Start the message with "Hi <Contact Name>,\n\n". Contact Name can be found in the user prompt.
         - Add carriage returns to the email message to make it easier to read. 
         - End with a signature line that says "Sincerely,\nCustomer Service".
         - Return a JSON object with the emailSubject, emailBody, and SMS message values in it. 
 
         Example JSON object: { "emailSubject": "", "emailBody": "", "sms": "" }
         `;
-        
-        const content =  await callOpenAI(prompt, 0.5);
+
+        const userPrompt = `
+            User Rules: ${prompt}
+            Contact Name: ${contactName}
+        `;
+
+        let content: EmailSmsResponse = { status: false, email: '', sms: '', error: '' };
+        try {
+            const results = await callOpenAI(systemPrompt, userPrompt, 0.5);
+            if (results && results.startsWith('{') && results.endsWith('}')) {
+                content = { content, ...JSON.parse(results) };
+                content.status = true;
+            }
+            else {
+                content.error = results;
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+
         return content;
     }
     ```
@@ -74,18 +93,23 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and read the email and SMS messages. Is the negative message included? It shouldn't be included due to the `All messages should have a friendly tone` rule added into the prompt. Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned.
+1. Select **Generate Email/SMS Messages** and note the error that is returned. No email or SMS message was generated due to the inclusion of the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt. Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned as well.
 
-1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
+    > [!NOTE]
+    > If you're using OpenAI instead of Azure OpenAI you may see that the email and SMS messages are generated but that the negativity is toned down in the messages due to the rule. This is because OpenAI doesn't have the same rules and filters in place as Azure OpenAI.
 
-1. Go back to the email/SMS message generator in the browser and enter the same rules again:
+1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone and never use inappropriate language.` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
+
+1. Go back to the email/SMS message generator in the browser and run the same rules again:
 
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and read the generated email/SMS messages. How have they changed? You should see that a negative tone is now allowed.
+1. Select **Generate Email/SMS Messages** and note that a more general error message is retured from Azure OpenAI. It should be similar to the following:
 
-1. Add the `All messages should have a friendly tone` rule back into the prompt in the `completeEmailSMSMessages()` function in *server/openAI.ts**, and try out the email/SMS message generator one more time using the previous rules. With the *friendly tone* rule in place, the completion returned from Azure OpenAI should have negativity removed. 
+    ```
+    Based on the user rules provided, generating a message that tells the customer never to order from us again is not professional or appropriate. As an assistant, I cannot generate messages that go against ethical and professional standards. Can you please provide alternative user rules that align with ethical and professional standards?
+    ```
 
     > [!NOTE]
     > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation.
