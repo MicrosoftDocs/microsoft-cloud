@@ -25,9 +25,11 @@ Let's get started by experimenting with different rules that can be used to gene
         :::image type="content" source="../media/openai-order-delayed.png" alt-text="Azure OpenAI email/SMS message generator.":::
 
     - You will see a subject and body generated for the email and a short message generated for the SMS. 
-    - Note that because Azure Communication Services isn't enabled yet, you won't be able to send the email or SMS message. 
 
-1. Close the dialog window. Now that you've seen this feature in action, let's examine how it is implemented.
+    > [!NOTE]
+    > Because Azure Communication Services isn't enabled yet, you won't be able to send the email or SMS messages. 
+
+1. Close the email/SMS dialog window in the browser. Now that you've seen this feature in action, let's examine how it's implemented.
 
 ### Exploring the GPT Completions Code
 
@@ -38,7 +40,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
         - Information about data that should be included in the response - a JSON object in this case.
-    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated.
+    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 
     ```typescript
@@ -93,7 +95,13 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and note the error that is returned. No email or SMS message was generated due to the inclusion of the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt. Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned as well.
+1. Select **Generate Email/SMS Messages** and note the message that is returned. No email or SMS message was generated due to the inclusion of the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt. Instead, Azure OpenAI returns a message similar to the following:
+
+    ```
+    I'm sorry, but I cannot generate a message with such inappropriate content. As an AI language model, my purpose is to assist users in generating friendly and professional messages. Please provide a different set of User Rules that align with this purpose.
+    ```
+
+    Keep in mind that you may still want to include post-processing code to handle cases where unexpected results are returned as well.
 
     > [!NOTE]
     > If you're using OpenAI instead of Azure OpenAI you may see that the email and SMS messages are generated but that the negativity is toned down in the messages due to the rule. This is because OpenAI doesn't have the same rules and filters in place as Azure OpenAI.
@@ -105,7 +113,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and note that a more general error message is retured from Azure OpenAI. It should be similar to the following:
+1. Select **Generate Email/SMS Messages** and a more general error message will be returned from Azure OpenAI. It should be similar to the following:
 
     ```
     Based on the user rules provided, generating a message that tells the customer never to order from us again is not professional or appropriate. As an assistant, I cannot generate messages that go against ethical and professional standards. Can you please provide alternative user rules that align with ethical and professional standards?
@@ -120,4 +128,6 @@ Let's get started by experimenting with different rules that can be used to gene
     - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
     - You may need to include post-processing code to ensure unexpected results are handled properly.
 
-1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content.
+1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content. 
+
+1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application.
