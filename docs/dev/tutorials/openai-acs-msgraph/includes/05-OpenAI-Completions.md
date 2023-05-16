@@ -131,6 +131,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they're sent. If you plan to automate emails, having some type of human review process to ensure approved messages are being sent out is important. View AI as being a copilot, not an autopilot.
     - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
     - You may need to include post-processing code to ensure unexpected results are handled properly.
+    - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
 
 1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content. 
 
