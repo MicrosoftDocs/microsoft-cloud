@@ -105,7 +105,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
             const results = await callOpenAI(systemPrompt, userPrompt);
         
             queryData = (results && results.startsWith('{') && results.endsWith('}')) ? 
-                JSON.parse(results) : { sql: results, paramValues: [], error: results };
+                JSON.parse(results) : { ...queryData, error: results };
         
             if (isProhibitedQuery(queryData.sql) || isProhibitedQuery(queryData.error)) {
                 queryData.sql = '';
