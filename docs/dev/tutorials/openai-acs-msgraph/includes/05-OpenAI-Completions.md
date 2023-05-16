@@ -124,7 +124,7 @@ Let's get started by experimenting with different rules that can be used to gene
     ```
 
     > [!NOTE]
-    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the [Introduction to prompt engineering](/azure/cognitive-services/openai/concepts/prompt-engineering) documentation.
+    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
 
 1. A few final points to consider before moving on to the next exercise:
 
@@ -133,6 +133,6 @@ Let's get started by experimenting with different rules that can be used to gene
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
 
-1. You can learn more about Azure OpenAI by going through the [Get started with Azure OpenAI Service](/training/modules/get-started-openai) training content. 
+1. You can learn more about Azure OpenAI by going through the <a href="/training/modules/get-started-openai" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. 
 
 1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application.
