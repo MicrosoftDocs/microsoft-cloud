@@ -12,6 +12,16 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
+
+    ```
+    AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
+    TEAM_ID=<TEAMS_TEAM_ID>
+    CHANNEL_ID=<TEAMS_CHANNEL_ID>
+    ```
+
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) before continuing.
+
 1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 
 1. Locate the *mgt-search-results* component:
