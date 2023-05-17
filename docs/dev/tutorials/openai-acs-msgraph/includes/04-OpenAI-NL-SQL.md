@@ -27,9 +27,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Select the **Run Query** button. This will pass the user's natural language query to Azure OpenAI which will convert it to SQL. The SQL query will then be used to query the database and return any potential results.
 
-1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query that is returned from Azure OpenAI.
-
-    :::image type="content" source="../media/nl-sql-terminal-output.png" alt-text="Natural language to SQL query output to the terminal window.":::
+1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query that is returned from Azure OpenAI. The response is returned as a JSON object.
 
 ### Exploring the Natural Language to SQL Code
 
