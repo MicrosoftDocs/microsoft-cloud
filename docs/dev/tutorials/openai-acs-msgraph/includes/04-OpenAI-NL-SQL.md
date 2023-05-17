@@ -27,7 +27,22 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Select the **Run Query** button. This will pass the user's natural language query to Azure OpenAI which will convert it to SQL. The SQL query will then be used to query the database and return any potential results.
 
-1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query that is returned from Azure OpenAI. The response is returned as a JSON object.
+1. Run the following **Custom Query**:
+
+    ```
+    Get the total revenue for Adventure Works Cycles. Include the contact information as well.
+    ```
+
+1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query returned from Azure OpenAI. The JSON data is used by the server-side APIs to query the PostgreSQL database. Any string values included in the query are added as parameter values to prevent SQL injection attacks:
+
+    ```json
+    {
+        "sql": "SELECT c.company, c.city, c.email, SUM(oi.quantity * oi.price) AS total_revenue\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nJOIN order_items oi ON o.id = oi.order_id\nWHERE c.company = $1\nGROUP BY c.company, c.city, c.email;",
+        "paramValues": ["Adventure Works Cycles"]
+    }
+    ```
+
+1. Go back to the browser and select **Reset Data** to view all of the customers again in the datagrid.
 
 ### Exploring the Natural Language to SQL Code
 
@@ -337,10 +352,10 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. A few final points to consider before moving on to the next exercise:
 
-    - It's important to discuss if natural language to SQL is the right solution for your use case and if it will provide value to your customers.
-    - While natural language to SQL can be very powerful, careful planning must go into it to ensure prompts have required rules and that post-processing functionality is included.
+    - Before using this type of technology, discuss potential scenarios with your team, database administrators, security team, stakeholders, and any other relevant parties to ensure that it's appropriate for your organization. It's important to discuss if natural language to SQL meets security, privacy, and any other requirements your organization may have in place.
     - Security should be a primary concern and built into the planning, development, and deployment process.
+    - While natural language to SQL can be very powerful, careful planning must go into it to ensure prompts have required rules and that post-processing functionality is included. Plan for additional time to implement and test this type of functionality and to account for scenarios where unexpected results are returned.
     - There are no guarantees that the SQL returned from a natural language query will be efficient. In some cases, additional calls to Azure OpenAI may be required if post-processing rules detect issues with SQL queries.
     - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
 
-1. You've now seen how to use Azure OpenAI to convert natural language to SQL. In the next exercise, you'll learn how to use Azure OpenAI to generate email and SMS messages.
+1. You've now seen how to use Azure OpenAI to convert natural language to SQL. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
