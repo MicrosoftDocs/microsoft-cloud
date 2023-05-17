@@ -90,4 +90,4 @@ items:
       Congratulations!
     durationInMinutes: 1
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/100-Congratulations.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/20-Congratulations.md)]
