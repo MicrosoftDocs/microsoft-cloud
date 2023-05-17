@@ -13,13 +13,13 @@ In this exercise, you will:
 - Use GPT prompts to convert natural language to SQL.
 - Experiment with different GPT prompts.
 - Use the generated SQL to query the PostgreSQL database started earlier.
-- Return query results.
+- Return query results from PostgreSQL and display them in the browser.
 
 Let's start by experimenting with different GPT prompts that can be used to convert natural language to SQL.
 
 ### Using the Natural Language to SQL Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid. Notice that a sample query value is already included: *Get the total revenue for all orders. Group by company and include the city.*
 
@@ -86,41 +86,53 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         const dbSchema = await fs.promises.readFile('db.schema', 'utf8');
 
         const systemPrompt = `
-        Assistant is a natural language to SQL bot that returns a JSON object with the SQL query and 
+        Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
         the parameter values in it. The SQL will query a PostgreSQL database.
-
-        PostgreSQL tables, with their columns:
+        
+        PostgreSQL tables, with their columns:    
 
         ${dbSchema}
 
         Rules:
         - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-        - Always return a JSON object with the SQL query and the parameter values in it. 
-        
-        Example JSON object to return: { "sql": "", "paramValues": [] }
+        - Always return a JSON object with the SQL query and the parameter values in it.
+        - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+        Just the JSON object is needed.
+        - Example JSON object to return: { "sql": "", "paramValues": [] }
         `;
 
         let queryData: QueryData = { sql: '', paramValues: [], error: '' };
+        let results = '';
         try {
-            const results = await callOpenAI(systemPrompt, userPrompt);
-        
-            queryData = (results && results.startsWith('{') && results.endsWith('}')) ? 
-                JSON.parse(results) : { ...queryData, error: results };
-        
-            if (isProhibitedQuery(queryData.sql) || isProhibitedQuery(queryData.error)) {
+            results = await callOpenAI(systemPrompt, userPrompt);
+            if (results) {
+                const parsedResults = JSON.parse(results);
+                queryData = { ...queryData, ...parsedResults };
+                if (isProhibitedQuery(queryData.sql)) {
+                    queryData.sql = '';
+                    queryData.error = 'Prohibited query.';
+                }
+            }
+        } 
+        catch (e) {
+            console.log(e);
+            // Completion results may still contain SQL information we don't want to expose.
+            // so check to ensure it's OK to return it to client.
+            if (isProhibitedQuery(results)) {
                 queryData.sql = '';
                 queryData.error = 'Prohibited query.';
             }
-        } catch (e) {
-            console.log(e);
+            else {
+                queryData.error = results;
+            }
         }
 
         return queryData;
     }
     ```
 
-    - You'll notice that a `userPrompt` paramter is passed into the function. The `userPrompt` value is the natural language query entered by the user in the browser. 
-    - The `getSQL()` function also includes a `systemPrompt` value that defines the type of AI assistant to be used and rules that should be followed. The `systemPrompt` value is used to help Azure OpenAI understand the database structure and how to generate SQL queries.
+    - A `userPrompt` parameter is passed into the function. The `userPrompt` value is the natural language query entered by the user in the browser. 
+    - A `systemPrompt` defines the type of AI assistant to be used and rules that should be followed. This helps Azure OpenAI understand the database structure, what rules to apply, and how to return the generated SQL query and parameters.
     - A function named `callOpenAI()` is called and the `systemPrompt` and `userPrompt` values are passed to it.
     - The results are checked to ensure no prohibited values are included in the generated SQL query. If prohibited values are found, the SQL query is set to an empty string.
 
@@ -128,18 +140,19 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     ```typescript
     const systemPrompt = `
-    Assistant is a natural language to SQL bot that returns a JSON object with the SQL query and 
+    Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
     the parameter values in it. The SQL will query a PostgreSQL database.
-
-    PostgreSQL tables, with their columns:
+    
+    PostgreSQL tables, with their columns:    
 
     ${dbSchema}
 
     Rules:
     - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-    - Always return a JSON object with the SQL query and the parameter values in it. 
-    
-    Example JSON object to return: { "sql": "", "paramValues": [] }
+    - Always return a JSON object with the SQL query and the parameter values in it.
+    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+    Just the JSON object is needed.
+    - Example JSON object to return: { "sql": "", "paramValues": [] }
     `;
     ```
 
@@ -157,6 +170,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
 
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
+    - A rule is defined to always return a JSON object (and nothing else) with the SQL query and the parameter values in it.
     - An example is given for the type of JSON object to return.
 
 1. The `getSQL()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
@@ -174,7 +188,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     ```
 
     > [!NOTE]
-    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. **If you choose to use OpenAI instead of Azure OpenAI you may see different results.**
+    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. **If you choose to use OpenAI instead of Azure OpenAI you may see different results in some cases.**
 
 1. Locate the `getAzureOpenAICompletion()` function.
 
@@ -259,17 +273,29 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Go back to the browser and perform the following tasks:
 
-    - Enter *Select all table names from the database* into the **Custom Query** input. Select **Run Query**. Are table names displayed? Notice the output to the screen.
-    - Enter *Select all function names from the database.* into the **Custom Query** input and select **Run Query** again. Are function names displayed? Notice the output to the screen.
+    - Enter *Select all table names from the database* into the **Custom Query** input. Select **Run Query**. Are table names displayed?
+    - Enter *Select all function names from the database.* into the **Custom Query** input and select **Run Query** again. Are function names displayed?
 
-    The generated SQL query is attempting to return table and function names which is not allowed based on the rule you added to the system prompt.
+1. QUESTION: Why is this still working after adding a rule saying that table names, function names, and procedure names aren't allowed? 
 
-    > [!NOTE]
-    > If you're using OpenAI rather than Azure OpenAI you may see that the model returns a SQL query that includes table names, function names, or procedure names. This can happen even if the rules in the prompt say not to allow those values. This is a good example of why you need to plan your prompt text and rules carefully, but also plan to add a post-processing step into your code to handle cases where you receive unexpected results.
+    ANSWER: This is due to the "only JSON" rule. If the rules were more flexible and didn't require a JSON object to be returned, you would see a message about Azure OpenAI being unable to perform the task.
 
-1. QUESTION: You added a rule into the GPT prompt that said to not allow table, function, or procedure names and Azure OpenAI respected it. What if some of the rules you add aren't respected? Why would that happen?
+1. Take out the following rule from `systemPrompt` and save the file.
 
-    ANSWER: AI may generate unexpected results even if you have specific rules in place. This is why you need to plan your prompt text and rules carefully, but also plan to add a post-processing step into your code to handle cases where you receive unexpected results.
+    ```
+    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+      Just the JSON object is needed.
+    ```
+
+1. Run *Select all table names from the database* query again.
+
+1. Notice the message now displayed in the browser. Azure OpenAI is unable to perform the task because of the the following rule. Since we removed the "only JSON" rule, the response can provide additional details about why the task can't be performed.
+
+    ```
+    - Do not allow the SELECT query to return table names, function names, or procedure names.
+    ```
+
+    You can see that AI may generate unexpected results even if you have specific rules in place. This is why you need to plan your prompt text and rules carefully, but also plan to add a post-processing step into your code to handle cases where you receive unexpected results.
 
 1. Go back to *server/openAI.ts* and locate the `isProhibitedQuery()` function. This is an example of post-processing code that can be run after Azure OpenAI returns results. Notice that it sets the `sql` property to an empty string if prohibited keywords are returned in the generated SQL query. This ensures that if unexpected results are returned from Azure OpenAI, the SQL query will not be run against the database.
 
@@ -301,7 +327,11 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     }
     ```
 
-1. Remove the rule you added earlier into the `getSql()` from the system prompt and save the file.
+1. Remove the following rule from `systemPrompt` and save the file.
+
+    ```
+    - Do not allow the SELECT query to return table names, function names, or procedure names.
+    ```
 
 1. Go back to the browser, enter *Select all table names from the database* into the **Custom Query** input again and select the **Run Query** button. 
 
@@ -314,3 +344,5 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Security should be a primary concern and built into the planning, development, and deployment process.
     - There are no guarantees that the SQL returned from a natural language query will be efficient. In some cases, additional calls to Azure OpenAI may be required if post-processing rules detect issues with SQL queries.
     - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
+
+1. You've now seen how to use Azure OpenAI to convert natural language to SQL. In the next exercise, you'll learn how to use Azure OpenAI to generate email and SMS messages.

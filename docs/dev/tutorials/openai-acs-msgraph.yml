@@ -66,25 +66,25 @@ items:
       Organizational Data: Creating an Azure Active Directory App Registration
     durationInMinutes: 8
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/08-OrgData-Create-AAD-App.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Create-AAD-App.md)]
 
   - title: |
       Organizational Data: Signing In a User and Getting an Access Token
     durationInMinutes: 10
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Add-Auth-MGT.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/10-OrgData-Add-Auth-MGT.md)]
 
   - title: |
       Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams
     durationInMinutes: 20
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/10-OrgData-Retrieving-Files-Chats.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/11-OrgData-Retrieving-Files-Chats.md)]
 
   - title: |
       Organizational Data: Retrieving Emails and Calendar Events
     durationInMinutes: 20
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/11-OrgData-Retrieving-Emails-Events.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/12-OrgData-Retrieving-Emails-Events.md)]
 
   - title: |
       Congratulations!
