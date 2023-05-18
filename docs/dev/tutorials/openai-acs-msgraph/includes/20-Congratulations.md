@@ -2,7 +2,7 @@
 
 ### You've completed this tutorial
 
-Congratulations! You've completed this tutorial and learned how Azure OpenAI can be used to enhance user productivity, how Azure Communication Services can be used to integrate communication features, and how Microsoft Graph APIs can be used to retrieve and display organizational data. By using these technologies, you can create effective solutions that increase user productivity by minimizing context shifts and providing necessary decision-making information.
+Congratulations! You've learned how Azure OpenAI can be used to enhance user productivity, how Azure Communication Services can be used to integrate communication features, and how Microsoft Graph APIs can be used to retrieve and display organizational data. By using these technologies, you can create effective solutions that increase user productivity by minimizing context shifts and providing necessary decision-making information.
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
@@ -18,7 +18,7 @@ Congratulations! You've completed this tutorial and learned how Azure OpenAI can
 ### Training Content
 
 * [Get started with Azure OpenAI Service](/training/modules/get-started-openai/?WT.mc_id=m365-94501-dwahlin)
-* [Get started with Azure Communication Services](/training/modules/intro-azure-communication-services/?WT.mc_id=m365-94501-dwahlin)
+* [Introduction to Azure Communication Services](/training/modules/intro-azure-communication-services/?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/?WT.mc_id=m365-94501-dwahlin)
 * [Explore Microsoft Graph scenarios for JavaScript development](/training/paths/m365-msgraph-scenarios/?WT.mc_id=m365-94501-dwahlin)
 * [Explore Microsoft Graph scenarios for ASP.NET Core development](/training/paths/m365-msgraph-dotnet-core-scenarios/?WT.mc_id=m365-94501-dwahlin)
