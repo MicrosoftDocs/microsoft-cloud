@@ -25,7 +25,7 @@
     - name: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
       href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
     - name: Java + Power Apps Workshop
-      href: https://github.com/microsoft/PowerPlatformAdvocates/tree/main/Workshops/JavaAndPowerApps
+      href: https://aka.ms/JavaPowerWorkshop
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
 - name: Related
