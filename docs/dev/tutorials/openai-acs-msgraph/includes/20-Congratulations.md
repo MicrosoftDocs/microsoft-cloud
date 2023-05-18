@@ -7,7 +7,9 @@ Congratulations! You've learned how Azure OpenAI can be used to enhance user pro
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 
-### Documentation
+### Next Steps
+
+#### Documentation
 
 * [Azure OpenAI Documentation](/azure/cognitive-services/openai/?WT.mc_id=m365-94501-dwahlin)
 * [Azure Communication Services Documentation](/azure/communication-services/?WT.mc_id=m365-94501-dwahlin)
@@ -15,7 +17,7 @@ Congratulations! You've learned how Azure OpenAI can be used to enhance user pro
 * [Microsoft Graph Toolkit Documentation](/graph/toolkit/overview?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Teams Developer Documentation](/microsoftteams/platform/?WT.mc_id=m365-94501-dwahlin)
 
-### Training Content
+#### Training Content
 
 * [Get started with Azure OpenAI Service](/training/modules/get-started-openai/?WT.mc_id=m365-94501-dwahlin)
 * [Introduction to Azure Communication Services](/training/modules/intro-azure-communication-services/?WT.mc_id=m365-94501-dwahlin)
