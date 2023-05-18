@@ -1,0 +1,93 @@
+### YamlMime:Tutorial
+title: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+metadata:
+  title: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+  description: This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level.
+  audience: Developer
+  level: Intermediate
+  displayType: one-column
+  ms.date: 04/09/2023
+  author: danwahlin 
+  ms.author: dwahlin 
+  ms.topic: tutorial
+  ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript, services:azure communication services, azure openai, microsoft graph, microsoft graph toolkit
+  ms.service: azure-communication-services
+
+items:
+  - title: |
+      Overview
+    durationInMinutes: 4
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/01-Overview.md)]
+
+  - title: |
+      Clone the Project
+    durationInMinutes: 5
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/02-Clone-Project.md)]
+
+  - title: |
+      AI: Create an Azure OpenAI Resource and Deploy a Model 
+    durationInMinutes: 5
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/03-OpenAI-Create-Resource.md)]
+
+  - title: | 
+      AI: Natural Language to SQL
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/04-OpenAI-NL-SQL.md)]
+
+  - title: | 
+      AI: Generating Completions
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/05-OpenAI-Completions.md)]
+
+  - title: |
+      Communication: Creating an Azure Communication Services Resource
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/06-Communication-Create-ACS-Resource.md)]
+
+  - title: |
+      Communication: Making a Phone Call
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/07-Communication-Phone-Call.md)]
+
+  - title: |
+      Communication: Sending Email and SMS Messages
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/08-Communication-Email-SMS.md)]
+
+  - title: |
+      Organizational Data: Creating an Azure Active Directory App Registration
+    durationInMinutes: 8
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Create-AAD-App.md)]
+
+  - title: |
+      Organizational Data: Signing In a User and Getting an Access Token
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/10-OrgData-Add-Auth-MGT.md)]
+
+  - title: |
+      Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams
+    durationInMinutes: 20
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/11-OrgData-Retrieving-Files-Chats.md)]
+
+  - title: |
+      Organizational Data: Retrieving Emails and Calendar Events
+    durationInMinutes: 20
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/12-OrgData-Retrieving-Emails-Events.md)]
+
+  - title: |
+      Congratulations!
+    durationInMinutes: 1
+    content: |
+      [!INCLUDE [](openai-acs-msgraph/includes/20-Congratulations.md)]
