@@ -13,7 +13,7 @@
        - Mac, Linux, or Windows Subsystem for Linux (WSL): 
 
            ```
-           [docker | podman | nerdctl] run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v "$(pwd)/data:/var/lib/postgresql/data" -p 5432:5432 postgres
+           [docker | podman | nerdctl] run --name postgresDb -e POSTGRES_USER=web -e POSTGRES_PASSWORD=web-password -e POSTGRES_DB=CustomersDB -v $(pwd)/data:/var/lib/postgresql/data -p 5432:5432 postgres
            ```
 
        - Windows with PowerShell: 
@@ -31,7 +31,9 @@
     - `npm install`
     - `npm start`
 
-1. Press the **+** icon again in the Visual Studio Code **Terminal toolbar** to create a third terminal window. `cd` into the *client* folder and run the following commands to install the dependencies and start the web server.
+1. Press the **+** icon again in the Visual Studio Code **Terminal toolbar** to create a third terminal window. 
+
+1. `cd` into the *client* folder and run the following commands to install the dependencies and start the web server.
 
     - `npm install`
     - `npm start` 

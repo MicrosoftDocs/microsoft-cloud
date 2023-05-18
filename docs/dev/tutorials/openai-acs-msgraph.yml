@@ -16,7 +16,7 @@ metadata:
 items:
   - title: |
       Overview
-    durationInMinutes: 2
+    durationInMinutes: 4
     content: |
       [!INCLUDE [](openai-acs-msgraph/includes/01-Overview.md)]
 

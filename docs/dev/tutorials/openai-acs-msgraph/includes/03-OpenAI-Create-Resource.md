@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-To get started using OpenAI in your applications, you need to create an Azure OpenAI Service and deploy a model that can be used to perform tasks such as converting natural language to SQL, generating email/SMS message content, and more.
+To get started using Azure OpenAI in your applications, you need to create an Azure OpenAI Service and deploy a model that can be used to perform tasks such as converting natural language to SQL, generating email/SMS message content, and more.
 
 In this exercise you will:
 
@@ -23,7 +23,7 @@ In this exercise you will:
     > [!NOTE]
     > If you see a message about completing an application form to enable Azure OpenAI on your subscription, select the **Click here to request access to Azure OpenAI service** link and complete the form. Once you've completed the form, you'll need to wait for the Azure OpenAI team to approve your request. After receiving your approval notice, you can go back through this exercise and create the resource. 
     >
-    > If you have an OpenAI API key and would like to use that while you're waiting for access to Azure OpenAI, you can skip this section and go directly to the **Update the Project's .env File** below. Assign your OpenAI API key to `OPENAI_API_KEY` in the *.env* file and ignore any other steps. Once you have access to Azure OpenAI, come back to this section and create the resource and model and update the *.env* file with the values from your Azure OpenAI resource.
+    > While this tutorial focuses on Azure OpenAI, if you have an OpenAI API key and would like to use that while you're waiting for access to Azure OpenAI, you can skip this section and go directly to the <a id="update-env-file">**Update the Project's .env File**</a> section below. Assign your OpenAI API key to `OPENAI_API_KEY` in the *.env* file (you can ignore any other `.env` instructions related to OpenAI). Once you have access to Azure OpenAI, revisit this exercise, create the resource and model, and update the *.env* file with the values from your Azure OpenAI resource.
 
 1. Perform the following tasks:
     - Select your Azure subscription.
@@ -34,7 +34,7 @@ In this exercise you will:
 
 1. Select **Next** until you get to the **Review + submit** screen. Select **Create**.
 
-1. Once your Azure OpenAI Service resource is created, navigate to it, and select **Model deployments**.
+1. Once your Azure OpenAI resource is created, navigate to it and select **Model deployments**.
 
 1. Select **Create** in the toolbar.
 
@@ -44,14 +44,15 @@ In this exercise you will:
     - Version: **1**
 
     > [!NOTE]
-    > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models) such as text-ada-001, text-curie-001, text-divinci-003, and gpt-35-turbo. Each model can be used to handle different scenarios.
+    > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models) such as *text-ada-001*, *text-curie-001*, *text-divinci-003*, and *gpt-35-turbo*. Each model can be used to handle different scenarios.
 
 1. Select **Save**.
 
-1. Select **Keys and Endpoint** in the **Resource Management** and locate the **KEY 1** and **Endpoint** values.
+1. Select **Keys and Endpoint** in the **Resource Management** section and locate the **KEY 1** and **Endpoint** values.
 
     :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
 
+<a id="update-env-file"></a>
 ### Update the Project's `.env` File
 
 1. Open the `.env` file at the root of the project.
@@ -76,7 +77,7 @@ In this exercise you will:
 <a id="start-app-services"></a>
 ### Start the Application Services
 
-It's time to start up your application services including the database, web server, and API server.
+It's time to start up your application services including the database, API server, and web server.
 
 [!INCLUDE [Start-Services](./Start-Services.md)]
 

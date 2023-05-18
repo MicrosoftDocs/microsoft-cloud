@@ -1,10 +1,10 @@
 <!-- markdownlint-disable MD041 -->
 
-The sample project referenced in this tutorial is available at <a href="https://github.com/microsoft/MicrosoftCloud" target="_blank" rel="noopener">https://github.com/microsoft/MicrosoftCloud</a>. This repository includes both client-side and server-side code required to run the sample, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
+The sample project used in this tutorial is available at <a href="https://github.com/microsoft/MicrosoftCloud" target="_blank" rel="noopener">https://github.com/microsoft/MicrosoftCloud</a>. This repository includes both client-side and server-side code required to run the project, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
 
 In this exercise you will:
 
-- Clone a GitHub repository.
+- Clone the GitHub repository.
 - Add an *.env* file into the project and update it.
 
 Before proceeding, ensure that you have all of the prerequisites installed and configured as outlined in the [Prerequisites](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/#prerequisites) section of this tutorial.
@@ -50,7 +50,7 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     API_PORT=3000
     ```
 
-1. Assign the following values to `POSTGRES_USER` and `POSTGRES_PASSWORD` in *.env*. These values will be used by the API server to connect to the local PostgreSQL database.
+1. Update the following values in *.env*. These values will be used by the API server to connect to the local PostgreSQL database.
 
     ```
     POSTGRES_USER=web

@@ -33,7 +33,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 - [Visual Studio Code](https://code.visualstudio.com) (while we'll reference Visual Studio Code in this tutorial, any editor can be used)
 - [Azure subscription](https://azure.microsoft.com/free/search)
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
-- [Docker Desktop](https://www.docker.com/get-started/), [Podman](https://podman-desktop.io/downloads), [nerdctl](https://github.com/containerd/nerdctl) or another Open Container Initiative (OCI) compliant container runtime.
+- [Docker Desktop](https://www.docker.com/get-started/) or another OCI (Open Container Initiative) compliant container runtime such as [Podman](https://podman-desktop.io/downloads), or [nerdctl](https://github.com/containerd/nerdctl) capable of running a container.
 
 ### Microsoft Cloud Technologies used in this Tutorial
 
