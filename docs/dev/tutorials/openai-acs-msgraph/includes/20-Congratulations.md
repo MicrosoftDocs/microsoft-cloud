@@ -15,7 +15,7 @@ Congratulations! You've completed this tutorial and learned how Azure OpenAI can
 * [Microsoft Graph Toolkit Documentation](/graph/toolkit/overview?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Teams Developer Documentation](/microsoftteams/platform/?WT.mc_id=m365-94501-dwahlin)
 
-### Training
+### Training Content
 
 * [Get started with Azure OpenAI Service](/training/modules/get-started-openai/?WT.mc_id=m365-94501-dwahlin)
 * [Get started with Azure Communication Services](/training/modules/intro-azure-communication-services/?WT.mc_id=m365-94501-dwahlin)
