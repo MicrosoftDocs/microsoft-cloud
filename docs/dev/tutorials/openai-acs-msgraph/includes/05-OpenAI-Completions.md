@@ -131,7 +131,7 @@ Let's get started by experimenting with different rules that can be used to gene
 1. Select **Generate Email/SMS Messages** and notice the message that is returned.
 
     > [!NOTE]
-    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
+    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
 
 1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run the rules again. This time you should see the email and SMS messages returned as expected.
 
@@ -142,4 +142,4 @@ Let's get started by experimenting with different rules that can be used to gene
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
 
-1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. 
+1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. 

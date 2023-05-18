@@ -3,7 +3,7 @@
 Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. In this exercise you'll see how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
 > [!NOTE]
-> If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/) learning path. 
+> If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/?WT.mc_id=m365-94501-dwahlin) learning path. 
 
 In this exercise, you will:
 
@@ -77,6 +77,6 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
     In this example, a call is being made to the Microsoft Graph `me` API to retrieve their user profile (`me` represents the current signed in user). The `this.userLoggedIn.emit(me)` code statement emits an event from the component to pass the profile data to the parent component. The parent component is *app.component.ts* file in this case, which is the root component for the application.
 
-    To learn more about the *mgt-login* component visit the [Microsoft Graph Toolkit](/graph/toolkit/components/login) documentation.
+    To learn more about the *mgt-login* component visit the [Microsoft Graph Toolkit](/graph/toolkit/components/login?WT.mc_id=m365-94501-dwahlin) documentation.
 
 1. Now that you've logged into the application, let's look at how organizational data can be retrieved.

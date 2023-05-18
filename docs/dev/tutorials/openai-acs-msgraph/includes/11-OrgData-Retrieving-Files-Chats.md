@@ -175,7 +175,7 @@ In this exercise, you will:
     }
     ```
     
-    The files component can then use the `data` property to display the search results. You could handle this using custom HTML bindings or by using another Microsoft Graph Toolkit control named [`mgt-file-list`](/graph/toolkit/components/file-list). Here's an example of binding the `data` property to one of the component's properties named `files` and handling the `itemClick` event as the user interacts with a file.
+    The files component can then use the `data` property to display the search results. You could handle this using custom HTML bindings or by using another Microsoft Graph Toolkit control named [`mgt-file-list`](/graph/toolkit/components/file-list?WT.mc_id=m365-94501-dwahlin). Here's an example of binding the `data` property to one of the component's properties named `files` and handling the `itemClick` event as the user interacts with a file.
 
     ```html
     <mgt-file-list (itemClick)="itemClick($any($event))" [files]="data"></mgt-file-list>

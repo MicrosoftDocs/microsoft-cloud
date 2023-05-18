@@ -258,13 +258,13 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available.
     - Creates a `url` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
     - Creates a data object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
-        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
+        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
         - `temperature`: What sampling temperature to use, between 0 and 2. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example two messages are passed in: one for the system and one for the user. The system message defines the overall behavior and rules that will be used, while the user message defines the prompt text provided by the user.
     - Uses `fetch()` to send the `url` and `data` values to Azure OpenAI and processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
     
         > [!NOTE]
-        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
+        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
 
 1. Comment out the following lines in the `getSQL()` function:
 

@@ -44,7 +44,7 @@ In this exercise you will:
     - Version: **1**
 
     > [!NOTE]
-    > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models) such as *text-ada-001*, *text-curie-001*, *text-divinci-003*, and *gpt-35-turbo*. Each model can be used to handle different scenarios.
+    > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin) such as *text-ada-001*, *text-curie-001*, *text-divinci-003*, and *gpt-35-turbo*. Each model can be used to handle different scenarios.
 
 1. Select **Save**.
 
@@ -70,7 +70,7 @@ In this exercise you will:
     ```
 
     > [!NOTE]
-    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which should match the model name you created earlier in this exercise. The API version is set to a supported value defined in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference#chat-completions).
+    > You'll see that values for `OPENAI_MODEL` and `OPENAI_API_VERSION` are already set in the *.env* file. The model value is set to **gpt-35-turbo** which should match the model name you created earlier in this exercise. The API version is set to a supported value defined in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
 
 1. Save the *.env* file.
 

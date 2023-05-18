@@ -187,6 +187,6 @@ In this exercise, you will:
     ```
 
     > [!NOTE]
-    > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting) to see an example of calling a Microsoft Graph API from an Azure Function.
+    > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?WT.mc_id=m365-94501-dwahlin) to see an example of calling a Microsoft Graph API from an Azure Function.
 
-1. You've now seen example of using Microsoft Graph to retrieve files, chats, email messages, and calendar events. The same concepts can be applied to other Microsoft Graph APIs as well. For example, you could use the Microsoft Graph *users* API to search for users in your organization. You could also use the Microsoft Graph *groups* API to search for groups in your organization. You can view the full list of Microsoft Graph APIs [in the documentation](/graph/api/overview).
+1. You've now seen example of using Microsoft Graph to retrieve files, chats, email messages, and calendar events. The same concepts can be applied to other Microsoft Graph APIs as well. For example, you could use the Microsoft Graph *users* API to search for users in your organization. You could also use the Microsoft Graph *groups* API to search for groups in your organization. You can view the full list of Microsoft Graph APIs [in the documentation](/graph/api/overview?WT.mc_id=m365-94501-dwahlin).

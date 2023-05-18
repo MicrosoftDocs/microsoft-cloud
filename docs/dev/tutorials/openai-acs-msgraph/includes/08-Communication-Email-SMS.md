@@ -245,8 +245,8 @@ In this exercise, you will:
 
 1. You can learn more about ACS email and SMS functionality in the following articles:
 
-    - [Email in Azure Communication Services](/azure/communication-services/concepts/email/email-overview)
-    - [SMS in Azure Communication Services](/azure/communication-services/concepts/sms/concepts)
+    - [Email in Azure Communication Services](/azure/communication-services/concepts/email/email-overview?WT.mc_id=m365-94501-dwahlin)
+    - [SMS in Azure Communication Services](/azure/communication-services/concepts/sms/concepts?WT.mc_id=m365-94501-dwahlin)
 
 1. Before moving on to the next exercise, let's review the key concepts covered in this exercise:
 
