@@ -31,6 +31,8 @@ landingContent:
             url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate/
           - text: Java + Power Apps Workshop
             url: https://aka.ms/JavaPowerWorkshop
+          - text: Power BI and Azure Synapse Workshop using SerengetiDataLab
+            url: https://aka.ms/PBISynapseWorkshop
           - text: Transform your Business Applications with Fusion Development
             url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development/
 
