@@ -26,6 +26,8 @@
       href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
     - name: Java + Power Apps Workshop
       href: https://aka.ms/JavaPowerWorkshop
+    - name: Power BI and Azure Synapse Workshop using SerengetiDataLab
+      href: https://aka.ms/PBISynapseWorkshop
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
 - name: Related
