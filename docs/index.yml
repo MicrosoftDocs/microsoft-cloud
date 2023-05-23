@@ -32,7 +32,7 @@ highlightedContent:
     # Card
     - title: Azure OpenAI Service Prompt Engineering
       itemType: overview
-      url: https://learn.microsoft.com/azure/cognitive-services/openai/concepts/prompt-engineering
+      url: /azure/cognitive-services/openai/concepts/prompt-engineering
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -43,13 +43,13 @@ productDirectory:
       imageSrc: ./media/across.svg
       links:
         - text: Azure and Dynamics 365 Scenarios
-          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/dynamics-365-scenarios
+          url: /azure/architecture/solutions/dynamics-365-scenarios
 
         - text: Azure and Microsoft 365 Scenarios
-          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/microsoft-365-scenarios
+          url: /azure/architecture/solutions/microsoft-365-scenarios
 
         - text: Azure and Power Platform Scenarios
-          url: https://learn.microsoft.com/en-us/azure/architecture/solutions/power-platform-scenarios
+          url: /azure/architecture/solutions/power-platform-scenarios
 
     # Card
     - title: Hands-on Tutorials
@@ -63,13 +63,13 @@ productDirectory:
           url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
 
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
-          url: https://learn.microsoft.com/graph/toolkit/get-started/building-one-productivity-hub
+          url: /graph/toolkit/get-started/building-one-productivity-hub
 
-        # - text: Integrate AI, Organizational Data, and Communication Features into a Line of Business App
-        #   url: /microsoft-cloud/dev/tutorials/openai-msgraph-acs
+        - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+          url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
 
         - text: Transform your Business Applications with Fusion Development
-          url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development
+          url: /training/paths/transform-business-applications-with-fusion-development
 
     # Card
     - title: Videos
@@ -99,6 +99,9 @@ productDirectory:
         - text: Building Real-Time Collaborative Apps
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
 
+        - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+          url: https://github.com/microsoft/microsoftcloud
+
         - text: Microsoft Teams App Camp
           url: https://github.com/microsoft/app-camp
 
@@ -114,16 +117,16 @@ conceptualContent:
         - url: https://portal.azure.com
           itemType: deploy
           text: Azure Portal
-        - url: https://learn.microsoft.com/azure
+        - url: /azure
           itemType: reference
           text: Azure Services
-        - url: https://learn.microsoft.com/azure/architecture/
+        - url: /azure/architecture/
           itemType: architecture
           text: Azure Architecture Center
-        - url: https://learn.microsoft.com/azure/architecture/framework/
+        - url: /azure/architecture/framework/
           itemType: architecture
           text: Azure Well-Architected Framework
-        - url: https://learn.microsoft.com/azure/cloud-adoption-framework/
+        - url: /azure/cloud-adoption-framework/
           itemType: architecture
           text: Cloud Adoption Framework for Azure
 
@@ -147,28 +150,28 @@ conceptualContent:
         - url: https://developer.microsoft.com/microsoft-365/dev-program
           itemType: get-started
           text: Join the Microsoft 365 Developer Program
-        - url: https://learn.microsoft.com/microsoft-365
+        - url: /microsoft-365
           itemType: reference
           text: Microsoft 365 Developer Documentation
-        - url: https://learn.microsoft.com/graph
+        - url: /graph
           itemType: reference
           text: Microsoft Graph Documentation
-        - url: https://learn.microsoft.com/microsoftteams/platform
+        - url: /microsoftteams/platform
           itemType: reference
           text: Microsoft Teams Developer Documentation
-        - url: https://learn.microsoft.com/sharepoint/dev
+        - url: /sharepoint/dev
           itemType: reference
           text: SharePoint Developer
 
     - title: Power Platform
       links:
-        - url: https://learn.microsoft.com/power-platform/developer/create-developer-environment
+        - url: /power-platform/developer/create-developer-environment
           itemType: get-started
           text: Create a developer environment
-        - url: https://learn.microsoft.com/power-platform/developer/
+        - url: /power-platform/developer/
           itemType: reference
           text: Power Platform Developer Documentation
-        - url: https://learn.microsoft.com/training/browse/?products=power-platform&roles=developer&resource_type=learning%20path
+        - url: /training/browse/?products=power-platform&roles=developer&resource_type=learning%20path
           itemType: learn
           text: Power Platform Developer Training
         - url: https://powerusers.microsoft.com/
@@ -180,10 +183,10 @@ conceptualContent:
         - url: https://dynamics.microsoft.com/dynamics-365-free-trial/
           itemType: get-started
           text: Dynamics 365 Free Trial
-        - url: https://learn.microsoft.com/dynamics365/get-started/developers
+        - url: /dynamics365/get-started/developers
           itemType: reference
           text: Dynamics 365 Developer Documentation
-        - url: https://learn.microsoft.com/training/browse/?products=dynamics-365&roles=developer&resource_type=learning%20path
+        - url: /training/browse/?products=dynamics-365&roles=developer&resource_type=learning%20path
           itemType: learn
           text: Dynamics 365 Developer Training
         - url: https://community.dynamics.com/
@@ -195,7 +198,7 @@ conceptualContent:
         - url: https://www.microsoft.com/industry
           itemType: get-started
           text: Get Microsoft Industry Clouds
-        - url: https://learn.microsoft.com/industry/
+        - url: /industry/
           itemType: overview
           text: Microsoft Industry Clouds Documentation
         - url: https://appsource.microsoft.com/marketplace/cloudsIndustry?exp=ubp8
@@ -204,10 +207,10 @@ conceptualContent:
         - url: https://azure.microsoft.com/global-infrastructure/government/request/
           itemType: get-started
           text: Azure Government Free Trial
-        - url: https://learn.microsoft.com/azure/azure-government/
+        - url: /azure/azure-government/
           itemType: reference
           text: Azure Government Documentation
-        - url: https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure
+        - url: /azure/azure-government/compare-azure-government-global-azure
           itemType: reference
           text: Compare Azure Government and Global Azure
 
@@ -221,7 +224,7 @@ additionalContent:
         # Card
         - title: Azure CLI
           summary: The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources.
-          url: https://learn.microsoft.com/cli/azure/get-started-with-azure-cli
+          url: /cli/azure/get-started-with-azure-cli
 
         # Card
         - title: GitHub Codespaces
@@ -251,14 +254,14 @@ additionalContent:
         # Card
         - title: Microsoft Graph SDKs
           summary: The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
-          url: https://learn.microsoft.com/graph/sdks/sdks-overview
+          url: /graph/sdks/sdks-overview
 
         # Card
         - title: Power Platform CLI
           summary: Microsoft Power Platform CLI is a simple, one-stop developer CLI that empowers developers and ISVs to perform various operations in Microsoft Power Platform related to environment lifecycle, authentication, and work with Microsoft Dataverse environments, solution packages, portals, code components, and more.
-          url: https://learn.microsoft.com/power-platform/developer/cli/introduction
+          url: /power-platform/developer/cli/introduction
 
         # Card
         - title: Powershell
           summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
-          url: https://learn.microsoft.com/powershell/
+          url: /powershell/
