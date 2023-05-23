@@ -43,13 +43,13 @@ productDirectory:
       imageSrc: ./media/across.svg
       links:
         - text: Azure and Dynamics 365 Scenarios
-          url: /en-us/azure/architecture/solutions/dynamics-365-scenarios
+          url: /azure/architecture/solutions/dynamics-365-scenarios
 
         - text: Azure and Microsoft 365 Scenarios
-          url: /en-us/azure/architecture/solutions/microsoft-365-scenarios
+          url: /azure/architecture/solutions/microsoft-365-scenarios
 
         - text: Azure and Power Platform Scenarios
-          url: /en-us/azure/architecture/solutions/power-platform-scenarios
+          url: /azure/architecture/solutions/power-platform-scenarios
 
     # Card
     - title: Hands-on Tutorials
