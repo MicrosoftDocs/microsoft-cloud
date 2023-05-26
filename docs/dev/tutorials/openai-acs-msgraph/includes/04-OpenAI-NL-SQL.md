@@ -354,9 +354,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Do any table results display? Even without the rule in place, the `isProhibitedQuery()` post-processing code prohibits that type of query from being run against the database.
 
-1. As discussed earlier, integrating natural language to SQL in line of business applications can be quite beneficial to users, but it does come with its own set of pros and cons.
+1. As discussed earlier, integrating natural language to SQL in line of business applications can be quite beneficial to users, but it does come with its own set of considerations.
 
-    **Pros:**
+    **Advantages:**
 
     - User-friendliness: This feature can make database interaction more accessible to users without technical expertise, reducing the need for SQL knowledge and potentially speeding up operations.
 
@@ -364,7 +364,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     - Broad application: By using advanced language models, applications can be designed to cater to a wide range of users and use-cases.
 
-    **Cons:**
+    **Considerations:**
 
     - Security: One of the biggest concerns is security. If users can interact with databases using natural language, there needs to be robust security measures in place to prevent unauthorized access or malicious queries. You may consider implementing a read-only mode to prevent users from modifying data.
 
