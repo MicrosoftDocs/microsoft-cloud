@@ -1,12 +1,16 @@
 <!-- markdownlint-disable MD041 -->
 
-Now that you have your Azure OpenAI Service resource setup, let's learn about how it can be used for natural language to SQL scenarios. By harnessing the capabilities of natural language processing (NLP) technology, you can enable users without SQL expertise to query databases using everyday language, such as plain English. For example, they may enter:
+The quote "Just because you can doesn't mean you should" is a useful guide when thinking about AI capabilities. For example, Azure OpenAI's natural language to SQL feature allows users to make database queries in plain English, which can be a powerful tool to enhance their productivity. However, *powerful* doesn't always mean *appropriate* or *safe*. This exercise will demonstrate how to use this AI feature while also discussing important considerations to keep in mind before deciding to implement it. 
+
+Here's an example of a natural language query that can be used to retrieve data from a database:
 
 ```
 Get the the total revenue for all companies in London.
 ```    
 
-Azure OpenAI will convert this query to SQL and you can then use the SQL to return results from the database. As a result, non-technical users including business analysts, marketers, and executives can more easily retrieve valuable information from databases without grappling with intricate SQL syntax or relying on constrained datagrids and filters. This streamlined approach can boost productivity by eliminating the need for users to seek assistance from technical experts. Finally, by capitalizing on advanced language models like GPT (Generative Pre-training Transformer) provided by Azure OpenAI, you can design applications that are not only intuitive, but also adaptable to a diverse user base. 
+With the proper prompts, Azure OpenAI will convert this query to SQL that can be used to return results from the database. As a result, non-technical users including business analysts, marketers, and executives can more easily retrieve valuable information from databases without grappling with intricate SQL syntax or relying on constrained datagrids and filters. This streamlined approach can boost productivity by eliminating the need for users to seek assistance from technical experts. 
+
+This exercise provides a starting point that will help you understand how natural language to SQL works, introduce you to some important considerations, get you thinking about pros and cons, and show you the code to get started.
 
 In this exercise, you will:
 
@@ -49,7 +53,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
 > [!NOTE]
-> The goal of this exercise is to show what's possible with natural language to SQL functionality and how to get started using it. It's important to discuss if this type of AI is appropriate for your organization before proceeding with any implementation. It's also **imperative to plan for proper prompt rules and database security measures** to prevent unauthorized access and protect sensitive data. This is not a comprehensive tutorial on how to implement natural language to SQL functionality, but rather a starting point to help you understand how it works and how to get started.
+> The goal of this exercise is to show what's possible with natural language to SQL functionality and demonstrate how to get started using it. As mentioned earlier, it's important to discuss if this type of AI is appropriate for your organization before proceeding with any implementation. It's also **imperative to plan for proper prompt rules and database security measures** to prevent unauthorized access and protect sensitive data.
 
 1. Now that you've seen the natural language to SQL feature in action, let's examine how it is implemented.
 
@@ -180,7 +184,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         ```
 
         > [!TIP]
-        > In a real-world scenario, the schema could be updated as the database schema changes and only include tables and fields that users are allowed to query using natural language processing.
+        > You may consider creating a read-only database that only contains the data users are allowed to query using natural language to SQL. That way the schema used in the prompt would only include tables and fields that users are allowed to query using natural language processing.
 
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
     - A rule is defined to always return a JSON object (and nothing else) with the SQL query and the parameter values in it.
@@ -350,12 +354,34 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Do any table results display? Even without the rule in place, the `isProhibitedQuery()` post-processing code prohibits that type of query from being run against the database.
 
+1. As discussed earlier, integrating natural language to SQL in line of business applications can be quite beneficial to users, but it does come with its own set of pros and cons.
+
+    **Pros:**
+
+    - User-friendliness: This feature can make database interaction more accessible to users without technical expertise, reducing the need for SQL knowledge and potentially speeding up operations.
+
+    - Increased productivity: Business analysts, marketers, executives, and other non-technical users can retrieve valuable information from databases without having to rely on technical experts, thereby increasing efficiency.
+
+    - Broad application: By using advanced language models, applications can be designed to cater to a wide range of users and use-cases.
+
+    **Cons:**
+
+    - Security: One of the biggest concerns is security. If users can interact with databases using natural language, there needs to be robust security measures in place to prevent unauthorized access or malicious queries. You may consider implementing a read-only mode to prevent users from modifying data.
+
+    - Data Privacy: Certain data might be sensitive and should not be easily accessible, so you'll need to ensure proper safeguards and user permissions are in place.
+
+    - Accuracy: While natural language processing has improved significantly, it's not perfect. Misinterpretation of user queries could lead to inaccurate results or unexpected behavior. You'll need to plan for how unexpected results will be handled.
+
+    - Efficiency: There are no guarantees that the SQL returned from a natural language query will be efficient. In some cases, additional calls to Azure OpenAI may be required if post-processing rules detect issues with SQL queries.
+
+    - Training and User Adaptation: Users need to be trained to formulate their queries correctly. While it's easier than learning SQL, there can still be a learning curve involved.
+
 1. A few final points to consider before moving on to the next exercise:
 
+    - Remember that, "Just because you can doesn't mean you should" applies here. Use extreme caution and careful planning before integrating natural language to SQL into an application. It's important to understand the potential risks and to plan for them.
     - Before using this type of technology, discuss potential scenarios with your team, database administrators, security team, stakeholders, and any other relevant parties to ensure that it's appropriate for your organization. It's important to discuss if natural language to SQL meets security, privacy, and any other requirements your organization may have in place.
     - Security should be a primary concern and built into the planning, development, and deployment process.
     - While natural language to SQL can be very powerful, careful planning must go into it to ensure prompts have required rules and that post-processing functionality is included. Plan for additional time to implement and test this type of functionality and to account for scenarios where unexpected results are returned.
-    - There are no guarantees that the SQL returned from a natural language query will be efficient. In some cases, additional calls to Azure OpenAI may be required if post-processing rules detect issues with SQL queries.
     - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
 
-1. You've now seen how to use Azure OpenAI to convert natural language to SQL. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
+1. You've now seen how to use Azure OpenAI to convert natural language to SQL and learned about the pros and cons of implementing this type of functionality. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
