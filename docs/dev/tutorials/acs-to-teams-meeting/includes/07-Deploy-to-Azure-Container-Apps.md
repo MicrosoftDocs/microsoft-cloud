@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD041 -->
 
 > [!IMPORTANT]
-> In addition to the [pre-requisites listed for this tutorial](/MicrosoftCloud/tutorials/docs/ACS-to-Teams-Meeting/), you'll also need to install the Azure CLI on your machine to complete this exercise.
+> In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the Azure CLI on your machine to complete this exercise.
 >
 > - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
 >
