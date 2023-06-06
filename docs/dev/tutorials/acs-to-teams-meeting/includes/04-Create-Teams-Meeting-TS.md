@@ -74,7 +74,7 @@
 
 1. Locate the `ensureGraphForAppOnlyAuth` function:
     - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
-    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use [app-only permissions](graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
+    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
 
     ```typescript
     function ensureGraphForAppOnlyAuth() {

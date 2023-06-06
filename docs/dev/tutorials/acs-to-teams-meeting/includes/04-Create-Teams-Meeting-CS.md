@@ -77,7 +77,7 @@
     ```
 
     - This code creates a `GraphServiceClient` object that can be used to call Microsoft Graph from Azure Functions. It's created as a singleton and can be injected into other classes.
-    - You can make Microsoft Graph API calls with [app-only permissions](graph/auth/auth-concepts#access-scenarios) (such as **Calendars.ReadWrite**) by passing a `ClientSecretCredential` value to the `GraphServiceClient` constructor. The `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
+    - You can make Microsoft Graph API calls with [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as **Calendars.ReadWrite**) by passing a `ClientSecretCredential` value to the `GraphServiceClient` constructor. The `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
     
 1. Open *Services/GraphService.cs*. 
 
