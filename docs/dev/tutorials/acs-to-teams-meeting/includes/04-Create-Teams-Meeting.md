@@ -31,8 +31,70 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 ---
 
-    > [!NOTE]
-    > Visit the Azure Communication Services documentation to learn more about [extending Microsoft Teams meetings](/azure/communication-services/tutorials/virtual-visits/extend-teams/overview) in other ways.
+## Calling the Azure Function from React
+
+1. Now that the `TeamsMeetingFunction` is ready to use, let's call the function from the React app.
+
+1. Open the *samples/acs-to-teams-meeting/client/react* folder in VS Code. 
+
+1. Add an *.env* file into the folder with the following values:
+
+    ```
+    REACT_APP_TEAMS_MEETING_FUNCTION=http://localhost:7071/api/TeamsMeetingFunction
+
+    REACT_APP_ACS_USER_FUNCTION=http://localhost:7071/api/ACSTokenFunction
+    ```
+
+    These values will be passed into React as it builds so that you can easily change them as needed during the build process.
+
+1. Open *samples/acs-to-teams-meeting/client/react/App.tsx* file in VS Code.
+
+1. Locate the `teamsMeetingLink` state variable in the component. Remove the hardcoded teams link and replace it with empty quotes:
+
+    ```typescript
+    const [teamsMeetingLink, setTeamsMeetingLink] = useState<string>('');
+    ```
+
+1. Locate the `useEffect` function and change it to look like the following. This handles calling the Azure Function you looked at earlier which creates a Teams meeting and returns the meeting join link:
+
+    ```typescript
+    useEffect(() => {
+        const init = async () => {
+            /* Commenting out for now
+            setMessage('Getting ACS user');
+            //Call Azure Function to get the ACS user identity and token
+            const res = await fetch(process.env.REACT_APP_ACS_USER_FUNCTION as string);
+            const user = await res.json();
+            setUserId(user.userId);
+            setToken(user.token);
+            */
+            
+            setMessage('Getting Teams meeting link...');
+            //Call Azure Function to get the meeting link
+            const resTeams = await fetch(process.env.REACT_APP_TEAMS_MEETING_FUNCTION as string);
+            const link = await resTeams.text();
+            setTeamsMeetingLink(link);
+            setMessage('');
+            console.log('Teams meeting link', link);
+
+        }
+        init();
+
+    }, []);
+    ```
+
+1. Save the file before continuing.
+
+1. Open a terminal window, `cd` into the *react folder, and run `npm start` to build and run the application.
+
+1. After the application builds and loads, you should see the ACS calling UI displayed and can then call into the Teams meeting that was dynamically created by Microsoft Graph.
+
+1. Stop the terminal process by entering <kbd>Ctrl + C</kbd> in the terminal window.
+
+1. Stop the Azure Functions project.
+
+> [!NOTE]
+> Visit the Azure Communication Services documentation to learn more about [extending Microsoft Teams meetings](/azure/communication-services/tutorials/virtual-visits/extend-teams/overview) in other ways.
 
 
 
