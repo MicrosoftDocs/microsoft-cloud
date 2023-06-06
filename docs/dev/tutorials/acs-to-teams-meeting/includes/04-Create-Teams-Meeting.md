@@ -21,7 +21,19 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
     1. Copy the value of the secret into a local file. You'll use the value later in this exercise.
     1. Go to the **Overview** tab and copy the `Application (client) ID` and `Directory (tenant) ID` values into the same local file that you used in the previous step.
 
+# [C#](#tab/csharp)
+
+[!INCLUDE [CSharp](./04-Create-Teams-Meeting-CS.md)]
+
+# [TypeScript](#tab/typescript)
+
 [!INCLUDE [TypeScript](./04-Create-Teams-Meeting-TS.md)]
+
+---
+
+    > [!NOTE]
+    > Visit the Azure Communication Services documentation to learn more about [extending Microsoft Teams meetings](/azure/communication-services/tutorials/virtual-visits/extend-teams/overview) in other ways.
+
 
 
 

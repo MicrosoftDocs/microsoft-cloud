@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 1. Open *local.settings.json* and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
 
 1. Open *samples/acs-to-teams-meeting/server/typescript/ACSTokenFunction/index.ts* in Visual Studio Code. It has the following code:
@@ -94,7 +96,7 @@
 
 1. Save the file before continuing.
 
-1. Open a separate terminal and run `npm start` in the *react* folder. After it builds you should see the ACS calling UI displayed and you can call into the Teams meeting that was dynamically created by Microsoft Graph.
+1. Open a separate terminal and run `npm start` in the *react* folder. After it builds and loads you should see the ACS calling UI displayed and you can call into the Teams meeting that was dynamically created by Microsoft Graph.
 
 1. Stop both of the terminal processes (React and Azure Functions) by selecting <kbd>Ctrl + C</kbd>.
 

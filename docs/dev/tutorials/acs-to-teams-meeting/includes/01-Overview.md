@@ -21,6 +21,7 @@ In this tutorial, you'll learn how Azure Communication Services can be used in a
 - [Azure subscription](https://azure.microsoft.com/free/search)
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
 - [GitHub account](https://github.com)
+- [Visual Studio 2022](https://visualstudio.microsoft.com) if using the C# version of the tutorial. Visual Studio Code can also be used if preferred.
 
 ### Technologies used in this tutorial include
 

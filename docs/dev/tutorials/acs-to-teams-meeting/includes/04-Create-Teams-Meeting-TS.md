@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 1. Open the *samples/acs-to-teams-meeting/server/typescript* project folder in Visual Studio Code.
 
 1. Create a *local.settings.json* file with the following values:
@@ -24,10 +26,16 @@
     }
     ```
 
-    - Use the values you copied into the local file to update the `TENANT_ID`, `CLIENT_ID` and `CLIENT_SECRET` values.
+    - Use the values you copied into the local file in an earlier exercise to update the `TENANT_ID`, `CLIENT_ID` and `CLIENT_SECRET` values.
     - Define `USER_ID` with the user id that you'd like to create a Microsoft Teams Meeting. 
 
-    You can get the User ID from the [Azure Portal](https://portal.azure.com). Select **Azure Active Directory** and navigate to the **Users** tab on the side bar. Search for your user name and select it to see the user details. Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
+    You can get the User ID from the [Azure Portal](https://portal.azure.com).
+
+    - Login using your Microsoft 365 developer tenant admin account.
+    - Select **Azure Active Directory**,
+    - Navigate to the **Users** tab on the side bar. 
+    - Search for your user name and select it to see the user details. 
+    - Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
 
     :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
 
@@ -66,7 +74,7 @@
 
 1. Locate the `ensureGraphForAppOnlyAuth` function:
     - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
-    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use app-only permissions (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
+    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use [app-only permissions](graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
 
     ```typescript
     function ensureGraphForAppOnlyAuth() {
@@ -155,7 +163,9 @@
 
 1. Now that the `TeamsMeetingFunction` is ready to use, let's call the function from the React app.
 
-1. Go back to the *samples/acs-to-teams-meeting/client/react* folder in VS Code. Add a *.env* file into the folder with the following values:
+1. Go back to the *samples/acs-to-teams-meeting/client/react* folder in VS Code. 
+
+1. Add an *.env* file into the folder with the following values:
 
     ```console
     REACT_APP_TEAMS_MEETING_FUNCTION=http://localhost:7071/api/TeamsMeetingFunction
@@ -205,6 +215,6 @@
 
 1. Open another terminal window, `cd` into the *react* folder, and run `npm start` to build and run the application. 
 
-1. After the application builds, you should see the ACS calling UI displayed and can then call into the Teams meeting that was dynamically created by Microsoft Graph.
+1. After the application builds and loads, you should see the ACS calling UI displayed and can then call into the Teams meeting that was dynamically created by Microsoft Graph.
 
 1. Stop both of the terminal processes (React and Azure Functions) by entering <kbd>Ctrl + C</kbd> in each terminal window.
