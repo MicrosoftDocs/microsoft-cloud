@@ -31,7 +31,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 ---
 
-## Calling the Azure Function from React
+### Calling the Azure Function from React
 
 1. Now that the `TeamsMeetingFunction` is ready to use, let's call the function from the React app.
 

@@ -1,7 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 
-### Deploy to Azure Functions
-
 1. Open the `samples/acs-video-to-teams-meeting/server/csharp/GraphACSFunctions.sln` project in Visual Studio.
 
 1. Right-click on the `GraphACSFunctions` project and select **Publish**.

@@ -10,6 +10,8 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 
 :::image type="content" source="../media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
 
+### Deploy to Azure Functions
+
 # [C#](#tab/csharp)
 
 [!INCLUDE [CSharp](./07-Deploy-to-Azure-Container-App-CS.md)]

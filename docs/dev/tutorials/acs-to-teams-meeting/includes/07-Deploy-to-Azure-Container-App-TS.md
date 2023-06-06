@@ -1,7 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 
-## Deploy to Azure Functions
-
 Let's get started by using VS Code to deploy the functions code to Azure Functions.
 
 1. Open the *samples/acs-to-teams-meeting/server/typescript* project folder in Visual Studio Code.
