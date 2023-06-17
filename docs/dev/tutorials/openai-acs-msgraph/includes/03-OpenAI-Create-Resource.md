@@ -75,7 +75,7 @@ In this exercise you will:
 <a id="update-env-file"></a>
 ### Update the Project's `.env` File
 
-1. Open the `.env` file at the root of the project.
+1. Go back to Visual Studio Code and open the `.env` file at the root of the project.
 
 1. Copy the **KEY 1** value from your Azure OpenAI resource and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *openai-acs-msgraph* folder:
 
