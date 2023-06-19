@@ -34,28 +34,48 @@ In this exercise you will:
 
 1. Select **Next** until you get to the **Review + submit** screen. Select **Create**.
 
-1. Once your Azure OpenAI resource is created, navigate to it and select **Model deployments**.
+1. Once your Azure OpenAI resource is created, navigate to it and select **Keys and Endpoint** in the **Resource Management** section.
 
-1. Select **Create** in the toolbar.
+1. Locate the **KEY 1** and **Endpoint** values. You'll use both values in the next section so copy them to a local file.
+
+    :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
+
+1. Select **Model deployments** in the **Resource Management** section. 
+
+1. Select the **Manage Deployments** button to go to Azure OpenAI Studio.
+
+1. Select **Create new deployment** in the toolbar.
 
 1. Enter the following values:
-    - Model deployment name: **gpt-35-turbo**.
     - Model: **gpt-35-turbo**.
-    - Version: **1**
+    - Deployment name: **gpt-35-turbo**.
 
     > [!NOTE]
     > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin) such as *text-ada-001*, *text-curie-001*, *text-divinci-003*, and *gpt-35-turbo*. Each model can be used to handle different scenarios.
 
-1. Select **Save**.
+1. Select **Create**.
 
-1. Select **Keys and Endpoint** in the **Resource Management** section and locate the **KEY 1** and **Endpoint** values.
+1. Once the model is deployed, select **Completions** in the **Playground** section.
 
-    :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
+1. Select the **gpt-35-turbo** model from the **Deployments** dropdown. Select **Generate an email** from the **Examples** dropdown.
+
+    :::image type="content" source="../media/azure-openai-email-completions.png" alt-text="Azure OpenAI Playground" border="true":::
+
+1. Take a moment to read through the prompt text that's provided. Select **Generate** to see the text that the model generates.
+
+1. Select **Regenerate**. Note that the text is different each time.
+
+1. To the right of the screen you'll see properties listed such as **Temperature**. Change the **Temperature** value to **0** and select **Regenerate** again. Read through the email text that is generated.
+
+1. Select **Regenerate** one final time and note that the email text is the same as the text that was generated previously.
+
+    > [!NOTE] 
+    > Lowering the temperature means that the model will produce more repetitive and deterministic responses. Increasing the temperature will result in more unexpected or creative responses.
 
 <a id="update-env-file"></a>
 ### Update the Project's `.env` File
 
-1. Open the `.env` file at the root of the project.
+1. Go back to Visual Studio Code and open the `.env` file at the root of the project.
 
 1. Copy the **KEY 1** value from your Azure OpenAI resource and assign it to `OPENAI_API_KEY` in the *.env* file located in the root of the *openai-acs-msgraph* folder:
 
