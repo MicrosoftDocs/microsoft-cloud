@@ -36,13 +36,33 @@ Let's get started by experimenting with different rules that can be used to gene
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. It has the following features:
+1. Open the *server/apiRoutes.ts* file and locate the `completeEmailSmsMessages` route. This API is called by front-end portion of the app when the **Generate Email/SMS Messages** button is selected. It retrieves the user prompt, company, and contact name values from the body and passes them to the `completeEmailSMSMessages()` function in the *server/openAI.ts* file. The results are then returned to the client.
 
-    - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
-        - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
-        - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
-    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
-    - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
+    ```typescript
+    router.post('/completeEmailSmsMessages', async (req, res) => {
+        const { prompt, company, contactName } = req.body;
+
+        if (!prompt || !company || !contactName) {
+            return res.status(400).json({ 
+                status: false, 
+                error: 'The prompt, company, and contactName parameters must be provided.' 
+            });
+        }
+
+        let result;
+        try {
+            // Call OpenAI to get the email and SMS message completions
+        result = await completeEmailSMSMessages(prompt, company, contactName);
+        }
+        catch (e: unknown) {
+            console.error('Error parsing JSON:', e);
+        }
+
+        res.json(result);
+    });
+    ```
+
+1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. 
 
     ```typescript
     async function completeEmailSMSMessages(prompt: string, company: string, contactName: string) {
@@ -95,6 +115,14 @@ Let's get started by experimenting with different rules that can be used to gene
     }
     ```
 
+    This function has the following features:
+
+    - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
+        - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
+        - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
+    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
+    - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
+
 1. Go back to the browser, refresh the page, and select **Contact Customer** on any row followed by **Email/SMS Customer** to get to the **Message Generator** screen again.
 
 1. Enter the following rules into the **Message Generator** input:
@@ -119,7 +147,8 @@ Let's get started by experimenting with different rules that can be used to gene
     to customers. Can you please provide new User Rules that align with these practices?
     ```
 
-    Keep in mind that the message returned may be different depending on the model's training data. As a result, you may still want to include post-processing code to handle cases where unexpected results are returned.
+    > [!NOTE]
+    > Keep in mind that the message returned may be different depending on the model's training data. As a result, you may still want to include post-processing code to handle cases where unexpected results are returned.
 
 1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone and never use inappropriate language.` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
 
@@ -141,5 +170,3 @@ Let's get started by experimenting with different rules that can be used to gene
     - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
-
-1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. 

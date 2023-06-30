@@ -59,23 +59,17 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Open the *server/apiRoutes.ts* file and locate the `generatesql` route. This API route is called by the client-side application running in the browser and used to generate SQL from a natural language query. Once the SQL query is retrieved, it's used to query the database and return results. 
 
-1. Notice the following functionality in the `generatesql` route:
-
-    - It retrieves the user query value from `req.body.query` and assigns it to a variable named `userQuery`. This value will be used in the GPT prompt.
-    - It calls a `getSQL()` function to convert natural language to SQL.
-    - It passes the generated SQL to a function named `queryDb` that executes the SQL query and returns results from the database.
-
     ```typescript
-    router.post('/generatesql', async (req, res) => {
-        const userQuery = req.body.query;
+    router.post('/generateSql', async (req, res) => {
+        const userPrompt = req.body.prompt;
 
-        if (!userQuery) {
-            return res.status(400).json({ error: 'Missing parameter "query".' });
+        if (!userPrompt) {
+            return res.status(400).json({ error: 'Missing parameter "prompt".' });
         }
 
         try {
-            // Call Azure OpenAI to convert the user query into a SQL query
-            const sqlCommandObject = await getSQL(userQuery);
+            // Call Azure OpenAI to convert the user prompt into a SQL query
+            const sqlCommandObject = await getSQL(userPrompt);
 
             let result: any[] = [];
             // Execute the SQL query
@@ -92,6 +86,12 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         }
     });
     ```
+
+    Notice the following functionality in the `generatesql` route:
+
+    - It retrieves the user query value from `req.body.query` and assigns it to a variable named `userQuery`. This value will be used in the GPT prompt.
+    - It calls a `getSQL()` function to convert natural language to SQL.
+    - It passes the generated SQL to a function named `queryDb` that executes the SQL query and returns results from the database.
 
 1. Open the *server/openAI.ts* file in your editor and locate the `getSQL()` function. This function is called by the `generatesql` route and is used to convert natural language to SQL.
 
@@ -123,6 +123,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         try {
             results = await callOpenAI(systemPrompt, userPrompt);
             if (results) {
+                console.log('results', results);
                 const parsedResults = JSON.parse(results);
                 queryData = { ...queryData, ...parsedResults };
                 if (isProhibitedQuery(queryData.sql)) {
@@ -193,14 +194,19 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 1. The `getSQL()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
 
     ```typescript
-    function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0) {
+    function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
+        
+        if (isAzureOpenAI && useBYOD) {
+            // Call endpoint that combines Azure OpenAI with Cognitive Search for custom data sources.
+            return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
+        }
+        
         if (isAzureOpenAI) {
-            return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
+            return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature, useBYOD);
         }
-        else {
-            return getOpenAICompletion(systemPrompt, userPrompt, temperature);
-        }
+        
+        return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```
 
@@ -210,7 +216,8 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 1. Locate the `getAzureOpenAICompletion()` function.
 
     ```typescript
-    async function getAzureOpenAICompletion(systemPrompt: string, userPrompt: string, temperature = 0): Promise<string> {
+    async function getAzureOpenAICompletion(systemPrompt: string, userPrompt: string, 
+      temperature: number): Promise<string> {
 
         if (!OPENAI_API_KEY || !OPENAI_ENDPOINT || !OPENAI_MODEL) {
             throw new Error('Missing Azure OpenAI API key, endpoint, or model in environment variables.');
@@ -218,8 +225,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
         // While it's possible to use the OpenAI SDK (as of today) with a little work, we'll use the REST API directly for Azure OpenAI calls.
         // https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference
-        const url = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
-        const data = {
+        const chatGptUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
+
+        const messageData: ChatGPTData = {
             max_tokens: 1024,
             temperature,
             messages: [
@@ -228,17 +236,19 @@ Let's start by experimenting with different GPT prompts that can be used to conv
             ]
         };
 
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'api-key': `${OPENAI_API_KEY}`,
-                },
-                body: JSON.stringify(data),
-            });
+        const headersBody: OpenAIHeadersBody = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'api-key': OPENAI_API_KEY,
+            },
+            body: JSON.stringify(messageData),
+        };
 
+        try {
+            const response = await fetch(chatGptUrl, headersBody);
             const completion = await response.json() as AzureOpenAIResponse;
+            console.log(completion);
             let content = (completion.choices[0]?.message?.content?.trim() ?? '') as string;
             console.log('Azure OpenAI Output: \n', content);
             if (content && content.includes('{') && content.includes('}')) {
@@ -263,7 +273,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Creates a `url` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
     - Creates a data object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
         - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
-        - `temperature`: What sampling temperature to use, between 0 and 2. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
+        - `temperature`: What sampling temperature to use. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example two messages are passed in: one for the system and one for the user. The system message defines the overall behavior and rules that will be used, while the user message defines the prompt text provided by the user.
     - Uses `fetch()` to send the `url` and `data` values to Azure OpenAI and processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
     
@@ -295,7 +305,10 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. QUESTION: Why is this still working after adding a rule saying that table names, function names, and procedure names aren't allowed? 
 
-    ANSWER: This is due to the "only JSON" rule. If the rules were more flexible and didn't require a JSON object to be returned, you would see a message about Azure OpenAI being unable to perform the task.
+    ANSWER: This is due to the "only JSON" rule. If the rules were more flexible and didn't require a JSON object to be returned, you may see a message about Azure OpenAI being unable to perform the task.
+
+    > [!NOTE]
+    > It's important to note that OpenAI models can return unexpected results on occasion that may not match the rules you've defined. It's important to plan for that in your code.
 
 1. Take out the following rule from `systemPrompt` and save the file.
 

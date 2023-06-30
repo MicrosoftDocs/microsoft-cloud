@@ -2,13 +2,13 @@
 
 The integration of Azure OpenAI Natural Language Processing (NLP) and completion capabilities offers significant potential for enhancing user productivity. By leveraging appropriate prompts and guidelines, an AI assistant can efficiently generate various forms of communication, such as email messages, SMS messages, and more. This functionality leads to heightened user efficiency and streamlined workflows.
 
-While this feature is quite powerful on its own, there may be cases when users need to generate completions based on your company's custom data. For example, you might possess a collection of product manuals that may be challenging for users to navigate when they're trying to assist customers with installation issues. Alternatively, you might maintain a comprehensive set of Frequently Asked Questions (FAQs) related to healthcare benefits that can prove challenging for users to read through and get the answers they need. In these cases and many others, Azure OpenAI enables you to leverage your own data to generate completions, ensuring a more tailored and contextually accurate response to user questions.
+While this feature is quite powerful on its own, there may be cases where users need to generate completions based on your company's custom data. For example, you might have a collection of product manuals that may be challenging for users to navigate when they're assisting customers with installation issues. Alternatively, you might maintain a comprehensive set of Frequently Asked Questions (FAQs) related to healthcare benefits that can prove challenging for users to read through and get the answers they need. In these cases and many others, Azure OpenAI enables you to leverage your own data to generate completions, ensuring a more tailored and contextually accurate response to user questions.
 
 In this exercise, you will:
 
 - Create a custom data source using Azure AI Studio.
-- Start a chat session in the Chat playground to generate completions based upon your own data.
-- Explore code that calls the Azure OpenAI API to generate completions based upon your own data.
+- Start a chat session in the Chat playground to experiment with generating completions based upon your own data.
+- Explore code that uses Azure Cognitive Search and Azure OpenAI to generate completions based upon your own data.
 
 Let's get started by adding a custom data source to Azure AI Studio.
 
@@ -123,7 +123,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
     :::image type="content" source="../media/aoai-studio-chat-session-sample-code.png" alt-text="Azure OpenAI Studio Chat Session - Sample Code":::
 
-1. Turn on the **Show raw JSON** toggle in the **Chat session*. Notice the chat session starts with message similar to the following:
+1. Turn on the **Show raw JSON** toggle in the **Chat session*. Notice the chat session starts with a message similar to the following:
 
     ```json
     {
@@ -134,117 +134,182 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Now that you've created a custom data source and experimented with it in the Chat playground, let's see how you can use it in the project's application.
 
+### Using the Bring Your Own Data Feature in the Application
+
+1. Open the *.env* file and update the following values with your Cognitive Services endpoint, key, and index name. You copied the endpoint and key to a local file earlier in this exercise.
+
+    ```
+    AZURE_COGNITIVE_SEARCH_ENDPOINT=<COGNITIVE_SERVICES_ENDPOINT_VALUE>
+    AZURE_COGNITIVE_SEARCH_KEY=<COGNITIVE_SERVICES_KEY_VALUE>
+    AZURE_COGNITIVE_SEARCH_INDEX=byod-search-index
+    ```
+
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+
+1. Once the application has loaded in the browser, select the **Chat Help** icon in the upper-right of the application.
+
+    :::image type="content" source="../media/chat-help-icon.png" alt-text="Chat Help Icon":::
+
+1. The following text should appear in the chat dialog:
+
+    ```text
+    How should I handle refund requests?
+    ```
+
+1.  Select the **Get Help** button. You should see results returned from the *Company FAQs.docx* document that you uploaded earlier in Azure AI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
 
 ### Exploring the Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
-
-1. Open the *server/openAI.ts* file and locate the `completeEmailSMSMessages()` function. It has the following features:
-
-    - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
-        - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
-        - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
-    - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
-    - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
+1. Open the *server/apiRoutes.ts* file and locate the `completeBYOD` route. This API is called by front-end portion of the app when the **Get Help** button is selected. It retrieves the user prompt from the body and passes it to the `completeBYOD()` function in the *server/openAI.ts* file. The results are then returned to the client.
 
     ```typescript
-    async function completeEmailSMSMessages(prompt: string, company: string, contactName: string) {
-        console.log('Inputs:', prompt, company, contactName);
+    router.post('/completeBYOD', async (req, res) => {
+        const { prompt } = req.body;
 
-        const systemPrompt = `
-        Assistant is a bot designed to help users create email and SMS messages from data and 
-        return a JSON object with the email and SMS message information in it.
+        if (!prompt) {
+            return res.status(400).json({ 
+                status: false, 
+                error: 'The prompt parameter must be provided.' 
+            });
+        }
 
-        Rules:
-        - Generate a subject line for the email message.
-        - Use the User Rules to generate the messages. 
-        - All messages should have a friendly tone and never use inappropriate language.
-        - SMS messages should be in plain text format and no more than 160 characters. 
-        - Start the message with "Hi <Contact Name>,\n\n". Contact Name can be found in the user prompt.
-        - Add carriage returns to the email message to make it easier to read. 
-        - End with a signature line that says "Sincerely,\nCustomer Service".
-        - Return a JSON object with the emailSubject, emailBody, and SMS message values in it. 
-
-        Example JSON object: { "emailSubject": "", "emailBody": "", "sms": "" }
-
-        - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-        Just the JSON object is needed.
-        `;
-
-        const userPrompt = `
-        User Rules: 
-        ${prompt}
-
-        Contact Name: 
-        ${contactName}
-        `;
-
-        let content: EmailSmsResponse = { status: true, email: '', sms: '', error: '' };
-        let results = '';
+        let result;
         try {
-            results = await callOpenAI(systemPrompt, userPrompt, 0.5);
-            if (results) {
-                const parsedResults = JSON.parse(results);
-                content = { ...content, ...parsedResults, status: true };
-            }
+            // Call OpenAI to get custom "bring your own data" completion
+        result = await completeBYOD(prompt);
         }
-        catch (e) {
-            console.log(e);
-            content.status = false;
-            content.error = results;
+        catch (e: unknown) {
+            console.error('Error parsing JSON:', e);
         }
 
-        return content;
+        res.json(result);
+    });
+    ```
+
+1. Open the *server/openAI.ts* file and locate the `completeBYOD()` function.
+
+    ```typescript
+    async function completeBYOD(userPrompt: string): Promise<string> {
+        const systemPrompt = 'You are an AI assistant that helps people find information.';
+        // Pass that we're using Cognitive Search along with Azure OpenAI.
+        return await callOpenAI(systemPrompt, userPrompt, 0, true);
     }
     ```
 
-1. Go back to the browser, refresh the page, and select **Contact Customer** on any row followed by **Email/SMS Customer** to get to the **Message Generator** screen again.
+    This function has the following features:
+    
+    - The `userPrompt` parameter contains the information the user typed into the chat help dialog.
+    - the `systemPrompt` variable defines that an AI assistant designed to help people find information will be used.
+    - `callOpenAI()` is used to call the Azure OpenAI API and return the results. It passes the `systemPrompt` and `userPrompt` values as well as the following parameters:
+        - `temperature` - The amount of creativity to include in the response. The user needs consistent (less creative) answers in this case so the value is set to 0.
+        - `useBYOD` - A boolean value that indicates whether or not to use Cognitive Search along with Azure OpenAI. In this case, it's set to `true` so Cognitive Search functionality will be used.
 
-1. Enter the following rules into the **Message Generator** input:
+1.  Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's very similar to the `getAzureOpenAICompletion()` function you looked at in an earlier exercise but is included as a separate function to highlight a few differences that are unique to the bring your own data scenario:
 
-    - Order is ahead of schedule.
-    - Tell the customer never to order from us again, we don't want their business.
+    - The `byodUrl` value includes an `extensions` segment in the URL:
 
-1. Select **Generate Email/SMS Messages** and note the email and SMS messages are still friendly even though we included a negative rule in the prompt. This is because the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt is overriding the negative rule in the user prompt.
+        ```typescript
+        const byodUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/extensions/chat/completions?api-version=${OPENAI_API_VERSION}`;
+        ```
 
-1. Remove the following rule from the `systemPrompt`:
+    - It adds a `dataSources` property to the message data that is sent to Azure OpenAI. The `dataSources` property contains the Cognitive Search resource's `endpoint`, `key`, and `indexName` values that were added to the `.env` file earlier in this exercise.
 
-    ```
-    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-    Just the JSON object is needed.
-    ```
+        ```typescript
+        const messageData: ChatGPTData = {
+            max_tokens: 1024,
+            temperature,
+            messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: userPrompt }
+            ],
+            // Adding BYOD data source so that Cognitive Search is used with Azure OpenAI
+            dataSources: [
+                {
+                    type: 'AzureCognitiveSearch',
+                    parameters: {
+                        endpoint: AZURE_COGNITIVE_SEARCH_ENDPOINT,
+                        key: AZURE_COGNITIVE_SEARCH_KEY,
+                        indexName: AZURE_COGNITIVE_SEARCH_INDEX
+                    }
+                }
+            ]
+        };
+        ```
 
-1. Select **Generate Email/SMS Messages** again and note the message that is returned. Due to the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt, you may see a message similar to the following: 
+    - The `headersBody` object includes `chatpgpt_url` and `chatgpt_key` properties that are used to call Azure OpenAI once the Cognitive Search results are returned. 
 
-    ```
-    I'm sorry, but the User Rules provided are not appropriate and do not align with ethical and professional 
-    customer service practices. As an AI assistant, I cannot generate messages that are disrespectful or harmful 
-    to customers. Can you please provide new User Rules that align with these practices?
-    ```
+        ```typescript
+        const headersBody: OpenAIHeadersBody = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'api-key': OPENAI_API_KEY,
+                chatgpt_url: byodUrl.replace('extensions/', ''),
+                chatgpt_key: OPENAI_API_KEY
+            },
+            body: JSON.stringify(messageData),
+        };
+        ```
 
-    Keep in mind that the message returned may be different depending on the model's training data. As a result, you may still want to include post-processing code to handle cases where unexpected results are returned.
+    - The response returned by Azure OpenAI includes two messsages with roles of `tool` and `assistant`. The sample application uses the second message with a `role` of `assistant` to provide the user the information they requested. In cases where you want to provide the user with additional information about the documents used to create the response, you can use the first message which includes the `url` to the document(s).
 
-1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone and never use inappropriate language.` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
+        ```json
+        {
+            "id": "12345678-1a2b-3c4e5f-a123-12345678abcd",
+            "model": "",
+            "created": 1684304924,
+            "object": "chat.completion",
+            "choices": [
+                {
+                    "index": 0,
+                    "messages": [
+                        {
+                            "role": "tool",
+                            "content": "{\"citations\": [{\"content\": \"\\nCognitive Services are cloud-based artificial intelligence (AI) services...\", \"id\": null, \"title\": \"What is Cognitive Services\", \"filepath\": null, \"url\": null, \"metadata\": {\"chunking\": \"orignal document size=250. Scores=0.4314117431640625 and 1.72564697265625.Org Highlight count=4.\"}, \"chunk_id\": \"0\"}], \"intent\": \"[\\\"Learn about Azure Cognitive Services.\\\"]\"}",
+                            "end_turn": false
+                        },
+                        {
+                            "role": "assistant",
+                            "content": " \nAzure Cognitive Services are cloud-based artificial intelligence (AI) services that help developers build cognitive intelligence into applications without having direct AI or data science skills or knowledge. [doc1]. Azure Machine Learning is a cloud service for accelerating and managing the machine learning project lifecycle. [doc1].",
+                            "end_turn": true
+                        }
+                    ]
+                }
+            ]
+        }
+        ```
 
-1. Go back to the email/SMS message generator in the browser and run the same rules again:
+        The following code is used to access the messages. Although citations aren't being used here, they're logged to the console to enable you to see the type of data that's returned.
 
-    - Order is ahead of schedule.
-    - Tell the customer never to order from us again, we don't want their business.
+        ```typescript
+        const response = await fetch(byodUrl, headersBody);
+        const completion = await response.json();
+        console.log(completion);
 
-1. Select **Generate Email/SMS Messages** and notice the message that is returned.
+        if (completion.error) {
+            return completion.error.message;
+        }
 
-    > [!NOTE]
-    > This further illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
+        const citations = completion.choices[0].messages[0].content.trim();
+        console.log('Azure OpenAI BYOD Citations: \n', citations);
+        let content = completion.choices[0].messages[1].content.trim();
+        console.log('Azure OpenAI BYOD Output: \n', content);
+        return content;
+        ```
 
-1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run the rules again. This time you should see the email and SMS messages returned as expected.
+## Clean Up Azure Resources
+
+1. To cleanup your resources and avoid additional charges to your Azure account, go to the Azure portal and delete the following resources:
+
+    - The Azure Cognitive Search resource
+    - The Azure Storage resource
 
 1. A few final points to consider before moving on to the next exercise:
 
-    - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they're sent. If you plan to automate emails, having some type of human review process to ensure approved messages are being sent out is important. View AI as being a copilot, not an autopilot.
-    - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
-    - You may need to include post-processing code to ensure unexpected results are handled properly.
-    - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
+    - The "bring your own data" feature of Azure OpenAI is currently in preview. It's not recommended to use it in production applications at this time.
+    - The sample application uses a single index in Azure Cognitive Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
+    - Security needs to be factored this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
-1. Now that you've learned about Azure OpenAI, prompts, and completions, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. 
+1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content.
