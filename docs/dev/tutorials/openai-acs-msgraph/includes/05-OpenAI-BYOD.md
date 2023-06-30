@@ -22,7 +22,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Select **Upload files** from the **Select data source** dropdown.
 
-1. Under the **Select Azure Blob storage resource** dropdown, select **Create a new Azure Blog storage resource**.
+1. Under the **Select Azure Blob storage resource** dropdown, select **Create a new Azure Blob storage resource**.
 
 1. This will take you to the Azure Portal where you can perform the following tasks:
 
@@ -30,7 +30,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     - Select a region that's close to your location.
     - Select **Review** followed by **Create**.
 
-1. Once the blog storage resource is created, go back to the Azure AI Studio dialog and select your newly created blog storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
+1. Once the blob storage resource is created, go back to the Azure AI Studio dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
 
 1. Cross-origin resource sharing (CORS) needs to be turned out in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
 
