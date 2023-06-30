@@ -34,7 +34,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Cross-origin resource sharing (CORS) needs to be turned out in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
 
-    :::image type="content" source="../media/aoai-studio-turn-on-cors.png.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
+    :::image type="content" source="../media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
 
 1. Under the **Select Azure Cognitive Search resource** dropdown, select **Create a new Azure Cognitive Search resource**.
 
