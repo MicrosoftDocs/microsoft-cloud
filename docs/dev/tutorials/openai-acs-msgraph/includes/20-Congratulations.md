@@ -8,12 +8,12 @@ Congratulations! You've learned how Azure OpenAI can be used to enhance user pro
 
 ## Clean Up Azure Resources
 
-1. Cleanup your Azure resources to avoid additional charges to your account. Go to the Azure portal and delete the following resources:
+Cleanup your Azure resources to avoid additional charges to your account. Go to the Azure portal and delete the following resources:
 
-    - The Azure Cognitive Search resource
-    - The Azure Storage resource
-    - The Azure OpenAI resource
-    - The Azure Communication Services resource
+- The Azure Cognitive Search resource
+- The Azure Storage resource
+- The Azure OpenAI resource
+- The Azure Communication Services resource
 
 ### Next Steps
 
