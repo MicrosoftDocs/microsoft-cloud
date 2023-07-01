@@ -206,15 +206,15 @@ Let's get started by adding a custom data source to Azure AI Studio.
         - `temperature` - The amount of creativity to include in the response. The user needs consistent (less creative) answers in this case so the value is set to 0.
         - `useBYOD` - A boolean value that indicates whether or not to use Cognitive Search along with Azure OpenAI. In this case, it's set to `true` so Cognitive Search functionality will be used.
 
-1.  Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's very similar to the `getAzureOpenAICompletion()` function you looked at in an earlier exercise but is included as a separate function to highlight a few differences that are unique to the bring your own data scenario:
+1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the bring your own data scenario available in Azure OpenAI.
 
-    - The `byodUrl` value includes an `extensions` segment in the URL:
+    - The `byodUrl` value includes an `extensions` segment in the URL whereas the URL for the standard Azure OpenAI API does not.
 
         ```typescript
         const byodUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/extensions/chat/completions?api-version=${OPENAI_API_VERSION}`;
         ```
 
-    - It adds a `dataSources` property to the message data that is sent to Azure OpenAI. The `dataSources` property contains the Cognitive Search resource's `endpoint`, `key`, and `indexName` values that were added to the `.env` file earlier in this exercise.
+    - A `dataSources` property is added to the `messageData` object sent to Azure OpenAI. The `dataSources` property contains the Cognitive Search resource's `endpoint`, `key`, and `indexName` values that were added to the `.env` file earlier in this exercise.
 
         ```typescript
         const messageData: ChatGPTData = {
@@ -238,7 +238,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
         };
         ```
 
-    - The `headersBody` object includes `chatpgpt_url` and `chatgpt_key` properties that are used to call Azure OpenAI once the Cognitive Search results are returned. 
+    - The `headersBody` object includes `chatpgpt_url` and `chatgpt_key` properties that are used to call Azure OpenAI once the Cognitive Search results are obtained. 
 
         ```typescript
         const headersBody: OpenAIHeadersBody = {
@@ -253,7 +253,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
         };
         ```
 
-    - The response returned by Azure OpenAI includes two messsages with roles of `tool` and `assistant`. The sample application uses the second message with a `role` of `assistant` to provide the user the information they requested. In cases where you want to provide the user with additional information about the documents used to create the response, you can use the first message which includes the `url` to the document(s).
+    - The response returned by Azure OpenAI includes two messsages with roles of `tool` and `assistant`. The sample application uses the second message with a `role` of `assistant` to provide the user the information they requested. In cases where you want to provide additional information about the documents used to create the response (as you saw earlier in the Azure AI Studio playground), you can use the first message which includes the `url` to the document(s).
 
         ```json
         {
@@ -281,9 +281,10 @@ Let's get started by adding a custom data source to Azure AI Studio.
         }
         ```
 
-        The following code is used to access the messages. Although citations aren't being used here, they're logged to the console to enable you to see the type of data that's returned.
+1. The following code is used in `getAzureOpenAIBYODCompletion()` to access the messages. Although citations aren't being used in this example, they're logged to the console so you can see the type of data that's returned.
 
-        ```typescript
+    ```typescript
+    try {
         const response = await fetch(byodUrl, headersBody);
         const completion = await response.json();
         console.log(completion);
@@ -294,22 +295,23 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
         const citations = completion.choices[0].messages[0].content.trim();
         console.log('Azure OpenAI BYOD Citations: \n', citations);
+
         let content = completion.choices[0].messages[1].content.trim();
         console.log('Azure OpenAI BYOD Output: \n', content);
+
         return content;
-        ```
 
-## Clean Up Azure Resources
-
-1. To cleanup your resources and avoid additional charges to your Azure account, go to the Azure portal and delete the following resources:
-
-    - The Azure Cognitive Search resource
-    - The Azure Storage resource
+    }
+    catch (e) {
+        console.error('Error getting BYOD data:', e);
+        throw e;
+    }
+    ```
 
 1. A few final points to consider before moving on to the next exercise:
 
     - The "bring your own data" feature of Azure OpenAI is currently in preview. It's not recommended to use it in production applications at this time.
     - The sample application uses a single index in Azure Cognitive Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
-    - Security needs to be factored this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
+    - Security needs to be carefully considered with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
-1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content.
+1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/cognitive-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
