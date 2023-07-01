@@ -75,7 +75,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 ## Using Your Custom Data Source in the Chat Playground
 
-1. Locate the **Chat session** section and enter the following **User message**:
+1. Locate the **Chat session** section of the page and enter the following **User message**:
 
     ```text
     What safety rules are required to install a clock?
@@ -136,7 +136,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 ### Using the Bring Your Own Data Feature in the Application
 
-1. Open the *.env* file and update the following values with your Cognitive Services endpoint, key, and index name. You copied the endpoint and key to a local file earlier in this exercise.
+1. Go back to the project in Visual Studio Code and open the *.env* file. Update the following values with your Cognitive Services endpoint, key, and index name. You copied the endpoint and key to a local file earlier in this exercise.
 
     ```
     AZURE_COGNITIVE_SEARCH_ENDPOINT=<COGNITIVE_SERVICES_ENDPOINT_VALUE>
@@ -157,6 +157,14 @@ Let's get started by adding a custom data source to Azure AI Studio.
     ```
 
 1.  Select the **Get Help** button. You should see results returned from the *Company FAQs.docx* document that you uploaded earlier in Azure AI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
+
+1. Change the text to the following and select the **Get Help** button:
+
+    ```text
+    What safety rules are required to install a clock?
+    ```
+
+1. You should see results returned from the *Clock A102 Installation Instructions.docx* document that you uploaded earlier in Azure AI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
 
 ### Exploring the Code
 
