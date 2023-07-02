@@ -193,16 +193,18 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     ```typescript
     function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
-        
+
         if (isAzureOpenAI && useBYOD) {
             // Call endpoint that combines Azure OpenAI with Cognitive Search for custom data sources.
             return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
         }
-        
+
         if (isAzureOpenAI) {
-            return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature, useBYOD);
+            // Call Azure OpenAI
+            return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
-        
+
+        // Call OpenAI API directly
         return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```

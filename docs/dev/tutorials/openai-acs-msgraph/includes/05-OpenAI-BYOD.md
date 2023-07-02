@@ -236,9 +236,11 @@ Let's get started by adding a custom data source to Azure AI Studio.
         }
 
         if (isAzureOpenAI) {
+            // Call Azure OpenAI
             return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
 
+        // Call OpenAI API
         return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```
