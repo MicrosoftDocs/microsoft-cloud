@@ -4,6 +4,11 @@ The integration of Azure OpenAI Natural Language Processing (NLP) and completion
 
 While this feature is quite powerful on its own, there may be cases where users need to generate completions based on your company's custom data. For example, you might have a collection of product manuals that may be challenging for users to navigate when they're assisting customers with installation issues. Alternatively, you might maintain a comprehensive set of Frequently Asked Questions (FAQs) related to healthcare benefits that can prove challenging for users to read through and get the answers they need. In these cases and many others, Azure OpenAI Service enables you to leverage your own data to generate completions, ensuring a more tailored and contextually accurate response to user questions.
 
+Here's a quick overview of how the "bring your own data" feature works from the [Azure OpenAI documentation](/azure/cognitive-services/openai/concepts/use-your-data#what-is-azure-openai-on-your-data).
+
+    > [!NOTE]
+    > One of the key features of Azure OpenAI on your data is its ability to retrieve and utilize data in a way that enhances the model's output. Azure OpenAI on your data, together with Azure Cognitive Search, determines what data to retrieve from the designated data source based on the user input and provided conversation history. This data is then augmented and resubmitted as a prompt to the OpenAI model, with retrieved information being appended to the original prompt. Although retrieved data is being appended to the prompt, the resulting input is still processed by the model like any other prompt. Once the data has been retrieved and the prompt has been submitted to the model, the model uses this information to provide a completion. 
+
 In this exercise, you will:
 
 - Create a custom data source using Azure AI Studio.
@@ -13,6 +18,7 @@ In this exercise, you will:
 Let's get started by adding a custom data source to Azure AI Studio.
 
 ### Adding a Custom Data Source to Azure AI Studio
+
 
 1. Navigate to [Azure OpenAI Studio](https://oai.azure.com/) and sign in with credentials that have access to your Azure OpenAI resource. 
 
@@ -42,16 +48,18 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
     - Enter a unique name for the Cognitive Search resource such as **byodsearch[Your Last Name]**.
     - Select a region that's close to your location.
-    - In the **Pricing tier** section, select **Change Pricing Tier** and select **Basic** followed by **Select**. The free tier will not work for this exercise, so you'll clean up the Cognitive Search resource at the end of this exercise.
+    - In the **Pricing tier** section, select **Change Pricing Tier** and select **Basic** followed by **Select**. The free tier isn't supported, so you'll clean up the Cognitive Search resource at the end of this tutorial.
     - Select **Review** followed by **Create**.
 
 1. Once the Cognitive Search resource is created, go to the resource **Overview** page and copy the **Url** value to a local file.
 
 1. Select **Keys** in the left navigation menu and copy the **Primary admin key** value to a local file. You'll need these values later in the exercise.
 
-1.  go back to the Azure AI Studio dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
+    :::image type="content" source="../media/cognitive-search-key.png" alt-text="Azure OpenAI Studio Cognitive Search Keys":::
 
-1. Enter **byod-search-index** for the **Enter the index name** value.
+1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
+
+1. Enter a value of **byod-search-index** for the **Enter the index name** value.
 
 1. Select the **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account**  checkbox.
 
@@ -59,7 +67,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. In the **Upload files** section of the dialog, select **Browse for a file**.
 
-1. Navigate to the project's **customer documents** folder (located at the root of the project) and select the following files:
+1. Navigate to the project's *customer documents* folder (located at the root of the project) and select the following files:
 
     - *Clock A102 Installation Instructions.docx* 
     - *Company FAQs.docx*
@@ -71,17 +79,17 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Select **Next**. Review the details and select **Save and close**. 
 
-1. Now that your custom data has been uploaded in Azure AI Studio, the data will be indexed and made available to use in the **Chat playground**. This process may take a few minutes. Once it's completed, continue to the next section of this exercise.
+1. Now that your custom data has been uploaded, the data will be indexed and available to use in the **Chat playground**. This process may take a few minutes. Once it's completed, continue to the next section.
 
 ## Using Your Custom Data Source in the Chat Playground
 
-1. Locate the **Chat session** section of the page and enter the following **User message**:
+1. Locate the **Chat session** section of the page in Azure AI Studio and enter the following **User message**:
 
     ```text
     What safety rules are required to install a clock?
     ```
 
-1. You should see results similar to the following displayed:
+1. You should see a result similar to the following displayed:
 
     :::image type="content" source="../media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session":::
 
@@ -93,7 +101,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     What should I do to mount the clock on the wall?
     ```
 
-1. You should see results similar to the following displayed:
+1. You should see a result similar to the following displayed:
 
     :::image type="content" source="../media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session":::
 
@@ -109,7 +117,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     How should I handle refund requests?
     ```
 
-1. You should see results similar to the following displayed:
+1. You should see a result similar to the following displayed:
 
     :::image type="content" source="../media/aoai-studio-chat-session-faq.png" alt-text="Azure OpenAI Studio Chat Session":::
 
@@ -119,7 +127,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
     :::image type="content" source="../media/aoai-studio-chat-session-view-code.png" alt-text="Azure OpenAI Studio Chat Session - View Code":::
 
-1. In the dialog that appears, note that you can switch between different languages, view the endpoint, and access the endpoint's key. Close the **Sample Code** dialog window.
+1. Note that you can switch between different languages, view the endpoint, and access the endpoint's key. Close the **Sample Code** dialog window.
 
     :::image type="content" source="../media/aoai-studio-chat-session-sample-code.png" alt-text="Azure OpenAI Studio Chat Session - Sample Code":::
 
@@ -144,7 +152,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     AZURE_COGNITIVE_SEARCH_INDEX=byod-search-index
     ```
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the earlier exercise before continuing.
 
 1. Once the application has loaded in the browser, select the **Chat Help** icon in the upper-right of the application.
 
@@ -164,13 +172,15 @@ Let's get started by adding a custom data source to Azure AI Studio.
     What safety rules are required to install a clock?
     ```
 
-1. You should see results returned from the *Clock A102 Installation Instructions.docx* document that you uploaded earlier in Azure AI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
+1. You should see results returned from the *Clock A102 Installation Instructions.docx* document that you uploaded earlier in Azure AI Studio. This document is also available in the **customer documents** folder at the root of the project.
 
 ### Exploring the Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. Open the *server/apiRoutes.ts* file and locate the `completeBYOD` route. This API is called by front-end portion of the app when the **Get Help** button is selected. It retrieves the user prompt from the body and passes it to the `completeBYOD()` function in the *server/openAI.ts* file. The results are then returned to the client.
+1. Go back to the project source code in Visual Studio Code.
+
+1. Open the *server/apiRoutes.ts* file and locate the `completeBYOD` route. This API is called when the **Get Help** button is selected in the Chat Help dialog. It retrieves the user prompt from the request body and passes it to the `completeBYOD()` function in the *server/openAI.ts* file. The results are then returned to the client.
 
     ```typescript
     router.post('/completeBYOD', async (req, res) => {
@@ -213,6 +223,25 @@ Let's get started by adding a custom data source to Azure AI Studio.
     - `callOpenAI()` is used to call the Azure OpenAI API and return the results. It passes the `systemPrompt` and `userPrompt` values as well as the following parameters:
         - `temperature` - The amount of creativity to include in the response. The user needs consistent (less creative) answers in this case so the value is set to 0.
         - `useBYOD` - A boolean value that indicates whether or not to use Cognitive Search along with Azure OpenAI. In this case, it's set to `true` so Cognitive Search functionality will be used.
+
+1. The `callOpenAI()` function looks like the following. Notice that it accepts a `useBYOD` parameter that is used to determine which OpenAI function to call. In this case, it's set to `true` so the `getAzureOpenAIBYODCompletion()` function will be called.
+
+    ```typescript
+    function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
+        const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
+
+        if (isAzureOpenAI && useBYOD) {
+            // Call endpoint that combines Azure OpenAI with Cognitive Search for custom data sources.
+            return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
+        }
+
+        if (isAzureOpenAI) {
+            return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
+        }
+
+        return getOpenAICompletion(systemPrompt, userPrompt, temperature);
+    }
+    ```
 
 1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the bring your own data scenario available in Azure OpenAI.
 
@@ -320,6 +349,6 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
     - The "bring your own data" feature of Azure OpenAI is currently in preview. It's not recommended to use it in production applications at this time.
     - The sample application uses a single index in Azure Cognitive Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
-    - Security needs to be carefully considered with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
+    - Security must be carefully evaluated with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
 1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/cognitive-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
