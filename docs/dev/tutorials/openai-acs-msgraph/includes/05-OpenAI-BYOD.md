@@ -32,7 +32,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Once the blob storage resource is created, go back to the Azure AI Studio dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
 
-1. Cross-origin resource sharing (CORS) needs to be turned out in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
+1. Cross-origin resource sharing (CORS) needs to be turned on in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
 
     :::image type="content" source="../media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
 
