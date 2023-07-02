@@ -4,7 +4,7 @@ The integration of Azure OpenAI Natural Language Processing (NLP) and completion
 
 While this feature is quite powerful on its own, there may be cases where users need to generate completions based on your company's custom data. For example, you might have a collection of product manuals that may be challenging for users to navigate when they're assisting customers with installation issues. Alternatively, you might maintain a comprehensive set of Frequently Asked Questions (FAQs) related to healthcare benefits that can prove challenging for users to read through and get the answers they need. In these cases and many others, Azure OpenAI Service enables you to leverage your own data to generate completions, ensuring a more tailored and contextually accurate response to user questions.
 
-Here's a quick overview of how the "bring your own data" feature works from the [Azure OpenAI documentation](/azure/cognitive-services/openai/concepts/use-your-data#what-is-azure-openai-on-your-data).
+Here's a quick overview of how the "bring your own data" feature works from the [Azure OpenAI documentation](/azure/cognitive-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin#what-is-azure-openai-on-your-data).
 
     > [!NOTE]
     > One of the key features of Azure OpenAI on your data is its ability to retrieve and utilize data in a way that enhances the model's output. Azure OpenAI on your data, together with Azure Cognitive Search, determines what data to retrieve from the designated data source based on the user input and provided conversation history. This data is then augmented and resubmitted as a prompt to the OpenAI model, with retrieved information being appended to the original prompt. Although retrieved data is being appended to the prompt, the resulting input is still processed by the model like any other prompt. Once the data has been retrieved and the prompt has been submitted to the model, the model uses this information to provide a completion. 
@@ -226,33 +226,33 @@ Let's get started by adding a custom data source to Azure AI Studio.
         - `temperature` - The amount of creativity to include in the response. The user needs consistent (less creative) answers in this case so the value is set to 0.
         - `useBYOD` - A boolean value that indicates whether or not to use Cognitive Search along with Azure OpenAI. In this case, it's set to `true` so Cognitive Search functionality will be used.
 
-1. The `callOpenAI()` function looks like the following. Notice that it accepts a `useBYOD` parameter that is used to determine which OpenAI function to call. In this case, it's set to `true` so the `getAzureOpenAIBYODCompletion()` function will be called.
+1. The `callOpenAI()` function accepts a `useBYOD` parameter that is used to determine which OpenAI function to call. In this case, it sets `useBYOD` to `true` so the `getAzureOpenAIBYODCompletion()` function will be called.
 
     ```typescript
     function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
 
         if (isAzureOpenAI && useBYOD) {
-            // Call endpoint that combines Azure OpenAI with Cognitive Search for custom data sources.
+            // Azure OpenAI + Cognitive Search: Bring Your Own Data
             return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
         }
 
         if (isAzureOpenAI) {
-            // Call Azure OpenAI
+            // Azure OpenAI
             return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
 
-        // Call OpenAI API
+        // OpenAI
         return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```
 
 1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the bring your own data scenario available in Azure OpenAI.
 
-    - The `byodUrl` value includes an `extensions` segment in the URL whereas the URL for the standard Azure OpenAI API does not.
+    - The `fetchUrl` value includes an `extensions` segment in the URL whereas the URL for the standard Azure OpenAI API does not.
 
         ```typescript
-        const byodUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/extensions/chat/completions?api-version=${OPENAI_API_VERSION}`;
+        const fetchUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/extensions/chat/completions?api-version=${OPENAI_API_VERSION}`;
         ```
 
     - A `dataSources` property is added to the `messageData` object sent to Azure OpenAI. The `dataSources` property contains the Cognitive Search resource's `endpoint`, `key`, and `indexName` values that were added to the `.env` file earlier in this exercise.
@@ -287,7 +287,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
             headers: {
                 'Content-Type': 'application/json',
                 'api-key': OPENAI_API_KEY,
-                chatgpt_url: byodUrl.replace('extensions/', ''),
+                chatgpt_url: fetchUrl.replace('extensions/', ''),
                 chatgpt_key: OPENAI_API_KEY
             },
             body: JSON.stringify(messageData),
@@ -334,10 +334,10 @@ Let's get started by adding a custom data source to Azure AI Studio.
             return completion.error.message;
         }
 
-        const citations = completion.choices[0].messages[0].content.trim();
+        const citations = (completion.choices[0]?.message[0]?.content?.trim() ?? '') as string;
         console.log('Azure OpenAI BYOD Citations: \n', citations);
 
-        let content = completion.choices[0].messages[1].content.trim();
+        let content = (completion.choices[0]?.messages[1]?.content?.trim() ?? '') as string;
         console.log('Azure OpenAI BYOD Output: \n', content);
 
         return content;

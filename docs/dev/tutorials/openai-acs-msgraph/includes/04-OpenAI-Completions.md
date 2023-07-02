@@ -69,31 +69,41 @@ Let's get started by experimenting with different rules that can be used to gene
         console.log('Inputs:', prompt, company, contactName);
 
         const systemPrompt = `
-          Assistant is a bot designed to help users create email and SMS messages from data and 
-          return a JSON object with the email and SMS message information in it.
+        Assistant is a bot designed to help users create email and SMS messages from data and 
+        return a JSON object with the email and SMS message information in it.
 
-          Rules:
-          - Generate a subject line for the email message.
-          - Use the User Rules to generate the messages. 
-          - All messages should have a friendly tone and never use inappropriate language.
-          - SMS messages should be in plain text format and no more than 160 characters. 
-          - Start the message with "Hi <Contact Name>,\n\n". Contact Name can be found in the user prompt.
-          - Add carriage returns to the email message to make it easier to read. 
-          - End with a signature line that says "Sincerely,\nCustomer Service".
-          - Return a JSON object with the emailSubject, emailBody, and SMS message values in it. 
+        Rules:
+        - Generate a subject line for the email message.
+        - Use the User Rules to generate the messages. 
+        - All messages should have a friendly tone and never use inappropriate language.
+        - SMS messages should be in plain text format and NO MORE than 160 characters. 
+        - Start the message with "Hi <Contact Name>,\n\n". Contact Name can be found in the user prompt.
+        - Add carriage returns to the email message to make it easier to read. 
+        - End with a signature line that says "Sincerely,\nCustomer Service".
+        - Return a JSON object with the emailSubject, emailBody, and SMS message values in it:
 
-          Example JSON object: { "emailSubject": "", "emailBody": "", "sms": "" }
+        { "emailSubject": "", "emailBody": "", "sms": "" }
 
-          - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-          Just the JSON object is needed.
+        User: "Order delayed 2 days. Give a 5% discount."
+        Assistant:  {
+            "emailSubject": "Your Order has been Delayed",
+            "emailBody": "Hi [Customer Name], We wanted to inform you that there has been a delay in processing your order. We apologize for any inconvenience this may have caused.
+             Your order will now be delivered in 2 days. As a token of our appreciation for your patience, we would like to offer you a 5% discount on your next purchase. Please use
+             the code 'DELAY5' at checkout to redeem your discount. If you have any further questions or concerns, please don't hesitate to reach out to our customer service team. Sincerely, Customer Service",
+            "sms": "Hi [Customer Name], we apologize but your order is delayed 2 days. Use code 'DELAY5' for 5% off your next purchase. Contact us for any questions. Thanks!"
+        }
+
+        - The sms property value should be in plain text format and NO MORE than 160 characters. 
+        - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+        Just the JSON object is needed.
         `;
 
         const userPrompt = `
-          User Rules: 
-          ${prompt}
+        User Rules: 
+        ${prompt}
 
-          Contact Name: 
-          ${contactName}
+        Contact Name: 
+        ${contactName}
         `;
 
         let content: EmailSmsResponse = { status: true, email: '', sms: '', error: '' };
@@ -120,6 +130,8 @@ Let's get started by experimenting with different rules that can be used to gene
     - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
         - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
+        - An example user prompt and the output are provided ("one-shot" learning). This is referred to as ["few-shot" learning](/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example are provided and the model is expected to generate the correct SQL query and parameter values.
+        - Two critical rules are repeated again at the bottom of the system prompt to avoid []"recency bias"](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
     - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 

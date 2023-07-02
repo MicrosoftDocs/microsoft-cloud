@@ -40,9 +40,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 1. View the terminal window running the API server in Visual Studio Code and notice it displays the SQL query returned from Azure OpenAI. The JSON data is used by the server-side APIs to query the PostgreSQL database. Any string values included in the query are added as parameter values to prevent SQL injection attacks:
 
     ```json
-    {
-        "sql": "SELECT c.company, c.city, c.email, SUM(oi.quantity * oi.price) AS total_revenue\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nJOIN order_items oi ON o.id = oi.order_id\nWHERE c.company = $1\nGROUP BY c.company, c.city, c.email;",
-        "paramValues": ["Adventure Works Cycles"]
+    { 
+        "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
+        "paramValues": ["Adventure Works Cycles"] 
     }
     ```
 
@@ -113,9 +113,29 @@ Let's start by experimenting with different GPT prompts that can be used to conv
           Rules:
           - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
           - Always return a JSON object with the SQL query and the parameter values in it.
-          - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-            Just the JSON object is needed.
+          - Return a JSON object. Do NOT include any text outside of the JSON object.
           - Example JSON object to return: { "sql": "", "paramValues": [] }
+
+          User: "Display all company reviews. Group by company."      
+          Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
+
+          User: "Display all reviews for companies located in cities that start with 'L'."
+          Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
+
+          User: "Display revenue for companies located in London. Include the company name and city."
+          Assistant: { 
+              "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
+              "paramValues": ["London"] 
+          }
+
+          User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
+          Assistant: { 
+              "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
+              "paramValues": ["Adventure Works Cycles"] 
+          }
+
+          - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
+          - Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. Just the JSON object is needed.
         `;
 
         let queryData: QueryData = { sql: '', paramValues: [], error: '' };
@@ -155,19 +175,39 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     ```typescript
     const systemPrompt = `
-    Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
-    the parameter values in it. The SQL will query a PostgreSQL database.
+        Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
+        the parameter values in it. The SQL will query a PostgreSQL database.
     
-    PostgreSQL tables, with their columns:    
+        PostgreSQL tables, with their columns:    
 
-    ${dbSchema}
+        ${dbSchema}
 
-    Rules:
-    - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-    - Always return a JSON object with the SQL query and the parameter values in it.
-    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-    Just the JSON object is needed.
-    - Example JSON object to return: { "sql": "", "paramValues": [] }
+        Rules:
+        - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
+        - Always return a JSON object with the SQL query and the parameter values in it.
+        - Return a JSON object. Do NOT include any text outside of the JSON object.
+        - Example JSON object to return: { "sql": "", "paramValues": [] }
+
+        User: "Display all company reviews. Group by company."      
+        Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
+
+        User: "Display all reviews for companies located in cities that start with 'L'."
+        Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
+
+        User: "Display revenue for companies located in London. Include the company name and city."
+        Assistant: { 
+            "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
+            "paramValues": ["London"] 
+        }
+
+        User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
+        Assistant: { 
+            "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
+            "paramValues": ["Adventure Works Cycles"] 
+        }
+
+        - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
+        - Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. Just the JSON object is needed.
     `;
     ```
 
@@ -182,11 +222,16 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         ```
 
         > [!TIP]
-        > You may consider creating a read-only database that only contains the data users are allowed to query using natural language to SQL. That way the schema used in the prompt would only include tables and fields that users are allowed to query using natural language processing.
+        > You may consider creating read-only views that only contain the data users are allowed to query using natural language to SQL.
 
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
     - A rule is defined to always return a JSON object (and nothing else) with the SQL query and the parameter values in it.
     - An example is given for the type of JSON object to return.
+    - Example user prompts and the expected SQL query and parameter values are provided. This is referred to as ["few-shot" learning](/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example are provided and the model is expected to generate the correct SQL query and parameter values.
+    - Two critical rules are repeated again at the bottom of the system prompt to avoid "recency bias". 
+    
+        > [!TIP]
+        > Learn more about [recency bias in the Azure OpenAI documentation](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end).
 
 1. The `getSQLFromNLP()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
 
@@ -195,16 +240,13 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
 
         if (isAzureOpenAI && useBYOD) {
-            // Call endpoint that combines Azure OpenAI with Cognitive Search for custom data sources.
             return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
         }
 
         if (isAzureOpenAI) {
-            // Call Azure OpenAI
             return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
 
-        // Call OpenAI API directly
         return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```
@@ -216,18 +258,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     ```typescript
     async function getAzureOpenAICompletion(systemPrompt: string, userPrompt: string, temperature: number): Promise<string> {
+        checkRequiredEnvVars(['OPENAI_API_KEY', 'OPENAI_ENDPOINT', 'OPENAI_MODEL']);
 
-        const requiredEnvVars = ['OPENAI_API_KEY', 'OPENAI_ENDPOINT', 'OPENAI_MODEL'];
-
-        for (const envVar of requiredEnvVars) {
-            if (!process.env[envVar]) {
-                throw new Error(`Missing ${envVar} in environment variables.`);
-            }
-        }
-
-        // While it's possible to use the OpenAI SDK (as of today) with a little work, we'll use the REST API directly for Azure OpenAI calls.
-        // https://learn.microsoft.com/azure/cognitive-services/openai/reference
-        const chatGptUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
+        const fetchUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
 
         const messageData: ChatGPTData = {
             max_tokens: 1024,
@@ -247,23 +280,34 @@ Let's start by experimenting with different GPT prompts that can be used to conv
             body: JSON.stringify(messageData),
         };
 
-        try {
-            const response = await fetch(chatGptUrl, headersBody);
-            const completion: AzureOpenAIResponse = await response.json();
-            console.log(completion);
+        const completion = await fetchAndParse(fetchUrl, headersBody);
+        console.log(completion);
 
-            let content = (completion.choices[0]?.message?.content?.trim() ?? '') as string;
-            console.log('Azure OpenAI Output: \n', content);
+        let content = (completion.choices[0]?.message?.content?.trim() ?? '') as string;
+        console.log('Azure OpenAI Output: \n', content);
 
-            if (content && content.includes('{') && content.includes('}')) {
-                content = extractJson(content);
-            }
-
-            return content;
+        if (content && content.includes('{') && content.includes('}')) {
+            content = extractJson(content);
         }
-        catch (e) {
-            console.error('Error getting data:', e);
-            throw e;
+
+        return content;
+    }
+
+    function checkRequiredEnvVars(requiredEnvVars: string[]) {
+        for (const envVar of requiredEnvVars) {
+            if (!process.env[envVar]) {
+                throw new Error(`Missing ${envVar} in environment variables.`);
+            }
+        }
+    }
+
+    async function fetchAndParse(url: string, headersBody: Record<string, any>): Promise<any> {
+        try {
+            const response = await fetch(url, headersBody);
+            return await response.json();
+        } catch (error) {
+            console.error(`Error fetching data from ${url}:`, error);
+            throw error;
         }
     }
     ```
@@ -274,13 +318,14 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         - `systemPrompt`: Lets the Azure OpenAI model know what role it should play and what rules to follow. 
         - `userPrompt`: User information entered into the application such as natural language or rules that will be used by the model to generate the output.
         - `temperature`: Determines how creative the model should be when generating a response. A higher value means the model will take more risks.
-    - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available.
-    - Creates a `chatGptUrl` value that will be used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
+    - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available by calling `checkRequiredEnvVars()`.
+    - Creates a `fetchUrl` value that is used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
     - Creates a `messageData` object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
         - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
         - `temperature`: What sampling temperature to use. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example two messages are passed in: one for the system and one for the user. The system message defines the overall behavior and rules that will be used, while the user message defines the prompt text provided by the user.
-    - Uses `fetch()` to send the `chatGptUrl` and `messageData` values to Azure OpenAI and processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
+    - Calls `fetchAndParse()` to send the `fetchUrl` and `headersBody` values to Azure OpenAI.
+    - Processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
     
         > [!NOTE]
         > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
