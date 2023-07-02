@@ -53,6 +53,8 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
 1. Once the Cognitive Search resource is created, go to the resource **Overview** page and copy the **Url** value to a local file.
 
+    :::image type="content" source="../media/cognitive-search-url.png" alt-text="Azure OpenAI Studio Cognitive Search Url":::
+
 1. Select **Keys** in the left navigation menu and copy the **Primary admin key** value to a local file. You'll need these values later in the exercise.
 
     :::image type="content" source="../media/cognitive-search-key.png" alt-text="Azure OpenAI Studio Cognitive Search Keys":::
