@@ -131,7 +131,7 @@ Let's get started by experimenting with different rules that can be used to gene
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
         - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
         - An example user prompt and the output are provided ("one-shot" learning). This is referred to as ["few-shot" learning](/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example are provided and the model is expected to generate the correct SQL query and parameter values.
-        - Two critical rules are repeated again at the bottom of the system prompt to avoid []"recency bias"](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
+        - Two critical rules are repeated again at the bottom of the system prompt to avoid ["recency bias"](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
     - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 
