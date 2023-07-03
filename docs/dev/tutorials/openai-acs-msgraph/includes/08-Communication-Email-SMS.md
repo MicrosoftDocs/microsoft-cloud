@@ -8,7 +8,7 @@ In this exercise, you will:
 
 ### Using the Email and SMS Features
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=5#start-app-services) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=6#start-app-services) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -18,7 +18,7 @@ In this exercise, you will:
     CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
     ```
 
-    Ensure you've completed the [exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) before continuing.
+    Ensure you've completed the [exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=6) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
@@ -63,7 +63,7 @@ In this exercise, you will:
             });
 
             // Subscribe to the dialog afterClosed observable to get the dialog result
-            this.subscriptions.push(
+            this.subscription.add(
                 dialogRef.afterClosed().subscribe((response: EmailSmsDialogData) => {
                     console.log('SMS dialog result:', response);
                     if (response) {
@@ -92,7 +92,7 @@ In this exercise, you will:
     sendEmail() {
         if (this.featureFlags.acsEmailEnabled) {
             // Using CUSTOMER_EMAIL_ADDRESS instead of this.data.email for testing purposes
-            this.subscriptions.push(
+            this.subscription.add(
                 this.acsService.sendEmail(this.emailSubject, this.emailBody, 
                     this.getFirstName(this.data.customerName), CUSTOMER_EMAIL_ADDRESS /* this.data.email */)
                 .subscribe(res => {
@@ -183,7 +183,7 @@ In this exercise, you will:
     sendSms() {
         if (this.featureFlags.acsPhoneEnabled) {
             // Using CUSTOMER_PHONE_NUMBER instead of this.data.customerPhoneNumber for testing purposes
-            this.subscriptions.push(
+            this.subscription.add(
                 this.acsService.sendSms(this.smsMessage, CUSTOMER_PHONE_NUMBER /* this.data.customerPhoneNumber */).subscribe(res => {
                     if (res.status) {
                     this.smsSent = true;
