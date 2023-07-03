@@ -48,7 +48,10 @@ In this exercise you will:
 
 1. Enter the following values:
     - Model: **gpt-35-turbo**.
+    - Model version: **Auto-update to default**.
     - Deployment name: **gpt-35-turbo**.
+
+    :::image type="content" source="../media/aoai-studio-create-model-deployment.png" alt-text="Azure OpenAI Create Model Deployment" border="true":::
 
     > [!NOTE]
     > Azure OpenAI supports [several different types of models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin) such as *text-ada-001*, *text-curie-001*, *text-divinci-003*, and *gpt-35-turbo*. Each model can be used to handle different scenarios.
@@ -63,7 +66,12 @@ In this exercise you will:
 
 1. Take a moment to read through the prompt text that's provided. Select **Generate** to see the text that the model generates.
 
-1. Select **Regenerate**. Note that the text is different each time.
+    > [!WARNING]
+    > If you get an error message about the model not being ready, wait a few minutes and try again. It can take a few minutes for the model to be fully deployed and ready to use.
+    > 
+    > If you get an error saying, "The completion operation does not work with the specified model.", this normally means you selected a newer model version rather than the default version. Select **Deployments** and delete the model you created earlier. Create a new **gpt-35-turbo** model deployment, ensure that you select **Auto-update to default** for the **Model version**, give it a name of **gpt-35-turbo**, and wait for the model to be fully deployed. Once it's deployed, go back to the **Playground** and try the completion again.
+
+1. Select **Regenerate** multiple times. Note that the text is different each time.
 
 1. To the right of the screen you'll see properties listed such as **Temperature**. Change the **Temperature** value to **0** and select **Regenerate** again. Read through the email text that is generated.
 
@@ -83,7 +91,7 @@ In this exercise you will:
     OPENAI_API_KEY=<KEY_1_VALUE>
     ```
 
-1. Copy the **Endpoint* value and assign it to `OPENAI_ENDPOINT` in the *.env* file. Ensure that you include the trailing `/` character:
+1. Copy the **Endpoint* value and assign it to `OPENAI_ENDPOINT` in the *.env* file. Remove the `/` character from the end of the value if it's present.
 
     ```
     OPENAI_ENDPOINT=<ENDPOINT_VALUE>

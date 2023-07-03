@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=10) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams channels. In this exercise, you'll learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
+In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=11) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams channels. In this exercise, you'll learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
 
 In this exercise, you will:
 
@@ -12,7 +12,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -20,7 +20,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=8) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) before continuing.
 
 1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 

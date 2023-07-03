@@ -4,7 +4,7 @@
 
 This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level. 
 
-- **AI**: Enable users to ask questions in natural language and convert their answers to SQL that can be used to query a database. Allow users to define rules that can be used to automatically generate email and SMS messages. Azure OpenAI is used for these features.
+- **AI**: Enable users to ask questions in natural language and convert their answers to SQL that can be used to query a database, allow users to define rules that can be used to automatically generate email and SMS messages, and learn how natural language can be used to retrieve data from your own custom data sources. Azure OpenAI is used for these features.
 - **Communication**: Enable in-app phone calling to customers and Email/SMS functionality using Azure Communication Services.
 - **Organizational Data**: Pull in related organizational data that users may need (documents, chats, emails, calendar events) as they work with customers to avoid context switching. Providing access to this type of organizational data reduces the need for the user to switch to Outlook, Teams, OneDrive, other custom apps, their phone, etc. since the specific data and functionality they need is provided directly in the app. Microsoft Graph and Microsoft Graph Toolkit are used for this feature.
 
@@ -20,8 +20,8 @@ You can complete the entire tutorial from start to finish or complete specific t
 
 - [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=1) (required exercise).
 - **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) and use it to convert natural language to SQL and to generate email/SMS messages.
-- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=5) and use it to make phone calls from the app and send email/SMS messages.
-- **Organizational Data Exercises**: [Create an Azure Active Directory app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=7) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
+- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=6) and use it to make phone calls from the app and send email/SMS messages.
+- **Organizational Data Exercises**: [Create an Azure Active Directory app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
 
 :::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
