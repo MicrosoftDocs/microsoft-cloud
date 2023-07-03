@@ -262,6 +262,6 @@ additionalContent:
           url: /power-platform/developer/cli/introduction
 
         # Card
-        - title: Powerhell
+        - title: PowerShell
           summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
           url: /powershell/
