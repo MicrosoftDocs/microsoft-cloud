@@ -247,8 +247,8 @@ additionalContent:
           url: https://pnp.github.io/cli-microsoft365/
 
         # Card
-        - title: Microsoft Graph Developer Proxy
-          summary: Microsoft Graph Developer Proxy is a command line tool that aims to provide a better way to test applications.
+        - title: Microsoft 365 Developer Proxy
+          summary: Microsoft 365 Developer Proxy is a command line tool for testing Microsoft Graph, SharePoint Online and any other HTTP APIs.
           url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
 
         # Card
