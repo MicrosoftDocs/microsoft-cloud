@@ -63,7 +63,7 @@ In this exercise, you will:
             });
 
             // Subscribe to the dialog afterClosed observable to get the dialog result
-            this.subscriptions.push(
+            this.subscription.add(
                 dialogRef.afterClosed().subscribe((response: EmailSmsDialogData) => {
                     console.log('SMS dialog result:', response);
                     if (response) {
@@ -92,7 +92,7 @@ In this exercise, you will:
     sendEmail() {
         if (this.featureFlags.acsEmailEnabled) {
             // Using CUSTOMER_EMAIL_ADDRESS instead of this.data.email for testing purposes
-            this.subscriptions.push(
+            this.subscription.add(
                 this.acsService.sendEmail(this.emailSubject, this.emailBody, 
                     this.getFirstName(this.data.customerName), CUSTOMER_EMAIL_ADDRESS /* this.data.email */)
                 .subscribe(res => {
@@ -183,7 +183,7 @@ In this exercise, you will:
     sendSms() {
         if (this.featureFlags.acsPhoneEnabled) {
             // Using CUSTOMER_PHONE_NUMBER instead of this.data.customerPhoneNumber for testing purposes
-            this.subscriptions.push(
+            this.subscription.add(
                 this.acsService.sendSms(this.smsMessage, CUSTOMER_PHONE_NUMBER /* this.data.customerPhoneNumber */).subscribe(res => {
                     if (res.status) {
                     this.smsSent = true;

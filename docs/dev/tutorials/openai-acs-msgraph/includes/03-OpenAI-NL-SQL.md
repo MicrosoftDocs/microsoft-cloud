@@ -57,7 +57,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Now that you've seen the natural language to SQL feature in action, let's examine how it is implemented.
 
-1. Open the *server/apiRoutes.ts* file and locate the `generatesql` route. This API route is called by the client-side application running in the browser and used to generate SQL from a natural language query. Once the SQL query is retrieved, it's used to query the database and return results. 
+1. Open the *server/apiRoutes.ts* file and locate the `generateSql` route. This API route is called by the client-side application running in the browser and used to generate SQL from a natural language query. Once the SQL query is retrieved, it's used to query the database and return results. 
 
     ```typescript
     router.post('/generateSql', async (req, res) => {
@@ -87,7 +87,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     });
     ```
 
-    Notice the following functionality in the `generatesql` route:
+    Notice the following functionality in the `generateSql` route:
 
     - It retrieves the user query value from `req.body.query` and assigns it to a variable named `userQuery`. This value will be used in the GPT prompt.
     - It calls a `getSQLFromNLP()` function to convert natural language to SQL.

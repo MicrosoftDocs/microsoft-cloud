@@ -55,7 +55,7 @@ In this exercise, you will:
 
     ```typescript
     ngOnInit() {
-        this.subscriptions.push(
+        this.subscription.add(
             this.eventBus.on(Events.CustomerCall, (data: Phone) => {
                 this.callVisible = true; // Show phone call component
                 this.callData = data; // Set phone number to call
@@ -75,7 +75,7 @@ In this exercise, you will:
     ```typescript
     async ngOnInit() {
         if (ACS_CONNECTION_STRING) {
-            this.subscriptions.push(
+            this.subscription.add(
                 this.acsService.getAcsToken().subscribe(async (user: AcsUser) => {
                     const callClient = new CallClient();
                     const tokenCredential = new AzureCommunicationTokenCredential(user.token);
