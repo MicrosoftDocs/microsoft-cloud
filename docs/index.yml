@@ -249,7 +249,7 @@ additionalContent:
         # Card
         - title: Microsoft 365 Developer Proxy
           summary: Microsoft 365 Developer Proxy is a command line tool for testing Microsoft Graph, SharePoint Online and any other HTTP APIs.
-          url: https://github.com/microsoftgraph/msgraph-developer-proxy/wiki/
+          url: https://aka.ms/m365/proxy
 
         # Card
         - title: Microsoft Graph SDKs
@@ -262,6 +262,6 @@ additionalContent:
           url: /power-platform/developer/cli/introduction
 
         # Card
-        - title: Powershell
+        - title: Powerhell
           summary: PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.
           url: /powershell/
