@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+title: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
 metadata:
-  title: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+  title: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
   description: This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level.
   audience: Developer
   level: Intermediate
