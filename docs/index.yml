@@ -65,7 +65,7 @@ productDirectory:
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
           url: /graph/toolkit/get-started/building-one-productivity-hub
 
-        - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
+        - text: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
           url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
 
         - text: Transform your Business Applications with Fusion Development
