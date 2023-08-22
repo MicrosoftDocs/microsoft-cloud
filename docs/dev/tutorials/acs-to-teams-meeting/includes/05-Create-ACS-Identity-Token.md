@@ -4,4 +4,13 @@ In this exercise you'll learn how to dynamically retrieve user identity and toke
 
 :::image type="content" source="../media/4-acs-identity-token.png" alt-text="Create ACS Identity and Token":::
 
+# [C#](#tab/csharp)
+
+[!INCLUDE [CSharp](./05-Create-ACS-Identity-Token-CS.md)]
+
+# [TypeScript](#tab/typescript)
+
 [!INCLUDE [TypeScript](./05-Create-ACS-Identity-Token-TS.md)]
+
+---
+
