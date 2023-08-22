@@ -1,5 +1,8 @@
 <!-- markdownlint-disable MD041 -->
 
+> [!NOTE]
+> This section uses [Visual Studio](https://visualstudio.com/) to publish the C# functions to Azure. If you'd prefer to use [Visual Studio Code](https://code.visualstudio.com), you can follow the instructions in the [Create a C# function in Azure using Visual Studio Code](/azure/azure-functions/create-first-function-vs-code-csharp) quickstart.
+
 1. Open the `samples/acs-video-to-teams-meeting/server/csharp/GraphACSFunctions.sln` project in Visual Studio.
 
 1. Right-click on the `GraphACSFunctions` project and select **Publish**.
