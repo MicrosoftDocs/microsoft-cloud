@@ -21,6 +21,8 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
     1. Copy the value of the secret into a local file. You'll use the value later in this exercise.
     1. Go to the **Overview** tab and copy the `Application (client) ID` and `Directory (tenant) ID` values into the same local file that you used in the previous step.
 
+### Creating a *local.settings.json* File
+
 # [C#](#tab/csharp)
 
 [!INCLUDE [CSharp](./04-Create-Teams-Meeting-CS.md)]
