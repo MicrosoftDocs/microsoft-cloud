@@ -11,7 +11,7 @@ metadata:
   ms.author: dwahlin 
   ms.topic: tutorial
   ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript
-  ms.service: azure-communication-services
+  ms.service: microsoft-cloud-for-developers
 
 items:
   - title: Overview
