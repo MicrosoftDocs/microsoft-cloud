@@ -29,7 +29,18 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 1. In the **Build Details** section perform the following tasks:
     - Build Presets: **React**
     - App location: **/samples/acs-to-teams-meeting/client/react**
-    - Api location: **/samples/acs-to-teams-meeting/server/typescript**
+    - Api location: 
+    
+    # [TypeScript](#tab/typescript)
+
+    **/samples/acs-to-teams-meeting/server/typescript**
+
+    # [C#](#tab/csharp)
+
+    **/samples/acs-to-teams-meeting/server/csharp**
+
+    ---
+    
     - Output location: **build**
 
 1. Select **Review + create**.
