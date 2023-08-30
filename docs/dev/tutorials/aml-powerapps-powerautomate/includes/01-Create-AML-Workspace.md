@@ -9,7 +9,7 @@ In this exercise, you will:
 - Open Azure portal.
 - Create an Azure Machine Learning Workspace.
 
-Let's get started by opening Azure!
+Let's get started by opening the Azure portal!
 
 1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
