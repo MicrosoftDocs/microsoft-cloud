@@ -1,0 +1,57 @@
+### YamlMime:Tutorial
+title: Integrating a Large Language Model on Azure with Power Platform
+metadata:
+  title: Integrating a Large Language Model on Azure with Power Platform
+  description: This tutorial covers creating an Azure Machine Learning Workspace, deploying the machine learning model, and integrating it with Power Apps. Enhance your technical skills and explore the power of Azure and Power Automate in text generation and creative writing.
+  audience: Developer
+  level: Beginner
+  displayType: one-column
+  ms.date: 07/22/2023
+  author: danwahlin 
+  ms.author: dwahlin 
+  ms.topic: tutorial
+  ms.custom: scenarios:microsoft-cloud
+  ms.service: machine-learning, powerapps, power-automate
+
+items:
+  - title: |
+      Overview
+    durationInMinutes: 2
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/00-Overview.md)]
+
+  - title: |
+      Create an Azure Machine Learning Workspace
+    durationInMinutes: 5
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/01-Create-AML-Workspace.md)]
+
+  - title: |
+      Deploy a Machine Learning Model using templates
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/02-Deploy-LLM-Model.md)]
+
+  - title: |
+      Open Power Apps and Import the Solution
+    durationInMinutes: 10
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/03-PowerApps-Import-Solution.md)]
+
+  - title: |
+      Edit the Power Automate Flow
+    durationInMinutes: 5
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/04-PowerAutomate-Add-Secrets.md)]
+
+  - title: |
+      Publish your Power App
+    durationInMinutes: 3
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/05-PowerApps-Publish-App.md)]
+
+  - title: |
+      Congratulations!
+    durationInMinutes: 2
+    content: |
+      [!INCLUDE [](aml-powerapps-powerautomate/includes/06-Congratulations.md)]
