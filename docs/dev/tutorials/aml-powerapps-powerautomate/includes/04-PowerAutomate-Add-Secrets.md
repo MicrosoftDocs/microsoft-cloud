@@ -6,9 +6,9 @@ A Power Automate Cloud Flow is an automation capability that can be integrated w
 
 In this exercise, you will:
 
-    - Open a Canvas App.
-    - Get secrets from an Azure Machine Learning endpoint.
-    - Edit a Power Automate Cloud Flow.
+- Open a Canvas App.
+- Get secrets from an Azure Machine Learning endpoint.
+- Edit a Power Automate Cloud Flow.
 
 Let's get started by opening the Solution!
 

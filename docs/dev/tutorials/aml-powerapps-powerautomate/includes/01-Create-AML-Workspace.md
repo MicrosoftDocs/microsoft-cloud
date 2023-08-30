@@ -6,8 +6,8 @@ An Azure Machine Learning Workspace is a top-level resource providing a centrali
 
 In this exercise, you will:
 
-    - Open Azure portal.
-    - Create an Azure Machine Learning Workspace.
+- Open Azure portal.
+- Create an Azure Machine Learning Workspace.
 
 Let's get started by opening Azure!
 

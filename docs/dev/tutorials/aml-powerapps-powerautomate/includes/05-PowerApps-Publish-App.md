@@ -1,6 +1,9 @@
 <!-- markdownlint-disable MD041 -->
 
-In this exercise, you will test the Power App to make sure everything is working and then publish it to make it available to anyone with whom you share the app.
+In this exercise, you will:
+
+- Test the Power App to ensure everything is working.
+- Publish it to make it available to anyone with whom you share the app.
 
 1. Select the **Play** button from the navigation menu.
 

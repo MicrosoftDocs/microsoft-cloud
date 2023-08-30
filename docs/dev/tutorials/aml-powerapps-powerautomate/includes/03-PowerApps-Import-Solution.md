@@ -6,8 +6,8 @@ A Solution is a package that helps us transport apps and components from one env
 
 In this exercise, you will:
 
-    - Clone a GitHub repository.
-    - Import a Solution into Power Apps.
+- Clone a GitHub repository.
+- Import a Solution into Power Apps.
 
 Let's get started by cloning a GitHub repository!
 

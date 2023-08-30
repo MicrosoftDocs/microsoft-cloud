@@ -6,8 +6,8 @@ A Large Language Model is a type of natural language processing model that is tr
 
 In this exercise, you will:
 
-    - Open Azure Machine Learning Studio.
-    - Configure an endpoint that can be used in your application.
+- Open Azure Machine Learning Studio.
+- Configure an endpoint that can be used in your application.
 
 Let's get started by opening our Machine Learning Studio!
 
