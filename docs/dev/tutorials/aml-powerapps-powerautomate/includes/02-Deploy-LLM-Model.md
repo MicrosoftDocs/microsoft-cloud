@@ -9,9 +9,9 @@ In this exercise, you will:
 - Open Azure Machine Learning Studio.
 - Configure an endpoint that can be used in your application.
 
-Let's get started by opening our Machine Learning Studio!
+Let's get started by opening Machine Learning Studio!
 
-1. Open the Azure Machine Learning Studio using the [**Studio web URL**](https://ml.azure.com).
+1. Open Azure Machine Learning Studio using the [**Studio web URL**](https://ml.azure.com).
 
     :::image type="content" source="../media/azureml-studio-url.png" alt-text="Azure Machine Learning Service in the Azure Portal":::
 
