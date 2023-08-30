@@ -1,17 +1,15 @@
 <!-- markdownlint-disable MD041 -->
 
-In this exercise, you will deploy a Large Language Model (LLM) to a real-time endpoint in Azure Machine Learning Studio. This will allow you to consume the model in your application later.
-
-A Large Language Model is a type of natural language processing model that is trained on a large amount of text data. These models can generate human-like text and code and are used for applications like text generation, translation, question answering, and more.
+In this exercise, you'll deploy a Large Language Model (LLM) to a real-time endpoint in Azure Machine Learning studio. A Large Language Model is a type of natural language processing model that is trained on a large amount of text data. These models can generate human-like text and code and are used for applications like text generation, translation, question answering, and more.
 
 In this exercise, you will:
 
-- Open Azure Machine Learning Studio.
+- Open Azure Machine Learning studio.
 - Configure an endpoint that can be used in your application.
 
-Let's get started by opening Azure Machine Learning Studio!
+Let's get started by opening Azure Machine Learning studio!
 
-1. Open Azure Machine Learning Studio using the [**Studio web URL**](https://ml.azure.com).
+1. Open Azure Machine Learning studio using the [**Studio web URL**](https://ml.azure.com).
 
     :::image type="content" source="../media/azureml-studio-url.png" alt-text="Azure Machine Learning Service in the Azure Portal":::
 
@@ -49,7 +47,7 @@ Let's get started by opening Azure Machine Learning Studio!
     > [!TIP]
     > For high availability, Microsoft recommends you set it to at least 3.
 
-    - Enter an **Endpoint name**. Any unique name will work.
+    - Enter an **Endpoint name**. Any unique name works.
     - Enter a **Deployment name**.
 
     :::image type="content" source="../media/azureml-studio-deploy-gpt2.png" alt-text="Configuration of an Azure Machine Learning Workspace in the Azure Portal":::
