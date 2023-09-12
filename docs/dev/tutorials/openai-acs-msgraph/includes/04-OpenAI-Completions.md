@@ -80,28 +80,21 @@ Let's get started by experimenting with different rules that can be used to gene
         - Start the message with "Hi <Contact Name>,\n\n". Contact Name can be found in the user prompt.
         - Add carriage returns to the email message to make it easier to read. 
         - End with a signature line that says "Sincerely,\nCustomer Service".
-        - Return a JSON object with the emailSubject, emailBody, and SMS message values in it:
+        - Return a valid JSON object with the emailSubject, emailBody, and SMS message values in it:
 
         { "emailSubject": "", "emailBody": "", "sms": "" }
 
-        User: "Your order has been delayed"
-        Assistant:  {
-            "emailSubject": "Your Order has been Delayed",
-            "emailBody": "Hi [Customer Name], We wanted to inform you that there has been a delay in processing your order. We apologize for any inconvenience this may have caused. Sincerely, Customer Service",
-            "sms": "Hi [Customer Name], we apologize but your order has been delayed. Contact us for any questions. Thanks!"
-        }
-
         - The sms property value should be in plain text format and NO MORE than 160 characters. 
-        - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+        - Only return a valid JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
         Just the JSON object is needed.
         `;
 
         const userPrompt = `
-        User Rules: 
-        ${prompt}
+          User Rules: 
+          ${prompt}
 
-        Contact Name: 
-        ${contactName}
+          Contact Name: 
+          ${contactName}
         `;
 
         let content: EmailSmsResponse = { status: true, email: '', sms: '', error: '' };
@@ -128,7 +121,6 @@ Let's get started by experimenting with different rules that can be used to gene
     - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
         - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
-        - An example user prompt and the output are provided ("one-shot" learning). This is referred to as ["few-shot" learning](/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example are provided and the model is expected to generate the correct SQL query and parameter values.
         - Two critical rules are repeated again at the bottom of the system prompt to avoid ["recency bias"](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
     - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
@@ -145,11 +137,11 @@ Let's get started by experimenting with different rules that can be used to gene
 1. Remove the following rule from the `systemPrompt`:
 
     ```
-    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
+    - Only return a valid JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
     Just the JSON object is needed.
     ```
 
-1. Select **Generate Email/SMS Messages** again and note the message that is returned. Due to the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt, you may see a message similar to the following: 
+1. Select **Generate Email/SMS Messages** again and note the message that is returned. Due to the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt, you *may* see a message similar to the following: 
 
     ```
     I'm sorry, but the User Rules provided are not appropriate and do not align with ethical and professional 
@@ -158,7 +150,7 @@ Let's get started by experimenting with different rules that can be used to gene
     ```
 
     > [!NOTE]
-    > Keep in mind that the message returned may be different depending on the model's training data. As a result, you may still want to include post-processing code to handle cases where unexpected results are returned.
+    > The message returned may be different depending on the model's training data at the time. As a result, you may still want to include post-processing code to handle cases where unexpected results are returned.
 
 1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone and never use inappropriate language.` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
 

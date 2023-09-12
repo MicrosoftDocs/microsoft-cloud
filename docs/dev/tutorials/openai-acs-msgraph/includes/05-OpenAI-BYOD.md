@@ -325,28 +325,21 @@ Let's get started by adding a custom data source to Azure AI Studio.
 1. The following code is used in `getAzureOpenAIBYODCompletion()` to access the messages. Although citations aren't being used in this example, they're logged to the console so you can see the type of data that's returned.
 
     ```typescript
-    try {
-        const response = await fetch(byodUrl, headersBody);
-        const completion = await response.json();
-        console.log(completion);
+    const completion = await fetchAndParse(fetchUrl, headersBody);
+    console.log(completion);
 
-        if (completion.error) {
-            return completion.error.message;
-        }
-
-        const citations = (completion.choices[0]?.message[0]?.content?.trim() ?? '') as string;
-        console.log('Azure OpenAI BYOD Citations: \n', citations);
-
-        let content = (completion.choices[0]?.messages[1]?.content?.trim() ?? '') as string;
-        console.log('Azure OpenAI BYOD Output: \n', content);
-
-        return content;
-
+    if (completion.error) {
+        console.error('Azure OpenAI BYOD Error: \n', completion.error);
+        return completion.error.message;
     }
-    catch (e) {
-        console.error('Error getting BYOD data:', e);
-        throw e;
-    }
+
+    const citations = (completion.choices[0]?.messages[0]?.content?.trim() ?? '') as string;
+    console.log('Azure OpenAI BYOD Citations: \n', citations);
+
+    let content = (completion.choices[0]?.messages[1]?.content?.trim() ?? '') as string;
+    console.log('Azure OpenAI BYOD Output: \n', content);
+
+    return content;
     ```
 
 1. A few final points to consider before moving on to the next exercise:
