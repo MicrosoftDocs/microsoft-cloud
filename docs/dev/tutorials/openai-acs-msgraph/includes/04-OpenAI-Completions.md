@@ -148,7 +148,7 @@ Let's get started by experimenting with different rules that can be used to gene
     > [!NOTE]
     > This illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
 
-1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run it again but only use the `- Order is ahead of schedule.` rule (don't include the negative rule). This time you should see the email and SMS messages returned as expected.
+1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run it again but only use the `Order is ahead of schedule.` rule (don't include the negative rule). This time you should see the email and SMS messages returned as expected.
 
 1. A few final points to consider before moving on to the next exercise:
 
