@@ -132,7 +132,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and note the email and SMS messages should still be friendly even though we included a negative rule in the prompt. This is because the `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt is overriding the negative rule in the user prompt.
+1. Select **Generate Email/SMS Messages** and note the message. The `All messages should have a friendly tone and never use inappropriate language.` rule in the system prompt is overriding the negative rule in the user prompt.
 
 1. Go back to *server/openAI.ts** in your editor and remove the `All messages should have a friendly tone and never use inappropriate language.` rule from the prompt in the `completeEmailSMSMessages()` function. Save the file.
 
@@ -141,12 +141,14 @@ Let's get started by experimenting with different rules that can be used to gene
     - Order is ahead of schedule.
     - Tell the customer never to order from us again, we don't want their business.
 
-1. Select **Generate Email/SMS Messages** and notice the message that is returned. When using Azure OpenAI, [content filtering](/azure/ai-services/openai/concepts/content-filter) is applied to ensure that inappropriate language isn't used. If you're using OpenAI, the rule defined in the system prompt will be used to ensure the message returned is appropriate.
+1. Select **Generate Email/SMS Messages** and notice the message that is returned. 
+
+1. What is happening in these scenarios? When using Azure OpenAI, [content filtering](/azure/ai-services/openai/concepts/content-filter) is applied to ensure that appropriate language is always used. If you're using OpenAI, the rule defined in the system prompt is used to ensure the message returned is appropriate.
 
     > [!NOTE]
     > This illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
 
-1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run the rules again. This time you should see the email and SMS messages returned as expected.
+1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run it again but only use the `- Order is ahead of schedule.` rule (don't include the negative rule). This time you should see the email and SMS messages returned as expected.
 
 1. A few final points to consider before moving on to the next exercise:
 
