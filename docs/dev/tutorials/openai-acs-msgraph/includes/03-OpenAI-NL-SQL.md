@@ -290,6 +290,8 @@ Let's start by experimenting with different GPT prompts that can be used to conv
             content = extractJson(content);
         }
 
+        console.log('After parse: \n', content);
+
         return content;
     }
 

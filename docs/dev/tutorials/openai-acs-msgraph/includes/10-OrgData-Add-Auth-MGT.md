@@ -23,10 +23,10 @@ In this exercise, you will:
 
     Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) before continuing.
 
-1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in with a user from your Microsoft 365 Developer tenant.
+1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using an admin user account from your Microsoft 365 Developer tenant.
 
     > [!TIP]
-    > You can sign in with your Microsoft 365 developer tenant admin account. You can view other users in your developer tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
+    > Sign in with your Microsoft 365 developer tenant admin account. You can view other users in your developer tenant by going to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users).
 
 1. If you're signing in to the application for the first time, you'll be prompted to consent to the permissions requested by the application. You'll learn more about these permissions (also called "scopes") in the next section as you explore the code. Select **Accept** to continue.
 
