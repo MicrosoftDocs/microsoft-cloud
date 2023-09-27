@@ -41,7 +41,7 @@ productDirectory:
     # Card
     - title: Microsoft Copilots
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/copilots.svg
+      imageSrc: ./media/copilots-logo-blues.svg
       links:
         - text: GitHub Copilot
           url: https://github.com/features/copilot
