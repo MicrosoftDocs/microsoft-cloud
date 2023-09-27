@@ -39,7 +39,7 @@ productDirectory:
   items:
 
     # Card
-    - title: Copilots
+    - title: Microsoft Copilots
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/video.svg
       links:
