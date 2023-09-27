@@ -37,6 +37,21 @@ highlightedContent:
 productDirectory:
   title: Microsoft Cloud Learning Resources
   items:
+
+    # Card
+    - title: Copilots
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/video.svg
+      links:
+        - text: GitHub Copilot
+          url: https://github.com/features/copilot
+
+        - text: Microsoft 365 Copilot
+          url: https://adoption.microsoft.com/en-us/copilot/
+
+        - text: Power Apps Copilot
+          url: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-overview
+
     # Card
     - title: Solutions Across the Microsoft Cloud
       # imageSrc should be square in ratio with no white space
@@ -70,23 +85,6 @@ productDirectory:
 
         - text: Transform your Business Applications with Fusion Development
           url: /training/paths/transform-business-applications-with-fusion-development
-
-    # Card
-    - title: Videos
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/video.svg
-      links:
-        - text: All Things Microsoft Cloud - Microsoft 365 and Microsoft Graph
-          url: https://www.youtube.com/watch?v=MXq-M6qRffE
-
-        - text: All Things Microsoft Cloud - Power Platform
-          url: https://www.youtube.com/watch?v=z19QZwmy1yg
-
-        - text: Building Real-time Collaborative Apps with Azure, Microsoft 365, and Power Platform
-          url: /events/build-2022/od102-building-real-time-collaborative-apps-with-azure-microsoft-365-power-platm
-
-        - text: Build a Productivity Dashboard with Microsoft Teams Toolkit for Visual Studio
-          url: https://www.youtube.com/watch?v=0WFN8X9Tp8A
 
     # Card
     - title: Code Samples
