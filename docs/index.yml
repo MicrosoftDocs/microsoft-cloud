@@ -50,7 +50,10 @@ productDirectory:
           url: https://adoption.microsoft.com/en-us/copilot/
 
         - text: Power Apps Copilot
-          url: https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-overview
+          url: /power-apps/maker/canvas-apps/ai-overview
+
+        - text: Power Automate Copilot
+          url: /power-automate/get-started-with-copilot
 
     # Card
     - title: Solutions Across the Microsoft Cloud
