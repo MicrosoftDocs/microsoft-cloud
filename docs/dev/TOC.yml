@@ -14,6 +14,10 @@
     href: overview/create-run-secure-applications.md
   - name: Summary  
     href: overview/summary.md  
+- name: Microsoft Copilots
+  items:
+  - name: Overview  
+    href: copilots/overview.md
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
