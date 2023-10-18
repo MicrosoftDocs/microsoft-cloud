@@ -1,8 +1,8 @@
 ---
 title: Microsoft Copilots
 description: Learn how you can adopt, extend, and build Microsoft Copilots.
-author: DanWahlin, DonaSarkar
-ms.author: dwahlin, donasa
+author: DanWahlin
+ms.author: dwahlin
 ms.contributors: dwahlin-5182022
 ms.date: 09/27/2023
 ms.topic: conceptual
@@ -41,14 +41,14 @@ The Microsoft Cloud offers a variety of copilots that can be adopted to enhance 
 Bing Chat Enterprise utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Bing Chat Enterprise offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
  
 Additional Resources:
-- [Bing Chat Enterprise Documentation](https://learn.microsoft.com/bing-chat-enterprise)
+- [Bing Chat Enterprise Documentation](/bing-chat-enterprise)
 
 ### Copilot in Power Apps
 
 The AI Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
 
 Additional Resources:
-- [Copilot in Power Apps Overview](https://learn.microsoft.com/power-apps/maker/canvas-apps/ai-overview)
+- [Copilot in Power Apps Overview](/power-apps/maker/canvas-apps/ai-overview)
 - [Build a canvas app for a real estate solution with Copilot in Power Apps](https://learn.microsoft.com/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
 
 ### Copilot in Power Automate 
@@ -56,15 +56,15 @@ Additional Resources:
 Power Automate Copilot in cloud flows simplifies automation creation using natural language expressions. Users describe what they need through conversation, and Copilot assists by understanding intent, setting up connections, applying necessary parameters, and making requested changes to the flow. It can also be used to answer queries about the flow or product. 
 
 Additional Resources:
-- [AI Copilot overview](https://learn.microsoft.com/power-apps/maker/canvas-apps/ai-overview)
-- [Build flows for a real estate solution using Copilot in Power Automate](https://learn.microsoft.com/training/modules/build-real-estate-power-automate-copilot/)
+- [AI Copilot overview](/power-apps/maker/canvas-apps/ai-overview)
+- [Build flows for a real estate solution using Copilot in Power Automate](/training/modules/build-real-estate-power-automate-copilot/)
 
 ### GitHub Copilot 
  
 GitHub Copilot is an AI developer tool that assists in the coding process by suggesting code as the user types. It serves as a programming aid, helping to streamline coding tasks and explore coding solutions efficiently. Integrated within the GitHub platform, it provides a supportive environment for developers to tackle programming challenges and enhance their coding workflow. Additionally, GitHub Copilot can be used to learn new programming languages or frameworks by providing real-time code suggestions based on developer input. 
 
 Additional Resources:
-- [GitHub Copilot Overview](https://github.com/features/copilot  )
+- [GitHub Copilot Overview](https://github.com/features/copilot)
 
 ### Microsoft 365 Chat and Copilot in Microsoft 365 Apps
 
