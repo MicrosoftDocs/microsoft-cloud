@@ -22,4 +22,62 @@ ms.custom:
 
 # Microsoft Copilots Overview
 
-The Microsoft Cloud provides several Copilots: Microsoft 365 Copilot, aimed at enterprise use with in-house data integration; GitHub Copilot, designed to assist in code generation and suggestions on the GitHub platform; and Power Platform Copilots, which serve to enhance functionalities within Microsoft's Power Platform. These Copilots, leveraging AI and machine learning, are tailored to improve productivity, code quality, and workflow efficiency across different Microsoft platforms and services.
+Microsoft Copilots are AI assistants powered by Large Language Models (LLMs) that offer innovative solutions across the Microsoft Cloud. They aim to enhance productivity, creativity, and data accessibility while providing enterprise-grade data security and privacy features. They bridge the gap between complex tasks and user-friendly solutions, providing a conversational interface to interact with data, create automations, build applications, and even assist in coding tasks. Their integration within various Microsoft and GitHub platforms provides a more interactive and efficient digital workspace. 
+
+The core value of copilots stems from their capability to interpret natural language commands, enhancing the user experience by making it more intuitive and user-friendly. From answering queries in Bing Chat Enterprise, assisting with data navigation and analysis in Microsoft 365, aiding in app and automation creation in Power Apps and Power Automate, to suggesting code in GitHub Copilot, they encapsulate the notion of having an AI-powered assistant at your fingertips. Copilots make complex tasks more manageable, fostering a collaborative environment for both individual users and enterprises. 
+
+
+
+## Adopting Copilots
+
+The Microsoft Cloud offers a variety of copilots that can be adopted to enhance your productivity and creativity.
+
+### Bing Chat Enterprise
+ 
+Bing Chat Enterprise utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Bing Chat Enterprise offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
+ 
+Additional Resources:
+- [Bing Chat Enterprise Documentation](https://learn.microsoft.com/bing-chat-enterprise)
+
+### Copilot in Power Apps
+
+The AI Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
+
+Additional Resources:
+- [Copilot in Power Apps Overview](https://learn.microsoft.com/power-apps/maker/canvas-apps/ai-overview)
+- [Build a canvas app for a real estate solution with Copilot in Power Apps](https://learn.microsoft.com/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
+
+### Copilot in Power Automate 
+ 
+Power Automate Copilot in cloud flows simplifies automation creation using natural language expressions. Users describe what they need through conversation, and Copilot assists by understanding intent, setting up connections, applying necessary parameters, and making requested changes to the flow. It can also be used to answer queries about the flow or product. 
+
+Additional Resources:
+- [AI Copilot overview](https://learn.microsoft.com/power-apps/maker/canvas-apps/ai-overview)
+- [Build flows for a real estate solution using Copilot in Power Automate](https://learn.microsoft.com/training/modules/build-real-estate-power-automate-copilot/)
+
+### GitHub Copilot 
+ 
+GitHub Copilot is an AI developer tool that assists in the coding process by suggesting code as the user types. It serves as a programming aid, helping to streamline coding tasks and explore coding solutions efficiently. Integrated within the GitHub platform, it provides a supportive environment for developers to tackle programming challenges and enhance their coding workflow. Additionally, GitHub Copilot can be used to learn new programming languages or frameworks by providing real-time code suggestions based on developer input. 
+
+Additional Resources:
+- [GitHub Copilot Overview](https://github.com/features/copilot  )
+
+### Microsoft 365 Chat and Copilot in Microsoft 365 Apps
+
+Microsoft 365 chat combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 product line, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe and compliant digital workspace.  
+
+In addition to Microsoft 365 Chat, AI copilot functionality is also available directly in Microsoft 365 apps including Teams, Outlook, Excel, Word, PowerPoint, OneNote, Loop, and Whiteboard. The integrated copilots provide users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
+
+Additional Resources:
+- [Overview of Microsoft 365 Chat](https://support.microsoft.com/topic/overview-of-microsoft-365-chat-preview-5b00a52d-7296-48ee-b938-b95b7209f737)
+
+### Windows Copilot 
+ 
+Windows Copilot is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
+ 
+Additional Resources:
+- [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
+
+# Extending Copilots
+
+# Building Copilots
