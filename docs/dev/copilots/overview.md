@@ -49,7 +49,7 @@ The AI Copilot in Power Apps enables app creators to build applications more eff
 
 Additional Resources:
 - [Copilot in Power Apps Overview](/power-apps/maker/canvas-apps/ai-overview)
-- [Build a canvas app for a real estate solution with Copilot in Power Apps](https://learn.microsoft.com/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
+- [Build a canvas app for a real estate solution with Copilot in Power Apps](/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
 
 ### Copilot in Power Automate 
  
