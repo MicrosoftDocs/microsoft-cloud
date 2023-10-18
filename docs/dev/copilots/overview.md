@@ -20,7 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Microsoft Copilots Overview
+# Copilots Across the Microsoft Cloud
 
 Microsoft Copilots are AI assistants powered by Large Language Models (LLMs) that offer innovative solutions across the Microsoft Cloud. They aim to enhance productivity, creativity, and data accessibility while providing enterprise-grade data security and privacy features. They bridge the gap between complex tasks and user-friendly solutions, providing a conversational interface to interact with data, create automations, build applications, and even assist in coding tasks. Their integration within various Microsoft and GitHub platforms provides a more interactive and efficient digital workspace. 
 
