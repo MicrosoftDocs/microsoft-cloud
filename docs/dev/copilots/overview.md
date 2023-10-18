@@ -78,6 +78,6 @@ Windows Copilot is an AI-powered intelligent assistant designed to enhance user 
 Additional Resources:
 - [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
 
-# Extending Copilots
+## Extending Copilots
 
-# Building Copilots
+## Building Copilots
