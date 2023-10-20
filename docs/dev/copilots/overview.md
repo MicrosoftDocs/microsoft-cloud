@@ -83,13 +83,6 @@ In addition to Microsoft 365 Chat, AI copilot functionality is also available di
 Learn More:
 - [Overview of Microsoft 365 Chat](https://support.microsoft.com/topic/overview-of-microsoft-365-chat-preview-5b00a52d-7296-48ee-b938-b95b7209f737)
 
-### Microsoft Copilot Studio
-
-
-
-Learn More:
-- [Power Virtual Agents Overview](https://learn.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
-
 ### Microsoft Security Copilot
 
 
@@ -106,3 +99,10 @@ Learn More:
 ## Extending Copilots
 
 ## Building Copilots
+
+### Microsoft Copilot Studio
+
+
+
+Learn More:
+- [Power Virtual Agents Overview](https://learn.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
