@@ -81,7 +81,8 @@ Microsoft 365 chat combines Large Language Models (LLMs) with Microsoft Graph, l
 In addition to Microsoft 365 Chat, AI copilot functionality is also available directly in Microsoft 365 apps including Teams, Outlook, Excel, Word, PowerPoint, OneNote, Loop, and Whiteboard. The integrated copilots provide users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
 Learn More:
-- [Overview of Microsoft 365 Chat](https://support.microsoft.com/topic/overview-of-microsoft-365-chat-preview-5b00a52d-7296-48ee-b938-b95b7209f737)
+- [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
+- [Microsoft 365 Chat Overview](https://support.microsoft.com/en-us/copilot-microsoft365-chat)
 
 ### Microsoft Security Copilot
 
