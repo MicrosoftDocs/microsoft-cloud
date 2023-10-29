@@ -32,6 +32,8 @@ The core value of copilots stems from their capability to interpret natural lang
 
 The Microsoft Cloud offers a variety of copilots that can be adopted to enhance your productivity and creativity.
 
+:::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
+
 ### Bing Chat Enterprise
  
 Bing Chat Enterprise utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Bing Chat Enterprise offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
@@ -105,6 +107,8 @@ Learn More:
 
 Microsoft Copilots are AI-powered productivity tools that integrate with Microsoft products to enhance user creativity and productivity. They're designed to work seamlessly in products such as Windows, Bing, Word, Excel, PowerPoint, Outlook, Teams, Power Apps, Power Automate, and many more. While Copilots provide a robust set of functionality out of the box, many users still rely on external tools, services, and data sources to perform tasks. To bridge this gap, Copilots can be extended using plugins, connectors, or message extensions.
 
+:::image type="content" source="media/copilots-across-microsoft-cloud-extend.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
+
 ### Why Extend Microsoft Copilots?
 
 Extending Microsoft Copilots allows users to bring in data from their own enterprise platforms, applications, and data sources, unlocking the full potential of these tools within an enterprise. This can be achieved by building a plugin or connecting to an external data source using Microsoft Graph Connectors or Microsoft Teams message extensions.
@@ -137,6 +141,8 @@ By extending Microsoft Copilots, developers can integrate external data directly
 By extending Microsoft Copilots with plugins, connectors, or message extensions, users can leverage the power of these tools to their fullest potential, enhancing productivity and collaboration by integrating with a wide range of third-party tools and services.
 
 ## Building Copilots
+
+:::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
 
 ### Microsoft Copilot Studio
 
