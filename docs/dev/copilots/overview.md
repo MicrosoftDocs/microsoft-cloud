@@ -109,9 +109,11 @@ Microsoft Copilots are AI-powered productivity tools that integrate with Microso
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-extend.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
 
-### Why Extend Microsoft Copilots?
+### Benefits of Extending Microsoft Copilots
 
-Extending Microsoft Copilots allows users to bring in data from their own enterprise platforms, applications, and data sources, unlocking the full potential of these tools within an enterprise. This can be achieved by building a plugin or connecting to an external data source using Microsoft Graph Connectors or Microsoft Teams message extensions.
+By extending Microsoft Copilots, developers can integrate external data directly into Copilots to minimize user context shifts while enhancing productivity and collaboration. Copilot extensions also provide a new way for developers to surface external data in Microsoft products that users engage with and use everyday. For instance, enterprise companies can build plugins to integrate their own line-of-business APIs and data directly into a Copilot. ISVs can harness Copilot capabilities via Microsoft Graph connectors and Power Platform connectors to enable Copilot experiences with data from partner apps.
+
+By extending Microsoft Copilots with plugins, connectors, or message extensions, users can leverage the power of these tools to their fullest potential, enhancing productivity and collaboration by integrating with a wide range of third-party tools and services.
 
 #### Plugins
 
@@ -133,12 +135,6 @@ Message extensions allow users to interact with enterprise services through Micr
 
 Learn More:
 - Link to message extensions docs
-
-### Benefits of Extending Microsoft Copilots
-
-By extending Microsoft Copilots, developers can integrate external data directly into Copilots to minimize user context shifts while enhancing productivity and collaboration. Copilot extensions also provide a new way for developers to surface external data in Microsoft products that users engage with and use everyday. For instance, enterprise companies can build plugins to integrate their own line-of-business APIs and data directly into a Copilot. ISVs can harness Copilot capabilities via Microsoft Graph connectors and Power Platform connectors to enable Copilot experiences with data from partner apps.
-
-By extending Microsoft Copilots with plugins, connectors, or message extensions, users can leverage the power of these tools to their fullest potential, enhancing productivity and collaboration by integrating with a wide range of third-party tools and services.
 
 ## Building Copilots
 
