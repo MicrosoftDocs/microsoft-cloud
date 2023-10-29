@@ -114,21 +114,21 @@ Extending Microsoft Copilots allows users to bring in data from their own enterp
 Plugins allow users to interact directly with APIs, and services, enhancing Copilot's capabilities and broadening its range of functionalities by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time information, such as the latest news coverage on a product launch, or knowledge-based information like a team's project items.
 
 Learn More:
-- 
+- Link to plugin docs
 
 #### Connectors
 
 Microsoft Graph Connectors can be used with Microsoft 365 Copilot to integrate custom data. With a Microsoft Graph Connector, your data is included in Copilot responses and also participates in other Microsoft 365 experiences such as search and content.
 
 Learn More:
-- 
+- Link to connectors docs
 
 #### Message Extensions
 
 Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message.
 
 Learn More:
-- 
+- Link to message extensions docs
 
 ### Benefits of Extending Microsoft Copilots
 
