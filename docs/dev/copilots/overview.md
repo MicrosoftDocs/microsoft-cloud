@@ -2,9 +2,9 @@
 title: Microsoft Copilots
 description: Learn how you can adopt, extend, and build Microsoft Copilots.
 author: DanWahlin
-ms.author: dwahlin
+ms.author: donasa
 ms.contributors: dwahlin-5182022
-ms.date: 09/27/2023
+ms.date: 10/30/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
