@@ -26,6 +26,8 @@ Microsoft Copilots are AI assistants powered by Large Language Models (LLMs) tha
 
 The core value of copilots stems from their capability to interpret natural language commands, enhancing the user experience by making it more intuitive and user-friendly. From answering queries in Bing Chat Enterprise, assisting with data navigation and analysis in Microsoft 365, aiding in app and automation creation in Power Apps and Power Automate, to suggesting code in GitHub Copilot, they encapsulate the notion of having an AI-powered assistant at your fingertips. Copilots make complex tasks more manageable, fostering a collaborative environment for both individual users and enterprises. 
 
+:::image type="content" source="media/copilots-across-microsoft-cloud.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
+
 ## Adopting Copilots
 
 The Microsoft Cloud offers a variety of copilots that can be adopted to enhance your productivity and creativity.
