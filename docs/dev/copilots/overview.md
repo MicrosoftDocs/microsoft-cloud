@@ -30,7 +30,7 @@ The core value of copilots stems from their capability to interpret natural lang
 
 ## Adopting Copilots
 
-The Microsoft Cloud offers a variety of copilots that can be adopted to enhance your productivity and creativity.
+Microsoft offers a variety of copilots that can be adopted to enhance user productivity and creativity. These copilots are integrated within various Microsoft platforms and products, providing a more interactive and efficient digital workspace.
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
 
