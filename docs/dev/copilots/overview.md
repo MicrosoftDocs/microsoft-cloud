@@ -124,19 +124,21 @@ Learn More:
 
 #### Connectors
 
-Microsoft Graph Connectors can be used with Microsoft 365 Copilot to integrate custom data. With a Microsoft Graph Connector, your data is included in Copilot responses and also participates in other Microsoft 365 experiences such as search and content.
+Power Platform Connectors can be used to integrate custom data into Microsoft 365 Copilot, Power Apps Copilot, and Power Automate Copilot. With a Power Platform Connector your external data and content is included in Copilot responses.
 
 Learn More:
-- Link to connectors docs
+- Link to PP connectors docs
 
 #### Message Extensions
 
-Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message.
+Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message. By using message extension, you can extend the built-in functionality of Microsoft 365 Copilot.
 
 Learn More:
 - Link to message extensions docs
 
 ## Building Copilots
+
+TBD
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the adopt, extend, and build capabilities of copilots across the Microsoft Cloud." border="false" :::
 
