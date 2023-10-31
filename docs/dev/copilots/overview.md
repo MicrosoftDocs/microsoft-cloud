@@ -71,13 +71,6 @@ GitHub Copilot is an AI developer tool that assists in the coding process by sug
 Learn More:
 - [GitHub Copilot Overview](https://github.com/features/copilot)
 
-### Fabric Copilot
-
-
-
-Learn More:
-- []()
-
 ### Copilot for Microsoft 365
 
 Copilot for Microsoft 365 combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 product line, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe and compliant digital workspace.  
@@ -89,9 +82,10 @@ Learn More:
 
 ### Microsoft Security Copilot
 
+Microsoft Security Copilot is an AI-powered security analysis tool that empowers defenders to move at the speed and scale of AI, combining advanced large language models with a security-specific model from Microsoft. It integrates insights and data from security tools and delivers guidance that’s tailored to your organization. Security Copilot accepts natural language inputs and includes a pinboard section for co-workers to collaborate and share information. It also surfaces prioritized threats in real-time while anticipating a threat actor’s next move with continuous reasoning based on Microsoft’s global threat intelligence.
 
 Learn More:
-- []()
+- [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
 
 ### Windows Copilot 
  
