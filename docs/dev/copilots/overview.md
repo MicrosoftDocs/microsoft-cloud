@@ -131,7 +131,7 @@ Learn More:
 - [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
 - [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
 
-#### Message Extensions
+#### Extending Copilots with Message Extensions
 
 Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message. By using message extension, you can extend the built-in functionality of Microsoft 365 Copilot.
 
