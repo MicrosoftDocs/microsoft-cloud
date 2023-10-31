@@ -126,7 +126,7 @@ Learn More:
 Microsoft Graph Connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Copilot can access the content.
 
 [ Add Graph Connectors overview here ]
-- 
+- Link
 
 
 Learn More:
