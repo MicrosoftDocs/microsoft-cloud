@@ -43,17 +43,23 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/copilots-logo-blues.svg
       links:
+        - text: Copilots Overview
+          url: /microsoft-cloud/dev/copilots/overview
+
+        - text: Copilot for Microsoft 365
+          url: https://adoption.microsoft.com/en-us/copilot/
+
+        - text: Copilot in Power Apps
+          url: /power-apps/maker/canvas-apps/ai-overview
+
+        - text: Copilot in Power Automate
+          url: /power-automate/get-started-with-copilot
+
         - text: GitHub Copilot
           url: https://github.com/features/copilot
 
-        - text: Microsoft 365 Copilot
-          url: https://adoption.microsoft.com/en-us/copilot/
-
-        - text: Power Apps Copilot
-          url: /power-apps/maker/canvas-apps/ai-overview
-
-        - text: Power Automate Copilot
-          url: /power-automate/get-started-with-copilot
+        - text: Windows Copilot
+          url: https://www.microsoft.com/windows/copilot-ai-features
 
     # Card
     - title: Solutions Across the Microsoft Cloud
