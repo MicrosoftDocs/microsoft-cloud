@@ -108,7 +108,7 @@ By extending Microsoft Copilots, developers can integrate external data directly
 
 By extending Microsoft Copilots with plugins, connectors, or message extensions, users can leverage the power of these tools to their fullest potential, enhancing productivity and collaboration by integrating with a wide range of third-party tools and services.
 
-#### Plugins for Microsoft Copilot
+#### Extending with Plugins for Microsoft Copilots
 
 Plugins allow users to interact directly with APIs and services enhancing Copilot's capabilities and broadening its range of functionalities by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time information, such as the latest news coverage on a product launch, or knowledge-based information like a team's project items. 
 
@@ -119,7 +119,7 @@ Learn More:
 - [Power Platform Connectors](/connectors/connectors)
 - [Create a Custom Connector from Scratch](/connectors/custom-connectors/define-blank)
 
-#### Microsoft Graph Connectors
+#### Extending with Microsoft Graph Connectors
 
 Microsoft Graph Connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Copilot for Microsoft 365 can access the content. Microsoft Graph connectors are responsible for three things:
 
