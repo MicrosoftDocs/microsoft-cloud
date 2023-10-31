@@ -110,22 +110,26 @@ By extending Microsoft Copilots with plugins, connectors, or message extensions,
 
 #### Plugins for Microsoft Copilot
 
-Plugins allow users to interact directly with APIs and services enhancing Copilot's capabilities and broadening its range of functionalities by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time information, such as the latest news coverage on a product launch, or knowledge-based information like a team's project items. One example of plugins is Power Platform Connectors. They can be used to integrate custom data into Copilot for Microsoft 365, Copilot in Power Apps, and Copilot in Power Automate. With a Power Platform connector your external data and content is included in Copilot responses.
+Plugins allow users to interact directly with APIs and services enhancing Copilot's capabilities and broadening its range of functionalities by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time information, such as the latest news coverage on a product launch, or knowledge-based information like a team's project items. 
+
+One example of plugins is Power Platform Connectors. Power Platform connectors offer a set of prebuilt actions and triggers for developers to build their apps and workflows, and can be used to extend Copilot in Microsoft 365 and Copilots in Power Platform experiences with data from external apps.
 
 Learn More:
 - [Overview of plugins for Microsoft Copilot](https://review.learn.microsoft.com/en-us/copilot-plugins/overview?branch=pr-en-us-1)
+- [Power Platform Connectors](/connectors/connectors)
+- [Create a Custom Connector from Scratch](/connectors/custom-connectors/define-blank)
 
 #### Microsoft Graph Connectors
 
-Microsoft Graph Connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Copilot can access the content.
+Microsoft Graph Connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Copilot for Microsoft 365 can access the content. Microsoft Graph connectors are responsible for three things:
 
-[ Add Graph Connectors overview here ]
-- Link
-
+1. Creating an external connection to your data sources
+1. Defining a schema for the external content
+1. Managing external content that’s imported into Microsoft 365
 
 Learn More:
-- Link to PP connectors docs
-- Link to Graph connectors docs
+- [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
+- [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
 
 #### Message Extensions
 
