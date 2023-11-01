@@ -149,4 +149,4 @@ TBD
 
 
 Learn More:
-- [Power Virtual Agents Overview](https://learn.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
+- [Power Virtual Agents Overview](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
