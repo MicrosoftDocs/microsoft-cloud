@@ -57,11 +57,12 @@ Learn More:
 - [AI Copilot overview](/power-apps/maker/canvas-apps/ai-overview)
 - [Build flows for a real estate solution using Copilot in Power Automate](/training/modules/build-real-estate-power-automate-copilot/)
 
-### Copilot in Dynamics 365 Sales
+### Copilot in Dynamics 365
 
-Dynamics 365 Copilot is an AI assistant engineered to bolster the productivity and efficiency of sales teams. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, and account-related news. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation
+Dynamics 365 Copilot is an AI assistant engineered to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
 
 Learn More:
+- [AI and Copilot for Business Applications](https://dynamicspartners.transform.microsoft.com/solution-plays/ai-copilot)
 - [Copilot in Dynamics 365 Sales Overview](https://learn.microsoft.com/dynamics365/sales/copilot-overview)
 
 ### GitHub Copilot 
