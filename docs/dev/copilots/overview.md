@@ -71,14 +71,14 @@ GitHub Copilot is an AI developer tool that assists in the coding process by sug
 Learn More:
 - [GitHub Copilot Overview](https://github.com/features/copilot)
 
-### Copilot for Microsoft 365
+### Microsoft 365 Copilot
 
-Copilot for Microsoft 365 combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 product line, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe and compliant digital workspace.  
+Microsoft 365 Copilot combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 product line, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe, secure, and compliant digital workspace.  
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps including Teams, Outlook, Excel, Word, PowerPoint, OneNote, Loop, and Whiteboard. The integrated Copilot functionuality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
 Learn More:
-- [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
+- [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
 
 ### Microsoft Security Copilot
 
@@ -121,7 +121,7 @@ Learn More:
 
 #### Extending Copilots with Microsoft Graph Connectors
 
-Microsoft Graph connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Copilot for Microsoft 365 can access the content. Microsoft Graph connectors are responsible for three things:
+Microsoft Graph connectors import external content into Microsoft 365. Once, the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Microsoft 365 Copilot can access the content. Microsoft Graph connectors are responsible for three things:
 
 1. Creating an external connection to your data sources
 1. Defining a schema for the external content
