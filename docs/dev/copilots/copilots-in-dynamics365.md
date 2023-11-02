@@ -1,0 +1,1 @@
+- [Copilot in Dynamics 365 Sales Overview](https://learn.microsoft.com/dynamics365/sales/copilot-overview)
