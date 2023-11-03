@@ -34,6 +34,11 @@ highlightedContent:
       itemType: overview
       url: /azure/cognitive-services/openai/concepts/prompt-engineering
 
+    # Card
+    - title: Microsoft 365 Developer Proxy
+      itemType: overview
+      url: /microsoft-cloud/dev/m365-developer-proxy/get-started
+
 productDirectory:
   title: Microsoft Cloud Learning Resources
   items:
