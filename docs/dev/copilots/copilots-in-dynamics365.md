@@ -34,7 +34,7 @@ Copilot in Dynamics 365 Sales offers the following capabilities:
 
 Learn more: 
 - [Learn more about Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-- [Learn how to enable configure Copilot in Dynamics 365 Sales ](https://learn.microsoft.com/dynamics365/sales/enable-setup-copilot)
+- [Learn how to enable configure Copilot in Dynamics 365 Sales ](/dynamics365/sales/enable-setup-copilot)
 
 ## Copilot in Dynamics 365 Customer Service
 
