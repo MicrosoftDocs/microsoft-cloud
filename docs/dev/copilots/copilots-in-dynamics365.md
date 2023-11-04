@@ -21,20 +21,29 @@ ms.custom:
 
 Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
 
-## Copilot in Dynamics 365 Sales & Viva Sales 
+## Copilot in Dynamics 365 Business Central
 
-Copilot in Microsoft Dynamics 365 Sales and Viva Sales helps sellers dramatically reduce the time they spend on clerical tasks. AI helps write email responses to customers and can even create an email summary of a Teams meeting in Outlook. The meeting summary pulls in details from the seller’s CRM such as product and pricing information, as well as insights from the recorded Teams call. With sellers spending as much as 66% of their day checking and responding to emails, this presents a significant business upside to give the seller more time with their customers. 
+Copilot in Dynamics 365 Business Central streamlines the creation of product listings for online commerce. Product attributes such as color, material and size can be used to create compelling product descriptions for online storefronts in seconds. The descriptions can be further tailored by choosing tone of voice, format and length. Business Central customers using Shopify can seamlessly publish the products with descriptions to their Shopify store in just a few clicks.
 
-Copilot in Dynamics 365 Sales offers the following capabilities: 
-- Record summarization 
-- Record catch up 
-- Meeting preparation 
-- Email assistance 
-- News updates 
+Learn more:
+- [How to drive sales with AI-generated product descriptions](/dynamics365/release-plan/2023wave1/smb/dynamics365-business-central/drive-sales-ai-generated-product-descriptions)
+- [How to AI-powered item marketing text with Copilot](/dynamics365/business-central/ai-overview)
+- [How to create AI-generated marketing text with Copilot](/dynamics365/business-central/item-marketing-text#create-ai-generated-marketing-text-preview-with-copilot)
 
-Learn more: 
-- [Learn more about Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-- [Learn how to enable configure Copilot in Dynamics 365 Sales ](/dynamics365/sales/enable-setup-copilot)
+## Copilot in Dynamics 365 Commerce
+
+Creating marketing and storytelling content for a product for e-commerce sites is key to driving customer engagement and sales, but can be time-consuming and challenging. The new copilot capability in Commerce is built for the product enrichment workflow in site builder. With Copilot for site builder, you can generate persuasive, compelling, and engaging product enrichment and marketing content for your e-commerce websites quickly and efficiently. 
+
+Copilot in Dynamics 365 Commerce offers the following capabilities:
+- Jump-start the creative process: Copilot creates content that is based on basic product information such as name, description, attributes, and dimensions. You can use the generated content to spark further ideas.
+- Optimize for search engines (SEO): Optimize your product marketing content for search engines so that it ranks higher in Internet search results and thereby helps generate more organic growth.
+- Craft the tone of message: Select the voice that best fits your brand and audience. You can specify a unique tone for each product. The tone of message for a product can be adventurous, casual, luxurious, formal, informational, educational, and more.
+- Craft a tailored message: Select the intended audience to tailor the message for the specific buyers, such as new parents, graduates, senior citizens, health-care workers, and more.
+- Amplify with key highlights: Augment your content with key highlights specific to the product in a natural language-based and interactive manner. Generate engaging text snippets that help amplify key highlights for your product.
+- Make basic modifications: Easily make basic text modifications using an inline rich text editor or by providing key prompts to format the text using natural language.
+
+Learn more:
+- [Generate Product Enrichment Content for E-commerce Sites with Copilot in Site Builder](/dynamics365/release-plan/2023wave2/commerce/dynamics365-commerce/generate-engaging-product-content-e-commerce-websites-using-copilot-dynamics-365-commerce)
 
 ## Copilot in Dynamics 365 Customer Service
 
@@ -52,14 +61,6 @@ Copilot in Dynamics 365 Customer Service offers the following capabilities:
 Learn more:
 - [Copilot in Dynamics 365 Customer Service](/dynamics365/customer-service/use-copilot-features)
 
-## Copilot in Dynamics 365 Field Service
-
-The AI-generated work order recap in Dynamics 365 Field Service provides a summary of a work order and its related data. Designed to help service managers, dispatchers, and frontline workers quickly understand the state of a work order and the next steps to take, the recap summarizes the work order's history, future actions, arrival times, work criticality, required parts, and other contextual information. The Outlook add-in also provides copilot capabilities to assist with work order creation and scheduling in Outlook.
-
-Learn more:
-- [Work order recap with Copilot in Field Service](/dynamics365/field-service/work-order-recap)
-- [Work order creation with Copilot](/dynamics365/field-service/flw-outlook#create-a-work-order-in-outlook-using-copilot-in-field-service-preview)
-
 ## Copilot in Dynamics 365 Customer Insights
 
 With Copilot in Dynamics 365 Customer Insights, marketers can curate highly personalized and targeted customer segments by having a dialogue with their customer data platform using natural language. Marketers can receive suggestions about additional segments that may not have been previously considered. This new capability can handle complex calculations and match customers that fit a select profile.
@@ -75,14 +76,24 @@ Learn more:
 - [Use copilot to create journeys](/dynamics365/customer-insights/journeys/real-time-marketing-use-copilot-create-journey)
 - [Use copilot to target the right customers using query assist](/dynamics365/customer-insights/journeys/real-time-marketing-natural-language-segments)
 
-## Copilot in Dynamics 365 Business Central
+## Copilot in Dynamics 365 Field Service
 
-Copilot in Dynamics 365 Business Central streamlines the creation of product listings for online commerce. Product attributes such as color, material and size can be used to create compelling product descriptions for online storefronts in seconds. The descriptions can be further tailored by choosing tone of voice, format and length. Business Central customers using Shopify can seamlessly publish the products with descriptions to their Shopify store in just a few clicks.
+The AI-generated work order recap in Dynamics 365 Field Service provides a summary of a work order and its related data. Designed to help service managers, dispatchers, and frontline workers quickly understand the state of a work order and the next steps to take, the recap summarizes the work order's history, future actions, arrival times, work criticality, required parts, and other contextual information. The Outlook add-in also provides copilot capabilities to assist with work order creation and scheduling in Outlook.
 
 Learn more:
-- [How to drive sales with AI-generated product descriptions](/dynamics365/release-plan/2023wave1/smb/dynamics365-business-central/drive-sales-ai-generated-product-descriptions)
-- [How to AI-powered item marketing text with Copilot](/dynamics365/business-central/ai-overview)
-- [How to create AI-generated marketing text with Copilot](/dynamics365/business-central/item-marketing-text#create-ai-generated-marketing-text-preview-with-copilot)
+- [Work order recap with Copilot in Field Service](/dynamics365/field-service/work-order-recap)
+- [Work order creation with Copilot](/dynamics365/field-service/flw-outlook#create-a-work-order-in-outlook-using-copilot-in-field-service-preview)
+
+## Copilot in Dynamics 365 Finance
+
+Copilot in Dynamics 365 Finance enhances productivity for collections managers and improves collaboration with their customers.  
+
+The AI-generated summary of the customers’ account, overdue invoices and payment history helps prioritize which customers need attention. Personalized customer communication using the AI-generated email saves time and increases overall efficiency by not having to navigate to multiple screens. This helps increase successful collection rates and proactively keeps customers in good standing.  
+
+Copilot in Microsoft Dynamics 365 Finance displays this AI-generated summary on the new Collections coordinator workspace. Powered by Microsoft Azure OpenAI’s large language model, this will reduce the time reviewing collections details for customers. Collections coordinators can help their organizations to better cash flows by increasing more timely payments.  
+
+Learn more:
+- [Collections Coordinator Summary](/dynamics365/finance/accounts-receivable/collectionscoordinatorsummary)
 
 ## Copilot in Dynamics 365 Project Operations
 
@@ -97,31 +108,20 @@ With Copilot, project managers can improve efficiency, reduce risks, and focus o
 Learn more:
 - [Project Management Copilot Overview](/dynamics365/project-operations/project-management/copilot-features)
 
-## Copilot in Dynamics 365 Finance
+## Copilot in Dynamics 365 Sales & Viva Sales 
 
-Copilot in Dynamics 365 Finance enhances productivity for collections managers and improves collaboration with their customers.  
+Copilot in Microsoft Dynamics 365 Sales and Viva Sales helps sellers dramatically reduce the time they spend on clerical tasks. AI helps write email responses to customers and can even create an email summary of a Teams meeting in Outlook. The meeting summary pulls in details from the seller’s CRM such as product and pricing information, as well as insights from the recorded Teams call. With sellers spending as much as 66% of their day checking and responding to emails, this presents a significant business upside to give the seller more time with their customers. 
 
-The AI-generated summary of the customers’ account, overdue invoices and payment history helps prioritize which customers need attention. Personalized customer communication using the AI-generated email saves time and increases overall efficiency by not having to navigate to multiple screens. This helps increase successful collection rates and proactively keeps customers in good standing.  
+Copilot in Dynamics 365 Sales offers the following capabilities: 
+- Record summarization 
+- Record catch up 
+- Meeting preparation 
+- Email assistance 
+- News updates 
 
-Copilot in Microsoft Dynamics 365 Finance displays this AI-generated summary on the new Collections coordinator workspace. Powered by Microsoft Azure OpenAI’s large language model, this will reduce the time reviewing collections details for customers. Collections coordinators can help their organizations to better cash flows by increasing more timely payments.  
-
-Learn more:
-- [Collections Coordinator Summary](/dynamics365/finance/accounts-receivable/collectionscoordinatorsummary)
-
-## Copilot in Dynamics 365 Commerce
-
-Creating marketing and storytelling content for a product for e-commerce sites is key to driving customer engagement and sales, but can be time-consuming and challenging. The new copilot capability in Commerce is built for the product enrichment workflow in site builder. With Copilot for site builder, you can generate persuasive, compelling, and engaging product enrichment and marketing content for your e-commerce websites quickly and efficiently. 
-
-Copilot in Dynamics 365 Commerce offers the following capabilities:
-- Jump-start the creative process: Copilot creates content that is based on basic product information such as name, description, attributes, and dimensions. You can use the generated content to spark further ideas.
-- Optimize for search engines (SEO): Optimize your product marketing content for search engines so that it ranks higher in Internet search results and thereby helps generate more organic growth.
-- Craft the tone of message: Select the voice that best fits your brand and audience. You can specify a unique tone for each product. The tone of message for a product can be adventurous, casual, luxurious, formal, informational, educational, and more.
-- Craft a tailored message: Select the intended audience to tailor the message for the specific buyers, such as new parents, graduates, senior citizens, health-care workers, and more.
-- Amplify with key highlights: Augment your content with key highlights specific to the product in a natural language-based and interactive manner. Generate engaging text snippets that help amplify key highlights for your product.
-- Make basic modifications: Easily make basic text modifications using an inline rich text editor or by providing key prompts to format the text using natural language.
-
-Learn more:
-- [Generate Product Enrichment Content for E-commerce Sites with Copilot in Site Builder](/dynamics365/release-plan/2023wave2/commerce/dynamics365-commerce/generate-engaging-product-content-e-commerce-websites-using-copilot-dynamics-365-commerce)
+Learn more: 
+- [Learn more about Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
+- [Learn how to enable configure Copilot in Dynamics 365 Sales ](/dynamics365/sales/enable-setup-copilot)
 
 ## Copilot in Dynamics 365 Supply Chain Management
 

@@ -46,6 +46,18 @@ Microsoft offers a variety of Copilots that can be adopted to enhance user produ
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for Copilots across the Microsoft Cloud." border="false" :::
 
+Copilots discussed in this section include:
+- [Copilots in Dynamics 365](#copilots-in-dynamics-365)
+- [Copilots for Microsoft 365](#copilots-for-microsoft-365)
+- [Copilots in Microsoft Fabric](#copilots-in-microsoft-fabric)
+- [Copilot in Power Apps](#copilot-in-power-apps)
+- [Copilot in Power Automate](#copilot-in-power-automate)
+- [GitHub Copilot](#github-copilot)
+- [Microsoft Copilot](#microsoft-copilot)
+- [Microsoft Copilot Pro](#microsoft-copilot-pro)
+- [Microsoft Security Copilot](#microsoft-security-copilot)
+- [Copilot in Windows](#copilot-in-windows)
+
 ### Copilots in Dynamics 365
 
 Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
@@ -62,7 +74,7 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
 
-### Copilot in Power BI
+### Copilots in Microsoft Fabric
 
 Microsoft Fabric provides a new way to transform and analyze data, generate insights, and create visualizations and reports. 
 
@@ -76,7 +88,7 @@ Copilot in Power BI provides the following features:
 
 Learn more:
 - [Introducing Microsoft Fabric and Copilot in Microsoft Power BI](https://powerbi.microsoft.com/blog/introducing-microsoft-fabric-and-copilot-in-microsoft-power-bi/)
-- [Copilot in Power BI Demo (video)](https://www.youtube.com/watch?v=wr__6tM5U6I)
+- [Copilot in Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
 
 ### Copilots in Dynamics 365
 
@@ -190,12 +202,19 @@ Learn more:
 
 ## Build a Custom Copilot
 
-TBD
+In addition to adopting and extending a Microsoft Copilot, custom AI Copilots can be created using Microsoft technologies such as Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and others to create a personalized conversational AI experience for users. These custom Copilots can include company data and documents while also retrieving real-time data from external APIs. For example, a custom Copilot can be built to provide a chat interface for help desk documents or tickets as well as knowledge base articles. Rather than using traditional search techniques, users can interact with the documents using natural language, making it easier to find information and complete tasks.
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating custom Copilots." border="false" :::
 
-### Microsoft Copilot Studio
+### Chat with Azure OpenAI Models Using Your Own Data
 
+Companies can use their own data with Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their enteprise applications. This enables users to interact with their data using natural language, making it easier to find information and complete tasks.
+
+Learn more:
+- [Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
+
+
+### Microsoft Copilot Studio
 
 
 Learn more:
