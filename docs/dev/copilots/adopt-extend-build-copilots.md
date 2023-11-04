@@ -134,9 +134,9 @@ Microsoft Security Copilot is an AI-powered security analysis tool that empowers
 Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
 
-### Windows Copilot 
+### Copilot in Windows
  
-Windows Copilot is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
+Copilot in Windows is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
  
 Learn more:
 - [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)

@@ -59,7 +59,9 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Overview  
-            url: copilots/overview.md
+          - text: Adopt, Extend, and Build Microsoft Copilots  
+            url: copilots/adopt-extend-build-copilots
+          - text: Copilots in Dynamics 365
+            url: copilots/dynamics-365-copilots
 
   
