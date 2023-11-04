@@ -4,7 +4,7 @@ description: Learn how you can adopt, extend, and build Microsoft Copilots.
 author: DanWahlin
 ms.author: donasa
 ms.contributors: dwahlin-5182022
-ms.date: 10/30/2023
+ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
@@ -44,42 +44,12 @@ Microsoft offers a variety of Copilots that can be adopted to enhance user produ
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilots across the Microsoft Cloud." border="false" :::
 
-### Copilot Pro
- 
-Copilot Pro utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Copilot Pro offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
- 
-Learn More:
-- [Copilot Pro Documentation](/bing-chat-enterprise)
-
-### Copilot in Power Apps
-
-The AI Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
-
-Learn More:
-- [Copilot in Power Apps Overview](/power-apps/maker/canvas-apps/ai-overview)
-- [Build a canvas app for a real estate solution with Copilot in Power Apps](/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
-
-### Copilot in Power Automate 
- 
-Copilot in Power Automate simplifies automation creation using natural language expressions. Users describe what they need through conversation, and Copilot assists by understanding intent, setting up connections, applying necessary parameters, and making requested changes to the flow. It can also be used to answer queries about the flow that a user is creating.
-
-Learn More:
-- [Get started with Copilot in Cloud Flows](/power-automate/get-started-with-copilot)
-- [Build flows for a real estate solution using Copilot in Power Automate](/training/modules/build-real-estate-power-automate-copilot/)
-
 ### Copilots in Dynamics 365
 
-Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
+Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
 
 Learn More:
 - [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
-
-### GitHub Copilot 
- 
-GitHub Copilot is an AI developer tool that assists in the coding process by suggesting code as the user types. It serves as a programming aid, helping to streamline coding tasks and explore coding solutions efficiently. Integrated within the GitHub platform, it provides a supportive environment for developers to tackle programming challenges and enhance their coding workflow. Additionally, GitHub Copilot can be used to learn new programming languages or frameworks by providing real-time code suggestions based on developer input. 
-
-Learn More:
-- [GitHub Copilot Overview](https://github.com/features/copilot)
 
 ### Copilots for Microsoft 365
 
@@ -87,21 +57,84 @@ Copilots for Microsoft 365 combines Large Language Models (LLMs) with Microsoft 
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps. The integrated Copilot functionality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
-Learn More:
+Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
+
+### Copilot in Power BI
+
+Microsoft Fabric provides a new way to transform and analyze data, generate insights, and create visualizations and reports. 
+
+Copilot in Power BI infuses the power of Large Language Models (LLMs) into Power BI at every layer to help users get more done and create more value from their data. Users can create and tailor reports in seconds, generate and edit DAX calculations, create narrative summaries, and ask questions about their data, all by using natural conversational language. It enables users to quickly create reports with just a few clicks saving hours of effort building report pages.
+
+Copilot in Power BI provides the following features:
+- Creates a summary of the dataset. 
+- Outlines suggested pages for your report: for example, what each page in the report will be about, and how many pages it will create. 
+- Creates visuals for the individual pages. 
+- Creates a summary of the current page. 
+
+Learn more:
+- [Introducing Microsoft Fabric and Copilot in Microsoft Power BI](https://powerbi.microsoft.com/en-us/blog/introducing-microsoft-fabric-and-copilot-in-microsoft-power-bi/)
+- [Copilot in Power BI Demo (video)](https://www.youtube.com/watch?v=wr__6tM5U6I)
+
+### Copilots in Dynamics 365
+
+Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
+
+Learn more:
+- [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
+
+### Copilot in Power Apps
+
+The AI Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
+
+Learn more:
+- [Copilot in Power Apps Overview](/power-apps/maker/canvas-apps/ai-overview)
+- [Build a canvas app for a real estate solution with Copilot in Power Apps](/training/modules/build-canvas-app-real-estate-power-apps-copilot/)
+
+### Copilot in Power Automate 
+ 
+Copilot in Power Automate simplifies automation creation using natural language expressions. Users describe what they need through conversation, and Copilot assists by understanding intent, setting up connections, applying necessary parameters, and making requested changes to the flow. It can also be used to answer queries about the flow that a user is creating.
+
+Learn more:
+- [Get started with Copilot in Cloud Flows](/power-automate/get-started-with-copilot)
+- [Build flows for a real estate solution using Copilot in Power Automate](/training/modules/build-real-estate-power-automate-copilot/)
+
+### GitHub Copilot 
+ 
+GitHub Copilot is an AI developer tool that assists in the coding process by suggesting code as the user types. It serves as a programming aid, helping to streamline coding tasks and explore coding solutions efficiently. Integrated within the GitHub platform, it provides a supportive environment for developers to tackle programming challenges and enhance their coding workflow. Additionally, GitHub Copilot can be used to learn new programming languages or frameworks by providing real-time code suggestions based on developer input. 
+
+Learn more:
+- [GitHub Copilot Overview](https://github.com/features/copilot)
+
+### Microsoft Copilot
+
+Microsoft Copilot is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more. 
+
+Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access the chat feature by clicking on the "Copilot" icon in the top right corner of the browser.
+
+Learn more:
+- [Copilot in Microsoft Edge](https://www.microsoft.com/en-us/edge/features/bing-chat)
+- [bing.com](https://bing.com)
+
+### Microsoft Copilot Pro
+ 
+Copilot Pro utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Copilot Pro offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
+ 
+Learn more:
+- [Copilot Pro Documentation](/bing-chat-enterprise)
 
 ### Microsoft Security Copilot
 
 Microsoft Security Copilot is an AI-powered security analysis tool that empowers defenders to move at the speed and scale of AI, combining advanced large language models with a security-specific model from Microsoft. It integrates insights and data from security tools and delivers guidance that’s tailored to your organization. Security Copilot accepts natural language inputs and includes a pinboard section for co-workers to collaborate and share information. It also surfaces prioritized threats in real-time while anticipating a threat actor’s next move with continuous reasoning based on Microsoft’s global threat intelligence.
 
-Learn More:
+Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
 
 ### Windows Copilot 
  
 Windows Copilot is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
  
-Learn More:
+Learn more:
 - [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
 
 ## Extending Copilots
@@ -122,9 +155,11 @@ Plugins allow users to interact directly with APIs and services enhancing Copilo
 
 One example of plugins is Power Platform Connectors which offer a set of prebuilt actions and triggers for developers to build their own apps and workflows. They can be used to extend Copilot in Microsoft 365 and Copilots in Power Platform experiences with data from external apps.
 
+:::image type="content" source="media/power-platform-connector.png" alt-text="A diagram showing the key tasks that a Power Platform connector performs." border="false" :::
+
 Developers can also create plugins that use OpenAI schemas to add custom functionality to Copilot experiences by connecting their own application data to Microsoft Copilot. Plugins enable a Copilot experience to interact with your own APIs, enhancing the experience with the ability to perform a wide range of actions.
 
-Learn More:
+Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
 - [Overview of Plugins for Microsoft Copilot](https://review.learn.microsoft.com/en-us/copilot-plugins/overview?branch=pr-en-us-1)
@@ -137,7 +172,9 @@ Microsoft Graph connectors import external content into Microsoft 365. Once the 
 1. Defining a schema for the external content
 1. Managing external content that’s imported into Microsoft 365
 
-Learn More:
+:::image type="content" source="media/graph-connector.png" alt-text="A diagram showing the key tasks that a Microsoft Graph connector performs." border="false" :::
+
+Learn more:
 - [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
 - [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
 
@@ -145,7 +182,7 @@ Learn More:
 
 Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message. By using message extensions, you can extend the built-in functionality of Copilot for Microsoft 365.
 
-Learn More:
+Learn more:
 - [Message Extensions Overview](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
 - [Build Message Extensions using Bot Framework](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
 
@@ -159,6 +196,6 @@ TBD
 
 
 
-Learn More:
+Learn more:
 - [Microsoft Copilot Studio Overview](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
 - [Create a Low-Code Bot](/training/modules/create-bots-power-virtual-agents-copilot/)
