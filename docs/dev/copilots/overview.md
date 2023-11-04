@@ -202,7 +202,7 @@ Learn more:
 
 ## Build a Custom Copilot
 
-In addition to adopting and extending a Microsoft Copilot, custom AI Copilots can be created using Microsoft technologies such as Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and others to create a personalized conversational AI experience for users. These custom Copilots can include company data and documents while also retrieving real-time data from external APIs. For example, a custom Copilot can be built to provide a chat interface for help desk documents or tickets as well as knowledge base articles. Rather than using traditional search techniques, users can interact with the documents using natural language, making it easier to find information and complete tasks.
+In addition to adopting and extending a Microsoft Copilot, custom AI Copilots can be created using Microsoft technologies such as Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and others to create a personalized conversational AI experience for users. These custom Copilots can include company data and documents while also retrieving real-time data from external APIs. For example, a custom Copilot can be built to provide a chat interface for help desk documents or tickets and knowledge base articles. Rather than using traditional search techniques, users can interact with the documents using natural language, making it easier to find information and complete tasks.
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating custom Copilots." border="false" :::
 
