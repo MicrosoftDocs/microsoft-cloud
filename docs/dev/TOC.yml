@@ -16,7 +16,7 @@
     href: overview/summary.md  
 - name: Microsoft Copilots
   items:
-  - name: Overview  
+  - name: Adopt, Extend, Build Microsoft Copilots  
     href: copilots/overview.md
   - name: Copilots in Dynamics 365  
     href: copilots/copilots-in-dynamics365
