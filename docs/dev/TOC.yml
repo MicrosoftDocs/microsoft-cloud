@@ -17,7 +17,7 @@
 - name: Microsoft Copilots
   items:
   - name: Adopt, Extend and Build Microsoft Copilots  
-    href: copilots/adopt-extend-build-copilots
+    href: copilots/overview
   - name: Copilots in Dynamics 365  
     href: copilots/copilots-in-dynamics365
 - name: Tutorials
