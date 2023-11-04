@@ -34,7 +34,7 @@ Copilot in Dynamics 365 Sales offers the following capabilities:
 
 Learn more: 
 - [Learn more about Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-- [Learn how to enable configure Copilot in Dynamics 365 Sales ](https://learn.microsoft.com/en-us/dynamics365/sales/enable-setup-copilot)
+- [Learn how to enable configure Copilot in Dynamics 365 Sales ](https://learn.microsoft.com/dynamics365/sales/enable-setup-copilot)
 
 ## Copilot in Dynamics 365 Customer Service
 
@@ -70,7 +70,7 @@ Using Copilot in Dynamics 365 Marketing, marketers can describe their customer s
 
 Learn more:
 - [Use copilot to style your emails with AI-assisted themes](/dynamics365/customer-insights/journeys/email-theme)
-- [Use copilot to kickstart email creation](https://learn.microsoft.com/en-us/dynamics365/customer-insights/journeys/content-ideas)
+- [Use copilot to kickstart email creation](/dynamics365/customer-insights/journeys/content-ideas)
 - [Use copilot to refresh and perfect your message](/dynamics365/customer-insights/journeys/content-rewrite)
 - [Use copilot to create journeys](/dynamics365/customer-insights/journeys/real-time-marketing-use-copilot-create-journey)
 - [Use copilot to target the right customers using query assist](/dynamics365/customer-insights/journeys/real-time-marketing-natural-language-segments)

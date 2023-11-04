@@ -42,7 +42,7 @@ The core value of Copilots stems from their capability to interpret natural lang
 
 Microsoft offers a variety of Copilots that can be adopted to enhance user productivity and creativity. These Copilots are integrated into various Microsoft platforms and products, providing a more interactive and efficient digital workspace.
 
-:::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilots across the Microsoft Cloud." border="false" :::
+:::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for Copilots across the Microsoft Cloud." border="false" :::
 
 ### Copilots in Dynamics 365
 
@@ -73,7 +73,7 @@ Copilot in Power BI provides the following features:
 - Creates a summary of the current page. 
 
 Learn more:
-- [Introducing Microsoft Fabric and Copilot in Microsoft Power BI](https://powerbi.microsoft.com/en-us/blog/introducing-microsoft-fabric-and-copilot-in-microsoft-power-bi/)
+- [Introducing Microsoft Fabric and Copilot in Microsoft Power BI](https://powerbi.microsoft.com/blog/introducing-microsoft-fabric-and-copilot-in-microsoft-power-bi/)
 - [Copilot in Power BI Demo (video)](https://www.youtube.com/watch?v=wr__6tM5U6I)
 
 ### Copilots in Dynamics 365
@@ -113,7 +113,7 @@ Microsoft Copilot is an AI-powered chat assistant designed to aid users in web b
 Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access the chat feature by clicking on the "Copilot" icon in the top right corner of the browser.
 
 Learn more:
-- [Copilot in Microsoft Edge](https://www.microsoft.com/en-us/edge/features/bing-chat)
+- [Copilot in Microsoft Edge](https://www.microsoft.com/edge/features/bing-chat)
 - [bing.com](https://bing.com)
 
 ### Microsoft Copilot Pro
@@ -141,7 +141,7 @@ Learn more:
 
 Microsoft Copilots offer a comprehensive range of features right out of the box, yet many users continue to depend on external tools, services, and data to carry out tasks. To bridge this gap, Copilots can be extended using plugins, connectors, or message extensions.
 
-:::image type="content" source="media/copilots-across-microsoft-cloud-extend.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilots across the Microsoft Cloud." border="false" :::
+:::image type="content" source="media/copilots-across-microsoft-cloud-extend.png" alt-text="A diagram showing extend options for Copilots across the Microsoft Cloud." border="false" :::
 
 ### Benefits of Extending Microsoft Copilots
 
@@ -162,7 +162,7 @@ Developers can also create plugins that use OpenAI schemas to add custom functio
 Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
-- [Overview of Plugins for Microsoft Copilot](https://review.learn.microsoft.com/en-us/copilot-plugins/overview?branch=pr-en-us-1)
+- [Overview of Plugins for Microsoft Copilot](https://review.learn.microsoft.com/copilot-plugins/overview?branch=pr-en-us-1)
 
 #### Extending Copilots with Microsoft Graph Connectors
 
@@ -190,7 +190,7 @@ Learn more:
 
 TBD
 
-:::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilots across the Microsoft Cloud." border="false" :::
+:::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating custom Copilots." border="false" :::
 
 ### Microsoft Copilot Studio
 
