@@ -55,14 +55,11 @@ productDirectory:
         - text: Copilot in Power Apps
           url: /power-apps/maker/canvas-apps/ai-overview
 
-        - text: Copilot in Power Automate
-          url: /power-automate/get-started-with-copilot
-
+        - text: Copilot in Windows
+          url: https://www.microsoft.com/windows/copilot-ai-features
+          
         - text: GitHub Copilot
           url: https://github.com/features/copilot
-
-        - text: Windows Copilot
-          url: https://www.microsoft.com/windows/copilot-ai-features
 
     # Card
     - title: Solutions Across the Microsoft Cloud
