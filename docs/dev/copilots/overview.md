@@ -139,7 +139,7 @@ Copilot in Windows is an AI-powered intelligent assistant designed to enhance us
 Learn more:
 - [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
 
-## Extending Copilots
+## Extend a Copilot
 
 Microsoft Copilots offer a comprehensive range of features right out of the box, yet many users continue to depend on external tools, services, and data to carry out tasks. To bridge this gap, Copilots can be extended using plugins, connectors, or message extensions.
 
@@ -188,7 +188,7 @@ Learn more:
 - [Message Extensions Overview](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
 - [Build Message Extensions using Bot Framework](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
 
-## Building Copilots
+## Build a Custom Copilot
 
 TBD
 
