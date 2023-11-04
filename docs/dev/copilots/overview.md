@@ -202,21 +202,23 @@ Learn more:
 
 ## Build a Custom Copilot
 
-In addition to adopting and extending a Microsoft Copilot, custom AI Copilots can be created using Microsoft technologies such as Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and others to create a personalized conversational AI experience for users. These custom Copilots can include company data and documents while also retrieving real-time data from external APIs. For example, a custom Copilot can be built to provide a chat interface for help desk documents or tickets and knowledge base articles. Rather than using traditional search techniques, users can interact with the documents using natural language, making it easier to find information and complete tasks.
+In addition to adopting and extending a Microsoft Copilot, custom AI Copilots can be created to create a personalized conversational AI experience for users using Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and other Microsoft Cloud technologies. Custom Copilots can integrate company data and documents, retrieve real-time data from external APIs, and be embedded in company applications. For example, a custom Copilot can be built to provide a chat interface to access help desk tickets and knowledge base articles. Rather than using traditional search techniques or navigating across multiple applications, users can use the conversational UI provided by the custom Copilot to find the information they need.
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating custom Copilots." border="false" :::
 
-### Chat with Azure OpenAI Models Using Your Own Data
+### Use Azure OpenAI Models To Chat with Your Own Data
 
-Companies can use their own data with Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their enteprise applications. This enables users to interact with their data using natural language, making it easier to find information and complete tasks.
+Companies can integrate their own data with Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
 
 Learn more:
 - [Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
-
+- [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
 
 ### Microsoft Copilot Studio
 
+Microsoft Copilot Studio is a low-code tool that enables the creation of robust AI-driven chatbots capable of handling an array of interactions, from addressing standard inquiries to navigating intricate dialogues for issue resolution. Copilot Studio not only simplifies the process of building intelligent chatbots, but also seamlessly integrates across a variety of digital platforms such as websites, mobile apps, Facebook, Microsoft Teams, and other channels supported by Azure Bot Framework.
 
 Learn more:
 - [Microsoft Copilot Studio Overview](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
+- [AI-based Chatbot Authoring Overview](/power-virtual-agents/nlu-gpt-overview)
 - [Create a Low-Code Bot](/training/modules/create-bots-power-virtual-agents-copilot/)
