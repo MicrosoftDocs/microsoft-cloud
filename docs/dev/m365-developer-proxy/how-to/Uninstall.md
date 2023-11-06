@@ -1,0 +1,22 @@
+If you want to remove Microsoft 365 Developer Proxy from your machine, follow the following steps. 
+
+1. Remove the folder where you extracted the files from the ZIP on your disk.
+2. Remove the certificate, following the steps relevant to the OS you use below.
+
+<details>
+   <summary>Windows 11</summary>
+
+1. Open `Start Menu`
+2. Enter `Manage user certificates` in the search box, select the result in the list to open the `Certificates` dialog box.
+3. In the tree view, expand the `Personal` folder and select the `Certificates` child folder.
+4. Remove the certificate issued to `Titanium Root Certificate Authority` by selecting and pressing the Delete key on your keyboard, or right click and select `Delete` in the menu.
+5. Select `Yes` in the prompt to confirm the deletion.
+</details>
+
+<details>
+   <summary>macOS Monterey</summary>
+
+1.  Remove `~/.config/m365-developer-proxy/rootCert.pfx` file.
+</details>
+
+Microsoft 365 Developer Proxy doesn't create any additional files or registry entries on your machine.

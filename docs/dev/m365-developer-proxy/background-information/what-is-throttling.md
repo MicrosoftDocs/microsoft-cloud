@@ -1,0 +1,12 @@
+When your application connected to Microsoft Graph is used at scale, it can happen that it will be throttled. 
+
+Throttling is a mechanism used in Microsoft 365 and other cloud services, to ensure service continuity. 
+
+When servers experience anomalous load, they start sending `429 Too many requests` responses, prompting applications to wait for a period of time before issuing new requests.
+
+This gives servers the chance to decrease the load and restore normal operations.
+
+**The best way to help servers restore normal operations, is for applications to stop calling Microsoft Graph for the period specified on the 429 response. If however, applications will keep calling Microsoft Graph, throttling will continue blocking access to data.**
+
+> [!TIP]
+> If you use Microsoft Graph SDKs, your applications automatically back-off when throttled. If you don't use Microsoft Graph SDKs, you need to handle throttling, and other exceptions, yourself.

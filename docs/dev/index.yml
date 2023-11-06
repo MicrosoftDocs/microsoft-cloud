@@ -68,7 +68,11 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Get started  
-            url: m365-developer-proxy/get-started.md
-
-  
+          - text: Get started
+            url: m365-developer-proxy/get-started/index.md
+          - text: How-to
+            url: m365-developer-proxy/how-to/index.md
+          - text: Reference
+            url: m365-developer-proxy/technical-reference/index.md
+          - text: Background
+            url: m365-developer-proxy/background-information/index.md

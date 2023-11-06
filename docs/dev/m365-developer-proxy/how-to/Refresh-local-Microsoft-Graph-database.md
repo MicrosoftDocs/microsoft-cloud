@@ -1,0 +1,18 @@
+We introduced a local SQLite database to store the OpenAPI specifications for both the v1.0 and beta endpoints of Microsoft Graph in v0.11 release. This change significantly improved the performance and accuracy of the [GraphSelectGuidancePlugin](./GraphSelectGuidancePlugin) which returns guidance when requests made to endpoints that support `$select` option but are not being used.
+
+Whilst we automatically create and update this local database for you, there maybe occasions when you want to refresh this database yourself.
+
+Execute `m365proxy msgraphdb` in your proxy installation folder to rebuild and update your local database.
+
+Here is sample output of running the command.
+
+```
+Checking for updated OpenAPI files...
+Downloaded OpenAPI file from https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/v1.0/openapi.yaml to <m365proxy-path>\graph-v1_0-openapi.yaml
+Downloaded OpenAPI file from https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/beta/openapi.yaml to <m365proxy-path>\graph-beta-openapi.yaml
+Loading OpenAPI files...
+Creating database...
+Filling database...
+Inserted 17306 endpoints in the database
+Microsoft Graph database successfully updated
+```

@@ -1,0 +1,59 @@
+---
+title: Installation
+description: Install Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
+This is the part of the tutorial with the greatest potential for stumbling-blocks, because it involves the installation of software. However the components are very reliable and the vast majority of users encounter no problems at all.
+
+If you do run into any difficulties, please don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/m365-developer-proxy/issues/new) and we will be glad to help you out.
+
+## Download latest release
+
+1. [Download](https://github.com/microsoft/m365-developer-proxy/releases/latest) the ZIP file for your operating system.
+2. Extract the contents of the ZIP into a folder.
+
+> [!NOTE]
+> We recommend extracting the files to a folder called `m365-developer-proxy` in your `home` directory. The tutorial steps assume that you have saved the files to this location, but you can store them anywhere.
+
+## Make the proxy globally available
+
+This enables starting the proxy from any directory and project specific mock responses.
+
+Updating the path differs across operating systems. Follow the steps below that are relevant to the operating system that you use.
+
+### [Windows](#tab/windows)
+
+  1. Open the `Start` menu.
+  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
+  1. In the `Edit environment variable` dialog box, select the `New` button.
+  1. Enter `%USERPROFILE%\m365-developer-proxy` into the new row and select `OK`.
+  1. Select `OK` to confirm changes.
+
+### [macOS](#tab/macos)
+
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file may differ.
+
+  1. Open your shell profile in a text editor > `~/.zshrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/m365-developer-proxy"`.
+  1. Reload your profile > `source ~/.zshrc`.
+
+> [!div class="nextstepaction"]
+> [Now you’re ready to go on to the next step](microsoft-cloud/dev/m365-developer-proxy/get-started/using-the-proxy-for-the-first-time)
