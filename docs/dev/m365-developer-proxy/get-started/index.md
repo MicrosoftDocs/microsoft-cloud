@@ -20,10 +20,10 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-The tutorial will introduce you to the Microsoft 365 Developer Proxy and show you how to use its features.
+The tutorial introduces you to the Microsoft 365 Developer Proxy and show you how to use its features.
 
-It assumes you are comfortable with the command line and understand the basics of HTTP.
+It assumes you're comfortable with the command line and understand the basics of HTTP.
 
-1. [Installation](microsoft-cloud/dev/m365-developer-proxy/get-started/installation)
-1. [Using the proxy for the first time](microsoft-cloud/dev/get-started/m365-developer-proxy/using-the-proxy-for-the-first-time)
-1. [Test a JavaScript client-side web application](microsoft-cloud/dev/get-started/m365-developer-proxy/test-a-javaScript-client-side-web-application)
+1. [Installation](installation.md)
+1. [Using the proxy for the first time](using-the-proxy-for-the-first-time.md)
+1. [Test a JavaScript client-side web application](test-a-javaScript-client-side-web-application.md)

@@ -20,26 +20,26 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-This is a step-by-step tutorial intended for beginners.
+This step-by-step introduction is intended for beginners.
 
 > [!CAUTION]
 > It assumes that you have started the proxy on your machine before. If not, do that [now](microsoft-cloud/dev/m365-developer-proxy/get-started/using-the-proxy-for-the-first-time).
 
-You will learn how to use the proxy against a sample JavaScript client-side web application that calls Microsoft Graph.
+You learn how to use the proxy against a sample JavaScript client-side web application that calls Microsoft Graph.
 
 ## Before you begin
 
-You will need:
+You need:
 
 - Microsoft 365 tenant.
-- Account with permissions to create Azure Active Directory app registrations.
+- Account with permissions to create Entra app registrations.
 
 We recommend that you use a Microsoft 365 Developer Tenant with content packs installed.
 
 > [!TIP]
 > Get your free tenant by [signing up to the Microsoft 365 Developer Program](https://aka.ms/m365/).
 
-You will also need to have the following installed and configured on your machine:
+You also need to have the following installed and configured on your machine:
 
 - Git (see [GitHub’s set up Git guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)).
 - [nodejs LTS](https://nodejs.org).
@@ -56,14 +56,14 @@ Follow the instructions in [samples/readme.md](https://github.com/microsoft/m365
 
 ## 2. Start the proxy
 
-Open a terminal prompt, enter `m365proxy` and press <kbd>Enter</kbd>.
+Open a terminal, enter `m365proxy` and press <kbd>Enter</kbd>.
 
 > [!NOTE]
 > If you are using macOS, you will also need to enable the `Secure Web Proxy (HTTPS)` proxy on your network device.
 
 ## 3. Launch the sample app
 
-Open a new terminal prompt and change to the `samples` directory.
+Open a new terminal and change to the `samples` directory.
 
 Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
 
@@ -76,7 +76,7 @@ In the running app, select the `Without SDK` button.
 > [!CAUTION]
 > If you get an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/m365-developer-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
-Select the `Login` button and complete the login flow.
+Select the `Login` button and complete the sign in flow.
 
 ![Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.](https://github.com/microsoft/m365-developer-proxy/assets/11563347/216ffb03-c316-4ed7-9a63-760063853715)
 

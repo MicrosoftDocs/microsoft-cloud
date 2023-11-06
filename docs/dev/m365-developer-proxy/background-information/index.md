@@ -1,4 +1,4 @@
-- [What is throttling](./What-is-throttling)
-- [Does Microsoft 365 Developer Proxy upload any data to Microsoft](./Does-Microsoft-365-Developer-Proxy-upload-any-data-to-Microsoft)
-- [Plugin architecture](./Plugin-architecture)
-- [How does proxy resolve relative paths?](./Resolve-relative-paths)
+- [What is throttling](./what-is-throttling.md)
+- [Does Microsoft 365 Developer Proxy upload any data to Microsoft](./does-microsoft-365-developer-proxy-upload-any-data-to-microsoft.md)
+- [Plugin architecture](./plugin-architecture.md)
+- [How does proxy resolve relative paths?](./resolve-relative-paths.md)

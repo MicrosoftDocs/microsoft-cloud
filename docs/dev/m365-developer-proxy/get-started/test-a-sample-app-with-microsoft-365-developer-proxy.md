@@ -20,22 +20,22 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-This is a step-by-step introduction intended for beginners.
+This step-by-step introduction is intended for beginners.
 
-In this tutorial you will learn how to use the Microsoft 365 Developer Proxy for the first time against a sample application.
+In this tutorial, you learn how to use the Microsoft 365 Developer Proxy for the first time against a sample application.
 
 > [!IMPORTANT]
 > Have you installed and configured the proxy on your local machine? If not, [do that now](./Installation).
 
 ## Before you begin
 
-The sample you will use has been designed with keeping dependencies to an absolute minimum, however there are a few things that you will need.
+The sample you use is designed with keeping dependencies to an absolute minimum, however there are a few things that you need.
 
-You will need a Microsoft 365 Tenant and be able to use an account that has permissions to create an Azure AD App Registrations in your tenant.
+You need a Microsoft 365 Tenant and be able to use an account that has permissions to create Entra app registrations in your tenant.
 
 We highly recommend that you use a Microsoft 365 Developer Tenant with content packs installed when using this sample. You can create a developer tenant by [signing up to the Microsoft 365 Developer Program](https://aka.ms/m365/).
 
-You will need to have the following installed or configured to run the sample app used in this tutorial:
+You need to have the following installed or configured to run the sample app used in this tutorial:
 
 * Git (see [GitHub’s set up Git guide](https://help.github.com/en/github/getting-started-with-github/set-up-git))
 * [nodejs LTS](https://nodejs.org/en/)
@@ -64,7 +64,7 @@ To start the proxy, enter `m365proxy` and press <kbd>Enter</kbd>.
 >
 > A Windows Security Alert prompt stating that Windows Defender Firewall has blocked the proxy. To allow traffic through the firewall, check the options appropriate to your preferences and then select the `Allow access` button to continue.
 
-When the proxy has started, the terminal will display the following output.
+When the proxy starts, the terminal displays the following output.
 
 ```cmd
 Configuring proxy for cloud global - graph.microsoft.com
@@ -80,9 +80,7 @@ With the proxy running, let's start the sample app so that we can test it.
 
 Open up a terminal session and change to the `samples` directory.
 
-Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
-
-A web browser will be automatically launched and the sample app will be displayed.
+Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server. It also automatically opens a web browser with the sample app.
 
 <img width="1920" alt="Screenshot of Microsoft 365 Developer Proxy sample app running in Microsoft Edge browser on Windows 11. The app displays a large Microsoft Graph globe icon with two buttons below it, a primary button with the text 'With SDK' on it and a secondary button with the text 'Without SDK' on it" src="https://user-images.githubusercontent.com/11563347/204579849-6659d1a3-c2d9-45b2-8f64-530634ddeff5.png">
 
@@ -97,11 +95,11 @@ Next, select the `Login` button and complete the authentication flow.
 
 <img width="1925" alt="image" src="https://user-images.githubusercontent.com/11563347/204581193-65c2aa39-fec7-4d2a-b642-d7350b881904.png">
 
-At this point, the Microsoft 365 Developer Proxy will start to introduce faults into your application by intercepting requests made to Microsoft Graph and failing 50% of those requests selecting randomly from the list of [supported HTTP error status codes](microsoft-cloud/dev/m365-developer-proxy/technical-reference/supported-HTTP-error-status-codes).
+At this point, the Microsoft 365 Developer Proxy starts to introduce faults into your application. It intercepts requests made to Microsoft Graph and fails 50% of those requests selecting randomly from the list of [supported HTTP error status codes](../technical-reference/Supported-HTTP-error-status-codes.md).
 
-If you take a look at the terminal session where the proxy is running, you will see messages telling you which requests have been detected, and whether they have been passed through the proxy (successful), or responded to with an error code (failed).
+If you take a look at the terminal session where the proxy is running, you see messages telling you, which requests the proxy detected. For each request you see if it passed through (successful), or if proxy responded to with an error code (failed).
 
-In addition to the request messages, the proxy is able to detect whether or not your application is using a Microsoft Graph SDK. If an SDK is not being used it provides some additional guidance to help you can migrate your application to use a Microsoft Graph SDK and take advantage of the benefits that they offer, which make it easier for you to handle API errors like throttling, send complex batch operations and handle binary responses.
+In addition to the request messages, the proxy is able to detect whether or not your application is using a Microsoft Graph SDK. If you don't use an SDK, proxy provides some more guidance to help you migrate your application to use a Microsoft Graph SDK. Using the SDK lets you benefit from easier handling API errors like throttling, sending complex batch operations and handling binary responses.
 
 Example output:
 
@@ -124,13 +122,13 @@ saw a graph request: GET /v1.0/users/53f56359-28d7-401a-bc1d-f93c23d7e6f1/presen
         Passed through /v1.0/users/53f56359-28d7-401a-bc1d-f93c23d7e6f1/presence
 ```
 
-Take a moment to refresh the sample app and view the different errors that are generated, as well as how the sample app handles (or not, in this case) the failures introduced by the proxy.
+Take a moment to refresh the sample app and view the different errors that are generated, and how the sample app handles (or not, in this case) the failures introduced by the proxy.
 
 <img width="1920" alt="Screenshot of the Microsoft 365 Developer Proxy sample app in Microsoft Edge in side by side view with Edge Developer Tools. On the left the application displays the user avatars and on the right the the Console tab in the Developer Tools displaying errors in the log" src="https://user-images.githubusercontent.com/11563347/204582466-b7fac795-63cb-4758-bb26-80b2f94f4d28.png">
 
 ## 5. Show help and usage information
 
-You can change the behaviour of the Microsoft 365 Developer Proxy using several settings that can be provided when starting the proxy process.
+You can change the behavior of the Microsoft 365 Developer Proxy using several settings that can be provided when starting the proxy process.
 
 To view the available [proxy settings](microsoft-cloud/dev/m365-developer-proxy/technical-reference/proxy-settings) on the command line:
 
@@ -140,7 +138,7 @@ m365proxy --help
 
 ## 6. Stop the proxy process safely
 
-When you no longer require the proxy to be running you should always end the proxy process safely.
+When you no longer require the proxy to be running, you should always end the proxy process safely.
 
 To safely end the proxy process:
 
@@ -156,6 +154,6 @@ To safely end the proxy process:
 
 ## On to the next step
 
-Learn how to mock responses, simulate errors and behaviours.
+Learn how to mock responses, simulate errors and behaviors.
 
 Take a look at our [How-to](microsoft-cloud/dev/m365-developer-proxy/how-to) guides.

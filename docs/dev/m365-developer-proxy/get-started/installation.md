@@ -20,9 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-This is the part of the tutorial with the greatest potential for stumbling-blocks, because it involves the installation of software. However the components are very reliable and the vast majority of users encounter no problems at all.
-
-If you do run into any difficulties, please don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/m365-developer-proxy/issues/new) and we will be glad to help you out.
+If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/m365-developer-proxy/issues/new) and we're glad to help you out.
 
 ## Download latest release
 
@@ -30,13 +28,13 @@ If you do run into any difficulties, please don’t hesitate to contact us by ra
 2. Extract the contents of the ZIP into a folder.
 
 > [!NOTE]
-> We recommend extracting the files to a folder called `m365-developer-proxy` in your `home` directory. The tutorial steps assume that you have saved the files to this location, but you can store them anywhere.
+> The tutorial steps assume that you have saved the files in your home directory in a folder named `m365-developer-proxy`, but you can store them anywhere.
 
 ## Make the proxy globally available
 
-This enables starting the proxy from any directory and project specific mock responses.
+Making the proxy globally available enables starting the proxy from any directory and project specific mock responses.
 
-Updating the path differs across operating systems. Follow the steps below that are relevant to the operating system that you use.
+Updating the path differs across operating systems. Follow the next steps relevant to the operating system that you use.
 
 ### [Windows](#tab/windows)
 
@@ -49,7 +47,7 @@ Updating the path differs across operating systems. Follow the steps below that 
 
 ### [macOS](#tab/macos)
 
-The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file may differ.
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
 
   1. Open your shell profile in a text editor > `~/.zshrc`.
   1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/m365-developer-proxy"`.
