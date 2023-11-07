@@ -1,10 +1,10 @@
 ---
-title: Copilot in Dynamics 365
-description: Learn about Copilot features in Dynamics 365
+title: Copilot for Dynamics 365
+description: Learn about Copilot features for Dynamics 365
 author: DanWahlin
 ms.author: scottdurow
 ms.contributors: dwahlin-5182022
-ms.date: 11/03/2023
+ms.date: 11/07/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
@@ -17,9 +17,9 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Copilot in Dynamics 365
+# Copilot for Dynamics 365
 
-Copilot in Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
+Copilot for Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
 
 ## Copilot in Dynamics 365 Business Central
 
