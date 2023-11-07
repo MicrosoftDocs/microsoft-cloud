@@ -4,14 +4,14 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 :::image type="content" source="../media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
 
-1. You'll need to create an Azure Active Directory (AAD) app for Daemon app authentication. In this step, authentication will be handled in the background with *app credentials*, and AAD app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
+1. You'll need to create a Microsoft Entra ID app for Daemon app authentication. In this step, authentication will be handled in the background with *app credentials*, and a Microsoft Entra ID app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
 
-1. Perform the following steps to create an AAD app:
-    1. Go to [Azure Portal](https://portal.azure.com) and select **Azure Active Directory**.
+1. Perform the following steps to create a Microsoft Entra ID app:
+    1. Go to [Azure Portal](https://portal.azure.com) and select **Microsoft Entra ID**.
     1. Select the **App registration** tab followed by **+ New registration**.
     1. Fill in the new app registration form details as shown below and select **Register**:
         - Name: *ACS Teams Interop App*
-        - Supported account types: *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*
+        - Supported account types: *Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*
         - Redirect URI: leave this blank
     1. After the app is registered, go to **API permissions** and select **+ Add a permission**.
     1. Select **Microsoft Graph** followed by **Application permissions**.

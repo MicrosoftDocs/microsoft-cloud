@@ -32,12 +32,12 @@
     You can get the User ID from the [Azure Portal](https://portal.azure.com).
 
     - Login using your Microsoft 365 developer tenant admin account.
-    - Select **Azure Active Directory**,
+    - Select **Microsoft Entra ID**,
     - Navigate to the **Users** tab on the side bar. 
     - Search for your user name and select it to see the user details. 
     - Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
 
-    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
+    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Microsoft Entra ID":::
 
     > [!NOTE]
     > `ACS_CONNECTION_STRING` will be used in the next exercise so you don't need to update it yet.
@@ -52,7 +52,7 @@
 
 1. Open a terminal window in the *typescript* folder and run the `npm install` command to install the application dependencies.
 
-1. Open *Shared/graph.ts* and take a moment to explore the imports at the top of the file. This code handles importing authentication and client symbols that will be used in the Azure Function to call Microsoft Graph.
+1. Open *Shared/graph.ts* and take a moment to explore the imports at the top of the file. This code handles importing authentication and client symbols that are used in the Azure Function to call Microsoft Graph.
 
     ```typescript
     import { startDateTimeAsync, endDateTimeAsync } from './dateTimeFormat';
@@ -63,9 +63,9 @@
     ```
 
     > [!TIP]
-    > You'll also see imports from *dateTimeFormat.ts* which will be used later in this exercise. `startDateTimeAsync` and `endDateTimeAsync` will be used while creating a Microsoft Teams meeting link to define start date and end date for the meeting.
+    > You'll also see imports from *dateTimeFormat.ts* which are used later in this exercise. `startDateTimeAsync` and `endDateTimeAsync` are used while creating a Microsoft Teams meeting link to define start date and end date for the meeting.
 
-1. Take a moment to examine `clientSecretCredential` and `appGraphClient`, they will be used later in the authentication process and when calling the Microsoft Graph API:
+1. Take a moment to examine `clientSecretCredential` and `appGraphClient`. They'll be used later in the authentication process and when calling the Microsoft Graph API:
 
     ```typescript
     let clientSecretCredential;
@@ -73,8 +73,8 @@
     ```
 
 1. Locate the `ensureGraphForAppOnlyAuth` function:
-    - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
-    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
+    - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Microsoft Entra ID app.
+    - The `authProvider` object is defined as a Microsoft Entra ID app that will authenticate in the background and use [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
 
     ```typescript
     function ensureGraphForAppOnlyAuth() {
@@ -99,7 +99,7 @@
     }
     ``` 
 
-1. Take a moment to explore the `createNewMeetingAsync` function. It posts data to the [Microsoft Graph Calendar Events API](https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http) which dynamically creates an event in a user's calendar and returns the new event details:
+1. Take a moment to explore the `createNewMeetingAsync` function. It posts data to the [Microsoft Graph Calendar Events API](https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http), which dynamically creates an event in a user's calendar and returns the new event details:
 
     ```typescript
     async function createNewMeetingAsync(userId) {
@@ -130,7 +130,7 @@
 
 1. Go to *TeamsMeetingFunction/index.ts* and explore the *Http Trigger* function:
     - `createNewMeetingAsync` is imported from *graph.ts*. It handles creating and retrieving new event details.
-    - `userId` is retrieved from *local.settings.json* inside the Http Trigger function. This is done by accessing the `USER_ID` environment variable by using `process.env.USER_ID`.
+    - `userId` is retrieved from *local.settings.json* inside the Http Trigger function. This retrieval is done by accessing the `USER_ID` environment variable by using `process.env.USER_ID`.
     - When the function is triggered, it calls `createNewMeetingAsync` with the defined user id and returns the new event details in `teamMeetingLink` parameter.
     - The function accesses the Teams meeting join URL by calling `meeting.onlineMeeting.joinUrl` and returns the value in the body of the response.
 
