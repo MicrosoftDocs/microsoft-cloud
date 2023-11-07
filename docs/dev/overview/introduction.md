@@ -45,7 +45,7 @@ These services work together and are an integrated platform for application deve
 - [GitHub](https://docs.github.com) and [Azure DevOps](/azure/devops) have tools to create, test, deploy, and run applications.
 - [Microsoft 365](/microsoft-365) has applications for the modern workplace, including Microsoft Teams, Exchange, and SharePoint.
 - [Dynamics 365](/dynamics365) has applications for business, including applications for sales support, financials, and customer service.
-- [Azure Active Directory](/azure/active-directory) and [Microsoft Sentinel](/azure/sentinel) are foundational services for securing applications and systems.
+- [Microsoft Entra ID](/azure/active-directory) and [Microsoft Sentinel](/azure/sentinel) are foundational services for securing applications and systems.
 
 Building new solutions on this kind of broad, unified cloud platform is the next step in the evolution of application development. By providing an integrated set of widely used services, the Microsoft Cloud offers a foundation for doing this.
 

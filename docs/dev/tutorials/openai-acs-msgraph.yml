@@ -69,7 +69,7 @@ items:
       [!INCLUDE [](openai-acs-msgraph/includes/08-Communication-Email-SMS.md)]
 
   - title: |
-      Organizational Data: Creating an Azure Active Directory App Registration
+      Organizational Data: Creating a Microsoft Entra ID App Registration
     durationInMinutes: 8
     content: |
       [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Create-AAD-App.md)]

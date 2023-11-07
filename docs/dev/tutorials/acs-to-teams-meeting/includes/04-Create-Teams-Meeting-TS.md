@@ -32,12 +32,12 @@
     You can get the User ID from the [Azure Portal](https://portal.azure.com).
 
     - Login using your Microsoft 365 developer tenant admin account.
-    - Select **Azure Active Directory**,
+    - Select **Microsoft Entra ID**,
     - Navigate to the **Users** tab on the side bar. 
     - Search for your user name and select it to see the user details. 
     - Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
 
-    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
+    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Microsoft Entra ID":::
 
     > [!NOTE]
     > `ACS_CONNECTION_STRING` will be used in the next exercise so you don't need to update it yet.
@@ -73,8 +73,8 @@
     ```
 
 1. Locate the `ensureGraphForAppOnlyAuth` function:
-    - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
-    - The `authProvider` object is defined as an Azure Active Directory app that will authenticate in the background and use [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
+    - `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Microsoft Entra ID app.
+    - The `authProvider` object is defined as a Microsoft Entra ID app that will authenticate in the background and use [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as `Calendars.ReadWrite`) to make Microsoft Graph API calls.
 
     ```typescript
     function ensureGraphForAppOnlyAuth() {
