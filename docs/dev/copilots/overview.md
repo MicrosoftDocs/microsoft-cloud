@@ -163,7 +163,7 @@ By extending Microsoft Copilots, developers can integrate external data directly
 
 Adding plugins, connectors, or message extensions to Microsoft Copilots helps users make the most out of these AI assistants. Users can more easily discover and work with enterprise data, tools, and services using natural language, which improves productivity and enhances teamwork.
 
-#### Extending Copilots with Plugins
+#### Extending with Plugins
 
 Plugins allow users to interact directly with APIs and services enhancing Copilot's capabilities and broadening its range of functionality by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time data, such as the latest news coverage on a product launch, or knowledge-based information such as a team's project items.
 
@@ -178,11 +178,11 @@ Learn more:
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
 - [Overview of Plugins for Microsoft Copilot](https://review.learn.microsoft.com/copilot-plugins/overview?branch=pr-en-us-1)
 
-#### Extending Copilots with Microsoft Graph Connectors
+#### Extending with Microsoft Graph Connectors
 
 Microsoft Graph connectors import external content into Microsoft 365. Once the content is imported, all of Microsoft 365 including search, context IQ, microsoft365.com, and Microsoft 365 Copilot can access the content. Microsoft Graph connectors are responsible for three key tasks:
 
-1. Creating an external connection to your data sources
+1. Creating an external connection in Microsoft 365
 1. Defining a schema for the external content
 1. Managing external content that’s imported into Microsoft 365
 
@@ -192,7 +192,7 @@ Learn more:
 - [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
 - [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
 
-#### Extending Copilots with Message Extensions
+#### Extending with Teams Message Extensions
 
 Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message. By using message extensions, you can extend the built-in functionality of Copilot for Microsoft 365.
 
@@ -206,7 +206,7 @@ In addition to adopting and extending a Microsoft Copilot, custom AI Copilots ca
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating custom Copilots." border="false" :::
 
-### Use Azure OpenAI Models To Chat with Your Own Data
+### Use Azure OpenAI Models and Cognitive Search To Chat with Your Own Data
 
 Companies can integrate their own data with Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
 
@@ -214,11 +214,17 @@ Learn more:
 - [Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
 
+### Solution Accelerators and Samples
+
+Accelerators and samples are available to help you get started building custom Copilots that integrate with your own data and applications.
+
+- [Azure Chat Solution Accelerator powered by Azure Open AI Service](https://github.com/microsoft/azurechat)
+- [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo/#chatgpt--enterprise-data-with-azure-openai-and-cognitive-search)
+- [ChatGPT-Powered and Voice-Enabled Assistant](https://github.com/gcordido/VoiceEnabledGPT)
+
 ### Microsoft Copilot Studio
 
 Microsoft Copilot Studio is a low-code tool that enables the creation of robust AI-driven chatbots capable of handling an array of interactions, from addressing standard inquiries to navigating intricate dialogues for issue resolution. Copilot Studio not only simplifies the process of building intelligent chatbots, but also seamlessly integrates across a variety of digital platforms such as websites, mobile apps, Facebook, Microsoft Teams, and other channels supported by Azure Bot Framework.
 
 Learn more:
-- [Microsoft Copilot Studio Overview](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)
-- [AI-based Chatbot Authoring Overview](/power-virtual-agents/nlu-gpt-overview)
-- [Create a Low-Code Bot](/training/modules/create-bots-power-virtual-agents-copilot/)
+- [Microsoft Copilot Studio Collection](https://aka.ms/Ignite23CollectionsBRK212H)
