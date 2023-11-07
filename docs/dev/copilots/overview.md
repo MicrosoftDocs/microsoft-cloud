@@ -47,9 +47,9 @@ Microsoft offers a variety of Copilots that can be adopted to enhance user produ
 :::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for Copilots across the Microsoft Cloud." border="false" :::
 
 Copilots discussed in this section include:
-- [Copilots in Dynamics 365](#copilots-in-dynamics-365)
-- [Copilots for Microsoft 365](#copilots-for-microsoft-365)
-- [Copilots in Microsoft Fabric](#copilots-in-microsoft-fabric)
+- [Copilot in Dynamics 365](#copilot-in-dynamics-365)
+- [Copilot for Microsoft 365](#copilot-for-microsoft-365)
+- [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
 - [Copilot in Power Automate](#copilot-in-power-automate)
 - [GitHub Copilot](#github-copilot)
@@ -58,21 +58,21 @@ Copilots discussed in this section include:
 - [Microsoft Security Copilot](#microsoft-security-copilot)
 - [Copilot in Windows](#copilot-in-windows)
 
-### Copilots in Dynamics 365
+### Copilot in Dynamics 365
 
-Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
+Copilot in Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
 
 Learn More:
 - [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
 
-### Copilots for Microsoft 365
+### Copilot for Microsoft 365
 
-Copilots for Microsoft 365 combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple natural language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 ecosystem, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe, secure, and compliant digital workspace.  
+Copilot for Microsoft 365 combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple natural language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 ecosystem, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe, secure, and compliant digital workspace.  
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps. The integrated Copilot functionality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
 Learn more:
-- [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
+- [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
 
 ### Copilot in Microsoft Fabric
 
@@ -87,7 +87,7 @@ Copilot for Power BI does the following:
 - A summary of the current page. 
 
 Learn more:
-- [Overview of Copilot for Fabric](/fabric/get-started/copilot-fabric-overview)
+- [Overview of Copilot in Fabric](/fabric/get-started/copilot-fabric-overview)
 - [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
 - [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
 - [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://aka.ms/fabric-e2e-serengeti)
