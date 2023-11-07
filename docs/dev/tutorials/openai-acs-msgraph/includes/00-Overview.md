@@ -21,7 +21,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 - [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=1) (required exercise).
 - **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
 - **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=6) and use it to make phone calls from the app and send email/SMS messages.
-- **Organizational Data Exercises**: [Create an Azure Active Directory app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
+- **Organizational Data Exercises**: [Create a Microsoft Entra ID app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
 
 :::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
@@ -37,7 +37,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 
 ### Microsoft Cloud Technologies used in this Tutorial
 
-- Azure Active Directory
+- Microsoft Entra ID
 - Azure Communication Services
 - Azure OpenAI Service
 - Microsoft Graph
