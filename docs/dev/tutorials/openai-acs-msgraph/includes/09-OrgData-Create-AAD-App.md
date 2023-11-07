@@ -1,27 +1,27 @@
 <!-- markdownlint-disable MD041 -->
 
-Enhance user productivity by integrating organizational data (emails, files, chats, and calendar events) directly into your custom applications. By using Microsoft Graph APIs and Azure Active Directory, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch context. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
+Enhance user productivity by integrating organizational data (emails, files, chats, and calendar events) directly into your custom applications. By using Microsoft Graph APIs and Microsoft Entra ID, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch context. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
 
 In this exercise, you will:
 
-- Create an Azure Active Directory (Azure AD) app registration so that Microsoft Graph can access organizational data and bring it into the app.
+- Create a Microsoft Entra ID  app registration so that Microsoft Graph can access organizational data and bring it into the app.
 - Locate `team` and `channel` Ids from Microsoft Teams that are needed to send chat messages to a specific channel.
-- Update the project's *.env* file with values from your Azure AD app registration.
+- Update the project's *.env* file with values from your Microsoft Entra ID app registration.
 
 :::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
-### Create an Azure Active Directory App Registration
+### Create a Microsoft Entra ID App Registration
 
-1. Go to [Azure Portal](https://portal.azure.com) and select **Azure Active Directory**.
+1. Go to [Azure Portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 1. Select the **App registration** tab followed by **+ New registration**.
 1. Fill in the new app registration form details as shown below and select **Register**:
     - Name: *microsoft-graph-app*
-    - Supported account types: *Accounts in any organizational directory (Any Azure AD directory - Multitenant)*
+    - Supported account types: *Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant)*
     - Redirect URI: 
         - Select **Single-page application (SPA)** and enter `http://localhost:4200` in the **Redirect URI** field.
     - Select **Register** to create the app registration.
 
-    :::image type="content" source="../media/aad-app-registration.png" alt-text="Azure AD app registration form" border="true":::
+    :::image type="content" source="../media/aad-app-registration.png" alt-text="Microsoft Entra ID app registration form" border="true":::
 
 <!-- 
 1. After the app is registered, select **API permissions** in the Resource menu, locate the **Configured permissions** section, and select **+ Add a permission**.
@@ -32,7 +32,7 @@ In this exercise, you will:
 -->
 1. Select **Overview** in the Resource menu and copy the `Application (client) ID` value to your clipboard.
 
-    :::image type="content" source="../media/aad-client-id.png" alt-text="Azure AD app client ID" border="true":::
+    :::image type="content" source="../media/aad-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
 
 ### Update the Project's *.env* File
 

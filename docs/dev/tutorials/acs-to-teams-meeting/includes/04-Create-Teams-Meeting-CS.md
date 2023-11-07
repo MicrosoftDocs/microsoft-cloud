@@ -32,12 +32,12 @@
     You can get the User ID from the [Azure Portal](https://portal.azure.com).
 
     - Login using your Microsoft 365 developer tenant admin account.
-    - Select **Azure Active Directory**,
+    - Select **Microsoft Entra ID**
     - Navigate to the **Users** tab on the side bar. 
     - Search for your user name and select it to see the user details. 
     - Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
 
-    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Azure Active Directory":::
+    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Microsoft Entra ID":::
 
     > [!NOTE]
     > `ACS_CONNECTION_STRING` will be used in the next exercise so you don't need to update it yet.
@@ -76,8 +76,8 @@
     }
     ```
 
-    - This code creates a `GraphServiceClient` object that can be used to call Microsoft Graph from Azure Functions. It's created as a singleton and can be injected into other classes.
-    - You can make Microsoft Graph API calls with [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as **Calendars.ReadWrite**) by passing a `ClientSecretCredential` value to the `GraphServiceClient` constructor. The `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Azure Active Directory app.
+    - This code creates a `GraphServiceClient` object that can be used to call Microsoft Graph from Azure Functions. It's a singleton and can be injected into other classes.
+    - You can make Microsoft Graph API calls with [app-only permissions](/graph/auth/auth-concepts#access-scenarios) (such as **Calendars.ReadWrite**) by passing a `ClientSecretCredential` value to the `GraphServiceClient` constructor. The `ClientSecretCredential` uses the `Tenant Id`, `Client Id` and `Client Secret` values from the Microsoft Entra ID app.
     
 1. Open *Services/GraphService.cs*. 
 
@@ -131,10 +131,10 @@
     ```
 
     - `GraphServiceClient` and `IConfiguration` objects are injected into the constructor and assigned to fields.
-    - The `CreateMeetingAsync()` function posts data to the [Microsoft Graph Calendar Events API](/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http) which dynamically creates an event in a user's calendar and returns the join URL.
+    - The `CreateMeetingAsync()` function posts data to the [Microsoft Graph Calendar Events API](/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http), which dynamically creates an event in a user's calendar and returns the join URL.
 
 
-1. Open *TeamsMeetingFunctions.cs* and take a moment to examine its constructor.The `GraphServiceClient` you looked at earlier is injected and assigned to the `_graphService` field.
+1. Open *TeamsMeetingFunctions.cs* and take a moment to examine it's constructor. The `GraphServiceClient` you looked at earlier is injected and assigned to the `_graphService` field.
 
     ```csharp
     private readonly IGraphService _graphService;
@@ -153,9 +153,9 @@
     ```
 
     - It defines a function named of `TeamsMeetingFunction` that can be called with an HTTP GET request.
-    - It calls `_graphService.CreateMeetingAsync()` which creates a new event and returns the join URL.
+    - It calls `_graphService.CreateMeetingAsync()`, which creates a new event and returns the join URL.
     
-1. Run the program by pressing <kbd>F5</kbd> in Visual Studio or by selecting **Debug --> Start Debugging** from the menu. This will start the Azure Functions project and make the `ACSTokenFunction` available to call.
+1. Run the program by pressing <kbd>F5</kbd> in Visual Studio or by selecting **Debug --> Start Debugging** from the menu. This action starts the Azure Functions project and make the `ACSTokenFunction` available to call.
 
 > [!NOTE]
 > If you're using VS Code you can open a terminal window in the *GraphACSFunctions* folder and run `dotnet run`.

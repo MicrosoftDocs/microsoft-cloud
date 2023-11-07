@@ -1,19 +1,19 @@
 <!-- markdownlint-disable MD041 -->
 
-Users need to authenticate with Azure Active Directory (Azure AD) in order for Microsoft Graph to access organizational data. In this exercise you'll see how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
+Users need to authenticate with Microsoft Entra ID  in order for Microsoft Graph to access organizational data. In this exercise you'll see how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
 > [!NOTE]
 > If you're new to Microsoft Graph, you can learn more about it in the [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/?WT.mc_id=m365-94501-dwahlin) learning path. 
 
 In this exercise, you will:
 
-- Learn how to associate an Azure AD app with the Microsoft Graph Toolkit so that it can be used to authenticate users and retrieve organizational data.
+- Learn how to associate a Microsoft Entra ID app with the Microsoft Graph Toolkit so that it can be used to authenticate users and retrieve organizational data.
 - Learn about the importance of scopes.
 - Learn how the Microsoft Graph Toolkit's *mgt-login* component can be used to authenticate users and retrieve an access token.
 
 ### Using the Sign In Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Azure AD and started the application server and API server. You also updated the following values in the `.env` file.
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -42,7 +42,7 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
 1. Open *client/package.json* and notice that the `@microsoft/mgt` package is included in the dependencies. This package contains MSAL (Microsoft Authentication Library) provider features as well as web components such as *mgt-login* and others that can be used to sign in users and retrieve and display organizational data.
 
-1. To use the *mgt-login* component to sign in users, the Azure AD app's client Id (stored in the *.env* file as `AAD_CLIENT_ID`) needs to be referenced and used.
+1. To use the *mgt-login* component to sign in users, the Microsoft Entra ID app's client Id (stored in the *.env* file as `AAD_CLIENT_ID`) needs to be referenced and used.
 
 1. Open *graph.service.ts* and locate the `init()` function. The full path to the file is *client/src/app/core/graph.service.ts*. You'll see the following code:
 
@@ -54,7 +54,7 @@ Now that you've signed in, let's look at the code used to sign in the user and r
     });
     ```
 
-    This code creates a new `Msal2Provider` object, passing the Azure AD client Id from your app registration and the `scopes` for which the app will request access. The `scopes` are used to request access to Microsoft Graph resources that the app will access. After the `Msal2Provider` object is created, it's assigned to the `Providers.globalProvider` object which is used by Microsoft Graph Toolkit components to retrieve data from Microsoft Graph.
+    This code creates a new `Msal2Provider` object, passing the Microsoft Entra ID client Id from your app registration and the `scopes` for which the app will request access. The `scopes` are used to request access to Microsoft Graph resources that the app will access. After the `Msal2Provider` object is created, it's assigned to the `Providers.globalProvider` object which is used by Microsoft Graph Toolkit components to retrieve data from Microsoft Graph.
 
 1. Open *header.component.html* in your editor and locate the *mgt-login* component. The full path to the file is *client/src/app/header/header.component.html*.
 
@@ -64,7 +64,7 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
     The *mgt-login* component enables user sign in and access token retrieval for use with Microsoft Graph. Upon successful sign in, the `loginCompleted` event is triggered, subsequently calling the `loginCompleted()` function. Although *mgt-login* is used within an Angular component in this example, it is compatible with any web application.
 
-    Display of the *mgt-login* component depends on the `featureFlags.microsoft365Enabled` value being set to `true`. This custom flag checks for the presence of the `AAD_CLIENT_ID` environment variable to confirm that the application is properly configured and able to authenticate against Azure AD. The flag is added to accommodate cases where users opt to complete only the AI or Communication exercises within the tutorial, rather than following the entire sequence.
+    Display of the *mgt-login* component depends on the `featureFlags.microsoft365Enabled` value being set to `true`. This custom flag checks for the presence of the `AAD_CLIENT_ID` environment variable to confirm that the application is properly configured and able to authenticate against Microsoft Entra ID. The flag is added to accommodate cases where users opt to complete only the AI or Communication exercises within the tutorial, rather than following the entire sequence.
     
 1. Open *header.component.ts* and locate the `loginCompleted` function. This function is called when the `loginCompleted` event is emitted and used to retrieve the signed in user's profile using `Providers.globalProvider`. 
 

@@ -62,7 +62,7 @@ Connecting new applications to your existing applications and data is important.
 > - **Power Platform:** Microsoft provides an [on-premises gateway](/power-platform/admin/wp-onpremises-gateway) so that your low-code apps can access data stored in your datacenter. For example, an application created with Power Apps can use the gateway to access on-premises SQL Server data, and a Power BI solution can use it to combine data from on-premises data sources with data stored in the cloud.
 > - **Microsoft 365:** Various Microsoft 365 components, including Exchange and SharePoint, can provide hybrid deployment by using connections between cloud and on-premises software.
 > - **Dynamics 365:** Some Dynamics 365 components, such as Supply Chain Management, allow for a hybrid deployment.
-> - **Azure Active Directory (Azure AD):** It’s common today to connect this cloud-based identity service with an existing on-premises Active Directory, creating a hybrid solution for managing identity. Identity information can be automatically synchronized between the two services.
+> - **Microsoft Entra ID :** It’s common today to connect this cloud-based identity service with an existing on-premises Active Directory, creating a hybrid solution for managing identity. Identity information can be automatically synchronized between the two services.
 >
 > Your organization can also use [Microsoft Sentinel](/azure/sentinel) and various aspects of [Azure Arc](/azure/azure-arc) to secure and manage your infrastructure on Azure, on other public clouds, or in your own datacenter. This ensures that applications you deploy in a hybrid fashion can still be effectively managed.
 
@@ -78,7 +78,7 @@ To access this kind of data, your custom applications can use the unified API pr
 
 **Figure 7: Microsoft Graph gives applications access to the organizational data in Microsoft 365.**
 
-Applications can use Microsoft Graph to access data in Microsoft 365, Windows 11, and Enterprise Mobility + Security. The data that this API exposes can come from many different cloud services, including Exchange, SharePoint, Teams, OneDrive, OneNote, Planner, Microsoft Search, and Azure Active Directory. Because Microsoft 365 already meets compliance requirements for e-discovery and records management, building applications that use its content and services gives you solutions that are more compliant. Microsoft Graph can be used both by pro-code and low-code apps.
+Applications can use Microsoft Graph to access data in Microsoft 365, Windows 11, and Enterprise Mobility + Security. The data that this API exposes can come from many different cloud services, including Exchange, SharePoint, Teams, OneDrive, OneNote, Planner, Microsoft Search, and Microsoft Entra ID. Because Microsoft 365 already meets compliance requirements for e-discovery and records management, building applications that use its content and services gives you solutions that are more compliant. Microsoft Graph can be used both by pro-code and low-code apps.
 
 In our example application, customers and employees work together in some way. Suppose that employees exchange mail or engage in Teams chats with these customers. If an employee needs to look up information from a prior mail exchange or chat with a customer, the application can use Microsoft Graph to get it from Microsoft 365. By selecting a customer in the employee-facing application interface, the employee can view the relevant mail exchange or chat.
 
