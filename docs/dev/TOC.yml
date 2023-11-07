@@ -19,7 +19,7 @@
   - name: Adopt, Extend and Build Microsoft Copilots  
     href: copilots/overview
   - name: Copilots in Dynamics 365  
-    href: copilots/copilots-in-dynamics365
+    href: copilots/copilot-for-dynamics365
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting

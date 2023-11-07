@@ -62,6 +62,6 @@ landingContent:
           - text: Adopt, Extend, and Build Microsoft Copilots  
             url: copilots/overview
           - text: Copilots in Dynamics 365
-            url: copilots/dynamics-365-copilots
+            url: copilots/copilot-for-dynamics365
 
   
