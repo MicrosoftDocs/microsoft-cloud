@@ -31,7 +31,7 @@ You learn how to use the Microsoft 365 Developer Proxy for the first time.
 
 Depending on your operating system, you have a different first run experience.
 
-Select the relevant section below and follow the steps.
+Select the relevant section and follow the steps.
 
 ### [Windows](#tab/windows)
 
@@ -58,7 +58,7 @@ Press Ctrl + C to stop the Microsoft 365 Developer Proxy
 ### [macOS](#tab/macos)
 
 1. **Make files executables**. Open the `m365-developer-proxy` installation folder in a terminal. Execute `chmod -x m365proxy` and then `chmod -x libe_sqlite3.dylib`
-1. **Trust the application**. macOS includes a security technology called [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. As the current release isn't signed by a verified developer, you need to trust it. Open the `m365-developer-proxy` installation folder in Finder. Press <kbd>Ctrl</kbd> and select the `m365proxy` executable. Choose `Open` from the menu, and then select `Open` in the dialog that appears. Enter your admin name and password to open the app. The proxy starts in a terminal window, keep this open.
+1. **Trust the application**. macOS includes a security technology called [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. As the current release isn't signed by a verified developer, you need to trust it. Open the `m365-developer-proxy` installation folder in Finder. Press <kbd>Ctrl</kbd> and select the `m365proxy` executable. Choose `Open` from the menu, and then select `Open` in the dialog that appears. Enter your admin name and password to open the app. The proxy starts in a terminal window.
 1. **Accept incoming connections**. A warning shows. Select `Allow` to confirm.
 1. **Trust the certificate**. The proxy installs a certificate called `Titanium Root Certificate Authority`. Open `Keychain Access`. Enter `Titanium Root Certificate Authority` in the search box. Open the certificate shown by double clicking it. Expand the `Trust` section. Change the `When using this certificate:` dropdown to `Always Trust`. Close the certificate window and confirm changes. Enter your admin name and password to confirm your settings.
 1. **Configure your network device**. Open `Network` settings. Select the device to configure and select the `Advanced...` button. Go to the `Proxies` tab. Check `Secure Web Proxy (HTTPS)` in the list of configurable proxies. Enter `0.0.0.0`:`8000` in the `Secure Web Proxy Server` field. Select `OK` and then `Apply` to confirm the changes.
@@ -87,7 +87,7 @@ When you no longer require the proxy to be running, you should always stop the p
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop the proxy.
 
-If you shut down the terminal session, the proxy doesn't unregister correctly. This might lead to you experiencing some [common problems](microsoft-cloud/dev/m365-developer-proxy/how-to).
+If you shut down the terminal session, the proxy doesn't unregister correctly, and you might experience some [common problems](microsoft-cloud/dev/m365-developer-proxy/how-to).
 
 If you're using macOS, you should also disable the `Secure Web Proxy (HTTPS)` proxy on your network device.
 

@@ -4,9 +4,9 @@ This file allows you to define a specific set of responses for each project that
 
 The file contains an object with a `responses` array containing [response](https://github.com/microsoft/m365-developer-proxy/wiki/Response-object) objects.
 
-[responses.sample.json](https://github.com/microsoft/m365-developer-proxy/blob/main/m365-developer-proxy/responses.sample.json) is provided in the download ZIP which contains examples of mocked responses.
+The ZIP file with proxy binaries contains a [responses.sample.json](https://github.com/microsoft/m365-developer-proxy/blob/main/m365-developer-proxy/responses.sample.json) file, which contains examples of mocked responses.
 
-Using following configuration demonstrates a simple example that will return a mocked response when a request is made to get the current user details and return a 404 status code when a request is made to return the current users photo details.
+The following configuration demonstrates two mock responses for retrieving information about the current user. When you request information about the current user, proxy responds with a mock response. When you request the information about the user's photo, proxy returns a 404 status code.
 
 ```json
 {
@@ -43,9 +43,9 @@ Using following configuration demonstrates a simple example that will return a m
 
 ## Order precedence
 
-Mocks are matched in the order in which they are defined in the `responses.json` file. If you define multiple responses with the same URL and method, the first matching response will be used.
+Mocks are matched in the order in which they're defined in the `responses.json` file. If you define multiple responses with the same URL and method, the first matching response is used.
 
-Using the following configuration, all `GET` requests to `https://graph.microsoft.com/v1.0/me/photo` would respond with `500 Internal Server Error`.
+When you use the following configuration, proxy responds to all `GET` requests to `https://graph.microsoft.com/v1.0/me/photo` with `500 Internal Server Error`.
 
 ```json
 {
@@ -70,7 +70,7 @@ The proxy supports the use of wildcards the URL field.
 
 The following examples demonstrate how to use the `*` and `?` wildcards.
 
-Using the following configuration, all requests to get any users profile details will return the same response.
+When you use the following configuration, proxy responds to all requests to get any user's profile with the same response.
 
 ```json
 {
@@ -92,7 +92,7 @@ Using the following configuration, all requests to get any users profile details
 }
 ```
 
-Using the following configuration, requests to get the binary of any users photo will return the same image from disk in the response.
+When you use the following configuration, proxy returns the same image from disk when you request to get the binary of any user's photo.
 
 ```json
 {
@@ -104,7 +104,7 @@ Using the following configuration, requests to get the binary of any users photo
 }
 ```
 
-Using the following configuration, requests to get the current users profile contains any query string parameter, will return the same response.
+When you use the following configuration, proxy returns the same response when you request to get the current user's profile with any query string parameter.
 
 ```json
 {
@@ -130,9 +130,9 @@ Using the following configuration, requests to get the current users profile con
 
 ## n-th request support
 
-In v0.12, we introduced support for mocking n-th request and extended the [response](./Response-object) object with a new property called `nth`.
+In v0.12, we introduced support for mocking n-th request and extended the [response](../technical-reference//Response-object.md) object with a new property called `nth`.
 
-Using the following mock file as an example, we can see that it contains two responses to the same request URL. The first response, that uses the `nth` property, will be used when proxy detects the second request, for all other requests the proxy will return the second response.
+Using the following mock file as an example, we can see that it contains two responses to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with a matching URL for the second time. For all other requests, proxy returns the second response.
 
 > ℹ️ Responses with the `nth` property should be first. Proxy uses responses based on the first match.
 
@@ -168,13 +168,13 @@ Using the following mock file as an example, we can see that it contains two res
 
 In v0.12, we introduced support for mocking responses that are sent in batch requests to Microsoft Graph.
 
-There are no special requirements for including responses to batch requests in your mock files, however if a request is not matched with a mocked response, a `502 Bad Gateway` response is returned.
+There are no special requirements for including responses to batch requests in your mock files, however if a request isn't matched with a mocked response, a `502 Bad Gateway` response is returned.
 
 ## Unmocked request support
 
-In v0.12, we introduced support for throwing an error when an unmocked request is intercepted by the proxy, this is useful for identifying requests that you may have missed in your mocks file.
+In v0.12, we introduced support for throwing an error when proxy intercepts an unmocked request. The ability to fail unmocked requests is useful for identifying requests that you missed in your mocks file.
 
-To enable this feature, add and enable the `blockUnmockedRequests` setting to [MockResponsePlugin](./MockResponsePlugin) config section in the [m365proxyrc](./m365proxyrc) file.
+To enable this feature, add and enable the `blockUnmockedRequests` setting to [MockResponsePlugin](../technical-reference/MockResponsePlugin.md) config section in the [m365proxyrc](../technical-reference/m365proxyrc.md) file.
 
 ```json
 {

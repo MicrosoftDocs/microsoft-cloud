@@ -1,6 +1,6 @@
 By default, the proxy console output uses [text labels](./Console-output-text-labels).
 
-To change the label style, update the `labelMode` property value in the [m365proxyrc.json](./m365proxyrc) file stored in your installation directory.
+To change the label style, update the `labelMode` property value in the [m365proxyrc.json](../technical-reference//m365proxyrc.md) file stored in your installation directory.
 
 ## ASCII icons
 

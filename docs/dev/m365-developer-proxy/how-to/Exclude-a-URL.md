@@ -18,8 +18,8 @@ To exclude a URL from being intercepted, prepend it with an `!` (exclamation mar
 ],
 ```
 
-In the above example, any requests made to `/_api/web/GetClientSideComponents` will be ignored.
+In the above example, the proxy ignores any requests made to `/_api/web/GetClientSideComponents`.
 
-When excluding URLs, keep in mind that proxy will look for matching URLs in the order in which they’re defined in the configuration. 
+When excluding URLs, keep in mind that proxy looks for matching URLs in the order in which they’re defined in the configuration.
 
 If you want to exclude specific URLs, you should define them first, before more global URL matches.

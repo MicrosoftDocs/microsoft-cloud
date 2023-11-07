@@ -29,7 +29,7 @@ When defining mock responses, you can define a specific URL to mock, but also a 
 
 would respond to`GET` requests for `https://graph.microsoft.com/v1.0/users/bob@contoso.com` and `https://graph.microsoft.com/v1.0/users/steve@contoso.com` with the same mock response.
 
-If a URL of a mock response contains an `*`, it's used as a regular expression, where each `*` is converted into a `.*`, basically matching any sequence of characters. This is important to keep in mind, because if a pattern is too broad and defined before more specific mocks, it could unintetionally return unexpected responses, for example:
+If a URL of a mock response contains an `*`, the proxy considers it a regular expression, where each `*` is converted into a `.*`, basically matching any sequence of characters. Expanding wildcards is important to keep in mind, because if a pattern is too broad and defined before more specific mocks, it could unintentionally return unexpected responses, for example:
 
 ```json
 {

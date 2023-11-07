@@ -4,11 +4,11 @@ If you work on a large solution that uses many endpoints, it can be difficult to
 
 To detect the minimal Microsoft Graph API permissions that your app requires:
 
-1. [Start recording](./Record-and-export-proxy-activity).
-1. Issue requests as normal from your app. 
-1. [Stop recording](./Record-and-export-proxy-activity).
+1. [Start recording](./Record-and-export-proxy-activity.md).
+1. Issue requests as normal from your app.
+1. [Stop recording](./Record-and-export-proxy-activity.md).
 
-A list of minimal permissions will be returned in the activity summary based on the requests made. 
+The proxy returns a list of minimal permissions in the activity summary based on the intercepted requests.
 
 For example:
 
@@ -23,7 +23,7 @@ User.Read, Calendars.Read
 
 By default, only `Delegated` permissions are returned in the summary.
 
-To return `Application` permissions, update the `minimalPermissionsPlugin` configuration block in the [m365proxyrc](./m365proxyrc) file to:
+To return `Application` permissions, update the `minimalPermissionsPlugin` configuration block in the [m365proxyrc](../technical-reference/m365proxyrc.md) file to:
 
 ```json
 "minimalPermissionsPlugin": {

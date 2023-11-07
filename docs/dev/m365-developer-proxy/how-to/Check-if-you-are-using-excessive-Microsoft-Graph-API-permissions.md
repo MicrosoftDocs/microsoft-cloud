@@ -4,13 +4,13 @@ A common approach to security is to apply the principle of least privilege (PoLP
 
 To check if your app is using more permissions than it needs:
 
-> ℹ️ By default the `MinimalPermissionsGuidancePlugin` is disabled. To enable the plugin, open the [m365proxyrc](./m365proxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> ℹ️ By default the `MinimalPermissionsGuidancePlugin` is disabled. To enable the plugin, open the `m365proxyrc.json` file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
-1. [Start recording](./Record-and-export-proxy-activity).
-1. Issue requests as normal from your app. 
-1. [Stop recording](./Record-and-export-proxy-activity).
+1. [Start recording](./Record-and-export-proxy-activity.md).
+1. Issue requests as normal from your app.
+1. [Stop recording](./Record-and-export-proxy-activity.md).
 
-A list of permissions scopes that are unnessary will be returned in the activity summary based on the requests made.
+The proxy returns a list of permissions scopes that are unnecessary in the activity summary based on the intercepted requests.
 
 For example:
 

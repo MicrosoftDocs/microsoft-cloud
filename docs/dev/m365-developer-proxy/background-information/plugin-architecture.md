@@ -2,7 +2,7 @@ In v0.4, we refactored the Microsoft 365 Developer Proxy to use a Plugin based a
 
 A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.
 
-The `m365proxyrc.json` file contains the plugin configuration.
+The `[m365proxyrc.json](../technical-reference/m365proxyrc.md)` file contains the plugin configuration.
 
 The proxy has standard plugins that can be used with any API, and plugins specifically for use with the Microsoft Graph API.
 
