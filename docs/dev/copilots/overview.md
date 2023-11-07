@@ -74,9 +74,9 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
 
-### Copilot for Microsoft Fabric
+### Copilot in Microsoft Fabric
 
-Copilot for Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
+Copilot in Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
 
 Copilot for Power BI in Microsoft Fabric is infusing the power of large language models into Power BI at every layer to help users get more done and create additional value from their data. Users can create and tailor reports in seconds, generate and edit DAX calculations, create narrative summaries, and ask questions about their data, all in conversational language. It enables you to quickly create reports with just a few clicks. It saves you hours of effort building your report pages. Copilot provides a summary of your dataset and an outline of suggested pages for your report. 
 
@@ -89,7 +89,7 @@ Copilot for Power BI does the following:
 Learn more:
 - [Overview of Copilot for Fabric](/fabric/get-started/copilot-fabric-overview)
 - [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
-- [Copilot in Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
+- [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
 - [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://aka.ms/fabric-e2e-serengeti)
 
 ### Copilots in Dynamics 365
