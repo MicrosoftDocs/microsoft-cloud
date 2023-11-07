@@ -209,7 +209,7 @@ Companies can integrate their own data with Azure OpenAI models to create an adv
 :::image type="content" source="media/chat-with-your-data.png" alt-text="A diagram showing how Cognitive Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
 
 Learn more:
-- [Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
+- [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
 
 ### Solution Accelerators and Samples
