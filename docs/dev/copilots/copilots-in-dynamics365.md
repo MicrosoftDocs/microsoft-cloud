@@ -23,10 +23,16 @@ Copilots in Dynamics 365 provide AI assistance to boost the productivity and eff
 
 ## Copilot in Dynamics 365 Business Central
 
-Copilot in Dynamics 365 Business Central streamlines the creation of product listings for online commerce. Product attributes such as color, material and size can be used to create compelling product descriptions for online storefronts in seconds. The descriptions can be further tailored by choosing tone of voice, format and length. Business Central customers using Shopify can seamlessly publish the products with descriptions to their Shopify store in just a few clicks.
+With Copilot in Dynamics 365 Business Central, small and medium-sized organizations empower their workers with intuitive AI tools that boost creativity and save time. Copilot provides the following benefits:
+
+- **Bringing new products to market faster:** Start by uploading a product picture that is automatically matched to a product category and attributes, reducing data entry. Banish writer's block by having Copilot draft compelling product descriptions based on attributes such as color, material and size. Tailor descriptions to your brand by adjusting tone of voice, format and which quality to emphasize. With just a few clicks, your products are published to your online store and are ready to transact, using Business Central's integration to Shopify, a leading eCommerce platform.
+- **Reduce tedious accounting:** Copilot assists with the recurring task of reconciling bank account statements that typically takes hours. After uploading a bank statement file or pulling the latest statement digitally from your bank, Copilot puts AI to work to automatically match transactions known to Business Central, and suggests an appropriate ledger account in which to register any remaining transactions.
+- **Extend Copilot with custom capabilities:** Developer tools for Copilot in Business Central empower our community developers to build powerful, generative AI experiences for any role or industry, and deploy them to their favorite customers or distribute them as Add-on apps at scale on Microsoft AppSource. The toolkit includes signature Copilot user experiences, guard-rails that safeguard your customers and their data, and APIs that simplify coding against Azure OpenAI Service.
 
 Learn more:
 
+- [Copilot in Business Central](https://aka.ms/BCAI)
+- [Sign up for a free trial](https://go.microsoft.com/fwlink/?linkid=2227167)
 - [How to drive sales with AI-generated product descriptions](/dynamics365/release-plan/2023wave1/smb/dynamics365-business-central/drive-sales-ai-generated-product-descriptions)
 - [How to AI-powered item marketing text with Copilot](/dynamics365/business-central/ai-overview)
 - [How to create AI-generated marketing text with Copilot](/dynamics365/business-central/item-marketing-text#create-ai-generated-marketing-text-preview-with-copilot)
@@ -160,7 +166,7 @@ On-hand inventory insights to help user make informed inventory decision such as
 
 Copilot helps procurement specialists to make better purchasing decisions in procure-to-pay processes:
 
-The Copilot support for procurement is an advanced tool that empowers users to efficiently manage and assess changes to purchase orders on a large scale. By classifying changes by impact and risk associated with these changes, it greatly enhances procurement decision-making. With Copilot, users can swiftly identify high-impact or low-impact alterations, analyze downstream impact  enabling prompt actions to mitigate potential risks.  
+- **Manage purchasing decisions with Copilot:** The Copilot support for procurement is an advanced tool that empowers users to efficiently manage and assess changes to purchase orders on a large scale. By classifying changes by impact and risk associated with these changes, it greatly enhances procurement decision-making. With Copilot, users can swiftly identify high-impact or low-impact alterations, analyze downstream impact  enabling prompt actions to mitigate potential risks.  
 
 Learn more:
 
