@@ -50,7 +50,7 @@ Microsoft offers a variety of Copilots that can be adopted to enhance user produ
 Copilots discussed in this section include:
 - [Copilot for Dynamics 365](#copilot-in-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
-- [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
+- [Copilot for Microsoft Fabric](#copilot-for-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
 - [Copilot in Power Automate](#copilot-in-power-automate)
 - [Copilot in Windows](#copilot-in-windows)
@@ -75,9 +75,9 @@ Copilot for Dynamics 365 provides AI assistance to boost the productivity and ef
 Learn More:
 - [Copilot for Dynamics 365 Overview](/dev/copilots/copilots-for-dynamics365)
 
-### Copilot in Microsoft Fabric
+### Copilot for Microsoft Fabric
 
-Copilot in Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
+Copilot for Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
 
 Copilot for Power BI in Microsoft Fabric is infusing the power of large language models into Power BI at every layer to help users get more done and create additional value from their data. Users can create and tailor reports in seconds, generate and edit DAX calculations, create narrative summaries, and ask questions about their data, all in conversational language. It enables you to quickly create reports with just a few clicks. It saves you hours of effort building your report pages. Copilot provides a summary of your dataset and an outline of suggested pages for your report. 
 
@@ -88,7 +88,7 @@ Copilot for Power BI does the following:
 - A summary of the current page. 
 
 Learn more:
-- [Overview of Copilot in Fabric](/fabric/get-started/copilot-fabric-overview)
+- [Overview of Copilot for Fabric](/fabric/get-started/copilot-fabric-overview)
 - [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
 - [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
 - [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://aka.ms/fabric-e2e-serengeti)
