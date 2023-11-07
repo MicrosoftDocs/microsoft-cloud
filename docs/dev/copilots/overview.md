@@ -74,21 +74,23 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
 
-### Copilots in Microsoft Fabric
+### Copilot for Microsoft Fabric
 
-Microsoft Fabric provides a new way to transform and analyze data, generate insights, and create visualizations and reports. 
+Copilot for Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
 
-Copilot in Power BI infuses the power of Large Language Models (LLMs) into Power BI at every layer to help users get more done and create more value from their data. Users can create and tailor reports in seconds, generate and edit DAX calculations, create narrative summaries, and ask questions about their data, all by using natural conversational language. It enables users to quickly create reports with just a few clicks saving hours of effort building report pages.
+Copilot for Power BI in Microsoft Fabric is infusing the power of large language models into Power BI at every layer to help users get more done and create additional value from their data. Users can create and tailor reports in seconds, generate and edit DAX calculations, create narrative summaries, and ask questions about their data, all in conversational language. It enables you to quickly create reports with just a few clicks. It saves you hours of effort building your report pages. Copilot provides a summary of your dataset and an outline of suggested pages for your report. 
 
-Copilot in Power BI provides the following features:
-- Creates a summary of the dataset. 
-- Outlines suggested pages for your report: for example, what each page in the report will be about, and how many pages it will create. 
-- Creates visuals for the individual pages. 
-- Creates a summary of the current page. 
+Copilot for Power BI does the following:
+- A summary of the dataset. 
+- A report outlines of suggested pages for your report: for example, what each page in the report will be about, and how many pages it will create. 
+- The visuals for the individual pages. 
+- A summary of the current page. 
 
 Learn more:
-- [Introducing Microsoft Fabric and Copilot in Microsoft Power BI](https://powerbi.microsoft.com/blog/introducing-microsoft-fabric-and-copilot-in-microsoft-power-bi/)
+- [Overview of Copilot for Fabric](/fabric/get-started/copilot-fabric-overview)
+- [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
 - [Copilot in Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
+- [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://aka.ms/fabric-e2e-serengeti)
 
 ### Copilots in Dynamics 365
 
