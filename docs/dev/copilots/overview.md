@@ -47,23 +47,16 @@ Microsoft offers a variety of Copilots that can be adopted to enhance user produ
 :::image type="content" source="media/copilots-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for Copilots across the Microsoft Cloud." border="false" :::
 
 Copilots discussed in this section include:
-- [Copilot in Dynamics 365](#copilot-in-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
+- [Copilot in Dynamics 365](#copilot-in-dynamics-365)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
 - [Copilot in Power Automate](#copilot-in-power-automate)
+- [Copilot in Windows](#copilot-in-windows)
 - [GitHub Copilot](#github-copilot)
 - [Microsoft Copilot](#microsoft-copilot)
 - [Microsoft Copilot Pro](#microsoft-copilot-pro)
 - [Microsoft Security Copilot](#microsoft-security-copilot)
-- [Copilot in Windows](#copilot-in-windows)
-
-### Copilot in Dynamics 365
-
-Copilot in Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
-
-Learn More:
-- [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
 
 ### Copilot for Microsoft 365
 
@@ -73,6 +66,13 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 
 Learn more:
 - [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
+
+### Copilot in Dynamics 365
+
+Copilot in Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
+
+Learn More:
+- [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
 
 ### Copilot in Microsoft Fabric
 
@@ -92,13 +92,6 @@ Learn more:
 - [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
 - [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://aka.ms/fabric-e2e-serengeti)
 
-### Copilots in Dynamics 365
-
-Copilots in Dynamics 365 provide AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation.
-
-Learn more:
-- [Copilots in Dynamics 365 Overview](/dev/copilots/copilots-in-dynamics365)
-
 ### Copilot in Power Apps
 
 The AI Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
@@ -114,6 +107,13 @@ Copilot in Power Automate simplifies automation creation using natural language 
 Learn more:
 - [Get started with Copilot in Cloud Flows](/power-automate/get-started-with-copilot)
 - [Build flows for a real estate solution using Copilot in Power Automate](/training/modules/build-real-estate-power-automate-copilot/)
+
+### Copilot in Windows
+ 
+Copilot in Windows is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
+ 
+Learn more:
+- [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
 
 ### GitHub Copilot 
  
@@ -145,13 +145,6 @@ Microsoft Security Copilot is an AI-powered security analysis tool that empowers
 
 Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
-
-### Copilot in Windows
- 
-Copilot in Windows is an AI-powered intelligent assistant designed to enhance user efficiency and creativity. It aids in retrieving answers and inspirations from the web, supporting creative tasks, and aiding focus on the current task. Users can adjust PC settings, organize windows, and initiate creative projects with Copilot's assistance. It's easily accessible, ready with a keystroke, and extends support both online and within Windows apps, making it a user-friendly tool for various tasks. 
- 
-Learn more:
-- [AI with Copilot in Windows](https://www.microsoft.com/windows/copilot-ai-features)
 
 ## Extend a Copilot
 
