@@ -52,7 +52,7 @@
 
 1. Open a terminal window in the *typescript* folder and run the `npm install` command to install the application dependencies.
 
-1. Open *Shared/graph.ts* and take a moment to explore the imports at the top of the file. This code handles importing authentication and client symbols that will be used in the Azure Function to call Microsoft Graph.
+1. Open *Shared/graph.ts* and take a moment to explore the imports at the top of the file. This code handles importing authentication and client symbols that are used in the Azure Function to call Microsoft Graph.
 
     ```typescript
     import { startDateTimeAsync, endDateTimeAsync } from './dateTimeFormat';
@@ -63,9 +63,9 @@
     ```
 
     > [!TIP]
-    > You'll also see imports from *dateTimeFormat.ts* which will be used later in this exercise. `startDateTimeAsync` and `endDateTimeAsync` will be used while creating a Microsoft Teams meeting link to define start date and end date for the meeting.
+    > You'll also see imports from *dateTimeFormat.ts* which are used later in this exercise. `startDateTimeAsync` and `endDateTimeAsync` are used while creating a Microsoft Teams meeting link to define start date and end date for the meeting.
 
-1. Take a moment to examine `clientSecretCredential` and `appGraphClient`, they will be used later in the authentication process and when calling the Microsoft Graph API:
+1. Take a moment to examine `clientSecretCredential` and `appGraphClient`. They'll be used later in the authentication process and when calling the Microsoft Graph API:
 
     ```typescript
     let clientSecretCredential;
@@ -99,7 +99,7 @@
     }
     ``` 
 
-1. Take a moment to explore the `createNewMeetingAsync` function. It posts data to the [Microsoft Graph Calendar Events API](https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http) which dynamically creates an event in a user's calendar and returns the new event details:
+1. Take a moment to explore the `createNewMeetingAsync` function. It posts data to the [Microsoft Graph Calendar Events API](https://learn.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0&tabs=http), which dynamically creates an event in a user's calendar and returns the new event details:
 
     ```typescript
     async function createNewMeetingAsync(userId) {
@@ -130,7 +130,7 @@
 
 1. Go to *TeamsMeetingFunction/index.ts* and explore the *Http Trigger* function:
     - `createNewMeetingAsync` is imported from *graph.ts*. It handles creating and retrieving new event details.
-    - `userId` is retrieved from *local.settings.json* inside the Http Trigger function. This is done by accessing the `USER_ID` environment variable by using `process.env.USER_ID`.
+    - `userId` is retrieved from *local.settings.json* inside the Http Trigger function. This retrieval is done by accessing the `USER_ID` environment variable by using `process.env.USER_ID`.
     - When the function is triggered, it calls `createNewMeetingAsync` with the defined user id and returns the new event details in `teamMeetingLink` parameter.
     - The function accesses the Teams meeting join URL by calling `meeting.onlineMeeting.joinUrl` and returns the value in the body of the response.
 
