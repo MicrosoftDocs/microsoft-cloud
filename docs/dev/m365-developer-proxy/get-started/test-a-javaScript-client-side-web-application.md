@@ -1,5 +1,5 @@
 ---
-title: Test a JavaScript client side web application
+title: Test a JavaScript client-side web application
 description: Test a JavaScript client side web application
 author: garrytrinder
 ms.author: garrytrinder

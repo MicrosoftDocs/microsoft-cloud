@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Plugin Reference Template
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

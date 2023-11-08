@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Mock multiple responses to the same endpoint
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

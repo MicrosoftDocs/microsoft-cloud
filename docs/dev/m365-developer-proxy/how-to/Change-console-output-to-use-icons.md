@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Change console output to use icons
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

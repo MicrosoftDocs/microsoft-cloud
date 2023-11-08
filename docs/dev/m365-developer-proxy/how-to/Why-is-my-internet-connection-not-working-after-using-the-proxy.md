@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Why is my internet connection not working after using the proxy
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

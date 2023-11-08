@@ -1,5 +1,5 @@
 ---
-title: How-to
+title: Index
 description: How-to guides for Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Why are random errors not thrown when using mocks
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

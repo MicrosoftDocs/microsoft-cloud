@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Detect minimal Microsoft Graph API permissions
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

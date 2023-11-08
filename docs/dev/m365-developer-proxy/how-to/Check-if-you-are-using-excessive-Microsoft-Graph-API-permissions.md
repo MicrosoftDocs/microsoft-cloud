@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Check if you are using excessive Microsoft Graph API permissions
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

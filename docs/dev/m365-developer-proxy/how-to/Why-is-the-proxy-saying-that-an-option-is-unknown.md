@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Why is the proxy saying that an option is unknown
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

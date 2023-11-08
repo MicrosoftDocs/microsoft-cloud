@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Simulate errors from non-Microsoft 365 APIs
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

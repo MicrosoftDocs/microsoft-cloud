@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Why is proxy not mocking my binary response
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

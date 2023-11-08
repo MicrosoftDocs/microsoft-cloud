@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Test that my application handles HTTP errors properly
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

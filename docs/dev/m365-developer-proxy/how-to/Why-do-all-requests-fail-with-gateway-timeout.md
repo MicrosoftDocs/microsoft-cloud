@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Why do all requests fail with gateway timeout
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Developer Proxy
+title: Overview
 description: Microsoft 365 Developer Proxy is a command line tool that aims to provide a better way to test applications.
 author: garrytrinder
 ms.author: garrytrinder
