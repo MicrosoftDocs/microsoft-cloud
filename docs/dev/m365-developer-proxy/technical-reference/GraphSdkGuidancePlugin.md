@@ -1,6 +1,6 @@
 ---
 title: GraphSdkGuidancePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

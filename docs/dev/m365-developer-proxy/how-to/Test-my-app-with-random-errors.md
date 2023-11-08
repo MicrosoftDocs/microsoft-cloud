@@ -1,6 +1,6 @@
 ---
 title: Test my app with random errors
-description: Get started with Microsoft 365 Developer Proxy
+description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

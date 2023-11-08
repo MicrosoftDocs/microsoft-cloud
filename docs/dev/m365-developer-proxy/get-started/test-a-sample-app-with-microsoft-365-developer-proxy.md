@@ -1,6 +1,6 @@
 ---
 title: Test a sample app with Microsoft 365 Developer Proxy
-description: Test a sample app with Microsoft 365 Developer Proxy
+description: Sample scenario of testing an app with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

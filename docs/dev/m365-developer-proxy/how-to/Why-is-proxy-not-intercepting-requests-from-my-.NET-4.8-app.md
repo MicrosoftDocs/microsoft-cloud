@@ -1,6 +1,6 @@
 ---
 title: Why is proxy not intercepting requests from my .NET 4.8 app
-description: Get started with Microsoft 365 Developer Proxy
+description: How to configure the Microsoft 365 Developer Proxy for use with .NET 4.8 apps
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

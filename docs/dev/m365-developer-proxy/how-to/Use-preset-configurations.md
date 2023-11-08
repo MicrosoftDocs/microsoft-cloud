@@ -1,6 +1,6 @@
 ---
 title: Use preset configurations
-description: Get started with Microsoft 365 Developer Proxy
+description: How to choose a preset configuration
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

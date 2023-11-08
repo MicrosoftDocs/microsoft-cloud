@@ -1,6 +1,6 @@
 ---
 title: LatencyPlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

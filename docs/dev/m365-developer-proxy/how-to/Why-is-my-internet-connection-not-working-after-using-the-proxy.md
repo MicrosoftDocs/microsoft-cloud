@@ -1,6 +1,6 @@
 ---
 title: Why is my internet connection not working after using the proxy
-description: Get started with Microsoft 365 Developer Proxy
+description: Why is my internet connection not working after using the proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

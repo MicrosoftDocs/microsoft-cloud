@@ -1,6 +1,6 @@
 ---
 title: RateLimitingPlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

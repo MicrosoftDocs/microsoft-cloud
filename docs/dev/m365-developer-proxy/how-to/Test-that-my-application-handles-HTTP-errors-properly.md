@@ -1,6 +1,6 @@
 ---
 title: Test that my application handles HTTP errors properly
-description: Get started with Microsoft 365 Developer Proxy
+description: How to test that your application handles HTTP errors properly
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

@@ -1,6 +1,6 @@
 ---
 title: Console output text labels
-description: Get started with Microsoft 365 Developer Proxy
+description: How to change console output to use text labels
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

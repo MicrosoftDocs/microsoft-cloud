@@ -1,6 +1,6 @@
 ---
 title: GraphBetaSupportGuidancePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: GraphBetaSupportGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

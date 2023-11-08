@@ -1,6 +1,6 @@
 ---
 title: Update my application code to use Microsoft Graph JavaScript SDK
-description: Get started with Microsoft 365 Developer Proxy
+description: How to update your application code to use the Microsoft Graph JavaScript SDK
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

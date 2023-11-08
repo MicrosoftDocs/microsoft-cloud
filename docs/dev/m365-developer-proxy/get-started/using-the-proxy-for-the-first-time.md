@@ -1,6 +1,6 @@
 ---
 title: Using the proxy for the first time
-description: Using the proxy for the first time
+description: How to configure the Microsoft 365 Developer Proxy for the first time
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder
@@ -23,7 +23,7 @@ ms.custom:
 This step-by-step introduction is intended for beginners.
 
 > [!CAUTION]
-> It assumes that you completed the installation steps. If not, do that [now](microsoft-cloud/dev/m365-developer-proxy/get-started/installation).
+> It assumes that you completed the installation steps. If not, do that [now](./installation.md).
 
 You learn how to use the Microsoft 365 Developer Proxy for the first time.
 

@@ -1,6 +1,6 @@
 ---
 title: Change request failure rate
-description: Get started with Microsoft 365 Developer Proxy
+description: How to configure the request failure rate
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

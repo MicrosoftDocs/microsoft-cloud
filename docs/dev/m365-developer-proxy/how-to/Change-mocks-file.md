@@ -1,6 +1,6 @@
 ---
 title: Change mocks file
-description: Get started with Microsoft 365 Developer Proxy
+description: How to specify which mocks file to use
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

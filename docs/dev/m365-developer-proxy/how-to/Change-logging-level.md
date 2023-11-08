@@ -1,6 +1,6 @@
 ---
 title: Change logging level
-description: Get started with Microsoft 365 Developer Proxy
+description: How to change logging level
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

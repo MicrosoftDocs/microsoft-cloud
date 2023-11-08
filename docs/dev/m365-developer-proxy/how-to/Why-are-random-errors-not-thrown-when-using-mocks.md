@@ -1,6 +1,6 @@
 ---
 title: Why are random errors not thrown when using mocks
-description: Get started with Microsoft 365 Developer Proxy
+description: How to fix proxy not throwing random errors when using mocks
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

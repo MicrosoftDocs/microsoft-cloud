@@ -1,6 +1,6 @@
 ---
 title: MinimalPermissionsGuidancePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: MinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

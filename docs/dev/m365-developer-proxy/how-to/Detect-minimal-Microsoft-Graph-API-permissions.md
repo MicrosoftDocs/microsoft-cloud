@@ -1,6 +1,6 @@
 ---
 title: Detect minimal Microsoft Graph API permissions
-description: Get started with Microsoft 365 Developer Proxy
+description: How to detect the minimal Microsoft Graph API permissions that your app requires
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

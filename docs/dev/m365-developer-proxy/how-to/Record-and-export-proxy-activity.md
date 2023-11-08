@@ -1,6 +1,6 @@
 ---
 title: Record and export proxy activity
-description: Get started with Microsoft 365 Developer Proxy
+description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

@@ -1,6 +1,6 @@
 ---
 title: GraphMockResponsePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: GraphMockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

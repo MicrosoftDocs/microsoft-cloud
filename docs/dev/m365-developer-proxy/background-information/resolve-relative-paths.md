@@ -1,6 +1,6 @@
 ---
 title: Resolve relative paths
-description: Get started with Microsoft 365 Developer Proxy
+description: How Microsoft 365 Developer Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

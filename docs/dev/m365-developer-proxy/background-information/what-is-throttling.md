@@ -1,6 +1,6 @@
 ---
 title: What is throttling
-description: Get started with Microsoft 365 Developer Proxy
+description: The concept of throttling in Microsoft 365 and other cloud services
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

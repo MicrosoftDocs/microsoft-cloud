@@ -1,6 +1,6 @@
 ---
 title: Plugin architecture
-description: Get started with Microsoft 365 Developer Proxy
+description: The architecture of Microsoft 365 Developer Proxy plugins
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

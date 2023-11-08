@@ -1,6 +1,6 @@
 ---
 title: RetryAfterPlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

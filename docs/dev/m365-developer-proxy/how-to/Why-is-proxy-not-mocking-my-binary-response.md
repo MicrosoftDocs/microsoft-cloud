@@ -1,6 +1,6 @@
 ---
 title: Why is proxy not mocking my binary response
-description: Get started with Microsoft 365 Developer Proxy
+description: How to fix proxy not mocking binary responses
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

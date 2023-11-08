@@ -1,6 +1,6 @@
 ---
 title: ODataPagingGuidancePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: ODataPagingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

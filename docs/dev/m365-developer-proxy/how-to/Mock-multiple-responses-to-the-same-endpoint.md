@@ -1,6 +1,6 @@
 ---
 title: Mock multiple responses to the same endpoint
-description: Get started with Microsoft 365 Developer Proxy
+description: How to mock multiple responses to the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

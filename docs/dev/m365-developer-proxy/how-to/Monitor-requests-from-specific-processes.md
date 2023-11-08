@@ -1,6 +1,6 @@
 ---
 title: Monitor requests from specific processes
-description: Get started with Microsoft 365 Developer Proxy
+description: How to configure the proxy to monitor requests only from specific processes
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

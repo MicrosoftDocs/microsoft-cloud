@@ -1,6 +1,6 @@
 ---
 title: Simulate errors from non-Microsoft 365 APIs
-description: Get started with Microsoft 365 Developer Proxy
+description: How to configure the proxy to simulate errors from non-Microsoft 365 APIs
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

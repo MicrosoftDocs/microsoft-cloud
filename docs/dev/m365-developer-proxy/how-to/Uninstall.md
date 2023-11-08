@@ -1,6 +1,6 @@
 ---
 title: Uninstall
-description: Get started with Microsoft 365 Developer Proxy
+description: How to uninstall Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

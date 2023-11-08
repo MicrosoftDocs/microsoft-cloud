@@ -1,6 +1,6 @@
 ---
 title: Keyboard shortcuts
-description: Get started with Microsoft 365 Developer Proxy
+description: Proxy keyboard shortcuts
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

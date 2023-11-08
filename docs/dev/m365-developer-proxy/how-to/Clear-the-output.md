@@ -1,6 +1,6 @@
 ---
 title: Clear the output
-description: Get started with Microsoft 365 Developer Proxy
+description: How to clear the terminal output
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

@@ -1,6 +1,6 @@
 ---
 title: GraphSelectGuidancePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: GraphSelectGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

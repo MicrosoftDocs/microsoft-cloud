@@ -1,6 +1,6 @@
 ---
 title: Get help and support
-description: Get started with Microsoft 365 Developer Proxy
+description: How to get help and support for the Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

@@ -1,6 +1,6 @@
 ---
 title: Why is the proxy saying that an option is unknown
-description: Get started with Microsoft 365 Developer Proxy
+description: Why is the proxy saying that an option is unknown
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

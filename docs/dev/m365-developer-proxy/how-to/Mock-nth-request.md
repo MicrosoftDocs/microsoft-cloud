@@ -1,6 +1,6 @@
 ---
 title: Mock nth request
-description: Get started with Microsoft 365 Developer Proxy
+description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

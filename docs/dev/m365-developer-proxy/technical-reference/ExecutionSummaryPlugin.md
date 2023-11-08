@@ -1,6 +1,6 @@
 ---
 title: ExecutionSummaryPlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

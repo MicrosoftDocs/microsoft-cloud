@@ -1,6 +1,6 @@
 ---
 title: Console output ASCII icons
-description: Get started with Microsoft 365 Developer Proxy
+description: How to change console output to use ASCII icons
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

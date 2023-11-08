@@ -1,6 +1,6 @@
 ---
 title: Simulate slow API responses
-description: Get started with Microsoft 365 Developer Proxy
+description: How to simulate slow API responses
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

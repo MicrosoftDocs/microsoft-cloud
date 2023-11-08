@@ -1,6 +1,6 @@
 ---
 title: Supported HTTP error status codes
-description: Get started with Microsoft 365 Developer Proxy
+description: List of supported HTTP error status codes
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

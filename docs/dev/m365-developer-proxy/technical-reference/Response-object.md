@@ -1,6 +1,6 @@
 ---
 title: Response object
-description: Get started with Microsoft 365 Developer Proxy
+description: Structure of the response object
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

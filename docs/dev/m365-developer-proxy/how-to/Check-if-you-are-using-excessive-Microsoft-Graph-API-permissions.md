@@ -1,6 +1,6 @@
 ---
 title: Check if you are using excessive Microsoft Graph API permissions
-description: Get started with Microsoft 365 Developer Proxy
+description: How to check if your app is using minimal Microsoft Graph API permissions
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

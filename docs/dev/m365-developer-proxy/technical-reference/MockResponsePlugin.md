@@ -1,6 +1,6 @@
 ---
 title: MockResponsePlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

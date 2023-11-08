@@ -1,6 +1,6 @@
 ---
 title: Mock responses
-description: Get started with Microsoft 365 Developer Proxy
+description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

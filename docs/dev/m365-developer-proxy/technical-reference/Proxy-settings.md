@@ -1,6 +1,6 @@
 ---
 title: Proxy settings
-description: Get started with Microsoft 365 Developer Proxy
+description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

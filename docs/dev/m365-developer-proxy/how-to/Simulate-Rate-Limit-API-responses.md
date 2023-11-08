@@ -1,6 +1,6 @@
 ---
 title: Simulate Rate-Limit API responses
-description: Get started with Microsoft 365 Developer Proxy
+description: How to simulate Rate-Limit API responses
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder
@@ -28,7 +28,7 @@ The `RateLimit-Limit` response header field indicates the request-quota associat
 
 If the client exceeds that limit, it might not be served.
 
-> ℹ️ By default the [RateLimitingPlugin](./RateLimitingPlugin) is disabled. To enable the plugin, open the [m365proxyrc](https://github.com/microsoft/m365-developer-proxy/wiki/m365proxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> ℹ️ By default the [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) is disabled. To enable the plugin, open the [m365proxyrc](https://github.com/microsoft/m365-developer-proxy/wiki/m365proxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
 Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Microsoft Graph and SharePoint Online APIs.
 
@@ -36,7 +36,7 @@ Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Mic
 
 In v0.12, we added support for proxy to work with custom Rate-Limit implementations.
 
-The following example shows how you can configure how you can configure [RateLimitingPlugin](./RateLimitingPlugin) in the [m365proxyrc](./m365proxyrc) file to simulate rate limits for the [GitHub API](https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#dealing-with-rate-limits).
+The following example shows how you can configure how you can configure [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) in the [m365proxyrc](../technical-reference/m365proxyrc.md) file to simulate rate limits for the [GitHub API](https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#dealing-with-rate-limits).
 
 ```json
 {

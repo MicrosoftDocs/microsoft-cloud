@@ -1,6 +1,6 @@
 ---
 title: GraphRandomErrorPlugin
-description: Get started with Microsoft 365 Developer Proxy
+description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder

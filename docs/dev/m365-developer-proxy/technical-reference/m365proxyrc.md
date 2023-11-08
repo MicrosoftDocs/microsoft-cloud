@@ -1,6 +1,6 @@
 ---
-title: M365proxyrc
-description: Get started with Microsoft 365 Developer Proxy
+title: m365proxyrc
+description: m365proxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder
