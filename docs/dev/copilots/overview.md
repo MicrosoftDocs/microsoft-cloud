@@ -1,6 +1,6 @@
 ---
 title: Adopt, Extend and Build Copilots Across the Microsoft Cloud
-description: Learn how you can adopt, extend, and build Microsoft Copilots.
+description: Learn how you can adopt, extend, and build Copilots.
 author: DanWahlin
 ms.author: donasa
 ms.contributors: dwahlin-5182022
@@ -23,13 +23,13 @@ ms.custom:
 
 #  Adopt, Extend and Build Copilots Across the Microsoft Cloud
 
-Microsoft Copilots are AI assistants powered by Large Language Models (LLMs) that offer innovative solutions across the Microsoft Cloud. They aim to enhance productivity, creativity, and data accessibility while providing enterprise-grade data security and privacy features. They bridge the gap between complex tasks and user-friendly solutions, providing a natural language conversational interface to interact with data, create automations, build applications, and even assist with coding tasks. Their integration within various Microsoft platforms and products provides a more interactive and efficient digital workspace. 
+Copilots are AI assistants powered by Large Language Models (LLMs) that offer innovative solutions across the Microsoft Cloud. They aim to enhance productivity, creativity, and data accessibility while providing enterprise-grade data security and privacy features. They bridge the gap between complex tasks and user-friendly solutions, providing a natural language conversational interface to interact with data, create automations, build applications, and even assist with coding tasks. Their integration within various Microsoft platforms and products provides a more interactive and efficient digital workspace. 
 
 The core value of Copilots stems from their ability to interpret natural language commands, enhancing the user experience by making it more intuitive and user-friendly. From answering queries in Copilot Pro, assisting with data navigation and analysis in Microsoft 365, aiding in app and automation creation in Power Apps and Power Automate, to suggesting code in GitHub Copilot, they allow users to have an AI-powered assistant at their fingertips. Copilots make complex tasks more manageable, fostering a collaborative environment for both individual users and enterprises. 
 
 :::image type="content" source="media/copilots-across-microsoft-cloud.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilots across the Microsoft Cloud." border="false" :::
 
-Users can effortlessly adopt Copilots to streamline their workflows, while developers or creators have the flexibility to extend Copilots by integrating custom data. The core features that Microsoft Copilots are built upon can also be used to build custom Copilot solutions, which can be seamlessly integrated into new or existing applications. The following table provides differences between the adopt, extend, and build options showcasing the breadth of possibilities that Microsoft Copilots offer.
+Users can effortlessly adopt Copilots to streamline their workflows, while developers or creators have the flexibility to extend Copilots by integrating custom data. The core features that Copilots are built upon can also be used to build custom Copilot solutions, which can be seamlessly integrated into new or existing applications. The following table provides differences between the adopt, extend, and build options showcasing the breadth of possibilities that Copilots offer.
 
 || Adopt a Copilot | Extend a Copilot | Build your Own Copilot |
 |---|---|---|---|
@@ -149,15 +149,15 @@ Learn more:
 
 ## Extend a Copilot
 
-Microsoft Copilots offer a comprehensive range of features right out of the box, yet many users continue to depend on external tools, services, and data to carry out tasks. To bridge this gap, Copilots can be extended using plugins, connectors, or message extensions.
+Copilots offer a comprehensive range of features right out of the box, yet many users continue to depend on external tools, services, and data to carry out tasks. To bridge this gap, Copilots can be extended using plugins, connectors, or message extensions.
 
 :::image type="content" source="media/copilots-across-microsoft-cloud-extend.png" alt-text="A diagram showing extend options for Copilots across the Microsoft Cloud." border="false" :::
 
-### Benefits of Extending Microsoft Copilots
+### Benefits of Extending Copilots
 
-By extending Microsoft Copilots, developers can integrate external data directly into Copilots to minimize user context shifts while enhancing productivity and collaboration. Copilots can also be extended to provide a new way for developers to surface external data directly in Microsoft products that users use everyday. For instance, enterprises and ISVs can build plugins to integrate their own line-of-business APIs and data directly into a Copilot.
+By extending Copilots, developers can integrate external data directly into Copilots to minimize user context shifts while enhancing productivity and collaboration. Copilots can also be extended to provide a new way for developers to surface external data directly in Microsoft products that users use everyday. For instance, enterprises and ISVs can build plugins to integrate their own line-of-business APIs and data directly into a Copilot.
 
-Adding plugins, connectors, or message extensions to Microsoft Copilots helps users make the most out of these AI assistants. Users can more easily discover and work with enterprise data, tools, and services using natural language, which improves productivity and enhances teamwork.
+Adding plugins, connectors, or message extensions to Copilots helps users make the most out of these AI assistants. Users can more easily discover and work with enterprise data, tools, and services using natural language, which improves productivity and enhances teamwork.
 
 #### Extending with Plugins
 
