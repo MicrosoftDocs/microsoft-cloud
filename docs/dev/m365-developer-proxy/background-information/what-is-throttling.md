@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 When your application connected to Microsoft Graph is used at scale, it can happen that it's throttled. 
 
 Throttling is a mechanism used in Microsoft 365 and other cloud services, to ensure service continuity.

@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 All file paths used in configuration files (`m365proxyrc.json`) are relative to the location of the configuration file.
 
 In the below example, the `pluginPath` is relative to the configuration file. The default `m365proxyrc.json` configuration file is located in the same location where the `plugins` folder exists.

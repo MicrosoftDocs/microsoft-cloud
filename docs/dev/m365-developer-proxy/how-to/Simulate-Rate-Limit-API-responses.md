@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 Rate-Limit headers are used in HTTP responses to limit the number of requests that a client can make within a given time period.
 
 The server sends these headers in response to a client’s request to indicate how many requests are allowed and how many requests remain before the limit is reached.

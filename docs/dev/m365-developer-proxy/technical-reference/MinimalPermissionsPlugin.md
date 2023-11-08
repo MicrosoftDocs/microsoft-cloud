@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 Returns a list of the minimal permission scopes required for requests sent to Microsoft Graph that proxy recorded.
 
 > NOTE: This plugin requires [ExecutionSummaryPlugin](./ExecutionSummaryPlugin.md) to be enabled. This plugin contains the functionality to record proxy activity.

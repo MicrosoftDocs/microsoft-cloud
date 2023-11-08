@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 In v0.4, we refactored the Microsoft 365 Developer Proxy to use a Plugin based architecture.
 
 A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.

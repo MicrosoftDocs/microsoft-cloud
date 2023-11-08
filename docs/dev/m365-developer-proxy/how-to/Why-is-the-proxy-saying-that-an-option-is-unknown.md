@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 The proxy uses a plugin architecture, as such, proxy features can be added, removed, enabled or disabled through changing the configuration in the [m365proxyrc.json](../technical-reference/m365proxyrc.md) file. 
 
 Some plugins provide command line options. When the plugin is disabled, the proxy isn't able to interpret the command line options that the plugin provides.

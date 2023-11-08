@@ -1,3 +1,25 @@
+---
+title: Get started
+description: Get started with Microsoft 365 Developer Proxy
+author: garrytrinder
+ms.author: garrytrinder
+ms.contributors: garrytrinder
+ms.date: 11/03/2023
+ms.topic: conceptual
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+---
+
 Typically, testing throttling is hard because it occurs rarely, when Microsoft 365 servers are under heavy load. Using the Microsoft 365 Developer Proxy, you can mimic throttling responses, and check if your application handles it correctly.
 
 To test your application, start the Microsoft 365 Developer Proxy, configuring it to respond specifically with throttling responses, intercepting a high percentage of requests:
