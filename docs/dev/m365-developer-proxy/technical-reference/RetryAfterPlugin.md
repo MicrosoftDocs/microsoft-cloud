@@ -1,4 +1,4 @@
-Provides the ability to simulate the `Retry-After` header sent by an API after throttling a request.
+Simulates the `Retry-After` header sent by an API after throttling a request.
 
 ## Plugin instance definition
 

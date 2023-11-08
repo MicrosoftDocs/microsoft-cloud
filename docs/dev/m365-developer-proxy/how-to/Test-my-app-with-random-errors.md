@@ -2,7 +2,7 @@ When applications use Microsoft Graph and other cloud services, it can happen, t
 
 Testing exceptions in APIs you don't manage is hard, because it's hard to make the API return a specific response. Using Microsoft 365 Developer Proxy, you can mimic erroneous responses from Microsoft Graph and test your application to see that it handles these errors properly.
 
-> ℹ️ The [GraphRandomErrorPlugin](./GraphRandomErrorPlugin) controls the behaviour of returning random errors, in older releases of the proxy you may find that the `GraphRandomErrorPlugin` may not be in your [m365proxyrc](https://github.com/microsoft/m365-developer-proxy/wiki/m365proxyrc) file. Add the [plugin and configuration objects](./GraphRandomErrorPlugin.md) to your `m365proxyrc` file. The plugin will be enabled the next time you start proxy.
+> ℹ️ The [GraphRandomErrorPlugin](../technical-reference/GraphRandomErrorPlugin.md) controls the behavior of returning random errors, in older releases of the proxy you may find that the `GraphRandomErrorPlugin` may not be in your [m365proxyrc](../technical-reference/m365proxyrc.md) file. Add the [plugin and configuration objects](../technical-reference/GraphRandomErrorPlugin.md) to your `m365proxyrc` file. The plugin will be enabled the next time you start proxy.
 
 To test your application, start the Microsoft 365 Developer Proxy:
 
@@ -10,7 +10,7 @@ To test your application, start the Microsoft 365 Developer Proxy:
 m365proxy --no-mocks
 ```
 
-By default, Microsoft 365 Developer Proxy will randomly respond with 429, 500, 502, 503, 504, or 507 errors. In its default configuration, there's a 50% chance that the proxy will intercept a request to Microsoft Graph. You can increase the likelihood to a higher value using the `--failure-rate` option, eg.:
+By default, Microsoft 365 Developer Proxy randomly responds with 429, 500, 502, 503, 504, or 507 errors. In its default configuration, there's a 50% chance that the proxy will intercept a request to Microsoft Graph. You can increase the likelihood to a higher value using the `--failure-rate` option, for example:
 
 ```sh
 m365proxy --no-mocks --failure-rate 80

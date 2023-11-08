@@ -4,9 +4,9 @@ Provides guidance to help developers correctly handle retrieving multiple pages 
 
 ```json
 {
-      "name": "ODataPagingGuidancePlugin",
-      "enabled": true,
-      "pluginPath": "plugins\\m365-developer-proxy-plugins.dll"
+  "name": "ODataPagingGuidancePlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\m365-developer-proxy-plugins.dll"
 }
 ```
 

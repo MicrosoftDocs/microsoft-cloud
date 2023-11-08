@@ -1,4 +1,4 @@
-Provides the ability to mock responses sent in batch requests to Microsoft Graph.
+Mocks responses sent in batch requests to Microsoft Graph.
 
 ## Plugin instance definition
 
@@ -13,12 +13,12 @@ Provides the ability to mock responses sent in batch requests to Microsoft Graph
 
 ## Configuration example
 
-See [MockResponsePlugin](./MockResponsePlugin)
+See [MockResponsePlugin](./MockResponsePlugin.md)
 
 ## Configuration properties
 
-See [MockResponsePlugin](./MockResponsePlugin)
+See [MockResponsePlugin](./MockResponsePlugin.md)
 
 ## Command line options
 
-See [MockResponsePlugin](./MockResponsePlugin)
+See [MockResponsePlugin](./MockResponsePlugin.md)

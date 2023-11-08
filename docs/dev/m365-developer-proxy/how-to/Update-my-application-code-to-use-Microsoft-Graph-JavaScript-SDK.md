@@ -1,6 +1,6 @@
-The Microsoft Graph JavaScript SDK comes with features that will simplify your code and let you focus on building your app. 
+The Microsoft Graph JavaScript SDK comes with features that simplifies your code and let you focus on building your app. 
 
-Using the SDK makes it easier for you to
+Using the SDK makes it easier for you to:
 
 - Handle API errors for when things don't work as expected, such as when services throttle under heavy load
 - Perform complex API operations like batch requests
@@ -8,7 +8,7 @@ Using the SDK makes it easier for you to
 
 ## Migrate from fetch to the Graph JavaScript SDK
 
-If you use the fetch API to call APIs in your JavaScript app, you might have code similar to following:
+If you use the fetch API to call APIs in your JavaScript app, you might have code similar to the following:
 
 ```javascript
 const msalClient = new msal.PublicClientApplication({
@@ -99,7 +99,7 @@ msalClient
 
 ## Handle API errors
 
-One of the most common API errors that applications using Microsoft Graph experience when used at scale is throttling. It occurs, when the server is under heavy load and it's meant to decrease the load to keep the service up.
+One of the most common API errors that applications using Microsoft Graph experience when used at scale is throttling. It occurs, when the server is under heavy load. Throttling decreases the load on the server to keep the service up.
 
 Since throttling rarely occurs on developer tenants, often developers call the API without properly handling errors:
 

@@ -1,4 +1,4 @@
-Provides the ability to introduce latency into requests.
+Introduces latency into requests.
 
 ## Plugin instance definition
 
@@ -24,8 +24,8 @@ Provides the ability to introduce latency into requests.
 
 | Property | Description | Default |
 | -------- | ----------- | :-----: |
-| `minMs` | The minimum amount of delay added to a request in milliseconds. |   0 | 
-| `maxMs` | The maximum amount of delay added to a request in milliseconds. Max value is 10000 (10s) |  5000  |
+| `minMs` | The minimum amount of delay added to a request in milliseconds. |   0 |
+| `maxMs` | The maximum amount of delay added to a request in milliseconds. Max value is 10000 (10 s) |  5000  |
 
 ## Command line options
 

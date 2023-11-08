@@ -3,7 +3,7 @@ Each response has the following properties:
 | Property          | Description                                                 | Required | Default value | Sample value                          |
 | ----------------- | ----------------------------------------------------------- | :------: | ------------- | ------------------------------------- |
 | `url`             | Absolute URL to an API endpoint to respond to               |   yes    |               | `https://graph.microsoft.com/v1.0/me` |
-| `method`          | Http verb used to match request in conjunction with `url`   |   yes    |               | `GET`                                 |
+| `method`          | Http verb used to match request with `url`   |   yes    |               | `GET`                                 |
 | `nth`             | Determines the nth request that the proxy should respond on |    no    | _empty_       | 2                                     |
 | `responseBody`    | Body to send as the response to the request                 |    no    | _empty_       | `{ "foo": "bar" }`                    |
 | `responseCode`    | Response status code                                        |    no    | `200`         | `404`                                 |

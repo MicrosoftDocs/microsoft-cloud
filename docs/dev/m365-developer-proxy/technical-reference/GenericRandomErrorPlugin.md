@@ -1,4 +1,4 @@
-Provides the ability to fail requests with a random selected error from file containing mocked errors.
+Fails requests with a random selected error from file containing mocked errors.
 
 ## Plugin instance definition
 
@@ -29,8 +29,8 @@ Provides the ability to fail requests with a random selected error from file con
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| Rate | Determines the percentage chance that a request will be failed with an error. | No default |
-| ErrorsFile | Path to the file that contains error responses. | No default | 
+| Rate | Determines the percentage chance for a request to fail with an error. | No default |
+| ErrorsFile | Path to the file that contains error responses. | No default |
 
 ## Command line options
 

@@ -1,6 +1,6 @@
-You may find that when trying to use random errors and mocks, random errors are not thrown by proxy.
+You might find that when trying to use random errors and mocks, proxy isn't returning random errors.
 
-By default, the [m365proxyrc](./m365proxyrc) configuration is similar to:
+By default, the [m365proxyrc](../technical-reference/m365proxyrc.md) configuration is similar to:
 
 ```json
 {
@@ -24,7 +24,7 @@ By default, the [m365proxyrc](./m365proxyrc) configuration is similar to:
 }
 ```
 
-Proxy executes plugins in the order they're defined in the configuration. In this case, mocks are executed before random error so if you have a mock defined for a URL, it will never reach the random error.
+Proxy executes plugins in the order they're defined in the configuration. In this case, mocks are executed before random errors so if you have a mock defined for a URL, the request never reaches the random error plugin.
 
 If you want both random errors and mocks, change the order of plugins to:
 
@@ -50,4 +50,4 @@ If you want both random errors and mocks, change the order of plugins to:
 }
 ```
 
-This way random errors will be handled first, and any request that's not randomly failed, will be compared against mocks.
+This way random errors are handled first, and any request that proxy doesn't randomly fail, is compared against mocks.

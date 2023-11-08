@@ -1,4 +1,4 @@
-The dollar sign has special meaning in some shells and may need to be escaped.
+The dollar sign has special meaning in some shells and might need to be escaped.
 
 In PowerShell, use a backtick:
 

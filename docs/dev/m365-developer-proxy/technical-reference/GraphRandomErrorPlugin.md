@@ -1,4 +1,4 @@
-Provides the ability to fail requests made to Microsoft Graph with random errors.
+Fails requests made to Microsoft Graph with random errors.
 
 ## Plugin instance definition
 
@@ -25,10 +25,10 @@ Provides the ability to fail requests made to Microsoft Graph with random errors
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| AllowedErrors | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes) that developer proxy may produce. |  |
+| AllowedErrors | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |
 
 ## Command line options
 
 | Name | Description | Default |
 |----------|-------------|:-------:|
-| `--allowed-errors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes) that developer proxy may produce. |  |
+| `--allowed-errors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |

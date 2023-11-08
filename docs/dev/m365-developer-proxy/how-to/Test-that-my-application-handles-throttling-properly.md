@@ -10,6 +10,6 @@ Next, run your application, and verify that it doesn't break when it gets 429 re
 
 When testing your app, pay attention to the Microsoft 365 Developer Proxy output.
 
-If your application backs-off when throttled, but doesn't wait for the amount of time specified on the requests, you'll see a message similar to `Calling https://graph.microsoft.com/v1.0/endpoint again before waiting for the Retry-After period. Request will be throttled`.
+If your application backs-off when throttled, but doesn't wait for the amount of time specified on the requests, you see a message similar to `Calling https://graph.microsoft.com/v1.0/endpoint again before waiting for the Retry-After period. Request will be throttled`.
 
-This message indicates that your application is not handling throttling correctly and will keep being throttled.
+This message indicates that your application isn't handling throttling correctly and will stay throttled.

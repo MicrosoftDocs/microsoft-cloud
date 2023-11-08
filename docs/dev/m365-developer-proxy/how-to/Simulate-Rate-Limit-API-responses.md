@@ -4,11 +4,11 @@ The server sends these headers in response to a client’s request to indicate h
 
 The `RateLimit-Limit` response header field indicates the request-quota associated with the client in the current time-window.
 
-If the client exceeds that limit, it may not be served.
+If the client exceeds that limit, it might not be served.
 
 > ℹ️ By default the [RateLimitingPlugin](./RateLimitingPlugin) is disabled. To enable the plugin, open the [m365proxyrc](https://github.com/microsoft/m365-developer-proxy/wiki/m365proxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
-Enabling the plugin will load presets to simulate the Rate Limiting behaviours of Microsoft Graph and SharePoint Online APIs.
+Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Microsoft Graph and SharePoint Online APIs.
 
 ## Custom rate limit support
 
@@ -33,7 +33,7 @@ The following example shows how you can configure how you can configure [RateLim
 }
 ```
 
-The `customResponseFile` contains the response that is returned by the proxy when the rate limit has been reached.
+The `customResponseFile` contains the response that the proxy returns when your app reached the rate limit.
 
 ```json
 {

@@ -1,33 +1,33 @@
 By default, the proxy simulates error responses based on Microsoft Graph presets.
 
-Whilst you can use the built in chaos handler with any API, the responses will be from Microsoft Graph.
+Whilst you can use the built-in chaos handler with any API, it returns error responses that simulate the Microsoft Graph API.
 
-When using the proxy to test non Microsoft 365 APIs, you should provide your own error responses.
+When using the proxy to test non-Microsoft 365 APIs, you should provide your own error responses.
 
 The below steps show how to configure error responses for the Open AI API as an example.
 
 Open `m365proxyrc.json` in the install folder.
 
-Create a new object in the `plugins` array. This creates a new instance of the `GenericRandomErrorPlugin`, defines the specific URLs for the plugin to watch for and a reference to the plugin configuration.
+Create a new object in the `plugins` array referencing the `GenericRandomErrorPlugin`. Defines the specific URLs for the plugin to watch for and a reference to the plugin configuration.
 
 ```json
 {
-    "name": "GenericRandomErrorPlugin",
-    "enabled": true,
-    "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
-    "configSection": "openAIAPI",
-    "urlsToWatch": [
-        "https://api.openai.com/*"
-     ]
-   }
+  "name": "GenericRandomErrorPlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
+  "configSection": "openAIAPI",
+  "urlsToWatch": [
+    "https://api.openai.com/*"
+  ]
+}
 ```
 
-Create the plugin configuration object in the root. This provides the plugin with the failure rate and the location of the error responses.
+Create the plugin configuration object in the root to provide the plugin with the failure rate and the location of the error responses.
 
 ```json
 "openAIAPI": {
-    "rate": 90,
-    "errorsFile": "errors-openai.json"
+  "rate": 90,
+  "errorsFile": "errors-openai.json"
 }
 ```
 
@@ -83,9 +83,9 @@ Create the `errors-openai.json` file in the install folder. This file contains t
 }
 ```
 
-If your API URL has been added to the global `urlsToWatch` array, you should remove it to avoid plugin conflicts.
+If you added API URL to the global `urlsToWatch` array, you should remove it to avoid plugin conflicts.
 
-You can also return binary data in your error response. In the example below, the proxy will return an image in the body of the error.
+You can also return binary data in your error response. In the following example, the proxy returns an image in the body of the error.
 
 ```json
 {
@@ -98,5 +98,5 @@ You can also return binary data in your error response. In the example below, th
 },
 ```
 
-After making the changes to the `m365proxyrc.json` file, you will need to restart the proxy for the changes to take effect.
+After making the changes to the `m365proxyrc.json` file, you'll need to restart the proxy for the changes to take effect.
 

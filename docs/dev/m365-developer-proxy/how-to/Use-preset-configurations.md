@@ -1,6 +1,6 @@
-We provide a number of preset configurations that can be used to recreate common scenarios against known APIs.
+We provide many preset configurations that can be used to recreate common scenarios against known APIs.
 
-This make it easier to load a known configuration without having to configure a settings file.
+Presets make it easier to load a known configuration without having to configure a settings file.
 
 The configurations are stored in the presets folder in the proxy installation directory.
 

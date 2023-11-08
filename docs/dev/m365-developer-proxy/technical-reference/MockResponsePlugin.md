@@ -1,4 +1,4 @@
-Provides the ability to simulate behaviours of APIs that return `Rate-Limit` headers in responses.
+Simulates rate-limit API behaviors.
 
 ## Plugin instance definition
 
@@ -26,7 +26,7 @@ Provides the ability to simulate behaviours of APIs that return `Rate-Limit` hea
 | Property              | Description                                                        |     Default      |
 | --------------------- | ------------------------------------------------------------------ | :--------------: |
 | MocksFile             | Path to the file containing mock responses                         | `responses.json` |
-| BlockUnmockedRequests | Return `502 Bad Gateway` response for requests that are not mocked |     `false`      |
+| BlockUnmockedRequests | Return `502 Bad Gateway` response for requests that aren't mocked |     `false`      |
 
 ## Command line options
 
