@@ -18,7 +18,7 @@ In this exercise, you will:
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
-    AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
+    ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
     TEAM_ID=<TEAMS_TEAM_ID>
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
@@ -32,7 +32,7 @@ In this exercise, you will:
     >
     >   ```typescript
     >   Providers.globalProvider = new Msal2Provider({
-    >       clientId: AAD_CLIENT_ID, // retrieved from .env file
+    >       clientId: ENTRAID_CLIENT_ID, // retrieved from .env file
     >       scopes: ['User.Read', 'Presence.Read', 'Chat.ReadWrite', 'Calendars.Read', 
     >                'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read']
     >   });
