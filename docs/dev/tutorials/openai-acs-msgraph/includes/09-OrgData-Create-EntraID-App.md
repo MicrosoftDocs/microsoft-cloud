@@ -4,7 +4,7 @@ Enhance user productivity by integrating organizational data (emails, files, cha
 
 In this exercise, you will:
 
-- Create a Microsoft Entra ID  app registration so that Microsoft Graph can access organizational data and bring it into the app.
+- Create a Microsoft Entra ID app registration so that Microsoft Graph can access organizational data and bring it into the app.
 - Locate `team` and `channel` Ids from Microsoft Teams that are needed to send chat messages to a specific channel.
 - Update the project's *.env* file with values from your Microsoft Entra ID app registration.
 
@@ -16,12 +16,12 @@ In this exercise, you will:
 1. Select the **App registration** tab followed by **+ New registration**.
 1. Fill in the new app registration form details as shown below and select **Register**:
     - Name: *microsoft-graph-app*
-    - Supported account types: *Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant)*
+    - Supported account types: *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)*
     - Redirect URI: 
         - Select **Single-page application (SPA)** and enter `http://localhost:4200` in the **Redirect URI** field.
     - Select **Register** to create the app registration.
 
-    :::image type="content" source="../media/aad-app-registration.png" alt-text="Microsoft Entra ID app registration form" border="true":::
+    :::image type="content" source="../media/entraid-app-registration.png" alt-text="Microsoft Entra ID app registration form" border="true":::
 
 <!-- 
 1. After the app is registered, select **API permissions** in the Resource menu, locate the **Configured permissions** section, and select **+ Add a permission**.
@@ -32,14 +32,14 @@ In this exercise, you will:
 -->
 1. Select **Overview** in the Resource menu and copy the `Application (client) ID` value to your clipboard.
 
-    :::image type="content" source="../media/aad-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
+    :::image type="content" source="../media/entraid-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
 
 ### Update the Project's *.env* File
 
-1. Open the *.env* file in your editor and assign the `Application (client) ID` value to `AAD_CLIENT_ID`.
+1. Open the *.env* file in your editor and assign the `Application (client) ID` value to `ENTRAID_CLIENT_ID`.
 
     ```
-    AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
+    ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
     ```
 
 1. If you'd like to enable the ability to send a message from the app into a Teams Channel, sign in to [Microsoft Teams](https://teams.microsoft.com) using your Microsoft 365 dev tenant account.
