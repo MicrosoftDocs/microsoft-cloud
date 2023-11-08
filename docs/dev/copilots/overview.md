@@ -36,7 +36,6 @@ Users can effortlessly adopt Copilots to streamline their workflows, while devel
 | **Development Effort** | Low effort | Medium Effort | Large to XL effort (depends on your data) |
 | **Data Source** | In Microsoft systems such as your Microsoft tenant | In Microsoft systems plus 3rd party data sources | Spans multiple data stores, services and apps inside and outside your Microsoft tenant |
 | **Users of the Copilot** | Users in your Microsoft tenant | Users in your Microsoft tenant | Users in your Microsoft tenant or external customers |
-| **Security Factors** | Secure by Default | We need to do work //call security people | We need to do work //call security people |
 | **Customization (Temperature, Max_Tokens, Metaprompts)** | Low | Medium | High |
 | **Scenario** | Copilot for Microsoft 365: "Show me all the upcoming trips on my calendar" | Copilot in Microsoft Teams: "Book a flight to Seattle" through the Flight API | Custom Employee Travel Copilot using Azure OpenAI Service or Microsoft Copilot Studio |
 
