@@ -46,7 +46,7 @@ productDirectory:
         - text: Adopt, Extend and Build Microsoft Copilots
           url: /microsoft-cloud/dev/copilots/overview
 
-        - text: Copilots in Dynamics 365
+        - text: Copilot for Dynamics 365
           url: /microsoft-cloud/dev/copilots/copilot-for-dynamics365
 
         - text: Copilot for Microsoft 365
