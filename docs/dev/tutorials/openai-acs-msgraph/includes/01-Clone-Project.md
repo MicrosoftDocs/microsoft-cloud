@@ -33,7 +33,7 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
 1. Open the *.env* file and take a moment to look through the keys that are included:
 
     ```
-    AAD_CLIENT_ID=
+    ENTRAID_CLIENT_ID=
     TEAM_ID=
     CHANNEL_ID=
     OPENAI_API_KEY=

@@ -16,7 +16,7 @@ In this exercise, you will:
 1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
-    AAD_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
+    ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
     TEAM_ID=<TEAMS_TEAM_ID>
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
@@ -42,13 +42,13 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
 1. Open *client/package.json* and notice that the `@microsoft/mgt` package is included in the dependencies. This package contains MSAL (Microsoft Authentication Library) provider features as well as web components such as *mgt-login* and others that can be used to sign in users and retrieve and display organizational data.
 
-1. To use the *mgt-login* component to sign in users, the Microsoft Entra ID app's client Id (stored in the *.env* file as `AAD_CLIENT_ID`) needs to be referenced and used.
+1. To use the *mgt-login* component to sign in users, the Microsoft Entra ID app's client Id (stored in the *.env* file as `ENTRAID_CLIENT_ID`) needs to be referenced and used.
 
 1. Open *graph.service.ts* and locate the `init()` function. The full path to the file is *client/src/app/core/graph.service.ts*. You'll see the following code:
 
     ```typescript
     Providers.globalProvider = new Msal2Provider({
-        clientId: AAD_CLIENT_ID, // retrieved from .env file
+        clientId: ENTRAID_CLIENT_ID, // retrieved from .env file
         scopes: ['User.Read', 'Presence.Read', 'Chat.ReadWrite', 'Calendars.Read', 
                  'ChannelMessage.Read.All', 'ChannelMessage.Send', 'Files.Read.All', 'Mail.Read']
     });
@@ -64,7 +64,7 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
     The *mgt-login* component enables user sign in and access token retrieval for use with Microsoft Graph. Upon successful sign in, the `loginCompleted` event is triggered, subsequently calling the `loginCompleted()` function. Although *mgt-login* is used within an Angular component in this example, it is compatible with any web application.
 
-    Display of the *mgt-login* component depends on the `featureFlags.microsoft365Enabled` value being set to `true`. This custom flag checks for the presence of the `AAD_CLIENT_ID` environment variable to confirm that the application is properly configured and able to authenticate against Microsoft Entra ID. The flag is added to accommodate cases where users opt to complete only the AI or Communication exercises within the tutorial, rather than following the entire sequence.
+    Display of the *mgt-login* component depends on the `featureFlags.microsoft365Enabled` value being set to `true`. This custom flag checks for the presence of the `ENTRAID_CLIENT_ID` environment variable to confirm that the application is properly configured and able to authenticate against Microsoft Entra ID. The flag is added to accommodate cases where users opt to complete only the AI or Communication exercises within the tutorial, rather than following the entire sequence.
     
 1. Open *header.component.ts* and locate the `loginCompleted` function. This function is called when the `loginCompleted` event is emitted and used to retrieve the signed in user's profile using `Providers.globalProvider`. 
 

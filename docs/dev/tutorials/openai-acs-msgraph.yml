@@ -72,7 +72,7 @@ items:
       Organizational Data: Creating a Microsoft Entra ID App Registration
     durationInMinutes: 8
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Create-AAD-App.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/09-OrgData-Create-EntraID-App.md)]
 
   - title: |
       Organizational Data: Signing In a User and Getting an Access Token
