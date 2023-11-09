@@ -14,9 +14,9 @@
     href: overview/create-run-secure-applications.md
   - name: Summary  
     href: overview/summary.md  
-- name: Microsoft Copilots
+- name: Copilot
   items:
-  - name: Adopt, Extend and Build Microsoft Copilots  
+  - name: Adopt, Extend, and Build a Copilot  
     href: copilots/overview
   - name: Copilots in Dynamics 365  
     href: copilots/copilot-for-dynamics365

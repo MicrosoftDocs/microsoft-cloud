@@ -43,11 +43,11 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/copilots-logo-blues.svg
       links:
-        - text: Adopt, Extend and Build Microsoft Copilots
-          url: /microsoft-cloud/dev/copilots/overview
+        - text: Adopt, Extend, and Build a Copilot
+          url: /microsoft-cloud/dev/copilot/overview
 
         - text: Copilot for Dynamics 365
-          url: /microsoft-cloud/dev/copilots/copilot-for-dynamics365
+          url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
 
         - text: Copilot for Microsoft 365
           url: https://adoption.microsoft.com/en-us/copilot/
