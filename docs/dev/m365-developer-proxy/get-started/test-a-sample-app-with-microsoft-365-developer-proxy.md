@@ -68,7 +68,7 @@ To start the proxy, enter `m365proxy` and press <kbd>Enter</kbd>.
 
 When the proxy starts, the terminal displays the following output.
 
-```cmd
+```sh
 Configuring proxy for cloud global - graph.microsoft.com
 Listening on 'ExplicitProxyEndPoint' endpoint at Ip 0.0.0.0 and port: 8000
 Set endpoint at Ip 0.0.0.0 and port: 8000 as System HTTP Proxy
@@ -105,7 +105,7 @@ In addition to the request messages, the proxy is able to detect whether or not 
 
 Example output:
 
-```cmd
+```sh
 saw a graph request: GET /v1.0/users
         TIP: To handle API errors more easily, use the Graph SDK. More info at https://aka.ms/move-to-graph-js-sdk
         Failed /v1.0/users with GatewayTimeout

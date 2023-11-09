@@ -28,14 +28,14 @@ In the below example, the `pluginPath` is relative to the configuration file. Th
 
 ```json
 {
-    "name": "GraphSelectGuidancePlugin",
-    "enabled": true,
-    "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
-    "urlsToWatch": [
-        "https://graph.microsoft.com/v1.0/*",
-        ...
-    ]
-},
+  "name": "GraphSelectGuidancePlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
+  "urlsToWatch": [
+    "https://graph.microsoft.com/v1.0/*",
+    ...
+  ]
+}
 ```
 
 Let's say you start the proxy from a different directory, such as from the location of a project you're working in.
@@ -48,13 +48,13 @@ Use the `~appFolder` token in the file paths to ensure that the path is prepende
 
 ```json
 {
-    "name": "GraphSelectGuidancePlugin",
-    "enabled": true,
-    "pluginPath": "~appFolder\\plugins\\m365-developer-proxy-plugins.dll",
-    "urlsToWatch": [
-        "https://graph.microsoft.com/v1.0/*",
-        ...
-    ]
+  "name": "GraphSelectGuidancePlugin",
+  "enabled": true,
+  "pluginPath": "~appFolder\\plugins\\m365-developer-proxy-plugins.dll",
+  "urlsToWatch": [
+    "https://graph.microsoft.com/v1.0/*",
+    ...
+  ]
 },
 ```
 

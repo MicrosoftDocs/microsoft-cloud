@@ -22,7 +22,7 @@ ms.custom:
 
 # What is throttling
 
-When your application connected to Microsoft Graph is used at scale, it can happen that it's throttled. 
+When your application connected to Microsoft Graph is used at scale, it can happen that it's throttled.
 
 Throttling is a mechanism used in Microsoft 365 and other cloud services, to ensure service continuity.
 

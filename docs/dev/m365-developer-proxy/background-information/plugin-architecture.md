@@ -26,7 +26,7 @@ In v0.4, we refactored the Microsoft 365 Developer Proxy to use a Plugin based a
 
 A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.
 
-The `[m365proxyrc.json](../technical-reference/m365proxyrc.md)` file contains the plugin configuration.
+The [`m365proxyrc.json`](../technical-reference/m365proxyrc.md) file contains the plugin configuration.
 
 The proxy has standard plugins that can be used with any API, and plugins specifically for use with the Microsoft Graph API.
 
@@ -42,10 +42,10 @@ Example configuration of the `MockResponsePlugin`:
 
 ```json
 {
-    "name": "MockResponsePlugin",
-    "enabled": true,
-    "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
-    "configSection": "mocksPlugin"
+  "name": "MockResponsePlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
+  "configSection": "mocksPlugin"
 }
 ```
 
@@ -53,7 +53,7 @@ The `configSection` takes a reference to a configuration object. The `mocksPlugi
 
 ```json
 "mocksPlugin": {
-    "mocksFile": "responses.json"
+  "mocksFile": "responses.json"
 }
 ```
 
@@ -69,15 +69,15 @@ Example configuration of the `GraphSelectGuidancePlugin`:
 
 ```json
 {
-    "name": "GraphBetaSupportGuidancePlugin",
-    "enabled": true,
-    "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
-    "urlsToWatch": [
-        "https://graph.microsoft.com/beta/*",
-        "https://graph.microsoft.us/beta/*",
-        "https://dod-graph.microsoft.us/beta/*",
-        "https://microsoftgraph.chinacloudapi.cn/beta/*"
-    ]
+  "name": "GraphBetaSupportGuidancePlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\m365-developer-proxy-plugins.dll",
+  "urlsToWatch": [
+    "https://graph.microsoft.com/beta/*",
+    "https://graph.microsoft.us/beta/*",
+    "https://dod-graph.microsoft.us/beta/*",
+    "https://microsoftgraph.chinacloudapi.cn/beta/*"
+  ]
 }
 ```
 

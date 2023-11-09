@@ -26,6 +26,6 @@ By default, Microsoft 365 Developer Proxy randomly responds with [supported erro
 
 You can increase or decrease the likelihood to a higher value or lower value by changing the `failure-rate` setting value.
 
-```cmd
+```sh
 m365proxy --failure-rate 80
 ```

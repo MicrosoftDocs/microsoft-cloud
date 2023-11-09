@@ -32,6 +32,6 @@ Using Microsoft 365 Developer Proxy, you can mimic erroneous responses from Micr
 
 To test your application, start the Microsoft 365 Developer Proxy:
 
-```cmd
+```sh
 m365proxy --no-mocks
 ```

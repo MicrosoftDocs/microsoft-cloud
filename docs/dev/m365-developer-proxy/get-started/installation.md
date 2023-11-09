@@ -55,5 +55,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
   1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/m365-developer-proxy"`.
   1. Reload your profile > `source ~/.zshrc`.
 
+---
+
 > [!div class="nextstepaction"]
 > [Now you’re ready to go on to the next step](./using-the-proxy-for-the-first-time.md)

@@ -55,7 +55,7 @@ Press Ctrl + C to stop the Microsoft 365 Developer Proxy
 ```
 
 > [!NOTE]
-> Steps 2 & 3 will not need to be repeated after the first run.
+> You won't have to repeat steps 2 & 3 after the first run.
 
 ### [macOS](#tab/macos)
 
@@ -75,7 +75,9 @@ Press CTRL+C to stop the Microsoft 365 Developer Proxy
 ```
 
 > [!NOTE]
-> Steps 1-3 will not need to be repeated after the first run.
+> You won't need to repeat steps 1-3 after the first run.
+
+---
 
 The proxy is now running with the following defaults:
 
@@ -115,13 +117,13 @@ Examples:
 Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/me" -Proxy "http://localhost:8000"
 ```
 
-</details>
-
 ### [curl](#tab/curl)
 
 ```sh
 curl -ikx http://localhost:8000 https://graph.microsoft.com/v1.0/me
 ```
+
+---
 
 The proxy shows the below output:
 
@@ -194,8 +196,7 @@ m365proxy --help
 
 ## On to the next step
 
-Now you’re ready to go on to the next step.
+> [!div class="nextstepaction"]
+> [Test sample JavaScript client-side web application](./using-the-proxy-for-the-first-time.md)
 
-Take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.
-
-Or, try our [sample JavaScript client-side web application](./test-a-sample-app-with-microsoft-365-developer-proxy.md) with the proxy.
+Or, take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.

@@ -30,12 +30,12 @@ However, you might also want to only monitor requests being made from specific p
 
 To monitor processes by their given process IDs, use the `--watch-pids` option:
 
-```cmd
+```sh
 m365proxy –-watch-pids 870 135100
 ```
 
 To monitor processes by their given process names, use the `--watch-process-names` option:
 
-```cmd
+```sh
 m365proxy --watch-process-names msedge pwsh
 ```

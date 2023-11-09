@@ -26,7 +26,7 @@ Typically, testing throttling is hard because it occurs rarely, when Microsoft 3
 
 To test your application, start the Microsoft 365 Developer Proxy, configuring it to respond specifically with throttling responses, intercepting a high percentage of requests:
 
-```cmd
+```sh
 m365proxy --allowed-errors 429 --failure-rate 90 --no-mocks
 ```
 
