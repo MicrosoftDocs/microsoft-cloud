@@ -162,11 +162,13 @@ Adding plugins, connectors, or message extensions to Copilots helps users make t
 
 Plugins allow users to interact directly with APIs and services enhancing Copilot's capabilities and broadening its range of functionality by pulling in external data. For example, plugins can enable a Copilot to retrieve real-time data, such as the latest news coverage on a product launch, or knowledge-based information such as a team's project items.
 
+:::image type="content" source="media/api-data-is-processed-by-copilot.png" alt-text="A diagram showing Microsoft Copilot interacting with a plugin." border="false" :::
+
 One example of plugins is Power Platform Connectors which offer a set of prebuilt actions and triggers for developers to build their own apps and workflows. They can be used to extend Copilot in Microsoft 365 and Copilots in Power Platform experiences with data from external apps.
 
 :::image type="content" source="media/power-platform-connector.png" alt-text="A diagram showing the key tasks that a Power Platform connector performs." border="false" :::
 
-Developers can also create plugins that use OpenAI schemas to add custom functionality to Copilot experiences by connecting their own application data to Microsoft Copilot. Plugins enable a Copilot experience to interact with your own APIs, enhancing the experience with the ability to perform a wide range of actions.
+Developers can also create plugins that use schemas to add custom functionality to Copilot experiences by connecting their own application data to Microsoft Copilot. Plugins enable a Copilot experience to interact with your own APIs, enhancing the experience with the ability to perform a wide range of actions.
 
 Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
@@ -187,7 +189,7 @@ Learn more:
 - [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
 - [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
 
-#### Extending with Teams Message Extensions
+#### Extending with Message Extensions
 
 Message extensions allow users to interact with enterprise services through Microsoft Teams chats. They can search or initiate actions in an external service and post that information, in the form of adaptive cards, into a Teams message. By using message extensions, you can extend the built-in functionality of Copilot for Microsoft 365.
 
