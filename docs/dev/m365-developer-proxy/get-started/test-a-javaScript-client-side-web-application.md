@@ -25,7 +25,7 @@ ms.custom:
 This step-by-step introduction is intended for beginners.
 
 > [!CAUTION]
-> It assumes that you have started the proxy on your machine before. If not, do that [now](microsoft-cloud/dev/m365-developer-proxy/get-started/using-the-proxy-for-the-first-time).
+> It assumes that you have started the proxy on your machine before. If not, do that [now](./using-the-proxy-for-the-first-time.md).
 
 You learn how to use the proxy against a sample JavaScript client-side web application that calls Microsoft Graph.
 

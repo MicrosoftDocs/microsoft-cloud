@@ -22,7 +22,7 @@ ms.custom:
 
 # Mock nth request
 
-In v0.12, we introduced support for mocking n-th request and extended the [response](./Response-object) object with a new property called `nth`.
+In v0.12, we introduced support for mocking n-th request and extended the [response](../technical-reference/Response-object.md) object with a new property called `nth`.
 
 Using the following mock file as an example, we can see that it contains two responses to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with the specified URL for the second time. For all other requests, the proxy returns the second response.
 
