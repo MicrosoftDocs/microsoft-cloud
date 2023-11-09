@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Detect minimal Microsoft Graph API permissions
+
 Microsoft Graph exposes hundreds of endpoints that allow you to tap into data and insights in Microsoft 365. To use these API endpoints, you need to request a correct set of permissions. 
 
 If you work on a large solution that uses many endpoints, it can be difficult to build the exact list of minimal permissions for your application.

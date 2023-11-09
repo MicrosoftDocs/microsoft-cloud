@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphBetaSupportGuidancePlugin
+
 Provides guidance that recommends not using beta APIs in production when a request is made to Microsoft Graph beta endpoint.
 
 ## Plugin instance definition

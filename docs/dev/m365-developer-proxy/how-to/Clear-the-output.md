@@ -20,4 +20,6 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Clear the output
+
 To clear the proxy output in your terminal, press <kbd>c</kbd> on your keyboard.

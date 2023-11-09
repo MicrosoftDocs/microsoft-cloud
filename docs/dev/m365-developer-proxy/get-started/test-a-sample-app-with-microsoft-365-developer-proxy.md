@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Test a sample app with Microsoft 365 Developer Proxy
+
 This step-by-step introduction is intended for beginners.
 
 In this tutorial, you learn how to use the Microsoft 365 Developer Proxy for the first time against a sample application.

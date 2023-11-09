@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Keyboard shortcuts
+
 The following table describes the keyboard shortcuts available when the proxy is running.
 
 | Keyboard  | Description   |

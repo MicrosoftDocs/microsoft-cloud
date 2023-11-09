@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Why is the proxy saying that an option is unknown
+
 The proxy uses a plugin architecture, as such, proxy features can be added, removed, enabled or disabled through changing the configuration in the [m365proxyrc.json](../technical-reference/m365proxyrc.md) file. 
 
 Some plugins provide command line options. When the plugin is disabled, the proxy isn't able to interpret the command line options that the plugin provides.

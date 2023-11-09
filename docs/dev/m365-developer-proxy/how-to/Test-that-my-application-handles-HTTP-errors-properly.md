@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Test that my application handles HTTP errors properly
+
 When applications use Microsoft Graph and other cloud services, it can happen, that these APIs are temporarily unavailable.
 
 It's important, that applications consider such scenario and handle exceptions properly.

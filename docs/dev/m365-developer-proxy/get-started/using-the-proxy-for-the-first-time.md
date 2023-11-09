@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Using the proxy for the first time
+
 This step-by-step introduction is intended for beginners.
 
 > [!CAUTION]

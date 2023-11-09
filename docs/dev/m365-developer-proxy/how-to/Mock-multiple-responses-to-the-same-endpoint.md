@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Mock multiple responses to the same endpoint
+
 When defining mock responses, you can define a specific URL to mock, but also a URL pattern by replacing part of the URL with an `*` (asterisk), for example:
 
 ```json

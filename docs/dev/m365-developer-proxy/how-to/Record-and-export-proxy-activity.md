@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Record and export proxy activity
+
 Use record mode to record proxy activity when testing your app.
 
 There are two ways to start recording:

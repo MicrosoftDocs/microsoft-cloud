@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Plugin architecture
+
 In v0.4, we refactored the Microsoft 365 Developer Proxy to use a Plugin based architecture.
 
 A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.

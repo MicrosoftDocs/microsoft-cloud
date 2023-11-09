@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Console output text labels
+
 The proxy uses the following text labels in the console output.
 
 | Label | Description |

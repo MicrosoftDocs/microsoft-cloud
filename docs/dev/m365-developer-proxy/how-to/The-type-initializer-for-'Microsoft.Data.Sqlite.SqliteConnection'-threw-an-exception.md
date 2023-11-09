@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
+
 After starting the proxy, you see the following error:
 
 ```text

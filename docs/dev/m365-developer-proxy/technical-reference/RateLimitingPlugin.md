@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# RateLimitingPlugin
+
 Simulates rate-limit behaviors.
 
 ## Plugin instance definition

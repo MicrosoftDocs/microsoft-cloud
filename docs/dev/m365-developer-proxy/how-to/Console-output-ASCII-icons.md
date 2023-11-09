@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Console output ASCII icons
+
 You can configure the proxy to use ASCII icons instead of text labels in the console output.
 
 The proxy uses the following icons:

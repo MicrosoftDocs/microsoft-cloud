@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Installation
+
 If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/m365-developer-proxy/issues/new) and we're glad to help you out.
 
 ## Download latest release

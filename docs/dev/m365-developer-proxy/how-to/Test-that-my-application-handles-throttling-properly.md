@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Test that my application handles throttling properly
+
 Typically, testing throttling is hard because it occurs rarely, when Microsoft 365 servers are under heavy load. Using the Microsoft 365 Developer Proxy, you can mimic throttling responses, and check if your application handles it correctly.
 
 To test your application, start the Microsoft 365 Developer Proxy, configuring it to respond specifically with throttling responses, intercepting a high percentage of requests:

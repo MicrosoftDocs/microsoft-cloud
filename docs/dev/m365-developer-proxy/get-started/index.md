@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Index
+
 The tutorial introduces you to the Microsoft 365 Developer Proxy and show you how to use its features.
 
 It assumes you're comfortable with the command line and understand the basics of HTTP.

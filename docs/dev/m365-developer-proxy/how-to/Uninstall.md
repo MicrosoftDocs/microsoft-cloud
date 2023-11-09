@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Uninstall
+
 If you want to remove Microsoft 365 Developer Proxy from your machine, follow the following steps. 
 
 1. Remove the folder where you extracted the files from the ZIP on your disk.

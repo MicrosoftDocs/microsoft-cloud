@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Mock responses
+
 To define mock responses, create a file named `responses.json` in the current working directory.
 
 This file allows you to define a specific set of responses for each project that you work with.

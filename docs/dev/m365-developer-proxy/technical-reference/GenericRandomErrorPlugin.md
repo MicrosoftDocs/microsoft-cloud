@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GenericRandomErrorPlugin
+
 Fails requests with a random selected error from file containing mocked errors.
 
 ## Plugin instance definition

@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Test a JavaScript client-side web application
+
 This step-by-step introduction is intended for beginners.
 
 > [!CAUTION]

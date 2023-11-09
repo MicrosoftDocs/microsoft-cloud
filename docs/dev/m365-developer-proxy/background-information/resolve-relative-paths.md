@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Resolve relative paths
+
 All file paths used in configuration files (`m365proxyrc.json`) are relative to the location of the configuration file.
 
 In the below example, the `pluginPath` is relative to the configuration file. The default `m365proxyrc.json` configuration file is located in the same location where the `plugins` folder exists.

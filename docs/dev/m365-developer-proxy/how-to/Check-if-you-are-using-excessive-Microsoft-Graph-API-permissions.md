@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Check if you are using excessive Microsoft Graph API permissions
+
 Microsoft Graph exposes hundreds of endpoints that allow you to tap into data and insights in Microsoft 365. To use these API endpoints, you need to request a correct set of permissions.
 
 A common approach to security is to apply the principle of least privilege (PoLP). This principle is applied to users, processes and programs.

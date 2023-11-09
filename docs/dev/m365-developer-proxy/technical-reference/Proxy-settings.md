@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Proxy settings
+
 Microsoft 365 Developer Proxy comes with several settings that you can use to control how the proxy should run.
 
 You can configure these settings by setting them in the [m365proxyrc.json](./m365proxyrc.md) file, located in the proxy installation folder, or by setting them at run time.

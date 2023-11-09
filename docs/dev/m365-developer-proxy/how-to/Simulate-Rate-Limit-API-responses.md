@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Simulate Rate-Limit API responses
+
 Rate-Limit headers are used in HTTP responses to limit the number of requests that a client can make within a given time period.
 
 The server sends these headers in response to a client’s request to indicate how many requests are allowed and how many requests remain before the limit is reached.

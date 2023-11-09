@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphMockResponsePlugin
+
 Mocks responses sent in batch requests to Microsoft Graph.
 
 ## Plugin instance definition

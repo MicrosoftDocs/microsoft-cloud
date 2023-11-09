@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# ExecutionSummaryPlugin
+
 Records activity of requests that pass through proxy and generate a summary report from that activity.
 
 ## Plugin instance definition

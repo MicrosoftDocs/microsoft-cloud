@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphClientRequestIdGuidancePlugin
+
 Provides guidance when the `client-request-id` request header isn't used in requests to Microsoft Graph.
 
 ## Plugin instance definition

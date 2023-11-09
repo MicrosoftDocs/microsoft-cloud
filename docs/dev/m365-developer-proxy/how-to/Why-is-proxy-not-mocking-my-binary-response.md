@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Why is proxy not mocking my binary response
+
 The dollar sign has special meaning in some shells and might need to be escaped.
 
 In PowerShell, use a backtick:

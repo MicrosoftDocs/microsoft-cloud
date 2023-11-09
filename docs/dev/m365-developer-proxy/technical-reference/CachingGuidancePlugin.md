@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# CachingGuidancePlugin
+
 Provides caching guidance when the same API calls are made repeatedly within a given timeframe.
 
 ## Plugin instance definition

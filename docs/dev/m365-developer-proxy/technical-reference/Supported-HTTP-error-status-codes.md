@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Supported HTTP error status codes
+
 The following HTTP status codes can be used to simulate errors using the proxy.
 
 > [!TIP]

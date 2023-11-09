@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Monitor requests from specific processes
+
 By default, the developer proxy is registered as a system wide proxy and all requests made by your machine are passed through the proxy. 
 
 By default, the proxy monitors the requests that are made from your machine to the URLs configured in [m365proxyrc.json](./m365proxyrc) file.

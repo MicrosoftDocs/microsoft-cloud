@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphSdkGuidancePlugin
+
 Provides guidance that recommends using Microsoft Graph SDKs to send requests to Microsoft Graph.
 
 ## Plugin instance definition

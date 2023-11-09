@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Plugin Reference Template
+
 Provides the ability to ...
 
 ## Plugin instance definition

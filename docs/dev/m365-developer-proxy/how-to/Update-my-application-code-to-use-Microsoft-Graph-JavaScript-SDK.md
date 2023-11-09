@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Update my application code to use Microsoft Graph JavaScript SDK
+
 The Microsoft Graph JavaScript SDK comes with features that simplifies your code and let you focus on building your app. 
 
 Using the SDK makes it easier for you to:

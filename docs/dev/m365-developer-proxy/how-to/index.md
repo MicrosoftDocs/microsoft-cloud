@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Index
+
 - [Get help and support](./Get-help-and-support.md)
 
 ### Monitor requests

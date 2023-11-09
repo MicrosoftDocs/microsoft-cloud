@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Why are random errors not thrown when using mocks
+
 You might find that when trying to use random errors and mocks, proxy isn't returning random errors.
 
 By default, the [m365proxyrc](../technical-reference/m365proxyrc.md) configuration is similar to:

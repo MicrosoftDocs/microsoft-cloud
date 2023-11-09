@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Simulate errors from non-Microsoft 365 APIs
+
 By default, the proxy simulates error responses based on Microsoft Graph presets.
 
 Whilst you can use the built-in chaos handler with any API, it returns error responses that simulate the Microsoft Graph API.

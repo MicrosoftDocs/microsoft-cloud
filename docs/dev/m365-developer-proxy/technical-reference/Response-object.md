@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Response object
+
 Each response has the following properties:
 
 | Property          | Description                                                 | Required | Default value | Sample value                          |

@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphRandomErrorPlugin
+
 Fails requests made to Microsoft Graph with random errors.
 
 ## Plugin instance definition

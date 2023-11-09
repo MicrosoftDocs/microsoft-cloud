@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# ODataPagingGuidancePlugin
+
 Provides guidance to help developers correctly handle retrieving multiple pages of data from Microsoft Graph.
 
 ## Plugin instance definition

@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# m365proxyrc
+
 Default configuration.
 
 ```json

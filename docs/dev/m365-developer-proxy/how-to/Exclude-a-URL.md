@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Exclude a URL
+
 To exclude a URL from being intercepted, prepend it with an `!` (exclamation mark): 
 
 ```json

@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Get help and support
+
 The fastest and easiest way of getting in touch with us is via the GitHub Issues list. 
 
 Create a [new issue](https://github.com/microsoft/m365-developer-proxy/issues/new) in the repo and provide as much information as you can for us to be able to respond timely to your issue.

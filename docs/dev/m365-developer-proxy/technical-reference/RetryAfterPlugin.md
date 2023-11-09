@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# RetryAfterPlugin
+
 Simulates the `Retry-After` header sent by an API after throttling a request.
 
 ## Plugin instance definition

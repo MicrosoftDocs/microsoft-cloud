@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Mock responses that return binary data
+
 For some requests, you might want to respond with binary data like documents or images. 
 
 In Microsoft 365 Developer Proxy, you can define a binary response by setting the `responseBody` to a string value that starts with `@` followed by file path relative to the current working directory, for example:

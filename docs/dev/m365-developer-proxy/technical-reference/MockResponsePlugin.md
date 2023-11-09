@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# MockResponsePlugin
+
 Simulates rate-limit API behaviors.
 
 ## Plugin instance definition

@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# LatencyPlugin
+
 Introduces latency into requests.
 
 ## Plugin instance definition

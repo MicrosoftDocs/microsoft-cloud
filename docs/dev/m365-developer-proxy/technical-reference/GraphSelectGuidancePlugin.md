@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# GraphSelectGuidancePlugin
+
 Provides guidance that recommends using the `$select` OData system query option to retrieve a subset of properties and make more efficient requests to Microsoft Graph.
 
 ## Plugin instance definition

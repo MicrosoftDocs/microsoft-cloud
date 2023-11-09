@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Does Microsoft 365 Developer Proxy upload any data to microsoft
+
 No, it doesn't.
 
 While the proxy intercepts all network traffic on your machine, it doesn't upload any data to Microsoft.

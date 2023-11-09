@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Why is proxy not intercepting requests from my .NET 4.8 app
+
 To use `m365proxy` with .NET 4.8, you need to configure it as proxy with the `WinHTTP API`.
 
 Use the `netsh` command to configure the proxy. (run as admin):

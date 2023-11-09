@@ -20,6 +20,8 @@ ms.custom:
   - team=cloud_advocates
 ---
 
+# Index
+
 - [m365proxyrc](./m365proxyrc)
 - [Proxy settings](./Proxy-settings)
 - [Console output text labels](./Console-output-text-labels)
