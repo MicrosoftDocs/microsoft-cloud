@@ -22,7 +22,7 @@ ms.custom:
 
 # Overview
 
-Simulate real world behaviours of Microsoft Graph and other APIs.
+Simulate real world behaviors of Microsoft Graph and other APIs.
 
 Microsoft 365 Developer Proxy is a command line tool that aims to provide a better way to test applications.
 
@@ -34,10 +34,7 @@ Use the proxy to:
 
 Identify and fix issues in your code early, before they reach production.
 
-[Get started](/microsoft-cloud/dev/m365-developer-proxy/get-started/index.md). **Tutorials**. A hands-on introduction to Microsoft 365 Developer Proxy.
-
-[How-to](/microsoft-cloud/dev/m365-developer-proxy/how-to/index.md). **Step-by-step guides**. Covers key tasks and operations, and solutions to common problems.
-
-[Reference](/microsoft-cloud/dev/m365-developer-proxy/technical-reference/index.md). **Technical reference**. Covers tools, components, commands and resources.
-
-[Background](/microsoft-cloud/dev/m365-developer-proxy/background-information/index.md). **Explanation**. Clarification and discussion of key topics.
+- [Get started](./get-started/index.md). **Tutorials**. A hands-on introduction to Microsoft 365 Developer Proxy.
+- [How-to](./how-to/index.md). **Step-by-step guides**. Covers key tasks and operations, and solutions to common problems.
+- [Reference](./technical-reference/index.md). **Technical reference**. Covers tools, components, commands and resources.
+- [Background](./background-information/index.md). **Explanation**. Background information about proxy's functionality.
