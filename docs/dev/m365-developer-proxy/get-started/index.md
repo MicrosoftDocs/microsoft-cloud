@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Get started with Microsoft 365 Developer Proxy
 description: Get started with Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder
@@ -20,7 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Index
+# Get started with Microsoft 365 Developer Proxy
 
 The tutorial introduces you to the Microsoft 365 Developer Proxy and show you how to use its features.
 

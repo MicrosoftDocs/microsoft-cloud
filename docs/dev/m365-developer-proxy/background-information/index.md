@@ -1,6 +1,6 @@
 ---
-title: Index
-description: Get started with Microsoft 365 Developer Proxy
+title: Background information
+description: Background information about the Microsoft 365 Developer Proxy and its functionality
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder
@@ -20,7 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Index
+# Background information
 
 - [What is throttling](./what-is-throttling.md)
 - [Does Microsoft 365 Developer Proxy upload any data to Microsoft](./does-microsoft-365-developer-proxy-upload-any-data-to-microsoft.md)

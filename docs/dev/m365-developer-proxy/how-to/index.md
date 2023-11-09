@@ -1,5 +1,5 @@
 ---
-title: Index
+title: How-to guides
 description: How-to guides for Microsoft 365 Developer Proxy
 author: garrytrinder
 ms.author: garrytrinder
@@ -20,64 +20,64 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Index
+# How-to guides for Microsoft 365 Developer Proxy
 
 - [Get help and support](./Get-help-and-support.md)
 
-### Monitor requests
+## Monitor requests
 
-- [Monitor requests from specific processes](./Monitor-requests-from-specific-processes)
-- [Exclude a URL](./Exclude-a-URL)
+- [Monitor requests from specific processes](./Monitor-requests-from-specific-processes.md)
+- [Exclude a URL](./Exclude-a-URL.md)
 
-### Mock responses
+## Mock responses
 
-- [Mock responses](./Mock-responses)
-- [Mock n-th request](./Mock-nth-request)
-- [Mock responses that return binary data](./Mock-responses-that-return-binary-data)
-- [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint)
-- [Change mocks file](./Change-mocks-file)
+- [Mock responses](./Mock-responses.md)
+- [Mock n-th request](./Mock-nth-request.md)
+- [Mock responses that return binary data](./Mock-responses-that-return-binary-data.md)
+- [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint.md)
+- [Change mocks file](./Change-mocks-file.md)
 
-### Simulate errors
+## Simulate errors
 
-- [Test my app with random errors](./Test-my-app-with-random-errors)
-- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-HTTP-errors-properly)
-- [Change request failure rate](./Change-request-failure-rate)
-- [Simulate errors from non Microsoft 365 APIs](./Simulate-errors-from-non-Microsoft-365-APIs)
+- [Test my app with random errors](./Test-my-app-with-random-errors.md)
+- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-HTTP-errors-properly.md)
+- [Change request failure rate](./Change-request-failure-rate.md)
+- [Simulate errors from non Microsoft 365 APIs](./Simulate-errors-from-non-Microsoft-365-APIs.md)
 
-### Simulate behaviors
+## Simulate behaviors
 
-- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-throttling-properly)
-- [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-errors)
-- [Simulate slow API responses](./Simulate-slow-API-responses)
+- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-throttling-properly.md)
+- [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md)
+- [Simulate slow API responses](./Simulate-slow-API-responses.md)
 
-### Presets
+## Presets
 
-- [Use preset configurations](./Use-preset-configurations)
+- [Use preset configurations](./Use-preset-configurations.md)
 
-### Record
+## Record
 
-- [Record and export proxy activity](./Record-and-export-proxy-activity)
-- [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions)
-- [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions)
+- [Record and export proxy activity](./Record-and-export-proxy-activity.md)
+- [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions.md)
+- [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
 
-### Improve my app
+## Improve my app
 
-- [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK)
+- [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
-### Change settings
+## Change settings
 
-- [Change console output to use icons](./Change-console-output-to-use-icons)
-- [Change logging level](./Change-logging-level)
-- [Clear the output](./Clear-the-output)
-- [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database)
+- [Change console output to use icons](./Change-console-output-to-use-icons.md)
+- [Change logging level](./Change-logging-level.md)
+- [Clear the output](./Clear-the-output.md)
+- [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database.md)
 
-### Common problems
+## Common problems
 
-- [Why is my internet connection not working after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy)
-- [Why do I keep getting 429 responses](./Why-do-I-keep-getting-429-responses)
-- [Why do all requests fail with gateway timeout](./Why-do-all-requests-fail-with-gateway-timeout)
-- [Why is proxy not mocking my binary response](./Why-is-proxy-not-mocking-my-binary-response)
-- [Why is proxy not intercepting requests from my .NET 4.8 app](./Why-is-proxy-not-intercepting-requests-from-my-.net-4.8-app)
-- [Why is the proxy saying that an option is unknown](./Why-is-the-proxy-saying-that-an-option-is-unknown)
-- [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception)
-- [Uninstall](./Uninstall)
+- [Why is my internet connection not working after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)
+- [Why do I keep getting 429 responses](./Why-do-I-keep-getting-429-responses.md)
+- [Why do all requests fail with gateway timeout](./Why-do-all-requests-fail-with-gateway-timeout.md)
+- [Why is proxy not mocking my binary response](./Why-is-proxy-not-mocking-my-binary-response.md)
+- [Why is proxy not intercepting requests from my .NET 4.8 app](./Why-is-proxy-not-intercepting-requests-from-my-.net-4.8-app.md)
+- [Why is the proxy saying that an option is unknown](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
+- [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md)
+- [Uninstall](./Uninstall.md)
