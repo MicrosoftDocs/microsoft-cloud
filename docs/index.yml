@@ -39,9 +39,9 @@ productDirectory:
   items:
 
     # Card
-    - title: Microsoft Copilots
+    - title: Copilot
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/copilots-logo-blues.svg
+      imageSrc: ./media/copilot-logo-blues.svg
       links:
         - text: Adopt, Extend, and Build a Copilot
           url: /microsoft-cloud/dev/copilot/overview
