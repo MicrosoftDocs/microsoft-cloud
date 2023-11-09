@@ -56,4 +56,4 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
   1. Reload your profile > `source ~/.zshrc`.
 
 > [!div class="nextstepaction"]
-> [Now you’re ready to go on to the next step](microsoft-cloud/dev/m365-developer-proxy/get-started/using-the-proxy-for-the-first-time)
+> [Now you’re ready to go on to the next step](./using-the-proxy-for-the-first-time.md)

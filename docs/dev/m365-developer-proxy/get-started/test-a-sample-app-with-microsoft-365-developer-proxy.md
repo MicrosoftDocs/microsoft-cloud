@@ -27,7 +27,7 @@ This step-by-step introduction is intended for beginners.
 In this tutorial, you learn how to use the Microsoft 365 Developer Proxy for the first time against a sample application.
 
 > [!IMPORTANT]
-> Have you installed and configured the proxy on your local machine? If not, [do that now](./Installation).
+> Have you installed and configured the proxy on your local machine? If not, [do that now](./installation.md).
 
 ## Before you begin
 
@@ -55,7 +55,7 @@ git clone https://github.com/microsoft/m365-developer-proxy.git
 Open up a terminal session and change to the `samples` directory.
 
 > [!IMPORTANT]
-> If you are using macOS, have you completed the additional configuration steps for macOS? If not, [do that now](microsoft-cloud/dev/m365-developer-proxy/get-started/installation) and ensure that you have enabled the `Secure Web Proxy (HTTPS)` protocol on your network adaptor.
+> If you are using macOS, have you completed the additional configuration steps for macOS? If not, [do that now](./installation.md) and ensure that you have enabled the `Secure Web Proxy (HTTPS)` protocol on your network adaptor.
 
 To start the proxy, enter `m365proxy` and press <kbd>Enter</kbd>.
 
@@ -132,7 +132,7 @@ Take a moment to refresh the sample app and view the different errors that are g
 
 You can change the behavior of the Microsoft 365 Developer Proxy using several settings that can be provided when starting the proxy process.
 
-To view the available [proxy settings](microsoft-cloud/dev/m365-developer-proxy/technical-reference/proxy-settings) on the command line:
+To view the available [proxy settings](../technical-reference/Proxy-settings.md) on the command line:
 
 ```text
 m365proxy --help
@@ -148,7 +148,7 @@ To safely end the proxy process:
 2. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the process
 
 > [!CAUTION]
-> If you shutdown the terminal session, the proxy will not be unregistered correctly which may lead to you experiencing some [common problems](microsoft-cloud/dev/m365-developer-proxy/how-to/index#common-problems) when using the proxy.
+> If you shutdown the terminal session, the proxy will not be unregistered correctly which may lead to you experiencing some [common problems](../how-to/index.md#common-problems) when using the proxy.
 
 
 > [!NOTE]
@@ -158,4 +158,4 @@ To safely end the proxy process:
 
 Learn how to mock responses, simulate errors and behaviors.
 
-Take a look at our [How-to](microsoft-cloud/dev/m365-developer-proxy/how-to) guides.
+Take a look at our [How-to](../how-to/index.md) guides.

@@ -42,7 +42,7 @@ Select the relevant section and follow the steps.
 3. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
 > [!CAUTION]
-> If you are using the proxy with a .NET 4.8 app, you will also need to [configure the proxy](microsoft-cloud/dev/m365-developer-proxy/how-to/why-is-proxy-not-intercepting-requests-from-my-.net-4.8-app) using `netsh`.
+> If you are using the proxy with a .NET 4.8 app, you will also need to [configure the proxy](../how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md) using `netsh`.
 
 The terminal displays the following output:
 
@@ -79,7 +79,7 @@ Press CTRL+C to stop the Microsoft 365 Developer Proxy
 
 The proxy is now running with the following defaults:
 
-- 50% chance of a request being failed with a random [supported HTTP error status code](./Supported-HTTP-error-status-codes).
+- 50% chance of a request being failed with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
 - All requests sent to Microsoft Graph and SharePoint Online APIs are intercepted.
 - No requests are mocked.
 
@@ -89,7 +89,7 @@ When you no longer require the proxy to be running, you should always stop the p
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop the proxy.
 
-If you shut down the terminal session, the proxy doesn't unregister correctly, and you might experience some [common problems](microsoft-cloud/dev/m365-developer-proxy/how-to).
+If you shut down the terminal session, the proxy doesn't unregister correctly, and you might experience some [common problems](../how-to/index.md).
 
 If you're using macOS, you should also disable the `Secure Web Proxy (HTTPS)` proxy on your network device.
 
@@ -182,11 +182,11 @@ For example, if your API has the URL, `https://myapp/api`, your `m365proxyrc.jso
 Stop and start the proxy for the change to take effect. Issue a network request from the command line to the API. The proxy will now intercept requests sent to your API.
 
 > [!NOTE]
-> By default, the proxy simulates error responses based on Microsoft Graph. To add your own responses, follow this [guide](microsoft-cloud/dev/m365-developer-proxy/how-to/simulate-errors-from-non-Microsoft-365-APIs).
+> By default, the proxy simulates error responses based on Microsoft Graph. To add your own responses, follow this [guide](../how-to/Simulate-errors-from-non-Microsoft-365-APIs.md).
 
 ## 5. Show help and usage information
 
-Display help to change [proxy settings](microsoft-cloud/dev/m365-developer-proxy/technical-reference/proxy-settings) using:
+Display help to change [proxy settings](../technical-reference/Proxy-settings.md) using:
 
 ```text
 m365proxy --help
@@ -196,6 +196,6 @@ m365proxy --help
 
 Now you’re ready to go on to the next step.
 
-Take a look at our [How-to](microsoft-cloud/dev/m365-developer-proxy/how-to) guides to learn more about how to configure the proxy.
+Take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.
 
-Or, try our [sample JavaScript client-side web application](microsoft-cloud/dev/m365-developer-proxy/get-started/test-a-sample-app-with-microsoft-365-developer-proxy) with the proxy.
+Or, try our [sample JavaScript client-side web application](./test-a-sample-app-with-microsoft-365-developer-proxy.md) with the proxy.
