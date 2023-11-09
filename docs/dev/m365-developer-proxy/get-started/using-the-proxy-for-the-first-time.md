@@ -197,6 +197,6 @@ m365proxy --help
 ## On to the next step
 
 > [!div class="nextstepaction"]
-> [Test sample JavaScript client-side web application](./using-the-proxy-for-the-first-time.md)
+> [Test sample JavaScript client-side web application](./test-a-javaScript-client-side-web-application.md)
 
 Or, take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.

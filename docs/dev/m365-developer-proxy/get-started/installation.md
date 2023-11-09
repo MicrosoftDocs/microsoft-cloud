@@ -58,4 +58,4 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 ---
 
 > [!div class="nextstepaction"]
-> [Now you’re ready to go on to the next step](./using-the-proxy-for-the-first-time.md)
+> [Use proxy for the first time](./using-the-proxy-for-the-first-time.md)
