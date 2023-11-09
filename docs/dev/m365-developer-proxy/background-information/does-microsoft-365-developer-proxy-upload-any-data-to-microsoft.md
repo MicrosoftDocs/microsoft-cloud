@@ -1,6 +1,6 @@
 ---
-title: Does Microsoft 365 Developer Proxy upload any data to microsoft
-description: Does Microsoft 365 Developer Proxy upload any data to microsoft
+title: Does Microsoft 365 Developer Proxy upload any data to Microsoft
+description: Does Microsoft 365 Developer Proxy upload any data to Microsoft
 author: garrytrinder
 ms.author: garrytrinder
 ms.contributors: garrytrinder
@@ -20,7 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Does Microsoft 365 Developer Proxy upload any data to microsoft
+# Does Microsoft 365 Developer Proxy upload any data to Microsoft
 
 No, it doesn't.
 
