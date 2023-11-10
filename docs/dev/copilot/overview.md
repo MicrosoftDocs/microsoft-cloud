@@ -198,7 +198,7 @@ Learn more:
 - [Message Extensions Overview](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
 - [Build Message Extensions using Bot Framework](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
 
-## Build Your Own Copilot
+## Build your own Copilot
 
 In addition to adopting and extending Microsoft Copilot, a custom AI copilot can be created to create a personalized conversational AI experience for users using Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and other Microsoft Cloud technologies. A custom copilot can integrate company data and documents, retrieve real-time data from external APIs, and be embedded in company applications. For example, a custom copilot can be built to provide a chat interface to access help desk tickets and knowledge base articles. Rather than using traditional search techniques or navigating across multiple applications, users can use the conversational UI provided by the custom Copilot to find the information they need.
 
