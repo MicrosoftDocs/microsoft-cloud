@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 04/05/2023
+  ms.date: 11/15/2023
 
 landingContent:
   - title: Azure and Microsoft 365 Tutorials
@@ -59,9 +59,9 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Adopt, Extend, and Build a Copilot  
-            url: copilots/overview
-          - text: Copilots in Dynamics 365
-            url: copilots/copilot-for-dynamics365
+          - text: Adopt, extend, and build Copilot experiences
+            url: copilot/overview
+          - text: Copilot for Dynamics 365
+            url: copilot/copilot-for-dynamics365
 
   

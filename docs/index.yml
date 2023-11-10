@@ -14,7 +14,7 @@ metadata:
   ms.topic: hub-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 04/05/2023
+  ms.date: 11/15/2023
 
 highlightedContent:
   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -43,7 +43,7 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/copilot-logo-blues.svg
       links:
-        - text: Adopt, Extend, and Build a Copilot
+        - text: Adopt, extend, and build Copilot experiences 
           url: /microsoft-cloud/dev/copilot/overview
 
         - text: Copilot for Dynamics 365
