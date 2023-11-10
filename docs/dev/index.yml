@@ -59,7 +59,7 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Adopt, extend, and build Copilot experiences
+          - text: Adopt, extend and build Copilot experiences
             url: copilot/overview
           - text: Copilot for Dynamics 365
             url: copilot/copilot-for-dynamics365

@@ -1,6 +1,6 @@
 ---
-title: Adopt, extend, and build Copilot experiences across the Microsoft Cloud
-description: Learn how you can adopt, extend, and build Copilot experiences.
+title: Adopt, extend and build Copilot experiences across the Microsoft Cloud
+description: Learn how you can adopt, extend and build Copilot experiences.
 author: DanWahlin
 ms.author: donasa
 ms.contributors: dwahlin-5182022
@@ -21,7 +21,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Adopt, extend, and build Copilot experiences across the Microsoft Cloud
+# Adopt, extend and build Copilot experiences across the Microsoft Cloud
 
 Copilot is an AI assistant powered by Large Language Models (LLMs) that offer innovative solutions across the Microsoft Cloud. They aim to enhance productivity, creativity, and data accessibility while providing enterprise-grade data security and privacy features. They bridge the gap between complex tasks and user-friendly solutions, providing a natural language conversational interface to interact with data, create automations, build applications, and even assist with coding tasks. Their integration within various Microsoft platforms and products provides a more interactive and efficient digital workspace. 
 
