@@ -50,7 +50,7 @@ productDirectory:
           url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
 
         - text: Copilot for Microsoft 365
-          url: https://adoption.microsoft.com/en-us/copilot/
+          url: /microsoft-365-copilot
 
         - text: Copilot in Power Apps
           url: /power-apps/maker/canvas-apps/ai-overview
