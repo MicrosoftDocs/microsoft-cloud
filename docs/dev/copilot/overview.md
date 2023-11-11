@@ -31,7 +31,7 @@ The core value of Copilot stems from its ability to interpret natural language c
 
 Users can effortlessly adopt Copilot to streamline their workflows, while developers or creators have the flexibility to extend Copilot by integrating custom data. The core features that Copilot is built upon can also be used to build custom copilot solutions, which can be seamlessly integrated into new or existing applications. 
 
-The following table provides differences between the adopt, extend, and build options showcasing the breadth of possibilities that Copilot offers.
+The following table shows differences between the adopt, extend, and build options showcasing the breadth of possibilities that Copilot offers.
 
 || Adopt Copilot | Extend Copilot | Build your own Copilot |
 |---|---|---|---|
