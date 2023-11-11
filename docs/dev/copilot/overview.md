@@ -47,7 +47,7 @@ Microsoft offers a variety of Copilot assistants that can be adopted to enhance 
 :::image type="content" source="media/copilot-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for a Copilot across the Microsoft Cloud." border="false" :::
 
 Copilot assistants discussed in this section include:
-- [Copilot for Dynamics 365](#copilot-in-dynamics-365)
+- [Copilot for Dynamics 365](#copilot-for-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
