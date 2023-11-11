@@ -58,6 +58,13 @@ Copilot assistants discussed in this section include:
 - [Microsoft Copilot Pro](#microsoft-copilot-pro)
 - [Microsoft Security Copilot](#microsoft-security-copilot)
 
+### Copilot for Dynamics 365
+
+Copilot for Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
+
+Learn More:
+- [Copilot for Dynamics 365 Overview](/dev/copilot/copilot-for-dynamics365)
+
 ### Copilot for Microsoft 365
 
 Copilot for Microsoft 365 combines Large Language Models (LLMs) with Microsoft Graph, linking your organization's data with Microsoft 365 apps to create a new way of working. Users can easily find and navigate business data, analyze trends, and create insightful reports using simple natural language commands. This is a major upgrade for productivity, as it's integrated across the Microsoft 365 ecosystem, making tasks quicker and easier to complete. Plus, with built-in enterprise-grade security, privacy, and responsible AI, it ensures a safe, secure, and compliant digital workspace.  
@@ -66,13 +73,6 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 
 Learn more:
 - [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
-
-### Copilot for Dynamics 365
-
-Copilot for Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
-
-Learn More:
-- [Copilot for Dynamics 365 Overview](/dev/copilot/copilot-for-dynamics365)
 
 ### Copilot in Microsoft Fabric
 
