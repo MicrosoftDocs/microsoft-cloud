@@ -3,7 +3,6 @@ title: Adopt, extend and build Copilot experiences across the Microsoft Cloud
 description: Learn how you can adopt, extend and build Copilot experiences.
 author: DanWahlin
 ms.author: donasa
-ms.contributors: dwahlin-5182022
 ms.date: 11/15/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
@@ -15,7 +14,7 @@ products:
   - power-platform
   - github
   - m365
-  - dynamics365
+  - dynamics-365
 ms.custom:
   - fcp
   - team=cloud_advocates
