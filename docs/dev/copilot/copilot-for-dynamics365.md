@@ -94,9 +94,9 @@ Learn more:
 
 - [Project Management Copilot Overview](/dynamics365/project-operations/project-management/copilot-features)
 
-## Copilot in Dynamics 365 Sales & Viva Sales
+## Copilot in Dynamics 365 Sales & Microsoft Sales Copilot
 
-Copilot in Microsoft Dynamics 365 Sales and Viva Sales helps sellers dramatically reduce the time they spend on clerical tasks. AI helps write email responses to customers and can even create an email summary of a Teams meeting in Outlook. The meeting summary pulls in details from the seller’s CRM such as product and pricing information, as well as insights from the recorded Teams call. With sellers spending as much as 66% of their day checking and responding to emails, this presents a significant business upside to give the seller more time with their customers.
+Copilot in Microsoft Dynamics 365 Sales and Microsoft Sales Copilot helps sellers dramatically reduce the time they spend on clerical tasks. AI helps write email responses to customers and can even create an email summary of a Teams meeting in Outlook. The meeting summary pulls in details from the seller’s CRM such as product and pricing information, as well as insights from the recorded Teams call. With sellers spending as much as 66% of their day checking and responding to emails, this presents a significant business upside to give the seller more time with their customers.
 
 Copilot in Dynamics 365 Sales offers the following capabilities:
 
@@ -106,10 +106,18 @@ Copilot in Dynamics 365 Sales offers the following capabilities:
 - Email assistance
 - News updates
 
+Microsoft Sales Copilot offers the following capabilities:
+
+- AI-generated lead and opportunity summaries to streamline your sales process and close deals faster
+- A customer meeting preparation summary view that includes auto-generated summaries of previous meetings, recent notes, highlights of issues and concerns, and CRM information
+- Real-time tips and suggested answers during Teams meetings, prompted by the customer’s mention of a competitor or brand
+- Customer email summary and follow-up, with contextual replies and actions based on Outlook emails and CRM data
+
 Learn more:
 
-- [Learn more about Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
-- [Learn how to enable configure Copilot in Dynamics 365 Sales](/dynamics365/sales/enable-setup-copilot)
+- [Copilot in Dynamics 365 Sales](/dynamics365/sales/copilot-overview)
+- [How to enable configure Copilot in Dynamics 365 Sales](/dynamics365/sales/enable-setup-copilot)
+- [Microsoft Sales Copilot](https://cloudblogs.microsoft.com/dynamics365/it/2023/07/18/improve-sales-productivity-and-close-more-deals-with-microsoft-sales-copilot/)
 
 ## Copilot in Dynamics 365 F&O Help & Guidance
 
