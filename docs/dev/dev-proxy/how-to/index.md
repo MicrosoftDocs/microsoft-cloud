@@ -24,9 +24,9 @@ ms.custom:
 
 - [Get help and support](./Get-help-and-support.md)
 
-## Monitor requests
+## Intercept requests
 
-- [Monitor requests from specific processes](./Monitor-requests-from-specific-processes.md)
+- [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
 - [Exclude a URL](./Exclude-a-URL.md)
 
 ## Mock responses
@@ -50,19 +50,22 @@ ms.custom:
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md)
 - [Simulate slow API responses](./Simulate-slow-API-responses.md)
 
-## Presets
+## Minimal permissions
 
-- [Use preset configurations](./Use-preset-configurations.md)
+- [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions.md)
+- [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
 
 ## Record
 
 - [Record and export proxy activity](./Record-and-export-proxy-activity.md)
-- [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions.md)
-- [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
 
 ## Improve my app
 
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
+
+## Presets
+
+- [Use preset configurations](./Use-preset-configurations.md)
 
 ## Change settings
 
@@ -73,11 +76,12 @@ ms.custom:
 
 ## Common problems
 
-- [Why is my internet connection not working after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)
-- [Why do I keep getting 429 responses](./Why-do-I-keep-getting-429-responses.md)
-- [Why do all requests fail with gateway timeout](./Why-do-all-requests-fail-with-gateway-timeout.md)
-- [Why is proxy not mocking my binary response](./Why-is-proxy-not-mocking-my-binary-response.md)
-- [Why is proxy not intercepting requests from my .NET 4.8 app](./Why-is-proxy-not-intercepting-requests-from-my-.net-4.8-app.md)
-- [Why is the proxy saying that an option is unknown](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
+- [No random errors are thrown when using mocks](./Why-are-random-errors-not-thrown-when-using-mocks.md)
+- [No internet connection after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)
+- [All requests fail with 429 responses](./Why-do-I-keep-getting-429-responses.md)
+- [All requests fail with gateway timeout](./Why-do-all-requests-fail-with-gateway-timeout.md)
+- [Binary responses are not mocked](./Why-is-proxy-not-mocking-my-binary-response.md)
+- [No requests are intercepted from my .NET 4.8 app](./Why-is-proxy-not-intercepting-requests-from-my-.net-4.8-app.md)
+- [Options are not recognized](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
 - [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md)
 - [Uninstall](./Uninstall.md)

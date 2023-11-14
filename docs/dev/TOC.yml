@@ -95,10 +95,6 @@
             href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions
           - name: Check if you are using excessive Microsoft Graph API permissions
             href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions
-       - name: Presets
-         items: 
-          - name: Use preset configurations
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Use-preset-configurations
        - name: Record
          items: 
           - name: Record and export proxy activity
@@ -107,6 +103,10 @@
          items: 
           - name: Update my application code to use Microsoft Graph JavaScript SDK
             href: /microsoft-cloud/dev/dev-proxy/how-to/Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK
+       - name: Presets
+         items: 
+          - name: Use preset configurations
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Use-preset-configurations
        - name: Change settings
          items: 
           - name: Change console output to use icons
