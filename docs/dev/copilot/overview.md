@@ -49,13 +49,12 @@ Microsoft offers a variety of Copilot assistants that can be adopted to enhance 
 Copilot assistants discussed in this section include:
 - [Copilot for Dynamics 365](#copilot-for-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
+- [Copilot in Bing](#copilot-in-bing)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
 - [Copilot in Power Automate](#copilot-in-power-automate)
 - [Copilot in Windows](#copilot-in-windows)
 - [GitHub Copilot](#github-copilot)
-- [Microsoft Copilot](#microsoft-copilot)
-- [Microsoft Copilot Pro](#microsoft-copilot-pro)
 - [Microsoft Security Copilot](#microsoft-security-copilot)
 
 ### Copilot for Dynamics 365
@@ -73,6 +72,18 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 
 Learn more:
 - [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
+
+### Copilot in Bing
+ 
+Copilot in Bing is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more.
+
+Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access Copilot in Edge by clicking on the "Copilot" icon in the top right corner of the browser.
+Enterprise users can also access Copilot in Bing with commercial data protection which includes a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training ensuring data integrity. Copilot with commercial data protection offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises.
+
+Learn more:
+- [Copilot in Bing](https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx)
+- [Copilot in Edge](https://www.microsoft.com/edge/features/bing-chat)
+- [Copilot with commercial data protection](/bing-chat-enterprise)
 
 ### Copilot in Microsoft Fabric
 
@@ -121,23 +132,6 @@ GitHub Copilot is an AI developer tool that assists in the coding process by sug
 
 Learn more:
 - [GitHub Copilot Overview](https://github.com/features/copilot)
-
-### Microsoft Copilot
-
-Microsoft Copilot is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more. 
-
-Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access the chat feature by clicking on the "Copilot" icon in the top right corner of the browser.
-
-Learn more:
-- [Copilot in Microsoft Edge](https://www.microsoft.com/edge/features/bing-chat)
-- [bing.com](https://bing.com)
-
-### Microsoft Copilot Pro
- 
-Copilot Pro utilizes Large Language Models (LLMs) and AI to improve data access and boost user productivity and creativity in the enterprise workspace. It provides a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training, maintaining data integrity. Copilot Pro offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises. 
- 
-Learn more:
-- [Copilot Pro Documentation](/bing-chat-enterprise)
 
 ### Microsoft Security Copilot
 
