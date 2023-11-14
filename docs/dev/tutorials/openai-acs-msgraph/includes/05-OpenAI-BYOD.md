@@ -12,17 +12,27 @@ Here's a quick overview of how the "bring your own data" feature works from the 
 In this exercise, you will:
 
 - Create a custom data source using Azure AI Studio.
+- Deploy an embedding model using Azure AI Studio.
+- Upload custom documents.
 - Start a chat session in the Chat playground to experiment with generating completions based upon your own data.
 - Explore code that uses Azure Cognitive Search and Azure OpenAI to generate completions based upon your own data.
 
-Let's get started by adding a custom data source to Azure AI Studio.
+Let's get started by deploying an embedding model and adding a custom data source in Azure AI Studio.
 
 ### Adding a Custom Data Source to Azure AI Studio
 
-
 1. Navigate to [Azure OpenAI Studio](https://oai.azure.com/) and sign in with credentials that have access to your Azure OpenAI resource. 
 
-1. Locate the **Bring your own data** tile on the welcome screen and select **Try it now**.
+1. Select **Deployments** from the navigation menu.
+
+1. Select **Create new deployment** and enter the following values:
+    - Model: **text-embedding-ada-002**.
+    - Model version: **Default**.
+    - Deployment name: **text-embedding-ada-002**.
+
+1. After the model is created, select **Azure OpenAI** from the navigation menu to go to the welcome screen. 
+
+2. Locate the **Bring your own data** tile on the welcome screen and select **Try it now**.
 
     :::image type="content" source="../media/aoai-studio-byod.png" alt-text="Azure OpenAI Studio Bring Your Own Data":::
 
@@ -36,7 +46,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     - Select a region that's close to your location.
     - Select **Review** followed by **Create**.
 
-1. Once the blob storage resource is created, go back to the Azure AI Studio dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
+1. Once the blob storage resource is created, go back to the Azure AI Studio dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
 1. Cross-origin resource sharing (CORS) needs to be turned on in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
 
@@ -59,15 +69,22 @@ Let's get started by adding a custom data source to Azure AI Studio.
 
     :::image type="content" source="../media/cognitive-search-key.png" alt-text="Azure OpenAI Studio Cognitive Search Keys":::
 
-1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, refresh the page to reload the dialog in Azure AI Studio.
+1. Select **Semantic search** in the left navigation menu and ensure that **Free** is selected. 
+
+    > [!NOTE]
+    > To check if semantic search is available in a specific region, [Check the Products Available by Region](https://azure.microsoft.com/global-infrastructure/services/?products=search) page on the Azure web site to see if your region is listed.
+
+1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
 1. Enter a value of **byod-search-index** for the **Enter the index name** value.
 
-1. Select the **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account**  checkbox.
+1. Select the **Add vector search to this search resource** checkbox.
 
-1. Select **Next**.
+1. In the **Select an embedding model** dropdown, select the **text-embedding-ada-002** model you created earlier.
 
-1. In the **Upload files** section of the dialog, select **Browse for a file**.
+1. Select the checkbox followed by **Next**.
+
+1. In the **Upload files** dialog, select **Browse for a file**.
 
 1. Navigate to the project's *customer documents* folder (located at the root of the project) and select the following files:
 
@@ -77,9 +94,18 @@ Let's get started by adding a custom data source to Azure AI Studio.
     > [!NOTE]
     >  This feature currently supports the following file formats for local index creation: .txt, .md, .html, .pdf, .docx, and .pptx.
 
-1. Select **Upload files**.
+1. Select **Upload files**. The files will be uploaded into a **fileupload-byod-search-index** container in the blob storage resource you created earlier.
 
-1. Select **Next**. Review the details and select **Save and close**. 
+1. Select **Next** to go to the **Data management** dialog.
+
+1. In the **Search type** dropdown, select **Hybrid + semantic**. 
+
+    > [!NOTE]
+    > This option provides support for keyword and vector search. Once results are returned, a secondary ranking process is applied to the result set using deep learning models which improves the search relevance for the user. To learn more about semantic search, view the [Semantic search in Azure Cognitive Search](/azure/search/semantic-search-overview) documentation.
+
+1. Select the checkboxes to acknowledge the costs associated with using semantic search and vector embeddings.
+
+1. Select **Next**, review the details, and select **Save and close**. 
 
 1. Now that your custom data has been uploaded, the data will be indexed and available to use in the **Chat playground**. This process may take a few minutes. Once it's completed, continue to the next section.
 
@@ -113,7 +139,9 @@ Let's get started by adding a custom data source to Azure AI Studio.
     What is the company's policy on vacation time?
     ```
 
-1. You should see that no information was found for that request. Enter the following text into the **User message** field:
+1. You should see that no information was found for that request. 
+
+1. Enter the following text into the **User message** field:
 
     ```text
     How should I handle refund requests?
@@ -247,7 +275,7 @@ Let's get started by adding a custom data source to Azure AI Studio.
     }
     ```
 
-1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the bring your own data scenario available in Azure OpenAI.
+1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the "bring your own data" scenario available in Azure OpenAI.
 
     - The `fetchUrl` value includes an `extensions` segment in the URL whereas the URL for the standard Azure OpenAI API does not.
 
