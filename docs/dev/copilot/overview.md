@@ -75,9 +75,8 @@ Learn more:
 
 ### Copilot in Bing
  
-Copilot in Bing is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more.
+Copilot in Bing is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more. Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access Copilot in Edge by clicking on the "Copilot" icon in the top right corner of the browser.'
 
-Access Microsoft Copilot by visiting [bing.com](https://bing.com) and clicking on "Chat" at the top of the page. Microsoft Edge users can access Copilot in Edge by clicking on the "Copilot" icon in the top right corner of the browser.
 Enterprise users can also access Copilot in Bing with commercial data protection which includes a secure AI-powered chat with commercial data protection, ensuring user and business data safety. The system doesn't save chat data and restricts data access, including from Microsoft, ensuring privacy. User data isn't used for model training ensuring data integrity. Copilot with commercial data protection offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's responsible AI principles, making it a secure and efficient tool for modern enterprises.
 
 Learn more:
