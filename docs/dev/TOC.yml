@@ -53,9 +53,9 @@
          href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application
     - name: How-to
       items:
-       - name: Monitor requests
+       - name: Intercept requests
          items: 
-         - name: Monitor requests from specific processes
+         - name: Intercept requests from specific processes
            href: /microsoft-cloud/dev/dev-proxy/how-to/Monitor-requests-from-specific-processes
          - name: Exclude a URL
            href: /microsoft-cloud/dev/dev-proxy/how-to/Exclude-a-URL
@@ -89,6 +89,12 @@
             href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-Rate-Limit-API-responses
           - name: Simulate slow API responses
             href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-slow-API-responses
+       - name: Minimal permissions
+         items:
+          - name: Detect minimal Microsoft Graph API permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions
+          - name: Check if you are using excessive Microsoft Graph API permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions
        - name: Presets
          items: 
           - name: Use preset configurations
@@ -97,10 +103,6 @@
          items: 
           - name: Record and export proxy activity
             href: /microsoft-cloud/dev/dev-proxy/how-to/Record-and-export-proxy-activity
-          - name: Detect minimal Microsoft Graph API permissions
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions
-          - name: Check if you are using excessive Microsoft Graph API permissions
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions
        - name: Improve my app
          items: 
           - name: Update my application code to use Microsoft Graph JavaScript SDK
@@ -117,19 +119,19 @@
             href: /microsoft-cloud/dev/dev-proxy/how-to/Refresh-local-Microsoft-Graph-database
        - name: Common problems
          items: 
-          - name: Why are random errors not thrown when using mocks
+          - name: No random errors are thrown when using mocks
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-are-random-errors-not-thrown-when-using-mocks
-          - name: Why do all requests fail with gateway timeout
+          - name: All requests fail with gateway timeout
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-all-requests-fail-with-gateway-timeout
-          - name: Why do I keep getting 429 responses
+          - name: All requests fail with 429 responses
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-I-keep-getting-429-responses
-          - name: Why is my internet connection not working after using the proxy
+          - name: No internet connection after using the proxy
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-my-internet-connection-not-working-after-using-the-proxy
-          - name: Why is proxy not intercepting requests from my .NET 4.8 app
+          - name: No requests are intercepted from my .NET 4.8 app
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app
-          - name: Why is proxy not mocking my binary response
+          - name: Binary responses are not mocked
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-mocking-my-binary-response
-          - name: Why is the proxy saying that an option is unknown
+          - name: Options are not recognized
             href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-the-proxy-saying-that-an-option-is-unknown
           - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
             href: /microsoft-cloud/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception
