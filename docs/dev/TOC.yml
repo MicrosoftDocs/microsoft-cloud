@@ -144,53 +144,53 @@
     - name: Reference
       items: 
        - name: Console output ASCII icons
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Console-output-ASCII-icons
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-ASCII-icons
        - name: Console output text labels
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Console-output-text-labels
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-text-labels
        - name: devproxyrc
-         href: /microsoft-cloud/dev/dev-proxy/how-to/devproxyrc
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/devproxyrc
        - name: Keyboard shortcuts
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Keyboard-shortcuts
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Keyboard-shortcuts
        - name: Proxy settings
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Proxy-settings
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Proxy-settings
        - name: Response object
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Response-object
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Response-object
        - name: Supported HTTP error status codes
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Supported-HTTP-error-status-codes
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Supported-HTTP-error-status-codes
        - name: Plugins
          items: 
           - name: CachingGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/CachingGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/CachingGuidancePlugin
           - name: ExecutionSummaryPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/ExecutionSummaryPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ExecutionSummaryPlugin
           - name: GenericRandomErrorPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GenericRandomErrorPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GenericRandomErrorPlugin
           - name: GraphBetaSupportGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphBetaSupportGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphBetaSupportGuidancePlugin
           - name: GraphClientRequestIdGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphClientRequestIdGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphClientRequestIdGuidancePlugin
           - name: GraphMockResponsePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphMockResponsePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphMockResponsePlugin
           - name: GraphRandomErrorPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphRandomErrorPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphRandomErrorPlugin
           - name: GraphSdkGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphSdkGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSdkGuidancePlugin
           - name: GraphSelectGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/GraphSelectGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSelectGuidancePlugin
           - name: LatencyPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/LatencyPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/LatencyPlugin
           - name: MinimalPermissionsGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/MinimalPermissionsGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin
           - name: MinimalPermissionsPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/MinimalPermissionsPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsPlugin
           - name: MockResponsePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/MockResponsePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MockResponsePlugin
           - name: ODataPagingGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/ODataPagingGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ODataPagingGuidancePlugin
           - name: RateLimitingPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/RateLimitingPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RateLimitingPlugin
           - name: RetryAfterPlugin
-            href: /microsoft-cloud/dev/dev-proxy/how-to/RetryAfterPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RetryAfterPlugin
 
     - name: Background
       href: /microsoft-cloud/dev/dev-proxy/background-information
