@@ -22,10 +22,11 @@ ms.custom:
 
 # Exclude a URL
 
-To exclude a URL from being intercepted, prepend it with an `!` (exclamation mark): 
+To exclude a URL from being intercepted, prepend it with an `!` (exclamation mark):
 
 ```json
-"urlsToWatch": [
+{
+  "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
     "https://graph.microsoft.us/v1.0/*",
@@ -39,7 +40,8 @@ To exclude a URL from being intercepted, prepend it with an `!` (exclamation mar
     "https://*.sharepoint.*/*_vti_bin/*",
     "https://*.sharepoint-df.*/*_api/*",
     "https://*.sharepoint-df.*/*_vti_bin/*"
-],
+  ]
+}
 ```
 
 In the above example, the proxy ignores any requests made to `/_api/web/GetClientSideComponents`.

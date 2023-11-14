@@ -85,3 +85,4 @@ ms.custom:
 - [Options are not recognized](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
 - [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md)
 - [Uninstall](./Uninstall.md)
+- [Get help and support](./Get-help-and-support.md)

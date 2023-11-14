@@ -22,9 +22,9 @@ ms.custom:
 
 # Change request failure rate
 
-By default, Dev Proxy randomly responds with [supported error codes](../technical-reference/Supported-HTTP-error-status-codes.md) with a 50% chance that the proxy will intercept a request to Microsoft Graph.
+By default, Dev Proxy randomly responds with [supported error codes](../technical-reference/Supported-HTTP-error-status-codes.md) with a 50% chance to intercept a request.
 
-You can increase or decrease the likelihood to a higher value or lower value by changing the `failure-rate` setting value.
+You can change the likelihood to a higher or lower value by changing the `failure-rate` setting, for example to increase the likelihood to 80%, start proxy with:
 
 ```sh
 devproxy --failure-rate 80

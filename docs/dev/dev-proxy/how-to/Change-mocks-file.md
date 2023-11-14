@@ -22,7 +22,7 @@ ms.custom:
 
 # Change mocks file
 
-By default, the proxy looks for a file called `responses.json` in the directory that the proxy is started from.
+By default, Dev Proxy looks for a file called `responses.json` in the current working directory.
 
 To tell proxy to use a file with a different name, use:
 
