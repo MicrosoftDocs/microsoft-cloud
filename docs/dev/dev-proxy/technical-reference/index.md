@@ -24,8 +24,8 @@ ms.custom:
 
 - [devproxyrc](./devproxyrc.md)
 - [Proxy settings](./Proxy-settings.md)
-- [Console output text labels](../how-to/Console-output-text-labels.md)
-- [Console output ASCII icons](../how-to/Console-output-ASCII-icons.md)
+- [Console output text labels](./Console-output-text-labels.md)
+- [Console output ASCII icons](./Console-output-ASCII-icons.md)
 - [Response object](./Response-object.md)
 - [Supported HTTP error status codes](./Supported-HTTP-error-status-codes.md)
 - [Keyboard shortcuts](./Keyboard-shortcuts.md)

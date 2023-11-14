@@ -49,10 +49,10 @@ Fails requests made to Microsoft Graph with random errors.
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| AllowedErrors | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |
+| `allowedErrors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |
 
 ## Command line options
 
 | Name | Description | Default |
 |----------|-------------|:-------:|
-| `--allowed-errors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |
+| `-a, --allowed-errors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. | `429 500 502 503 504 507` |

@@ -22,7 +22,7 @@ ms.custom:
 
 # CachingGuidancePlugin
 
-Provides caching guidance when the same API calls are made repeatedly within a given timeframe.
+Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
 
 ## Plugin instance definition
 
@@ -48,8 +48,8 @@ Provides caching guidance when the same API calls are made repeatedly within a g
 ## Configuration properties
 
 | Property | Description | Default |
-|----------|-------------|:-------:|
-| CacheThresholdSeconds | Determines the number of seconds between the same request that triggers the guidance warning. | 5 |
+|----------|-------------|--------:|
+| `cacheThresholdSeconds` | The number of seconds between the same request that triggers the guidance warning. | 5 |
 
 ## Command line options
 

@@ -22,7 +22,7 @@ ms.custom:
 
 # ODataPagingGuidancePlugin
 
-Provides guidance to help developers correctly handle retrieving multiple pages of data from Microsoft Graph.
+Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 
 ## Plugin instance definition
 

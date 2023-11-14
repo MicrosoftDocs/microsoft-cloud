@@ -22,7 +22,7 @@ ms.custom:
 
 # GraphMockResponsePlugin
 
-Mocks responses sent in batch requests to Microsoft Graph.
+Mocks responses to Microsoft Graph APIs. Includes all functionality of the [MockResponsePlugin](./MockResponsePlugin.md) and adds support for mocking Microsoft Graph API batch requests.
 
 ## Plugin instance definition
 

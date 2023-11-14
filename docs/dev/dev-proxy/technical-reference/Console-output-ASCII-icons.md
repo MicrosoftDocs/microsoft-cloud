@@ -24,7 +24,7 @@ ms.custom:
 
 You can configure the proxy to use ASCII icons instead of text labels in the console output.
 
-The proxy uses the following icons:
+Dev Proxy uses the following icons:
 
 | Icon | Description |
 | ----- | ------------ |
@@ -36,4 +36,4 @@ The proxy uses the following icons:
 |`! →`| Request failed |
 |`(i)`| Proxy provided developer guidance |
 
-To use icons instead of labels, follow the [Change console output to use icons](./Change-console-output-to-use-icons.md) guide.
+To use icons instead of labels, follow the [Change console output to use icons](../how-to/Change-console-output-to-use-icons.md) guide.

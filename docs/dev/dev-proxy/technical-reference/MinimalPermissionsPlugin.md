@@ -22,9 +22,7 @@ ms.custom:
 
 # MinimalPermissionsPlugin
 
-Returns a list of the minimal permission scopes required for requests sent to Microsoft Graph that proxy recorded.
-
-> NOTE: This plugin requires [ExecutionSummaryPlugin](./ExecutionSummaryPlugin.md) to be enabled. This plugin contains the functionality to record proxy activity.
+Returns a list of the minimal permissions required for Microsoft Graph requests that proxy recorded.
 
 ## Plugin instance definition
 
@@ -51,7 +49,7 @@ Returns a list of the minimal permission scopes required for requests sent to Mi
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| Type | Determines which type of permission scopes to return. Can be `Delegated` or `Application` | `Delegated` | 
+| `type` | Determines which type of permission scopes to return. Can be `Delegated` or `Application` | `Delegated` |
 
 ## Command line options
 

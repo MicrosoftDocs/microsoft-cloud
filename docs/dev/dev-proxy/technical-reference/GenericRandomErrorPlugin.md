@@ -43,9 +43,8 @@ Fails requests with a random selected error from file containing mocked errors.
 ```json
 {
   "genericRandomErrorPlugin": {
-    "rate": 90,
     "errorsFile": "errors.json"
-  },
+  }
 }
 ```
 
@@ -53,8 +52,7 @@ Fails requests with a random selected error from file containing mocked errors.
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| Rate | Determines the percentage chance for a request to fail with an error. | No default |
-| ErrorsFile | Path to the file that contains error responses. | No default |
+| `errorsFile` | Path to the file that contains error responses. | No default |
 
 ## Command line options
 

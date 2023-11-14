@@ -22,7 +22,7 @@ ms.custom:
 
 # LatencyPlugin
 
-Introduces latency into requests.
+Delays responses by a random number of milliseconds from the configured range.
 
 ## Plugin instance definition
 
@@ -38,10 +38,12 @@ Introduces latency into requests.
 ## Configuration example
 
 ```json
-"latencyPlugin": {
-  "minMs": 200,
-  "maxMs": 10000
-},
+{
+  "latencyPlugin": {
+    "minMs": 200,
+    "maxMs": 10000
+  }
+}
 ```
 
 ## Configuration properties

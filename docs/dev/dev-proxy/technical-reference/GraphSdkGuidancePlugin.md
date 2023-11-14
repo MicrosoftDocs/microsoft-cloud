@@ -22,7 +22,7 @@ ms.custom:
 
 # GraphSdkGuidancePlugin
 
-Provides guidance that recommends using Microsoft Graph SDKs to send requests to Microsoft Graph.
+Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been issued by a Microsoft Graph SDK.
 
 ## Plugin instance definition
 

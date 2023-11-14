@@ -22,9 +22,7 @@ ms.custom:
 
 # MinimalPermissionsGuidancePlugin
 
-Provides guidance, which compares the permission scopes used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests recorded by the proxy.
-
-> NOTE: This plugin requires [ExecutionSummaryPlugin](./ExecutionSummaryPlugin.md) to be enabled. This plugin contains the functionality to record proxy activity.
+Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 
 ## Plugin instance definition
 
@@ -32,18 +30,29 @@ Provides guidance, which compares the permission scopes used in the JWT token se
 {
   "name": "MinimalPermissionsGuidancePlugin",
   "enabled": false,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll"
+  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "configSection": "minimalPermissionsGuidancePlugin"
 }
 ```
 
 ## Configuration example
 
-None
+```json
+{
+  "minimalPermissionsGuidancePlugin": {
+    "filePath": "permissions-summary.json"
+  }
+}
+```
 
 ## Configuration properties
 
-None
+| Property | Description | Default |
+|----------|-------------|:-------:|
+| `filePath` | Path to the file where proxy saves the generated permissions summary. If not specified, proxy only displays the summary in the terminal. | None |
 
 ## Command line options
 
-None
+| Name | Description | Default |
+|----------|-------------|:-------:|
+| `--minimal-permissions-summary-file-path` | Path to the file where proxy saves the generated permissions summary. If not specified, proxy only displays the summary in the terminal. | None |

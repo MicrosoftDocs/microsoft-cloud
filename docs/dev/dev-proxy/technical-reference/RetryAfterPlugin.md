@@ -22,7 +22,7 @@ ms.custom:
 
 # RetryAfterPlugin
 
-Simulates the `Retry-After` header sent by an API after throttling a request.
+Simulates the `Retry-After` header sent by an API after throttling a request. Also, shows a warning when proxy detects a subsequent request to the same URL before the `Retry-After` time has elapsed.
 
 ## Plugin instance definition
 

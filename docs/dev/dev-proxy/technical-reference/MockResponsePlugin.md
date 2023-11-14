@@ -22,7 +22,7 @@ ms.custom:
 
 # MockResponsePlugin
 
-Simulates rate-limit API behaviors.
+Simulates responses.
 
 ## Plugin instance definition
 
@@ -49,12 +49,12 @@ Simulates rate-limit API behaviors.
 
 | Property              | Description                                                        |     Default      |
 | --------------------- | ------------------------------------------------------------------ | :--------------: |
-| MocksFile             | Path to the file containing mock responses                         | `responses.json` |
-| BlockUnmockedRequests | Return `502 Bad Gateway` response for requests that aren't mocked |     `false`      |
+| `mocksFile`             | Path to the file containing mock responses                         | `responses.json` |
+| `blockUnmockedRequests` | Return `502 Bad Gateway` response for requests that aren't mocked |     `false`      |
 
 ## Command line options
 
 | Name             | Description                                | Default |
 | ---------------- | ------------------------------------------ | :-----: |
-| `-n, --no-mocks` | Disable loading mock requests              |    -    |
+| `-n, --no-mocks` | Disable loading mock requests              | `false` |
 | `--mocks-file`   | Path to the file containing mock responses |    -    |

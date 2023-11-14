@@ -22,7 +22,7 @@ ms.custom:
 
 # GraphClientRequestIdGuidancePlugin
 
-Provides guidance when the `client-request-id` request header isn't used in requests to Microsoft Graph.
+Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
 
 ## Plugin instance definition
 

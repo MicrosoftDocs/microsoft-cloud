@@ -22,7 +22,7 @@ ms.custom:
 
 # GraphSelectGuidancePlugin
 
-Provides guidance that recommends using the `$select` OData system query option to retrieve a subset of properties and make more efficient requests to Microsoft Graph.
+Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doesn't include the `$select` query string parameter.
 
 ## Plugin instance definition
 
