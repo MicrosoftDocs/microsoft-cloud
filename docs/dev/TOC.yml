@@ -52,7 +52,93 @@
        - name: Test a JavaScript client-side web application
          href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application
     - name: How-to
-      href: /microsoft-cloud/dev/dev-proxy/how-to
+      items:
+       - name: Overview
+         href: /microsoft-cloud/dev/dev-proxy/how-to
+       - name: Get help and support
+         href: /microsoft-cloud/dev/dev-proxy/how-to/Get-help-and-support
+       - name: Monitor requests
+         items: 
+         - name: Monitor requests from specific processes
+           href: /microsoft-cloud/dev/dev-proxy/how-to/Monitor-requests-from-specific-processes
+         - name: Exclude a URL
+           href: /microsoft-cloud/dev/dev-proxy/how-to/Exclude-a-URL
+       - name: Mock responses
+         items: 
+          - name: Mock responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses
+          - name: Mock nth request
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-nth-request
+          - name: Mock responses that return binary data
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses-that-return-binary-data
+          - name: Mock multiple responses to the same endpoint
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-multiple-responses-to-the-same-endpoint
+          - name: Change mocks file
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-mocks-file
+       - name: Simulate errors
+         items:
+          - name: Test my app with random errors
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-my-app-with-random-errors
+          - name: Test that my application handles HTTP errors properly
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-HTTP-errors-properly
+          - name: Change request failure rate
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-request-failure-rate
+          - name: Simulate errors from non Microsoft 365 APIs
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-errors-from-non-Microsoft-365-APIs
+       - name: Simulate behaviors
+         items: 
+          - name: Test that my application handles throttling properly
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-throttling-properly
+          - name: Simulate Rate Limit API responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-Rate-Limit-API-responses
+          - name: Simulate slow API responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-slow-API-responses
+       - name: Presets
+         items: 
+          - name: Use preset configurations
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Use-preset-configurations
+       - name: Record
+         items: 
+          - name: Record and export proxy activity
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Record-and-export-proxy-activity
+          - name: Detect minimal Microsoft Graph API permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions
+          - name: Check if you are using excessive Microsoft Graph API permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions
+       - name: Improve my app
+         items: 
+          - name: Update my application code to use Microsoft Graph JavaScript SDK
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK
+       - name: Change settings
+         items: 
+          - name: Change console output to use icons
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-console-output-to-use-icons
+          - name: Change logging level
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-logging-level
+          - name: Clear the output
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Clear-the-output
+          - name: Refresh local Microsoft Graph database
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Refresh-local-Microsoft-Graph-database
+       - name: Common problems
+         items: 
+          - name: Why are random errors not thrown when using mocks
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-are-random-errors-not-thrown-when-using-mocks
+          - name: Why do all requests fail with gateway timeout
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-all-requests-fail-with-gateway-timeout
+          - name: Why do I keep getting 429 responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-I-keep-getting-429-responses
+          - name: Why is my internet connection not working after using the proxy
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-my-internet-connection-not-working-after-using-the-proxy
+          - name: Why is proxy not intercepting requests from my .NET 4.8 app
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app
+          - name: Why is proxy not mocking my binary response
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-mocking-my-binary-response
+          - name: Why is the proxy saying that an option is unknown
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-the-proxy-saying-that-an-option-is-unknown
+          - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
+            href: /microsoft-cloud/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception
+          - name: Uninstall
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Uninstall
     - name: Reference
       href: /microsoft-cloud/dev/dev-proxy/technical-reference
     - name: Background
