@@ -56,7 +56,7 @@
        - name: Intercept requests
          items: 
          - name: Intercept requests from specific processes
-           href: /microsoft-cloud/dev/dev-proxy/how-to/Monitor-requests-from-specific-processes
+           href: /microsoft-cloud/dev/dev-proxy/how-to/Intercept-requests-from-specific-processes
          - name: Exclude a URL
            href: /microsoft-cloud/dev/dev-proxy/how-to/Exclude-a-URL
        - name: Mock responses
