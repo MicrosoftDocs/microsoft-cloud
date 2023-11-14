@@ -82,7 +82,8 @@ Enterprise users can also access Copilot in Bing with commercial data protection
 Learn more:
 - [Copilot in Bing](https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx)
 - [Copilot in Edge](https://www.microsoft.com/edge/features/bing-chat)
-- [Copilot with commercial data protection](/bing-chat-enterprise)
+- [Copilot with commercial data protection](/bing-chat-enterprise/overview)
+- [Privacy and protections](/bing-chat-enterprise/privacy-and-protections)
 
 ### Copilot in Microsoft Fabric
 
