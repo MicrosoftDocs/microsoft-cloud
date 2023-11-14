@@ -188,7 +188,6 @@
           - name: RetryAfterPlugin
             href: /microsoft-cloud/dev/dev-proxy/technical-reference/RetryAfterPlugin
     - name: Background
-      href: /microsoft-cloud/dev/dev-proxy/background-information
       items: 
         - name: What is throttling?
           href: /microsoft-cloud/dev/dev-proxy/background-information/what-is-throttling

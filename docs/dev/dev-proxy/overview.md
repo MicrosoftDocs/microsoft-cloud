@@ -20,7 +20,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Overview
+# Dev Proxy
 
 Simulate real world behaviors of Microsoft Graph and other APIs.
 
