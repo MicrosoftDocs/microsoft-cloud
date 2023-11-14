@@ -39,14 +39,12 @@
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
 - name: Dev Proxy
-  tocHref: /microsoft-cloud/dev/dev-proxy
-  topicHref: /microsoft-cloud/dev/dev-proxy/overview
   expanded: true
   items:
+    - name: Overview
+      href: /microsoft-cloud/dev/dev-proxy/overview
     - name: Get started
       items:
-       - name: Overview
-         href: /microsoft-cloud/dev/dev-proxy/get-started/index
        - name: Install
          href: /microsoft-cloud/dev/dev-proxy/get-started/installation
        - name: Using the proxy for the first time
@@ -55,10 +53,6 @@
          href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application
     - name: How-to
       items:
-       - name: Overview
-         href: /microsoft-cloud/dev/dev-proxy/how-to/index
-       - name: Get help and support
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Get-help-and-support
        - name: Monitor requests
          items: 
          - name: Monitor requests from specific processes
@@ -141,6 +135,8 @@
             href: /microsoft-cloud/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception
           - name: Uninstall
             href: /microsoft-cloud/dev/dev-proxy/how-to/Uninstall
+       - name: Get help and support
+         href: /microsoft-cloud/dev/dev-proxy/how-to/Get-help-and-support
     - name: Reference
       items: 
        - name: Console output ASCII icons
