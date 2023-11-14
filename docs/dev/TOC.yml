@@ -38,16 +38,16 @@
       href: https://aka.ms/PBISynapseWorkshop
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
-- name: Microsoft 365 Developer Proxy
+- name: Dev Proxy
   items:
     - name: Get started
-      href: /microsoft-cloud/dev/m365-developer-proxy/get-started
+      href: /microsoft-cloud/dev/dev-proxy/get-started
     - name: How-to
-      href: /microsoft-cloud/dev/m365-developer-proxy/how-to
+      href: /microsoft-cloud/dev/dev-proxy/how-to
     - name: Reference
-      href: /microsoft-cloud/dev/m365-developer-proxy/technical-reference
+      href: /microsoft-cloud/dev/dev-proxy/technical-reference
     - name: Background
-      href: /microsoft-cloud/dev/m365-developer-proxy/background-information
+      href: /microsoft-cloud/dev/dev-proxy/background-information
 
 - name: Related
   items:

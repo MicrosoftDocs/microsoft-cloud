@@ -64,15 +64,15 @@ landingContent:
           - text: Copilot for Dynamics 365
             url: copilot/copilot-for-dynamics365
             
-  - title: Build resilient applications with Microsoft 365 Developer Proxy 
+  - title: Build resilient applications with Dev Proxy
     linkLists:
       - linkListType: get-started
         links:
           - text: Get started
-            url: m365-developer-proxy/get-started/index.md
+            url: dev-proxy/get-started/index.md
           - text: How-to
-            url: m365-developer-proxy/how-to/index.md
+            url: dev-proxy/how-to/index.md
           - text: Reference
-            url: m365-developer-proxy/technical-reference/index.md
+            url: dev-proxy/technical-reference/index.md
           - text: Background
-            url: m365-developer-proxy/background-information/index.md
+            url: dev-proxy/background-information/index.md

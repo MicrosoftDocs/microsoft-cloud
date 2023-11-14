@@ -35,9 +35,9 @@ highlightedContent:
       url: /azure/cognitive-services/openai/concepts/prompt-engineering
 
     # Card
-    - title: Microsoft 365 Developer Proxy
+    - title: Dev Proxy
       itemType: overview
-      url: /microsoft-cloud/dev/m365-developer-proxy/overview.md
+      url: /microsoft-cloud/dev/dev-proxy/overview.md
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -259,9 +259,9 @@ additionalContent:
           url: https://pnp.github.io/cli-microsoft365/
 
         # Card
-        - title: Microsoft 365 Developer Proxy
-          summary: Microsoft 365 Developer Proxy is a command line tool for testing Microsoft Graph, SharePoint Online and any other HTTP APIs.
-          url: /microsoft-cloud/dev/m365-developer-proxy/overview.md
+        - title: Dev Proxy
+          summary: Dev Proxy is a command line tool for testing Microsoft Graph, SharePoint Online and any other HTTP APIs.
+          url: /microsoft-cloud/dev/dev-proxy/overview.md
 
         # Card
         - title: Microsoft Graph SDKs
