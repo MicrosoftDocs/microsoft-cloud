@@ -30,7 +30,8 @@ The `RateLimit-Limit` response header field indicates the request-quota associat
 
 If the client exceeds that limit, it might not be served.
 
-> ℹ️ By default the [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) is disabled. To enable the plugin, open the [devproxyrc](https://github.com/microsoft/dev-proxy/wiki/devproxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> [!NOTE]
+> By default the [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) is disabled. To enable the plugin, open the [devproxyrc](https://github.com/microsoft/dev-proxy/wiki/devproxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
 Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Microsoft Graph and SharePoint Online APIs.
 

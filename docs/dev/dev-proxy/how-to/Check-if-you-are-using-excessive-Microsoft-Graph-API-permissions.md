@@ -28,7 +28,8 @@ A common approach to security is to apply the principle of least privilege (PoLP
 
 To check if your app is using more permissions than it needs:
 
-> ℹ️ By default the `MinimalPermissionsGuidancePlugin` is disabled. To enable the plugin, open the `devproxyrc.json` file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> [!NOTE]
+> By default the `MinimalPermissionsGuidancePlugin` is disabled. To enable the plugin, open the `devproxyrc.json` file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
 1. [Start recording](./Record-and-export-proxy-activity.md).
 1. Use your app to issue requests as normal.

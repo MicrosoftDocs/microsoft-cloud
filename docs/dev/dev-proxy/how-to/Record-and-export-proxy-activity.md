@@ -38,7 +38,8 @@ There are two ways to stop recording:
 
 An execution summary report can be also generated when the recording is stopped.
 
-> ℹ️ By default the `ExecutionSummaryPlugin` is disabled. To enable the plugin, open the [devproxyrc](https://github.com/microsoft/dev-proxy/wiki/devproxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> [!NOTE]
+> By default the `ExecutionSummaryPlugin` is disabled. To enable the plugin, open the [devproxyrc](https://github.com/microsoft/dev-proxy/wiki/devproxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
 
 By default, the summary report is returned to the terminal output.
 

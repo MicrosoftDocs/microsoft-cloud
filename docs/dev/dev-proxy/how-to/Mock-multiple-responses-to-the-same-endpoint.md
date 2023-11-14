@@ -151,6 +151,5 @@ for request `GET https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-
 }
 ```
 
-> **Tip**
->
+> [!TIP]
 > As a rule of thumb, define the mocks with the longest (most specific) URLs first. Put mocks with shorter URLs and URLs with wildcards (less specific) towards the end of the array.

@@ -26,7 +26,8 @@ When applications use Microsoft Graph and other cloud services, it can happen, t
 
 Testing exceptions in APIs you don't manage is hard, because it's hard to make the API return a specific response. Using Dev Proxy, you can mimic erroneous responses from Microsoft Graph and test your application to see that it handles these errors properly.
 
-> ℹ️ The [GraphRandomErrorPlugin](../technical-reference/GraphRandomErrorPlugin.md) controls the behavior of returning random errors, in older releases of the proxy you may find that the `GraphRandomErrorPlugin` may not be in your [devproxyrc](../technical-reference/devproxyrc.md) file. Add the [plugin and configuration objects](../technical-reference/GraphRandomErrorPlugin.md) to your `devproxyrc` file. The plugin will be enabled the next time you start proxy.
+> [!TIP]
+> The [GraphRandomErrorPlugin](../technical-reference/GraphRandomErrorPlugin.md) controls the behavior of returning random errors. In older releases of the proxy you may find that the `GraphRandomErrorPlugin` may not be in your [devproxyrc.json](../technical-reference/devproxyrc.md) file. Add the [plugin and configuration objects](../technical-reference/GraphRandomErrorPlugin.md) to your `devproxyrc.json` file. The plugin will be enabled the next time you start proxy.
 
 To test your application, start the Dev Proxy:
 

@@ -158,7 +158,8 @@ In v0.12, we introduced support for mocking n-th request and extended the [respo
 
 Using the following mock file as an example, we can see that it contains two responses to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with a matching URL for the second time. For all other requests, proxy returns the second response.
 
-> ℹ️ Responses with the `nth` property should be first. Proxy uses responses based on the first match.
+> [!TIP]
+> Responses with the `nth` property should be first. Proxy uses responses based on the first match.
 
 ```json
 {
