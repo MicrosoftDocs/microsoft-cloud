@@ -191,9 +191,17 @@
             href: /microsoft-cloud/dev/dev-proxy/technical-reference/RateLimitingPlugin
           - name: RetryAfterPlugin
             href: /microsoft-cloud/dev/dev-proxy/technical-reference/RetryAfterPlugin
-
     - name: Background
       href: /microsoft-cloud/dev/dev-proxy/background-information
+      items: 
+        - name: What is throttling?
+          href: /microsoft-cloud/dev/dev-proxy/background-information/what-is-throttling
+        - name: How does proxy resolve relative paths?
+          href: /microsoft-cloud/dev/dev-proxy/background-information/resolve-relative-paths
+        - name: Does dev proxy upload any data to microsoft?
+          href: /microsoft-cloud/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft
+        - name: Plugin architecture
+          href: /microsoft-cloud/dev/dev-proxy/background-information/plugin-architecture
 
 - name: Related
   items:
