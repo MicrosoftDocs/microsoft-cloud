@@ -39,9 +39,17 @@
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
 - name: Dev Proxy
+  expanded: true
   items:
     - name: Get started
       href: /microsoft-cloud/dev/dev-proxy/get-started
+      items:
+       - name: Install
+         href: /microsoft-cloud/dev/dev-proxy/get-started/installation
+       - name: Using the proxy for the first time
+         href: /microsoft-cloud/dev/dev-proxy/get-started/using-the-proxy-for-the-first-time
+       - name: Test a JavaScript client-side web application
+         href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application
     - name: How-to
       href: /microsoft-cloud/dev/dev-proxy/how-to
     - name: Reference
