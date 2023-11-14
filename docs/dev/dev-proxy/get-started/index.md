@@ -22,13 +22,13 @@ ms.custom:
 
 # Get started with Dev Proxy
 
-The tutorial introduces you to the Dev Proxy and show you how to use its features.
+Follow this tutorial to install and configure Dev Proxy. Run Dev Proxy to test a sample client-side JavaScript application and see some of Dev Proxy features in action.
 
-It assumes you're comfortable with the command line and understand the basics of HTTP.
+This tutorial assumes you're comfortable with the command line and understand the basics of HTTP.
 
-1. [Installation](installation.md)
-1. [Using the proxy for the first time](using-the-proxy-for-the-first-time.md)
+1. [Install Dev Proxy](installation.md)
+1. [Configure Dev Proxy on first run](using-the-proxy-for-the-first-time.md)
 1. [Test a JavaScript client-side web application](test-a-javaScript-client-side-web-application.md)
 
 > [!div class="nextstepaction"]
-> [Install proxy](./installation.md)
+> [Install Dev Proxy](./installation.md)

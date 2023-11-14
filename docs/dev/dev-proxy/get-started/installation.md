@@ -34,9 +34,9 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 
 ## Make the proxy globally available
 
-Making the proxy globally available enables starting the proxy from any directory and project specific mock responses.
+If you make Dev Proxy globally available, you can start it from any directory and project on your machine.
 
-Updating the path differs across operating systems. Follow the next steps relevant to the operating system that you use.
+To make Dev Proxy globally available, add its folder to the system path. Updating the system path differs across operating systems. Follow the next steps relevant to the operating system that you use.
 
 ### [Windows](#tab/windows)
 

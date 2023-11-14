@@ -22,19 +22,18 @@ ms.custom:
 
 # Test a JavaScript client-side web application
 
-This step-by-step introduction is intended for beginners.
-
 > [!CAUTION]
-> It assumes that you have started the proxy on your machine before. If not, do that [now](./using-the-proxy-for-the-first-time.md).
+> This part of the tutorial assumes that you started Dev Proxy on your machine before. If not, do that [now](./using-the-proxy-for-the-first-time.md).
 
-You learn how to use the proxy against a sample JavaScript client-side web application that calls Microsoft Graph.
+Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 
 ## Before you begin
 
-You need:
+To follow this tutorial you need:
 
 - Microsoft 365 tenant.
 - Account with permissions to create Entra app registrations.
+- Node.js LTS.
 
 We recommend that you use a Microsoft 365 Developer Tenant with content packs installed.
 
@@ -56,12 +55,12 @@ git clone https://github.com/microsoft/dev-proxy.git
 
 Follow the instructions in [samples/readme.md](https://github.com/microsoft/dev-proxy/blob/main/samples/readme.md) to configure the app.
 
-## 2. Start the proxy
+## 2. Start Dev Proxy
 
 Open a terminal, enter `devproxy` and press <kbd>Enter</kbd>.
 
 > [!NOTE]
-> If you are using macOS, you will also need to enable the `Secure Web Proxy (HTTPS)` proxy on your network device.
+> If you're using macOS, you will also need to enable the `Secure Web Proxy (HTTPS)` proxy on your network device.
 
 ## 3. Launch the sample app
 
@@ -82,13 +81,13 @@ Select the `Login` button and complete the sign in flow.
 
 ![Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.](https://github.com/microsoft/dev-proxy/assets/11563347/216ffb03-c316-4ed7-9a63-760063853715)
 
-The proxy introduces faults into your application by intercepting requests to Microsoft Graph. It fails 50% of the requests with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
+Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
 
 View the proxy output and take a moment to refresh the sample app. See how the sample app handles (or not, in this case) the failures introduced by the proxy.
 
 ![Screenshot of the sample app running in Microsoft Edge. User avatars are not shown in the app. The Edge Developer Tools are open to the side with errors shown in the console log.](https://github.com/microsoft/dev-proxy/assets/11563347/7be45319-be7f-4244-8443-1eb0c28fd529)
 
-## 5. Stop the proxy
+## 5. Stop Dev Proxy
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the process.
 
@@ -100,4 +99,4 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the process.
 Now you’re ready to go on to the next step.
 
 > [!div class="nextstepaction"]
-> Take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.
+> [Explore how-to guides](../how-to/index.md)
