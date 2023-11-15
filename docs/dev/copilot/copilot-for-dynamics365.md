@@ -36,7 +36,7 @@ Learn more:
 - [How to AI-powered item marketing text with Copilot](/dynamics365/business-central/ai-overview)
 - [How to create AI-generated marketing text with Copilot](/dynamics365/business-central/item-marketing-text#create-ai-generated-marketing-text-preview-with-copilot)
 
-## Copilot in Dynamics 365 Customer Service
+## Copilot in Dynamics 365 Customer Service & Microsoft Copilot for Service
 
 Copilot in Dynamics 365 Customer Service empowers agents to deliver exceptional customer care. Dynamics 365 Copilot drafts contextual answers to queries in both chat and email, in addition to providing an interactive chat experience over knowledge bases and case history so this AI-powered expertise is always available to answer questions. We’re also making it easier for customer service departments to build virtual agents in minutes with conversation boosters in Power Virtual Agents, which harnesses the power of Azure OpenAI Service and Bing to provide answers from company websites and internal knowledge bases that you choose.
 
@@ -50,9 +50,17 @@ Copilot in Dynamics 365 Customer Service offers the following capabilities:
 - Draft a chat response
 - Ask a question about knowledge base sources and trusted domains
 
+Microsoft Copilot for Service offers the following capabilities:
+
+- Connect to existing contact center and CRM solutions, with out-of-the-box integrations for Dynamics 365, Salesforce, ServiceNow, and Zendesk
+- Quickly bring agents up to speed on email threads within Outlook by providing summaries, as well as accelerate responses to customers by providing draft emails
+- In Teams, agents can stay on top of meetings with customers or subject matter experts by viewing AI-powered meeting recaps with summaries of key discussion points, sentiment, and next steps
+- Agents can use Copilot to get the latest account and case information from CRM systems
+
 Learn more:
 
 - [Copilot in Dynamics 365 Customer Service](/dynamics365/customer-service/use-copilot-features)
+- [Microsoft Copilot for Service](https://cloudblogs.microsoft.com/dynamics365/it/2023/11/15/announcing-microsoft-copilot-for-service/)
 
 ## Copilot in Dynamics 365 Customer Insights
 
