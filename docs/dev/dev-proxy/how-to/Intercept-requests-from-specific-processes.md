@@ -3,7 +3,6 @@ title: Intercept requests from specific processes
 description: How to configure the proxy to intercept requests only from specific processes
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

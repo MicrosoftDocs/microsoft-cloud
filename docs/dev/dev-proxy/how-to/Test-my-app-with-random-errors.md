@@ -3,7 +3,6 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

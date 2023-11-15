@@ -3,7 +3,6 @@ title: Test that my application handles HTTP errors properly
 description: How to test that your application handles HTTP errors properly
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

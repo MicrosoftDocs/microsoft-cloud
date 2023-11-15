@@ -3,7 +3,6 @@ title: Refresh local Microsoft Graph database
 description: How to refresh the local Microsoft Graph database
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

@@ -3,7 +3,6 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

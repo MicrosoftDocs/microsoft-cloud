@@ -3,7 +3,6 @@ title: Record and export proxy activity
 description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

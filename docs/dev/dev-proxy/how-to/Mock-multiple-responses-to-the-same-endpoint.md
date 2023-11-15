@@ -3,7 +3,6 @@ title: Mock multiple responses to the same endpoint
 description: How to mock multiple responses to the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

@@ -3,7 +3,6 @@ title: Clear the output
 description: How to clear the terminal output
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

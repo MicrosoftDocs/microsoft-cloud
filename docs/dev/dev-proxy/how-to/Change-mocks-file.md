@@ -3,7 +3,6 @@ title: Change mocks file
 description: How to specify which mocks file to use
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

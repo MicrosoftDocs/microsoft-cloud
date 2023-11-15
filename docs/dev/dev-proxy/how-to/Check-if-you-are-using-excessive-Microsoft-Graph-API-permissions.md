@@ -3,7 +3,6 @@ title: Check if you are using excessive Microsoft Graph API permissions
 description: How to check if your app is using minimal Microsoft Graph API permissions
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

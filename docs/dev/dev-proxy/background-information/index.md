@@ -3,7 +3,6 @@ title: Background information
 description: Background information about the Dev Proxy and its functionality
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

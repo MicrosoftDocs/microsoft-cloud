@@ -3,7 +3,6 @@ title: Use preset configurations
 description: How to choose a preset configuration
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

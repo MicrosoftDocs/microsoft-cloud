@@ -3,7 +3,6 @@ title: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw a
 description: How to fix the type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception error
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

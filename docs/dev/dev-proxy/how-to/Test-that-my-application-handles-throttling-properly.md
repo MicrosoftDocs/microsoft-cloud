@@ -3,7 +3,6 @@ title: Test that my application handles throttling properly
 description: How to test that your application handles throttling properly
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

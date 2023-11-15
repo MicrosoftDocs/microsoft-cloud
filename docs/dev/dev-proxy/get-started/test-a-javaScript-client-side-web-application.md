@@ -3,7 +3,6 @@ title: Test a JavaScript client-side web application
 description: Sample scenario of testing a JavaScript client-side web application
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

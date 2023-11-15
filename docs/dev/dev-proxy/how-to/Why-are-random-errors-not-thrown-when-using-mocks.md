@@ -3,7 +3,6 @@ title: Why are random errors not thrown when using mocks
 description: How to fix proxy not throwing random errors when using mocks
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

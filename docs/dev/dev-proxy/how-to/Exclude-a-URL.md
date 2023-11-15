@@ -3,7 +3,6 @@ title: Exclude a URL
 description: How to configure URLs that proxy shouldn't intercept
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

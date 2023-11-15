@@ -3,7 +3,6 @@ title: Console output ASCII icons
 description: How to change console output to use ASCII icons
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

@@ -3,7 +3,6 @@ title: Detect minimal Microsoft Graph API permissions
 description: How to detect the minimal Microsoft Graph API permissions that your app requires
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

@@ -3,7 +3,6 @@ title: Update my application code to use Microsoft Graph JavaScript SDK
 description: How to update your application code to use the Microsoft Graph JavaScript SDK
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

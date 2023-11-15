@@ -3,7 +3,6 @@ title: Why do I keep getting 429 responses
 description: How to fix all requests failing with a 429 response
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

@@ -3,7 +3,6 @@ title: Overview
 description: Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs.
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

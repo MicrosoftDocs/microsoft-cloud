@@ -3,7 +3,6 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

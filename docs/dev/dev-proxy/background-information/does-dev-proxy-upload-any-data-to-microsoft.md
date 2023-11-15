@@ -3,7 +3,6 @@ title: Does Dev Proxy upload any data to Microsoft
 description: Does Dev Proxy upload any data to Microsoft
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers

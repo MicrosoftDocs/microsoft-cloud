@@ -3,7 +3,6 @@ title: What is throttling
 description: The concept of throttling in Microsoft 365 and other cloud services
 author: garrytrinder
 ms.author: garrytrinder
-ms.contributors: garrytrinder
 ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
