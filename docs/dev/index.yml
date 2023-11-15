@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 04/05/2023
+  ms.date: 11/15/2023
 
 landingContent:
   - title: Azure and Microsoft 365 Tutorials
@@ -54,5 +54,14 @@ landingContent:
             url: overview/create-run-secure-applications.md
           - text: Summary  
             url: overview/summary.md  
+
+  - title: Microsoft Copilots
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Adopt, extend and build Copilot experiences
+            url: copilot/overview
+          - text: Copilot for Dynamics 365
+            url: copilot/copilot-for-dynamics365
 
   
