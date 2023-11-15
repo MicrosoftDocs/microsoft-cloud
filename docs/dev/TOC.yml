@@ -14,6 +14,12 @@
     href: overview/create-run-secure-applications.md
   - name: Summary  
     href: overview/summary.md  
+- name: Copilot
+  items:
+  - name: Adopt, extend and build Copilot experiences 
+    href: copilot/overview
+  - name: Copilot for Dynamics 365
+    href: copilot/copilot-for-dynamics365
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
