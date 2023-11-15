@@ -37,7 +37,7 @@ highlightedContent:
     # Card
     - title: Dev Proxy
       itemType: overview
-      url: /microsoft-cloud/dev/dev-proxy/overview.md
+      url: /microsoft-cloud/dev/dev-proxy/overview
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -261,7 +261,7 @@ additionalContent:
         # Card
         - title: Dev Proxy
           summary: Dev Proxy is a command line tool for testing Microsoft Graph, SharePoint Online and any other HTTP APIs.
-          url: /microsoft-cloud/dev/dev-proxy/overview.md
+          url: /microsoft-cloud/dev/dev-proxy/overview
 
         # Card
         - title: Microsoft Graph SDKs
