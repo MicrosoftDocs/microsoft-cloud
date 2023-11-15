@@ -55,7 +55,7 @@ Use the `~appFolder` token in the file paths to ensure that the path is prepende
     "https://graph.microsoft.com/v1.0/*",
     ...
   ]
-},
+}
 ```
 
 The `~appFolder` token can be used in any path used by the proxy.

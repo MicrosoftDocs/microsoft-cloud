@@ -68,7 +68,7 @@ Open a new terminal and change to the `samples` directory.
 
 Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
 
-![Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'With SDK' and a secondary button with the text 'Without SDK'.](https://github.com/microsoft/dev-proxy/assets/11563347/b8652ac9-e685-4b2b-b7bf-16898a06f57b)
+:::image type="content" source="../media/test-app-js-welcome.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on macOS. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'With SDK' and a secondary button with the text 'Without SDK'.":::
 
 ## 4. Test the sample app
 
@@ -79,13 +79,13 @@ In the running app, select the `Without SDK` button.
 
 Select the `Login` button and complete the sign in flow.
 
-![Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.](https://github.com/microsoft/dev-proxy/assets/11563347/216ffb03-c316-4ed7-9a63-760063853715)
+:::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
 
 Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
 
 View the proxy output and take a moment to refresh the sample app. See how the sample app handles (or not, in this case) the failures introduced by the proxy.
 
-![Screenshot of the sample app running in Microsoft Edge. User avatars are not shown in the app. The Edge Developer Tools are open to the side with errors shown in the console log.](https://github.com/microsoft/dev-proxy/assets/11563347/7be45319-be7f-4244-8443-1eb0c28fd529)
+:::image type="content" source="../media/test-app-js-requests.png" alt-text="Screenshot of the sample app running in Microsoft Edge. User avatars are not shown in the app. The Edge Developer Tools are open to the side with errors shown in the console log.":::
 
 ## 5. Stop Dev Proxy
 
