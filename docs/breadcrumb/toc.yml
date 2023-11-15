@@ -14,7 +14,7 @@
       topicHref: /microsoft-cloud/dev/dev-proxy/how-to/index
     - name: Reference
       tocHref: /microsoft-cloud/dev/dev-proxy/technical-reference
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/technical-reference\index
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/technical-reference/index
     - name: Background
       tocHref: /microsoft-cloud/dev/dev-proxy/background-information
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/background-information\index
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/background-information/index
