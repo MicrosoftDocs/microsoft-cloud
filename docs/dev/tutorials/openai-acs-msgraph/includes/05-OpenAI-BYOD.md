@@ -69,10 +69,10 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
     :::image type="content" source="../media/cognitive-search-key.png" alt-text="Azure OpenAI Studio Cognitive Search Keys":::
 
-1. Select **Semantic search** in the left navigation menu and ensure that **Free** is selected. 
+1. Select **Semantic ranker** in the left navigation menu and ensure that **Free** is selected. 
 
     > [!NOTE]
-    > To check if semantic search is available in a specific region, [Check the Products Available by Region](https://azure.microsoft.com/global-infrastructure/services/?products=search) page on the Azure web site to see if your region is listed.
+    > To check if semantic ranker is available in a specific region, [Check the Products Available by Region](https://azure.microsoft.com/global-infrastructure/services/?products=search) page on the Azure web site to see if your region is listed.
 
 1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
