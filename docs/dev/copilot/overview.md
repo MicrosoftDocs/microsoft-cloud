@@ -168,7 +168,7 @@ Developers can also create plugins that use schemas to add custom functionality 
 Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
-- [Overview of Plugins for Microsoft Copilot](https://review.learn.microsoft.com/copilot-plugins/overview?branch=pr-en-us-1)
+- [Overview of Plugins for Microsoft Copilot](/copilot-plugins/overview)
 
 #### Extending with Microsoft Graph connectors
 
