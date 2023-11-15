@@ -42,163 +42,163 @@
   expanded: true
   items:
     - name: Overview
-      href: /microsoft-cloud/dev/dev-proxy/overview
+      href: /microsoft-cloud/dev/dev-proxy/overview.md
     - name: Get started
       items:
        - name: Install
-         href: /microsoft-cloud/dev/dev-proxy/get-started/installation
+         href: /microsoft-cloud/dev/dev-proxy/get-started/installation.md
        - name: Using the proxy for the first time
-         href: /microsoft-cloud/dev/dev-proxy/get-started/using-the-proxy-for-the-first-time
+         href: /microsoft-cloud/dev/dev-proxy/get-started/using-the-proxy-for-the-first-time.md
        - name: Test a JavaScript client-side web application
-         href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application
+         href: /microsoft-cloud/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application.md
     - name: How-to
       items:
        - name: Intercept requests
          items: 
          - name: Intercept requests from specific processes
-           href: /microsoft-cloud/dev/dev-proxy/how-to/Intercept-requests-from-specific-processes
+           href: /microsoft-cloud/dev/dev-proxy/how-to/Intercept-requests-from-specific-processes.md
          - name: Exclude a URL
-           href: /microsoft-cloud/dev/dev-proxy/how-to/Exclude-a-URL
+           href: /microsoft-cloud/dev/dev-proxy/how-to/Exclude-a-URL.md
        - name: Mock responses
          items: 
           - name: Mock responses
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses.md
           - name: Mock nth request
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-nth-request
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-nth-request.md
           - name: Mock responses that return binary data
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses-that-return-binary-data
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-responses-that-return-binary-data.md
           - name: Mock multiple responses to the same endpoint
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-multiple-responses-to-the-same-endpoint
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Mock-multiple-responses-to-the-same-endpoint.md
           - name: Change mocks file
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-mocks-file
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-mocks-file.md
        - name: Simulate errors
          items:
           - name: Test my app with random errors
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-my-app-with-random-errors
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-my-app-with-random-errors.md
           - name: Test that my application handles HTTP errors properly
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-HTTP-errors-properly
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-HTTP-errors-properly.md
           - name: Change request failure rate
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-request-failure-rate
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-request-failure-rate.md
           - name: Simulate errors from non Microsoft 365 APIs
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-errors-from-non-Microsoft-365-APIs
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-errors-from-non-Microsoft-365-APIs.md
        - name: Simulate behaviors
          items: 
           - name: Test that my application handles throttling properly
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-throttling-properly
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Test-that-my-application-handles-throttling-properly.md
           - name: Simulate Rate Limit API responses
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-Rate-Limit-API-responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-Rate-Limit-API-responses.md
           - name: Simulate slow API responses
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-slow-API-responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Simulate-slow-API-responses.md
        - name: Minimal permissions
          items:
           - name: Detect minimal Microsoft Graph API permissions
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions.md
           - name: Check if you are using excessive Microsoft Graph API permissions
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md
        - name: Record
          items: 
           - name: Record and export proxy activity
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Record-and-export-proxy-activity
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Record-and-export-proxy-activity.md
        - name: Improve my app
          items: 
           - name: Update my application code to use Microsoft Graph JavaScript SDK
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
        - name: Presets
          items: 
           - name: Use preset configurations
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Use-preset-configurations
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Use-preset-configurations.md
        - name: Change settings
          items: 
           - name: Change console output to use icons
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-console-output-to-use-icons
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-console-output-to-use-icons.md
           - name: Change logging level
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-logging-level
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Change-logging-level.md
           - name: Clear the output
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Clear-the-output
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Clear-the-output.md
           - name: Refresh local Microsoft Graph database
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Refresh-local-Microsoft-Graph-database
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Refresh-local-Microsoft-Graph-database.md
        - name: Common problems
          items: 
           - name: No random errors are thrown when using mocks
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-are-random-errors-not-thrown-when-using-mocks
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-are-random-errors-not-thrown-when-using-mocks.md
           - name: All requests fail with gateway timeout
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-all-requests-fail-with-gateway-timeout
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-all-requests-fail-with-gateway-timeout.md
           - name: All requests fail with 429 responses
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-I-keep-getting-429-responses
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-do-I-keep-getting-429-responses.md
           - name: No internet connection after using the proxy
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-my-internet-connection-not-working-after-using-the-proxy
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-my-internet-connection-not-working-after-using-the-proxy.md
           - name: No requests are intercepted from my .NET 4.8 app
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md
           - name: Binary responses are not mocked
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-mocking-my-binary-response
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-proxy-not-mocking-my-binary-response.md
           - name: Options are not recognized
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-the-proxy-saying-that-an-option-is-unknown
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Why-is-the-proxy-saying-that-an-option-is-unknown.md
           - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
-            href: /microsoft-cloud/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception
+            href: /microsoft-cloud/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md
           - name: Uninstall
-            href: /microsoft-cloud/dev/dev-proxy/how-to/Uninstall
+            href: /microsoft-cloud/dev/dev-proxy/how-to/Uninstall.md
        - name: Get help and support
-         href: /microsoft-cloud/dev/dev-proxy/how-to/Get-help-and-support
+         href: /microsoft-cloud/dev/dev-proxy/how-to/Get-help-and-support.md
     - name: Reference
       items: 
        - name: Console output ASCII icons
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-ASCII-icons
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-ASCII-icons.md
        - name: Console output text labels
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-text-labels
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Console-output-text-labels.md
        - name: devproxyrc
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/devproxyrc
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/devproxyrc.md
        - name: Keyboard shortcuts
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Keyboard-shortcuts
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Keyboard-shortcuts.md
        - name: Proxy settings
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Proxy-settings
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Proxy-settings.md
        - name: Response object
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Response-object
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Response-object.md
        - name: Supported HTTP error status codes
-         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Supported-HTTP-error-status-codes
+         href: /microsoft-cloud/dev/dev-proxy/technical-reference/Supported-HTTP-error-status-codes.md
        - name: Plugins
          items: 
           - name: CachingGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/CachingGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/CachingGuidancePlugin.md
           - name: ExecutionSummaryPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ExecutionSummaryPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ExecutionSummaryPlugin.md
           - name: GenericRandomErrorPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GenericRandomErrorPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GenericRandomErrorPlugin.md
           - name: GraphBetaSupportGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphBetaSupportGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphBetaSupportGuidancePlugin.md
           - name: GraphClientRequestIdGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphClientRequestIdGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphClientRequestIdGuidancePlugin.md
           - name: GraphMockResponsePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphMockResponsePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphMockResponsePlugin.md
           - name: GraphRandomErrorPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphRandomErrorPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphRandomErrorPlugin.md
           - name: GraphSdkGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSdkGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSdkGuidancePlugin.md
           - name: GraphSelectGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSelectGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/GraphSelectGuidancePlugin.md
           - name: LatencyPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/LatencyPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/LatencyPlugin.md
           - name: MinimalPermissionsGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin.md
           - name: MinimalPermissionsPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MinimalPermissionsPlugin.md
           - name: MockResponsePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MockResponsePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/MockResponsePlugin.md
           - name: ODataPagingGuidancePlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ODataPagingGuidancePlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/ODataPagingGuidancePlugin.md
           - name: RateLimitingPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RateLimitingPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RateLimitingPlugin.md
           - name: RetryAfterPlugin
-            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RetryAfterPlugin
+            href: /microsoft-cloud/dev/dev-proxy/technical-reference/RetryAfterPlugin.md
     - name: Background
       items: 
         - name: What is throttling?
-          href: /microsoft-cloud/dev/dev-proxy/background-information/what-is-throttling
+          href: /microsoft-cloud/dev/dev-proxy/background-information/what-is-throttling.md
         - name: How does proxy resolve relative paths?
-          href: /microsoft-cloud/dev/dev-proxy/background-information/resolve-relative-paths
+          href: /microsoft-cloud/dev/dev-proxy/background-information/resolve-relative-paths.md
         - name: Does dev proxy upload any data to microsoft?
-          href: /microsoft-cloud/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft
+          href: /microsoft-cloud/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md
         - name: Plugin architecture
-          href: /microsoft-cloud/dev/dev-proxy/background-information/plugin-architecture
+          href: /microsoft-cloud/dev/dev-proxy/background-information/plugin-architecture.md
 
 - name: Related
   items:
