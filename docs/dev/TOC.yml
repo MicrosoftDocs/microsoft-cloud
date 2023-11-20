@@ -38,6 +38,168 @@
       href: https://aka.ms/PBISynapseWorkshop
     - name: Transform your Business Applications with Fusion Development
       href: /training/paths/transform-business-applications-with-fusion-development/
+- name: Dev Proxy
+  expanded: true
+  items:
+    - name: Overview
+      href: dev-proxy/overview.md
+    - name: Get started
+      items:
+       - name: Install
+         href: dev-proxy/get-started/installation.md
+       - name: Using the proxy for the first time
+         href: dev-proxy/get-started/using-the-proxy-for-the-first-time.md
+       - name: Test a JavaScript client-side web application
+         href: dev-proxy/get-started/test-a-javaScript-client-side-web-application.md
+    - name: How-to
+      items:
+       - name: Intercept requests
+         items: 
+         - name: Intercept requests from specific processes
+           href: dev-proxy/how-to/Intercept-requests-from-specific-processes.md
+         - name: Exclude a URL
+           href: dev-proxy/how-to/Exclude-a-URL.md
+       - name: Mock responses
+         items: 
+          - name: Mock responses
+            href: dev-proxy/how-to/Mock-responses.md
+          - name: Mock nth request
+            href: dev-proxy/how-to/Mock-nth-request.md
+          - name: Mock responses that return binary data
+            href: dev-proxy/how-to/Mock-responses-that-return-binary-data.md
+          - name: Mock multiple responses to the same endpoint
+            href: dev-proxy/how-to/Mock-multiple-responses-to-the-same-endpoint.md
+          - name: Change mocks file
+            href: dev-proxy/how-to/Change-mocks-file.md
+       - name: Simulate errors
+         items:
+          - name: Test my app with random errors
+            href: dev-proxy/how-to/Test-my-app-with-random-errors.md
+          - name: Test that my application handles HTTP errors properly
+            href: dev-proxy/how-to/Test-that-my-application-handles-HTTP-errors-properly.md
+          - name: Change request failure rate
+            href: dev-proxy/how-to/Change-request-failure-rate.md
+          - name: Simulate errors from non Microsoft 365 APIs
+            href: dev-proxy/how-to/Simulate-errors-from-non-Microsoft-365-APIs.md
+       - name: Simulate behaviors
+         items: 
+          - name: Test that my application handles throttling properly
+            href: dev-proxy/how-to/Test-that-my-application-handles-throttling-properly.md
+          - name: Simulate Rate Limit API responses
+            href: dev-proxy/how-to/Simulate-Rate-Limit-API-responses.md
+          - name: Simulate slow API responses
+            href: dev-proxy/how-to/Simulate-slow-API-responses.md
+       - name: Minimal permissions
+         items:
+          - name: Detect minimal Microsoft Graph API permissions
+            href: dev-proxy/how-to/Detect-minimal-Microsoft-Graph-API-permissions.md
+          - name: Check if you are using excessive Microsoft Graph API permissions
+            href: dev-proxy/how-to/Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md
+       - name: Record
+         items: 
+          - name: Record and export proxy activity
+            href: dev-proxy/how-to/Record-and-export-proxy-activity.md
+       - name: Improve my app
+         items: 
+          - name: Update my application code to use Microsoft Graph JavaScript SDK
+            href: dev-proxy/how-to/Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
+       - name: Presets
+         items: 
+          - name: Use preset configurations
+            href: dev-proxy/how-to/Use-preset-configurations.md
+       - name: Change settings
+         items: 
+          - name: Change console output to use icons
+            href: dev-proxy/how-to/Change-console-output-to-use-icons.md
+          - name: Change logging level
+            href: dev-proxy/how-to/Change-logging-level.md
+          - name: Clear the output
+            href: dev-proxy/how-to/Clear-the-output.md
+          - name: Refresh local Microsoft Graph database
+            href: dev-proxy/how-to/Refresh-local-Microsoft-Graph-database.md
+       - name: Common problems
+         items: 
+          - name: No random errors are thrown when using mocks
+            href: dev-proxy/how-to/Why-are-random-errors-not-thrown-when-using-mocks.md
+          - name: All requests fail with gateway timeout
+            href: dev-proxy/how-to/Why-do-all-requests-fail-with-gateway-timeout.md
+          - name: All requests fail with 429 responses
+            href: dev-proxy/how-to/Why-do-I-keep-getting-429-responses.md
+          - name: No internet connection after using the proxy
+            href: dev-proxy/how-to/Why-is-my-internet-connection-not-working-after-using-the-proxy.md
+          - name: No requests are intercepted from my .NET 4.8 app
+            href: dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md
+          - name: Binary responses are not mocked
+            href: dev-proxy/how-to/Why-is-proxy-not-mocking-my-binary-response.md
+          - name: Options are not recognized
+            href: dev-proxy/how-to/Why-is-the-proxy-saying-that-an-option-is-unknown.md
+          - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
+            href: dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md
+          - name: Uninstall
+            href: dev-proxy/how-to/Uninstall.md
+       - name: Get help and support
+         href: dev-proxy/how-to/Get-help-and-support.md
+    - name: Reference
+      items: 
+       - name: Console output ASCII icons
+         href: dev-proxy/technical-reference/Console-output-ASCII-icons.md
+       - name: Console output text labels
+         href: dev-proxy/technical-reference/Console-output-text-labels.md
+       - name: devproxyrc
+         href: dev-proxy/technical-reference/devproxyrc.md
+       - name: Keyboard shortcuts
+         href: dev-proxy/technical-reference/Keyboard-shortcuts.md
+       - name: Proxy settings
+         href: dev-proxy/technical-reference/Proxy-settings.md
+       - name: Response object
+         href: dev-proxy/technical-reference/Response-object.md
+       - name: Supported HTTP error status codes
+         href: dev-proxy/technical-reference/Supported-HTTP-error-status-codes.md
+       - name: Plugins
+         items: 
+          - name: CachingGuidancePlugin
+            href: dev-proxy/technical-reference/CachingGuidancePlugin.md
+          - name: ExecutionSummaryPlugin
+            href: dev-proxy/technical-reference/ExecutionSummaryPlugin.md
+          - name: GenericRandomErrorPlugin
+            href: dev-proxy/technical-reference/GenericRandomErrorPlugin.md
+          - name: GraphBetaSupportGuidancePlugin
+            href: dev-proxy/technical-reference/GraphBetaSupportGuidancePlugin.md
+          - name: GraphClientRequestIdGuidancePlugin
+            href: dev-proxy/technical-reference/GraphClientRequestIdGuidancePlugin.md
+          - name: GraphMockResponsePlugin
+            href: dev-proxy/technical-reference/GraphMockResponsePlugin.md
+          - name: GraphRandomErrorPlugin
+            href: dev-proxy/technical-reference/GraphRandomErrorPlugin.md
+          - name: GraphSdkGuidancePlugin
+            href: dev-proxy/technical-reference/GraphSdkGuidancePlugin.md
+          - name: GraphSelectGuidancePlugin
+            href: dev-proxy/technical-reference/GraphSelectGuidancePlugin.md
+          - name: LatencyPlugin
+            href: dev-proxy/technical-reference/LatencyPlugin.md
+          - name: MinimalPermissionsGuidancePlugin
+            href: dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin.md
+          - name: MinimalPermissionsPlugin
+            href: dev-proxy/technical-reference/MinimalPermissionsPlugin.md
+          - name: MockResponsePlugin
+            href: dev-proxy/technical-reference/MockResponsePlugin.md
+          - name: ODataPagingGuidancePlugin
+            href: dev-proxy/technical-reference/ODataPagingGuidancePlugin.md
+          - name: RateLimitingPlugin
+            href: dev-proxy/technical-reference/RateLimitingPlugin.md
+          - name: RetryAfterPlugin
+            href: dev-proxy/technical-reference/RetryAfterPlugin.md
+    - name: Background
+      items: 
+        - name: What is throttling?
+          href: dev-proxy/background-information/what-is-throttling.md
+        - name: How does proxy resolve relative paths?
+          href: dev-proxy/background-information/resolve-relative-paths.md
+        - name: Does dev proxy upload any data to microsoft?
+          href: dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md
+        - name: Plugin architecture
+          href: dev-proxy/background-information/plugin-architecture.md
+
 - name: Related
   items:
     - name: Azure Architecture Center 

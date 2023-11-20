@@ -55,7 +55,7 @@ landingContent:
           - text: Summary  
             url: overview/summary.md  
 
-  - title: Microsoft Copilots
+  - title: Copilot
     linkLists:
       - linkListType: get-started
         links:
@@ -63,5 +63,18 @@ landingContent:
             url: copilot/overview
           - text: Copilot for Dynamics 365
             url: copilot/copilot-for-dynamics365
-
-  
+            
+  - title: Build resilient applications with Dev Proxy
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Introduction
+            url: dev-proxy/overview.md
+          - text: Get started
+            url: dev-proxy/get-started/index.md
+          - text: How-to
+            url: dev-proxy/how-to/index.md
+          - text: Reference
+            url: dev-proxy/technical-reference/index.md
+          - text: Background
+            url: dev-proxy/background-information/index.md
