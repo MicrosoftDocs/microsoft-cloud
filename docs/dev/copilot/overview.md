@@ -172,6 +172,7 @@ Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
 - [Overview of Plugins for Microsoft Copilot](/copilot-plugins/overview)
+- [Copilot for Microsoft 365 Copilot Plugins Samples](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft%20365%20Copilot)
 
 #### Extending with Microsoft Graph connectors
 
