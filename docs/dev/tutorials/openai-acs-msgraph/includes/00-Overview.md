@@ -16,7 +16,7 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 ### What You'll Build in this Tutorial
 
->[!VIDEO https://www.youtube.com/watch?v=qe3oAQEhGuA]
+>[!VIDEO https://www.youtube.com/embed/qe3oAQEhGuA]
 
 ### Choose Your Own Adventure
 
