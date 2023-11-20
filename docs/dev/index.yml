@@ -55,7 +55,7 @@ landingContent:
           - text: Summary  
             url: overview/summary.md  
 
-  - title: Microsoft Copilots
+  - title: Copilot
     linkLists:
       - linkListType: get-started
         links:
