@@ -14,6 +14,10 @@ The application is a simple customer management app that allows users to manage 
 
 The tutorial will walk you through the process of setting up the required Azure and Microsoft 365 resources. It'll also walk you through the code that is used to implement the AI, communication, and organizational data features. While you won't be required to copy and paste code, some of the exercises will have you modify code to try out different scenarios.
 
+### What You'll Build in this Tutorial
+
+>[!VIDEO https://www.youtube.com/watch?v=qe3oAQEhGuA]
+
 ### Choose Your Own Adventure
 
 You can complete the entire tutorial from start to finish or complete specific topics of interest you. The tutorial is broken down into the following topic areas:
