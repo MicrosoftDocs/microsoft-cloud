@@ -172,6 +172,7 @@ Learn more:
 - [Power Platform Connectors Overview](/connectors/connectors)
 - [Create a Custom Power Platform Connector from Scratch](/connectors/custom-connectors/define-blank)
 - [Overview of Plugins for Microsoft Copilot](/copilot-plugins/overview)
+- [Copilot for Microsoft 365 Copilot Plugins Samples](https://adoption.microsoft.com/sample-solution-gallery/?keyword=&sort-by=updateDateTime-true&page=1&product=Microsoft%20365%20Copilot)
 
 #### Extending with Microsoft Graph connectors
 
@@ -186,6 +187,7 @@ Microsoft Graph connectors import external content into Microsoft 365. Once the 
 Learn more:
 - [Build your First Custom Microsoft Graph Connector](/graph/connecting-external-content-build-quickstart)
 - [Publish your Custom Microsoft Graph Connector](/graph/custom-connector-sdk-sample-publish)
+- [Microsoft Graph Connectors Samples](https://aka.ms/gc/samples)
 
 #### Extending with message extensions
 
@@ -194,6 +196,7 @@ Message extensions allow users to interact with enterprise services through Micr
 Learn more:
 - [Message Extensions Overview](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
 - [Build Message Extensions using Bot Framework](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
+- [Northwind Inventory Plugin for Copilot for Microsoft 365](https://adoption.microsoft.com/sample-solution-gallery/sample/officedev-copilot-for-m365-plugins-samples-msgext-northwind-inventory-ts/)
 
 ### Extending with Microsoft Copilot Studio
 
