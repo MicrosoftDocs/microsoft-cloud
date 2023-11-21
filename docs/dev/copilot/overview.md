@@ -239,3 +239,4 @@ In addition to extending Copilot for Microsoft 365, Microsoft Copilot Studio ena
 
 Learn more:
 - [Microsoft Copilot Studio Overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
+- [Quickstart: Create and deploy a Microsoft Copilot Studio Copilot](/microsoft-copilot-studio/fundamentals-get-started)
