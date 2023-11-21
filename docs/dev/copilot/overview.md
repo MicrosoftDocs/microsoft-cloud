@@ -227,6 +227,7 @@ Learn more:
 
 Accelerators and samples are available to help you get started building a custom copilot that integrates with your own data and applications.
 
+Learn more:
 - ["Chat with your data" Solution Accelerator](https://github.com/azure-samples/chat-with-your-data-solution-accelerator)
 - [Azure Chat Solution Accelerator powered by Azure Open AI Service](https://github.com/microsoft/azurechat)
 - [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
