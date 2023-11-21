@@ -218,6 +218,7 @@ Companies can integrate their own data with Azure OpenAI models to create an adv
 :::image type="content" source="media/chat-with-your-data.png" alt-text="A diagram showing how Cognitive Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
 
 Learn more:
+- [Azure AI Services Documentation, Samples, and Resources](/azure/developer/intro/azure-ai-for-developers?pivots=python)
 - [Azure AI Studio Documentation](/azure/ai-studio)
 - [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
@@ -226,6 +227,7 @@ Learn more:
 
 Accelerators and samples are available to help you get started building a custom copilot that integrates with your own data and applications.
 
+Learn more:
 - ["Chat with your data" Solution Accelerator](https://github.com/azure-samples/chat-with-your-data-solution-accelerator)
 - [Azure Chat Solution Accelerator powered by Azure Open AI Service](https://github.com/microsoft/azurechat)
 - [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
@@ -237,3 +239,4 @@ In addition to extending Copilot for Microsoft 365, Microsoft Copilot Studio ena
 
 Learn more:
 - [Microsoft Copilot Studio Overview](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
+- [Quickstart: Create and deploy a Microsoft Copilot Studio Copilot](/microsoft-copilot-studio/fundamentals-get-started)
