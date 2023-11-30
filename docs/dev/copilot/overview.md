@@ -48,6 +48,7 @@ Microsoft offers a variety of Copilot assistants that can be adopted to enhance 
 
 Copilot assistants discussed in this section include:
 - [Microsoft Copilot](#microsoft-copilot)
+- [Copilot for Azure](#copilot-for-azure)
 - [Copilot for Dynamics 365](#copilot-for-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
@@ -56,7 +57,6 @@ Copilot assistants discussed in this section include:
 - [Copilot in Windows](#copilot-in-windows)
 - [GitHub Copilot](#github-copilot)
 - [Microsoft Security Copilot](#microsoft-security-copilot)
-- [Copilot for Azure](#copilot-for-azure)
 
 ### Microsoft Copilot
  
