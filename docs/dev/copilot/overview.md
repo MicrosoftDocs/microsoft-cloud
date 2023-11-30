@@ -56,6 +56,7 @@ Copilot assistants discussed in this section include:
 - [Copilot in Windows](#copilot-in-windows)
 - [GitHub Copilot](#github-copilot)
 - [Microsoft Security Copilot](#microsoft-security-copilot)
+- [Copilot for Azure](#copilot-for-azure)
 
 ### Microsoft Copilot
  
@@ -142,6 +143,13 @@ Microsoft Security Copilot is an AI-powered security analysis tool that empowers
 
 Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
+
+### Copilot for Azure
+
+Microsoft Copilot for Azure helps you design, operate, optimize, and troubleshoot your cloud infrastructure and services. Combining the power of cutting-edge large language models (LLMs) with the Azure Resource Model, Copilot for Azure enables rich understanding and management of everything that’s happening in Azure, from the cloud to the edge.
+
+Learn More:
+- [Microsoft Copilot for Azure](/azure/copilot/overview)
 
 ## Extend Copilot
 
