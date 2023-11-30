@@ -71,6 +71,13 @@ Learn more:
 - [Copilot with commercial data protection](/bing-chat-enterprise/overview)
 - [Privacy and protections](/bing-chat-enterprise/privacy-and-protections)
 
+### Copilot for Azure
+
+Microsoft Copilot for Azure helps you design, operate, optimize, and troubleshoot your cloud infrastructure and services. Combining the power of cutting-edge large language models (LLMs) with the Azure Resource Model, Copilot for Azure enables rich understanding and management of everything that’s happening in Azure, from the cloud to the edge.
+
+Learn More:
+- [Microsoft Copilot for Azure](/azure/copilot/overview)
+
 ### Copilot for Dynamics 365
 
 Copilot for Dynamics 365 provides AI assistance to boost the productivity and efficiency of sales, support, supply chain management, finance, marketing and other teams involved with your business operations. It provides a chat interface for quick summaries of sales opportunities and leads, updates, meeting preparations, account-related news, and much more. Users can seamlessly integrate Copilot with Outlook and Teams for better data management and utilize its generative AI capabilities for record summarization and email content generation. 
@@ -143,13 +150,6 @@ Microsoft Security Copilot is an AI-powered security analysis tool that empowers
 
 Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
-
-### Copilot for Azure
-
-Microsoft Copilot for Azure helps you design, operate, optimize, and troubleshoot your cloud infrastructure and services. Combining the power of cutting-edge large language models (LLMs) with the Azure Resource Model, Copilot for Azure enables rich understanding and management of everything that’s happening in Azure, from the cloud to the edge.
-
-Learn More:
-- [Microsoft Copilot for Azure](/azure/copilot/overview)
 
 ## Extend Copilot
 
