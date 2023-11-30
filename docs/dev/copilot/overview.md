@@ -48,6 +48,7 @@ Microsoft offers a variety of Copilot assistants that can be adopted to enhance 
 
 Copilot assistants discussed in this section include:
 - [Microsoft Copilot](#microsoft-copilot)
+- [Copilot for Azure](#copilot-for-azure)
 - [Copilot for Dynamics 365](#copilot-for-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
@@ -69,6 +70,13 @@ Learn more:
 - [Microsoft Copilot](https://copilot.microsoft.com)
 - [Copilot with commercial data protection](/bing-chat-enterprise/overview)
 - [Privacy and protections](/bing-chat-enterprise/privacy-and-protections)
+
+### Copilot for Azure
+
+Copilot for Azure helps you design, operate, optimize, and troubleshoot your cloud infrastructure and services. Combining the power of cutting-edge large language models (LLMs) with the Azure Resource Model, Copilot for Azure enables rich understanding and management of everything that’s happening in Azure, from the cloud to the edge.
+
+Learn More:
+- [Microsoft Copilot for Azure](/azure/copilot/overview)
 
 ### Copilot for Dynamics 365
 
