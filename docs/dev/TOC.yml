@@ -45,6 +45,8 @@
       href: dev-proxy/overview.md
     - name: Get started
       items:
+       - name: Overview
+         href: dev-proxy/get-started/overview.md
        - name: Install
          href: dev-proxy/get-started/installation.md
        - name: Using the proxy for the first time
@@ -53,6 +55,8 @@
          href: dev-proxy/get-started/test-a-javaScript-client-side-web-application.md
     - name: How-to
       items:
+       - name: Overview
+         href: dev-proxy/how-to/Overview.md
        - name: Intercept requests
          items: 
          - name: Intercept requests from specific processes
@@ -141,16 +145,24 @@
          href: dev-proxy/how-to/Get-help-and-support.md
     - name: Reference
       items: 
+       - name: Overview
+         href: dev-proxy/technical-reference/Overview.md
        - name: Console output ASCII icons
          href: dev-proxy/technical-reference/Console-output-ASCII-icons.md
        - name: Console output text labels
          href: dev-proxy/technical-reference/Console-output-text-labels.md
        - name: devproxyrc
          href: dev-proxy/technical-reference/devproxyrc.md
-       - name: Keyboard shortcuts
-         href: dev-proxy/technical-reference/Keyboard-shortcuts.md
+       - name: Does dev proxy upload any data to microsoft?
+         href: dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md
+       - name: How does proxy resolve relative paths?
+         href: dev-proxy/background-information/resolve-relative-paths.md
+       - name: Plugin architecture
+         href: dev-proxy/background-information/plugin-architecture.md
        - name: Proxy settings
          href: dev-proxy/technical-reference/Proxy-settings.md
+       - name: Keyboard shortcuts
+         href: dev-proxy/technical-reference/Keyboard-shortcuts.md
        - name: Response object
          href: dev-proxy/technical-reference/Response-object.md
        - name: Supported HTTP error status codes
@@ -189,16 +201,6 @@
             href: dev-proxy/technical-reference/RateLimitingPlugin.md
           - name: RetryAfterPlugin
             href: dev-proxy/technical-reference/RetryAfterPlugin.md
-    - name: Background
-      items: 
-        - name: What is throttling?
-          href: dev-proxy/background-information/what-is-throttling.md
-        - name: How does proxy resolve relative paths?
-          href: dev-proxy/background-information/resolve-relative-paths.md
-        - name: Does dev proxy upload any data to microsoft?
-          href: dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md
-        - name: Plugin architecture
-          href: dev-proxy/background-information/plugin-architecture.md
 
 - name: Related
   items:

@@ -76,5 +76,3 @@ landingContent:
             url: dev-proxy/how-to/index.md
           - text: Reference
             url: dev-proxy/technical-reference/index.md
-          - text: Background
-            url: dev-proxy/background-information/index.md

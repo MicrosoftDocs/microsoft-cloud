@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
@@ -21,26 +21,35 @@ ms.custom:
 
 # Technical reference
 
+- [Does Dev Proxy upload any data to Microsoft](./does-dev-proxy-upload-any-data-to-microsoft.md)
 - [devproxyrc](./devproxyrc.md)
-- [Proxy settings](./Proxy-settings.md)
 - [Console output text labels](./Console-output-text-labels.md)
 - [Console output ASCII icons](./Console-output-ASCII-icons.md)
+- [How does proxy resolve relative paths?](./resolve-relative-paths.md)
+- [Keyboard shortcuts](./Keyboard-shortcuts.md)
+- [Plugin architecture](./plugin-architecture.md)
+- [Proxy settings](./Proxy-settings.md)
 - [Response object](./Response-object.md)
 - [Supported HTTP error status codes](./Supported-HTTP-error-status-codes.md)
-- [Keyboard shortcuts](./Keyboard-shortcuts.md)
+
+## Plugins
+
 - [CachingGuidancePlugin](./CachingGuidancePlugin.md)
 - [ExecutionSummaryPlugin](./ExecutionSummaryPlugin.md)
 - [GenericRandomErrorPlugin](./GenericRandomErrorPlugin.md)
-- [GraphBetaSupportGuidancePlugin](./GraphBetaSupportGuidancePlugin.md)
-- [GraphClientRequestIdGuidancePlugin](./GraphClientRequestIdGuidancePlugin.md)
-- [GraphRandomErrorPlugin](./GraphRandomErrorPlugin.md)
-- [GraphSdkGuidancePlugin](./GraphSdkGuidancePlugin.md)
-- [GraphSelectGuidancePlugin](./GraphSelectGuidancePlugin.md)
-- [MinimalPermissionsGuidancePlugin](./MinimalPermissionsGuidancePlugin.md)
-- [MinimalPermissionsPlugin](./MinimalPermissionsPlugin.md)
+- [LatencyPlugin](./LatencyPlugin.md)
 - [MockResponsePlugin](./MockResponsePlugin.md)
 - [ODataPagingGuidancePlugin](./ODataPagingGuidancePlugin.md)
 - [RateLimitingPlugin](./RateLimitingPlugin.md)
 - [RetryAfterPlugin](./RetryAfterPlugin.md)
-- [LatencyPlugin](./LatencyPlugin.md)
+
+### Microsoft Graph Plugins
+
+- [GraphBetaSupportGuidancePlugin](./GraphBetaSupportGuidancePlugin.md)
+- [GraphClientRequestIdGuidancePlugin](./GraphClientRequestIdGuidancePlugin.md)
+- [GraphRandomErrorPlugin](./GraphRandomErrorPlugin.md)
 - [GraphMockResponsePlugin](./GraphMockResponsePlugin.md)
+- [GraphSdkGuidancePlugin](./GraphSdkGuidancePlugin.md)
+- [GraphSelectGuidancePlugin](./GraphSelectGuidancePlugin.md)
+- [MinimalPermissionsPlugin](./MinimalPermissionsPlugin.md)
+- [MinimalPermissionsGuidancePlugin](./MinimalPermissionsGuidancePlugin.md)
