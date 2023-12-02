@@ -12,11 +12,11 @@ In this exercise you will:
 
 ### Create an Azure OpenAI Service Resource
 
-1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
+1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type *openai* in the **search bar** at the top of the portal page and select **Azure OpenAI** from the options that appear.
 
-    :::image type="content" source="../media/search-openai-portal.png" alt-text="Azure OpenAI Service in the Azure Portal":::
+    :::image type="content" source="../media/search-openai-portal.png" alt-text="Azure OpenAI Service in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 

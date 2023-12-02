@@ -40,7 +40,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Under the **Select Azure Blob storage resource** dropdown, select **Create a new Azure Blob storage resource**.
 
-1. This will take you to the Azure Portal where you can perform the following tasks:
+1. This will take you to the Azure portal where you can perform the following tasks:
 
     - Enter a unique name for the storage account such as **byodstorage[Your Last Name]**.
     - Select a region that's close to your location.
@@ -54,7 +54,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Under the **Select Azure Cognitive Search resource** dropdown, select **Create a new Azure Cognitive Search resource**.
 
-1. This will take you back to the Azure Portal where you can perform the following tasks:
+1. This will take you back to the Azure portal where you can perform the following tasks:
 
     - Enter a unique name for the Cognitive Search resource such as **byodsearch[Your Last Name]**.
     - Select a region that's close to your location.

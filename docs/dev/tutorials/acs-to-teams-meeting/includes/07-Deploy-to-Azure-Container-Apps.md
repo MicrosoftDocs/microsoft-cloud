@@ -106,14 +106,14 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 
 1. Now that the image is deployed, you need to create an Azure Container App that can run the container.
 
-1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
+1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type *container apps* in the top search bar and select **Container Apps** from the options that appear.
 
 1. Select **Create** in the toolbar.
 
     > [!NOTE]
-    > Although you're using the Azure Portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](https://learn.microsoft.com/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
+    > Although you're using the Azure portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](https://learn.microsoft.com/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
 
 1. Perform the following tasks:
     - Select your subscription.
@@ -169,7 +169,7 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
         --ingress-protocol Https --ingress-traffic Anywhere
     ```
 
-1. Once your container app deployment completes, navigate to it in the Azure Portal and select the **Application Url** on the **Overview** screen to view the application running in the nginx container!
+1. Once your container app deployment completes, navigate to it in the Azure portal and select the **Application Url** on the **Overview** screen to view the application running in the nginx container!
 
 
 

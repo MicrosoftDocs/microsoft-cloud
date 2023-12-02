@@ -12,7 +12,7 @@ In this exercise, you will:
 
 ### Create a Microsoft Entra ID App Registration
 
-1. Go to [Azure Portal](https://portal.azure.com) and select **Microsoft Entra ID**.
+1. Go to [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 1. Select the **App registration** tab followed by **+ New registration**.
 1. Fill in the new app registration form details as shown below and select **Register**:
     - Name: *microsoft-graph-app*
