@@ -227,11 +227,11 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
     - A rule is defined to always return a JSON object (and nothing else) with the SQL query and the parameter values in it.
     - An example is given for the type of JSON object to return.
-    - Example user prompts and the expected SQL query and parameter values are provided. This is referred to as ["few-shot" learning](/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example is provided and the model is expected to generate the correct SQL query and parameter values.
+    - Example user prompts and the expected SQL query and parameter values are provided. This is referred to as ["few-shot" learning](/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example is provided and the model is expected to generate the correct SQL query and parameter values.
     - Two critical rules are repeated again at the bottom of the system prompt to avoid "recency bias". 
     
         > [!TIP]
-        > Learn more about [recency bias in the Azure OpenAI documentation](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end).
+        > Learn more about [recency bias in the Azure OpenAI documentation](/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end).
 
 1. The `getSQLFromNLP()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
 
@@ -323,14 +323,14 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available by calling `checkRequiredEnvVars()`.
     - Creates a `fetchUrl` value that is used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
     - Creates a `messageData` object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
-        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/cognitive-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
+        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/ai-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
         - `temperature`: What sampling temperature to use. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
         - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example two messages are passed in: one for the system and one for the user. The system message defines the overall behavior and rules that will be used, while the user message defines the prompt text provided by the user.
     - Calls `fetchAndParse()` to send the `fetchUrl` and `headersBody` values to Azure OpenAI.
     - Processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
     
         > [!NOTE]
-        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/cognitive-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
+        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/ai-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
 
 1. Comment out the following lines in the `getSQLFromNLP()` function:
 

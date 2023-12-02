@@ -7,7 +7,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 1. You'll need to create a Microsoft Entra ID app for Daemon app authentication. In this step, authentication will be handled in the background with *app credentials*, and a Microsoft Entra ID app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
 
 1. Perform the following steps to create a Microsoft Entra ID app:
-    1. Go to [Azure Portal](https://portal.azure.com) and select **Microsoft Entra ID**.
+    1. Go to [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
     1. Select the **App registration** tab followed by **+ New registration**.
     1. Fill in the new app registration form details as shown below and select **Register**:
         - Name: *ACS Teams Interop App*
