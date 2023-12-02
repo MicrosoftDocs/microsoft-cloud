@@ -19,8 +19,8 @@ Cleanup your Azure resources to avoid additional charges to your account. Go to 
 
 #### Documentation
 
-* [Azure OpenAI Documentation](/azure/cognitive-services/openai/?WT.mc_id=m365-94501-dwahlin)
-* [Azure OpenAI on your data](/azure/cognitive-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin)
+* [Azure OpenAI Documentation](/azure/ai-services/openai/?WT.mc_id=m365-94501-dwahlin)
+* [Azure OpenAI on your data](/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin)
 * [Azure Communication Services Documentation](/azure/communication-services/?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Graph Documentation](/graph/overview?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Graph Toolkit Documentation](/graph/toolkit/overview?WT.mc_id=m365-94501-dwahlin)
