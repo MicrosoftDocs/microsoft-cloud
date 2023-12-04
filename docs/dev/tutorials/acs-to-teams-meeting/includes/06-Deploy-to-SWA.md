@@ -4,7 +4,7 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 
 :::image type="content" source="../media/5-deploy-swa.png" alt-text="Azure Static Web Apps":::
 
-1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in.
+1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type *static web apps* in the top search bar and select **Static Web Apps** from the options that appear.
 
@@ -62,7 +62,7 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
     ACS_CONNECTION_STRING: <YOUR_VALUE>
     ```
 
-1. Select the **Save** button at the top of the Configuration screen in the Azure Portal.
+1. Select the **Save** button at the top of the Configuration screen in the Azure portal.
 
 1. Now that you've finished setting up the Azure Static Web App, go back to your GitHub repository (the one you forked earlier) in the browser and notice a *.yml* file has been added into the *.github/workflows* folder. 
 

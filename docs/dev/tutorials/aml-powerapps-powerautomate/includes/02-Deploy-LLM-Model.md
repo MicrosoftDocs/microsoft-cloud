@@ -11,15 +11,15 @@ Let's get started by opening Azure Machine Learning studio!
 
 1. Open Azure Machine Learning studio using the [**Studio web URL**](https://ml.azure.com).
 
-    :::image type="content" source="../media/azureml-studio-url.png" alt-text="Azure Machine Learning Service in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-url.png" alt-text="Azure Machine Learning Service in the Azure portal":::
 
 2. Select **All workspaces** to access the shared resources in your tenant.
 
-    :::image type="content" source="../media/azureml-studio-workspace.png" alt-text="Azure Machine Learning Service in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-workspace.png" alt-text="Azure Machine Learning Service in the Azure portal":::
 
 3. Select **Models** under the **Shared assets** from the left side menu to view the model template that you want to deploy.
 
-    :::image type="content" source="../media/azureml-studio-model-registry.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-model-registry.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure portal":::
 
     > [!NOTE]
     > Here you can find binary files for different machine learning models trained with specific algorithms on training datasets and then able to produce predictions and inferences on additional, larger datasets provided by AzureML and HuggingFace.
@@ -34,11 +34,11 @@ Let's get started by opening Azure Machine Learning studio!
 
 5. Select **Deploy** followed by **Real-time endpoint**.
 
-    :::image type="content" source="../media/azureml-studio-gpt2-model.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-gpt2-model.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure portal":::
 
 6. Select your **Subscription** and your **Workspace**. Select **Proceed to workspace**.
 
-    :::image type="content" source="../media/azureml-studio-select-workspace.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-select-workspace.png" alt-text="Creating an Azure Machine Learning Workspace in the Azure portal":::
 
 7. Perform the following tasks:
     - Select the **Virtual machine** you'd like to use.
@@ -50,7 +50,7 @@ Let's get started by opening Azure Machine Learning studio!
     - Enter an **Endpoint name**. Any unique name works.
     - Enter a **Deployment name**.
 
-    :::image type="content" source="../media/azureml-studio-deploy-gpt2.png" alt-text="Configuration of an Azure Machine Learning Workspace in the Azure Portal":::
+    :::image type="content" source="../media/azureml-studio-deploy-gpt2.png" alt-text="Configuration of an Azure Machine Learning Workspace in the Azure portal":::
 
     > [!WARNING]
     > Selecting a large **Virtual machine** will incur more charges and increasing the number of instances from the selected machine will also contribute to that.

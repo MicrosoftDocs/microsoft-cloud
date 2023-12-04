@@ -13,11 +13,11 @@ In this exercise, you will:
 
 ### Create an Azure Communication Services Resource
 
-1. Visit the [Azure Portal](https://portal.azure.com) in your browser and sign in if you haven't already.
+1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in if you haven't already.
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
 
-    :::image type="content" source="../media/search-acs-portal.png" alt-text="ACS in the Azure Portal":::
+    :::image type="content" source="../media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 

@@ -121,7 +121,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
         - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
-        - Two critical rules are repeated again at the bottom of the system prompt to avoid ["recency bias"](/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
+        - Two critical rules are repeated again at the bottom of the system prompt to avoid ["recency bias"](/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
     - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 
@@ -146,7 +146,7 @@ Let's get started by experimenting with different rules that can be used to gene
 1. What is happening in these scenarios? When using Azure OpenAI, [content filtering](/azure/ai-services/openai/concepts/content-filter) is applied to ensure that appropriate language is always used. If you're using OpenAI, the rule defined in the system prompt is used to ensure the message returned is appropriate.
 
     > [!NOTE]
-    > This illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/cognitive-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
+    > This illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
 
 1. Undo the changes you made to `systemPrompt` in `completeEmailSMSMessages()`, save the file, and re-run it again but only use the `Order is ahead of schedule.` rule (don't include the negative rule). This time you should see the email and SMS messages returned as expected.
 

@@ -32,7 +32,7 @@ highlightedContent:
     # Card
     - title: Azure OpenAI Service Prompt Engineering
       itemType: overview
-      url: /azure/cognitive-services/openai/concepts/prompt-engineering
+      url: /azure/ai-services/openai/concepts/prompt-engineering
 
     # Card
     - title: Dev Proxy

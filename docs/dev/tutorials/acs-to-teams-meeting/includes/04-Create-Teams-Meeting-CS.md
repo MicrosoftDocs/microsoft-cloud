@@ -29,7 +29,7 @@
     - Use the values you copied into the local file in an earlier exercise to update the `TENANT_ID`, `CLIENT_ID` and `CLIENT_SECRET` values.
     - Define `USER_ID` with the user id that you'd like to create a Microsoft Teams Meeting. 
 
-    You can get the User ID from the [Azure Portal](https://portal.azure.com).
+    You can get the User ID from the [Azure portal](https://portal.azure.com).
 
     - Login using your Microsoft 365 developer tenant admin account.
     - Select **Microsoft Entra ID**
