@@ -4,7 +4,7 @@ description: Summary of how the unified collection of services that the Microsof
 author: DanWahlin
 ms.author: dwahlin
 ms.contributors: dwahlin-5182022
-ms.date: 06/14/2022
+ms.date: 12/05/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
