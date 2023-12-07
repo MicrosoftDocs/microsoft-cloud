@@ -41,7 +41,7 @@ If you make Dev Proxy globally available, you can start it from any directory an
 
 To make Dev Proxy globally available, add its folder to the system path. Updating the system path differs across operating systems. Follow the next steps relevant to the operating system that you use.
 
-### [Windows](#tab/env-windows)
+#### [Windows](#tab/windows)
 
   1. Open the `Start` menu.
   1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
@@ -50,7 +50,7 @@ To make Dev Proxy globally available, add its folder to the system path. Updatin
   1. Enter `%USERPROFILE%\dev-proxy` into the new row and select `OK`.
   1. Select `OK` to confirm changes.
 
-### [macOS](#tab/env-macos)
+#### [macOS](#tab/macos)
 
 The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
 
@@ -64,7 +64,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 Select the relevant section to follow the steps for your operating system.
 
-### [Windows](#tab/start-windows)
+### [Windows](#tab/windows)
 
 1. **Start Dev Proxy**. Open a terminal. Enter `devproxy` and press <kbd>Enter</kbd>.
 2. **Trust certificate**. Dev Proxy installs a certificate named `Titanium Root Certificate Authority`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
@@ -86,7 +86,7 @@ Press Ctrl+C to stop the Dev Proxy
 > [!NOTE]
 > You won't have to repeat steps 2 and 3 after the first run.
 
-### [macOS](#tab/start-macos)
+#### [macOS](#tab/macos)
 
 1. **Make files executable**. Open the `dev-proxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
 1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. As the current release isn't signed by a verified developer, you need to trust it manually.
