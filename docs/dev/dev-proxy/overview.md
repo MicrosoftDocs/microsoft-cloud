@@ -38,4 +38,4 @@ Dev Proxy works with any type of app, technology stack and programming language.
 Identify and fix issues in your code early, before they reach production.
 
 > [!div class="nextstepaction"]
-> [Get started](./get-started/index.md)
+> [Get started](./get-started/overview.md)

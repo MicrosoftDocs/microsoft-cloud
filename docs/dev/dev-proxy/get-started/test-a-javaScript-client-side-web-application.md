@@ -98,4 +98,4 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the process.
 Now you’re ready to go on to the next step.
 
 > [!div class="nextstepaction"]
-> [Explore how-to guides](../how-to/index.md)
+> [Explore how-to guides](../how-to/overview.md)

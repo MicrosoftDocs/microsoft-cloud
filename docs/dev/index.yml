@@ -71,8 +71,8 @@ landingContent:
           - text: Introduction
             url: dev-proxy/overview.md
           - text: Get started
-            url: dev-proxy/get-started/index.md
+            url: dev-proxy/get-started/overview.md
           - text: How-to
-            url: dev-proxy/how-to/index.md
+            url: dev-proxy/how-to/overview.md
           - text: Reference
-            url: dev-proxy/technical-reference/index.md
+            url: dev-proxy/technical-reference/overview.md

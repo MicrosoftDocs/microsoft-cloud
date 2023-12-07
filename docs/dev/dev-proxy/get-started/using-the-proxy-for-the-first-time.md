@@ -104,7 +104,7 @@ When you no longer require Dev Proxy to be running, you should always stop it sa
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-If you shut down the terminal session, Dev Proxy doesn't unregister correctly, and you might experience some [common problems](../how-to/index.md).
+If you shut down the terminal session, Dev Proxy doesn't unregister correctly, and you might experience some [common problems](../how-to/overview.md).
 
 If you're using macOS, you should also disable the `Secure Web Proxy (HTTPS)` proxy setting on your network device.
 
@@ -221,4 +221,4 @@ devproxy --help
 > [!div class="nextstepaction"]
 > [Test sample JavaScript client-side web application](./test-a-javaScript-client-side-web-application.md)
 
-Or, take a look at our [How-to](../how-to/index.md) guides to learn more about how to configure the proxy.
+Or, take a look at our [How-to](../how-to/overview.md) guides to learn more about how to configure the proxy.
