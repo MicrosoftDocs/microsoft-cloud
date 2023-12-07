@@ -45,6 +45,8 @@
       href: dev-proxy/overview.md
     - name: Tutorials 
       items:
+       - name: Overview
+         href: dev-proxy/tutorials/overview.md
        - name: Get started with Dev Proxy
          href: dev-proxy/tutorials/get-started.md
        - name: Test a JavaScript client-side web application
