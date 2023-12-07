@@ -1,9 +1,9 @@
 ---
 title: Test a JavaScript client-side web application
-description: Sample scenario of testing a JavaScript client-side web application
+description: In this tutorial, you will learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 12/07/2023
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 
@@ -21,10 +21,7 @@ ms.custom:
 
 # Test a JavaScript client-side web application
 
-> [!CAUTION]
-> This part of the tutorial assumes that you started Dev Proxy on your machine before. If not, do that [now](./using-the-proxy-for-the-first-time.md).
-
-Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
+In this tutorial, you will learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 
 ## Before you begin
 
@@ -55,6 +52,9 @@ git clone https://github.com/microsoft/dev-proxy.git
 Follow the instructions in [samples/readme.md](https://github.com/microsoft/dev-proxy/blob/main/samples/readme.md) to configure the app.
 
 ## 2. Start Dev Proxy
+
+> [!CAUTION]
+> This part of the tutorial assumes that you installed and configured Dev Proxy on your machine. If not, do that [now](./get-started.md).
 
 Open a terminal, enter `devproxy` and press <kbd>Enter</kbd>.
 

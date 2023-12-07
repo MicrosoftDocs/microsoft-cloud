@@ -6,15 +6,15 @@
     tocHref: /microsoft-cloud/dev/dev-proxy
     topicHref: /microsoft-cloud/dev/dev-proxy/overview
     items: 
-    - name: Get started
-      tocHref: /microsoft-cloud/dev/dev-proxy/get-started
-      topicHref: /microsoft-cloud/dev/dev-proxy/get-started/index
+    - name: Tutorials
+      tocHref: /microsoft-cloud/dev/dev-proxy/tutorials
+      topicHref: /microsoft-cloud/dev/dev-proxy/tutorials/overview
     - name: How-to
       tocHref: /microsoft-cloud/dev/dev-proxy/how-to
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/index
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/overview
     - name: Reference
       tocHref: /microsoft-cloud/dev/dev-proxy/technical-reference
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/technical-reference/index
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/technical-reference/overview
     - name: Background
       tocHref: /microsoft-cloud/dev/dev-proxy/background-information
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/background-information/index
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/background-information/overview

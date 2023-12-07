@@ -19,7 +19,7 @@ ms.custom:
   - team=cloud_advocates
 ---
 
-# Technical reference
+# Technical reference for Dev Proxy
 
 - [Does Dev Proxy upload any data to Microsoft](./does-dev-proxy-upload-any-data-to-microsoft.md)
 - [devproxyrc](./devproxyrc.md)
