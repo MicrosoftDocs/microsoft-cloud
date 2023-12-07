@@ -68,10 +68,12 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: What is Dev Proxy?
+          - text: Overview
             url: dev-proxy/overview.md
+          - text: Get started
+            url: dev-proxy/get-started.md
           - text: Tutorials
-            url: dev-proxy/tutorials/overview.md
+            url: dev-proxy/tutorials/test-a-javaScript-client-side-web-application.md
           - text: How-to
             url: dev-proxy/how-to/overview.md
           - text: Reference

@@ -1,10 +1,10 @@
 ---
 title: Get started with Dev Proxy
-description: Install and configure Dev Proxy
+description: Get started with Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 12/07/2023
-ms.topic: conceptual
+ms.topic: get-started
 ms.service: microsoft-cloud-for-developers
 
 categories:
@@ -21,27 +21,25 @@ ms.custom:
 
 # Get started with Dev Proxy
 
-In this tutorial you will learn how to install and use Dev Proxy for the first time.
+Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
+In this article, you'll learn how to install and run the proxy.
 
-## Installation
+## Install
 
-### Download latest release
-
-1. [Download](https://github.com/microsoft/dev-proxy/releases/latest) the ZIP file for your operating system.
+1. [Download](https://github.com/microsoft/dev-proxy/releases/latest) the latest release for your operating system.
 2. Extract the contents of the ZIP into a folder.
 
 > [!NOTE]
-> The tutorial steps assume that you have saved the files in your home directory in a folder named `dev-proxy`, but you can store them anywhere.
+> This guide assumes that you have extracted the Dev Proxy files in your home directory in a folder named `dev-proxy`, but you can store them anywhere.
 
-### Make the proxy globally available
+## Make Dev Proxy globally available
 
-If you make Dev Proxy globally available, you can start it from any directory and project on your machine.
+If you make Dev Proxy globally available, you can start it from any directory and project folder on your machine.
 
-To make Dev Proxy globally available, add its folder to the system path. Updating the system path differs across operating systems. Follow the next steps relevant to the operating system that you use.
+To make Dev Proxy globally available, add its installation folder to the system path. Updating the system path differs across operating systems. Follow the steps relevant to the operating system that you use.
 
-#### [Windows](#tab/windows)
+### [Windows](#tab/windows)
 
   1. Open the `Start` menu.
   1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
@@ -50,7 +48,7 @@ To make Dev Proxy globally available, add its folder to the system path. Updatin
   1. Enter `%USERPROFILE%\dev-proxy` into the new row and select `OK`.
   1. Select `OK` to confirm changes.
 
-#### [macOS](#tab/macos)
+### [macOS](#tab/macos)
 
 The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
 
@@ -58,11 +56,9 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
   1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/dev-proxy"`.
   1. Reload your profile > `source ~/.zshrc`.
 
-## Using the proxy for the first time
+## Start Dev Proxy
 
-### 1. Start Dev Proxy
-
-Select the relevant section to follow the steps for your operating system.
+Follow the steps for your operating system.
 
 ### [Windows](#tab/windows)
 
@@ -86,7 +82,7 @@ Press Ctrl+C to stop the Dev Proxy
 > [!NOTE]
 > You won't have to repeat steps 2 and 3 after the first run.
 
-#### [macOS](#tab/macos)
+### [macOS](#tab/macos)
 
 1. **Make files executable**. Open the `dev-proxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
 1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. As the current release isn't signed by a verified developer, you need to trust it manually.
@@ -132,7 +128,7 @@ The proxy is now running with the following defaults:
 - Dev Proxy intercepts all requests to Microsoft Graph and SharePoint Online APIs.
 - Proxy doesn't mock any requests.
 
-### 2. Stop Dev Proxy safely
+## Stop Dev Proxy safely
 
 When you no longer require Dev Proxy to be running, you should always stop it safely.
 
@@ -142,7 +138,7 @@ If you shut down the terminal session, Dev Proxy doesn't unregister correctly, a
 
 If you're using macOS, you should also disable the `Secure Web Proxy (HTTPS)` proxy setting on your network device.
 
-### 3. Test from command line
+## Test from command line
 
 To test that the proxy is set up correctly, stop the proxy if it's still running.
 
@@ -158,13 +154,13 @@ From the command line, issue an HTTP request to the Microsoft Graph.
 
 Examples:
 
-#### [PowerShell](#tab/pwsh)
+### [PowerShell](#tab/pwsh)
 
 ```pwsh
 Invoke-WebRequest -Uri "https://graph.microsoft.com/v1.0/me"
 ```
 
-#### [curl](#tab/curl)
+### [curl](#tab/curl)
 
 ```sh
 curl -ix http://localhost:8000 https://graph.microsoft.com/v1.0/me
@@ -204,7 +200,7 @@ Dev Proxy has:
 1. Generated a warning that the request didn't include the OData `$select` parameter.
 1. Generated a tip suggesting the request wasn't made using a Microsoft Graph SDK.
 
-### 4. Intercept requests to any API
+## Intercept requests to any API
 
 Dev Proxy can issue error responses for any API. To add your own API, change the contents of the `devproxyrc.json` file.
 
@@ -244,17 +240,17 @@ Stop and start the proxy for the change to take effect. Issue a network request 
 > [!NOTE]
 > By default, the proxy simulates error responses based on Microsoft Graph. To add your own responses, follow this [guide](../how-to/Simulate-errors-from-non-Microsoft-365-APIs.md).
 
-### 5. Show help and usage information
+## Get help
 
-Display help to change [proxy settings](../technical-reference/Proxy-settings.md) using:
+Display the different command-line options by using:
 
 ```text
 devproxy --help
 ```
 
-## On to the next step
+If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
 
-Now you’re ready to go on to the next step.
+## Next step
 
 > [!div class="nextstepaction"]
-> [Explore tutorials](../tutorials/overview.md)
+> [Explore tutorials](./tutorials/test-a-javascript-client-side-web-application.md)

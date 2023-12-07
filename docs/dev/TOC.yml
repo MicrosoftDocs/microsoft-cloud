@@ -43,12 +43,10 @@
   items:
     - name: Overview
       href: dev-proxy/overview.md
-    - name: Tutorials 
+    - name: Get started
+      href: dev-proxy/get-started.md
+    - name: Tutorials
       items:
-       - name: Overview
-         href: dev-proxy/tutorials/overview.md
-       - name: Get started with Dev Proxy
-         href: dev-proxy/tutorials/get-started.md
        - name: Test a JavaScript client-side web application
          href: dev-proxy/tutorials/test-a-javaScript-client-side-web-application.md
     - name: How-to
