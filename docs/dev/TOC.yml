@@ -171,6 +171,18 @@
             href: dev-proxy/technical-reference/ExecutionSummaryPlugin.md
           - name: GenericRandomErrorPlugin
             href: dev-proxy/technical-reference/GenericRandomErrorPlugin.md
+          - name: LatencyPlugin
+            href: dev-proxy/technical-reference/LatencyPlugin.md
+          - name: MockResponsePlugin
+            href: dev-proxy/technical-reference/MockResponsePlugin.md
+          - name: ODataPagingGuidancePlugin
+            href: dev-proxy/technical-reference/ODataPagingGuidancePlugin.md
+          - name: RateLimitingPlugin
+            href: dev-proxy/technical-reference/RateLimitingPlugin.md
+          - name: RetryAfterPlugin
+            href: dev-proxy/technical-reference/RetryAfterPlugin.md
+       - name: Microsoft Graph
+         items:
           - name: GraphBetaSupportGuidancePlugin
             href: dev-proxy/technical-reference/GraphBetaSupportGuidancePlugin.md
           - name: GraphClientRequestIdGuidancePlugin
@@ -183,20 +195,10 @@
             href: dev-proxy/technical-reference/GraphSdkGuidancePlugin.md
           - name: GraphSelectGuidancePlugin
             href: dev-proxy/technical-reference/GraphSelectGuidancePlugin.md
-          - name: LatencyPlugin
-            href: dev-proxy/technical-reference/LatencyPlugin.md
           - name: MinimalPermissionsGuidancePlugin
             href: dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin.md
           - name: MinimalPermissionsPlugin
             href: dev-proxy/technical-reference/MinimalPermissionsPlugin.md
-          - name: MockResponsePlugin
-            href: dev-proxy/technical-reference/MockResponsePlugin.md
-          - name: ODataPagingGuidancePlugin
-            href: dev-proxy/technical-reference/ODataPagingGuidancePlugin.md
-          - name: RateLimitingPlugin
-            href: dev-proxy/technical-reference/RateLimitingPlugin.md
-          - name: RetryAfterPlugin
-            href: dev-proxy/technical-reference/RetryAfterPlugin.md
 
 - name: Related
   items:
