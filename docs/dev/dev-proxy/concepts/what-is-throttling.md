@@ -1,9 +1,9 @@
 ---
 title: What is throttling?
-description: The concept of throttling in Microsoft 365 and other cloud services
-author: garrytrinder
-ms.author: garrytrinder
-ms.date: 11/03/2023
+description: The concept of throttling in cloud APIs
+author: waldekmastykarz
+ms.author: wmastyka
+ms.date: 12/18/2023
 ms.topic: concept-article
 ms.service: microsoft-cloud-for-developers
 
@@ -22,13 +22,13 @@ ms.custom:
 
 # What is throttling?
 
-When your application connected to Microsoft Graph is used at scale, it can happen that it's throttled.
+Throttling is a technique that cloud APIs use to limit the number of requests that can be made in a given period of time. They use throttling to ensure that the API remains available and responsive to all users, and to prevent any single user from consuming too many resources.
 
-Throttling is a mechanism used in Microsoft 365 and other cloud services, to ensure service continuity.
+You can experience throttling in several ways. One common way is by using HTTP status codes. For example, when a user exceeds the allowed number of requests, the API might return a `429 Too Many Requests` status code. This response indicates that the user issued too many requests in a given period of time and should slow down.
 
-When servers experience anomalous load, they start sending `429 Too many requests` responses, prompting applications to wait before issuing new requests. This behavior gives servers the chance to decrease the load and restore normal operations.
+In addition to status codes, some APIs might also provide additional information in the response headers or body. For example, they might use the `Retry-After` header to indicate how long the user should wait before making another request.
 
-**The best way to help servers restore normal operations, is for applications to stop calling Microsoft Graph for the period specified on the 429 response. If however, applications will keep calling Microsoft Graph, throttling will continue blocking access to data.**
+It's important that as a developer you're aware of the throttling limits of the APIs you use and handle throttling errors appropriately in your apps. It helps you ensure that your apps remain responsive and reliable, even when the API is under heavy load.
 
-> [!TIP]
-> If you use Microsoft Graph SDKs, your applications automatically back-off when throttled. If you don't use Microsoft Graph SDKs, you need to handle throttling, and other exceptions, yourself.
+> [!div class="nextstepaction"]
+> [Test that my application handles throttling properly](../how-to/test-that-my-application-handles-throttling-properly.md)
