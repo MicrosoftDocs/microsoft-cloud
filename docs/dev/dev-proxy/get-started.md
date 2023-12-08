@@ -32,7 +32,7 @@ In this article, you'll learn how to install and run Dev Proxy.
 2. Extract the contents of the ZIP into a folder.
 
 > [!NOTE]
-> This guide assumes that you have extracted the Dev Proxy files in your home directory in a folder named `dev-proxy`, but you can store them anywhere.
+> This guide assumes that you have extracted the Dev Proxy files in your home directory in a folder named `devproxy`, but you can store them anywhere.
 
 ## Make Dev Proxy globally available
 
@@ -46,7 +46,7 @@ To make Dev Proxy globally available, add its installation folder to the system 
   1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
   1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
   1. In the `Edit environment variable` dialog box, select the `New` button.
-  1. Enter `%USERPROFILE%\dev-proxy` into the new row and select `OK`.
+  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
   1. Select `OK` to confirm changes.
 
 ::: zone-end  
@@ -56,7 +56,7 @@ To make Dev Proxy globally available, add its installation folder to the system 
 The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
 
   1. Open your shell profile in a text editor > `~/.zshrc`.
-  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/dev-proxy"`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
   1. Reload your profile > `source ~/.zshrc`.
 
 ::: zone-end
@@ -89,7 +89,7 @@ Press Ctrl+C to stop the Dev Proxy
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Make files executable**. Open the `dev-proxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
+1. **Make files executable**. Open the `devproxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
 1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you'll need to trust it manually.
     1. Open the `dev-proxy` installation folder in Finder.
     1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
@@ -213,11 +213,11 @@ Dev Proxy has:
 
 Dev Proxy can issue error responses for any API. To add your own API, change the contents of the `devproxyrc.json` file.
 
-1. Open the `dev-proxy` folder to find the `devproxyrc.json` file.
+1. Open the `devproxy` folder to find the `devproxyrc.json` file.
 1. Open the `devproxyrc.json` file in a text editor and locate the `urlsToWatch` array in the root object (not in the plugins array).
 1. Add a new entry containing the URL of the API you want to use the proxy with.
 
-For example, if your API has the URL, `https://myapp/api`, your `devproxyrc.json` file looks something like:
+For example, if your API has the URL, `https://myapp/api/foo`, your `devproxyrc.json` file looks something like:
 
 ```json
 {
@@ -245,9 +245,6 @@ For example, if your API has the URL, `https://myapp/api`, your `devproxyrc.json
 ```
 
 Stop and start the proxy for the change to take effect. Issue a network request from the command line to the API. The proxy will now intercept requests sent to your API.
-
-> [!NOTE]
-> By default, the proxy simulates error responses based on Microsoft Graph. To add your own responses, follow this [guide](./how-to/Simulate-errors-from-non-Microsoft-365-APIs.md).
 
 ## Get help
 
