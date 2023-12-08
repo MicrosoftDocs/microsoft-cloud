@@ -9,3 +9,12 @@ groups:
     title: C#
   - id: programming-language-typescript
     title: TypeScript
+# Owner: waldekmastykarz garrytrinder
+- id: client-operating-system
+  title: Client operating system
+  prompt: Choose a client operating system
+  pivots:
+  - id: client-operating-system-windows
+    title: Windows
+  - id: client-operating-system-macos
+    title: macOS
