@@ -199,7 +199,11 @@
                 href: dev-proxy/technical-reference/MinimalPermissionsGuidancePlugin.md
               - name: MinimalPermissionsPlugin
                 href: dev-proxy/technical-reference/MinimalPermissionsPlugin.md
-
+    - name: Concepts
+      items:
+        - name: What is throttling?
+          href: dev-proxy/concepts/what-is-throttling.md
+          
 - name: Related
   items:
     - name: Azure Architecture Center 
