@@ -8,13 +8,13 @@
     items: 
     - name: Tutorials
       tocHref: /microsoft-cloud/dev/dev-proxy/tutorials
-      topicHref: /microsoft-cloud/dev/dev-proxy/tutorials/overview
+      topicHref: /microsoft-cloud/dev/dev-proxy/tutorials/test-a-javascript-client-side-web-application
     - name: How-to
       tocHref: /microsoft-cloud/dev/dev-proxy/how-to
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/overview
+      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/overview/
     - name: Reference
       tocHref: /microsoft-cloud/dev/dev-proxy/technical-reference
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/technical-reference/overview
-    - name: Background
+      topicHref: /microsoft-cloud/dev/dev-proxy/technical-reference/overview
+    - name: Concepts
       tocHref: /microsoft-cloud/dev/dev-proxy/background-information
-      topicHref: /microsoft-cloud/dev/dev-proxy/how-to/background-information/overview
+      topicHref: /microsoft-cloud/dev/dev-proxy/concepts/what-is-throttling
