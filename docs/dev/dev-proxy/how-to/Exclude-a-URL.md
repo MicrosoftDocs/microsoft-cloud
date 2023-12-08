@@ -17,6 +17,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - tool=devproxy
 ---
 
 # Exclude a URL

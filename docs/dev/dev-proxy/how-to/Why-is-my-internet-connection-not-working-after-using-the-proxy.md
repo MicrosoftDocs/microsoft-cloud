@@ -17,6 +17,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - tool=devproxy
 ---
 
 # Why is my internet connection not working after using the proxy

@@ -17,6 +17,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - tool=devproxy
 ---
 
 # Check if you're using excessive Microsoft Graph API permissions

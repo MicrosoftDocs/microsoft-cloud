@@ -17,6 +17,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - tool=devproxy
 ---
 
 # Why is the proxy saying that an option is unknown

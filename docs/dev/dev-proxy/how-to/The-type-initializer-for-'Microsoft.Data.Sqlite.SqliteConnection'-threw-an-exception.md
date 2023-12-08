@@ -17,6 +17,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - tool=devproxy
 ---
 
 # The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
