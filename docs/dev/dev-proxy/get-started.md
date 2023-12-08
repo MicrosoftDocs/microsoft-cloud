@@ -24,7 +24,7 @@ ms.custom:
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this article, you'll learn how to install and run the proxy.
+In this article, you'll learn how to install and run Dev Proxy.
 
 ## Install
 
@@ -90,7 +90,7 @@ Press Ctrl+C to stop the Dev Proxy
 ::: zone pivot="client-operating-system-macos"
 
 1. **Make files executable**. Open the `dev-proxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
-1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. As the current release isn't signed by a verified developer, you need to trust it manually.
+1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you'll need to trust it manually.
     1. Open the `dev-proxy` installation folder in Finder.
     1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
     1. Choose `Open` from the menu, and then select `Open` in the dialog that appears.
