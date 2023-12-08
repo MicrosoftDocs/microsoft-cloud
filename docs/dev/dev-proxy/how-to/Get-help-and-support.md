@@ -4,7 +4,7 @@ description: How to get help and support for the Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-cloud-for-developers
 
 categories:

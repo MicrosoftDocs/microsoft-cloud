@@ -4,7 +4,7 @@ description: How to update your application code to use the Microsoft Graph Java
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-cloud-for-developers
 
 categories:

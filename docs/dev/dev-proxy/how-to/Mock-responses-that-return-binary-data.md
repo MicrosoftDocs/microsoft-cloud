@@ -4,7 +4,7 @@ description: How to mock responses that return binary data
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-cloud-for-developers
 
 categories:

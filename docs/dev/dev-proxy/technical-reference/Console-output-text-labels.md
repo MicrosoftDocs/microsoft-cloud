@@ -4,7 +4,7 @@ description: How to change console output to use text labels
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-cloud-for-developers
 
 categories:
