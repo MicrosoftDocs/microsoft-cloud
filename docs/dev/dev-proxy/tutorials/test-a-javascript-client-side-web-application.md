@@ -31,17 +31,11 @@ To follow this tutorial, you'll need:
 
 - Microsoft 365 tenant.
 - Account with permissions to create Microsoft Entra app registrations.
-- Node.js LTS.
-
-We recommend that you use a Microsoft 365 Developer Tenant with content packs installed.
-
-> [!TIP]
-> Get your free tenant by [signing up to the Microsoft 365 Developer Program](https://aka.ms/m365/).
-
-You also need to have the following installed and configured on your machine:
-
 - Git (see [GitHub’s set up Git guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)).
 - [nodejs LTS](https://nodejs.org).
+
+> [!TIP]
+> We recommend that you use a Microsoft 365 Developer Tenant with content packs installed. Get your free tenant by [signing up to the Microsoft 365 Developer Program](https://aka.ms/m365/).
 
 ## Clone and configure the sample app
 
