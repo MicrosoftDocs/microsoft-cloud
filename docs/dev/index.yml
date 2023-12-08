@@ -64,11 +64,11 @@ landingContent:
           - text: Copilot for Dynamics 365
             url: copilot/copilot-for-dynamics365
             
-  - title: Build resilient applications with Dev Proxy
+  - title: Build resilient apps with Dev Proxy
     linkLists:
       - linkListType: get-started
         links:
-          - text: Overview
+          - text: What is Dev Proxy?
             url: dev-proxy/overview.md
           - text: Get started
             url: dev-proxy/get-started.md
@@ -79,4 +79,4 @@ landingContent:
           - text: Reference
             url: dev-proxy/technical-reference/overview.md
           - text: Concepts
-            url: dev-proxy/concepts/overview.md
+            url: dev-proxy/concepts/what-is-throttling.md
