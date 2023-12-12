@@ -1,0 +1,14 @@
+{
+   "redirections": [
+      {
+         "source_path": "docs/dev/dev-proxy/Plugin-Reference-Template.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/what-is-throttling.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/what-is-throttling",
+         "redirect_document_id": false
+      }
+   ]
+}
