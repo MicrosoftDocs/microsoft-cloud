@@ -23,6 +23,8 @@ ms.custom:
 
 Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
 
+:::image type="content" source="../media/guidance-caching.png" alt-text="Caching guidance plugin in Dev Proxy showing a warning about a request that's been issued too frequently" lightbox="../media/guidance-caching.png":::
+
 ## Plugin instance definition
 
 ```json

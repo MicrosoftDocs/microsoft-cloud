@@ -23,6 +23,8 @@ ms.custom:
 
 Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doesn't include the `$select` query string parameter.
 
+:::image type="content" source="../media/microsoft-graph-select-guidance.png" alt-text="Dev Proxy showing a warning after intercepting a request to Microsoft Graph that doesn't use the $select parameter" lightbox="../media/microsoft-graph-select-guidance.png":::
+
 ## Plugin instance definition
 
 ```json

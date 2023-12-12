@@ -23,6 +23,8 @@ ms.custom:
 
 Simulates responses.
 
+:::image type="content" source="../media/mock-response-plugin.png" alt-text="Dev Proxy simulating response for a request to GitHub API" lightbox="../media/mock-response-plugin.png":::
+
 ## Plugin instance definition
 
 ```json
