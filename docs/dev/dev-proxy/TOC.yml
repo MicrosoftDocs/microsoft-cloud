@@ -100,6 +100,8 @@
   items:
     - name: What is throttling?
       href: concepts/what-is-throttling.md
+    - name: Use the recommended search APIs on Microsoft 365
+      href: concepts/use-recommended-search-apis-microsoft-365.md
 - name: Reference
   items: 
     - name: Overview
@@ -160,3 +162,5 @@
             href: technical-reference/MinimalPermissionsGuidancePlugin.md
           - name: MinimalPermissionsPlugin
             href: technical-reference/MinimalPermissionsPlugin.md
+          - name: ODSPSearchGuidancePlugin
+            href: technical-reference/odspsearchguidanceplugin.md
