@@ -43,9 +43,9 @@ The terminal displays the following output:
 
 ```text
   WARNING: File responses.json not found in the current directory. No mocks will be provided
-Listening on 0.0.0.0: 8000
-Set endpoint at Ip 0.0.0.0 and port: 8000 as System HTTP Proxy
-Set endpoint at Ip 0.0.0.0 and port: 8000 as System HTTPS Proxy
+Listening on 127.0.0.1: 8000
+Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTP Proxy
+Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
 Press Ctrl+C to stop the Dev Proxy
 ```
 
@@ -75,14 +75,14 @@ Press Ctrl+C to stop the Dev Proxy
     1. Select the device to configure and select the `Advanced...` button.
     1. Go to the `Proxies` tab.
     1. Check `Secure Web Proxy (HTTPS)` in the list of configurable proxies.
-    1. Enter `0.0.0.0`:`8000` in the `Secure Web Proxy Server` field.
+    1. Enter `127.0.0.1`:`8000` in the `Secure Web Proxy Server` field.
     1. Select `OK` and then `Apply` to confirm the changes.
 
 The terminal displays the following output:
 
 ```text
   WARNING: File responses.json not found in the current directory. No mocks will be provided
-Listening on 0.0.0.0:8000...
+Listening on 127.0.0.1:8000...
   WARNING: Configure your operating system to use this proxy's port and address
 Press CTRL+C to stop Dev Proxy
 ```
