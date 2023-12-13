@@ -9,6 +9,56 @@
          "source_path": "docs/dev/dev-proxy/background-information/what-is-throttling.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/what-is-throttling",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/does-dev-proxy-upload-any-data-to-microsoft",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/plugin-architecture.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/plugin-architecture",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/resolve-relative-paths.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/resolve-relative-paths",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/installation.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/tutorials",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/using-the-proxy-for-the-first-time.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
+         "redirect_document_id": false
       }
    ]
 }
