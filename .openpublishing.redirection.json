@@ -17,7 +17,7 @@
       },
       {
          "source_path": "docs/dev/dev-proxy/background-information/index.md",
-         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
          "redirect_document_id": false
       },
       {
@@ -42,7 +42,7 @@
       },
       {
          "source_path": "docs/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application.md",
-         "redirect_url": "/microsoft-cloud/dev/dev-proxy/tutorials",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/tutorials/test-a-javascript-client-side-web-application",
          "redirect_document_id": false
       },
       {
