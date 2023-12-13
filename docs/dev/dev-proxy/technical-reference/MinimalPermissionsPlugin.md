@@ -23,6 +23,8 @@ ms.custom:
 
 Returns a list of the minimal permissions required for Microsoft Graph requests that proxy recorded.
 
+:::image type="content" source="../media/microsoft-graph-minimal-permissions.png" alt-text="Screenshot of a terminal with Dev Proxy showing a list of minimal permissions for the set of Microsoft Graph requests." lightbox="../media/microsoft-graph-minimal-permissions.png":::
+
 ## Plugin instance definition
 
 ```json

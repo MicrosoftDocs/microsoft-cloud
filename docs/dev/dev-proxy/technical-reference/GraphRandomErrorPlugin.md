@@ -23,6 +23,8 @@ ms.custom:
 
 Fails requests made to Microsoft Graph with random errors.
 
+:::image type="content" source="../media/microsoft-graph-random-error.png" alt-text="Screenshot of a terminal with Dev Proxy simulating a random error for a Microsoft Graph request." lightbox="../media/microsoft-graph-random-error.png":::
+
 ## Plugin instance definition
 
 ```json
