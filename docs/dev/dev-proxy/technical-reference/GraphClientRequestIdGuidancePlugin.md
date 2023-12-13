@@ -23,7 +23,7 @@ ms.custom:
 
 Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
 
-:::image type="content" source="../media/microsoft-graph-client-request-id-guidance.png" alt-text="Dev Proxy showing a tip after detecting a request to Microsoft Graph API without the client-request-id header" lightbox="../media/microsoft-graph-client-request-id-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-client-request-id-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a tip after detecting a request to Microsoft Graph API without the client-request-id header" lightbox="../media/microsoft-graph-client-request-id-guidance.png":::
 
 ## Plugin instance definition
 

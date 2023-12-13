@@ -23,7 +23,7 @@ ms.custom:
 
 Mocks responses to Microsoft Graph APIs. Includes all functionality of the [MockResponsePlugin](./MockResponsePlugin.md) and adds support for mocking Microsoft Graph API batch requests.
 
-:::image type="content" source="../media/microsoft-graph-mock-response.png" alt-text="Dev Proxy mocking a response to a Microsoft Graph API" lightbox="../media/microsoft-graph-mock-response.png":::
+:::image type="content" source="../media/microsoft-graph-mock-response.png" alt-text="Screenshot of a terminal with Dev Proxy mocking a response to a Microsoft Graph API" lightbox="../media/microsoft-graph-mock-response.png":::
 
 ## Plugin instance definition
 

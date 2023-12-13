@@ -23,7 +23,7 @@ ms.custom:
 
 Fails requests with a random selected error from file containing mocked errors.
 
-:::image type="content" source="../media/generic-random-error-plugin.png" alt-text="Dev Proxy simulating one of the errors for an OpenAI API request as defined in the config file" lightbox="../media/generic-random-error-plugin.png":::
+:::image type="content" source="../media/generic-random-error-plugin.png" alt-text="Screenshot of a terminal with the Dev Proxy simulating one of the errors for an OpenAI API request as defined in the config file" lightbox="../media/generic-random-error-plugin.png":::
 
 ## Plugin instance definition
 
