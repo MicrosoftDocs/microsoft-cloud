@@ -23,7 +23,7 @@ ms.custom:
 
 Simulates rate-limit behaviors.
 
-:::image type="content" source="../media/rate-limiting-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy simulating rate limiting on GitHub APIs" lightbox="../media/rate-limiting-plugin.png":::
+:::image type="content" source="../media/rate-limiting-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy simulating rate limiting on GitHub APIs." lightbox="../media/rate-limiting-plugin.png":::
 
 ## Plugin instance definition
 

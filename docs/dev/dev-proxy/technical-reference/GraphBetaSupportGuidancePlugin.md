@@ -23,7 +23,7 @@ ms.custom:
 
 Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 
-:::image type="content" source="../media/microsoft-graph-beta-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a warning after detecting a request to a Microsoft Graph beta endpoint" lightbox="../media/microsoft-graph-beta-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-beta-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a warning after detecting a request to a Microsoft Graph beta endpoint." lightbox="../media/microsoft-graph-beta-guidance.png":::
 
 ## Plugin instance definition
 

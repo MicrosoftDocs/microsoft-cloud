@@ -23,9 +23,9 @@ ms.custom:
 
 Generates a summary report of the requests that pass through the proxy.
 
-:::image type="content" source="../media/execution-summary-1.png" alt-text="Screenshot of a terminal with the Dev Proxy execution summary with information about intercepted requests" lightbox="../media/execution-summary-1.png":::
+:::image type="content" source="../media/execution-summary-1.png" alt-text="Screenshot of a terminal with the Dev Proxy execution summary with information about intercepted requests." lightbox="../media/execution-summary-1.png":::
 
-:::image type="content" source="../media/execution-summary-2.png" alt-text="Screenshot of a terminal with the summary of the requests intercepted by Dev Proxy" lightbox="../media/execution-summary-2.png":::
+:::image type="content" source="../media/execution-summary-2.png" alt-text="Screenshot of a terminal with the summary of the requests intercepted by Dev Proxy." lightbox="../media/execution-summary-2.png":::
 
 ## Plugin instance definition
 

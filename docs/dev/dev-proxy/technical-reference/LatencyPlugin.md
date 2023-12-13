@@ -23,7 +23,7 @@ ms.custom:
 
 Delays responses by a random number of milliseconds from the configured range.
 
-:::image type="content" source="../media/latency-plugin.png" alt-text="Dev Proxy simulating latency for an API request" lightbox="../media/latency-plugin.png":::
+:::image type="content" source="../media/latency-plugin.png" alt-text="Dev Proxy simulating latency for an API request." lightbox="../media/latency-plugin.png":::
 
 ## Plugin instance definition
 
