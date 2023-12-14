@@ -60,9 +60,9 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Adopt, extend and build Copilot experiences
-            url: copilot/overview
+            url: copilot/overview.md
           - text: Copilot for Dynamics 365
-            url: copilot/copilot-for-dynamics365
+            url: copilot/copilot-for-dynamics365.md
             
   - title: Build resilient apps with Dev Proxy
     linkLists:
