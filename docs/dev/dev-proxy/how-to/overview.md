@@ -20,16 +20,16 @@ ms.custom:
   - tool=devproxy
 ---
 
-# How-to guides for Dev Proxy
+## How-to guides for Dev Proxy
 
 - [Get help and support](./Get-help-and-support.md)
 
-## Intercept requests
+### Intercept requests
 
 - [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
 - [Exclude a URL](./Exclude-a-URL.md)
 
-## Mock responses
+### Mock responses
 
 - [Mock responses](./Mock-responses.md)
 - [Mock n-th request](./Mock-nth-request.md)
@@ -37,44 +37,44 @@ ms.custom:
 - [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint.md)
 - [Change mocks file](./Change-mocks-file.md)
 
-## Simulate errors
+### Simulate errors
 
 - [Test my app with random errors](./Test-my-app-with-random-errors.md)
 - [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-HTTP-errors-properly.md)
 - [Change request failure rate](./Change-request-failure-rate.md)
 - [Simulate errors from non Microsoft 365 APIs](./Simulate-errors-from-non-Microsoft-365-APIs.md)
 
-## Simulate behaviors
+### Simulate behaviors
 
 - [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-throttling-properly.md)
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md)
 - [Simulate slow API responses](./Simulate-slow-API-responses.md)
 
-## Minimal permissions
+### Minimal permissions
 
 - [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions.md)
 - [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
 
-## Record
+### Record
 
 - [Record and export proxy activity](./Record-and-export-proxy-activity.md)
 
-## Improve my app
+### Improve my app
 
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
-## Presets
+### Presets
 
 - [Use preset configurations](./Use-preset-configurations.md)
 
-## Change settings
+### Change settings
 
 - [Change console output to use icons](./Change-console-output-to-use-icons.md)
 - [Change logging level](./Change-logging-level.md)
 - [Clear the output](./Clear-the-output.md)
 - [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database.md)
 
-## Common problems
+### Common problems
 
 - [No random errors are thrown when using mocks](./Why-are-random-errors-not-thrown-when-using-mocks.md)
 - [No internet connection after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)

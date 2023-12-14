@@ -61,7 +61,7 @@ Open a new terminal and change to the `samples` directory.
 
 Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
 
-:::image type="content" source="../media/test-app-js-welcome.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on macOS. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'With SDK' and a secondary button with the text 'Without SDK'":::
+:::image type="content" source="../media/test-app-js-welcome.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on macOS. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'With SDK' and a secondary button with the text 'Without SDK'.":::
 
 ## Test the sample app
 
@@ -72,7 +72,7 @@ In the running app, select the `Without SDK` button.
 
 Select the `Login` button and complete the sign in flow.
 
-:::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'":::
+:::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
 
 Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
 

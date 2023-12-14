@@ -12,7 +12,7 @@
       },
       {
          "source_path": "docs/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md",
-         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/does-dev-proxy-upload-any-data-to-microsoft",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/does-dev-proxy-upload-any-data-to-microsoft",
          "redirect_document_id": false
       },
       {

@@ -44,7 +44,7 @@ ms.custom:
 - [RateLimitingPlugin](./RateLimitingPlugin.md)
 - [RetryAfterPlugin](./RetryAfterPlugin.md)
 
-### Microsoft Graph Plugins
+## Microsoft Graph Plugins
 
 - [GraphBetaSupportGuidancePlugin](./GraphBetaSupportGuidancePlugin.md)
 - [GraphClientRequestIdGuidancePlugin](./GraphClientRequestIdGuidancePlugin.md)
