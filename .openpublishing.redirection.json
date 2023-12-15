@@ -62,7 +62,7 @@
       },
       {
          "source_path": "docs/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md",
-         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/the-type-initializer-for-microsoft-data-sqlite-sqliteconnection-threw-an-exception",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception",
          "redirect_document_id": false
       },
       {
