@@ -91,7 +91,7 @@
       - name: Options are not recognized
         href: how-to/why-is-the-proxy-saying-that-an-option-is-unknown.md
       - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
-        href: how-to/the-type-initializer-for-microsoft-data-sqlite-sqliteconnection-threw-an-exception.md
+        href: how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception.md
       - name: Uninstall
         href: how-to/uninstall.md
     - name: Get help and support
