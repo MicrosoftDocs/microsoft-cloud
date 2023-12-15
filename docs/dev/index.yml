@@ -60,21 +60,23 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Adopt, extend and build Copilot experiences
-            url: copilot/overview
+            url: copilot/overview.md
           - text: Copilot for Dynamics 365
-            url: copilot/copilot-for-dynamics365
+            url: copilot/copilot-for-dynamics365.md
             
-  - title: Build resilient applications with Dev Proxy
+  - title: Build resilient apps with Dev Proxy
     linkLists:
       - linkListType: get-started
         links:
-          - text: Introduction
+          - text: What is Dev Proxy?
             url: dev-proxy/overview.md
           - text: Get started
-            url: dev-proxy/get-started/index.md
+            url: dev-proxy/get-started.md
+          - text: Tutorials
+            url: dev-proxy/tutorials/test-a-javaScript-client-side-web-application.md
           - text: How-to
-            url: dev-proxy/how-to/index.md
+            url: dev-proxy/how-to/overview.md
           - text: Reference
-            url: dev-proxy/technical-reference/index.md
-          - text: Background
-            url: dev-proxy/background-information/index.md
+            url: dev-proxy/technical-reference/overview.md
+          - text: Concepts
+            url: dev-proxy/concepts/what-is-throttling.md
