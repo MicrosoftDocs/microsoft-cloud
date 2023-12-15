@@ -1,0 +1,42 @@
+---
+title: Why is the proxy saying that an option is unknown
+description: Why is the proxy saying that an option is unknown
+author: garrytrinder
+ms.author: garrytrinder
+ms.date: 11/03/2023
+ms.topic: how-to
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - microsoft-365
+  - microsoft-graph
+  - sharepoint-online
+  - m365
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+  - tool=devproxy
+---
+
+# Why is the proxy saying that an option is unknown
+
+The proxy uses a plugin architecture, as such, proxy features can be added, removed, enabled or disabled through changing the configuration in the [devproxyrc.json](../technical-reference/devproxyrc.md) file. 
+
+Some plugins provide command line options. When the plugin is disabled, the proxy isn't able to interpret the command line options that the plugin provides.
+
+By default, we ship with many plugins that are configured but disabled.
+
+For example, the [ExecutionSummaryPlugin](../technical-reference/ExecutionSummaryPlugin.md) records proxy activity and exposes command line options, such as `--summary-file-path`. As the plugin is disabled, the `--summary-file-path` option is an unknown option and so the proxy returns an error.
+
+To enable a plugin and make its options available for use, open the [devproxyrc.json](../technical-reference/devproxyrc.md) file, locate the plugin and set `enabled` to `true`.
+
+```json
+{
+  "name": "ExecutionSummaryPlugin",
+  "enabled": true,
+  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "configSection": "executionSummaryPlugin"
+}
+```

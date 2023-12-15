@@ -1,0 +1,74 @@
+{
+   "redirections": [
+      {
+         "source_path": "docs/dev/dev-proxy/Plugin-Reference-Template.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/what-is-throttling.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/what-is-throttling",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/does-dev-proxy-upload-any-data-to-microsoft.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/does-dev-proxy-upload-any-data-to-microsoft",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/plugin-architecture.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/plugin-architecture",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/background-information/resolve-relative-paths.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/resolve-relative-paths",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/installation.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/test-a-javaScript-client-side-web-application.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/tutorials/test-a-javascript-client-side-web-application",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/get-started/using-the-proxy-for-the-first-time.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/index.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app",
+         "redirect_document_id": false
+      }
+   ]
+}
