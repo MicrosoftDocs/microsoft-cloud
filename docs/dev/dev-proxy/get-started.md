@@ -5,20 +5,8 @@ author: garrytrinder
 ms.author: garrytrinder
 ms.date: 12/08/2023
 ms.topic: get-started
-ms.service: microsoft-cloud-for-developers
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
 ---
 
 # Get started with Dev Proxy
