@@ -38,11 +38,11 @@ When the API isn't working as expected, check its documentation. It might contai
 
 ## Check the throttling limits
 
-Check the [throttling limits](https://learn.microsoft.com/graph/throttling-limits) for the API that you're using. If you exceed the [throttling](./what-is-throttling.md) limits, the API might return an HTTP 429 (Too Many Requests) status code. If you get throttled, [handle it properly](./how-to-handle-api-throttling.md) in your application.
+Check the [throttling limits](/graph/throttling-limits) for the API that you're using. If you exceed the [throttling](./what-is-throttling.md) limits, the API might return an HTTP 429 (Too Many Requests) status code. If you get throttled, [handle it properly](./how-to-handle-api-throttling.md) in your application.
 
 ## Handle expected errors
 
-Microsoft Graph uses standard HTTP status codes to communicate its errors. For more information about status codes returned by Microsoft Graph APIs, see the [errors reference](https://learn.microsoft.com/graph/errors?view=graph-rest-1.0).
+Microsoft Graph uses standard HTTP status codes to communicate its errors. For more information about status codes returned by Microsoft Graph APIs, see the [errors reference](/graph/errors?view=graph-rest-1.0).
 
 ## Generate and log a unique client-request-id
 
