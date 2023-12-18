@@ -92,6 +92,8 @@
         href: how-to/why-is-the-proxy-saying-that-an-option-is-unknown.md
       - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
         href: how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception.md
+      - name: "SQLite Error 11: 'database disk image is malformed'"
+        href: how-to/sqlite-error-11-database-disk-image-is-malformed.md
       - name: Uninstall
         href: how-to/uninstall.md
     - name: Get help and support
@@ -100,6 +102,8 @@
   items:
     - name: What is throttling?
       href: concepts/what-is-throttling.md
+    - name: Use the recommended search APIs on Microsoft 365
+      href: concepts/use-recommended-search-apis-microsoft-365.md
 - name: Reference
   items: 
     - name: Overview
@@ -134,6 +138,8 @@
         href: technical-reference/GenericRandomErrorPlugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
+      - name: MockGeneratorPlugin
+        href: technical-reference/mockgeneratorplugin.md
       - name: MockResponsePlugin
         href: technical-reference/MockResponsePlugin.md
       - name: ODataPagingGuidancePlugin
@@ -160,3 +166,5 @@
             href: technical-reference/MinimalPermissionsGuidancePlugin.md
           - name: MinimalPermissionsPlugin
             href: technical-reference/MinimalPermissionsPlugin.md
+          - name: ODSPSearchGuidancePlugin
+            href: technical-reference/odspsearchguidanceplugin.md
