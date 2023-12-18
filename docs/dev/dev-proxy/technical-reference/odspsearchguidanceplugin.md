@@ -26,7 +26,7 @@ Shows a warning when Dev Proxy detects a request to OneDrive and SharePoint sear
 
 This plugin follows the [Microsoft Search APIs guidance](https://devblogs.microsoft.com/microsoft365dev/transition-to-microsoft-graph-search-endpoint-for-onedrive-and-sharepoint/).
 
-:::image type="content" source="../media/guidance-odsp-search.png" alt-text="Screenshot of Dev Proxy warning of using OneDrive and SharePoint search APIs":::
+:::image type="content" source="../media/guidance-odsp-search.png" alt-text="Screenshot of Dev Proxy warning of using OneDrive and SharePoint search APIs.":::
 
 This plugin detects the following requests:
 
