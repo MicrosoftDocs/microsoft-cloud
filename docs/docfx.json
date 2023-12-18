@@ -48,7 +48,11 @@
       "feedback_github_repo": "MicrosoftDocs/microsoft-cloud",
       "uhfHeaderId": "MSDocsHeader-MicrosoftCloud"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "titleSuffix": {
+        "dev/dev-proxy/**/*.md": "Dev Proxy"
+      }
+    },
     "template": [],
     "dest": "microsoft-cloud",
     "markdownEngineName": "markdig"
