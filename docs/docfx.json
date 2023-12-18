@@ -69,6 +69,7 @@
       },
       "open_source_feedback_productName": {
         "dev/dev-proxy/**/*.*": "Dev Proxy"
+      },
       "titleSuffix": {
         "dev/dev-proxy/**/*.md": "Dev Proxy"
       }
