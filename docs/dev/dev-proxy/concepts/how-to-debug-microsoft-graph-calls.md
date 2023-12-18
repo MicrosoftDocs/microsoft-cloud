@@ -42,7 +42,7 @@ Check the [throttling limits](/graph/throttling-limits) for the API that you're 
 
 ## Handle expected errors
 
-Microsoft Graph uses standard HTTP status codes to communicate its errors. For more information about status codes returned by Microsoft Graph APIs, see the [errors reference](/graph/errors?view=graph-rest-1.0).
+Microsoft Graph uses standard HTTP status codes to communicate its errors. For more information about status codes returned by Microsoft Graph APIs, see the [errors reference](/graph/errors).
 
 ## Generate and log a unique client-request-id
 
