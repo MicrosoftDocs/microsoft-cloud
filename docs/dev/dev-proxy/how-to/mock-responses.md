@@ -8,13 +8,10 @@ ms.date: 11/03/2023
 
 # Mock responses
 
-To define mock responses, create a file named `responses.json` in the current working directory.
+To define mock responses, create a file named `responses.json` in the current working directory. This file allows you to define a specific set of responses for each project that you work with. The file contains an object with a `responses` array containing [response](https://github.com/microsoft/dev-proxy/wiki/Response-object) objects. The ZIP file with proxy binaries contains a [responses.sample.json](https://github.com/microsoft/dev-proxy/blob/main/dev-proxy/responses.sample.json) file, which contains examples of mocked responses.
 
-This file allows you to define a specific set of responses for each project that you work with.
-
-The file contains an object with a `responses` array containing [response](https://github.com/microsoft/dev-proxy/wiki/Response-object) objects.
-
-The ZIP file with proxy binaries contains a [responses.sample.json](https://github.com/microsoft/dev-proxy/blob/main/dev-proxy/responses.sample.json) file, which contains examples of mocked responses.
+> [!TIP]
+> Instead of creating the mocks file manually, you can use the [MockGeneratorPlugin](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
 
 The following configuration demonstrates two mock responses for retrieving information about the current user. When you request information about the current user, proxy responds with a mock response. When you request the information about the user's photo, proxy returns a 404 status code.
 
