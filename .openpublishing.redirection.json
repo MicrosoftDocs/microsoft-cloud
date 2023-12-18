@@ -59,6 +59,16 @@
          "source_path": "docs/dev/dev-proxy/technical-reference/index.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/The-type-initializer-for-'Microsoft.Data.Sqlite.SqliteConnection'-threw-an-exception.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app",
+         "redirect_document_id": false
       }
    ]
 }

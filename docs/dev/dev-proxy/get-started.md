@@ -71,7 +71,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 3. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
 > [!CAUTION]
-> If you're using the proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/Why-is-proxy-not-intercepting-requests-from-my-.NET-4.8-app.md) using `netsh`.
+> If you're using the proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
 The terminal displays the following output:
 
