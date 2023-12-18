@@ -1,5 +1,5 @@
 ---
-title: How to handle API throttling?
+title: How to handle API throttling
 description: This article explains how developers can handle throttling in their applications.
 author: waldekmastykarz
 ms.author: wmastyka
@@ -20,7 +20,7 @@ ms.custom:
   - tool=devproxy
 ---
 
-# How to handle API throttling?
+# How to handle API throttling
 
 [API throttling](./what-is-throttling.md) is a common challenge that developers face when building applications that rely on cloud APIs. Here are some common techniques that you can use to handle API throttling in your applications:
 

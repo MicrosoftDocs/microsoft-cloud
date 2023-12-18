@@ -1,5 +1,5 @@
 ---
-title: How to work with large datasets?
+title: How to work with large datasets
 description: This article provides some guidance on how to work with large datasets in your applications.
 author: waldekmastykarz
 ms.author: wmastyka
@@ -20,7 +20,7 @@ ms.custom:
   - tool=devproxy
 ---
 
-# How to work with large datasets?
+# How to work with large datasets
 
 When working with APIs that expose large data sets, use techniques such as pagination, filtering, sorting, and caching to optimize API requests for performance.
 
