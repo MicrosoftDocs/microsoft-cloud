@@ -4,20 +4,6 @@ description: How to get help and support for the Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: how-to
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
 ---
 
 # Get help and support

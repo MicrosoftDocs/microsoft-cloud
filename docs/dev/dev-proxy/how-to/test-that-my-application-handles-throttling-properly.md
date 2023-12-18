@@ -4,20 +4,6 @@ description: How to test that your application handles throttling properly
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 11/03/2023
-ms.topic: how-to
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
 ---
 
 # Test that my application handles throttling properly

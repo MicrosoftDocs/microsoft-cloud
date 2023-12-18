@@ -48,7 +48,30 @@
       "feedback_github_repo": "MicrosoftDocs/microsoft-cloud",
       "uhfHeaderId": "MSDocsHeader-MicrosoftCloud"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "titleSuffix": {
+        "dev/dev-proxy/**/*.md": "Dev Proxy"
+      },
+      "ms.service": {
+        "dev/dev-proxy/**/*.md": "microsoft-cloud-for-developers"
+      },
+      "categories": {
+        "dev/dev-proxy/**/*.md": "developer-tools"
+      },
+      "ms.custom": {
+        "dev/dev-proxy/**/*.md": [
+          "fcp",
+          "team=cloud_advocates",
+          "tool=devproxy"
+        ]
+      },
+      "ms.topic": {
+        "dev/dev-proxy/concepts/**/*.md": "concept-article",
+        "dev/dev-proxy/how-to/**/*.md": "how-to",
+        "dev/dev-proxy/technical-reference/**/*.md": "reference",
+        "dev/dev-proxy/tutorials/**/*.md": "tutorial"
+      }
+    },
     "template": [],
     "dest": "microsoft-cloud",
     "markdownEngineName": "markdig"
