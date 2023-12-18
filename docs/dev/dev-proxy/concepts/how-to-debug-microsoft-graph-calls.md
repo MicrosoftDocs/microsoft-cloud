@@ -30,7 +30,7 @@ Before you start debugging, it's a good idea to check if the issue you're facing
 
 ## Check the changelog
 
-If you're using the [Microsoft Graph beta endpoint](./can-i-use-microsoft-graph-beta-in-production.md), check the [Microsoft Graph changelog](https://developer.microsoft.com/graph/changelog/?search=) for any changes that might affect your application. The changelog contains information about new features, changes, and fixes in the Microsoft Graph API. It also contains information about breaking changes that might affect your application.
+If you're using the [Microsoft Graph beta endpoint](./use-microsoft-graph-beta-production.md), check the [Microsoft Graph changelog](https://developer.microsoft.com/graph/changelog/?search=) for any changes that might affect your application. The changelog contains information about new features, changes, and fixes in the Microsoft Graph API. It also contains information about breaking changes that might affect your application.
 
 ## Check the documentation
 
