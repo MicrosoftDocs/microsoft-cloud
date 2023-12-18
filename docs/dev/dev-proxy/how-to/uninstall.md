@@ -3,7 +3,7 @@ title: Uninstall
 description: How to uninstall Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 12/18/2023
 ms.topic: how-to
 ms.service: microsoft-cloud-for-developers
 
@@ -22,7 +22,7 @@ ms.custom:
 
 # Uninstall
 
-If you want to remove Dev Proxy from your machine, follow the following steps. 
+If you want to remove Dev Proxy from your machine, follow the following steps.
 
 1. Remove the folder where you extracted the files from the ZIP on your disk.
 2. Remove the certificate, following the steps relevant to the OS you use.
@@ -40,7 +40,7 @@ If you want to remove Dev Proxy from your machine, follow the following steps.
 <details>
    <summary>macOS Monterey</summary>
 
-1.  Remove `~/.config/dev-proxy/rootCert.pfx` file.
+1.  Remove the `~/Library/Application Support/dev-proxy` folder.
 </details>
 
 Dev Proxy doesn't create any extra files or registry entries on your machine.
