@@ -4,20 +4,6 @@ description: Learn how to use Dev Proxy with a sample JavaScript client-side web
 author: garrytrinder
 ms.author: garrytrinder
 ms.date: 12/08/2023
-ms.topic: tutorial
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
 ---
 
 # Test a JavaScript client-side web application
