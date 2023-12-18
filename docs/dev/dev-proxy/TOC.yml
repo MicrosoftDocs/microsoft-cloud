@@ -134,6 +134,8 @@
         href: technical-reference/GenericRandomErrorPlugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
+      - name: MockGeneratorPlugin
+        href: technical-reference/mockgeneratorplugin.md
       - name: MockResponsePlugin
         href: technical-reference/MockResponsePlugin.md
       - name: ODataPagingGuidancePlugin
