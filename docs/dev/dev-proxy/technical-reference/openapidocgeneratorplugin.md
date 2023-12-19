@@ -10,7 +10,7 @@ ms.date: 12/19/2023
 
 Generates OpenAPI documentation in JSON format from the intercepted requests and responses.
 
-:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI document" lightbox="../media/open-api-doc-generator-plugin.png":::
+:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI document." lightbox="../media/open-api-doc-generator-plugin.png":::
 
 ## Plugin instance definition
 

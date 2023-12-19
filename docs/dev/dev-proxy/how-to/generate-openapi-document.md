@@ -49,4 +49,4 @@ To generate an OpenAPI document using Dev Proxy:
 1. Stop recording requests by pressing `s`
 1. Dev Proxy generates an OpenAPI document and saves it to a file in the current directory. Dev Proxy names the file after the host name of the API followed by the current date and time, for example: `api.example.com-20231219091700.json`.
 
-:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI document" lightbox="../media/open-api-doc-generator-plugin.png":::
+:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI document." lightbox="../media/open-api-doc-generator-plugin.png":::
