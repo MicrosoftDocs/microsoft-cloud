@@ -59,7 +59,7 @@
         "dev/dev-proxy/**/*.*": "microsoft/dev-proxy"
       },
       "open_source_feedback_contributorGuideUrl": {
-        "dev/dev-proxy/**/*.*": "https://review.learn.microsoft.com/help"
+        "dev/dev-proxy/**/*.*": "https://learn.microsoft.com/contribute/content/"
       },
       "open_source_feedback_issueTitle": {
         "dev/dev-proxy/**/*.*": ""
