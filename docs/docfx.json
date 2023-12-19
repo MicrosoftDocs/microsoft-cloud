@@ -70,6 +70,12 @@
       "open_source_feedback_productName": {
         "dev/dev-proxy/**/*.*": "Dev Proxy"
       },
+      "open_source_feedback_productLogoDarkUrl": {
+        "dev/dev-proxy/**/*.*": "https://raw.githubusercontent.com/garrytrinder/dev-proxy/images-updates/media/icon.svg"
+      },
+      "open_source_feedback_productLogoLightUrl": {
+        "dev/dev-proxy/**/*.*": "https://raw.githubusercontent.com/garrytrinder/dev-proxy/images-updates/media/icon.svg"
+      },
       "titleSuffix": {
         "dev/dev-proxy/**/*.md": "Dev Proxy"
       }
