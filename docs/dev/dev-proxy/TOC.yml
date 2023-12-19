@@ -57,7 +57,9 @@
       - name: Record and export proxy activity
         href: how-to/record-and-export-proxy-activity.md
     - name: Improve my app
-      items: 
+      items:
+      - name: Generate an OpenAPI document
+        href: how-to/generate-openapi-document.md
       - name: Update my application code to use Microsoft Graph JavaScript SDK
         href: how-to/update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
     - name: Presets
@@ -100,8 +102,24 @@
       href: how-to/get-help-and-support.md
 - name: Concepts
   items:
+    - name: What is caching?
+      href: concepts/what-is-caching.md
     - name: What is throttling?
       href: concepts/what-is-throttling.md
+    - name: How to handle API throttling
+      href: concepts/how-to-handle-api-throttling.md
+    - name: What is rate limiting?
+      href: concepts/what-is-rate-limiting.md
+    - name: How to handle rate limiting
+      href: concepts/how-to-handle-rate-limiting.md
+    - name: How to work with large datasets
+      href: concepts/how-to-work-with-large-datasets.md
+    - name: What is an OpenAPI document
+      href: concepts/what-is-openapi-document.md
+    - name: How to debug Microsoft Graph API calls
+      href: concepts/how-to-debug-microsoft-graph-calls.md
+    - name: Using Microsoft Graph beta endpoints in production
+      href: concepts/use-microsoft-graph-beta-production.md
     - name: Use the recommended search APIs on Microsoft 365
       href: concepts/use-recommended-search-apis-microsoft-365.md
 - name: Reference
@@ -144,6 +162,8 @@
         href: technical-reference/MockResponsePlugin.md
       - name: ODataPagingGuidancePlugin
         href: technical-reference/ODataPagingGuidancePlugin.md
+      - name: OpenApiDocGeneratorPlugin
+        href: technical-reference/openapidocgeneratorplugin.md
       - name: RateLimitingPlugin
         href: technical-reference/RateLimitingPlugin.md
       - name: RetryAfterPlugin
