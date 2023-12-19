@@ -102,10 +102,24 @@
       href: how-to/get-help-and-support.md
 - name: Concepts
   items:
+    - name: What is caching?
+      href: concepts/what-is-caching.md
     - name: What is throttling?
       href: concepts/what-is-throttling.md
+    - name: How to handle API throttling
+      href: concepts/how-to-handle-api-throttling.md
+    - name: What is rate limiting?
+      href: concepts/what-is-rate-limiting.md
+    - name: How to handle rate limiting
+      href: concepts/how-to-handle-rate-limiting.md
+    - name: How to work with large datasets
+      href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI document
       href: concepts/what-is-openapi-document.md
+    - name: How to debug Microsoft Graph API calls
+      href: concepts/how-to-debug-microsoft-graph-calls.md
+    - name: Using Microsoft Graph beta endpoints in production
+      href: concepts/use-microsoft-graph-beta-production.md
     - name: Use the recommended search APIs on Microsoft 365
       href: concepts/use-recommended-search-apis-microsoft-365.md
 - name: Reference
