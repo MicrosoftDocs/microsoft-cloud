@@ -51,6 +51,7 @@ Copilot assistants discussed in this section include:
 - [Copilot for Azure](#copilot-for-azure)
 - [Copilot for Dynamics 365](#copilot-for-dynamics-365)
 - [Copilot for Microsoft 365](#copilot-for-microsoft-365)
+- [Copilot for Service](#copilot-for-service)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
 - [Copilot in Power Automate](#copilot-in-power-automate)
@@ -96,6 +97,13 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 Learn more:
 - [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
 
+### Copilot for Service
+
+Copilot for Service synthesizes vast amounts of data already available from an organization’s trusted knowledge sources to provide relevant, timely guidance to agents in their flow of work. Copilot for Service provides flexibility for organizations to quickly begin realizing the benefits of generative AI by extending their existing investments in CRM and contact center solutions—including Dynamics 365, Salesforce, ServiceNow and more.
+
+Learn More:
+- [Copilot for Service Documentation](/microsoft-copilot-service)
+  
 ### Copilot in Microsoft Fabric
 
 Copilot in Microsoft Fabric brings a new way to transform and analyze data, generate insights, and create visualizations and reports. 
