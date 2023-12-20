@@ -99,7 +99,7 @@ Learn more:
 
 ### Copilot for Service
 
-Copilot for Service synthesizes vast amounts of data already available from an organization’s trusted knowledge sources to provide relevant, timely guidance to agents in their flow of work. Copilot for Service provides flexibility for organizations to quickly begin realizing the benefits of generative AI by extending their existing investments in CRM and contact center solutions—including Dynamics 365, Salesforce, ServiceNow and more.   
+Copilot for Service synthesizes vast amounts of data already available from an organization’s trusted knowledge sources to provide relevant, timely guidance to agents in their flow of work. Copilot for Service provides flexibility for organizations to quickly begin realizing the benefits of generative AI by extending their existing investments in CRM and contact center solutions—including Dynamics 365, Salesforce, ServiceNow and more.
 
 Learn More:
 - [Copilot for Service Documentation](/microsoft-copilot-service)
