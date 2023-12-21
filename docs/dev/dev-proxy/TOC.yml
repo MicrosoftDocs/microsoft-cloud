@@ -16,6 +16,8 @@
         href: how-to/intercept-requests-from-specific-processes.md
       - name: Exclude a URL
         href: how-to/exclude-a-URL.md
+      - name: Inspect requests and responses using Chrome DevTools
+        href: how-to/inspect-requests-responses-chrome-devtools.md
     - name: Mock responses
       items: 
       - name: Mock responses
@@ -148,6 +150,8 @@
       href: technical-reference/Supported-HTTP-error-status-codes.md
     - name: Plugins
       items:
+      - name: DevToolsPlugin
+        href: technical-reference/devtoolsplugin.md
       - name: CachingGuidancePlugin
         href: technical-reference/CachingGuidancePlugin.md
       - name: ExecutionSummaryPlugin
