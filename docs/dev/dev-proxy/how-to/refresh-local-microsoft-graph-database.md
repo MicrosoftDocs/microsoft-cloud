@@ -12,7 +12,7 @@ We introduced a local SQLite database to store the OpenAPI specifications for bo
 
 Whilst we automatically create and update this local database for you, there maybe occasions when you want to refresh this database yourself.
 
-Execute `devproxy msgraphdb` in your proxy installation folder to rebuild and update your local database.
+Execute [`devproxy msgraphdb`](../technical-reference/msgraphdb.md) in your proxy installation folder to rebuild and update your local database.
 
 Here's sample output of running the command.
 

@@ -192,3 +192,9 @@
             href: technical-reference/MinimalPermissionsPlugin.md
           - name: ODSPSearchGuidancePlugin
             href: technical-reference/odspsearchguidanceplugin.md
+    - name: Commands
+      items:
+      - name: msgraphdb
+        href: technical-reference/msgraphdb.md
+      - name: preset get
+        href: technical-reference/preset-get.md
