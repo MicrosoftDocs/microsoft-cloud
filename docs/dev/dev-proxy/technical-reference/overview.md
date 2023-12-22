@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/21/2023
+ms.date: 12/22/2023
 ms.topic: overview
 ---
 
@@ -17,7 +17,9 @@ List of plugins that work with any API.
 
 Name | Description
 --- | ---
+[DevToolsPlugin](./devtoolsplugin.md)|Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools.
 [CachingGuidancePlugin](./cachingguidanceplugin.md)|Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
+[CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with a in-memory data store.
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
