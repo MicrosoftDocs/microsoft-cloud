@@ -14,7 +14,7 @@ Here's why you should consider having an OpenAPI document for your API:
 
 - **Document API in a standardized way.** Document API specification in a consistent and human-readable format.
 - **Generate client SDK.** Use tools such as [Kiota](/openapi/kiota/overview) to automate generating of client libraries in various programming languages.
-- **Mock API.**: Create mock servers based on the API specification, which helps you during the early stages of development when the actual API isn't yet implemented.
+- **Mock API.** Create mock servers based on the API specification, which helps you during the early stages of development when the actual API isn't yet implemented.
 - **Improve collaboration.** Provide different teams (frontend, backend, QA, etc.) a clear understanding of the API's capabilities and limitations, and helps new team members to quickly get up to speed.
 - **Simplify testing and validation.** Automate validation of API requests and responses against the specification, which makes it easier to identify discrepancies.
 - **Integrate with API management tools.** Easily integrate, deploy, and monitor your APIs with many API management tools and gateways, such as [Azure API Center](/azure/api-center/) and [Azure API Management](/azure/api-management/).

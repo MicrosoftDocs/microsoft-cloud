@@ -17,17 +17,25 @@ In this article, you'll learn how to install and run Dev Proxy.
 
 ## Install
 
-1. [Download](https://github.com/microsoft/dev-proxy/releases/latest) the latest release for your operating system.
-2. Extract the contents of the ZIP into a folder.
+You can install Dev Proxy by script, or manually.
 
-> [!NOTE]
-> This guide assumes that you have extracted the Dev Proxy files in your home directory in a folder named `devproxy`, but you can store them anywhere.
+### [PowerShell](#tab/powershell)
 
-## Make Dev Proxy globally available
+```powershell
+(Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
+```
 
-If you make Dev Proxy globally available, you can start it from any directory and project folder on your machine.
+### [bash](#tab/bash)
 
-To make Dev Proxy globally available, add its installation folder to the system path.
+```bash
+curl -sL https://aka.ms/devproxy/setup.sh | bash
+```
+
+### [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
 
 ::: zone pivot="client-operating-system-windows"
 
@@ -50,16 +58,18 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 ::: zone-end
 
+---
+
 ## Start Dev Proxy
 
 ::: zone pivot="client-operating-system-windows"
 
 1. **Start Dev Proxy**. Open a terminal. Enter `devproxy` and press <kbd>Enter</kbd>.
-2. **Trust certificate**. Dev Proxy installs a certificate named `Titanium Root Certificate Authority`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
+2. **Trust certificate**. Dev Proxy installs a certificate named `Dev Proxy CA`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
 3. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
 > [!CAUTION]
-> If you're using the proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
+> If you're using Dev Proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
 The terminal displays the following output:
 
@@ -118,7 +128,7 @@ Press CTRL+C to stop Dev Proxy
 
 ---
 
-The proxy is now running with the following defaults:
+Dev Proxy is now running with the following defaults:
 
 - 50% chance of a request being failed with a random [supported HTTP error status code](./technical-reference/Supported-HTTP-error-status-codes.md).
 - Dev Proxy intercepts all requests to Microsoft Graph and SharePoint Online APIs.
