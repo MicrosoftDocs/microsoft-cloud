@@ -17,17 +17,48 @@ In this article, you'll learn how to install and run Dev Proxy.
 
 ## Install
 
+You can install Dev Proxy by script, or manually.
+
 ### [PowerShell](#tab/powershell)
 
 ```powershell
-(Invoke-webrequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
+(Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
 ```
 
-### [Bash](#tab/bash)
+### [bash](#tab/bash)
 
 ```bash
 curl -sL https://aka.ms/devproxy/setup.sh | bash
 ```
+
+### [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
+
+::: zone pivot="client-operating-system-windows"
+
+  1. Open the `Start` menu.
+  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
+  1. In the `Edit environment variable` dialog box, select the `New` button.
+  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
+  1. Select `OK` to confirm changes.
+
+::: zone-end  
+
+::: zone pivot="client-operating-system-macos"
+
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
+
+  1. Open your shell profile in a text editor > `~/.zshrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
+  1. Reload your profile > `source ~/.zshrc`.
+
+::: zone-end
+
+---
 
 ## Start Dev Proxy
 
@@ -38,7 +69,7 @@ curl -sL https://aka.ms/devproxy/setup.sh | bash
 3. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
 > [!CAUTION]
-> If you're using the proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
+> If you're using Dev Proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
 The terminal displays the following output:
 
@@ -97,7 +128,7 @@ Press CTRL+C to stop Dev Proxy
 
 ---
 
-The proxy is now running with the following defaults:
+Dev Proxy is now running with the following defaults:
 
 - 50% chance of a request being failed with a random [supported HTTP error status code](./technical-reference/Supported-HTTP-error-status-codes.md).
 - Dev Proxy intercepts all requests to Microsoft Graph and SharePoint Online APIs.
