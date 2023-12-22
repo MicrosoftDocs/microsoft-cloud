@@ -3,7 +3,7 @@ title: Simulate errors from non-Microsoft 365 APIs
 description: How to configure the proxy to simulate errors from non-Microsoft 365 APIs
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 12/22/2023
 ---
 
 # Simulate errors from non-Microsoft 365 APIs
@@ -15,6 +15,9 @@ Whilst you can use the built-in chaos handler with any API, it returns error res
 When using the proxy to test non-Microsoft 365 APIs, you should provide your own error responses.
 
 The below steps show how to configure error responses for the Open AI API as an example.
+
+> [!TIP]
+> Download this preset by running in the terminal `devproxy preset get openai-throttling`.
 
 Open `devproxyrc.json` in the install folder.
 
@@ -97,6 +100,9 @@ If you added API URL to the global `urlsToWatch` array, you should remove it to 
 
 You can also return binary data in your error response. In the following example, the proxy returns an image in the body of the error.
 
+> [!TIP]
+> Download this preset by running in the terminal `devproxy preset get http-cats`.
+
 ```json
 {
   "statusCode": 429,
@@ -109,4 +115,3 @@ You can also return binary data in your error response. In the following example
 ```
 
 After making the changes to the `devproxyrc.json` file, you'll need to restart the proxy for the changes to take effect.
-
