@@ -9,6 +9,8 @@ ms.topic: overview
 
 # Technical reference for Dev Proxy
 
+This section contains technical reference for Dev Proxy plugins and configuration options.
+
 ## Plugins
 
 List of plugins that work with any API.
@@ -42,15 +44,11 @@ Name | Description
 [MinimalPermissionsGuidancePlugin](./minimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [ODSPSearchGuidancePlugin](./odspsearchguidanceplugin.md)|Shows a warning when Dev Proxy detects a request to OneDrive and SharePoint search APIs.
 
-## Miscellaneous
+## Configuration
 
-- [Console output ASCII icons](./Console-output-ASCII-icons.md)
-- [Console output text labels](./Console-output-text-labels.md)
-- [devproxyrc](./devproxyrc.md)
-- [Does Dev Proxy upload any data to Microsoft](./does-dev-proxy-upload-any-data-to-microsoft.md)
-- [How does proxy resolve relative paths?](./resolve-relative-paths.md)
-- [Keyboard shortcuts](./Keyboard-shortcuts.md)
-- [Plugin architecture](./plugin-architecture.md)
-- [Proxy settings](./Proxy-settings.md)
-- [Response object](./Response-object.md)
-- [Supported HTTP error status codes](./Supported-HTTP-error-status-codes.md)
+Reference of Dev Proxy configuration options.
+
+Name | Description
+--- | ---
+[devproxyrc](./devproxyrc.md)|Configuration file for Dev Proxy.
+[Proxy settings](./proxy-settings.md)|Configuration options for proxy settings.
