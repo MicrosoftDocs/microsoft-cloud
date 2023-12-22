@@ -17,13 +17,13 @@ In this article, you'll learn how to install and run Dev Proxy.
 
 ## Install
 
-### PowerShell (#tab/powershell)
+### [PowerShell](#tab/powershell)
 
 ```powershell
-(Invoke-webrequest https://aka.ms/devproxysetup.ps1).Content | Invoke-Expression
+(Invoke-webrequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
 ```
 
-### Bash (#tab/bash)
+### [Bash](#tab/bash)
 
 ```bash
 curl -sL https://aka.ms/devproxy/setup.sh | bash
