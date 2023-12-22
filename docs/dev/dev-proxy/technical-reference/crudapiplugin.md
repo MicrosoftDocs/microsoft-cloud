@@ -139,12 +139,12 @@ When you create a new item using a `create` action, the plugin doesn't validate 
   {
     "id": 1,
     "name": "Contoso",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   }
 ]
 ```

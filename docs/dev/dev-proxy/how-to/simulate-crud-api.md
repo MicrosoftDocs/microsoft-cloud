@@ -87,12 +87,12 @@ In the `customers-data.json` file, you define the mock customer data.
   {
     "id": 1,
     "name": "Contoso",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   }
 ]
 ```
@@ -104,12 +104,12 @@ You start Dev Proxy and call the `https://api.contoso.com/v1/customers` endpoint
   {
     "id": 1,
     "name": "Contoso",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
+    "address": "4567 Main St Buffalo, NY 98052"
   }
 ]
 ```
