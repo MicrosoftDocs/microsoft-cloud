@@ -30,6 +30,8 @@
         href: how-to/mock-multiple-responses-to-the-same-endpoint.md
       - name: Change mocks file
         href: how-to/change-mocks-file.md
+      - name: Simulate a CRUD API
+        href: how-to/simulate-crud-api.md
     - name: Simulate errors
       items:
       - name: Test my app with random errors
@@ -150,10 +152,12 @@
       href: technical-reference/Supported-HTTP-error-status-codes.md
     - name: Plugins
       items:
-      - name: DevToolsPlugin
-        href: technical-reference/devtoolsplugin.md
       - name: CachingGuidancePlugin
         href: technical-reference/CachingGuidancePlugin.md
+      - name: CrudApiPlugin
+        href: technical-reference/crudapiplugin.md
+      - name: DevToolsPlugin
+        href: technical-reference/devtoolsplugin.md
       - name: ExecutionSummaryPlugin
         href: technical-reference/ExecutionSummaryPlugin.md
       - name: GenericRandomErrorPlugin
