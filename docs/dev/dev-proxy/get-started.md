@@ -17,45 +17,24 @@ In this article, you'll learn how to install and run Dev Proxy.
 
 ## Install
 
-1. [Download](https://github.com/microsoft/dev-proxy/releases/latest) the latest release for your operating system.
-2. Extract the contents of the ZIP into a folder.
+### PowerShell (#tab/powershell)
 
-> [!NOTE]
-> This guide assumes that you have extracted the Dev Proxy files in your home directory in a folder named `devproxy`, but you can store them anywhere.
+```powershell
+(Invoke-webrequest https://aka.ms/devproxysetup.ps1).Content | Invoke-Expression
+```
 
-## Make Dev Proxy globally available
+### Bash (#tab/bash)
 
-If you make Dev Proxy globally available, you can start it from any directory and project folder on your machine.
-
-To make Dev Proxy globally available, add its installation folder to the system path.
-
-::: zone pivot="client-operating-system-windows"
-
-  1. Open the `Start` menu.
-  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
-  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
-  1. In the `Edit environment variable` dialog box, select the `New` button.
-  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
-  1. Select `OK` to confirm changes.
-
-::: zone-end  
-
-::: zone pivot="client-operating-system-macos"
-
-The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
-
-  1. Open your shell profile in a text editor > `~/.zshrc`.
-  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
-  1. Reload your profile > `source ~/.zshrc`.
-
-::: zone-end
+```bash
+curl -sL https://aka.ms/devproxy/setup.sh | bash
+```
 
 ## Start Dev Proxy
 
 ::: zone pivot="client-operating-system-windows"
 
 1. **Start Dev Proxy**. Open a terminal. Enter `devproxy` and press <kbd>Enter</kbd>.
-2. **Trust certificate**. Dev Proxy installs a certificate named `Titanium Root Certificate Authority`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
+2. **Trust certificate**. Dev Proxy installs a certificate named `Dev Proxy CA`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
 3. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
 > [!CAUTION]
