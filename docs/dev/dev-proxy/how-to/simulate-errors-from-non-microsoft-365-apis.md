@@ -16,6 +16,9 @@ When using the proxy to test non-Microsoft 365 APIs, you should provide your own
 
 The below steps show how to configure error responses for the Open AI API as an example.
 
+> [!TIP]
+> Download this preset by running in the terminal `devproxy preset get openai-throttling`.
+
 Open `devproxyrc.json` in the install folder.
 
 Create a new object in the `plugins` array referencing the `GenericRandomErrorPlugin`. Defines the specific URLs for the plugin to watch for and a reference to the plugin configuration.
@@ -97,6 +100,9 @@ If you added API URL to the global `urlsToWatch` array, you should remove it to 
 
 You can also return binary data in your error response. In the following example, the proxy returns an image in the body of the error.
 
+> [!TIP]
+> Download this preset by running in the terminal `devproxy preset get http-cats`.
+
 ```json
 {
   "statusCode": 429,
@@ -109,4 +115,3 @@ You can also return binary data in your error response. In the following example
 ```
 
 After making the changes to the `devproxyrc.json` file, you'll need to restart the proxy for the changes to take effect.
-
