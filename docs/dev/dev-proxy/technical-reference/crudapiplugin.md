@@ -138,39 +138,13 @@ When you create a new item using a `create` action, the plugin doesn't validate 
 [
   {
     "id": 1,
-    "firstName": "Ted",
-    "lastName": "James",
-    "gender": "male",
-    "address": "1234 Anywhere St.",
-    "city": "Phoenix",
-    "state": {
-      "abbreviation": "AZ",
-      "name": "Arizona"
-    },
-    "orders": [
-      { "productName": "Basketball", "itemCost": 7.99 },
-      { "productName": "Shoes", "itemCost": 199.99 }
-    ],
-    "latitude": 33.299,
-    "longitude": -111.963
+    "name": "Contoso",
+    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
   },
   {
     "id": 2,
-    "firstName": "Michelle",
-    "lastName": "Thompson",
-    "gender": "female",
-    "address": "345 Cedar Point Ave.",
-    "city": "Encinitas",
-    "state": {
-      "abbreviation": "CA",
-      "name": "California"
-    },
-    "orders": [
-      { "productName": "Frisbee", "itemCost": 2.99 },
-      { "productName": "Hat", "itemCost": 5.99 }
-    ],
-    "latitude": 33.037,
-    "longitude": -117.291
+    "name": "Fabrikam",
+    "address": "One Microsoft Way, Redmond, WA 98052-6399, USA"
   }
 ]
 ```
