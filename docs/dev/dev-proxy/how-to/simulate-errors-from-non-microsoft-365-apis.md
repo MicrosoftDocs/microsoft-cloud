@@ -3,7 +3,7 @@ title: Simulate errors from non-Microsoft 365 APIs
 description: How to configure the proxy to simulate errors from non-Microsoft 365 APIs
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 12/22/2023
 ---
 
 # Simulate errors from non-Microsoft 365 APIs
