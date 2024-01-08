@@ -3,7 +3,7 @@ title: Change console output to use icons
 description: How to change console output to use icons
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/08/2024
 ---
 
 # Change console output to use icons
@@ -17,7 +17,7 @@ To change the label style, update the `labelMode` property value in the [devprox
 To use ASCII icons, use:
 
 ```json
-"labelMode": "icons",
+"labelMode": "icon",
 ```
 
 ## Nerdfont icons
