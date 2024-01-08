@@ -25,11 +25,15 @@ You can install Dev Proxy by script, or manually.
 (Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
 ```
 
+After executing the script, follow the steps in the output.
+
 ### [bash](#tab/bash)
 
 ```bash
 curl -sL https://aka.ms/devproxy/setup.sh | bash
 ```
+
+After executing the script, follow the steps in the output.
 
 ### [Manual](#tab/manual)
 
