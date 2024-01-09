@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install and use Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/08/2023
+ms.date: 1/9/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -13,7 +13,7 @@ zone_pivot_groups: client-operating-system
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this article, you'll learn how to install and run Dev Proxy.
+In this article, you learn how to install and run Dev Proxy.
 
 ## Install
 
@@ -37,7 +37,7 @@ After executing the script, follow the steps in the output.
 
 ### [Manual](#tab/manual)
 
-[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder.
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
 
 To start Dev Proxy from any directory, add its installation folder location to your PATH.
 
@@ -78,9 +78,8 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 The terminal displays the following output:
 
 ```text
-  WARNING: File responses.json not found in the current directory. No mocks will be provided
+  WARNING: File mocks.json not found in the current directory. No mocks will be provided
 Listening on 127.0.0.1: 8000
-Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTP Proxy
 Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
 Press Ctrl+C to stop the Dev Proxy
 ```
@@ -92,8 +91,8 @@ Press Ctrl+C to stop the Dev Proxy
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Make files executable**. Open the `devproxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
-1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you'll need to trust it manually.
+1. **Make files executable**. Open the `devproxy` installation folder in a terminal. Execute `chmod +x devproxy` and then `chmod +x libe_sqlite3.dylib`
+1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you need to trust it manually.
     1. Open the `dev-proxy` installation folder in Finder.
     1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
     1. Choose `Open` from the menu, and then select `Open` in the dialog that appears.
@@ -119,7 +118,7 @@ Press Ctrl+C to stop the Dev Proxy
 The terminal displays the following output:
 
 ```text
-  WARNING: File responses.json not found in the current directory. No mocks will be provided
+  WARNING: File mocks.json not found in the current directory. No mocks will be provided
 Listening on 127.0.0.1:8000...
   WARNING: Configure your operating system to use this proxy's port and address
 Press CTRL+C to stop Dev Proxy

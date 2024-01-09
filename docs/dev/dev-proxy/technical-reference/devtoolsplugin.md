@@ -3,7 +3,7 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/21/2023
+ms.date: 1/9/2024
 ---
 
 # DevToolsPlugin
@@ -29,7 +29,9 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 
 ```json
 {
-  "preferredBrowser": "Edge"
+  "devTools": {
+    "preferredBrowser": "Edge"
+  }
 }
 ```
 

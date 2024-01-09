@@ -39,7 +39,7 @@ The `configSection` takes a reference to a configuration object. The `mocksPlugi
 
 ```json
 "mocksPlugin": {
-  "mocksFile": "responses.json"
+  "mocksFile": "mocks.json"
 }
 ```
 

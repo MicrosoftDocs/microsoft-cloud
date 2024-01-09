@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/09/2024
 ---
 
 # devproxyrc
@@ -148,7 +148,7 @@ Default configuration.
     "https://*.sharepoint-df.*/*_vti_bin/*"
   ],
   "mocksPlugin": {
-    "mocksFile": "responses.json"
+    "mocksFile": "mocks.json"
   },
   "graphRandomErrorsPlugin": {
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]

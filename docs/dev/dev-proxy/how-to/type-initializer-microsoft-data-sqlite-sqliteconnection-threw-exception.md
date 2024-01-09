@@ -16,4 +16,4 @@ The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an excep
 
 This error happens when macOS doesn't consider the `libe_sqlite3.dylib` file an executable.
 
-Open the `dev-proxy` installation folder in a terminal and execute `chmod -x libe_sqlite3.dylib`.
+Open the `dev-proxy` installation folder in a terminal and execute `chmod +x libe_sqlite3.dylib`.
