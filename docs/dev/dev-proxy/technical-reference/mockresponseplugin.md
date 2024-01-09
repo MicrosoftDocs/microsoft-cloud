@@ -3,7 +3,7 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/09/2024
 ---
 
 # MockResponsePlugin
@@ -28,7 +28,7 @@ Simulates responses.
 ```json
 {
   "mocksPlugin": {
-    "mocksFile": "responses.json"
+    "mocksFile": "mocks.json"
   }
 }
 ```
@@ -37,7 +37,7 @@ Simulates responses.
 
 | Property              | Description                                                        |     Default      |
 | --------------------- | ------------------------------------------------------------------ | :--------------: |
-| `mocksFile`             | Path to the file containing mock responses                         | `responses.json` |
+| `mocksFile`             | Path to the file containing mock responses                         | `mocks.json` |
 | `blockUnmockedRequests` | Return `502 Bad Gateway` response for requests that aren't mocked |     `false`      |
 
 ## Command line options

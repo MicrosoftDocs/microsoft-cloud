@@ -3,43 +3,52 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/22/2023
+ms.date: 1/08/2024
 ---
 
 # Mock nth request
 
-In v0.12, we introduced support for mocking n-th request and extended the [response](../technical-reference/Response-object.md) object with a new property called `nth`.
+In v0.12, we introduced support for mocking n-th request and extended the [mock request](../technical-reference/Response-object.md) object with a new property called `nth`.
 
 > [!TIP]
 > Download this preset by running in the terminal `devproxy preset get microsoft-graph-connector`.
 
-Using the following mock file as an example, we can see that it contains two responses to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with the specified URL for the second time. For all other requests, the proxy returns the second response.
+Using the following mock file as an example, we can see that it contains two mocks to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with the specified URL for the second time. For all other requests, the proxy returns the second response.
 
 > [!TIP]
-> Responses with the `nth` property should be first. Proxy uses responses based on the first match.
+> Mocks with the `nth` property should be first. Proxy uses mocks based on the first match.
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
-      "method": "GET",
-      "nth": 2,
-      "responseCode": 200,
-      "responseBody": {
-        "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
-        "status": "completed",
-        "error": null
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
+        "method": "GET",
+        "nth": 2
+      },
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
+          "status": "completed",
+          "error": null
+        }
       }
     },
     {
-      "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
-      "method": "GET",
-      "responseCode": 200,
-      "responseBody": {
-        "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
-        "status": "inprogress",
-        "error": null
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
+        "method": "GET"
+      },
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
+          "status": "inprogress",
+          "error": null
+        }
       }
     }
   ]

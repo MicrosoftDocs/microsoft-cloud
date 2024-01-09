@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install and use Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/08/2023
+ms.date: 1/08/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -78,7 +78,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 The terminal displays the following output:
 
 ```text
-  WARNING: File responses.json not found in the current directory. No mocks will be provided
+  WARNING: File mocks.json not found in the current directory. No mocks will be provided
 Listening on 127.0.0.1: 8000
 Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTP Proxy
 Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
@@ -119,7 +119,7 @@ Press Ctrl+C to stop the Dev Proxy
 The terminal displays the following output:
 
 ```text
-  WARNING: File responses.json not found in the current directory. No mocks will be provided
+  WARNING: File mocks.json not found in the current directory. No mocks will be provided
 Listening on 127.0.0.1:8000...
   WARNING: Configure your operating system to use this proxy's port and address
 Press CTRL+C to stop Dev Proxy

@@ -3,7 +3,7 @@ title: Mock multiple responses to the same endpoint
 description: How to mock multiple responses to the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/08/2024
 ---
 
 # Mock multiple responses to the same endpoint
@@ -12,25 +12,30 @@ When defining mock responses, you can define a specific URL to mock, but also a 
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/users/*",
-      "method":  "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": [
-          "+1 425 555 0109"
-        ],
-        "displayName": "Adele Vance",
-        "givenName": "Adele",
-        "jobTitle": "Product Marketing Manager",
-        "mail": "AdeleV@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "18/2111",
-        "preferredLanguage": "en-US",
-        "surname": "Vance",
-        "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
-        "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*",
+        "method":  "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 425 555 0109"
+          ],
+          "displayName": "Adele Vance",
+          "givenName": "Adele",
+          "jobTitle": "Product Marketing Manager",
+          "mail": "AdeleV@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "18/2111",
+          "preferredLanguage": "en-US",
+          "surname": "Vance",
+          "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+        }
       }
     }
   ]
@@ -43,45 +48,54 @@ If a URL of a mock response contains an `*`, the proxy considers it a regular ex
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/users/*",
-      "method":  "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": [
-          "+1 425 555 0109"
-        ],
-        "displayName": "Adele Vance",
-        "givenName": "Adele",
-        "jobTitle": "Product Marketing Manager",
-        "mail": "AdeleV@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "18/2111",
-        "preferredLanguage": "en-US",
-        "surname": "Vance",
-        "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
-        "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*",
+        "method":  "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 425 555 0109"
+          ],
+          "displayName": "Adele Vance",
+          "givenName": "Adele",
+          "jobTitle": "Product Marketing Manager",
+          "mail": "AdeleV@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "18/2111",
+          "preferredLanguage": "en-US",
+          "surname": "Vance",
+          "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+        }
       }
     },
     {
-      "url": "https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-3c356e68a038",
-      "method":  "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": [
-          "+1 412 555 0109"
-        ],
-        "displayName": "Megan Bowen",
-        "givenName": "Megan",
-        "jobTitle": "Auditor",
-        "mail": "MeganB@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "12/1110",
-        "preferredLanguage": "en-US",
-        "surname": "Bowen",
-        "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-        "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-3c356e68a038",
+        "method":  "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 412 555 0109"
+          ],
+          "displayName": "Megan Bowen",
+          "givenName": "Megan",
+          "jobTitle": "Auditor",
+          "mail": "MeganB@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "12/1110",
+          "preferredLanguage": "en-US",
+          "surname": "Bowen",
+          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+        }
       }
     }
   ]
@@ -92,45 +106,54 @@ for request `GET https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-3c356e68a038",
-      "method":  "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": [
-          "+1 412 555 0109"
-        ],
-        "displayName": "Megan Bowen",
-        "givenName": "Megan",
-        "jobTitle": "Auditor",
-        "mail": "MeganB@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "12/1110",
-        "preferredLanguage": "en-US",
-        "surname": "Bowen",
-        "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-        "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-3c356e68a038",
+        "method":  "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 412 555 0109"
+          ],
+          "displayName": "Megan Bowen",
+          "givenName": "Megan",
+          "jobTitle": "Auditor",
+          "mail": "MeganB@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "12/1110",
+          "preferredLanguage": "en-US",
+          "surname": "Bowen",
+          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+        }
       }
     },
-        {
-      "url": "https://graph.microsoft.com/v1.0/users/*",
-      "method":  "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": [
-          "+1 425 555 0109"
-        ],
-        "displayName": "Adele Vance",
-        "givenName": "Adele",
-        "jobTitle": "Product Marketing Manager",
-        "mail": "AdeleV@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "18/2111",
-        "preferredLanguage": "en-US",
-        "surname": "Vance",
-        "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
-        "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*",
+        "method":  "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 425 555 0109"
+          ],
+          "displayName": "Adele Vance",
+          "givenName": "Adele",
+          "jobTitle": "Product Marketing Manager",
+          "mail": "AdeleV@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "18/2111",
+          "preferredLanguage": "en-US",
+          "surname": "Vance",
+          "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+        }
       }
     }
   ]
