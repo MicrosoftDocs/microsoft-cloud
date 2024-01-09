@@ -91,7 +91,7 @@ Press Ctrl+C to stop the Dev Proxy
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Make files executable**. Open the `devproxy` installation folder in a terminal. Execute `chmod -x devproxy` and then `chmod -x libe_sqlite3.dylib`
+1. **Make files executable**. Open the `devproxy` installation folder in a terminal. Execute `chmod +x devproxy` and then `chmod +x libe_sqlite3.dylib`
 1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you need to trust it manually.
     1. Open the `dev-proxy` installation folder in Finder.
     1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
