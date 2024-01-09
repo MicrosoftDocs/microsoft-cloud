@@ -3,12 +3,12 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/08/2024
 ---
 
 # Mock responses
 
-To define mock responses, create a file named `responses.json` in the current working directory. This file allows you to define a specific set of responses for each project that you work with. The file contains an object with a `responses` array containing [response](https://github.com/microsoft/dev-proxy/wiki/Response-object) objects. The ZIP file with proxy binaries contains a [responses.sample.json](https://github.com/microsoft/dev-proxy/blob/main/dev-proxy/responses.sample.json) file, which contains examples of mocked responses.
+To define mock responses, create a file named `mocks.json` in the current working directory. This file allows you to define a specific set of mocks for each project that you work with. The file contains an object with a `mocks` array containing [mock](https://github.com/microsoft/dev-proxy/wiki/Response-object) objects.
 
 > [!TIP]
 > Instead of creating the mocks file manually, you can use the [MockGeneratorPlugin](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
@@ -17,32 +17,41 @@ The following configuration demonstrates two mock responses for retrieving infor
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/me",
-      "method": "GET",
-      "responseBody": {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-        "businessPhones": ["+1 412 555 0109"],
-        "displayName": "Megan Bowen",
-        "givenName": "Megan",
-        "jobTitle": "Auditor",
-        "mail": "MeganB@M365x214355.onmicrosoft.com",
-        "mobilePhone": null,
-        "officeLocation": "12/1110",
-        "preferredLanguage": "en-US",
-        "surname": "Bowen",
-        "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-        "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me",
+        "method": "GET"
       },
-      "responseHeaders": {
-        "content-type": "application/json; odata.metadata=minimal"
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": ["+1 412 555 0109"],
+          "displayName": "Megan Bowen",
+          "givenName": "Megan",
+          "jobTitle": "Auditor",
+          "mail": "MeganB@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "12/1110",
+          "preferredLanguage": "en-US",
+          "surname": "Bowen",
+          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+        },
+        "headers": {
+          "content-type": "application/json; odata.metadata=minimal"
+        }
       }
     },
     {
-      "url": "https://graph.microsoft.com/v1.0/me/photo",
-      "method": "GET",
-      "responseCode": 404
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me/photo",
+        "method": "GET"
+      },
+      "response": {
+        "statusCode": 404
+      }
     }
   ]
 }
@@ -50,22 +59,31 @@ The following configuration demonstrates two mock responses for retrieving infor
 
 ## Order precedence
 
-Mocks are matched in the order in which they're defined in the `responses.json` file. If you define multiple responses with the same URL and method, the first matching response is used.
+Mocks are matched in the order in which they're defined in the `mocks.json` file. If you define multiple responses with the same URL and method, the first matching response is used.
 
 When you use the following configuration, proxy responds to all `GET` requests to `https://graph.microsoft.com/v1.0/me/photo` with `500 Internal Server Error`.
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/me/photo",
-      "method": "GET",
-      "responseCode": 500
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me/photo",
+        "method": "GET"
+      },
+      "response": {
+        "statusCode": 500
+      }
     },
     {
-      "url": "https://graph.microsoft.com/v1.0/me/photo",
-      "method": "GET",
-      "responseCode": 404
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me/photo",
+        "method": "GET"
+      },
+      "response": {
+        "statusCode": 404
+      }
     }
   ]
 }
@@ -73,28 +91,30 @@ When you use the following configuration, proxy responds to all `GET` requests t
 
 ## Wildcard support
 
-The proxy supports the use of wildcards the URL field.
-
-The following examples demonstrate how to use the `*` and `?` wildcards.
+The proxy supports the use of wildcards in the URL property. You can use the asterisk character (`*`) to match any series of characters in the URL.
 
 When you use the following configuration, proxy responds to all requests to get any user's profile with the same response.
 
 ```json
 {
-  "url": "https://graph.microsoft.com/v1.0/users/*",
-  "responseBody": {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-    "businessPhones": ["+1 425 555 0109"],
-    "displayName": "Adele Vance",
-    "givenName": "Adele",
-    "jobTitle": "Product Marketing Manager",
-    "mail": "AdeleV@M365x214355.onmicrosoft.com",
-    "mobilePhone": null,
-    "officeLocation": "18/2111",
-    "preferredLanguage": "en-US",
-    "surname": "Vance",
-    "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
-    "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+  "request": {
+    "url": "https://graph.microsoft.com/v1.0/users/*"
+  },
+  "response": {
+    "body": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+      "businessPhones": ["+1 425 555 0109"],
+      "displayName": "Adele Vance",
+      "givenName": "Adele",
+      "jobTitle": "Product Marketing Manager",
+      "mail": "AdeleV@M365x214355.onmicrosoft.com",
+      "mobilePhone": null,
+      "officeLocation": "18/2111",
+      "preferredLanguage": "en-US",
+      "surname": "Vance",
+      "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
+      "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+    }
   }
 }
 ```
@@ -103,10 +123,16 @@ When you use the following configuration, proxy returns the same image from disk
 
 ```json
 {
-  "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value",
-  "responseBody": "@picture.jpg",
-  "responseHeaders": {
-    "content-type": "image/jpeg"
+  "request": {
+    "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value"
+  },
+  "response": {
+    "body": {
+      "@picture.jpg"
+    },
+    "headers": {
+      "content-type": "image/jpeg"
+    }
   }
 }
 ```
@@ -115,38 +141,43 @@ When you use the following configuration, proxy returns the same response when y
 
 ```json
 {
-  "url": "https://graph.microsoft.com/v1.0/me?*",
-  "responseBody": {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-    "businessPhones": [
-      "+1 412 555 0109"
-    ],
-    "displayName": "Megan Bowen",
-    "givenName": "Megan",
-    "jobTitle": "Auditor",
-    "mail": "MeganB@M365x214355.onmicrosoft.com",
-    "mobilePhone": null,
-    "officeLocation": "12/1110",
-    "preferredLanguage": "en-US",
-    "surname": "Bowen",
-    "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-    "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+  "request": {
+    "url": "https://graph.microsoft.com/v1.0/me?*"
+  },
+  "response": {
+    "body": {
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+      "businessPhones": [
+        "+1 412 555 0109"
+      ],
+      "displayName": "Megan Bowen",
+      "givenName": "Megan",
+      "jobTitle": "Auditor",
+      "mail": "MeganB@M365x214355.onmicrosoft.com",
+      "mobilePhone": null,
+      "officeLocation": "12/1110",
+      "preferredLanguage": "en-US",
+      "surname": "Bowen",
+      "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+      "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+    }
   }
 },
 ```
 
 ## n-th request support
 
-In v0.12, we introduced support for mocking n-th request and extended the [response](../technical-reference//Response-object.md) object with a new property called `nth`.
+In v0.12, we introduced support for mocking n-th request and extended the [mock request](../technical-reference//Response-object.md) object with a new property called `nth`.
 
-Using the following mock file as an example, we can see that it contains two responses to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with a matching URL for the second time. For all other requests, proxy returns the second response.
+Using the following mock file as an example, we can see that it contains two mocks to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with a matching URL for the second time. For all other requests, proxy returns the second response.
 
 > [!TIP]
 > Responses with the `nth` property should be first. Proxy uses responses based on the first match.
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
       "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
       "method": "GET",
@@ -187,7 +218,7 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 ```json
 {
   "mocksPlugin": {
-    "mocksFile": "responses.json",
+    "mocksFile": "mocks.json",
     "blockUnmockedRequests": true
   }
 }

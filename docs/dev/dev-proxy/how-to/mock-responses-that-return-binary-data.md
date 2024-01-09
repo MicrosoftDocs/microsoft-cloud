@@ -3,24 +3,29 @@ title: Mock responses that return binary data
 description: How to mock responses that return binary data
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/08/2024
 ---
 
 # Mock responses that return binary data
 
-For some requests, you might want to respond with binary data like documents or images. 
+For some requests, you might want to respond with binary data like documents or images.
 
-In Dev Proxy, you can define a binary response by setting the `responseBody` to a string value that starts with `@` followed by file path relative to the current working directory, for example:
+In Dev Proxy, you can define a binary response by setting the `response.body` to a string value that starts with `@` followed by file path relative to the current working directory, for example:
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "mocks": [
     {
-      "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value",
-      "method":  "GET",
-      "responseBody": "@picture.jpg",
-      "responseHeaders": {
-        "content-type": "image/jpeg"
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value",
+        "method":  "GET"
+      },
+      "response": {
+        "body": "@picture.jpg",
+        "headers": {
+          "content-type": "image/jpeg"
+        }
       }
     }
   ]

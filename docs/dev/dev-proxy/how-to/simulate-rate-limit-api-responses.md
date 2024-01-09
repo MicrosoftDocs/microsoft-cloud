@@ -3,7 +3,7 @@ title: Simulate Rate-Limit API responses
 description: How to simulate Rate-Limit API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 1/09/2024
 ---
 
 # Simulate Rate-Limit API responses
@@ -48,11 +48,11 @@ The `customResponseFile` contains the response that the proxy returns when your 
 
 ```json
 {
-  "responseCode": 403,
-  "responseHeaders": {
+  "statusCode": 403,
+  "headers": {
     "Content-Type": "application/json; charset=utf-8"
   },
-  "responseBody": {
+  "body": {
     "message": "You have exceeded a secondary rate limit and have been temporarily blocked from content creation. Please retry your request again later.",
     "documentation_url": "https://docs.github.com/rest/overview/resources-in-the-rest-api#secondary-rate-limits"
   }
