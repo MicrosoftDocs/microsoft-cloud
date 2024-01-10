@@ -35,21 +35,20 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 ### Calling the Azure Function from React
 
-1. Now that the `TeamsMeetingFunction` is ready to use, let's call the function from the React app.
+1. Now that the `httpTriggerTeamsUrl` function is ready to use, let's call it from the React app.
 
-1. Open the *samples/acs-to-teams-meeting/client/react* folder in VS Code. 
+1. Expand the *client/react* folder.
 
 1. Add an *.env* file into the folder with the following values:
 
     ```
-    REACT_APP_TEAMS_MEETING_FUNCTION=http://localhost:7071/api/TeamsMeetingFunction
-
-    REACT_APP_ACS_USER_FUNCTION=http://localhost:7071/api/ACSTokenFunction
+    REACT_APP_TEAMS_MEETING_FUNCTION=http://localhost:7071/api/httpTriggerTeamsUrl
+    REACT_APP_ACS_USER_FUNCTION=http://localhost:7071/api/httpTriggerAcsToken
     ```
 
     These values will be passed into React as it builds so that you can easily change them as needed during the build process.
 
-1. Open *samples/acs-to-teams-meeting/client/react/App.tsx* file in VS Code.
+1. Open *client/react/App.tsx* file in VS Code.
 
 1. Locate the `teamsMeetingLink` state variable in the component. Remove the hardcoded teams link and replace it with empty quotes:
 

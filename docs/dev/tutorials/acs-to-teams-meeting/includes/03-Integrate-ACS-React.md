@@ -18,7 +18,9 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
     git clone https://github.com/<YOUR_ORG_NAME>/MicrosoftCloud
     ```
 
-1. Open the *samples/acs-to-teams-meeting/client/react* project folder in Visual Studio Code. 
+1. Open the *samples/acs-to-teams-meeting* project folder in Visual Studio Code.
+
+1. Expand the *client/react* folder.
 
 1. Open the *package.json* file in VS Code and note the following ACS packages are included:
 
@@ -27,14 +29,14 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
     @azure/communication-react
     ``` 
 
-1. Double-check that you have *npm 7* or higher installed by opening a terminal window and running the following command:
+1. Double-check that you have *npm 10* or higher installed by opening a terminal window and running the following command:
 
     ```console
     npm --version
     ```
 
     > [!TIP]
-    > If you don't have *npm 7* or higher installed you can update npm to the latest version by running `npm install -g npm`.
+    > If you don't have *npm 10* or higher installed you can update npm to the latest version by running `npm install -g npm`.
 
 1. Open a terminal window and run the `npm install` command in the *react* folder to install the application dependencies.
 

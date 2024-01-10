@@ -2,21 +2,30 @@
 
 1. Open *local.settings.json* and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
 
-1. Open *samples/acs-to-teams-meeting/server/typescript/ACSTokenFunction/index.ts* in Visual Studio Code. It has the following code:
+1. Open *server/typescript/src/functions/httpTriggerAcsToken.ts* in Visual Studio Code. It has the following code:
 
     ```typescript
+    import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
     import { CommunicationIdentityClient } from '@azure/communication-identity';
 
-    module.exports = async function (context, req) {
+    export async function httpTriggerAcsToken(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
         // Get ACS connection string from local.settings.json (or App Settings when in Azure)
         const connectionString = process.env.ACS_CONNECTION_STRING;
         let tokenClient = new CommunicationIdentityClient(connectionString);
         const user = await tokenClient.createUser();
         const userToken = await tokenClient.getToken(user, ["voip"]);
-        context.res = {
-            body: { userId: user.communicationUserId, ...userToken }
+        return {
+            jsonBody: { userId: user.communicationUserId, ...userToken }
         };
     }
+
+    app.http('httpTriggerAcsToken', {
+        methods: ['GET'],
+        authLevel: 'anonymous',
+        handler: httpTriggerAcsToken
+    });
+
+    export default httpTriggerAcsToken;
     ```
 
 1. The function performs the following tasks:
@@ -51,16 +60,16 @@
     - Sends the userId and token values back to the caller.
 
         ```typescript
-        context.res = {
-            body: { userId: user.communicationUserId, ...userToken }
+        return {
+            jsonBody: { userId: user.communicationUserId, ...userToken }
         };
         ```
 
-1. Go to the *samples/acs-to-teams-meeting/server/typescript* folder in a terminal window and run `npm start`.
+1. Go to the *server/typescript* folder in a terminal window and run `npm start`.
 
 1. Now that the Azure Functions are running locally, the client needs to be able to call into them to get the ACS user identity and token values.
 
-1. Open *samples/acs-to-teams-meeting/client/react/App.tsx* file in your editor.
+1. Open *client/react/App.tsx* file in your editor.
 
 1. Locate the `userId` and `token` state variables in the component. Remove the hardcoded values and replace them with empty quotes:
 

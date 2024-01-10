@@ -2,7 +2,7 @@
 
 Let's get started by using VS Code to deploy the functions code to Azure Functions.
 
-1. Open the *samples/acs-to-teams-meeting/server/typescript* project folder in Visual Studio Code.
+1. Open the *server/typescript* project folder.
 
 1. You should have already run `npm install` and see a *node_modules* folder in the project root. If not, open a command window and run `npm install` to install the dependencies.
 
