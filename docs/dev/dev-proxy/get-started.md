@@ -121,6 +121,10 @@ Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
 curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 ```
 
+# [Manual](#tab/manual)
+
+Use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
+
 ---
 
 An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. As there is a 50% chance that Dev Proxy will simulate an error response, your request may not return an error and the request is passed through.
