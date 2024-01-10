@@ -298,7 +298,7 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 - Locate the `RetryAfterPlugin` plugin in the `plugins` array.
 - Update the `pluginPath` to `~appFolder\\plugins\\dev-proxy-plugins.dll`.
 - At the command line, change to the `my-app` directory.
-- Enter `devproxy --configuration-file my-app.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
+- Enter `devproxy --config-file my-app.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
 - Send a request to the JSON Placeholder API from the command line and view the output.
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
