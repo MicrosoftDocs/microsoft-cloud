@@ -21,50 +21,50 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 
 You can install Dev Proxy by script, or manually.
 
-    # [PowerShell](#tab/powershell)
-    
-    ```powershell
-    (Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
-    ```
-    
-    After executing the script, follow the steps in the output.
-    
-    # [bash](#tab/bash)
-    
-    ```bash
-    curl -sL https://aka.ms/devproxy/setup.sh | bash
-    ```
-    
-    After executing the script, follow the steps in the output.
-    
-    # [Manual](#tab/manual)
-    
-    [Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
-    
-    To start Dev Proxy from any directory, add its installation folder location to your PATH.
-    
-    ::: zone pivot="client-operating-system-windows"
-    
-      1. Open the `Start` menu.
-      1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
-      1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
-      1. In the `Edit environment variable` dialog box, select the `New` button.
-      1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
-      1. Select `OK` to confirm changes.
-    
-    ::: zone-end
-    
-    ::: zone pivot="client-operating-system-macos"
-    
-    The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
-    
-      1. Open your shell profile in a text editor > `~/.zshrc`.
-      1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
-      1. Reload your profile > `source ~/.zshrc`.
-    
-    ::: zone-end
-    
-    ---
+# [PowerShell](#tab/powershell)
+
+```powershell
+(Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
+```
+
+After executing the script, follow the steps in the output.
+
+# [bash](#tab/bash)
+
+```bash
+curl -sL https://aka.ms/devproxy/setup.sh | bash
+```
+
+After executing the script, follow the steps in the output.
+
+# [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
+
+::: zone pivot="client-operating-system-windows"
+
+  1. Open the `Start` menu.
+  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
+  1. In the `Edit environment variable` dialog box, select the `New` button.
+  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
+  1. Select `OK` to confirm changes.
+
+::: zone-end
+
+::: zone pivot="client-operating-system-macos"
+
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
+
+  1. Open your shell profile in a text editor > `~/.zshrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
+  1. Reload your profile > `source ~/.zshrc`.
+
+::: zone-end
+
+---
 
 ## 2. Start Dev Proxy for the first time
 
@@ -109,19 +109,19 @@ Dev Proxy will intercept requests made to known URLs from any application on you
 
 - Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
 
-    # [PowerShell](#tab/powershell)
-    
-    ```powershell
-    Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
-    ```
-    
-    # [curl](#tab/curl)
-    
-    ```sh
-    curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
-    ```
-    
-    ---
+# [PowerShell](#tab/powershell)
+
+```powershell
+Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
+```
+
+# [bash](#tab/bash)
+
+```sh
+curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
+```
+
+---
 
 An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. As there is a 50% chance that Dev Proxy will simulate an error response, your request may not return an error and the request is passed through.
 
@@ -145,10 +145,10 @@ An entry is shown with some basic information about the incoming request and the
 When Dev Proxy returns an error response, a `chaos` label is displayed in the entry.
 
 - Try sending requests to other endpoints available on the JSON Placeholder API
-  - https://jsonplaceholder.typicode.com/posts
-  - https://jsonplaceholder.typicode.com/posts/1
-  - https://jsonplaceholder.typicode.com/posts/1/comments
-  - https://jsonplaceholder.typicode.com/comments?postId=1
+  - `https://jsonplaceholder.typicode.com/posts`
+  - `https://jsonplaceholder.typicode.com/posts/1`
+  - `https://jsonplaceholder.typicode.com/posts/1/comments`
+  - `https://jsonplaceholder.typicode.com/comments?postId=1`
 
 ## 4. Stop Dev Proxy safely
 
