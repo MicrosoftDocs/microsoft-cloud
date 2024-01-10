@@ -1,9 +1,10 @@
 <!-- markdownlint-disable MD041 -->
 
 > [!IMPORTANT]
-> In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the Azure CLI on your machine to complete this exercise.
+> In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.
 >
 > - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+> - If you're using VS Code, install the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 >
 
 In this exercise you'll learn how to deploy the Microsoft Graph and ACS functions discussed in earlier exercises to Azure Functions. You'll also build a container image and deploy it to Azure Container Apps.
