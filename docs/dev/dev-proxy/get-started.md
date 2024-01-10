@@ -103,10 +103,8 @@ Press CTRL+C to stop Dev Proxy
 
 By default, Dev Proxy is configured to:
 
-- Intercept requests made to any [JSON Placeholder API](https://jsonplaceholder.typicode.com/) endpoints
+- Intercept requests made to any [JSON Placeholder API](https://jsonplaceholder.typicode.com/) endpoint
 - Simulate API error responses and API throttling with a failure rate of 50%
-
----
 
 ## 3. Intercept requests
 
