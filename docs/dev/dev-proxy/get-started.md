@@ -21,7 +21,7 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 
 You can install Dev Proxy by script, or manually.
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell/script)
 
 ```powershell
 (Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
@@ -109,7 +109,7 @@ Dev Proxy will intercept requests made to known URLs from any application on you
 
 - Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
 
-### [PowerShell](#tab/powershell)
+### [PowerShell](#tab/powershell/webrequest)
 
 ```powershell
 Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
