@@ -3,7 +3,7 @@ title: Test a JavaScript client-side web application that calls Microsoft Graph
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/01/2024
+ms.date: 11/1/2024
 ---
 
 # Test a JavaScript client-side web application that calls Microsoft Graph
