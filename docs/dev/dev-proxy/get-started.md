@@ -316,4 +316,4 @@ If you're using Dev Proxy with a .NET 4.8 app, you need to [register Dev Proxy o
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Explore tutorials](./tutorials/test-a-javascript-client-side-web-application.md)
+> [Explore tutorials](./tutorials/test-javascript-client-side-web-app-microsoft-graph.md)

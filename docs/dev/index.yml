@@ -73,7 +73,7 @@ landingContent:
           - text: Get started
             url: dev-proxy/get-started.md
           - text: Tutorials
-            url: dev-proxy/tutorials/test-a-javaScript-client-side-web-application.md
+            url: dev-proxy/tutorials/test-javaScript-client-side-web-app-microsoft-graph.md
           - text: How-to
             url: dev-proxy/how-to/overview.md
           - text: Reference
