@@ -41,7 +41,7 @@ Each response has the following properties:
 | -------- | ------------| :------: | ------------- | ------------ |
 | `body` | Body to send as the response to the request | no | _empty_ | `{ "foo": "bar" }` |
 | `statusCode` | Response HTTP status code | no | `200` | `404` |
-| `headers` | Collection of headers to include in the response | no | _empty_ | `{ "content-type": "application/json" }` |
+| `headers` | Array of headers to include in the response | no | _empty_ | `[{ name: "content-type", "value": "application/json" }]` |
 
 ### Remarks
 
@@ -72,9 +72,12 @@ Respond with body
       "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
       "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
     },
-    "headers": {
-      "content-type": "application/json; odata.metadata=minimal"
-    }
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "application/json; odata.metadata=minimal"
+      }
+    ]
   }
 }
 ```
@@ -103,9 +106,12 @@ Respond with binary data
   },
   "response": {
     "body": "@picture.jpg",
-    "headers": {
-      "content-type": "image/jpeg"
-    }
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "image/jpeg"
+      }
+    ]
   }
 }
 ```
