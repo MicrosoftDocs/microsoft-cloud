@@ -1,20 +1,20 @@
 ---
-title: Test a JavaScript client-side web application
+title: Test a JavaScript client-side web application that calls Microsoft Graph
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/08/2023
+ms.date: 11/01/2024
 ---
 
-# Test a JavaScript client-side web application
+# Test a JavaScript client-side web application that calls Microsoft Graph
 
-In this tutorial, you'll learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
+In this tutorial, you learn how to use Dev Proxy to test a sample JavaScript client-side web application that calls Microsoft Graph.
 
 ## Prerequisites
 
 This part of the tutorial assumes that you installed and configured Dev Proxy on your machine. If not, do that [now](../get-started.md).
 
-To follow this tutorial, you'll need:
+To follow this tutorial, you need:
 
 - Microsoft 365 tenant.
 - Account with permissions to create Microsoft Entra app registrations.
@@ -26,37 +26,35 @@ To follow this tutorial, you'll need:
 
 ## Clone and configure the sample app
 
-Clone the repository.
+- Clone the repository.
 
 ```sh
 git clone https://github.com/microsoft/dev-proxy.git
 ```
 
-Follow the instructions in [samples/readme.md](https://github.com/microsoft/dev-proxy/blob/main/samples/readme.md) to configure the app.
+- Follow the instructions in [samples/readme.md](https://github.com/microsoft/dev-proxy/blob/main/samples/readme.md) to configure the app.
 
 ## Start Dev Proxy
 
-Open a terminal, enter `devproxy` and press <kbd>Enter</kbd>.
+Dev Proxy comes with a preset configuration for testing apps that send requests to Microsoft Graph and SharePoint Online APIs.
 
-> [!NOTE]
-> If you're using macOS, you will also need to enable the `Secure Web Proxy (HTTPS)` proxy on your network device.
+- Open a terminal, enter `devproxy --config-file presets\m365.json` and press <kbd>Enter</kbd> to start Dev Proxy with the preset configuration.
 
 ## Launch the sample app
 
-Open a new terminal and change to the `samples` directory.
-
-Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
+- Open a terminal and change to the `samples` directory.
+- Enter `npx lite-server` and press <kbd>Enter</kbd> to start the sample app web server.
 
 :::image type="content" source="../media/test-app-js-welcome.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on macOS. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'With SDK' and a secondary button with the text 'Without SDK'.":::
 
 ## Test the sample app
 
-In the running app, select the `Without SDK` button.
+- In the running app, select the `Without SDK` button.
 
 > [!CAUTION]
-> If you get an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
+> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
-Select the `Login` button and complete the sign in flow.
+- Select the `Login` button and complete the sign in flow.
 
 :::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
 
@@ -66,12 +64,7 @@ View the proxy output and take a moment to refresh the sample app. See how the s
 
 :::image type="content" source="../media/test-app-js-requests.png" alt-text="Screenshot of the sample app running in Microsoft Edge. User avatars aren't shown in the app. The Microsoft Edge Developer Tools are open to the side with errors shown in the console log.":::
 
-## Stop Dev Proxy
-
-Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the process.
-
-> [!NOTE]
-> If you are using macOS, you will also need to disable the `Secure Web Proxy (HTTPS)` proxy on your network device.
+- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop Dev Proxy.
 
 ## Next step
 
