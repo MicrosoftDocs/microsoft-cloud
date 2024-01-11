@@ -1,9 +1,10 @@
 <!-- markdownlint-disable MD041 -->
 
 > [!IMPORTANT]
-> In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the Azure CLI on your machine to complete this exercise.
+> In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.
 >
 > - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+> - If you're using VS Code, install the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 >
 
 In this exercise you'll learn how to deploy the Microsoft Graph and ACS functions discussed in earlier exercises to Azure Functions. You'll also build a container image and deploy it to Azure Container Apps.
@@ -75,27 +76,27 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
         --admin-enabled true
     ```
 
-1. Open the *samples/acs-to-teams-meeting/client/react/Dockerfile* file in your editor and notice that the following tasks are performed:
+1. Open the *client/react/Dockerfile* file in your editor and notice that the following tasks are performed:
 
     - The React application is built and assigned to the *build* stage.
     - The nginx server is configured and the output of the *build* stage is copied into the nginx server image.
 
-1. Build the container image in Azure by running the following command from the root of the *samples/acs-to-teams-meeting/client/react* folder. Replace *<YOUR_FUNCTIONS_DOMAIN>* with your Azure Functions domain that you copied to a local file earlier in this exercise.
+1. Build the container image in Azure by running the following command from the root of the *client/react* folder. Replace *<YOUR_FUNCTIONS_DOMAIN>* with your Azure Functions domain that you copied to a local file earlier in this exercise.
 
     # [Bash](#tab/bash)
 
     ```bash
     az acr build --registry $ACR_NAME --image acs-to-teams-meeting \
-      --build-arg REACT_APP_ACS_USER_FUNCTION=$AZURE_FUNCTIONS_DOMAIN/api/ACSTokenFunction \
-      --build-arg REACT_APP_TEAMS_MEETING_FUNCTION=$AZURE_FUNCTIONS_DOMAIN/api/TeamsMeetingFunction .
+      --build-arg REACT_APP_ACS_USER_FUNCTION=$AZURE_FUNCTIONS_DOMAIN/api/httpTriggerAcsToken \
+      --build-arg REACT_APP_TEAMS_MEETING_FUNCTION=$AZURE_FUNCTIONS_DOMAIN/api/httpTriggerTeamsUrl .
     ```
 
     # [PowerShell](#tab/powershell)
 
     ```powershell
     az acr build --registry $ACR_NAME --image acs-to-teams-meeting `
-      --build-arg REACT_APP_ACS_USER_FUNCTION=+$AZURE_FUNCTIONS_DOMAIN+/api/ACSTokenFunction `
-      --build-arg REACT_APP_TEAMS_MEETING_FUNCTION=+$AZURE_FUNCTIONS_DOMAIN+/api/TeamsMeetingFunction .
+      --build-arg REACT_APP_ACS_USER_FUNCTION=+$AZURE_FUNCTIONS_DOMAIN+/api/httpTriggerAcsToken `
+      --build-arg REACT_APP_TEAMS_MEETING_FUNCTION=+$AZURE_FUNCTIONS_DOMAIN+/api/httpTriggerTeamsUrl .
     ```
 
 1. Run the following command to list the images in your registry. You should see your new image listed.

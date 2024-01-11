@@ -66,14 +66,20 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 
 1. Now that you've finished setting up the Azure Static Web App, go back to your GitHub repository (the one you forked earlier) in the browser and notice a *.yml* file has been added into the *.github/workflows* folder. 
 
-1. Open the *.yml* file in VS Code and add the following YAML immediately after the `###### End of Repository/Build Configurations ######` comment. Replace the *<YOUR_AZURE_SWA_DOMAIN>* placeholders with your Azure Static Web Apps URL value. 
+1. Pull the latest changes from your GitHub repository to your machine by running the following command from the root of your local *MicrosoftCloud* repository:
+
+    ```bash
+    git pull
+    ```
+
+1. Open the *.yml* file in the *.github/workflows* folder in VS Code and add the following YAML immediately after the `###### End of Repository/Build Configurations ######` comment. Replace the *<YOUR_AZURE_SWA_DOMAIN>* placeholders with your Azure Static Web Apps URL value. 
 
     > IMPORTANT: Ensure that the `env:` property is indented properly. It should match up with the indentation of the `with:` property above it.
 
     ```yaml
     env: # Add environment variables here
-        REACT_APP_ACS_USER_FUNCTION: https://<YOUR_AZURE_SWA_DOMAIN>/api/ACSTokenFunction
-        REACT_APP_TEAMS_MEETING_FUNCTION: https://<YOUR_AZURE_SWA_DOMAIN>/api/TeamsMeetingFunction
+        REACT_APP_ACS_USER_FUNCTION: https://<YOUR_AZURE_SWA_DOMAIN>/api/httpTriggerAcsToken
+        REACT_APP_TEAMS_MEETING_FUNCTION: https://<YOUR_AZURE_SWA_DOMAIN>/api/httpTriggerTeamsUrl
     ```
 
     > [!NOTE]

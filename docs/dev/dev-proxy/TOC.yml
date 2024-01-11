@@ -5,7 +5,7 @@
 - name: Tutorials
   items:
     - name: Test a JavaScript client-side web application
-      href: tutorials/test-a-javaScript-client-side-web-application.md
+      href: tutorials/test-javascript-client-side-web-app-microsoft-graph.md
 - name: How-to
   items:
     - name: Overview
