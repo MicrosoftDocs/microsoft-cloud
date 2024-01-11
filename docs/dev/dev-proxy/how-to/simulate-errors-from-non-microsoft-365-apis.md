@@ -51,9 +51,12 @@ Create the `errors-openai.json` file in the install folder. This file contains t
   "responses": [
     {
       "statusCode": 429,
-      "headers": {
-        "content-type": "application/json; charset=utf-8"
-      },
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "application/json; charset=utf-8"
+        }
+      ],
       "body": {
         "error": {
           "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on tokens per min. Limit: 150000.000000 / min. Current: 160000.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
@@ -65,9 +68,12 @@ Create the `errors-openai.json` file in the install folder. This file contains t
     },
     {
       "statusCode": 429,
-      "headers": {
-        "content-type": "application/json; charset=utf-8"
-      },
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "application/json; charset=utf-8"
+        }
+      ],
       "body": {
         "error": {
           "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on requests per min. Limit: 60.000000 / min. Current: 70.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
@@ -80,9 +86,12 @@ Create the `errors-openai.json` file in the install folder. This file contains t
     {
       "statusCode": 429,
       "addDynamicRetryAfter": true,
-      "headers": {
-        "content-type": "application/json; charset=utf-8"
-      },
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "application/json; charset=utf-8"
+        }
+      ],
       "body": {
         "error": {
           "message": "The engine is currently overloaded, please try again later.",
@@ -106,10 +115,16 @@ You can also return binary data in your error response. In the following example
 ```json
 {
   "statusCode": 429,
-  "headers": {
-    "content-type": "image/jpeg",
-    "Access-Control-Allow-Origin": "*"
-  },
+  "headers": [
+    {
+      "name": "content-type",
+      "value": "image/jpeg"
+    },
+    {
+      "name": "Access-Control-Allow-Origin",
+      "value": "*"
+    }
+  ],
   "body": "@/path/to/http-cats/429.jpeg"
 },
 ```

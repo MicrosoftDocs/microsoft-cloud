@@ -39,9 +39,12 @@ The following configuration demonstrates two mock responses for retrieving infor
           "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
           "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
         },
-        "headers": {
-          "content-type": "application/json; odata.metadata=minimal"
-        }
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "application/json; odata.metadata=minimal"
+          }
+        ]
       }
     },
     {
@@ -130,9 +133,12 @@ When you use the following configuration, proxy returns the same image from disk
     "body": {
       "@picture.jpg"
     },
-    "headers": {
-      "content-type": "image/jpeg"
-    }
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "image/jpeg"
+      }
+    ]
   }
 }
 ```

@@ -23,9 +23,12 @@ In Dev Proxy, you can define a binary response by setting the `response.body` to
       },
       "response": {
         "body": "@picture.jpg",
-        "headers": {
-          "content-type": "image/jpeg"
-        }
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "image/jpeg"
+          }
+        ]
       }
     }
   ]

@@ -49,9 +49,12 @@ The `customResponseFile` contains the response that the proxy returns when your 
 ```json
 {
   "statusCode": 403,
-  "headers": {
-    "Content-Type": "application/json; charset=utf-8"
-  },
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json; charset=utf-8"
+    }
+  ],
   "body": {
     "message": "You have exceeded a secondary rate limit and have been temporarily blocked from content creation. Please retry your request again later.",
     "documentation_url": "https://docs.github.com/rest/overview/resources-in-the-rest-api#secondary-rate-limits"
