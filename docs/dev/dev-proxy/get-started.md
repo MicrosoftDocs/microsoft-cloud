@@ -261,4 +261,4 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Explore tutorials](./tutorials/test-a-javascript-client-side-web-application.md)
+> [Explore tutorials](./tutorials/test-javascript-client-side-web-app-microsoft-graph.md)
