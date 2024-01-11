@@ -13,7 +13,7 @@ zone_pivot_groups: client-operating-system
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this tutorial, you'll learn how to install, run and configure Dev Proxy.
+In this tutorial, you learn how to install, run and configure Dev Proxy.
 
 If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
 
@@ -68,7 +68,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 ## 2. Start Dev Proxy for the first time
 
-The first time you start Dev Proxy on your machine there are a few steps which need to be followed to ensure that Dev Proxy can intercept requests from your machine and respond to those requests successfully. You won't have to repeat these steps after the first run.
+The first time you start Dev Proxy on your machine there are a few steps to follow to ensure that Dev Proxy can intercept requests from your machine and respond successfully. You won't have to repeat these steps after the first run.
 
 ::: zone pivot="client-operating-system-windows"
 
@@ -80,7 +80,7 @@ The first time you start Dev Proxy on your machine there are a few steps which n
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. The current release isn't signed by a verified developer, so you'll need to trust it manually.
+1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. A verified developer didn’t sign the current release, so you needed to trust it manually by yourself.
     1. Open the `dev-proxy` installation folder in Finder.
     1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
     1. Choose `Open` from the menu, and then select `Open` in the dialog that appears.
@@ -89,7 +89,7 @@ The first time you start Dev Proxy on your machine there are a few steps which n
 
 ::: zone-end
 
-The terminal will display the following output:
+The terminal displays the following output:
 
 ```text
 Error responses for 8 url patterns loaded from devproxy-errors.json
@@ -105,7 +105,7 @@ By default, Dev Proxy is configured to:
 
 ## 3. Intercept requests
 
-Dev Proxy will intercept requests made to known URLs from any application on your machine. When a request is detected, Dev Proxy will either pass the request through to the API (take no action), or return a response.
+Dev Proxy will intercept requests made to known URLs from any application on your machine. When a request is detected, Dev Proxy passes the request through to the API (take no action), or return a response.
 
 - Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
 
@@ -127,7 +127,7 @@ Use an API client like [Postman](https://www.postman.com/product/api-client/) to
 
 ---
 
-An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. As there is a 50% chance that Dev Proxy will simulate an error response, your request may not return an error and the request is passed through.
+An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
 
 ```text
  request     GET https://jsonplaceholder.typicode.com/posts
@@ -175,7 +175,7 @@ By default, Dev Proxy is configured to intercept any request made to the [JSON P
 ],
 ```
 
-The `urlsToWatch` array represents the known URLs. The current entry tells Dev Proxy to watch for requests made to any JSON Placeholder API endpoint this is represented by the use of an asterisk at the end of the URL which acts as a wildcard. Adding more entries into this array will expand the URLs that Dev Proxy will watch out for.
+The `urlsToWatch` array represents the known URLs. Dev Proxy watches requests from the current entry to any endpoint. The entry uses an asterisk after the URL as a wildcard. Adding more entries into this array expands the URLs that Dev Proxy watches out for.
 
 Let's consider that you don't want Dev Proxy to intercept requests made to a specific endpoint.
 
@@ -201,18 +201,18 @@ request     GET https://jsonplaceholder.typicode.com/posts/2
            ╰ GET https://jsonplaceholder.typicode.com/posts/2
 ```
 
-The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy will process these URLs in order, for example, if we entered the URL after the existing entry instead of before it, Dev Proxy would have processed the incoming request and there would have been a chance of an error response being returned.
+The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy processes these URLs in order. When a URL matches, it isn’t processed again. Therefore, placing the URL first ensures that the request is ignored before the next URL is processed.
 
 ## 6. Change failure rate
 
 By default, Dev Proxy is configured to fail requests with a 50% chance to URLs that are being watched. You can increase or decrease the chance of a request returning an error response.
 
-Let's update the failure rate so that every request made to the JSON Placeholder API will return an error response.
+Let’s update the failure rate so that every request to the JSON Placeholder API returns an error response.
 
 - In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
 - Locate the `rate` property and update the value from `50` to `100`.
 
-The `devproxyrc.json` file contains configuration settings which are used when you start Dev Proxy. When changing configuration settings, you should always stop and start Dev Proxy for the changes to be persisted.
+The `devproxyrc.json` file contains configuration settings that are used when you start Dev Proxy. When changing configuration settings, you should always stop and start Dev Proxy for the changes to be persisted.
 
 - At the command line, enter `devproxy` and press <kbd>Enter</kbd> to start Dev Proxy.
 - Send a request to the JSON Placeholder API from the command line and view the output.
@@ -227,14 +227,14 @@ devproxy --failure-rate 100
 
 ## 7. Simulate throttling
 
-By default, Dev Proxy will return a range of generic 400 and 500 error responses. You can customise these error responses to your own needs.
+By default, Dev Proxy returns a range of generic 400 and 500 error responses. You can customize these error responses to your own needs.
 
 Dev Proxy uses [plugins](./technical-reference/overview.md#plugins) to enable different API behaviors, by default, we enable two plugins for you.
 
 - [GenericRandomErrorPlugin](./technical-reference/genericrandomerrorplugin.md) plugin provides the ability for Dev Proxy to respond with an error response.
 - [RetryAfterPlugin](./technical-reference/retryafterplugin.md) plugin provides the ability for Dev Proxy to inject a dynamic value into the Retry-After header in the error response.
 
-Let's change the configuration so that Dev Proxy will always return a `429 Too Many requests` error response to simulate throttling.
+Let’s change the configuration so that Dev Proxy always returns a `429 Too Many requests` error response to simulate throttling.
 
 First let's locate the location of the file that contains the error definitions.
 
@@ -289,7 +289,7 @@ Let's consider that you want to store a configuration file in the project folder
 - Rename `devproxyrc.json` to `my-app.json`.
 - Rename `devproxy-errors.json` to `my-app-errors.json`.
 
-When using a configuration file that is stored outside of the Dev Proxy installation file you need to ensure that the `pluginPath` references are correct otherwise Dev Proxy won't be able to load them when you start Dev Proxy. Rather than hard coding the paths to the Dev Proxy installation folder in your configuration file, you can use the `~appFolder` at the beginning of the path to include a dynamic reference back to the Dev Proxy installation folder.
+When using a configuration file that is stored outside of the Dev Proxy installation file, you need to ensure that the `pluginPath` references are correct. Rather than hard coding the paths to the Dev Proxy installation folder in your configuration file, you can use the `~appFolder` at the beginning of the path to include a dynamic reference back to the Dev Proxy installation folder.
 
 - Open `my-app.json` in a text editor.
 - Locate the `GenericRandomErrorPlugin` plugin in the `plugins` array.
@@ -309,7 +309,7 @@ Dev Proxy uses plugins to simulate API behaviors and enable features. Take a mom
 
 ## 10. .NET 4.8
 
-If you're using Dev Proxy with a .NET 4.8 app, you will also need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
+If you're using Dev Proxy with a .NET 4.8 app, you need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
 ::: zone-end
 
