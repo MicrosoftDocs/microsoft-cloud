@@ -17,7 +17,7 @@ In this tutorial, you learn how to install, run and configure Dev Proxy.
 
 If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
 
-## 1. Install Dev Proxy
+## Install Dev Proxy
 
 You can install Dev Proxy by script, or manually.
 
@@ -66,7 +66,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 ---
 
-## 2. Start Dev Proxy for the first time
+## Start Dev Proxy for the first time
 
 The first time you start Dev Proxy on your machine there are a few steps to follow to ensure that Dev Proxy can intercept requests from your machine and respond successfully. You won't have to repeat these steps after the first run.
 
@@ -103,7 +103,7 @@ By default, Dev Proxy is configured to:
 - Intercept requests made to any [JSON Placeholder API](https://jsonplaceholder.typicode.com/) endpoint
 - Simulate API error responses and API throttling with a failure rate of 50%
 
-## 3. Intercept requests
+## Intercept requests
 
 Dev Proxy will intercept requests made to known URLs from any application on your machine. When a request is detected, Dev Proxy passes the request through to the API (take no action), or return a response.
 
@@ -154,7 +154,7 @@ When Dev Proxy returns an error response, a `chaos` label is displayed in the en
   - `https://jsonplaceholder.typicode.com/posts/1/comments`
   - `https://jsonplaceholder.typicode.com/comments?postId=1`
 
-## 4. Stop Dev Proxy safely
+## Stop Dev Proxy safely
 
 When you no longer require Dev Proxy to be running, you should always stop it safely.
 
@@ -162,7 +162,7 @@ When you no longer require Dev Proxy to be running, you should always stop it sa
 
 If you shut down the terminal session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](./how-to/overview.md#common-problems).
 
-## 5. Update the URLs to watch
+## Update the URLs to watch
 
 By default, Dev Proxy is configured to intercept any request made to the [JSON Placeholder API](https://jsonplaceholder.typicode.com/). You can configure Dev Proxy to intercept requests to any HTTP API.
 
@@ -203,7 +203,7 @@ request     GET https://jsonplaceholder.typicode.com/posts/2
 
 The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy processes these URLs in order. When a URL matches, it isn’t processed again. Therefore, placing the URL first ensures that the request is ignored before the next URL is processed.
 
-## 6. Change failure rate
+## Change failure rate
 
 By default, Dev Proxy is configured to fail requests with a 50% chance to URLs that are being watched. You can increase or decrease the chance of a request returning an error response.
 
@@ -225,7 +225,7 @@ devproxy --failure-rate 100
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-## 7. Simulate throttling
+## Simulate throttling
 
 By default, Dev Proxy returns a range of generic 400 and 500 error responses. You can customize these error responses to your own needs.
 
@@ -277,7 +277,7 @@ First let's locate the location of the file that contains the error definitions.
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-## 8. Create your own configuration files
+## Create your own configuration files
 
 By default, Dev Proxy uses the `devproxyrc.json` file in the Dev Proxy installation folder for its configuration settings. You can create your own configuration files.
 
@@ -301,13 +301,13 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 - Send a request to the JSON Placeholder API from the command line and view the output.
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-## 9. Explore plugins
+## Explore plugins
 
 Dev Proxy uses plugins to simulate API behaviors and enable features. Take a moment to [explore](./technical-reference/overview.md#plugins) the different plugins available to you to help you build more resilient apps.
 
 ::: zone pivot="client-operating-system-windows"
 
-## 10. .NET 4.8
+## .NET 4.8
 
 If you're using Dev Proxy with a .NET 4.8 app, you need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
