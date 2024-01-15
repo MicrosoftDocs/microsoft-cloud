@@ -62,7 +62,7 @@
         href: how-to/record-and-export-proxy-activity.md
     - name: Improve my app
       items:
-      - name: Generate an OpenAPI document
+      - name: Generate an OpenAPI spec
         href: how-to/generate-openapi-document.md
       - name: Update my application code to use Microsoft Graph JavaScript SDK
         href: how-to/update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
@@ -118,7 +118,7 @@
       href: concepts/how-to-handle-rate-limiting.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
-    - name: What is an OpenAPI document
+    - name: What is an OpenAPI spec
       href: concepts/what-is-openapi-document.md
     - name: How to debug Microsoft Graph API calls
       href: concepts/how-to-debug-microsoft-graph-calls.md
