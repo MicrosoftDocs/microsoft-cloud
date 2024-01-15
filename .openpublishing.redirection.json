@@ -74,6 +74,21 @@
          "source_path": "docs/dev/dev-proxy/tutorials/test-a-javascript-client-side-web-application.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/tutorials/test-javascript-client-side-web-app-microsoft-graph",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/what-is-openapi-document.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/what-is-openapi-spec",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/generate-openapi-document.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/generate-openapi-spec",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/openapidocgeneratorplugin.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/openapispecgeneratorplugin",
+         "redirect_document_id": false
       }
    ]
 }
