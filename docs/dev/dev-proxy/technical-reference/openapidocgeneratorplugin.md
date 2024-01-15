@@ -3,14 +3,14 @@ title: OpenApiDocGeneratorPlugin
 description: OpenApiDocGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/19/2023
+ms.date: 01/15/2024
 ---
 
 # OpenApiDocGeneratorPlugin
 
-Generates OpenAPI document in JSON format from the intercepted requests and responses.
+Generates OpenAPI spec in JSON format from the intercepted requests and responses.
 
-:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI document." lightbox="../media/open-api-doc-generator-plugin.png":::
+:::image type="content" source="../media/open-api-doc-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-doc-generator-plugin.png":::
 
 ## Plugin instance definition
 

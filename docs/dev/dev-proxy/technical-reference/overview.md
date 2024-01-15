@@ -26,7 +26,7 @@ Name | Description
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
-[OpenApiDocGeneratorPlugin](./openapidocgeneratorplugin.md)|Generates OpenAPI document in JSON format from the intercepted requests and responses.
+[OpenApiDocGeneratorPlugin](./openapidocgeneratorplugin.md)|Generates OpenAPI spec in JSON format from the intercepted requests and responses.
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
 
