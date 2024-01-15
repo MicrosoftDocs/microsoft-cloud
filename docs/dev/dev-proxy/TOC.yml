@@ -62,8 +62,8 @@
         href: how-to/record-and-export-proxy-activity.md
     - name: Improve my app
       items:
-      - name: Generate an OpenAPI document
-        href: how-to/generate-openapi-document.md
+      - name: Generate an OpenAPI spec
+        href: how-to/generate-openapi-spec.md
       - name: Update my application code to use Microsoft Graph JavaScript SDK
         href: how-to/update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
     - name: Presets
@@ -118,8 +118,8 @@
       href: concepts/how-to-handle-rate-limiting.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
-    - name: What is an OpenAPI document
-      href: concepts/what-is-openapi-document.md
+    - name: What is an OpenAPI spec
+      href: concepts/what-is-openapi-spec.md
     - name: How to debug Microsoft Graph API calls
       href: concepts/how-to-debug-microsoft-graph-calls.md
     - name: Using Microsoft Graph beta endpoints in production
@@ -170,8 +170,8 @@
         href: technical-reference/MockResponsePlugin.md
       - name: ODataPagingGuidancePlugin
         href: technical-reference/ODataPagingGuidancePlugin.md
-      - name: OpenApiDocGeneratorPlugin
-        href: technical-reference/openapidocgeneratorplugin.md
+      - name: OpenApiSpecGeneratorPlugin
+        href: technical-reference/openapispecgeneratorplugin.md
       - name: RateLimitingPlugin
         href: technical-reference/RateLimitingPlugin.md
       - name: RetryAfterPlugin
