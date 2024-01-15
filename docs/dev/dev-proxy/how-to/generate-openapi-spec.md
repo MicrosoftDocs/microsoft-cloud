@@ -12,13 +12,13 @@ Dev Proxy allows you to generate an OpenAPI spec from the intercepted API reques
 
 To generate an OpenAPI spec using Dev Proxy:
 
-1. In the configuration file, enable the [`OpenApiDocGeneratorPlugin`](../technical-reference/openapidocgeneratorplugin.md) plugin:
+1. In the configuration file, enable the [`OpenApiSpecGeneratorPlugin`](../technical-reference/openapispecgeneratorplugin.md) plugin:
 
     ```json
     {
       "plugins": [
         {
-          "name": "OpenApiDocGeneratorPlugin",
+          "name": "OpenApiSpecGeneratorPlugin",
           "enabled": true,
           "pluginPath": "plugins\\dev-proxy-plugins.dll"
         }
