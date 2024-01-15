@@ -3,12 +3,12 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/22/2023
+ms.date: 01/15/2024
 ---
 
 # Simulate a CRUD API
 
-When developing client-side applications, you often interact with backend APIs. Sometimes, these APIs aren't yet available, or other teams are updating them to meet the latest requirements. To avoid waiting, you typically create a mock API that returns the data you need. While this approach unblocks you, it requires you to spend time on building an API that you eventually replace with the real one. To avoid wasting time, you can use Dev Proxy to simulate a CRUD API and speed up development.
+When building apps, you often interact with backend APIs. Sometimes, these APIs aren't yet available, or other teams are updating them to meet the latest requirements. To avoid waiting, you typically create a mock API that returns the data you need. While this approach unblocks you, it requires you to spend time on building an API that you eventually replace with the real one. To avoid wasting time, you can use Dev Proxy to simulate a CRUD API and speed up development.
 
 Using the [`CrudApiPlugin`](../technical-reference/crudapiplugin.md), you can simulate a CRUD (Create, Read, Update, Delete) API with an in-memory data store. Using a simple configuration file, you can define which URLs your mock API supports and what data it returns. The plugin also supports CORS for cross-domain usage from client-side applications.
 
@@ -16,7 +16,7 @@ Where the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md) a
 
 ## Scenario
 
-Say, you're building a client-side application that allows users to manage customers. To get the data, you need to call the `/customers` endpoint of the backend API. To avoid waiting for the backend team to finish their work, you decide to use Dev Proxy to simulate the API and return the data you need.
+Say, you're building an app that allows users to manage customers. To get the data, you need to call the `/customers` endpoint of the backend API. To avoid waiting for the backend team to finish their work, you decide to use Dev Proxy to simulate the API and return the data you need.
 
 You start with enabling the `CrudApiPlugin` and configuring it to use the `customers-api.json` file.
 
