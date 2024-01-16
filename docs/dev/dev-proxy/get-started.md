@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/10/2024
+ms.date: 01/16/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -65,6 +65,29 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 ::: zone-end
 
 ---
+
+> [!NOTE]
+> To try the latest preview features, install the beta version of Dev Proxy by running the following command:
+>
+> # [PowerShell](#tab/powershell)
+>
+> ```powershell
+> (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | > Invoke-Expression
+> ```
+>
+> After executing the script, follow the steps in the output.
+>
+> # [bash](#tab/bash)
+>
+> ```bash
+> curl -sL https://aka.ms/devproxy/setup-beta.sh | bash
+> ```
+>
+> After executing the script, follow the steps in the output.
+>
+> # [Manual](#tab/manual)
+>
+> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
 
 ## Start Dev Proxy for the first time
 
