@@ -20,6 +20,8 @@
     href: copilot/overview.md
   - name: Copilot for Dynamics 365
     href: copilot/copilot-for-dynamics365.md
+  - name: ISV Extensibility for Microsoft Copilot
+    href: copilot/isv-extensibility-story.md
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
