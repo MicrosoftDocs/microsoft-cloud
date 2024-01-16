@@ -3,7 +3,7 @@ title: Why is the proxy saying that an option is unknown
 description: Why is the proxy saying that an option is unknown
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # Why is the proxy saying that an option is unknown
@@ -22,7 +22,7 @@ To enable a plugin and make its options available for use, open the [devproxyrc.
 {
   "name": "ExecutionSummaryPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
 ```

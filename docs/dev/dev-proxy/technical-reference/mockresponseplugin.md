@@ -3,7 +3,7 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/09/2024
+ms.date: 01/16/2024
 ---
 
 # MockResponsePlugin
@@ -18,7 +18,7 @@ Simulates responses.
 {
   "name": "MockResponsePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```

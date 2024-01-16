@@ -3,7 +3,7 @@ title: Plugin architecture
 description: The architecture of Dev Proxy plugins
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/01/2023
+ms.date: 01/16/2024
 ---
 
 # Plugin architecture
@@ -30,7 +30,7 @@ Example configuration of the `MockResponsePlugin`:
 {
   "name": "MockResponsePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```
@@ -57,7 +57,7 @@ Example configuration of the `GraphSelectGuidancePlugin`:
 {
   "name": "GraphBetaSupportGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/beta/*",
     "https://graph.microsoft.us/beta/*",

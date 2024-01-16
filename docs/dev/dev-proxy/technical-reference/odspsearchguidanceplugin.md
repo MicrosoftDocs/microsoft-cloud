@@ -3,7 +3,7 @@ title: ODSPSearchGuidancePlugin
 description: ODSPSearchGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
+ms.date: 01/16/2024
 ---
 
 # ODSPSearchGuidancePlugin
@@ -29,7 +29,7 @@ This plugin detects the following requests:
 {
   "name": "ODSPSearchGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",

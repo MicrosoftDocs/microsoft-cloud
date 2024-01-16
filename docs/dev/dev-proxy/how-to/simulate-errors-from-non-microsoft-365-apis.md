@@ -3,7 +3,7 @@ title: Simulate errors from non-Microsoft 365 APIs
 description: How to configure the proxy to simulate errors from non-Microsoft 365 APIs
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/22/2023
+ms.date: 01/16/2024
 ---
 
 # Simulate errors from non-Microsoft 365 APIs
@@ -27,7 +27,7 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 {
   "name": "GenericRandomErrorPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "openAIAPI",
   "urlsToWatch": [
     "https://api.openai.com/*"

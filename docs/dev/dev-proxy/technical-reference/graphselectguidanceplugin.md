@@ -3,7 +3,7 @@ title: GraphSelectGuidancePlugin
 description: GraphSelectGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GraphSelectGuidancePlugin
@@ -18,7 +18,7 @@ Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doe
 {
   "name": "GraphSelectGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
