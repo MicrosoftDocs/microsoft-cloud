@@ -3,7 +3,7 @@ title: GraphMockResponsePlugin
 description: GraphMockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GraphMockResponsePlugin
@@ -18,7 +18,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
 {
   "name": "GraphMockResponsePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```

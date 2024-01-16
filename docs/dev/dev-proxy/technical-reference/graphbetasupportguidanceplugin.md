@@ -3,7 +3,7 @@ title: GraphBetaSupportGuidancePlugin
 description: GraphBetaSupportGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GraphBetaSupportGuidancePlugin
@@ -18,7 +18,7 @@ Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 {
   "name": "GraphBetaSupportGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/beta/*",
     "https://graph.microsoft.us/beta/*",

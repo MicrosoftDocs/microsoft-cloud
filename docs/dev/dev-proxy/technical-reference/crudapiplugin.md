@@ -18,7 +18,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 {
   "name": "CrudApiPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "customersApi"
 }
 ```

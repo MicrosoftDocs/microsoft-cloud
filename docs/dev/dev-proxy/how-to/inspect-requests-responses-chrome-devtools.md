@@ -3,7 +3,7 @@ title: Inspect requests and responses using Chrome DevTools
 description: How to use Chrome DevTools to inspect requests and responses intercepted by Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/21/2023
+ms.date: 01/16/2024
 ---
 
 # Inspect requests and responses using Chrome DevTools
@@ -30,7 +30,7 @@ To use Chrome DevTools with Dev Proxy:
     {
       "name": "DevToolsPlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "devTools"
     }
     ```
@@ -54,7 +54,7 @@ To use Chrome DevTools with Dev Proxy:
         {
           "name": "DevToolsPlugin",
           "enabled": true,
-          "pluginPath": "plugins\\dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
           "configSection": "devTools"
         }
       ],

@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # LatencyPlugin
@@ -18,7 +18,7 @@ Delays responses by a random number of milliseconds from the configured range.
 {
   "name": "LatencyPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "latencyPlugin"
 }
 ```

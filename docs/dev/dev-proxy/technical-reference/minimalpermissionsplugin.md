@@ -3,7 +3,7 @@ title: MinimalPermissionsPlugin
 description: MinimalPermissionsPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # MinimalPermissionsPlugin
@@ -18,7 +18,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
 {
   "name": "MinimalPermissionsPlugin",
   "enabled": false,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "minimalPermissionsPlugin"
 }
 ```

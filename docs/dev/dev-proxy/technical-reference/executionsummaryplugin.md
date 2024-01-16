@@ -3,7 +3,7 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # ExecutionSummaryPlugin
@@ -20,7 +20,7 @@ Generates a summary report of the requests that pass through the proxy.
 {
   "name": "ExecutionSummaryPlugin",
   "enabled": false,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
 ```

@@ -3,7 +3,7 @@ title: GenericRandomErrorPlugin
 description: GenericRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GenericRandomErrorPlugin
@@ -18,7 +18,7 @@ Fails requests with a random selected error from file containing mocked errors.
 {
   "name": "GenericRandomErrorPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "genericRandomErrorPlugin",
   "urlsToWatch": [
     "https://api.openai.com/*"

@@ -3,7 +3,7 @@ title: GraphSdkGuidancePlugin
 description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GraphSdkGuidancePlugin
@@ -18,7 +18,7 @@ Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been 
 {
   "name": "GraphSdkGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
