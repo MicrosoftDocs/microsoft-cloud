@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/15/2024
+ms.date: 01/16/2024
 ---
 
 # OpenApiSpecGeneratorPlugin
@@ -18,7 +18,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 {
   "name": "OpenApiSpecGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
 }
 ```
 

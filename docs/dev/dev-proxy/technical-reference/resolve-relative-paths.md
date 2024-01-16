@@ -3,7 +3,7 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/08/2023
+ms.date: 01/16/2024
 ---
 
 # Resolve relative paths
@@ -16,7 +16,7 @@ In the below example, the `pluginPath` is relative to the configuration file. Th
 {
   "name": "GraphSelectGuidancePlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     ...
@@ -36,7 +36,7 @@ Use the `~appFolder` token in the file paths to ensure that the path is prepende
 {
   "name": "GraphSelectGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder\\plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     ...

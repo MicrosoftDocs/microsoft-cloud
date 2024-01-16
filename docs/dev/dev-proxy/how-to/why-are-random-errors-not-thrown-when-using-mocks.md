@@ -3,7 +3,7 @@ title: Why are random errors not thrown when using mocks
 description: How to fix proxy not throwing random errors when using mocks
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # Why are random errors not thrown when using mocks
@@ -19,13 +19,13 @@ By default, the [devproxyrc](../technical-reference/devproxyrc.md) configuration
     {
       "name": "GraphMockResponsePlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "mocksPlugin"
     },
     {
       "name": "GraphRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "graphRandomErrorsPlugin"
     }
     // [...] trimmed for brevity
@@ -45,13 +45,13 @@ If you want both random errors and mocks, change the order of plugins to:
     {
       "name": "GraphRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "graphRandomErrorsPlugin"
     },
     {
       "name": "GraphMockResponsePlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "mocksPlugin"
     }
     // [...] trimmed for brevity

@@ -3,7 +3,7 @@ title: RetryAfterPlugin
 description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # RetryAfterPlugin
@@ -18,7 +18,7 @@ Simulates the `Retry-After` header sent by an API after throttling a request. Th
 {
   "name": "RetryAfterPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
 }
 ```
 

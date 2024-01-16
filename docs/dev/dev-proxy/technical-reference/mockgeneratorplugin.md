@@ -3,7 +3,7 @@ title: MockGeneratorPlugin
 description: MockGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
+ms.date: 01/16/2024
 ---
 
 # MockGeneratorPlugin
@@ -20,7 +20,7 @@ To intercept requests, after starting Dev Proxy, start [recording](../how-to/rec
 {
   "name": "MockGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
 }
 ```
 

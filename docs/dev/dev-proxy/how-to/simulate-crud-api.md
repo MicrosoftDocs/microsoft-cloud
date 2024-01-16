@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/15/2024
+ms.date: 01/16/2024
 ---
 
 # Simulate a CRUD API
@@ -24,7 +24,7 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
 {
   "name": "CrudApiPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "customersApi"
 }
 ```

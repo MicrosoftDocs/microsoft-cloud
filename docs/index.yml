@@ -51,6 +51,9 @@ productDirectory:
         - text: Adopt, extend and build Copilot experiences 
           url: /microsoft-cloud/dev/copilot/overview
 
+        - text: ISV Extensibility options for Copilot
+          url: /microsoft-cloud/dev/copilot/isv-extensibility-story
+
         - text: Copilot for Dynamics 365
           url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
 
@@ -59,9 +62,6 @@ productDirectory:
 
         - text: Copilot in Power Apps
           url: /power-apps/maker/canvas-apps/ai-overview
-
-        - text: Copilot in Windows
-          url: https://www.microsoft.com/windows/copilot-ai-features
           
         - text: GitHub Copilot
           url: https://github.com/features/copilot

@@ -3,7 +3,7 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/16/2024
 ---
 
 # GraphRandomErrorPlugin
@@ -18,7 +18,7 @@ Fails requests made to Microsoft Graph with random errors.
 {
   "name": "GraphRandomErrorPlugin",
   "enabled": false,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "graphRandomErrorsPlugin"
 }
 ```

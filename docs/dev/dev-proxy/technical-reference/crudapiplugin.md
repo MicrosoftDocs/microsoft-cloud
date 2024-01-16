@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/22/2023
+ms.date: 01/16/2024
 ---
 
 # CrudApiPlugin
@@ -18,7 +18,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 {
   "name": "CrudApiPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "customersApi"
 }
 ```
@@ -99,7 +99,7 @@ Each action in the `actions` list has the following properties.
 
 | Property | Description | Required | Default |
 |----------|-------------|----------|---------|
-| `action` | Defines how Dev Proxy interacts with the data. Possible values: `getAll`, `getOne`, `create`, `merge`, `update`, `delete`. | Yes | None |
+| `action` | Defines how Dev Proxy interacts with the data. Possible values: `getAll`, `getOne`, `getMany`, `create`, `merge`, `update`, `delete`. | Yes | None |
 | `url` | URL where Dev Proxy exposes the action on. Dev Proxy appends the URL to the base URL. | No | Empty |
 | `method` | HTTP method that Dev Proxy uses to expose the action. | No | Depends on the action |
 | `query` | Newtonsoft [JSONPath](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm) query that Dev Proxy uses to find the data in the data file. | No | Empty |
@@ -124,7 +124,8 @@ Dev Proxy supports the following actions for CRUD APIs.
 | Action | Description | Default method |
 |--------|-------------|----------------|
 | `getAll` | Returns all items from the data file. | `GET` |
-| `getOne` | Returns a single item from the data file. | `GET` |
+| `getOne` | Returns a single item from the data file. Fails when the query matches multiple items. | `GET` |
+| `getMany` | Returns multiple items from the data file. Returns an empty array if the query doesn't match any items. | `GET` |
 | `create` | Adds a new item to the data collection. | `POST` |
 | `merge` | Merges the data from the request with the data from the data file. | `PATCH` |
 | `update` | Replaces the data in the data file with the data from the request. | `PUT` |

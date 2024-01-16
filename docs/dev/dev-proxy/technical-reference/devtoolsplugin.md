@@ -3,7 +3,7 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 1/9/2024
+ms.date: 01/16/2024
 ---
 
 # DevToolsPlugin
@@ -20,7 +20,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 {
   "name": "DevToolsPlugin",
   "enabled": true,
-  "pluginPath": "plugins\\dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "devTools"
 }
 ```
