@@ -3,7 +3,7 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 01/17/2024
 ---
 
 # RateLimitingPlugin
@@ -29,8 +29,7 @@ Simulates rate-limit behaviors.
 {
   "rateLimiting": {
     "costPerRequest": 2,
-    "rateLimit": 120,
-    "retryAfterSeconds": 5
+    "rateLimit": 120
   }
 }
 ```
@@ -47,11 +46,9 @@ Simulates rate-limit behaviors.
 | `resetTimeWindowSeconds`  | How long in seconds until the next reset                                                         |             60             |
 | `warningThresholdPercent` | The percentage of use that's when exceeded starts returning rate limiting response headers     |             80             |
 | `rateLimit`               | Number of resources for a time window                                                            |            120             |
-| `retryAfterSeconds`       | Number of seconds to wait before retrying the request when throttled                             |             5              |
 | `whenLimitExceeded`       | The behavior the plugin should use when limit is exceeded. Use `Throttle` or `Custom`.          |         `Throttle`         |
 | `resetFormat`             | The format used to determine when the rate limit resets. Use `SecondsLeft` or `UtcEpochSeconds`. |       `SecondsLeft`        |
 | `customResponseFile`      | File containing a custom error response used when limit is exceeded.                             | `rate-limit-response.json` |
-| `customResponse`          | Custom error response used when limit is exceeded.                                               |                            |
 
 ## Command line options
 
