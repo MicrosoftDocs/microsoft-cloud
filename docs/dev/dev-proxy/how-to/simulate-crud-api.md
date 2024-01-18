@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 01/18/2024
 ---
 
 # Simulate a CRUD API
@@ -120,3 +120,9 @@ Learn more about the CrudApiPlugin.
 
 > [!div class="nextstepaction"]
 > [CrudApiPlugin](../technical-reference/crudapiplugin.md)
+
+## Samples
+
+See also the related Dev Proxy samples:
+
+- [CRUD APIs with Northwind database data](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-northwinddb/)

@@ -3,12 +3,12 @@ title: Why is the proxy saying that an option is unknown
 description: Why is the proxy saying that an option is unknown
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 01/18/2024
 ---
 
 # Why is the proxy saying that an option is unknown
 
-The proxy uses a plugin architecture, as such, proxy features can be added, removed, enabled or disabled through changing the configuration in the [devproxyrc.json](../technical-reference/devproxyrc.md) file. 
+Dev Proxy uses a plugin architecture, as such, proxy features can be added, removed, enabled or disabled through changing the configuration in the [devproxyrc.json](../technical-reference/devproxyrc.md) file.
 
 Some plugins provide command line options. When the plugin is disabled, the proxy isn't able to interpret the command line options that the plugin provides.
 

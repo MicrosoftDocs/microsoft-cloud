@@ -3,7 +3,7 @@ title: Why is proxy not mocking my binary response
 description: How to fix proxy not mocking binary responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/18/2024
 ---
 
 # Why is proxy not mocking my binary response
@@ -12,7 +12,7 @@ The dollar sign has special meaning in some shells and might need to be escaped.
 
 In PowerShell, use a backtick:
 
-```pwsh
+```powershell
 Invoke-WebRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/users/id/photo/`$value" -Proxy http://localhost:8000
 ```
 
