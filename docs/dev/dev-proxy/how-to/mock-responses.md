@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/08/2024
+ms.date: 01/18/2024
 ---
 
 # Mock responses
@@ -171,44 +171,6 @@ When you use the following configuration, proxy returns the same response when y
 },
 ```
 
-## n-th request support
-
-In v0.12, we introduced support for mocking n-th request and extended the [mock request](../technical-reference//Response-object.md) object with a new property called `nth`.
-
-Using the following mock file as an example, we can see that it contains two mocks to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with a matching URL for the second time. For all other requests, proxy returns the second response.
-
-> [!TIP]
-> Responses with the `nth` property should be first. Proxy uses responses based on the first match.
-
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
-  "mocks": [
-    {
-      "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
-      "method": "GET",
-      "nth": 2,
-      "responseCode": 200,
-      "responseBody": {
-        "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
-        "status": "completed",
-        "error": null
-      }
-    },
-    {
-      "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
-      "method": "GET",
-      "responseCode": 200,
-      "responseBody": {
-        "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
-        "status": "inprogress",
-        "error": null
-      }
-    }
-  ]
-}
-```
-
 ## Microsoft Graph Batch support
 
 In v0.12, we introduced support for mocking responses that are sent in batch requests to Microsoft Graph.
@@ -231,3 +193,18 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 ```
 
 When an unmocked request is intercepted, a `502 Bad Gateway` response is returned.
+
+## Next step
+
+Learn more about the MockResponsePlugin.
+
+> [!div class="nextstepaction"]
+> [MockResponsePlugin](../technical-reference/mockresponseplugin.md)
+
+## Samples
+
+See also the related Dev Proxy samples:
+
+- [Microsoft Graph mocks from Microsoft Graph API docs](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-docs-mocks/)
+- [Microsoft Graph mocks from Microsoft Graph API docs with sandbox data](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-sandbox-mocks/)
+- [Simulate creating a Microsoft Graph connector and its schema](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-connector/)
