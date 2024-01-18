@@ -3,7 +3,7 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/08/2024
+ms.date: 01/18/2024
 ---
 
 # Mock nth request
@@ -54,3 +54,16 @@ Using the following mock file as an example, we can see that it contains two moc
   ]
 }
 ```
+
+## Next step
+
+Learn more about the MockResponsePlugin.
+
+> [!div class="nextstepaction"]
+> [MockResponsePlugin](../technical-reference/mockresponseplugin.md)
+
+## Samples
+
+See also the related Dev Proxy samples:
+
+- [Simulate creating a Microsoft Graph connector and its schema](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-connector/)
