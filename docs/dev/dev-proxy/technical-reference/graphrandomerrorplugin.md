@@ -3,7 +3,7 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 01/18/2024
 ---
 
 # GraphRandomErrorPlugin
@@ -37,10 +37,10 @@ Fails requests made to Microsoft Graph with random errors.
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| `allowedErrors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. |  |
+| `allowedErrors` | List of HTTP status codes that Dev Proxy might produce. | `429 500 502 503 504 507` |
 
 ## Command line options
 
 | Name | Description | Default |
 |----------|-------------|:-------:|
-| `-a, --allowed-errors` | List of [supported HTTP status codes](./Supported-HTTP-error-status-codes.md) that developer proxy might produce. | `429 500 502 503 504 507` |
+| `-a, --allowed-errors` | List of HTTP status codes that Dev Proxy might produce. | `429 500 502 503 504 507` |
