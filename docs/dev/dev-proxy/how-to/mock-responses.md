@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/18/2024
+ms.date: 01/24/2024
 ---
 
 # Mock responses
@@ -173,13 +173,13 @@ When you use the following configuration, proxy returns the same response when y
 
 ## Microsoft Graph Batch support
 
-In v0.12, we introduced support for mocking responses that are sent in batch requests to Microsoft Graph.
+Dev Proxy supports mocking responses that are sent in batch requests to Microsoft Graph.
 
 There are no special requirements for including responses to batch requests in your mock files, however if a request isn't matched with a mocked response, a `502 Bad Gateway` response is returned.
 
 ## Unmocked request support
 
-In v0.12, we introduced support for throwing an error when proxy intercepts an unmocked request. The ability to fail unmocked requests is useful for identifying requests that you missed in your mocks file.
+Dev Proxy supports throwing an error when proxy intercepts an unmocked request. The ability to fail unmocked requests is useful for identifying requests that you missed in your mocks file.
 
 To enable this feature, add and enable the `blockUnmockedRequests` setting to [MockResponsePlugin](../technical-reference/MockResponsePlugin.md) config section in the [devproxyrc](../technical-reference/devproxyrc.md) file.
 

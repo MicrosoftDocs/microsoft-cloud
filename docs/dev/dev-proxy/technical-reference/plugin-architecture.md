@@ -8,8 +8,6 @@ ms.date: 01/16/2024
 
 # Plugin architecture
 
-In v0.4, we refactored the Dev Proxy to use a Plugin based architecture.
-
 A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.
 
 The [`devproxyrc.json`](../technical-reference/devproxyrc.md) file contains the plugin configuration.

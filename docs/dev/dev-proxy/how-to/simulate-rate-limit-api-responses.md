@@ -3,7 +3,7 @@ title: Simulate Rate-Limit API responses
 description: How to simulate Rate-Limit API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/09/2024
+ms.date: 1/24/2024
 ---
 
 # Simulate Rate-Limit API responses
@@ -23,7 +23,7 @@ Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Mic
 
 ## Custom rate limit support
 
-In v0.12, we added support for proxy to work with custom Rate-Limit implementations.
+When you exceed rate limit, some APIs use custom behaviors, such as returning a `403 Forbidden` status code with a custom error message. Dev Proxy allows you to simulate these custom behaviors by using the `Custom` value for the `whenLimitExceeded` property.
 
 The following example shows how you can configure how you can configure [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) in the [devproxyrc](../technical-reference/devproxyrc.md) file to simulate rate limits for the [GitHub API](https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#dealing-with-rate-limits).
 
