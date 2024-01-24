@@ -324,6 +324,9 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 - Send a request to the JSON Placeholder API from the command line and view the output.
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
+> [!TIP]
+> [Install](https://marketplace.visualstudio.com/items?itemName=garrytrinder.dev-proxy-toolkit) the Dev Proxy Toolkit extension for Visual Studio Code which makes it easy to create and update configuration files.
+
 ## Explore plugins
 
 Dev Proxy uses plugins to simulate API behaviors and enable features. Take a moment to [explore](./technical-reference/overview.md#plugins) the different plugins available to you to help you build more resilient apps.
