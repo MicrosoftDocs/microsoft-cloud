@@ -3,12 +3,12 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/18/2024
+ms.date: 01/24/2024
 ---
 
 # Mock nth request
 
-In v0.12, we introduced support for mocking n-th request and extended the [mock request](../technical-reference/Response-object.md) object with a new property called `nth`.
+Dev Proxy supports mocking n-th through the `nth` property on the [request](../technical-reference/response-object.md) object.
 
 > [!TIP]
 > Download this preset by running in the terminal `devproxy preset get microsoft-graph-connector`.

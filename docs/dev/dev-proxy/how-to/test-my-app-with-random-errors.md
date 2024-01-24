@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/24/2024
 ---
 
 # Test my app with random errors
@@ -31,6 +31,4 @@ After starting the proxy, run your application and see how it responds to the di
 
 ## Microsoft Graph Batch Support
 
-In v0.12, we introduced support for failing requests sent in batch requests to Microsoft Graph with a random error.
-
-There are no special requirements for failing requests sent in a batch, a `424 Failed Dependency` response is returned.
+Dev Proxy supports failing requests sent in batch requests to Microsoft Graph with a random error. There are no special requirements for failing requests sent in a batch, a `424 Failed Dependency` response is returned.
