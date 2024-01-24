@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/18/2024
+ms.date: 01/24/2024
 ---
 
 # Simulate a CRUD API
@@ -12,7 +12,7 @@ When building apps, you often interact with backend APIs. Sometimes, these APIs 
 
 Using the [`CrudApiPlugin`](../technical-reference/crudapiplugin.md), you can simulate a CRUD (Create, Read, Update, Delete) API with an in-memory data store. Using a simple configuration file, you can define which URLs your mock API supports and what data it returns. The plugin also supports CORS for cross-domain usage from client-side applications.
 
-Where the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md) allows you to define static mock responses, the CrudApiPlugin allows you to define a dynamic mock API that you can use to interact with data and see your changes reflected in the mock data set.
+Where the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md) allows you to define static mock responses, the `CrudApiPlugin` allows you to define a dynamic mock API that you can use to interact with data and see your changes reflected in the mock data set.
 
 ## Scenario
 

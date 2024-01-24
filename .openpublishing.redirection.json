@@ -89,6 +89,16 @@
          "source_path": "docs/dev/dev-proxy/technical-reference/openapidocgeneratorplugin.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/openapispecgeneratorplugin",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/test-that-my-application-handles-http-errors-properly.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/test-my-app-with-random-errors",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/simulate-errors-from-non-microsoft-365-apis.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/test-my-app-with-random-errors",
+         "redirect_document_id": true
       }
    ]
 }
