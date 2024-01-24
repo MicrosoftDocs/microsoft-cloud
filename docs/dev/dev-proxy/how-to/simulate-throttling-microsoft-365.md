@@ -95,7 +95,3 @@ Start Dev Proxy with your configuration file and test your app to see how it han
 If your application backs-off when throttled, but doesn't wait for the amount of time specified on the requests, you see a message similar to `Calling https://graph.microsoft.com/v1.0/endpoint again before waiting for the Retry-After period. Request will be throttled`.
 
 This message indicates that your application isn't handling throttling correctly and unnecessarily prolongs throttling. To improve how your app handles throttling, update your code to wait for the amount of time specified in the `Retry-After` header before retrying the request.
-
-## More information
-
-- [What is throttling?](../concepts/what-is-throttling.md)

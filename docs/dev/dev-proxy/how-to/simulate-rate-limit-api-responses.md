@@ -12,11 +12,7 @@ Rate-Limit headers are used in HTTP responses to limit the number of requests th
 
 The server sends these headers in response to a client's request to indicate how many requests are allowed and how many requests remain before the limit is reached.
 
-The `RateLimit-Limit` response header field indicates the request-quota associated with the client in the current time-window.
-
-If the client exceeds that limit, it might not be served.
-
-Enabling the plugin loads presets to simulate the Rate Limiting behaviors of Microsoft Graph and SharePoint Online APIs.
+The `RateLimit-Limit` response header field indicates the request-quota associated with the client in the current time-window. If the client exceeds that limit, it might not be served.
 
 ## Custom rate limit support
 
@@ -58,3 +54,10 @@ The `customResponseFile` contains the response that the proxy returns when your 
   }
 }
 ```
+
+## Next steps
+
+Learn more about the `RateLimitingPlugin`.
+
+> [!div class="nextstepaction"]
+> [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md)

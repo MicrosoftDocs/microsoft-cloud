@@ -1,12 +1,12 @@
 ---
-title: Simulate errors from Open AI APIs
+title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 01/16/2024
 ---
 
-# Simulate errors from Open AI APIs
+# Simulate errors from OpenAI APIs
 
 When you use OpenAI APIs in your app, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any OpenAI API using the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md).
 

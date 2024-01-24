@@ -26,7 +26,7 @@ Alternatively, you can specify the mocks file in the [devproxyrc.json](../techni
 }
 ```
 
-## Next step
+Learn more about the `MockResponsePlugin`.
 
 > [!div class="nextstepaction"]
 > [MockResponsePlugin](../technical-reference/mockresponseplugin.md)
