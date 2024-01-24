@@ -3,17 +3,31 @@ title: Simulate slow API responses
 description: How to simulate slow API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/24/2024
 ---
 
 # Simulate slow API responses
 
-In v0.12, we introduced support for delaying requests to simulate slow responses from APIs.
+Dev Proxy allows you to simulate slow API responses by using the [LatencyPlugin](../technical-reference/LatencyPlugin.md).
 
-> [!NOTE]
-> By default the [LatencyPlugin](../technical-reference/LatencyPlugin.md) is disabled. To enable the plugin, open the [devproxyrc.json](../technical-reference/devproxyrc.md) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+Start, by enabling the plugin in your Dev Proxy configuration file:
 
-The minimum and maximum delay (in milliseconds) which can be added to a response is defined in the configuration object.
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "LatencyPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "configSection": "latencyPlugin"
+    }
+  ],
+  "urlsToWatch": []
+}
+```
+
+Next, specify the minimum and maximum delay (in milliseconds) to simulate for your API.
 
 ```json
 "latencyPlugin": {
@@ -22,4 +36,4 @@ The minimum and maximum delay (in milliseconds) which can be added to a response
 }
 ```
 
-When a response is delayed, proxy displays the total duration it was delayed for in the console output.
+When a response is delayed, Dev Proxy displays the total duration it was delayed for in the console output.

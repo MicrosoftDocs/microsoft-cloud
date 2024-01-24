@@ -3,14 +3,12 @@ title: Refresh local Microsoft Graph database
 description: How to refresh the local Microsoft Graph database
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/24/2024
 ---
 
 # Refresh local Microsoft Graph database
 
-We introduced a local SQLite database to store the OpenAPI specifications for both the v1.0 and beta endpoints of Microsoft Graph in v0.11 release. This change significantly improved the performance and accuracy of the [GraphSelectGuidancePlugin](../technical-reference/GraphSelectGuidancePlugin.md), which returns guidance when requests made to endpoints that support `$select` option but aren't being used.
-
-Whilst we automatically create and update this local database for you, there maybe occasions when you want to refresh this database yourself.
+The [GraphSelectGuidancePlugin](../technical-reference/GraphSelectGuidancePlugin.md) uses a local SQLite database to store the OpenAPI specifications for both the v1.0 and beta endpoints of Microsoft Graph. This database is automatically created and updated for you, but there maybe occasions when you want to refresh this database yourself.
 
 Execute [`devproxy msgraphdb`](../technical-reference/msgraphdb.md) in your proxy installation folder to rebuild and update your local database.
 
