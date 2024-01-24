@@ -10,7 +10,7 @@ ms.date: 01/16/2024
 
 Microsoft Graph is a collection of APIs that give you access to data and insights on Microsoft 365. When you use Microsoft Graph in your app, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any Microsoft Graph API using the [`GraphRandomErrorPlugin`](../technical-reference/GraphRandomErrorPlugin.md).
 
-The `GraphRandomErrorPlugin` is optimized to work with Microsoft Graph. It's configured to simulate the specific errors that Microsoft Graph can return.
+The `GraphRandomErrorPlugin` is optimized to work with Microsoft Graph and simulates the specific errors that Microsoft Graph can return.
 
 To start, enable the `GraphRandomErrorPlugin` in your configuration file.
 

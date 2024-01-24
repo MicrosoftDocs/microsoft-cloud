@@ -16,4 +16,17 @@ To use a file with a different name, use:
 devproxy --mocks-file my-mocks.json
 ```
 
-Alternatively, you can specify the mocks file in the [devproxyrc.json](../technical-reference/devproxyrc.md) configuration file. See the plugin documentation for more details.
+Alternatively, you can specify the mocks file in the [devproxyrc.json](../technical-reference/devproxyrc.md) configuration file.
+
+```json
+{
+  "mocksPlugin": {
+    "mocksFile": "mocks.json"
+  }
+}
+```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [MockResponsePlugin](../technical-reference/mockresponseplugin.md)

@@ -10,7 +10,7 @@ ms.date: 01/24/2024
 
 Testing throttling is difficult because it occurs rarely, only when the server hosting the API is under heavy load. Using the Dev Proxy, you can simulate throttling on any API, and check if your application handles it correctly.
 
-To simulate throttling on any API use the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md). If the API that you use, returns a `Retry-After` header, use the [RetryAfterPlugin](../technical-reference/retryafterplugin.md) to verify that your app backs-off as instructed by the API.
+To simulate throttling on any API, use the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md). If the API that you use, returns a `Retry-After` header, use the [RetryAfterPlugin](../technical-reference/retryafterplugin.md) to verify that your app backs-off as instructed by the API.
 
 ## Simulate throttling on any API
 
@@ -82,7 +82,7 @@ Start Dev Proxy with your configuration file and test your app to see how it han
 
 ## Test correct backing off with the `Retry-After` header
 
-When throttling requests, many APIs use the `Retry-After` response header to instruct the app to back-off for a specific amount of time. When simulating throttling responses using Dev Proxy, you can either configure the `Retry-After` header to a static value, or use a dynamic value that tests if your app is waiting as instructed before calling the API again.
+Many APIs use the `Retry-After` response header to instruct the app to back-off for a specific amount of time. When simulating throttling responses using Dev Proxy, you can either configure the `Retry-After` header to a static value, or use a dynamic value that tests if your app is waiting as instructed before calling the API again.
 
 To configure the `Retry-After` header to a static value, add the header to your throttling response:
 
@@ -111,7 +111,7 @@ To configure the `Retry-After` header to a static value, add the header to your 
 }
 ```
 
-In this example, the `Retry-After` header is set to 60 seconds. When using a static value, Dev Proxy isn't controlling if your app is waiting before calling the API again.
+In this example, the `Retry-After` header is set to 60 seconds. When you configure the header to a static value, Dev Proxy isn't controlling if your app is waiting before calling the API again.
 
 To test if your app is correctly waiting before calling the API again, change the header's value to `@dynamic`:
 
@@ -173,7 +173,7 @@ Additionally, extend your Dev Proxy configuration with the [`RetryAfterPlugin`](
 > [!CAUTION]
 > Add the `RetryAfterPlugin` before the `GenericRandomErrorPlugin` in your configuration file. If you add it after, the request will be failed by the `GenericRandomErrorPlugin` before the `RetryAfterPlugin` has a chance to handle it.
 
-This plugin keeps track of throttling responses and forcefully fails requests issued to APIs, that are still throttled.
+This plugin keeps track of throttling responses and forcefully fails requests issued to APIs that are still throttled.
 
 ## More information
 

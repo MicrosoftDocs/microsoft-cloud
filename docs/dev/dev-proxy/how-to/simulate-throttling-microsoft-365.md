@@ -10,7 +10,7 @@ ms.date: 01/24/2024
 
 Typically, testing [throttling](../concepts/what-is-throttling.md) is hard because it occurs rarely, when Microsoft 365 servers are under heavy load. Using the Dev Proxy, you can simulate throttling responses, and check if your application handles it correctly.
 
-To simulate throttling on Microsoft 365 APIs use the [GraphRandomErrorPlugin](../technical-reference/graphrandomerrorplugin.md) and the [RetryAfterPlugin](../technical-reference/retryafterplugin.md). The `GraphRandomErrorPlugin` returns throttling responses for Microsoft 365 APIs. The `RetryAfterPlugin` verifies that your app backs-off as instructed by the API.
+To simulate throttling on Microsoft 365 APIs, use the [GraphRandomErrorPlugin](../technical-reference/graphrandomerrorplugin.md) and the [RetryAfterPlugin](../technical-reference/retryafterplugin.md). The `GraphRandomErrorPlugin` returns throttling responses for Microsoft 365 APIs. The `RetryAfterPlugin` verifies that your app backs-off as instructed by the API.
 
 To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev Proxy configuration file.
 
@@ -94,7 +94,7 @@ Start Dev Proxy with your configuration file and test your app to see how it han
 
 If your application backs-off when throttled, but doesn't wait for the amount of time specified on the requests, you see a message similar to `Calling https://graph.microsoft.com/v1.0/endpoint again before waiting for the Retry-After period. Request will be throttled`.
 
-This message indicates that your application isn't handling throttling correctly and will unnecessarily prolong throttling. To fix this, update your application to wait for the amount of time specified in the `Retry-After` header before retrying the request.
+This message indicates that your application isn't handling throttling correctly and unnecessarily prolongs throttling. To improve how your app handles throttling, update your code to wait for the amount of time specified in the `Retry-After` header before retrying the request.
 
 ## More information
 
