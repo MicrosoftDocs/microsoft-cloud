@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 01/25/2024
 ---
 
 # devproxyrc
@@ -12,7 +12,7 @@ Default configuration.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",

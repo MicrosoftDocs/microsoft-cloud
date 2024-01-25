@@ -3,7 +3,7 @@ title: Test that my application handles throttling properly
 description: How to test that your application handles throttling properly
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Test that my application handles throttling properly
@@ -18,7 +18,7 @@ To start, enable the `GenericRandomErrorPlugin` in your Dev Proxy configuration 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -37,7 +37,7 @@ Next, configure the plugin to use a file that contains the errors you want to si
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -59,7 +59,7 @@ In the errors file, define the throttling response so that it matches the actual
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,
@@ -88,7 +88,7 @@ To configure the `Retry-After` header to a static value, add the header to your 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,
@@ -117,7 +117,7 @@ To test if your app is correctly waiting before calling the API again, change th
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,
@@ -144,7 +144,7 @@ Additionally, extend your Dev Proxy configuration with the [`RetryAfterPlugin`](
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",

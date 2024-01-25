@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Test my app with random errors
@@ -16,7 +16,7 @@ To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -48,7 +48,7 @@ Finally, in the errors file, define the list of error responses that you want to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 500,
