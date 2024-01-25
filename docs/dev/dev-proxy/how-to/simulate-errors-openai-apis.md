@@ -125,8 +125,6 @@ devproxy --config-file "~appFolder/presets/openai-errors.json"
 
 When you use your app calling OpenAI APIs, Dev Proxy randomly returns one of the error responses you defined in the `errors-openai.json` file.
 
-## Next steps
-
 Learn more about the GenericRandomErrorPlugin.
 
 > [!div class="nextstepaction"]

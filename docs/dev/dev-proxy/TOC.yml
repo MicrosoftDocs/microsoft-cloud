@@ -36,7 +36,7 @@
       items:
       - name: Test my app with random errors
         href: how-to/test-my-app-with-random-errors.md
-      - name: Simulate errors from Open AI APIs
+      - name: Simulate errors from OpenAI APIs
         href: how-to/simulate-errors-openai-apis.md
       - name: Simulate errors from Microsoft Graph APIs
         href: how-to/simulate-errors-microsoft-graph-apis.md
