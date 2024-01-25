@@ -40,5 +40,7 @@ When you exceed the rate limit, the API throttles your requests returning an HTT
 
 To avoid throttling and ensure that your application remains responsive, you should implement rate limiting in your application. Depending on your technology stack, there are different libraries that help you handle rate limiting in your application. After you implement rate limiting in your application, test if it handles rate limiting properly.
 
+## Next steps
+
 > [!div class="nextstepaction"]
 > [Test that my application handles rate limiting properly](../how-to/simulate-rate-limit-api-responses.md)

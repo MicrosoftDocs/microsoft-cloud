@@ -116,6 +116,8 @@
       href: concepts/what-is-rate-limiting.md
     - name: How to handle rate limiting
       href: concepts/how-to-handle-rate-limiting.md
+    - name: How to implement rate limiting in Azure API Management
+      href: concepts/implement-rate-limiting-azure-api-management.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI spec
