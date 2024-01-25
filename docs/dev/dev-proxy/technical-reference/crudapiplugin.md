@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 01/25/2024
 ---
 
 # CrudApiPlugin
@@ -47,7 +47,7 @@ None
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/crudapiplugin.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [

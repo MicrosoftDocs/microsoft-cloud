@@ -3,7 +3,7 @@ title: Simulate slow API responses
 description: How to simulate slow API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Simulate slow API responses
@@ -14,7 +14,7 @@ Start, by enabling the plugin in your Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
