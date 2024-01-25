@@ -3,7 +3,7 @@ title: Mock responses that return binary data
 description: How to mock responses that return binary data
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/18/2024
+ms.date: 01/25/2024
 ---
 
 # Mock responses that return binary data
@@ -14,7 +14,7 @@ In Dev Proxy, you can define a binary response by setting the `response.body` to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

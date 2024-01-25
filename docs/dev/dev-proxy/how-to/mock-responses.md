@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Mock responses
@@ -17,7 +17,7 @@ The following configuration demonstrates two mock responses for retrieving infor
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -68,7 +68,7 @@ When you use the following configuration, proxy responds to all `GET` requests t
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

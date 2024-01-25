@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/18/2024
+ms.date: 01/25/2024
 ---
 
 # Simulate a CRUD API
@@ -12,7 +12,7 @@ When building apps, you often interact with backend APIs. Sometimes, these APIs 
 
 Using the [`CrudApiPlugin`](../technical-reference/crudapiplugin.md), you can simulate a CRUD (Create, Read, Update, Delete) API with an in-memory data store. Using a simple configuration file, you can define which URLs your mock API supports and what data it returns. The plugin also supports CORS for cross-domain usage from client-side applications.
 
-Where the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md) allows you to define static mock responses, the CrudApiPlugin allows you to define a dynamic mock API that you can use to interact with data and see your changes reflected in the mock data set.
+Where the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md) allows you to define static mock responses, the `CrudApiPlugin` allows you to define a dynamic mock API that you can use to interact with data and see your changes reflected in the mock data set.
 
 ## Scenario
 
@@ -41,7 +41,7 @@ In the `customers-api.json` file, you define the mock customers API.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/crudapiplugin.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [

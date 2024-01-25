@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/22/2024
+ms.date: 01/25/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -273,7 +273,7 @@ First let's locate the location of the file that contains the error definitions.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,

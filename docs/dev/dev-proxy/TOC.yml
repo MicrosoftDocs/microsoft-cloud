@@ -36,16 +36,18 @@
       items:
       - name: Test my app with random errors
         href: how-to/test-my-app-with-random-errors.md
-      - name: Test that my application handles HTTP errors properly
-        href: how-to/test-that-my-application-handles-HTTP-errors-properly.md
+      - name: Simulate errors from OpenAI APIs
+        href: how-to/simulate-errors-openai-apis.md
+      - name: Simulate errors from Microsoft Graph APIs
+        href: how-to/simulate-errors-microsoft-graph-apis.md
       - name: Change request failure rate
         href: how-to/change-request-failure-rate.md
-      - name: Simulate errors from non Microsoft 365 APIs
-        href: how-to/simulate-errors-from-non-Microsoft-365-APIs.md
     - name: Simulate behaviors
       items: 
       - name: Test that my application handles throttling properly
         href: how-to/test-that-my-application-handles-throttling-properly.md
+      - name: Simulate throttling on Microsoft 365 APIs
+        href: how-to/simulate-throttling-microsoft-365.md
       - name: Simulate Rate Limit API responses
         href: how-to/simulate-Rate-Limit-API-responses.md
       - name: Simulate slow API responses
@@ -116,6 +118,8 @@
       href: concepts/what-is-rate-limiting.md
     - name: How to handle rate limiting
       href: concepts/how-to-handle-rate-limiting.md
+    - name: How to implement rate limiting in Azure API Management
+      href: concepts/implement-rate-limiting-azure-api-management.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI spec

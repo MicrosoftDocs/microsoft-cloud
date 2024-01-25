@@ -3,7 +3,7 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Mock nth request
@@ -20,7 +20,7 @@ Using the following mock file as an example, we can see that it contains two moc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

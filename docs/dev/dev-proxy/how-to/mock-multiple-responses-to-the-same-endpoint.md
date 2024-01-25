@@ -3,7 +3,7 @@ title: Mock multiple responses to the same endpoint
 description: How to mock multiple responses to the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/08/2024
+ms.date: 01/25/2024
 ---
 
 # Mock multiple responses to the same endpoint
@@ -12,7 +12,7 @@ When defining mock responses, you can define a specific URL to mock, but also a 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -48,7 +48,7 @@ If a URL of a mock response contains an `*`, the proxy considers it a regular ex
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -106,7 +106,7 @@ for request `GET https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v1.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

@@ -3,32 +3,85 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ---
 
 # Test my app with random errors
 
-When applications use Microsoft Graph and other cloud services, it can happen, that these APIs are temporarily unavailable. It's important, that applications consider such scenario and handle exceptions properly.
+When building apps, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any API that you use in your app using the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md).
 
-Testing exceptions in APIs you don't manage is hard, because it's hard to make the API return a specific response. Using Dev Proxy, you can mimic erroneous responses from Microsoft Graph and test your application to see that it handles these errors properly.
+## Simulate errors on any API
+
+To start, enable the `GenericRandomErrorPlugin` in your configuration file.
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "plugins": [
+    {
+      "name": "GenericRandomErrorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "configSection": "errorsContosoApi",
+      "urlsToWatch": [
+        "https://api.contoso.com/*"
+      ]
+    }
+  ]
+}
+```
 
 > [!TIP]
-> The [GraphRandomErrorPlugin](../technical-reference/GraphRandomErrorPlugin.md) controls the behavior of returning random errors. In older releases of the proxy you may find that the `GraphRandomErrorPlugin` may not be in your [devproxyrc.json](../technical-reference/devproxyrc.md) file. Add the [plugin and configuration objects](../technical-reference/GraphRandomErrorPlugin.md) to your `devproxyrc.json` file. The plugin will be enabled the next time you start proxy.
+> Because each API is different, you typically configure an instance of the `GenericRandomErrorPlugin` for each API you want to simulate errors on. To make it easier to manage the configuration, name the `configSection` after the API you want to simulate errors on. Additionally, specify the URLs that you want to simulate errors on in the `urlsToWatch` property with the plugin. This will make it easier to manage the configuration and reuse it in the future.
 
-To test your application, start the Dev Proxy:
+Next, configure the plugin to use a file that contains the errors you want to simulate.
+
+```json
+{
+  "errorsContosoApi": {
+    "errorsFile": "errors-contoso-api.json"
+  }
+}
+```
+
+Finally, in the errors file, define the list of error responses that you want to simulate. For example, to simulate a 500 error with a custom JSON response, use the following configuration:
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
+  "responses": [
+    {
+      "statusCode": 500,
+      "headers": [
+        {
+          "name": "content-type",
+          "value": "application/json; charset=utf-8"
+        }
+      ],
+      "body": {
+        "code": "InternalServerError",
+        "message": "Something went wrong"
+      }
+    }
+  ]
+}
+```
+
+You can define as many error responses as you need.
+
+Start Dev Proxy with your configuration file and use your app to see how it handles the errors. For each matching request, Dev Proxy determines whether to simulate an error or pass the request through to the original API using the [configured failure rate](./change-request-failure-rate.md). When Dev Proxy simulates an error, it uses a random error from the array of error responses you defined in the configuration file.
+
+## Temporarily disable mocks
+
+If you use mocks in your configuration file, you can temporarily disable them by using the `--no-mocks` option.
 
 ```sh
 devproxy --no-mocks
 ```
 
-By default, Dev Proxy randomly responds with 429, 500, 502, 503, 504, or 507 errors. In its default configuration, there's a 50% chance that the proxy will intercept a request to Microsoft Graph. You can increase the likelihood to a higher value using the `--failure-rate` option, for example:
+## Next step
 
-```sh
-devproxy --no-mocks --failure-rate 80
-```
+Learn more about the `GenericRandomErrorPlugin`.
 
-After starting the proxy, run your application and see how it responds to the different errors.
-
-## Microsoft Graph Batch Support
-
-Dev Proxy supports failing requests sent in batch requests to Microsoft Graph with a random error. There are no special requirements for failing requests sent in a batch, a `424 Failed Dependency` response is returned.
+> [!div class="nextstepaction"]
+> [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md)
