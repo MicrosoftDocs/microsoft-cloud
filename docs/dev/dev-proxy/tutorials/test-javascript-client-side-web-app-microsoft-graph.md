@@ -3,7 +3,7 @@ title: Test a JavaScript client-side web application that calls Microsoft Graph
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/11/2024
+ms.date: 01/26/2024
 ---
 
 # Test a JavaScript client-side web application that calls Microsoft Graph
@@ -26,19 +26,14 @@ To follow this tutorial, you need:
 
 ## Clone and configure the sample app
 
-- Clone the repository.
-
-```sh
-git clone https://github.com/microsoft/dev-proxy.git
-```
-
-- Follow the instructions in [samples/readme.md](https://github.com/microsoft/dev-proxy/blob/main/samples/readme.md) to configure the app.
+- Download the [sample app](https://pnp.github.io/download-partial/?url=https://github.com/pnp/proxy-samples/tree/main/samples/demo-m365-randomerror)
+- Follow the [instructions](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror/readme.md) to configure the app.
 
 ## Start Dev Proxy
 
 Dev Proxy comes with a preset configuration for testing apps that send requests to Microsoft Graph and SharePoint Online APIs.
 
-- Open a terminal, enter `devproxy --config-file presets\m365.json` and press <kbd>Enter</kbd> to start Dev Proxy with the preset configuration.
+- Open a terminal, enter `devproxy --config-file "~appFolder/presets/m365.json"` and press <kbd>Enter</kbd> to start Dev Proxy with configuration for Microsoft 365.
 
 ## Launch the sample app
 
@@ -52,13 +47,13 @@ Dev Proxy comes with a preset configuration for testing apps that send requests 
 - In the running app, select the `Without SDK` button.
 
 > [!CAUTION]
-> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
+> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror/readme.md#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
 - Select the `Login` button and complete the sign in flow.
 
 :::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
 
-Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/Supported-HTTP-error-status-codes.md).
+Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/graphrandomerrorplugin.md).
 
 View the proxy output and take a moment to refresh the sample app. See how the sample app handles (or not, in this case) the failures introduced by the proxy.
 
