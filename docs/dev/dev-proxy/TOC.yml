@@ -154,8 +154,6 @@
       href: technical-reference/Keyboard-shortcuts.md
     - name: Response object
       href: technical-reference/Response-object.md
-    - name: Supported HTTP error status codes
-      href: technical-reference/Supported-HTTP-error-status-codes.md
     - name: Plugins
       items:
       - name: CachingGuidancePlugin
