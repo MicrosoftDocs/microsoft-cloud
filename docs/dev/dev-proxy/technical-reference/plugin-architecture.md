@@ -43,7 +43,7 @@ The `configSection` takes a reference to a configuration object. The `mocksPlugi
 
 The five Microsoft Graph API plugins provided are:
 
-- **GraphRandomErrorPlugin** provides random error responses for Microsoft Graph. It returns a random error response from a list of [supported HTTP codes](../technical-reference/Supported-HTTP-error-status-codes.md).
+- **GraphRandomErrorPlugin** provides random error responses for Microsoft Graph. It returns a random error response from a list of [supported HTTP codes](../technical-reference/graphrandomerrorplugin.md).
 - **GraphSdkGuidancePlugin** provides guidance when a Microsoft Graph SDK isn't used.
 - **GraphSelectGuidancePlugin** provides guidance when the `$select` query-string parameter isn't used on a GET request.
 - **GraphBetaSupportGuidancePlugin** provides guidance when a Microsoft Graph v1.0 endpoint isn't used.

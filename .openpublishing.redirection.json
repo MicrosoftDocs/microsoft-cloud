@@ -99,6 +99,11 @@
          "source_path": "docs/dev/dev-proxy/how-to/simulate-errors-from-non-microsoft-365-apis.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/test-my-app-with-random-errors",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/supported-http-error-status-codes.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/graphrandomerrorplugin",
+         "redirect_document_id": false
       }
    ]
 }
