@@ -49,22 +49,22 @@ Dev Proxy comes with a preset configuration for testing apps that send requests 
 
 ## Test the sample app
 
-- In the running app, select the `Without SDK` button.
+1. In the running app, select the `Without SDK` button.
 
-> [!CAUTION]
-> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
+  > [!CAUTION]
+  > If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
-- Select the `Login` button and complete the sign in flow.
+1. Select the `Login` button and complete the sign in flow.
 
-:::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
+  :::image type="content" source="../media/test-app-js-login.png" alt-text="Screenshot of the sample app running in Microsoft Edge browser on Windows 11. The app shows a large Microsoft logo with two buttons below it. A primary button with the text 'Login' and a secondary button with the text 'Back'.":::
+  
+  Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/graphrandomerrorplugin.md).
+  
+  View the proxy output and take a moment to refresh the sample app. See how the sample app handles (or not, in this case) the failures introduced by the proxy.
+  
+  :::image type="content" source="../media/test-app-js-requests.png" alt-text="Screenshot of the sample app running in Microsoft Edge. User avatars aren't shown in the app. The Microsoft Edge Developer Tools are open to the side with errors shown in the console log.":::
 
-Dev Proxy introduces faults into your application by intercepting requests to Microsoft Graph. It uses 50% chance for failing requests with a random [supported HTTP error status code](../technical-reference/graphrandomerrorplugin.md).
-
-View the proxy output and take a moment to refresh the sample app. See how the sample app handles (or not, in this case) the failures introduced by the proxy.
-
-:::image type="content" source="../media/test-app-js-requests.png" alt-text="Screenshot of the sample app running in Microsoft Edge. User avatars aren't shown in the app. The Microsoft Edge Developer Tools are open to the side with errors shown in the console log.":::
-
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop Dev Proxy.
+1. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop Dev Proxy.
 
 ## Next step
 
