@@ -16,7 +16,7 @@ The following table describes the settings.
 
 |Setting|Description|Command-line option|Allowed values|Default value|
 --|--|--|--|--
-`rate`|The percentage of chance that a request will fail Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`
+`rate`|The percentage of chance that proxy fails a request. Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`
 `ipAddress`|The IP address for the proxy to bind to|`--ip-address <ipAddress>`|IPv4 address|`127.0.0.1`
 `labelMode`| Set the console output label mode |n/a|`text`, `icon`, `nerdFont`| `text`
 `logLevel`|Level of messages to log|`--log-level <loglevel>`|`debug`, `info`, `warn`, `error`| `info`
