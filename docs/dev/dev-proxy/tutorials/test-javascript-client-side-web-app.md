@@ -34,13 +34,15 @@ The sample app comes with a Dev Proxy preset. The preset is configured to simula
 
 ## Test the sample app
 
-- In a web browser, navigate to `http://localhost:3000`
-  :::image type="content" source="../media/tutorial-js-webapp.png" alt-text="Screenshot of a web browser with the test web application." lightbox="../media/tutorial-js-webapp.png":::
-- If you see an empty page, check the Console window. It could be that Dev Proxy has already simulated an API error, which the app didn't handle!
-- Navigate through the list of articles to see how the app handles API errors that Dev Proxy simulates.
-- You can find more information about the errors in the Console window and in the terminal where Dev Proxy is running.
-  :::image type="content" source="../media/tutorial-js-devproxy-random-errors.png" alt-text="Screenshot of VSCode with the terminal window open showing errors simulated by Dev Proxy." lightbox="../media/tutorial-js-devproxy-random-errors.png":::
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop Dev Proxy.
+1. In a web browser, navigate to `http://localhost:3000`
+   
+   :::image type="content" source="../media/tutorial-js-webapp.png" alt-text="Screenshot of a web browser with the test web application." lightbox="../media/tutorial-js-webapp.png":::
+   - If you see an empty page, check the Console window. It could be that Dev Proxy has already simulated an API error, which the app didn't handle!
+1. Navigate through the list of articles to see how the app handles API errors that Dev Proxy simulates.
+   - You can find more information about the errors in the Console window and in the terminal where Dev Proxy is running.
+
+   :::image type="content" source="../media/tutorial-js-devproxy-random-errors.png" alt-text="Screenshot of VS Code with the terminal window open showing errors simulated by Dev Proxy." lightbox="../media/tutorial-js-devproxy-random-errors.png":::
+1. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop Dev Proxy.
 
 ## Next step
 
