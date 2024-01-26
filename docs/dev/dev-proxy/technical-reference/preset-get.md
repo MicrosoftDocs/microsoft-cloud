@@ -3,7 +3,7 @@ title: preset get
 description: preset get command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/21/2023
+ms.date: 01/26/2024
 ---
 
 # preset get
@@ -25,7 +25,7 @@ devproxy preset get <preset-id>
 | `<preset-id>` | The ID of the preset to download. | Yes |
 
 > [!TIP]
-> The ID of the preset is the name of the sample folder in the [samples GitHub repository](https://github.com/pnp/proxy-samples).
+> Each sample lists its ID in the details section on the sample page in the Sample Solution Gallery.
 
 ## Options
 
