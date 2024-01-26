@@ -3,7 +3,7 @@ title: Record and export proxy activity
 description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 01/26/2024
 ---
 
 # Record and export proxy activity
@@ -25,7 +25,7 @@ There are two ways to stop recording:
 An execution summary report can be also generated when the recording is stopped.
 
 > [!NOTE]
-> By default the `ExecutionSummaryPlugin` is disabled. To enable the plugin, open the [devproxyrc](https://github.com/microsoft/dev-proxy/wiki/devproxyrc) file, search for the plugin object and change the `enabled` property to `true`. The plugin will be enabled the next time you start proxy.
+> By default the [`ExecutionSummaryPlugin`](../technical-reference/executionsummaryplugin.md) is disabled. To get a summary report, enable the plugin in the Dev Proxy configuration file and restart  proxy.
 
 By default, the summary report is returned to the terminal output.
 

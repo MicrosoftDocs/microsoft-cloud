@@ -4,6 +4,8 @@
   href: get-started.md
 - name: Tutorials
   items:
+    - name: Test a JavaScript client-side web application
+      href: tutorials/test-javascript-client-side-web-app.md
     - name: Test a JavaScript client-side web application that calls Microsoft Graph
       href: tutorials/test-javascript-client-side-web-app-microsoft-graph.md
 - name: How-to
@@ -120,6 +122,8 @@
       href: concepts/how-to-handle-rate-limiting.md
     - name: How to implement rate limiting in Azure API Management
       href: concepts/implement-rate-limiting-azure-api-management.md
+    - name: What is chaos testing?
+      href: concepts/what-is-chaos-testing.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI spec
@@ -152,8 +156,6 @@
       href: technical-reference/Keyboard-shortcuts.md
     - name: Response object
       href: technical-reference/Response-object.md
-    - name: Supported HTTP error status codes
-      href: technical-reference/Supported-HTTP-error-status-codes.md
     - name: Plugins
       items:
       - name: CachingGuidancePlugin

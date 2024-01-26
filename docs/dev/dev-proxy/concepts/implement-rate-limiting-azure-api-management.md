@@ -3,7 +3,7 @@ title: How to implement rate limiting in Azure API Management
 description: Learn how to implement rate limiting in Azure API Management
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/25/2024
+ms.date: 01/26/2024
 ---
 
 # How to implement rate limiting in Azure API Management
@@ -31,13 +31,13 @@ Here's an example of a policy that limits the calls to 1000 per minute.
     <rate-limit calls="1000" renewal-period="60" />
   </inbound>
   <backend>
-      <base />
+    <base />
   </backend>
   <outbound>
-      <base />
+    <base />
   </outbound>
   <on-error>
-      <base />
+    <base />
   </on-error>
 </policies>
 ```
@@ -66,13 +66,13 @@ By default, Azure API Management doesn't expose rate limit information on respon
     <rate-limit calls="1000" renewal-period="60" remaining-calls-header-name="ratelimit-remaining" total-calls-header-name="ratelimit-limit" />
   </inbound>
   <backend>
-      <base />
+    <base />
   </backend>
   <outbound>
-      <base />
+    <base />
   </outbound>
   <on-error>
-      <base />
+    <base />
   </on-error>
 </policies>
 ```
