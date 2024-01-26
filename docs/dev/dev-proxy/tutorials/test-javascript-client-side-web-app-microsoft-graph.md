@@ -26,8 +26,8 @@ To follow this tutorial, you need:
 
 ## Clone and configure the sample app
 
-- Download the [sample app](https://pnp.github.io/download-partial/?url=https://github.com/pnp/proxy-samples/tree/main/samples/demo-m365-randomerror)
-- Follow the [instructions](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror/readme.md) to configure the app.
+- Download the [sample app](https://pnp.github.io/download-partial/?url=https://github.com/pnp/proxy-samples/tree/main/samples/demo-m365-randomerror-js)
+- Follow the [instructions](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror-js/readme.md) to configure the app.
 
 ## Start Dev Proxy
 
@@ -47,7 +47,7 @@ Dev Proxy comes with a preset configuration for testing apps that send requests 
 - In the running app, select the `Without SDK` button.
 
 > [!CAUTION]
-> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror/readme.md#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
+> If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/pnp/proxy-samples/blob/main/samples/demo-m365-randomerror-js/readme.md#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
 - Select the `Login` button and complete the sign in flow.
 
