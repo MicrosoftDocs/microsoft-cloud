@@ -3,21 +3,7 @@ title: Can I use Microsoft Graph beta endpoints in production?
 description: This article explains the trade-offs that you should consider when using Microsoft Graph beta endpoints in production.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
-ms.topic: concept-article
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
+ms.date: 01/26/2024
 ---
 
 # Can I use Microsoft Graph beta endpoints in production?

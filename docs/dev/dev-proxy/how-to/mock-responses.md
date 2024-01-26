@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/25/2024
+ms.date: 01/26/2024
 ---
 
 # Mock responses
@@ -11,7 +11,7 @@ ms.date: 01/25/2024
 To define mock responses, create a file named `mocks.json` in the current working directory. This file allows you to define a specific set of mocks for each project that you work with. The file contains an object with a `mocks` array containing [mock](https://github.com/microsoft/dev-proxy/wiki/Response-object) objects.
 
 > [!TIP]
-> Instead of creating the mocks file manually, you can use the [MockGeneratorPlugin](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
+> Instead of creating the mocks file manually, you can use the [`MockGeneratorPlugin`](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
 
 The following configuration demonstrates two mock responses for retrieving information about the current user. When you request information about the current user, proxy responds with a mock response. When you request the information about the user's photo, proxy returns a 404 status code.
 

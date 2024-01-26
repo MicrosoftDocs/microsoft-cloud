@@ -3,21 +3,7 @@ title: What is caching?
 description: This article explains what caching is.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
-ms.topic: concept-article
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
+ms.date: 01/26/2024
 ---
 
 # What is caching?

@@ -3,21 +3,7 @@ title: How to work with large datasets
 description: This article provides some guidance on how to work with large datasets in your applications.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
-ms.topic: concept-article
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
-  - tool=devproxy
+ms.date: 01/26/2024
 ---
 
 # How to work with large datasets

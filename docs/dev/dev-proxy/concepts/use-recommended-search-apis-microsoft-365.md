@@ -3,20 +3,7 @@ title: Use the recommended search APIs on Microsoft 365
 description: How to use the recommended search APIs on Microsoft 365
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/12/2023
-ms.topic: conceptual
-ms.service: microsoft-cloud-for-developers
-
-categories:
-  - developer-tools
-products:
-  - microsoft-365
-  - microsoft-graph
-  - sharepoint-online
-  - m365
-ms.custom:
-  - fcp
-  - team=cloud_advocates
+ms.date: 01/26/2024
 ---
 
 # Use the recommended search APIs on Microsoft 365
@@ -33,7 +20,7 @@ To use the recommended search APIs, you need to update your code to use the Micr
 - `graph.microsoft.com/{version}/sites?search={query}`
 
 > [!TIP]
-> Use the Dev Proxy [ODSPSearchGuidancePlugin](../technical-reference/odspsearchguidanceplugin.md) to help you identify if your application uses the OneDrive and SharePoint search APIs.
+> Use the Dev Proxy [ODSPSearchGuidancePlugin](../technical-reference/odspsearchguidanceplugin.md) to identify if your application uses the OneDrive and SharePoint search APIs.
 
 Update each of these requests to use the Microsoft Search API instead. For examples of how to translate the different requests, see the [new search guidance](https://devblogs.microsoft.com/microsoft365dev/transition-to-microsoft-graph-search-endpoint-for-onedrive-and-sharepoint/).
 
