@@ -4,6 +4,8 @@
   href: get-started.md
 - name: Tutorials
   items:
+    - name: Test a JavaScript client-side web application
+      href: tutorials/test-javascript-client-side-web-app.md
     - name: Test a JavaScript client-side web application that calls Microsoft Graph
       href: tutorials/test-javascript-client-side-web-app-microsoft-graph.md
 - name: How-to
