@@ -29,8 +29,8 @@ The sample app comes with a Dev Proxy preset. The preset is configured to simula
 
 ## Start Dev Proxy and the sample app
 
-- In a terminal, change the working directory to where the sample app is located.
-- Start the sample app and Dev Proxy by running `npm start`
+1. In a terminal, change the working directory to where the sample app is located.
+1. Start the sample app and Dev Proxy by running `npm start`
 
 ## Test the sample app
 
