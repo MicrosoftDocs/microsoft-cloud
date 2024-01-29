@@ -239,7 +239,7 @@ Learn more:
 - [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
 
-### Solution Accelerators and samples
+### Solution accelerators and samples
 
 Accelerators and samples are available to help you get started building a custom copilot that integrates with your own data and applications.
 
@@ -248,6 +248,7 @@ Learn more:
 - [Azure Chat Solution Accelerator powered by Azure Open AI Service](https://github.com/microsoft/azurechat)
 - [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
 - [ChatGPT-Powered and Voice-Enabled Assistant](https://github.com/gcordido/VoiceEnabledGPT)
+- [GPT Powered Customer Service with Chat/Voice/Video](https://aka.ms/acsaisampleapp)
 
 ### Microsoft Copilot Studio
 
