@@ -3,7 +3,7 @@ title: GenericRandomErrorPlugin
 description: GenericRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 02/05/2024
 ---
 
 # GenericRandomErrorPlugin
@@ -41,6 +41,7 @@ Fails requests with a random selected error from file containing mocked errors.
 | Property | Description | Default |
 |----------|-------------|:-------:|
 | `errorsFile` | Path to the file that contains error responses. | No default |
+| `retryAfterInSeconds` | The number of seconds to wait before retrying the request. Included on the `Retry-After` response header for dynamic throttling. | `5` |
 
 ## Command line options
 
