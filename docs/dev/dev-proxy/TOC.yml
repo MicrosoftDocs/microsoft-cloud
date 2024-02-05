@@ -84,6 +84,14 @@
         href: how-to/clear-the-output.md
       - name: Refresh local Microsoft Graph database
         href: how-to/refresh-local-Microsoft-Graph-database.md
+    - name: Use Dev Proxy
+      items:
+      - name: With Node.js applications
+        href: how-to/use-dev-proxy-with-nodejs.md
+      - name: With Node.js applications in Docker containers
+        href: how-to/use-dev-proxy-with-nodejs-docker.md
+      - name: With JavaScript Azure Functions
+        href: how-to/use-dev-proxy-with-javascript-azure-functions.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
