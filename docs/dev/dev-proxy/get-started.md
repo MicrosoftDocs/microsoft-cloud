@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/02/2024
+ms.date: 02/05/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -103,11 +103,8 @@ The first time you start Dev Proxy on your machine there are a few steps to foll
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Trust the application**. macOS includes a security technology named [Gatekeeper](https://support.apple.com/en-gb/guide/security/sec5599b66df/web), which is designed to help ensure that only trusted software runs on a user’s Mac. A verified developer didn’t sign the current release, so you needed to trust it manually by yourself.
-    1. Open the `dev-proxy` installation folder in Finder.
-    1. Press <kbd>Ctrl</kbd> and select the `devproxy` executable.
-    1. Choose `Open` from the menu, and then select `Open` in the dialog that appears.
-    1. Enter your admin name and password to open the app and start the Dev Proxy process.
+1. **Start Dev Proxy**. Open a terminal session. Enter `devproxy` and press <kbd>Enter</kbd>.
+1. **Trust certificate**. Dev Proxy installs a certificate named `Dev Proxy CA`, which it uses to decrypt HTTPS traffic sent from your machine. A warning shows. Press <kbd>y</kbd> to confirm that you want to trust the certificate.
 1. **Accept incoming connections**. A warning shows. Select `Allow` to confirm.
 
 ::: zone-end
