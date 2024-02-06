@@ -92,6 +92,10 @@
         href: how-to/use-dev-proxy-with-nodejs-docker.md
       - name: With JavaScript Azure Functions
         href: how-to/use-dev-proxy-with-javascript-azure-functions.md
+      - name: With .NET applications
+        href: how-to/use-dev-proxy-with-dotnet.md
+      - name: With .NET applications in Docker containers
+        href: how-to/use-dev-proxy-with-dotnet-docker.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
