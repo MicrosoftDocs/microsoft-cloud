@@ -19,6 +19,9 @@ Because your .NET app is running inside a Docker container and Dev Proxy is runn
 docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000 mcr.microsoft.com/dotnet/sdk:8.0 bash
 ```
 
+::: zone pivot="client-operating-system-windows"
+::: zone-end
+
 ::: zone pivot="client-operating-system-macos"
 
 > [!IMPORTANT]
