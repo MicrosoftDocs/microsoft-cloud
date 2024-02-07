@@ -4,6 +4,7 @@ description: How to use Dev Proxy with .NET applications running in Docker conta
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 02/07/2024
+zone_pivot_groups: client-operating-system
 ---
 
 # Use Dev Proxy with .NET applications running in Docker
