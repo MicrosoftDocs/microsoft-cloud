@@ -3,7 +3,8 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/06/2024
+ms.date: 02/07/2024
+zone_pivot_groups: client-operating-system
 ---
 
 # Use Dev Proxy with .NET applications running in Docker
@@ -18,12 +19,19 @@ Because your .NET app is running inside a Docker container and Dev Proxy is runn
 docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000 mcr.microsoft.com/dotnet/sdk:8.0 bash
 ```
 
+::: zone pivot="client-operating-system-windows"
+::: zone-end
+
+::: zone pivot="client-operating-system-macos"
+
 > [!IMPORTANT]
 > When you use Dev Proxy on macOS, you need to attach it to the `0.0.0.0` address to make it accessible from the Docker container. To configure the IP address for Dev Proxy, start it with the following command:
 >
 > ```bash
 > devproxy --ip-address 0.0.0.0
 > ```
+
+::: zone-end
 
 ## Handle SSL certificates
 
@@ -38,7 +46,41 @@ To allow Dev Proxy to inspect HTTPS requests, you can configure the Dev Proxy SS
 
 Start, by exporting the Dev Proxy certificate to PEM.
 
-On macOS run:
+::: zone pivot="client-operating-system-windows"
+
+To export the Dev Proxy certificate to PEM on Windows, you need `openssl`. This example assumes you use `openssl` that's provided together with `git` but you can install it separately as well.
+
+Adjust the Dev Proxy and git installation directory, and run the following script in PowerShell.
+
+```powershell
+$proxyPath = "C:\apps\devproxy"
+$gitPath = "C:\Program Files\Git"
+
+# convert Dev Proxy root certificate to PEM
+$executable = "${gitPath}\usr\bin\openssl.exe"
+$arguments = 'pkcs12 -in "{0}\rootCert.pfx" -out "{0}\rootCert.crt" -nodes' -f $proxyPath
+Start-Process -FilePath $executable -ArgumentList $arguments -NoNewWindow -Wait
+
+# Read PEM contents
+$content = Get-Content "$proxyPath\rootCert.crt"
+
+# Find the indices of the begin and end certificate lines
+$beginIndex = $content.IndexOf("-----BEGIN CERTIFICATE-----")
+$endIndex = $content.IndexOf("-----END CERTIFICATE-----")
+
+# If both lines are found
+if ($beginIndex -ne -1 -and $endIndex -ne -1) {
+    # Trim the content to only include the certificate
+    $content = $content[$beginIndex..$endIndex]
+}
+
+# Write the updated content back to the file
+$content | Out-File "$proxyPath\rootCert.crt"
+```
+
+::: zone-end
+
+::: zone pivot="client-operating-system-macos"
 
 ```bash
 # export Dev Proxy certificate
@@ -46,6 +88,8 @@ security find-certificate -c "Dev Proxy CA" -a -p > dev-proxy-ca.pem
 # rename to .crt
 mv dev-proxy-ca.pem dev-proxy-ca.crt
 ```
+
+::: zone-end
 
 Next, copy the certificate to your Docker container. The easiest way to copy the certificate is to copy it to the project folder, which you mount to the container.
 

@@ -96,6 +96,10 @@
         href: how-to/use-dev-proxy-with-dotnet.md
       - name: With .NET applications in Docker containers
         href: how-to/use-dev-proxy-with-dotnet-docker.md
+      - name: With .NET Aspire applications
+        href: how-to/use-dev-proxy-with-dotnet-aspire.md
+      - name: With SharePoint Framework (SPFx) solutions
+        href: how-to/use-dev-proxy-with-spfx.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
