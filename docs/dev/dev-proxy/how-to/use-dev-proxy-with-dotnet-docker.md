@@ -19,12 +19,16 @@ Because your .NET app is running inside a Docker container and Dev Proxy is runn
 docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000 mcr.microsoft.com/dotnet/sdk:8.0 bash
 ```
 
+::: zone pivot="client-operating-system-macos"
+
 > [!IMPORTANT]
 > When you use Dev Proxy on macOS, you need to attach it to the `0.0.0.0` address to make it accessible from the Docker container. To configure the IP address for Dev Proxy, start it with the following command:
 >
 > ```bash
 > devproxy --ip-address 0.0.0.0
 > ```
+
+::: zone-end
 
 ## Handle SSL certificates
 
