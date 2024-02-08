@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2024
+ms.date: 02/08/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -297,46 +297,9 @@ First let's locate the location of the file that contains the error definitions.
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-## Create your own configuration files
-
-By default, Dev Proxy uses the `devproxyrc.json` file in the Dev Proxy installation folder for its configuration settings. You can create your own configuration files.
-
-Let's consider that you want to store a configuration file in the project folder for your app, so you can share the configuration settings with the rest of your team.
-
-- In the Dev Proxy installation folder, copy `devproxyrc.json` and `devproxy-errors.json`.
-- Create a new folder called `my-app` anywhere on your machine but outside of the Dev Proxy installation folder.
-- In the `my-app` folder, paste in the two files from your clipboard.
-- Rename `devproxyrc.json` to `my-app.json`.
-- Rename `devproxy-errors.json` to `my-app-errors.json`.
-
-When using a configuration file that is stored outside of the Dev Proxy installation file, you need to ensure that the `pluginPath` references are correct. Rather than hard coding the paths to the Dev Proxy installation folder in your configuration file, you can use the `~appFolder` at the beginning of the path to include a dynamic reference back to the Dev Proxy installation folder.
-
-- Open `my-app.json` in a text editor.
-- Locate the `GenericRandomErrorPlugin` plugin in the `plugins` array.
-- Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
-- Locate the `RetryAfterPlugin` plugin in the `plugins` array.
-- Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
-- At the command line, change to the `my-app` directory.
-- Enter `devproxy --config-file my-app.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
-- Send a request to the JSON Placeholder API from the command line and view the output.
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
-
-> [!TIP]
-> [Install](https://marketplace.visualstudio.com/items?itemName=garrytrinder.dev-proxy-toolkit) the Dev Proxy Toolkit extension for Visual Studio Code which makes it easy to create and update configuration files.
-
-## Explore plugins
-
-Dev Proxy uses plugins to simulate API behaviors and enable features. Take a moment to [explore](./technical-reference/overview.md#plugins) the different plugins available to you to help you build more resilient apps.
-
-::: zone pivot="client-operating-system-windows"
-
-## .NET 4.8
-
-If you're using Dev Proxy with a .NET 4.8 app, you need to [register Dev Proxy on your system](./how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
-
-::: zone-end
-
 ## Next step
 
+Learn how to use Dev Proxy to simulate random errors for your own application.
+
 > [!div class="nextstepaction"]
-> [Explore tutorials](./tutorials/test-javascript-client-side-web-app-microsoft-graph.md)
+> [Simulate errors for your own app](./tutorials/simulate-errors-for-your-own-app.md)
