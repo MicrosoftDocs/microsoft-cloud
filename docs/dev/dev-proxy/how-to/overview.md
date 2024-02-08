@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/01/2023
+ms.date: 02/08/2024
 ms.topic: overview
 ---
 
@@ -15,6 +15,7 @@ ms.topic: overview
 
 - [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
 - [Exclude a URL](./Exclude-a-URL.md)
+- [Inspect requests and responses using Chrome DevTool](./inspect-requests-responses-chrome-devtools.md)
 
 ## Mock responses
 
@@ -23,17 +24,19 @@ ms.topic: overview
 - [Mock responses that return binary data](./Mock-responses-that-return-binary-data.md)
 - [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint.md)
 - [Change mocks file](./Change-mocks-file.md)
+- [Simulate a CRUD API](./simulate-crud-api.md)
 
 ## Simulate errors
 
 - [Test my app with random errors](./Test-my-app-with-random-errors.md)
-- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-HTTP-errors-properly.md)
+- [Simulate errors from OpenAI APIs](./simulate-errors-openai-apis.md)
+- [Simulate errors from Microsoft Graph APIs](./simulate-errors-microsoft-graph-apis.md)
 - [Change request failure rate](./Change-request-failure-rate.md)
-- [Simulate errors from non Microsoft 365 APIs](./Simulate-errors-from-non-Microsoft-365-APIs.md)
 
 ## Simulate behaviors
 
-- [Test that my application handles HTTP errors properly](./Test-that-my-application-handles-throttling-properly.md)
+- [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md)
+- [Simulate throttling on Microsoft 365 APIs](./simulate-throttling-microsoft-365.md)
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md)
 - [Simulate slow API responses](./Simulate-slow-API-responses.md)
 
@@ -48,6 +51,7 @@ ms.topic: overview
 
 ## Improve my app
 
+- [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
 ## Presets
