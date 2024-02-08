@@ -76,20 +76,20 @@ By default, Dev Proxy uses the `devproxyrc.json` file in the Dev Proxy installat
 
 Let's consider that you want to store a configuration file in the project folder for your app, so you can share the configuration settings with the rest of your team.
 
-- In the Dev Proxy installation folder, copy `devproxyrc.json` and `devproxy-errors.json`.
-- In your project folder, paste the files.
+1. In the Dev Proxy installation folder, copy `devproxyrc.json` and `devproxy-errors.json`.
+1. In your project folder, paste the files.
 
 When using a configuration file that is stored outside of the Dev Proxy installation file, you need to ensure that the `pluginPath` references are correct. Rather than hard coding the paths to the Dev Proxy installation folder in your configuration file, you can use the `~appFolder` at the beginning of the path to include a dynamic reference back to the Dev Proxy installation folder.
 
-- In a text editor, open the `devproxyrc.json` file.
-- Locate the `GenericRandomErrorPlugin` plugin in the `plugins` array.
-- Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
-- Locate the `RetryAfterPlugin` plugin in the `plugins` array.
-- Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
-- In a terminal, change the working directory to your project folder.
-- Enter `devproxy --config-file devproxyrc.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
-- Send a request to the JSON Placeholder API from the command line and view the output.
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
+1. In a text editor, open the `devproxyrc.json` file.
+1. Locate the `GenericRandomErrorPlugin` plugin in the `plugins` array.
+1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
+1. Locate the `RetryAfterPlugin` plugin in the `plugins` array.
+1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
+1. In a terminal, change the working directory to your project folder.
+1. Enter `devproxy --config-file devproxyrc.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
+1. Send a request to the JSON Placeholder API from the command line and view the output.
+1. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
 > [!TIP]
 > Install the [Dev Proxy Toolkit](https://marketplace.visualstudio.com/items?itemName=garrytrinder.dev-proxy-toolkit) extension for Visual Studio Code which makes it easy to create and update configuration files.
