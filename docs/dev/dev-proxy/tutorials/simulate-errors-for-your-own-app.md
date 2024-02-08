@@ -96,7 +96,7 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 
 ## Next step
 
-Dev Proxy uses plugins to simulate API behaviors and enable features. Take a moment to explore the different plugins available to you to help you build more resilient apps.
+Dev Proxy supports many different scenarios that help you build more robust applications. Explore the how-to guides to learn how to use the different Dev Proxy features and improve your application.
 
 > [!div class="nextstepaction"]
-> [Explore plugins](../technical-reference/overview.md#plugins)
+> [Explore how-to guides](../how-to/overview.md)
