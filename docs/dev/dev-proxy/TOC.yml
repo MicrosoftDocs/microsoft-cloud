@@ -4,6 +4,8 @@
   href: get-started.md
 - name: Tutorials
   items:
+    - name: Simulate random errors for your own application
+      href: tutorials/simulate-errors-for-your-own-app.md
     - name: Test a JavaScript client-side web application
       href: tutorials/test-javascript-client-side-web-app.md
     - name: Test a JavaScript client-side web application that calls Microsoft Graph
