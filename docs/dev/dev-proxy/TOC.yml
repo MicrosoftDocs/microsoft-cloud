@@ -182,6 +182,8 @@
         href: technical-reference/crudapiplugin.md
       - name: DevToolsPlugin
         href: technical-reference/devtoolsplugin.md
+      - name: EntraMockResponsePlugin
+        href: technical-reference/entramockresponseplugin.md
       - name: ExecutionSummaryPlugin
         href: technical-reference/ExecutionSummaryPlugin.md
       - name: GenericRandomErrorPlugin
