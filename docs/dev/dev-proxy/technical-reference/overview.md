@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/22/2023
+ms.date: 02/14/2024
 ms.topic: overview
 ---
 
@@ -30,7 +30,15 @@ Name | Description
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
 
-## Microsoft Graph Plugins
+## Microsoft Entra plugins
+
+List of plugins that work with Microsoft Entra API.
+
+Name | Description
+--- | ---
+[EntraMockResponsePlugin](./entramockresponseplugin.md)|Mocks responses to Microsoft Entra.
+
+## Microsoft Graph plugins
 
 List of plugins that work with Microsoft Graph API.
 
