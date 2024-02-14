@@ -3,7 +3,7 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/26/2024
+ms.date: 02/14/2024
 ---
 
 # GraphRandomErrorPlugin
@@ -38,6 +38,7 @@ Fails requests made to Microsoft Graph with random errors.
 | Property | Description | Default |
 |----------|-------------|:-------:|
 | `allowedErrors` | List of HTTP status codes that Dev Proxy might produce. | `429 500 502 503 504 507` |
+| `retryAfterInSeconds` | Value of the `Retry-After` header in seconds. | `5` |
 
 ## Command line options
 
