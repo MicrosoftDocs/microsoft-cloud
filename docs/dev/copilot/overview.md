@@ -158,6 +158,7 @@ Microsoft Security Copilot is an AI-powered security analysis tool that empowers
 
 Learn more:
 - [Microsoft Security Copilot Overview](/security-copilot/microsoft-security-copilot)
+- [Get started with Microsoft Copilot for Security](https://learn.microsoft.com/training/paths/security-copilot-and-ai)
 
 ## Extend Copilot
 
