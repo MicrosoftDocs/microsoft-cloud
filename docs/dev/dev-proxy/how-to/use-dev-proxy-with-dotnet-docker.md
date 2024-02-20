@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/07/2024
+ms.date: 02/20/2024
 zone_pivot_groups: client-operating-system
 ---
 
@@ -75,8 +75,10 @@ if ($beginIndex -ne -1 -and $endIndex -ne -1) {
 }
 
 # Write the updated content back to the file
-$content | Out-File "$proxyPath\rootCert.crt"
+$content | Out-File "$proxyPath\dev-proxy-ca.crt"
 ```
+
+When prompted to enter the password, press <kbd>Enter</kbd> without typing anything.
 
 ::: zone-end
 
