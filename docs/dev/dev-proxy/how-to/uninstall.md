@@ -16,17 +16,22 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-windows"
 
-1. Open `Start Menu`
-1. Enter `Manage user certificates` in the search box, select the result in the list to open the `Certificates` dialog box.
+1. Open `Start Menu`.
+1. In the search box, Enter `Manage user certificates`.
+1. To open the `Certificates` dialog box, select the result in the list.
 1. In the tree view, expand the `Personal` folder and select the `Certificates` child folder.
-1. Remove the certificate issued to `Titanium Root Certificate Authority` by selecting and pressing the Delete key on your keyboard, or right select and select `Delete` in the menu.
-1. Select `Yes` to confirm the deletion.
+1. Remove the `Dev Proxy CA` certificate by selecting and pressing the <kbd>Delete</kbd> key on your keyboard, or right select and in the menu select `Delete`.
+1. To confirm the deletion, Select `Yes`.
 
 ::: zone-end
 
 ::: zone pivot="client-operating-system-macos"
 
-1. Remove the `~/Library/Application Support/dev-proxy` folder.
+1. Open `Keychain Access`.
+1. Switch to `My Certificates`.
+1. In the list of certificates, find the `Dev Proxy CA` certificate.
+1. Right select the certificate and from the menu, select `Delete Dev Proxy CA`.
+1. In Finder, locate and remove the `~/Library/Application Support/dev-proxy` folder.
 
 ::: zone-end
 
