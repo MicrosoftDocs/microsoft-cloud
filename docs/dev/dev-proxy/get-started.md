@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/08/2024
+ms.date: 02/28/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -112,7 +112,7 @@ The first time you start Dev Proxy on your machine there are a few steps to foll
 The terminal displays the following output:
 
 ```text
-Error responses for 8 url patterns loaded from devproxy-errors.json
+8 error responses loaded from devproxy-errors.json
 Listening on 127.0.0.1:8000...
 Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
 Press CTRL+C to stop Dev Proxy

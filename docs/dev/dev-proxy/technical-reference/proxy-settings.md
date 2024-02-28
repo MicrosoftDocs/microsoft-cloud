@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2024
+ms.date: 02/28/2024
 ---
 
 # Proxy settings
@@ -20,7 +20,7 @@ The following table describes the settings.
 |`installCert`|Whether to install the root certificate|`--install-cert`|`true`, `false`|`true`|
 |`ipAddress`|The IP address for the proxy to bind to|`--ip-address <ipAddress>`|IPv4 address|`127.0.0.1`|
 |`labelMode`| Set the console output label mode |n/a|`text`, `icon`, `nerdFont`| `text`|
-|`logLevel`|Level of messages to log|`--log-level <loglevel>`|`debug`, `info`, `warn`, `error`| `info`|
+|`logLevel`|Level of messages to log|`--log-level <loglevel>`|`debug`, `information`, `warning`, `error`| `information`|
 |`newVersionNotification`|Whether to notify about new versions|n/a|`none`, `stable`, `beta`|`stable`|
 |n/a|Skip the first run experience (don't trust certificate on macOS)|`--no-first-run`|n/a|n/a|
 |`port`|The port for the proxy server to listen on|`-p, --port <port>`|integer|`8000`|
