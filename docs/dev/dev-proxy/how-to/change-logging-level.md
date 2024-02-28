@@ -3,7 +3,7 @@ title: Change logging level
 description: How to change logging level
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 02/28/2024
 ---
 
 # Change logging level
@@ -23,3 +23,5 @@ To change the logging level at run time, use the `--log-level` command line opti
 ```sh
 devproxy --log-level debug
 ```
+
+For the list of available logging levels, see the [Proxy settings](../technical-reference/proxy-settings.md) page.
