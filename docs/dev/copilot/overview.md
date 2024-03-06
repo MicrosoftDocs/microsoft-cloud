@@ -224,18 +224,22 @@ Learn more:
 
 ## Build your own Copilot
 
-In addition to adopting and extending Microsoft Copilot, a custom AI copilot can be created to create a personalized conversational AI experience for users using Azure OpenAI, Cognitive Search, Microsoft Copilot Studio, and other Microsoft Cloud technologies. A custom copilot can integrate company data and documents, retrieve real-time data from external APIs, and be embedded in company applications. For example, a custom copilot can be built to provide a chat interface to access help desk tickets and knowledge base articles. Rather than using traditional search techniques or navigating across multiple applications, users can use the conversational UI provided by the custom Copilot to find the information they need.
+In addition to adopting and extending Microsoft Copilot, a custom AI copilot can be created to create a personalized conversational AI experience for users using Azure OpenAI Service, Azure AI Search, Microsoft Copilot Studio, and other Microsoft Cloud technologies. A custom copilot can integrate company data and documents, retrieve real-time data from external APIs, and be embedded in company applications. For example, a custom copilot can be built to provide a chat interface to access help desk tickets and knowledge base articles. Rather than using traditional search techniques or navigating across multiple applications, users can use the conversational UI provided by the custom Copilot to find the information they need.
 
 :::image type="content" source="media/copilot-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating a custom Copilot." border="false" :::
 
-### Chat with your own data using Azure OpenAI and Cognitive Search
+### Azure AI Studio
 
-Companies can integrate their own data with Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
+Azure AI Studio brings together capabilities from across multiple Azure AI services. With Azure AI Studio, you can evaluate large language model (LLM) responses and orchestrate prompt application components with prompt flow for better performance.
 
-:::image type="content" source="media/chat-with-your-data.png" alt-text="A diagram showing how Cognitive Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
+Companies can integrate their own data with Azure AI Search and Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
+
+:::image type="content" source="media/chat-with-your-data.png" alt-text="A diagram showing how Azure AI Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
+
+To chat with your own data using Azure OpenAI and Azure AI Search in Azure AI Studio, see [Deploy a web app for chat on your data](/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/ai-studio/tutorials/deploy-copilot-ai-studio).
 
 Learn more:
-- [Azure AI Services Documentation, Samples, and Resources](/azure/developer/intro/azure-ai-for-developers?pivots=python)
+- [Azure AI services Documentation, Samples, and Resources](/azure/developer/intro/azure-ai-for-developers?pivots=python)
 - [Azure AI Studio Documentation](/azure/ai-studio)
 - [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
@@ -246,8 +250,8 @@ Accelerators and samples are available to help you get started building a custom
 
 Learn more:
 - ["Chat with your data" Solution Accelerator](https://github.com/azure-samples/chat-with-your-data-solution-accelerator)
-- [Azure Chat Solution Accelerator powered by Azure Open AI Service](https://github.com/microsoft/azurechat)
-- [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
+- [Azure Chat Solution Accelerator powered by Azure OpenAI Service](https://github.com/microsoft/azurechat)
+- [ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search](https://github.com/Azure-Samples/azure-search-openai-demo)
 - [ChatGPT-Powered and Voice-Enabled Assistant](https://github.com/gcordido/VoiceEnabledGPT)
 - [GPT Powered Customer Service with Chat/Voice/Video](https://aka.ms/acsaisampleapp)
 
