@@ -96,6 +96,7 @@ In addition, Copilot functionality is also available directly in Microsoft 365 a
 
 Learn more:
 - [Copilot for Microsoft 365 Documentation](/microsoft-365-copilot)
+- [Use Restricted SharePoint Search with Copilot for Microsoft 365](https://techcommunity.microsoft.com/t5/copilot-for-microsoft-365/introducing-restricted-sharepoint-search-to-help-you-get-started/ba-p/4071060)
 
 ### Copilot for Service
 
