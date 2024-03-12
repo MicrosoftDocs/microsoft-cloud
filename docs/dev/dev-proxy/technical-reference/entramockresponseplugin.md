@@ -3,7 +3,7 @@ title: EntraMockResponsePlugin
 description: EntraMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/14/2024
+ms.date: 03/12/2024
 ---
 
 # EntraMockResponsePlugin
@@ -16,6 +16,8 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
 
 | Token | Description |
 | ----- | ----------- |
+| `@dynamic.devProxyCertificateChain` | The certificate chain of the Dev Proxy CA. Dev Proxy replaces the `@dynamic.devProxyCertificateChain` token with the actual certificate chain of the Dev Proxy CA. This is useful if you want to validate an access token issued by Dev Proxy. |
+| `@dynamic.devProxyKeyId` | The key ID of the Dev Proxy CA. Dev Proxy replaces the `@dynamic.devProxyKeyId` token with the actual key ID of the Dev Proxy CA. This is useful if you want to validate an access token issued by Dev Proxy. |
 | `state=@dynamic` | The state token in the request. Dev Proxy replaces the `@dynamic` token with the value of the `state` query string parameter |
 | `"id_token": "@dynamic.eyJ0eXAiOiJKV1QiL..."` | Mocked ID token. Dev Proxy removes the `@dynamic.` token and updates the value of the `nonce` claim in the mocked ID token. |
 
