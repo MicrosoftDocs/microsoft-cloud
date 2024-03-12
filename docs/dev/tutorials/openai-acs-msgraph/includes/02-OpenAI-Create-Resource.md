@@ -54,7 +54,7 @@ In this exercise you will:
     :::image type="content" source="../media/aoai-studio-create-model-deployment.png" alt-text="Azure OpenAI Create Model Deployment" border="true":::
 
     > [!NOTE]
-    > Azure OpenAI supports [several different types of models](azure/ai-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin). Each model can be used to handle different scenarios.
+    > Azure OpenAI supports [several different types of models](/azure/ai-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin). Each model can be used to handle different scenarios.
 
 1. Select **Create**.
 
