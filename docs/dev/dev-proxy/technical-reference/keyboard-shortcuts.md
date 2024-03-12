@@ -3,7 +3,7 @@ title: Keyboard shortcuts
 description: Proxy keyboard shortcuts
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 03/11/2024
 ---
 
 # Keyboard shortcuts
@@ -16,3 +16,4 @@ The following table describes the keyboard shortcuts available when the proxy is
 | <kbd>r</kbd>   | Start recording     |
 | <kbd>s</kbd>   | Stop recording     |
 | <kbd>c</kbd>   | Clear proxy output     |
+| <kbd>w</kbd>   | Issue web requests     |

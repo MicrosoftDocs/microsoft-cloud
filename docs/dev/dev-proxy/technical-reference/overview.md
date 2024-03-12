@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/14/2024
+ms.date: 03/11/2024
 ms.topic: overview
 ---
 
@@ -24,6 +24,7 @@ Name | Description
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
+[MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 [OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec in JSON format from the intercepted requests and responses.
@@ -46,6 +47,7 @@ Name | Description
 --- | ---
 [GraphBetaSupportGuidancePlugin](./graphbetasupportguidanceplugin.md)|Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 [GraphClientRequestIdGuidancePlugin](./graphclientrequestidguidanceplugin.md)|Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
+[GraphConnectorNotificationPlugin](./graphconnectornotificationplugin.md)|Simulates the notification when enabling or disabling a Microsoft Graph connector in Teams Admin Center (TAC). Validates requests for creating and deleting the external connection.
 [GraphMockResponsePlugin](./graphmockresponseplugin.md)|Mocks responses to Microsoft Graph APIs.
 [GraphRandomErrorPlugin](./graphrandomerrorplugin.md)|Fails requests made to Microsoft Graph with random errors.
 [GraphSdkGuidancePlugin](./graphsdkguidanceplugin.md)|Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been issued by a Microsoft Graph SDK.
