@@ -210,6 +210,8 @@
             href: technical-reference/GraphBetaSupportGuidancePlugin.md
           - name: GraphClientRequestIdGuidancePlugin
             href: technical-reference/GraphClientRequestIdGuidancePlugin.md
+          - name: GraphConnectorGuidancePlugin
+            href: technical-reference/graphconnectorguidanceplugin.md
           - name: GraphConnectorNotificationPlugin
             href: technical-reference/graphconnectornotificationplugin.md
           - name: GraphMockResponsePlugin

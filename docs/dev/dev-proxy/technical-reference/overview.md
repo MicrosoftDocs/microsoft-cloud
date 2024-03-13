@@ -47,6 +47,7 @@ Name | Description
 --- | ---
 [GraphBetaSupportGuidancePlugin](./graphbetasupportguidanceplugin.md)|Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 [GraphClientRequestIdGuidancePlugin](./graphclientrequestidguidanceplugin.md)|Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
+[GraphConnectorGuidancePlugin](./graphconnectorguidanceplugin.md)|Shows contextual guidance for working with Microsoft Graph connectors.
 [GraphConnectorNotificationPlugin](./graphconnectornotificationplugin.md)|Simulates the notification when enabling or disabling a Microsoft Graph connector in Teams Admin Center (TAC). Validates requests for creating and deleting the external connection.
 [GraphMockResponsePlugin](./graphmockresponseplugin.md)|Mocks responses to Microsoft Graph APIs.
 [GraphRandomErrorPlugin](./graphrandomerrorplugin.md)|Fails requests made to Microsoft Graph with random errors.
