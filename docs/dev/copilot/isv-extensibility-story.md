@@ -1,13 +1,13 @@
 ---
-title: ISV Extensibility for Microsoft Copilot
-description: "This document explores the ISV extensibility story for Microsoft Copilot, and how ISVs can leverage the different aspects of the platform to create innovative and engaging experiences for users."
+title: Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs
+description: "This article explores options for ISVs to extend Microsoft Copilots and how ISVs can leverage the different aspects of the Microsoft Cloud to create innovative and engaging AI experiences for users."
 author: willstan
-ms.author: eringuthrie
+ms.author: willstan
 ms.service: cloud-for-industries
 ms.topic: overview 
 ms.date: 22/03/2024
 
-#customer intent: As a developer, I want to understand how ISVs can leverage Microsoft Copilot to create value-added solutions for their customers.  
+#customer intent: As a developer, I want to understand how ISVs can leverage Microsoft Cloud to extend or create copilots to create value-added solutions for their end customers.
 
 ---
 
@@ -25,7 +25,7 @@ For ISVs, developing a copilot can enrich applications with AI capabilities and 
 
 While 'copilot' refers to the general concept of a generative AI assistant, 'Copilot' refers to specific Microsoft products, such as Microsoft 365 Copilot or Dynamics 365 Copilot that ISVs can integrate with.
 
-This guide serves as a compass, helping ISVs navigate the broad field of generative AI experiences, powered by the Microsoft Cloud. The aim is to provide scenario-led guidance that can help ISVs identify the right patterns and technologies for their specific needs. While we provide an overview of each pattern, we encourage readers to delve into the detailed content for each technology or pattern, which we link out to, for a deeper understanding of what is possible. In this guide, we'll explore the three main approaches that ISVs can use to craft Generative AI experiences on Microsoft Cloud: 
+This guide serves as a compass, helping ISVs navigate the broad field of generative AI experiences, powered by the Microsoft Cloud. The aim is to provide scenario-led guidance that can help ISVs identify the right patterns and technologies for their specific needs. While we provide an overview of each pattern, we encourage readers to delve into the detailed content for each technology or pattern, which we link out to, for a deeper understanding of what is possible. In this guide, we'll explore the three main approaches that ISVs can use to craft Generative AI experiences on Microsoft Cloud:
 
 1. **Surface your data and services into Microsoft’s Copilots:**  This approach is designed for ISVs wishing to integrate their data and services into Microsoft's Copilots. The focus here is on leveraging plugins and Graph connectors to enhance user experiences.
 
@@ -92,7 +92,7 @@ ISVs can create plugins using a variety of tools, including Teams Message Extens
 
 - Plugins are a way to surface ISV services and apps on Microsoft Copilots allowing end users interact with third-party apps and services from M365 client apps.
 - ISVs can create plugins using tools like Teams Message Extensions and Copilot Studio plugins.
-- Plugins can increase your solution's visibility and discoverability through Partner Center 
+- Plugins can increase your solution's visibility and discoverability through Partner Center
 
 ### Pattern B: Use Graph Connecters to bring your data to Copilot experiences
 
@@ -109,12 +109,12 @@ Graph connectors can also enrich the data with AI-powered capabilities, such as 
 **ISV scenarios:**
 
 - ISVs whose customers perform work in M365 and want to enable end-users to draw insights from ISV data sources combined with user centric Microsoft Graph data.
-- Users can retrieve, summarize, and reason over data from ISV applications, combined with other M365 graph data, e.g. emails, word documents etc. 
+- Users can retrieve, summarize, and reason over data from ISV applications, combined with other M365 graph data, e.g. emails, word documents etc.
 - Communications Director needs to find and redraft PR emails in Outlook that have been enriched with content sourced from an ISV graphics design application
 
 **Partner advantage:**
 
-- Meet users where they work. A vast user base use M365 client applications and now can access Your own data and service in one unified experience. 
+- Meet users where they work. A vast user base use M365 client applications and now can access Your own data and service in one unified experience.
 - Enriched insights by combining ISV data with Microsoft Graph data.
 - Universal integration with M365 apps, as well as Microsoft Search, Context IQ and Viva, with one connector.
 - Expanded channels to showcase ISV data, potentially increasing user base
@@ -291,7 +291,7 @@ Prototyping is easy in Azure AI Studio via its Playground. A typical journey for
 - Once the experiment is producing attractive results, it can be prompted from the playground to Prompt Flow as a versioned and customized flow.
 - Now a versioned artefact in the AI Project, the wider team can contribute where the flow is accessible via Azure AI Studio UI and via code-only. At this point multiple branches of logic to differing LLMs can be tested and evaluated.  
 - Batch evaluations are run to measure efficacy, safety, accuracy and other [metrics](/azure/ai-studio/how-to/evaluate-generative-ai-app?pivots=ai-studio). Evaluation is super helpful not only to assess the quality of changes you are doing, but also to test various paths of your flow, evaluate new set of models for your solution or check out the quality after updating your RAG store.
-- The flow now can be deployed as an endpoint, which can be scaled and becomes the backend, the service of your copilot which can consumed in various way, through different surfaces. You can simply deploy it and host it in Azure. 
+- The flow now can be deployed as an endpoint, which can be scaled and becomes the backend, the service of your copilot which can consumed in various way, through different surfaces. You can simply deploy it and host it in Azure.
 Once you have your copilot service - or backend - connecting it to one or many UI or conversation surfaces can be achieved in multiple ways, including the patterns above in this article. You can consume the API directly in your code, connect your copilot to Microsoft Teams via Copilot Studio or as a standalone bot app, or even expose your copilot as a plugin to other copilots including Microsoft Copilots such as M365 Copilot.
 
 **ISV Scenarios:**
@@ -379,18 +379,17 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 
 We’ve started with scenarios and bought you to one or more pattern of interest, which we’ve collected into one of three Approaches. Whilst each pattern has some variance, there are some common features for each Approach which we are summarising below.
 
-|Column1  |Column2  |Column3  |Column4  |
+|  | Approach 1: Surface your data and services into Microsoft’s Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences  |
 |---------|---------|---------|---------|
-|Row1     |         |         |         |
-|Row2     |         |         |         |
-|Row3     |         |         |         |
-|Row4     |         |         |         |
-|Row5     |         |         |         |
-|Row6     |         |         |         |
-|Row7     |         |         |         |
-|Row8     |         |         |         |
-|Row9     |         |         |         |
-|Row10     |         |         |         |
+|**Development effort**     |  Low (No/low code) |   Medium (Minimal code)            | High (Pro code)        |
+|**Data sources**    |   Microsoft Graph (Microsoft/M365 or 3rd party via connectors)      |    Various. Power Platform connectors, Microsoft Graph, Your APIs.     |   Can span multiple data sources, service, and apps inside or outside of Microsoft tenant     |
+|**User Interface or conversational surface** |  Provided by Copilot being extended, e.g. Teams, M365 etc.       | Varies per approach from Provided by Microosft, to bring your own.        |  Bring your own. Multiple surfaces possible with same copilot    |
+|**Influence over copilot’s tone, behaviour, and model parameters**    |  No direct control. Model parameters are responsibility of Copilot being extended.       |  Some influence especially for behaviour and tone e.g. via custom instructions which form part of the metaprompt. With Teams AI Library you can control model parameters.       |   Direct control of model parameters such as temperature, system prompts, max tokens etc.  Custom copilot behaviour.      |
+|**Multi-model capable**     |   No      |   No      |  Yes Multiple calls to diverse models within same flow   |
+|**Model support**     |  Provided by system       |  Choice of OpenAI models       | Choice of any model OpenAI and full [model catalog](/azure/ai-studio/how-to/model-catalog) |
+|**Responsible AI**    |    Provided by system     |   Either provided by system or leverageable options in each pattern      |  ISV responsibility with platform options to leverage in each pattern.       |
+|**Support for chat history**     |  Provided by system       |  Either provided by system or leverageable options in each pattern       |  ISV responsibility with platform options to leverage in each pattern.       |
+|**Example scenarios**     |  Users in **Microsoft Copilots** can perform actions on, or gain insights from ISV data and services.       |   Introduce an GenAI assistant in **existing ISV application** surface to reason over customer or ISV data. Present your own copilot or chatbot in an existing Microsoft surface, such as Teams, with a **separate identity** and experience to Microsoft Copilots.      |  Your customers and users interact with a **fully customised copilot to your brand and behaviour**, which can reason over multiple data sets and connected systems from a multiple choice of UI or conversational surfaces.       |
 
 These approaches are intentionally numbered in order of increasing possibilities to customize, which understandably requires an ISV to pick up more responsibility via the control gained and increases the overall development effort.
 
