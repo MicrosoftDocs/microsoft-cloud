@@ -37,17 +37,33 @@ This guide serves as a compass, helping ISVs navigate the broad field of generat
 
 Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience may need design, science, and engineering.
 
+## Scenarios
+
 To help you with the first stage, which **approach**, we’ve broken this down into **patterns** based on **scenarios** in the table below to help you navigate the most appropriate path for your scenario and requirements.
 
-|Approach  | Scenario  | Scenario  | Pattern  |
-|---------|---------|---------|---------|
-|1: Extend existing Microsoft Copilots with your apps and data     |         |         |         |
-|Row2     |         |         |         |
-|Row3     |         |         |         |
-|Row4     |         |         |         |
-|Row5     |         |         |         |
-|Row6     |         |         |         |
-|Row7     |         |         |         |
+**Approach 1: Surface your data and services into Microsoft’s Copilots:**
+
+- I am an ISV where **my end users perform work in Microsoft apps such as Teams, Word, Outlook**, and they need to...
+  - ...access information using natural language interfaces and I have an existing service I want to make available via these M365 apps. - [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).
+  - ...draw insights from our ISV data sources combined with user centric Microsoft Graph data as well as their organization’s line of business data. - [Use Graph connectors to make ISV data available for Copilot experiences.](#pattern-b-use-graph-connecters-to-bring-your-data-to-copilot-experiences)
+
+**Approach 2: Create copilots anywhere, with minimal coding and optional Microsoft data integration:**
+
+- I am an ISV where **my end users work in my existing applications and UI**, who want us to...
+  - ...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot. - [Leverage Microsoft Graph API in your copilots](#pattern-d-leverage-microsoft-graph-api-in-your-copilots)
+  - ...provide a conversation experience within my existing application, which can answer questions as well as turn conversations into actions. - [Create your own AI Assistants with Azure](#pattern-e-bring-a-copilot-experience-to-your-apps-with-azure-openai-assistants)
+- I am an ISV who’s envisioned Copilot experience will be in **Microsoft Teams** and includes requirements to...
+  - ...create smart Teams bots that integrate to GenAI, run bots in Teams and have context-aware conversations or leverage Teams chat experience and I as an ISV focus on complex business logic. - [Use the Teams AI Library to Build Your Own copilot](#pattern-f-use-the-teams-ai-library-to-build-your-own-copilot)
+- I am an ISV where my end users work anywhere...
+  - ...and I want to enable them to create their own copilot experiences using our data and services. - [Develop Power Platform Connectors to enable customer-driven copilots in Copilot Studio](#pattern-c-develop-power-platform-connectors-to-enable-customer-driven-copilots-in-copilot-studio)
+
+**Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences:**
+
+- I am an ISV seeking to develop cutting-edge interoperable AI experiences that...
+  - ...require specialized handling of intricate, multimodal data, which may include fine-tuning AI models to meet specific accuracy needs.
+  - ...leverage ISV's custom AI models and services for tailored solutions
+  - ...provide complete control over the conversational experience, including system prompts, temperature, tone, and custom safety requirements.
+- Build new interoperable AI experiences or copilots leveraging your existing APIs using [Azure AI Studio](#pattern-g-build-your-own-copilot-with-azure-ai-studio) or [Semantic Kernel](#pattern-h-build-your-own-copilot-with-semantic-kernel) for orchestration.
 
 The Microsoft Copilot stack comprises three distinct tiers: the back end (with the data sitting in respective repositories), an AI orchestration tier in the middle, and the front end (UI experience of your copilot). Within each tier, there are recommended layers that should be considered when building a copilot.
 
