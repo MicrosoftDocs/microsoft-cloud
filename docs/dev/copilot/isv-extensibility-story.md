@@ -33,7 +33,7 @@ This guide serves as a compass, helping ISVs navigate the broad field of generat
 
 1. **Full Control: Build Your Own (BYO) end-to-end AI experiences:** This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
 
-:::image type="content" source="media/isv-genai-approaches.png" alt-text="An infographic titled 'Copilot extensibility ISV approaches' with three main categories: Extend Copilot, Create copilots, and Full control, each with their respective methods like creating plugins, using Microsoft Graph APIs, and building with Azure AI Studio.":::
+:::image type="content" source="media/isv-genai-approaches.png" alt-text="An infographic titled 'Copilot extensibility ISV approaches' with three main categories: Extend Copilot, Create copilots, and Full control, each with their respective methods like creating plugins, using Microsoft Graph APIs, and building with Azure AI Studio." border="false":::
 
 Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience might need design, science, and engineering.
 
@@ -67,7 +67,7 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 
 The Microsoft Copilot stack comprises three distinct tiers: the back end (with the data sitting in respective repositories), an AI orchestration tier in the middle, and the front end (UI experience of your copilot). Within each tier, there are recommended layers that should be considered when building a copilot.
 
-:::image type="content" source="media/isv-copilot-stack.png" alt-text="A layered 'Copilot stack' diagram illustrating components from Microsoft Cloud to AI safety & security, including AI infrastructure, toolchain, data, orchestration, Microsoft Copilot, and Copilot Studio.":::
+:::image type="content" source="media/isv-copilot-stack.png" alt-text="A layered 'Copilot stack' diagram illustrating components from Microsoft Cloud to AI safety & security, including AI infrastructure, toolchain, data, orchestration, Microsoft Copilot, and Copilot Studio." border="false":::
 
 As ISVs move from Approach 1 to Approach 3, they engage more deeply with each tier, assuming greater development responsibilities. For example, creating a plugin under Approach 1 means Microsoft handles AI orchestration, including data integration and Responsible AI. Conversely, developing a custom copilot might require full control over the user experience, orchestration layer, data management, and Responsible AI.
 While GenAI opens a wide array of possibilities and scenarios, it's crucial to apply the right tool for the right job. In many cases, combining GenAI with traditional machine learning algorithms, conventional code, or business intelligence solutions might yield optimal results. It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
@@ -84,7 +84,7 @@ Plugins are extensions that augment the capabilities of an existing Copilot, all
 
 ISVs can create plugins using various tools, including Teams Message Extensions and Power Platform plugins through Copilot Studio. New plugins can be published to Microsoft’s Copilot ecosystem via Partner Center, where IT admins can approve them for use by end users.
 
-:::image type="content" source="media/isv-genai-pattern-plugins-a.png" alt-text="A flowchart showing 'Copilot' at the center receiving data from 'Microsoft Graph data' and interacting with an 'ISV app' through 'Plugins,' which also connects to an 'ISV data source.'":::
+:::image type="content" source="media/isv-genai-pattern-plugins-a.png" alt-text="A flowchart showing 'Copilot' at the center receiving data from 'Microsoft Graph data' and interacting with an 'ISV app' through 'Plugins,' which also connects to an 'ISV data source.'" border="false":::
 
 **ISV scenarios:**
 
@@ -119,7 +119,7 @@ ISVs can build Graph connectors using the Microsoft Graph Connectors API, which 
 
 Graph connectors can also enrich the data with AI-powered capabilities, such as natural language processing, entity extraction, and image analysis. By using Graph connectors, ISVs can extend Microsoft Copilot with their own data, enhancing the user experience and enabling more personalized and secure interactions.
 
-:::image type="content" source="media/isv-genai-pattern-graph-connectors-b.png" alt-text="A diagram showing 'Copilot' connected to 'Microsoft Graph data' and an 'ISV app,' which is linked to an 'ISV data source' through a 'Graph connector.'":::
+:::image type="content" source="media/isv-genai-pattern-graph-connectors-b.png" alt-text="A diagram showing 'Copilot' connected to 'Microsoft Graph data' and an 'ISV app,' which is linked to an 'ISV data source' through a 'Graph connector.'" border="false":::
 
 [Hundreds of Graph connectors already exist](https://www.microsoft.com/microsoft-search/connectors/?category=&query=). For example, the Jira Cloud graph connector can elevate Jira objects to the same level as Microsoft 365 Graph data, allowing comprehensive reasoning and universal integration, leading to enhanced and richer insights. The connector allows end users to search for Jira objects from Microsoft 365 Copilot using natural language interface.
 
@@ -157,7 +157,7 @@ Copilot Studio enables customers to create low-code AI apps that can respond to 
 
 These AI apps can be surfaced to end users across various platforms, including websites, mobile apps, Microsoft Teams, or any channel supported by the Azure Bot Framework.
 
-:::image type="content" source="media/isv-genai-pattern-power-platform-connectors-c.png" alt-text="A flowchart shows 'Copilot Studio plugin' linking to 'Microsoft Graph data,' 'Other data sources,' and 'Power Platform connectors,' which connect to an 'ISV app' via 'Plugins.'":::
+:::image type="content" source="media/isv-genai-pattern-power-platform-connectors-c.png" alt-text="A flowchart shows 'Copilot Studio plugin' linking to 'Microsoft Graph data,' 'Other data sources,' and 'Power Platform connectors,' which connect to an 'ISV app' via 'Plugins.'" border="false":::
 
 **Example scenarios:**
 
@@ -189,7 +189,7 @@ These AI apps can be surfaced to end users across various platforms, including w
 
 The Microsoft Graph API offers a powerful endpoint to access user-centric data from Microsoft 365 applications, which includes Calendar, Bookings, Outlook, Teams, OneDrive, SharePoint, and [more](/graph/overview-major-services). With this API, you can enrich your apps with data from Microsoft 365, enabling users to derive richer insights and analytics.
 
-:::image type="content" source="media/isv-genai-pattern-graph-api-d.png" alt-text="A flowchart depicting 'Copilot' connected to 'Microsoft Graph data,' which integrates with an 'ISV app' through 'Graph API,' also linked to an 'ISV data source.'":::
+:::image type="content" source="media/isv-genai-pattern-graph-api-d.png" alt-text="A flowchart depicting 'Copilot' connected to 'Microsoft Graph data,' which integrates with an 'ISV app' through 'Graph API,' also linked to an 'ISV data source.'" border="false":::
 
 **ISV scenarios:**
 
@@ -244,7 +244,7 @@ While you don’t have direct access to the system prompt and temperature, you c
 
 ISVs can also use the [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to add natural language capability in their existing Teams chatbot. This library allows ISVs to focus on their business logic, while using the Teams scaffolding to handle conversational interactions. ISVs can surface their chat bots in Teams, offering users a more natural and intuitive way to interact with their apps.
 
-:::image type="content" source="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="'Microsoft Teams AI library pattern' flowchart with 'Prompt engineering,' 'Teams AI Library,' 'ISV application,' and 'Azure OpenAI Service' in a circular connection.":::
+:::image type="content" source="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="'Microsoft Teams AI library pattern' flowchart with 'Prompt engineering,' 'Teams AI Library,' 'ISV application,' and 'Azure OpenAI Service' in a circular connection." border="false":::
 
 **ISV Scenario:**
 
@@ -280,7 +280,7 @@ If you want to power your bot in Teams with LLMs, Teams AI Library is the way fo
 
 ISVs can use the Microsoft Copilot Stack to build entirely new AI experiences, as copilots or intelligent assistants. An ISV building in this middle part of the stack takes responsibility for AI Orchestration - where Microsoft offer various options, all of which apply Microsoft’s foundational models, AI toolchain and AI infrastructure.
 
-:::image type="content" source="media/isv-copilot-stack-orchestration-expanded.png" alt-text="A diagram of 'Copilot stack orchestration' showing layers for 'APPS & COPILOT FRONTEND,' 'AI orchestration,' 'Semantic Kernel,' 'Machine Learning,' and 'FOUNDATION MODELS & DATA' connected to 'Microsoft Cloud.'":::
+:::image type="content" source="media/isv-copilot-stack-orchestration-expanded.png" alt-text="A diagram of 'Copilot stack orchestration' showing layers for 'APPS & COPILOT FRONTEND,' 'AI orchestration,' 'Semantic Kernel,' 'Machine Learning,' and 'FOUNDATION MODELS & DATA' connected to 'Microsoft Cloud.'" border="false":::
 
 [Semantic Kernel](https://github.com/microsoft/semantic-kernel) powers much of Microsoft's AI Orchestration layer and our existing Copilots. It's available as [an SDK you can develop against directly](#pattern-h-build-your-own-copilot-with-semantic-kernel).
 
