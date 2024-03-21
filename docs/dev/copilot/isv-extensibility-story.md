@@ -332,13 +332,18 @@ If you want to power your bot in Teams with LLMs, Teams AI Library is the way fo
 
 ## Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences
 
-ISVs can use the Microsoft Copilot Stack to build entirely new AI experiences, as copilots or intelligent assistants. An ISV building in this middle part of the stack takes responsibility for AI Orchestration - where Microsoft offer various options, all of which apply Microsoft’s foundational models, AI toolchain and AI infrastructure.
+:::row:::
+   :::column span="2":::
+      ISVs can use the Microsoft Copilot Stack to build entirely new AI experiences, as copilots or intelligent assistants. An ISV building in this middle part of the stack takes responsibility for AI Orchestration - where Microsoft offer various options, all of which apply Microsoft’s foundational models, AI toolchain and AI infrastructure.
 
-:::image type="complex" source="media/isv-copilot-stack-orchestration-expanded.png" alt-text="Diagram depicting the Microsoft CopilotSstack with AI orchestration expanded between frontend apps and foundational models, all on the Microsoft Cloud." border="false":::
-A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled “Apps and Copilot Frontend” and is connected by a bidirectional arrow to a larger box labeled “AI orchestration”, which is filled with stack components. Inside Copilot Studio, Azure AI Studio, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The “AI orchestration” stack is connected to another box labeled “foundation models and data.” At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
-:::image-end:::
-
-[Semantic Kernel](https://github.com/microsoft/semantic-kernel) can be leveraged to build the same AI orchestration patterns that powers Microsoft Copilots, in your copilots. It's available as [an SDK you can develop against directly](#pattern-h-build-your-own-copilot-with-semantic-kernel).
+      [Semantic Kernel](https://github.com/microsoft/semantic-kernel) can be leveraged to build the same AI orchestration patterns that powers Microsoft Copilots, in your copilots. It's available as [an SDK you can develop against directly](#pattern-h-build-your-own-copilot-with-semantic-kernel).  
+   :::column-end:::
+   :::column span="":::
+      :::image type="complex" source="media/isv-copilot-stack-orchestration-expanded.png" lightbox="media/isv-copilot-stack-orchestration-expanded.png" alt-text="Diagram depicting the Microsoft CopilotSstack with AI orchestration expanded between frontend apps and foundational models, all on the Microsoft Cloud." border="false":::
+      A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled “Apps and Copilot Frontend” and is connected by a bidirectional arrow to a larger box labeled “AI orchestration”, which is filled with stack components. Inside Copilot Studio, Azure AI Studio, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The “AI orchestration” stack is connected to another box labeled “foundation models and data.” At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
+      :::image-end:::
+   :::column-end:::
+:::row-end:::
 
 With most the investment creating a copilot service in the middle of the stack, ISVs have the freedom to connect this copilot service to various surfaces, including Teams, Microsoft 365 Copilot, Microsoft Copilot, your own application surfaces, websites, chat bots – or all. Essentially, when it comes to integration with an application surface – the top of our stack – every other pattern described here is also an option.
 
