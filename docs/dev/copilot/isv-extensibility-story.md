@@ -82,9 +82,7 @@ For all of these scenarios, you can use either:
    :::column span="2":::
       The Microsoft Copilot stack comprises three distinct tiers: the back end (with the data sitting in respective repositories), an AI orchestration tier in the middle, and the front end (UI experience of your copilot). Within each tier, there are recommended layers that should be considered when building a copilot.
 
-      As ISVs move from Approach 1 to Approach 3, they engage more deeply with each tier, assuming greater development responsibilities. For example, creating a plugin under Approach 1 means Microsoft handles AI orchestration, including data integration and Responsible AI. Conversely, developing a custom copilot might require full control over the user experience, orchestration layer, data management, and Responsible AI.
-      
-      While GenAI opens a wide array of possibilities and scenarios, it's crucial to apply the right tool for the right job. In many cases, combining GenAI with traditional machine learning algorithms, conventional code, or business intelligence solutions might yield optimal results. It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
+      As ISVs move from Approach 1 to Approach 3, they engage more deeply with each tier, assuming greater development responsibilities. For example, creating a plugin under Approach 1 means Microsoft handles AI orchestration, including data integration and Responsible AI. Conversely, developing a custom copilot might require full control over the user experience, orchestration layer, data management, and Responsible AI.    
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-copilot-stack.png" lightbox="media/isv-copilot-stack.png" alt-text="Diagram showing Microsoft Copilot Stack components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
@@ -92,6 +90,8 @@ For all of these scenarios, you can use either:
       :::image-end:::
    :::column-end:::
 :::row-end:::
+
+While GenAI opens a wide array of possibilities and scenarios, it's crucial to apply the right tool for the right job. In many cases, combining GenAI with traditional machine learning algorithms, conventional code, or business intelligence solutions might yield optimal results. It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
 
 ## Approach 1: Surface your data and services into Microsoft’s Copilots
 
