@@ -46,37 +46,75 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 
 **Approach 1: Surface your data and services into Microsoft’s Copilots:**
 
-- **Scenario**: I am an ISV where **my end users perform work in Microsoft apps such as Teams, Word, Outlook**, and they need to...
-  - ...access information using natural language interfaces and I have an existing service I want to make available via these Microsoft 365 apps.
-    - **Pattern A**: [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).
-  - ...draw insights from our ISV data sources combined with user centric Microsoft Graph data and their organization’s line of business data.
-    - **Pattern B**: [Use Graph connectors to make ISV data available for Copilot experiences.](#pattern-b-use-graph-connecters-to-bring-your-data-to-copilot-experiences)
+:::row:::
+   :::column span="":::
+      **Scenario**: I am an ISV where **my end users perform work in Microsoft apps such as Teams, Word, Outlook**, and they need to...
+   :::column-end:::
+   :::column span="2":::
+        |  |   |
+        |---------|---------|
+        |...access information using natural language interfaces and I have an existing service I want to make available via these Microsoft 365 apps.     | **Pattern A**: [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).    |
+        |...draw insights from our ISV data sources combined with user centric Microsoft Graph data and their organization’s line of business data.     | **Pattern B**: [Use Graph connectors to make ISV data available for Copilot experiences.](#pattern-b-use-graph-connecters-to-bring-your-data-to-copilot-experiences)     |
+   :::column-end:::
+:::row-end:::
 
 **Approach 2: Create copilots anywhere, with minimal coding and optional Microsoft data integration:**
 
-- **Scenario**: I am an ISV where my end users work anywhere...
-  - ...and I want to enable them to create their own copilot experiences using our data and services.
-    - **Pattern C**: [Develop Power Platform Connectors to enable customer-driven copilots in Copilot Studio](#pattern-c-develop-power-platform-connectors-to-enable-customer-driven-copilots-in-copilot-studio)
-- **Scenario**: I am an ISV where **my end users work in my existing applications and UI**, who want us to...
-  - ...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot.
-    - **Pattern D**: [Use Microsoft Graph API in your copilots](#pattern-d-leverage-microsoft-graph-api-in-your-copilots)
-  - ...provide a conversation experience within my existing application, which can answer questions and turn conversations into actions.
-    - **Pattern E**: [Create your own AI Assistants with Azure](#pattern-e-bring-a-copilot-experience-to-your-apps-with-azure-openai-assistants)
-- **Scenario**: I am an ISV who’s Copilot experience targets **Microsoft Teams** and includes requirements to...
-  - ...create smart Teams bots that integrate to GenAI, run bots in Teams and have context-aware conversations or use Teams chat experience and I as an ISV focus on complex business logic.
-    - **Pattern F**: [Use the Teams AI Library to Build Your Own copilot](#pattern-f-use-the-teams-ai-library-to-build-your-own-copilot)
+:::row:::
+    :::column:::
+        **Scenario**: I am an ISV where my end users work anywhere...
+    :::column-end:::
+    :::column:::
+        ...and I want to enable them to create their own copilot experiences using our data and services.
+    :::column-end:::
+    :::column:::
+        **Pattern C**: [Develop Power Platform Connectors to enable customer-driven copilots in Copilot Studio](#pattern-c-develop-power-platform-connectors-to-enable-customer-driven-copilots-in-copilot-studio)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        **Scenario**: I am an ISV where **my end users work in my existing applications and UI**, who want us to...
+    :::column-end:::
+    :::column span="2":::
+        |  |   |
+        |---------|---------|
+        |...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot.     | **Pattern D**: [Use Microsoft Graph API in your copilots](#pattern-d-leverage-microsoft-graph-api-in-your-copilots)(#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).    |
+        |...provide a conversation experience within my existing application, which can answer questions and turn conversations into actions.   |**Pattern E**: [Create your own AI Assistants with Azure](#pattern-e-bring-a-copilot-experience-to-your-apps-with-azure-openai-assistants)   |
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        **Scenario**: I am an ISV who’s Copilot experience targets **Microsoft Teams** and includes requirements to...
+    :::column-end:::
+    :::column:::
+        ...create smart Teams bots that integrate to GenAI, run bots in Teams and have context-aware conversations or use Teams chat experience and I as an ISV focus on complex business logic.
+    :::column-end:::
+    :::column:::
+        **Pattern F**: [Use the Teams AI Library to Build Your Own copilot](#pattern-f-use-the-teams-ai-library-to-build-your-own-copilot)
+    :::column-end:::
+:::row-end:::
 
 **Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences:**
 
-- **Scenario**: I am an ISV seeking to develop cutting-edge interoperable AI experiences that...
-  - ...require specialized handling of intricate, multimodal data, which might include fine-tuning AI models to meet specific accuracy needs.
-  - ...use ISV's custom AI models and services for tailored solutions
-  - ...provide complete control over the conversational experience, including system prompts, temperature, tone, and custom safety requirements.
+:::row:::
+    :::column:::
+        **Scenario**: I am an ISV seeking to develop cutting-edge interoperable AI experiences that...
+    :::column-end:::
+    :::column:::
+        ...require specialized handling of intricate, multimodal data, which might include fine-tuning AI models to meet specific accuracy needs.
 
-For all of these scenarios, you can use either:
+        ...use ISV's custom AI models and services for tailored solutions.
 
-- **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Studio](#pattern-g-build-your-own-copilot-with-azure-ai-studio)
-- **Pattern H**: [Build your own copilot with Semantic Kernel](#pattern-h-build-your-own-copilot-with-semantic-kernel)
+        ...provide complete control over the conversational experience, including system prompts, temperature, tone, and custom safety requirements.
+    :::column-end:::
+    :::column:::
+        **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Studio](#pattern-g-build-your-own-copilot-with-azure-ai-studio)
+
+        **Pattern H**: [Build your own copilot with Semantic Kernel](#pattern-h-build-your-own-copilot-with-semantic-kernel)
+    :::column-end:::    
+:::row-end:::
 
 :::row:::
    :::column span="2":::
