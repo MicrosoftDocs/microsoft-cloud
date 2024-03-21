@@ -2,10 +2,10 @@
 title: Creating Generative AI Experiences with the Microsoft Cloud - A Guide for ISVs
 description: "This article explores options for ISVs to extend Microsoft Copilots and how ISVs can leverage the different aspects of the Microsoft Cloud to create innovative and engaging AI experiences for users."
 author: willstan
-ms.author: willstan
+ms.author: willstanley
 ms.service: cloud-for-industries
 ms.topic: overview 
-ms.date: 22/03/2024
+ms.date: 3/22/2024
 
 #customer intent: As a developer, I want to understand how ISVs can leverage Microsoft Cloud to extend or create copilots to create value-added solutions for their end customers.
 
@@ -106,7 +106,7 @@ This approach allows for example, Microsoft 365 Copilot to interact with APIs fr
       Plugins are extensions that augment the capabilities of an existing Copilot, allowing it to interact with ISV apps and services. They can expand a user’s capabilities by enabling the interaction with your APIs, via natural language conversation. For example, a plugin could allow Copilot to retrieve useful information, perform new computations, or safely execute actions on the user's behalf.
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="media/isv-genai-pattern-plugins-a.png" lightbox="media/isv-genai-pattern-plugins-a.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
+      :::image type="complex" source="media/isv-genai-pattern-plugins-a.png" lightbox="media/isv-genai-pattern-plugins-a.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data via plugins." border="false":::
       A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. Microsoft Copilot then has a bi-directional arrow point to and receiving from a plugin component connect to ISV application. The ISV application is connected to an ISV data source.
       :::image-end:::
    :::column-end:::
@@ -232,7 +232,7 @@ These AI apps can be surfaced to end users across various platforms, including w
       The Microsoft Graph API offers a powerful endpoint to access user-centric data from Microsoft 365 applications, which includes Calendar, Bookings, Outlook, Teams, OneDrive, SharePoint, and [more](/graph/overview-major-services). With this API, you can enrich your apps with data from Microsoft 365, enabling users to derive richer insights and analytics.
    :::column-end:::
    :::column span="":::
-      :::image type="complex" source="media/isv-genai-pattern-graph-api-d.png" lightbox="media/isv-genai-pattern-graph-api-d.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
+      :::image type="complex" source="media/isv-genai-pattern-graph-api-d.png" lightbox="media/isv-genai-pattern-graph-api-d.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data via Graph API." border="false":::
       A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. The Microsoft Graph data also has an arrowing connecting it to ISV application, with the arrow symbolizing the Graph API. The ISV application is connected to an ISV data source.
       :::image-end:::
    :::column-end:::
