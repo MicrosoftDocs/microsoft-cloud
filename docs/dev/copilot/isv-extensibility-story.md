@@ -101,13 +101,18 @@ This approach allows for example, Microsoft 365 Copilot to interact with APIs fr
 
 ### Pattern A: Create plugins to enhance an existing Copilot’s functionality
 
-Plugins are extensions that augment the capabilities of an existing Copilot, allowing it to interact with ISV apps and services. They can expand a user’s capabilities by enabling the interaction with your APIs, via natural language conversation. For example, a plugin could allow Copilot to retrieve useful information, perform new computations, or safely execute actions on the user's behalf.
+:::row:::
+   :::column span="":::
+      Plugins are extensions that augment the capabilities of an existing Copilot, allowing it to interact with ISV apps and services. They can expand a user’s capabilities by enabling the interaction with your APIs, via natural language conversation. For example, a plugin could allow Copilot to retrieve useful information, perform new computations, or safely execute actions on the user's behalf.
+   :::column-end:::
+   :::column span="":::
+      :::image type="complex" source="media/isv-genai-pattern-plugins-a.png" lightbox="media/isv-genai-pattern-plugins-a.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
+      A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. Microsoft Copilot then has a bi-directional arrow point to and receiving from a plugin component connect to ISV application. The ISV application is connected to an ISV data source.
+      :::image-end:::
+   :::column-end:::
+:::row-end:::
 
 ISVs can create plugins using various tools, including Teams Message Extensions and Power Platform plugins through Copilot Studio. New plugins can be published to Microsoft’s Copilot ecosystem via Partner Center, where IT admins can approve them for use by end users.
-
-:::image type="complex" source="media/isv-genai-pattern-plugins-a.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
-A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. Microsoft Copilot then has a bi-directional arrow point to and receiving from a plugin component connect to ISV application. The ISV application is connected to an ISV data source.
-:::image-end:::
 
 **ISV scenarios:**
 
@@ -136,13 +141,18 @@ A diagram showing four components of Microsoft Copilot and their connected tissu
 
 ### Pattern B: Use Graph Connecters to bring your data to Copilot experiences
 
-[Graph connectors](/graph/connecting-external-content-connectors-overview) enable ISVs to connect their data to the Microsoft 365 Semantic Index. Their data becomes searchable and actionable for users, directly from Microsoft 365 client apps such as Teams, Outlook, and Word. Microsoft Copilot becomes grounded in ISV data, whether cloud or on-premises, via the Microsoft Graph. Furthermore, ISVs can use [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview), a unified data platform delivered as a SaaS product, to bring their data into the Microsoft Cloud and easily connect it to the Microsoft Graph.
+:::row:::
+   :::column span="":::
+      [Graph connectors](/graph/connecting-external-content-connectors-overview) enable ISVs to connect their data to the Microsoft 365 Semantic Index. Their data becomes searchable and actionable for users, directly from Microsoft 365 client apps such as Teams, Outlook, and Word. Microsoft Copilot becomes grounded in ISV data, whether cloud or on-premises, via the Microsoft Graph. Furthermore, ISVs can use [Microsoft Fabric](/fabric/get-started/microsoft-fabric-overview), a unified data platform delivered as a SaaS product, to bring their data into the Microsoft Cloud and easily connect it to the Microsoft Graph.
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="media/isv-genai-pattern-graph-connectors-b.png" lightbox="media/isv-genai-pattern-graph-connectors-b.png" alt-text="A diagram showing 'Copilot' connected to 'Microsoft Graph data' and an 'ISV app,' which is linked to an 'ISV data source' through a 'Graph connector.'" border="false":::
+   :::column-end:::
+:::row-end:::
 
 ISVs can build Graph connectors using the Microsoft Graph Connectors API, which supports a range of data sources, file systems, web pages, enterprise applications, and more.
 
 Graph connectors can also enrich the data with AI-powered capabilities, such as natural language processing, entity extraction, and image analysis. By using Graph connectors, ISVs can extend Microsoft Copilot with their own data, enhancing the user experience and enabling more personalized and secure interactions.
-
-:::image type="content" source="media/isv-genai-pattern-graph-connectors-b.png" alt-text="A diagram showing 'Copilot' connected to 'Microsoft Graph data' and an 'ISV app,' which is linked to an 'ISV data source' through a 'Graph connector.'" border="false":::
 
 [Hundreds of Graph connectors already exist](https://www.microsoft.com/microsoft-search/connectors/?category=&query=). For example, the Jira Cloud graph connector can elevate Jira objects to the same level as Microsoft 365 Graph data, allowing comprehensive reasoning and universal integration, leading to enhanced and richer insights. The connector allows end users to search for Jira objects from Microsoft 365 Copilot using natural language interface.
 
@@ -176,13 +186,18 @@ ISVs can bring the power of tools and data sitting in Microsoft Graph into their
 
 ### Pattern C: Develop Power Platform Connectors to enable customer-driven copilots in Copilot Studio
 
-Copilot Studio enables customers to create low-code AI apps that can respond to common user queries, using data from their organization and Microsoft and partner data sources. Copilot Studio uses Power Platform Connectors to bring in data from potentially any source, where there are more than 500 connectors today. As an ISV you can create connectors to your data and services, to empower your customers to create their own internal copilots and AI apps, grounded in ISV data.
-
-These AI apps can be surfaced to end users across various platforms, including websites, mobile apps, Microsoft Teams, or any channel supported by the Azure Bot Framework.
-
-:::image type="complex" source="media/isv-genai-pattern-power-platform-connectors-c.png" alt-text="Diagram of Microsoft Copilot Studio plugin integrating with various data sources and ISV applications." border="false":::
+:::row:::
+   :::column span="":::
+      Copilot Studio enables customers to create low-code AI apps that can respond to common user queries, using data from their organization and Microsoft and partner data sources. Copilot Studio uses Power Platform Connectors to bring in data from potentially any source, where there are more than 500 connectors today. As an ISV you can create connectors to your data and services, to empower your customers to create their own internal copilots and AI apps, grounded in ISV data.
+   :::column-end:::
+   :::column span="":::
+      :::image type="complex" source="media/isv-genai-pattern-power-platform-connectors-c.png" lightbox="media/isv-genai-pattern-power-platform-connectors-c.png" alt-text="Diagram of Microsoft Copilot Studio plugin integrating with various data sources and ISV applications." border="false":::
 A diagram showing components of the Microsoft Copilot Studio plugin. Three sources connect to the Copilot Studio plugin, including Microsoft Graph data, Power Platform connectors, and other data sources. The Copilot Studio plugin then connects to ISV applications via a plugin.
 :::image-end:::
+   :::column-end:::
+:::row-end:::
+
+These AI apps can be surfaced to end users across various platforms, including websites, mobile apps, Microsoft Teams, or any channel supported by the Azure Bot Framework.
 
 **Example scenarios:**
 
@@ -212,11 +227,16 @@ A diagram showing components of the Microsoft Copilot Studio plugin. Three sourc
 
 ### Pattern D: Leverage Microsoft Graph API in your copilots
 
-The Microsoft Graph API offers a powerful endpoint to access user-centric data from Microsoft 365 applications, which includes Calendar, Bookings, Outlook, Teams, OneDrive, SharePoint, and [more](/graph/overview-major-services). With this API, you can enrich your apps with data from Microsoft 365, enabling users to derive richer insights and analytics.
-
-:::image type="complex" source="media/isv-genai-pattern-graph-api-d.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
-A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. The Microsoft Graph data also has an arrowing connecting it to ISV application, with the arrow symbolizing the Graph API. The ISV application is connected to an ISV data source.
-:::image-end:::
+:::row:::
+   :::column span="":::
+      The Microsoft Graph API offers a powerful endpoint to access user-centric data from Microsoft 365 applications, which includes Calendar, Bookings, Outlook, Teams, OneDrive, SharePoint, and [more](/graph/overview-major-services). With this API, you can enrich your apps with data from Microsoft 365, enabling users to derive richer insights and analytics.
+   :::column-end:::
+   :::column span="":::
+      :::image type="complex" source="media/isv-genai-pattern-graph-api-d.png" lightbox="media/isv-genai-pattern-graph-api-d.png" alt-text="Diagram illustrating the interconnected components of Microsoft Copilot with ISV applications and data." border="false":::
+      A diagram showing four components of Microsoft Copilot and their connected tissue. First, Microsoft Graph data points to Microsoft Copilot. The Microsoft Graph data also has an arrowing connecting it to ISV application, with the arrow symbolizing the Graph API. The ISV application is connected to an ISV data source.
+      :::image-end:::
+   :::column-end:::
+:::row-end:::
 
 **ISV scenarios:**
 
@@ -269,11 +289,16 @@ While you don’t have direct access to the system prompt and temperature, you c
 
 ### Pattern F: Use the Teams AI Library to build your own copilot
 
-ISVs can also use the [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to add natural language capability in their existing Teams chatbot. This library allows ISVs to focus on their business logic, while using the Teams scaffolding to handle conversational interactions. ISVs can surface their chat bots in Teams, offering users a more natural and intuitive way to interact with their apps.
-
-:::image type="complex" source="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="Flowchart of the Microsoft Teams AI library pattern with prompt engineering and data exchange with ISV apps and Azure OpenAI Service." border="false":::
-A diagram showing the flow of Microsoft Teams’ AI library pattern. Frist, prompt engineering flows into the Teams AI Library. Data then flows out of the Teams AI Library into two sources: ISV application and Azure OpenAI Service. These two locations flow data bidirectionally.
-:::image-end:::
+:::row:::
+   :::column span="":::
+      ISVs can also use the [Teams AI Library](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview) to add natural language capability in their existing Teams chatbot. This library allows ISVs to focus on their business logic, while using the Teams scaffolding to handle conversational interactions. ISVs can surface their chat bots in Teams, offering users a more natural and intuitive way to interact with their apps.
+   :::column-end:::
+   :::column span="":::
+      :::image type="complex" source="media/isv-genai-pattern-teams-ai-library-f.png" lightbox="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="Flowchart of the Microsoft Teams AI library pattern with prompt engineering and data exchange with ISV apps and Azure OpenAI Service." border="false":::
+      A diagram showing the flow of Microsoft Teams’ AI library pattern. Frist, prompt engineering flows into the Teams AI Library. Data then flows out of the Teams AI Library into two sources: ISV application and Azure OpenAI Service. These two locations flow data bidirectionally.
+      :::image-end:::
+   :::column-end:::
+:::row-end:::
 
 **ISV Scenario:**
 
