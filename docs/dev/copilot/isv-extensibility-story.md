@@ -35,7 +35,7 @@ This guide serves as a compass, helping ISVs navigate the broad field of generat
 1. **Full Control: Build Your Own (BYO) end-to-end AI experiences:** This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
 
 :::image type="complex" source="media/isv-genai-approaches.png" alt-text="Diagram showing Microsoft Copilot components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
-A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft’s Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allow you to build your own end-to-end AI experiences. Each of the three options has more details which are outlined in the following text.
+A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft’s Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allows you to build your own end-to-end AI experiences. Each of the three options has more details that are outlined in the following text.
 :::image-end:::
 
 Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience might need design, science, and engineering.
