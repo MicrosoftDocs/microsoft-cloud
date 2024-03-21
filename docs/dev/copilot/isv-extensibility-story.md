@@ -167,7 +167,7 @@ Graph connectors can also enrich the data with AI-powered capabilities, such as 
 - Meet users where they work. A vast user base uses Microsoft 365 client applications and now can access Your own data and service in one unified experience.
 - Enriched insights by combining ISV data with Microsoft Graph data.
 - Universal integration with Microsoft 365 apps, and Microsoft Search, Context IQ and Viva, with one connector.
-- Expanded channels to showcase ISV data, potentially increasing user base
+- Expanded channels to showcase ISV data, potentially increasing user base.
 
 **Where to start:**
 
