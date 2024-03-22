@@ -70,7 +70,7 @@ This approach is for ISVs aiming to enrich their apps with Microsoft's data and 
 
 :::row:::
     :::column:::
-        **Scenario**: I am an ISV where my end users work anywhere...
+        **Scenario**: I'm an ISV where my end users work anywhere...
     :::column-end:::
     :::column:::
         ...and I want to enable them to create their own copilot experiences using our data and services.
@@ -81,7 +81,7 @@ This approach is for ISVs aiming to enrich their apps with Microsoft's data and 
 :::row-end:::
 :::row:::
     :::column:::
-        **Scenario**: I am an ISV where **my end users work in my existing applications and UI**, who want us to...
+        **Scenario**: I'm an ISV where **my end users work in my existing applications and UI**, who want us to...
     :::column-end:::
     :::column:::
         ...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot.
@@ -102,7 +102,7 @@ This approach is for ISVs aiming to enrich their apps with Microsoft's data and 
 :::row-end:::
 :::row:::
     :::column:::
-        **Scenario**: I am an ISV who’s Copilot experience targets **Microsoft Teams** and includes requirements to...
+        **Scenario**: I'm an ISV who’s Copilot experience targets **Microsoft Teams** and includes requirements to...
     :::column-end:::
     :::column:::
         ...create smart Teams bots that integrate to GenAI, run bots in Teams and have context-aware conversations or use Teams chat experience and I as an ISV focus on complex business logic.
@@ -118,7 +118,7 @@ This approach is geared towards ISVs seeking to craft entirely new AI experience
 
 :::row:::
     :::column:::
-        **Scenario**: I am an ISV seeking to develop cutting-edge interoperable AI experiences that...
+        **Scenario**: I'm an ISV seeking to develop cutting-edge interoperable AI experiences that...
     :::column-end:::
     :::column:::
         ...require specialized handling of intricate, multimodal data, which might include fine-tuning AI models to meet specific accuracy needs.
@@ -145,7 +145,7 @@ This approach is geared towards ISVs seeking to craft entirely new AI experience
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-copilot-stack.png" lightbox="media/isv-copilot-stack.png" alt-text="Diagram showing Microsoft Copilot Stack components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
-        A square diagram showing the components of Microsoft Copilot Stack. Enveloping the blocks is the label “AI safety and security”. Within the box there are two sections separated by a connector. The top box stacks Copilot Studio, Microsoft Copilot, your copilots, and Microsoft applications together, then connects to the middle connector labeled “AI orchestration”. The bottom box stacks your data, foundation models and AI toolchain, and AI infrastructure, with arrows pointing back to the middle connector labeled “AI orchestration”. At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
+        A square diagram showing the components of Microsoft Copilot Stack. Enveloping the blocks is the label "AI safety and security". Within the box, there are two sections separated by a connector. The top box stacks Copilot Studio, Microsoft Copilot, your copilots, and Microsoft applications together, then connects to the middle connector labeled "AI orchestration". The bottom box stacks your data, foundation models and AI toolchain, and AI infrastructure, with arrows pointing back to the middle connector labeled "AI orchestration". At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
       :::image-end:::
    :::column-end:::
 :::row-end:::
@@ -155,7 +155,7 @@ This approach is geared towards ISVs seeking to craft entirely new AI experience
 
 Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience might need design, science, and engineering.  
 
-It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
+It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface can't be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
 
 ## Approach 1: Surface your data and services into Microsoft’s Copilots
 
@@ -389,8 +389,8 @@ While you don’t have direct access to the system prompt and temperature, you c
 **Key Takeaways:**
 
 - Team AI library provides an easy way to light up an ISV developed bot in Teams with the power of LLMs.
-- It does not require the integration with current Microsoft Copilot capabilities, can provide a task-oriented experience.
-- It offers a lot of possibilities from engineering perspective but also ready to use capabilities Out Of the Box, making the whole development process easier.
+- It doesn't require the integration with current Microsoft Copilot capabilities, can provide a task-oriented experience.
+- It offers many possibilities from an engineering perspective but also ready to use capabilities Out Of the Box, making the whole development process easier.
 
 If you want to power your bot in Teams with LLMs, Teams AI Library is the way for you to go.
 
@@ -404,7 +404,7 @@ If you want to power your bot in Teams with LLMs, Teams AI Library is the way fo
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-copilot-stack-orchestration-expanded.png" lightbox="media/isv-copilot-stack-orchestration-expanded.png" alt-text="Diagram depicting the Microsoft CopilotSstack with AI orchestration expanded between frontend apps and foundational models, all on the Microsoft Cloud." border="false":::
-      A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled “Apps and Copilot Frontend” and is connected by a bidirectional arrow to a larger box labeled “AI orchestration”, which is filled with stack components. Inside Copilot Studio, Azure AI Studio, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The “AI orchestration” stack is connected to another box labeled “foundation models and data.” At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
+      A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled "Apps and Copilot Frontend" and is connected by a bidirectional arrow to a larger box labeled "AI orchestration", which is filled with stack components. Inside Copilot Studio, Azure AI Studio, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The "AI orchestration" stack is connected to another box labeled "foundation models and data." At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
       :::image-end:::
    :::column-end:::
 :::row-end:::
@@ -415,7 +415,7 @@ With most the investment creating a copilot service in the middle of the stack, 
 
 [Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is an all-in-one platform for ISVs to build custom, intelligent assistants, or copilots. It combines capabilities from various Azure AI services, providing a unified workspace for developing and deploying generative AI applications. It's a collaborative platform where data scientists, developers, and other stakeholders can converge and work together.
 
-With Azure AI Studio, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether using existing pre-trained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tuning models on your data, or training your own custom AI models, Azure AI Studio accelerates the development of AI experiences that handle complex multimodal data.
+With Azure AI Studio, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether using existing pretrained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tuning models on your data, or training your own custom AI models, Azure AI Studio accelerates the development of AI experiences that handle complex multimodal data.
 
 A standout feature of Azure AI Studio is its diverse range of models, catering to various industries and use cases. It allows ISVs to combine different models within a single solution to meet their unique requirements.
 
@@ -464,6 +464,7 @@ Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service
 - Creating a custom copilot with Azure AI Studio can enhance the user experience and provide tailored solutions for specific use cases.
 - AI Studio delivers you a copilot service (or backend), surfaced as a single scaled endpoint
 - An ISV then has options to connect the service to an app, front end, or conversation surface of their choice, including any of the previous patterns above.
+- Remember, this pattern can be combined with others based on your specific needs. For instance, you might want to pair this pattern with Pattern A and plug-in to a Microsoft Copilot, or Pattern F to surface your own copilot bot in Teams.
 
 ### Pattern H: Build your own copilot with Semantic Kernel
 
@@ -478,7 +479,7 @@ Copilots, a special type of agent, work alongside users. Unlike fully automated 
 
 [Planners](/semantic-kernel/ai-orchestration/planner): Agents use planners to generate plans for completing tasks. For instance, a copilot helping a user write an email would create a plan with steps like gathering recipient details and composing the email.
 
-The SDK comes with VS Code extension, sample [Chat Copilot](https://github.com/microsoft/chat-copilot) app but also with starters to offer you are scaffolding to bring your ideas to live.
+The SDK comes with VS Code extension, sample [Chat Copilot](https://github.com/microsoft/chat-copilot) app but also with starters to offer you a scaffolding to bring your ideas to live.
 
 One you decided to start working with Semantic Kernel, we suggest defining couple of capabilities before starting to code:
 
@@ -486,11 +487,11 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 - Create plugins for common tasks your copilot will assist with.
 - Use planners to generate plans for copilot actions.
 - Plan to test thoroughly to ensure a refined user experience.
-- Make sure you are able to gather feedback from your users and implement this in the behavior of the agent or copilot.
+- Make sure you're able to gather feedback from your users and implement this in the behavior of the agent or copilot.
 
 **ISV Scenarios:**
 
-- You are building a copilot that is a part of your own application (customer development tool or HR system), and you want people to stay in the realm of the same UI.
+- You're building a copilot that is a part of your own application (customer development tool or HR system), and you want people to stay in the realm of the same UI.
 - You need a full control on the orchestration engine, RAG implementation, model choices and model parameters.
 - With Your copilot service, you want to allow your customers to build extension on top of your solution through plugins.
 - Your solution utilizes canvases and other media than just text.
@@ -512,6 +513,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 - Semantic Kernel is an opinionated open-source framework helping developers to build GenAI capabilities into their apps easier
 - It’s being maintained and developed by Microsoft and used by first party teams to build Microsoft Copilot solutions.
 - With set of samples, it helps you to start easily your GenAI journey inside your own application stack.
+- Remember, this pattern can be combined with others based on your specific needs. For instance, you might want to pair this pattern with Pattern A and plug-in to a Microsoft Copilot, or Pattern F to surface your own copilot bot in Teams.
 
 ## Conclusion
 
@@ -520,7 +522,7 @@ We’ve started with scenarios and bought you to one or more patterns of interes
 |  | Approach 1: Surface your data and services into Microsoft’s Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences  |
 |---------|---------|---------|---------|
 |**Development effort**     |  Low (No/low code) |   Medium (Minimal code)            | High (Pro code)        |
-|**Data sources**    |   Microsoft Graph (Microsoft/M365 or third party via connectors)      |    Various. Power Platform connectors, Microsoft Graph, Your APIs.     |   Can span multiple data sources, service, and apps inside or outside of Microsoft tenant     |
+|**Data sources**    |   Microsoft Graph (Microsoft/M365 or non-Microsoft via connectors)      |    Various. Power Platform connectors, Microsoft Graph, Your APIs.     |   Can span multiple data sources, service, and apps inside or outside of Microsoft tenant     |
 |**User Interface or conversational surface** |  Provided by Copilot being extended, for example, Teams, Microsoft 365 etc.       | Varies per approach from Provided by Microsoft, to bring your own.        |  Bring your own. Multiple surfaces possible with same copilot    |
 |**Influence over copilot’s tone, behavior, and model parameters**    |  No direct control. Model parameters are responsibility of Copilot being extended.       |  Some influence especially for behavior and tone, via custom instructions that form part of the metaprompt. With Teams AI Library, you can control model parameters.       |   Direct control of model parameters such as temperature, system prompts, max tokens etc.  Custom copilot behavior.      |
 |**Multi-model capable**     |   No      |   No      |  Yes Multiple calls to diverse models within same flow   |
@@ -537,4 +539,4 @@ Move to Approaches 2 and then 3 gradually, as your requirements lead you to the 
 
 An exception here is perhaps where an ISV already has an existing AI capability in house with existing assets. For example, an ISV who already has a GenAI team with existing AIOps processes and already has IP created in say Python or LangChain, might be naturally better orientated to Approach 3.
 
-A final key callout is that this list of patterns is not exhaustive or mutually exclusive. We’ve curated here select patterns where we see synergies for ISVs and it’s important to understand they can be combined in a variety of ways to create a solution that perfectly fits your needs. For instance, while working with Approach 3 (Patterns G or H), you might need a frontend. In this case, you could use plugins (Pattern A) or the Teams AI Library (Pattern F) along with it. Always consider the synergies between different patterns when planning your AI strategy.
+A final key callout is that this list of patterns isn't exhaustive or mutually exclusive. We have curated here select patterns where we see synergies for ISVs and it’s important to understand they can be combined in various ways to create a solution that perfectly fits your needs. For instance, while working with Approach 3 (Patterns G or H), you might need a frontend. In this case, you could use plugins (Pattern A) or the Teams AI Library (Pattern F) along with it. Always consider the synergies between different patterns when planning your AI strategy.
