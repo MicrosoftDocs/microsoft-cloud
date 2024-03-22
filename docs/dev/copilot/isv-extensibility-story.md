@@ -333,7 +333,7 @@ While you don’t have direct access to the system prompt and temperature, you c
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-genai-pattern-teams-ai-library-f.png" lightbox="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="Flowchart of the Microsoft Teams AI library pattern with prompt engineering and data exchange with ISV apps and Azure OpenAI Service." border="false":::
-      A diagram showing the flow of Microsoft Teams’ AI library pattern. Frist, prompt engineering flows into the Teams AI Library. Data then flows out of the Teams AI Library into two sources: ISV application and Azure OpenAI Service. These two locations flow data bidirectionally.
+      A diagram showing how an ISV can design prompts to give their bot a personality leveraging the Teams AI library. The Teams AI Library has access to AOAI LLM models. When combined with ISV business logic, this will result in Teams bot with Generative AI conversational capabilities.
       :::image-end:::
    :::column-end:::
 :::row-end:::
