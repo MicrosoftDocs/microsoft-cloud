@@ -3,7 +3,7 @@ title: MockRequestPlugin
 description: MockRequestPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/11/2024
+ms.date: 03/22/2024
 ---
 
 # MockRequestPlugin
@@ -72,7 +72,7 @@ None
 | Property | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `url` | URL that Dev Proxy should call. | Yes | empty |
-| `method` | HTTP method that Dev Proxy should use. | No | `GET` |
+| `method` | HTTP method that Dev Proxy should use. | No | `POST` |
 | `body` | Body of the request that Dev Proxy should send. | No | empty |
 | `headers` | Array of request headers that Dev Proxy should send with the request. | No | empty |
 
