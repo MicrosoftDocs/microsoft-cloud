@@ -36,6 +36,8 @@
         href: how-to/change-mocks-file.md
       - name: Simulate a CRUD API
         href: how-to/simulate-crud-api.md
+      - name: Mock Teams Admin Center notification for Microsoft Graph connectors
+        href: how-to/mock-teams-admin-center-notification-graph-connectors.md
     - name: Simulate errors
       items:
       - name: Test my app with random errors
