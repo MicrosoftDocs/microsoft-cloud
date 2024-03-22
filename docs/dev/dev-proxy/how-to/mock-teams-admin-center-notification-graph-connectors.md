@@ -61,7 +61,7 @@ devproxy --config-file "~appFolder/presets/microsoft-graph-connector-notificatio
 
 After Dev Proxy starts, press <kbd>w</kbd> to simulate the webhook from the Teams Admin Center for enabling the Microsoft Graph connector. Dev Proxy sends the notification to your API, which should process it as if it came from the Teams Admin Center.
 
-:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a terminal split in two. The top part is showing Dev Proxy issuing a simulated Teams Admin Center notification. The bottom part is showing a Microsoft Graph connector that receives the notification." lightbox="../media/graph-connector-notification-plugin.png":::
+:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a terminal split in two. Top: Dev Proxy issuing a simulated notification. Bottom: a Microsoft Graph connector that receives it." lightbox="../media/graph-connector-notification-plugin.png":::
 
 When ready, to stop Dev Proxy, press <kbd>Ctrl</kbd>+<kbd>c</kbd>.
 
