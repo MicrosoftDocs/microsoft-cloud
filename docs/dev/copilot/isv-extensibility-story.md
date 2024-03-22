@@ -22,10 +22,10 @@ This platform allows you to surface your proprietary data and functionality into
 
 This guide helps you navigate the expansive possibilities available across the Microsoft Cloud ecosystem.
 
-**What are Copilots?**  
+**What are copilots?**  
 We refer to a copilot as an AI-powered virtual assistant that enhances user productivity by assisting humans with complex cognitive tasks, providing contextual suggestions, and driving data-rich insights. These copilots can be grounded in specific customer or ISV data and context, offering an opportunity for ISVs to create generative AI experiences that understand business-specific data.  
 
-## Scenarios and Approaches
+## Scenarios and approaches
 
 :::image type="complex" source="media/isv-genai-approaches.png" alt-text="Diagram showing Microsoft Copilot components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
 A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft’s Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allows you to build your own end-to-end AI experiences. Each of the three options has more details that are outlined in the following text.
@@ -112,7 +112,7 @@ This approach is for ISVs aiming to enrich their apps with Microsoft's data and 
     :::column-end:::
 :::row-end:::
 
-**Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences:**
+**Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences:**
 
 This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
 
@@ -197,7 +197,7 @@ ISVs can create plugins using various tools, including Teams Message Extensions 
 - [Build message extensions for Microsoft Copilot for Microsoft 365 | Microsoft Learn](/microsoft-365-copilot/extensibility/overview-message-extension-bot)
 - [Create copilot plugins - overview (preview) - Microsoft Copilot Studio | Microsoft Learn](/microsoft-copilot-studio/copilot-plugins-overview)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Plugins are a way to surface ISV services and apps on Microsoft Copilots allowing end users interact with ISV apps and services from Microsoft 365 client apps.
 - ISVs can create plugins using tools like Teams Message Extensions and Copilot Studio plugins.
@@ -238,7 +238,7 @@ Graph connectors can also enrich the data with AI-powered capabilities, such as 
 - Learn more about graph connectors at [aka.ms/graph-connectors](https://aka.ms/graph-connectors)
 - [Build your own graph connector at Build Microsoft Graph connectors for Microsoft Copilot for Microsoft 365 | Microsoft Learn](/microsoft-365-copilot/extensibility/overview-graph-connector)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Graph connectors allow ISVs to bring their data into the Microsoft Copilot ecosystem, enhancing the user experience with personalized and secure interactions.
 - ISVs can use [Microsoft Fabric to bring their data into the Microsoft Cloud and connect it to the Microsoft Graph](https://blog.fabric.microsoft.com/en-US/blog/microsoft-365-data-microsoft-fabric-better-together/).
@@ -271,7 +271,7 @@ These AI apps can be surfaced to end users across various platforms, including w
 - Convert existing Power Automate flows into plugins that can be called from Microsoft copilot chat to perform actions and retrieve information.
 - Access data through natural language interface from enterprise systems such as Zendesk, GitHub, and Salesforce through these connectors in Power Platform.
 
-**Partner Advantage:**
+**Partner advantage:**
 
 - Harness the power of existing Microsoft and non-Microsoft connectors to enhance and enrich your application effortlessly.
 - Expedite plugin development by applying Power Platform custom connector approach for swift and efficient integration.
@@ -283,7 +283,7 @@ These AI apps can be surfaced to end users across various platforms, including w
 - [Microsoft Copilot Studio plugin architecture - Microsoft Copilot Studio | Microsoft Learn](/microsoft-copilot-studio/copilot-plugins-architecture)
 - [Embed a Power Virtual Agents control using chatbot control | Microsoft Learn](/power-platform/release-plan/2023wave1/power-apps/maker-embed-pva-control-power-apps-via-chatbot-control)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Copilot Studio offers a platform for creating low-code AI apps that can enhance existing applications with chatbot capabilities grounded in ISV data or functions.
 - The platform supports both existing Power Platform Connectors and custom connectors, offering flexibility in integrating ISV services and data sources.
@@ -323,7 +323,7 @@ Consider Fabrikam, a versatile Human Capital Management (HCM) software equipped 
 - [Use Graph Explorer to try Microsoft Graph APIs - Microsoft Graph | Microsoft Learn](/graph/graph-explorer/graph-explorer-overview)
 - [Quick Start - Microsoft Graph](https://developer.microsoft.com/en-us/graph/quick-start)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - The Microsoft Graph API allows ISVs to enrich their apps with user-centric data from Microsoft 365.
 - Via Graph APIs you can leverage the Microsoft 365 Semantic Index, a more advanced search experience built for the era of Copilots.
@@ -337,7 +337,7 @@ Both these features can be useful in offloading non-language-based challenges to
 
 While you don’t have direct access to the system prompt and temperature, you can similarly affect the behavior of your Assistant via Custom Instructions that have a heavy influence on the personality of your copilot-like experience.
 
-**Partner Advantage:**
+**Partner advantage:**
 
 - Azure OpenAI Assistants provide a low-code approach, enabling ISVs to quickly integrate Generative AI capabilities into their applications without extensive development effort.
 
@@ -364,13 +364,13 @@ While you don’t have direct access to the system prompt and temperature, you c
    :::column-end:::
 :::row-end:::
 
-**ISV Scenario:**
+**ISV scenario:**
 
 - End users are using Teams and ISV partner is looking to surface their service or functionality on Teams with Bot-like capabilities.
 - No integration is needed with Graph data and ISV partner is looking to focus on the service and business logic without integrating with Teams Copilot capabilities.
 - With prebuilt Teams app templates and built in moderation safety features, ISV partner can easily add LLM capability to their existing chat bot.
 
-**Partner Advantage:**
+**Partner advantage:**
 
 - Add ChatGPT like conversational experiences, with control over prompt engineering to your bot and reuse built-in safety features.
 - Built on top ready to reuse capabilities like
@@ -381,12 +381,12 @@ While you don’t have direct access to the system prompt and temperature, you c
   - Ready to use augmentation mechanism to change the way model is responding through parameters or system prompt change.
   - Extra reasoning that can ground the answers from the model on your data.
 
-**Where to Start:**
+**Where to start:**
 
 - [Introduction to Teams AI Library: Teams AI library - Teams | Microsoft Learn](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview)
 - [List of technical capabilities: Teams AI library capabilities - Teams | Microsoft Learn](/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/how-conversation-ai-core-capabilities)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Team AI library provides an easy way to light up an ISV developed bot in Teams with the power of LLMs.
 - It doesn't require the integration with current Microsoft Copilot capabilities, can provide a task-oriented experience.
@@ -394,7 +394,7 @@ While you don’t have direct access to the system prompt and temperature, you c
 
 If you want to power your bot in Teams with LLMs, Teams AI Library is the way for you to go.
 
-## Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences
+## Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences
 
 :::row:::
    :::column span="2":::
@@ -431,7 +431,7 @@ Beyond the development phase, Azure AI Studio also provides an LLMOps toolchain,
   
 Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
 
-**ISV Scenarios:**
+**ISV scenarios:**
 
 - A healthcare ISV building a telemedicine platform wants a copilot that understands medical jargon, assists doctors in diagnosing patients, and provides relevant treatment recommendations.
 - A financial services provider needs a copilot that can analyze market trends, answer customer queries about investment options, and generate personalized financial reports.
@@ -441,7 +441,7 @@ Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service
 - A chain of restaurants is creating a copilot app to help new employees to get onboarded by guiding them through the whole process.
 - An ISV offers their customers a VS Code extension to help developers build the integration with their APIs.
 
-**Partner Advantage:**
+**Partner advantage:**
 
 - Customization and Control: Build a bespoke copilot that aligns precisely with your application's requirements.
 - Scenario Flexibility: Cater to a wide range of scenarios, from domain-specific copilots to task automation and content generation.
@@ -456,7 +456,7 @@ Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service
 - [Build and deploy your own copilot with Prompt Flow in Azure AI Studio | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-ai-studio)
 - [Build and deploy your own copilot with the Azure AI CLI and SDK | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-sdk)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Azure AI Studio offers a powerful platform for creating custom, intelligent assistants, or copilots.
 - ISVs can shape their copilot's behavior, personality, and capabilities, creating a truly bespoke solution.
@@ -489,14 +489,14 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 - Plan to test thoroughly to ensure a refined user experience.
 - Make sure you're able to gather feedback from your users and implement this in the behavior of the agent or copilot.
 
-**ISV Scenarios:**
+**ISV scenarios:**
 
 - You're building a copilot that is a part of your own application (customer development tool or HR system), and you want people to stay in the realm of the same UI.
 - You need a full control on the orchestration engine, RAG implementation, model choices and model parameters.
 - With Your copilot service, you want to allow your customers to build extension on top of your solution through plugins.
 - Your solution utilizes canvases and other media than just text.
 
-**Partner Advantage:**
+**Partner advantage:**
 
 - Full control over your copilot behavior with access to opinionated orchestration engine used by Microsoft to build first party Copilots.
 - Seamlessly ground models on your own enterprise data and integrate structured, unstructured, and real-time data using Microsoft Fabric OneLake. This allows developers to employ sophisticated hybrid and semantic search to power retrieval augmented generation (RAG) applications.
@@ -508,7 +508,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 - [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/agents/)
 - [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
-**Key Takeaways:**
+**Key takeaways:**
 
 - Semantic Kernel is an opinionated open-source framework helping developers to build GenAI capabilities into their apps easier
 - It’s being maintained and developed by Microsoft and used by first party teams to build Microsoft Copilot solutions.
@@ -519,7 +519,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 
 We’ve started with scenarios and bought you to one or more patterns of interest, which we’ve collected into one of three Approaches. While each pattern has some variance, there are some common features for each Approach:
 
-|  | Approach 1: Surface your data and services into Microsoft’s Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences  |
+|  | Approach 1: Surface your data and services into Microsoft’s Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences  |
 |---------|---------|---------|---------|
 |**Development effort**     |  Low (No/low code) |   Medium (Minimal code)            | High (Pro code)        |
 |**Data sources**    |   Microsoft Graph (Microsoft/M365 or non-Microsoft via connectors)      |    Various. Power Platform connectors, Microsoft Graph, Your APIs.     |   Can span multiple data sources, service, and apps inside or outside of Microsoft tenant     |
