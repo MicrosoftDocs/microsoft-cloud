@@ -47,15 +47,25 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 **Approach 1: Surface your data and services into Microsoft’s Copilots:**
 
 :::row:::
-   :::column span="":::
-      **Scenario**: I am an ISV where **my end users perform work in Microsoft apps such as Teams, Word, Outlook**, and they need to...
-   :::column-end:::
-   :::column span="2":::
-        |  |   |
-        |---------|---------|
-        |...access information using natural language interfaces and I have an existing service I want to make available via these Microsoft 365 apps.     | **Pattern A**: [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).    |
-        |...draw insights from our ISV data sources combined with user centric Microsoft Graph data and their organization’s line of business data.     | **Pattern B**: [Use Graph connectors to make ISV data available for Copilot experiences.](#pattern-b-use-graph-connecters-to-bring-your-data-to-copilot-experiences)     |
-   :::column-end:::
+    :::column:::
+       **Scenario**: I am an ISV where **my end users perform work in Microsoft apps such as Teams, Word, Outlook**, and they need to...
+    :::column-end:::
+    :::column:::
+        ...access information using natural language interfaces and I have an existing service I want to make available via these Microsoft 365 apps.
+    :::column-end:::
+    :::column:::
+        **Pattern A**: [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+        ...draw insights from our ISV data sources combined with user centric Microsoft Graph data and their organization’s line of business data.
+    :::column-end:::
+    :::column:::
+        **Pattern B**: [Use Graph connectors to make ISV data available for Copilot experiences.](#pattern-b-use-graph-connecters-to-bring-your-data-to-copilot-experiences)
+    :::column-end:::
 :::row-end:::
 
 **Approach 2: Create copilots anywhere, with minimal coding and optional Microsoft data integration:**
@@ -71,19 +81,27 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
         **Pattern C**: [Develop Power Platform Connectors to enable customer-driven copilots in Copilot Studio](#pattern-c-develop-power-platform-connectors-to-enable-customer-driven-copilots-in-copilot-studio)
     :::column-end:::
 :::row-end:::
-
 :::row:::
     :::column:::
         **Scenario**: I am an ISV where **my end users work in my existing applications and UI**, who want us to...
     :::column-end:::
-    :::column span="2":::
-        |  |   |
-        |---------|---------|
-        |...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot.     | **Pattern D**: [Use Microsoft Graph API in your copilots](#pattern-d-leverage-microsoft-graph-api-in-your-copilots)(#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality).    |
-        |...provide a conversation experience within my existing application, which can answer questions and turn conversations into actions.   |**Pattern E**: [Create your own AI Assistants with Azure](#pattern-e-bring-a-copilot-experience-to-your-apps-with-azure-openai-assistants)   |
+    :::column:::
+        ...incorporate Microsoft user-centric [Graph](/graph/overview) data into my copilot.
+    :::column-end:::
+    :::column:::
+        **Pattern D**: [Use Microsoft Graph API in your copilots](#pattern-d-leverage-microsoft-graph-api-in-your-copilots)
     :::column-end:::
 :::row-end:::
-
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+        ...provide a conversation experience within my existing application, which can answer questions and turn conversations into actions.
+    :::column-end:::
+    :::column:::
+        **Pattern E**: [Create your own AI Assistants with Azure](#pattern-e-bring-a-copilot-experience-to-your-apps-with-azure-openai-assistants)
+    :::column-end:::
+:::row-end:::
 :::row:::
     :::column:::
         **Scenario**: I am an ISV who’s Copilot experience targets **Microsoft Teams** and includes requirements to...
@@ -333,7 +351,7 @@ While you don’t have direct access to the system prompt and temperature, you c
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-genai-pattern-teams-ai-library-f.png" lightbox="media/isv-genai-pattern-teams-ai-library-f.png" alt-text="Flowchart of the Microsoft Teams AI library pattern with prompt engineering and data exchange with ISV apps and Azure OpenAI Service." border="false":::
-      A diagram showing how an ISV can design prompts to give their bot a personality leveraging the Teams AI library. The Teams AI Library has access to AOAI LLM models. When combined with ISV business logic, this will result in Teams bot with Generative AI conversational capabilities.
+      A diagram showing the flow of Microsoft Teams’ AI library pattern. Frist, prompt engineering flows into the Teams AI Library. Data then flows out of the Teams AI Library into two sources: ISV application and Azure OpenAI Service. These two locations flow data bidirectionally.
       :::image-end:::
    :::column-end:::
 :::row-end:::
