@@ -13,38 +13,34 @@ ms.date: 3/22/2024
 
 # Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs
 
-The [Microsoft Cloud](https://www.microsoft.com/en-us/microsoft-cloud/what-is-microsoft-cloud), a comprehensive and integrated platform, empowers organizations with a suite of products including Azure AI, Microsoft 365, Microsoft Fabric, and more. For independent software vendors (ISVs), this platform unlocks the potential to innovate and deliver captivating Generative AI (GenAI) experiences to customers. Generative AI, as a transformative technology, has the ability to create fresh content, generate code, offer intelligent suggestions, and respond to inquiries. GenAI with broad AI stack is transforming industries across the globe, and Microsoft Cloud is at the forefront of this revolution.
+Welcome to your guide to creating unique Generative AI (GenAI) experiences with the Microsoft Cloud. As an **independent software vendor (ISV)**, you're in a prime position to harness the power of GenAI to innovate and deliver captivating solutions to your customers.
 
-In this guide, we explore how ISVs can harness the extensive features of Microsoft Cloud to craft unique Generative AI applications. Discover how to surface your proprietary data and functionality into Microsoft 365, a hub of productivity and collaboration for millions. Learn to incorporate Azure AI's advanced capabilities into your applications, Or, craft brand-new Generative AI experiences. This guide aims to provide you with a clear framework and essential insights, helping you build confidently in the dynamic field of Generative AI.
+**What is Microsoft Cloud?**  
+The [Microsoft Cloud](https://www.microsoft.com/en-us/microsoft-cloud/what-is-microsoft-cloud) is a comprehensive and integrated platform offering a wide range of capabilities and services. It includes Azure AI, Microsoft 365, Microsoft Fabric, and more, putting it at the forefront of the global Generative AI revolution.
 
-Microsoft Cloud offers a wide range of capabilities and services that are both versatile and customizable. This means you can adapt and build upon them to create solutions that really make a difference, delivering extra value to your customers.
+This platform allows you to surface your proprietary data and functionality into various areas, including Microsoft 365, a hub of productivity and collaboration accessed by millions.
 
-We refer to a copilot as an AI-powered virtual assistant that enhances user productivity by assisting humans with complex cognitive tasks, providing contextual suggestions, and driving data-rich insights. These copilots can be grounded in specific customer or ISV data and context, offering an opportunity for ISVs to create generative AI experiences that understand business-specific data. Copilots seamlessly integrate into software applications, using natural language for intuitive communication.
+This guide helps you navigate the expansive possibilities available across the Microsoft Cloud ecosystem.
 
-For ISVs, developing a copilot can enrich applications with AI capabilities and provide a differentiated user experience, leading to improved user engagement and productivity.
+**What are Copilots?**  
+We refer to a copilot as an AI-powered virtual assistant that enhances user productivity by assisting humans with complex cognitive tasks, providing contextual suggestions, and driving data-rich insights. These copilots can be grounded in specific customer or ISV data and context, offering an opportunity for ISVs to create generative AI experiences that understand business-specific data.  
 
-> [!NOTE]
-> While "copilot"  refers to the general concept of a generative AI assistant, "Copilot" refers to specific Microsoft products, such as Microsoft 365 Copilot or Dynamics 365 Copilot that ISVs can integrate with.
-
-This guide serves as a compass, helping ISVs navigate the broad field of generative AI experiences, powered by the Microsoft Cloud. Our goal is to offer scenario-led guidance that assists ISVs in selecting the most suitable patterns and technologies for their unique requirements. We provide a concise overview of each pattern within this guide. For a deeper understanding, we encourage you to explore the detailed content available through our provided links. In this guide, we explore three main approaches that ISVs can use to craft Generative AI experiences on Microsoft Cloud:
-
-1. **Surface your data and services into Microsoft’s Copilots:**  This approach is designed for ISVs wishing to integrate their data and services into Microsoft's Copilots. The focus is using plugins and Graph connectors to enhance user experiences.
-
-1. **Create copilots anywhere, with minimal coding and optional Microsoft data integration:** This approach is for ISVs aiming to enrich their apps with Microsoft's data and tools, or who want to create their own AI assistants with Azure. It involves making use of the Microsoft Graph API, Copilot Studio plugins, Teams AI Library, or enabling customers to create their own copilot experiences with your data via connectors.
-
-1. **Full Control: Build Your Own (BYO) end-to-end AI experiences:** This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
+## Scenarios and Approaches
 
 :::image type="complex" source="media/isv-genai-approaches.png" alt-text="Diagram showing Microsoft Copilot components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
 A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft’s Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allows you to build your own end-to-end AI experiences. Each of the three options has more details that are outlined in the following text.
 :::image-end:::
 
-Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience might need design, science, and engineering.
-
-## Scenarios
+This guide provides scenario-led guidance to assist ISVs in navigating the expansive field of GenAI on Microsoft Cloud. Our aim is to help you select the most suitable patterns and technologies for your unique requirements, arranged in three high-level approaches to crafting AI experiences.
 
 Our **approaches** are broken into **patterns** based on **scenarios** to help you navigate the most appropriate path for your scenario and requirements.
 
+> [!IMPORTANT]
+> Please note, these approaches and their patterns **are not mutually exclusive**. They can be combined to create a tailored solution that best fits your unique requirements and scenarios.
+
 **Approach 1: Surface your data and services into Microsoft’s Copilots:**
+
+This approach is designed for ISVs wishing to integrate their data and services into Microsoft's Copilots. The focus is using plugins and Graph connectors to enhance user experiences.
 
 :::row:::
     :::column:::
@@ -69,6 +65,8 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 :::row-end:::
 
 **Approach 2: Create copilots anywhere, with minimal coding and optional Microsoft data integration:**
+
+This approach is for ISVs aiming to enrich their apps with Microsoft's data and tools, or who want to create their own AI assistants with Azure. It involves making use of the Microsoft Graph API, Copilot Studio plugins, Teams AI Library, or enabling customers to create their own copilot experiences with your data via connectors.
 
 :::row:::
     :::column:::
@@ -116,6 +114,8 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 
 **Approach 3: Full Control: Build Your Own (BYO) end-to-end AI experiences:**
 
+This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
+
 :::row:::
     :::column:::
         **Scenario**: I am an ISV seeking to develop cutting-edge interoperable AI experiences that...
@@ -134,6 +134,9 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
     :::column-end:::    
 :::row-end:::
 
+> [!TIP]
+> For a deeper understanding, we encourage you to explore the detailed content available in the **Get Started** links provided in each pattern.
+
 :::row:::
    :::column span="2":::
       The Microsoft Copilot stack comprises three distinct tiers: the back end (with the data sitting in respective repositories), an AI orchestration tier in the middle, and the front end (UI experience of your copilot). Within each tier, there are recommended layers that should be considered when building a copilot.
@@ -147,7 +150,12 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
    :::column-end:::
 :::row-end:::
 
-While GenAI opens a wide array of possibilities and scenarios, it's crucial to apply the right tool for the right job. In many cases, combining GenAI with traditional machine learning algorithms, conventional code, or business intelligence solutions might yield optimal results. It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
+> [!NOTE]
+> While "copilot"  refers to the general concept of a generative AI assistant, "Copilot" refers to specific Microsoft products, such as Microsoft 365 Copilot or Dynamics 365 Copilot that ISVs can integrate with.
+
+Each option varies in complexity and effort. Adopting existing Microsoft Copilots is straightforward, extending them with plugins requires minimal effort, and crafting a new copilot experience might need design, science, and engineering.  
+
+It’s important to remember that an AI solution is as good as the data you ground your models on and use as the context. Ready-to-use Microsoft Copilots already support a range of scenarios and can be extended with your data, functions, and processes. However, the user interface cannot be extended. Therefore, it's important to carefully consider your specific scenario, how you can apply GenAI algorithms, and how your user (the "pilot") can benefit from your copilot capability.
 
 ## Approach 1: Surface your data and services into Microsoft’s Copilots
 
@@ -405,29 +413,23 @@ With most the investment creating a copilot service in the middle of the stack, 
 
 ### Pattern G: Build your own copilot with Azure AI Studio
 
-Azure AI Studio offers a comprehensive platform for ISVs looking to build custom, intelligent assistants, or copilots, tailored to their specific needs and use cases. It brings together capabilities from multiple Azure AI services, providing a unified workspace for developing and deploying generative AI applications.
+[Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is an all-in-one platform for ISVs to build custom, intelligent assistants, or copilots. It combines capabilities from various Azure AI services, providing a unified workspace for developing and deploying generative AI applications. It's a collaborative platform where data scientists, developers, and other stakeholders can converge and work together.
 
-With Azure AI Studio, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether you are looking to use existing pre-trained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tune models on your data, or train your own custom AI models, Azure AI Studio provides tools and capabilities to accelerate development of AI experiences that handle complex multimodal data.
+With Azure AI Studio, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether using existing pre-trained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tuning models on your data, or training your own custom AI models, Azure AI Studio accelerates the development of AI experiences that handle complex multimodal data.
 
-Azure AI Studio stands out with its diverse range of models, catering to various use cases and industries. A unique capability of this pattern is enabling ISVs to combine different models that best fit their requirements, orchestrated together within the same solution. This multi-model approach is being adopted by numerous partners, who are using it to create dynamic and intelligent copilot applications, tailored to their needs. Integration with Azure AI Search enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Studio, where they can take advantage of AI Search’s Integrated Vectorization feature. This essentially means any data that any LLM call in your copilot needs to be grounded with, can be automatically kept up to date in a vector database for fast and efficient retrieval during user prompt evaluation. An ISV doesn’t need to implement an indexing, chunking, embedding and vectorizing pattern themselves.
+A standout feature of Azure AI Studio is its diverse range of models, catering to various industries and use cases. It allows ISVs to combine different models within a single solution to meet their unique requirements.
 
-Prompt Flow, a feature of Azure AI Studio, provides a visualized graph for orchestrating executable flows with Large Language Models (LLMs), prompts, and Python tools. This facilitates debugging, sharing, and iterating on your flows with ease through team collaboration. Prompt Flow also includes a comprehensive resources library of built-in tools, samples, and templates that serve as a starting point for development, inspiring creativity, and accelerating the process.
-Beyond the development phase, Azure AI Studio also provides an LLMOps toolchain, which can handle your end-to-end prompt engineering from development to production and ongoing maintenance. This is valuable for ISVs as it ensures the scalability and robustness of their copilot solutions.
-
-Azure AI Studio also supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It provides a project-oriented workspace, enabling collaboration with others against shared compute, model deployments, and services.
-
-Whether you're building a domain-specific copilot, an AI-powered chatbot, or a custom AI solution for your application, Azure AI Studio and Prompt Flow put the creative control in your hands.
-
-For ISV teams who prefer a code-first approach, the Azure AI SDK offers a suite of packages for accessing Azure AI services, including the setup of Azure AI Studio projects and related resources. This allows developers and data scientists to manage AI components, configure AI models, pipelines, and services directly from code, without the need for Azure AI Studio's graphical interface. However, the graphical interface is still accessible for data scientists and other stakeholders who prefer it, enabling diverse user personas to collaborate on the project. In short, the Azure AI SDK combines efficient, code-centric development with Azure AI Studio's collaboration features and enterprise capabilities, offering the best of both worlds and fostering cross-functional collaboration.
-
-Prototyping is easy in Azure AI Studio via its Playground. A typical journey for a team working on a project in Azure AI Studio is:
-
-- A team member starts in the playground, which can include the use of vision capable models, speech, images and other non-text inputs, as well as the ability to set system prompts and ground the model with [your own data](/azure/ai-services/openai/concepts/use-your-data?tabs=ai-search) and run evaluations to gauge the models effectiveness. It’s a fast way for an individual to validate an idea.
-- Once the experiment is producing attractive results, it can be prompted from the playground to Prompt Flow as a versioned and customized flow.
-- Now a versioned artifact in the AI Project, the wider team can contribute where the flow is accessible via Azure AI Studio UI and via code-only. At this point multiple branches of logic to differing LLMs can be tested and evaluated.  
-- Batch evaluations are run to measure efficacy, safety, accuracy and other [metrics](/azure/ai-studio/how-to/evaluate-generative-ai-app?pivots=ai-studio). Evaluation is super helpful not only to assess the quality of changes you are doing, but also to test various paths of your flow, evaluate new set of models for your solution or check out the quality after updating your RAG store.
-- The flow now can be deployed as an endpoint, which can be scaled and becomes the backend, the service of your copilot that can be consumed in various ways, through different surfaces. You can simply deploy it and host it in Azure.
-Once you have your copilot service - or backend - connecting it to one or many UI or conversation surfaces can be achieved in multiple ways, including the patterns above in this article. You can consume the API directly in your code, connect your copilot to Microsoft Teams via Copilot Studio or as a standalone bot app, or even expose your copilot as a plugin to other copilots including Microsoft Copilots such as Microsoft 365 Copilot.
+Integration with [Azure AI Search](/azure/search/search-what-is-azure-search) enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Studio, with the added advantage of AI Search’s Integrated Vectorization feature. This means any data your copilot needs can be automatically kept up-to-date in a vector database, facilitating fast and efficient retrieval during user prompt evaluation, saving you the task of implementing an indexing, chunking, embedding, and vectorizing pattern yourself.  
+  
+[Prompt Flow](/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow?view=azureml-api-2), a feature of Azure AI Studio, offers a visualized graph for orchestrating executable flows with Large Language Models (LLMs), prompts, and Python tools. It facilitates debugging, sharing, and iterating on your flows with ease through team collaboration.  
+  
+For ISV teams who prefer a code-first approach, the [Azure AI SDK](/azure/ai-studio/how-to/sdk-install) offers a suite of packages for accessing Azure AI services, including the setup of Azure AI Studio projects and related resources. This allows developers and data scientists to manage AI components, configure AI models, pipelines, and services directly from code, while still making the graphical interface available for those who prefer it.  
+  
+Prototyping is easy in Azure AI Studio via its Playground. A typical journey for a team working on a project in Azure AI Studio could start with an individual validating an idea in the Playground. Once attractive results are produced, they can be prompted from the Playground to Prompt Flow as a versioned and customized flow. Now a versioned artifact in the AI Project, the wider team can contribute where the flow is accessible via Azure AI Studio UI and via code-only. Multiple branches of logic to differing LLMs can be tested and evaluated at this point.
+  
+Beyond the development phase, Azure AI Studio also provides an LLMOps toolchain, handling your end-to-end prompt engineering from development to production and ongoing maintenance.  
+  
+Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
 
 **ISV Scenarios:**
 
@@ -453,7 +455,6 @@ Once you have your copilot service - or backend - connecting it to one or many U
 - [What is AI Studio? - Azure AI Studio | Microsoft Learn](/azure/ai-studio/what-is-ai-studio?tabs=home)
 - [Build and deploy your own copilot with Prompt Flow in Azure AI Studio | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-ai-studio)
 - [Build and deploy your own copilot with the Azure AI CLI and SDK | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-sdk)
-- [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key Takeaways:**
 
@@ -504,6 +505,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 
 - [GitHub - microsoft/semantic-kernel: Integrate cutting-edge LLM technology quickly and easily into your apps](https://github.com/microsoft/semantic-kernel)
 - [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/agents/)
+- [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key Takeaways:**
 
@@ -535,4 +537,4 @@ Move to Approaches 2 and then 3 gradually, as your requirements lead you to the 
 
 An exception here is perhaps where an ISV already has an existing AI capability in house with existing assets. For example, an ISV who already has a GenAI team with existing AIOps processes and already has IP created in say Python or LangChain, might be naturally better orientated to Approach 3.
 
-A final key callout is that this list of patterns is not exhaustive or mutually exclusive. We’ve curated here select patterns where we see synergies for ISVs and it’s important to understand they can be used in combination. You could focus on one conversational surface for your copilot (for example, Teams), or target multiple surfaces inside and outside Microsoft.
+A final key callout is that this list of patterns is not exhaustive or mutually exclusive. We’ve curated here select patterns where we see synergies for ISVs and it’s important to understand they can be combined in a variety of ways to create a solution that perfectly fits your needs. For instance, while working with Approach 3 (Patterns G or H), you might need a frontend. In this case, you could use plugins (Pattern A) or the Teams AI Library (Pattern F) along with it. Always consider the synergies between different patterns when planning your AI strategy.
