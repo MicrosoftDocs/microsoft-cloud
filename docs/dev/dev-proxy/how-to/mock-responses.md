@@ -130,9 +130,7 @@ When you use the following configuration, proxy returns the same image from disk
     "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value"
   },
   "response": {
-    "body": {
-      "@picture.jpg"
-    },
+    "body": "@picture.jpg",
     "headers": [
       {
         "name": "content-type",
