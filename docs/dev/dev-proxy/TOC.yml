@@ -126,6 +126,8 @@
         href: how-to/sqlite-error-11-database-disk-image-is-malformed.md
       - name: Uninstall
         href: how-to/uninstall.md
+    - name: Create a custom plugin
+      href: how-to/create-custom-plugin.md
     - name: Get help and support
       href: how-to/get-help-and-support.md
 - name: Concepts
