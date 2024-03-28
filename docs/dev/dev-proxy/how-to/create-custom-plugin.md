@@ -95,7 +95,7 @@ Follow the next steps to create a new project:
         pluginEvents.BeforeRequest += OnBeforeRequest;
       }
 
-      private void OnBeforeRequest(object sender, BeforeRequestEventArgs e)
+      private Task OnBeforeRequest(object sender, ProxyRequestArgs e)
       {
         if (_urlsToWatch is null ||
           !e.HasRequestUrlMatch(_urlsToWatch))
