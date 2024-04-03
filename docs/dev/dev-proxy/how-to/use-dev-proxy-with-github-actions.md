@@ -2,7 +2,7 @@
 title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
-ms.author: waldekmastykarz
+ms.author: wmastyka
 ms.date: 03/28/2024
 ---
 
