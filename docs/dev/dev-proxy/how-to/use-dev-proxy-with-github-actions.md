@@ -2,7 +2,7 @@
 title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
-ms.author: 
+ms.author: waldekmastykarz
 ms.date: 03/28/2024
 ---
 
@@ -13,7 +13,7 @@ Using Dev Proxy with GitHub Actions is a great way to test your applications in 
 > [!NOTE]
 > In this example, we will make use of an Ubuntu runner for GitHub Actions.
 
-## Installing the Dev Proxy
+## Install the Dev Proxy
 
 The first step is to install the Dev Proxy on the runner. You can do this by adding the following steps to your workflow file:
 
@@ -22,7 +22,7 @@ The first step is to install the Dev Proxy on the runner. You can do this by add
   run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
 ```
 
-## Running the Dev Proxy
+## Run the Dev Proxy
 
 After installing the Dev Proxy, you need to start it. You can do this by adding the following step to your workflow file:
 
@@ -31,7 +31,7 @@ After installing the Dev Proxy, you need to start it. You can do this by adding 
   run: devproxy
 ```
 
-## Trusting the Dev Proxy certificate
+## Trust the Dev Proxy certificate
 
 Once the Dev Proxy is started, it will have generated a self-signed certificate. To trust this certificate, you need to add the following step to your workflow file:
 
@@ -54,7 +54,7 @@ Once the Dev Proxy is started, it will have generated a self-signed certificate.
     echo "https_proxy=http://127.0.0.1:8000" >> $GITHUB_ENV    
 ```
 
-## Testing the Dev Proxy
+## Test the Dev Proxy
 
 With the Dev Proxy installed, started, and the certificate trusted, you can now run your application and see how it behaves with the Dev Proxy.
 
@@ -68,7 +68,7 @@ With the Dev Proxy installed, started, and the certificate trusted, you can now 
     curl -i https://jsonplaceholder.typicode.com/posts
 ```
 
-## The full workflow file
+## Full workflow file
 
 Here is the full workflow file with all the steps included:
 
