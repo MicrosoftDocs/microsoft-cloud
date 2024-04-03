@@ -2,13 +2,13 @@
 title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
-ms.author: 
+ms.author: wmastyka
 ms.date: 03/28/2024
 ---
 
 # Create a custom plugin
 
-In this article, you will learn how to create a custom plugin for the Dev Proxy. By creating plugins for Dev Proxy, you can extend its functionality and add custom features to fit your needs.
+In this article, you learn how to create a custom plugin for the Dev Proxy. By creating plugins for Dev Proxy, you can extend its functionality and add custom features to fit your needs.
 
 ## Prerequisites
 
@@ -114,7 +114,7 @@ Follow the next steps to create a new project:
 
 ## Use your custom plugin
 
-To use your custom plugin, you need to add it to the Dev Proxy configuration file. Here is an example of how you can do this:
+To use your custom plugin, you need to add it to the Dev Proxy configuration file. Here's an example of how you can do this:
 
 1. Add the new plugin configuration in the `devproxyrc.json` file.
 
@@ -134,11 +134,11 @@ To use your custom plugin, you need to add it to the Dev Proxy configuration fil
     devproxy
     ```
 
-The example plugin will check all matching URLs for the required Authorization header. If the header is not present, it will show a warning message.
+The example plugin will check all matching URLs for the required Authorization header. If the header isn't present, it will show a warning message.
 
 ## Adding custom configuration to your plugin (optional)
 
-You can extend your plugin's logic by adding custom configuration. Here is an example of how you can do this:
+You can extend your plugin's logic by adding custom configuration. Here's an example of how you can do this:
 
 1. Add a new `_configuration` object and bind it in the `Register` method.
 
