@@ -1,7 +1,7 @@
 ---
 title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
-author: eliostruyf
+author: estruyf
 ms.author: 
 ms.date: 03/28/2024
 ---
