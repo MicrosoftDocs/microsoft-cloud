@@ -104,6 +104,8 @@
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
+      - name: With GitHub Actions
+        href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
@@ -126,6 +128,8 @@
         href: how-to/sqlite-error-11-database-disk-image-is-malformed.md
       - name: Uninstall
         href: how-to/uninstall.md
+    - name: Create a custom plugin
+      href: how-to/create-custom-plugin.md
     - name: Get help and support
       href: how-to/get-help-and-support.md
 - name: Concepts
