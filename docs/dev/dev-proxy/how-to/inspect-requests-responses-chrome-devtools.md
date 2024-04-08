@@ -3,12 +3,12 @@ title: Inspect requests and responses using Chrome DevTools
 description: How to use Chrome DevTools to inspect requests and responses intercepted by Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # Inspect requests and responses using Chrome DevTools
 
-By default, Dev Proxy displays its messages in the terminal. If you use Dev Proxy with an application that issues many requests, it's difficult to find the messages you're interested in. What's more, you might want to inspect the requests and responses intercepted by Dev Proxy.
+By default, Dev Proxy displays its messages in the command prompt. If you use Dev Proxy with an application that issues many requests, it's difficult to find the messages you're interested in. What's more, you might want to inspect the requests and responses intercepted by Dev Proxy.
 
 To make it easier to find the messages you're interested in, use the [`DevToolsPlugin`](../technical-reference/devtoolsplugin.md) plugin to display Dev Proxy messages in Chrome DevTools.
 

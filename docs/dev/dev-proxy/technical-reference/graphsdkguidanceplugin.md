@@ -3,14 +3,14 @@ title: GraphSdkGuidancePlugin
 description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # GraphSdkGuidancePlugin
 
 Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been issued by a Microsoft Graph SDK.
 
-:::image type="content" source="../media/microsoft-graph-sdk-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a tip suggesting using the Microsoft Graph SDK after intercepting a request to Microsoft Graph that doesn't use an SDK." lightbox="../media/microsoft-graph-sdk-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-sdk-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a tip suggesting using the Microsoft Graph SDK after intercepting a request to Microsoft Graph that doesn't use an SDK." lightbox="../media/microsoft-graph-sdk-guidance.png":::
 
 ## Plugin instance definition
 

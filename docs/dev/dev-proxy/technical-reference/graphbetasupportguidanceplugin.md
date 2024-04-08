@@ -3,14 +3,14 @@ title: GraphBetaSupportGuidancePlugin
 description: GraphBetaSupportGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # GraphBetaSupportGuidancePlugin
 
 Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 
-:::image type="content" source="../media/microsoft-graph-beta-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a warning after detecting a request to a Microsoft Graph beta endpoint." lightbox="../media/microsoft-graph-beta-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-beta-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a warning after detecting a request to a Microsoft Graph beta endpoint." lightbox="../media/microsoft-graph-beta-guidance.png":::
 
 ## Plugin instance definition
 

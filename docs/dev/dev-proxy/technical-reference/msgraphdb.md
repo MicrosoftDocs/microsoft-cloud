@@ -10,7 +10,7 @@ ms.date: 04/08/2024
 
 Updates the internal database of Microsoft Graph API metadata.
 
-:::image type="content" source="../media/msgraphdb-command.png" alt-text="Screenshot of a terminal with the output of the msgraphdb command." lightbox="../media/msgraphdb-command.png":::
+:::image type="content" source="../media/msgraphdb-command.png" alt-text="Screenshot of a command prompt with the output of the msgraphdb command." lightbox="../media/msgraphdb-command.png":::
 
 ## Usage
 

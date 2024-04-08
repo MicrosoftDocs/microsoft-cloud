@@ -3,14 +3,14 @@ title: GraphClientRequestIdGuidancePlugin
 description: GraphClientRequestIdGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # GraphClientRequestIdGuidancePlugin
 
 Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
 
-:::image type="content" source="../media/microsoft-graph-client-request-id-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a tip after detecting a request to Microsoft Graph API without the client-request-id header." lightbox="../media/microsoft-graph-client-request-id-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-client-request-id-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a tip after detecting a request to Microsoft Graph API without the client-request-id header." lightbox="../media/microsoft-graph-client-request-id-guidance.png":::
 
 ## Plugin instance definition
 

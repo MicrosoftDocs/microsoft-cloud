@@ -3,14 +3,14 @@ title: GraphSelectGuidancePlugin
 description: GraphSelectGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # GraphSelectGuidancePlugin
 
 Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doesn't include the `$select` query string parameter.
 
-:::image type="content" source="../media/microsoft-graph-select-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing a warning after intercepting a request to Microsoft Graph that doesn't use the $select parameter." lightbox="../media/microsoft-graph-select-guidance.png":::
+:::image type="content" source="../media/microsoft-graph-select-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a warning after intercepting a request to Microsoft Graph that doesn't use the $select parameter." lightbox="../media/microsoft-graph-select-guidance.png":::
 
 ## Plugin instance definition
 

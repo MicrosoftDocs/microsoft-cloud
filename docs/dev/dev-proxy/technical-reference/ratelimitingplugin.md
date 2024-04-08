@@ -3,14 +3,14 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/17/2024
+ms.date: 04/08/2024
 ---
 
 # RateLimitingPlugin
 
 Simulates rate-limit behaviors.
 
-:::image type="content" source="../media/rate-limiting-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy simulating rate limiting on GitHub APIs." lightbox="../media/rate-limiting-plugin.png":::
+:::image type="content" source="../media/rate-limiting-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating rate limiting on GitHub APIs." lightbox="../media/rate-limiting-plugin.png":::
 
 ## Plugin instance definition
 

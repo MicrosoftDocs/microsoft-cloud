@@ -3,7 +3,7 @@ title: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw a
 description: How to fix the type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception error
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 04/08/2024
 ---
 
 # The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
@@ -16,4 +16,4 @@ The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an excep
 
 This error happens when macOS doesn't consider the `libe_sqlite3.dylib` file an executable.
 
-Open the `dev-proxy` installation folder in a terminal and execute `chmod +x libe_sqlite3.dylib`.
+Open the `dev-proxy` installation folder in a command prompt and execute `chmod +x libe_sqlite3.dylib`.

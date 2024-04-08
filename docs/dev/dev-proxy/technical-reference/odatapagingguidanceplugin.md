@@ -3,14 +3,14 @@ title: ODataPagingGuidancePlugin
 description: ODataPagingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # ODataPagingGuidancePlugin
 
 Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 
-:::image type="content" source="../media/odata-paging-guidance.png" alt-text="Screenshot of a terminal with Dev Proxy showing warning after intercepting a request with manually crafted skip token." lightbox="../media/odata-paging-guidance.png":::
+:::image type="content" source="../media/odata-paging-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing warning after intercepting a request with manually crafted skip token." lightbox="../media/odata-paging-guidance.png":::
 
 ## Plugin instance definition
 

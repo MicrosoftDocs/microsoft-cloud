@@ -3,16 +3,16 @@ title: GraphConnectorNotificationPlugin
 description: GraphConnectorNotificationPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/11/2024
+ms.date: 04/08/2024
 ---
 
 # GraphConnectorNotificationPlugin
 
 Simulates the notification when enabling or disabling a Microsoft Graph connector in Teams Admin Center (TAC). Validates requests for creating and deleting the external connection.
 
-To issue the configured notification request, press `w` in the terminal session where Dev Proxy is running.
+To issue the configured notification request, press `w` in the command prompt session where Dev Proxy is running.
 
-:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a terminal split in two. The top part is showing Dev Proxy issuing a simulated Teams Admin Center notification. The bottom part is showing a Microsoft Graph connector that receives the notification." lightbox="../media/graph-connector-notification-plugin.png":::
+:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a command prompt split in two. The top part is showing Dev Proxy issuing a simulated Teams Admin Center notification. The bottom part is showing a Microsoft Graph connector that receives the notification." lightbox="../media/graph-connector-notification-plugin.png":::
 
 ## Issuing notification requests
 

@@ -26,4 +26,4 @@ devproxy
 
 When you run your .NET application, Dev Proxy intercepts the request and returns a 429 error.
 
-:::image type="content" source="../media/throttling-json-placeholder-api.png" alt-text="Screenshot of a terminal with Dev Proxy simulating throttling error on a web request from a .NET application." lightbox="../media/throttling-json-placeholder-api.png":::
+:::image type="content" source="../media/throttling-json-placeholder-api.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating throttling error on a web request from a .NET application." lightbox="../media/throttling-json-placeholder-api.png":::

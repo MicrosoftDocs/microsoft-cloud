@@ -3,14 +3,14 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # MockResponsePlugin
 
 Simulates responses.
 
-:::image type="content" source="../media/mock-response-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy simulating response for a request to GitHub API." lightbox="../media/mock-response-plugin.png":::
+:::image type="content" source="../media/mock-response-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating response for a request to GitHub API." lightbox="../media/mock-response-plugin.png":::
 
 ## Plugin instance definition
 
