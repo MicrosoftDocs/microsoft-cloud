@@ -27,7 +27,7 @@ An execution summary report can be also generated when the recording is stopped.
 > [!NOTE]
 > By default the [`ExecutionSummaryPlugin`](../technical-reference/executionsummaryplugin.md) is disabled. To get a summary report, enable the plugin in the Dev Proxy configuration file and restart  proxy.
 
-By default, the summary report is returned to the terminal output.
+By default, the summary report is returned to the command prompt output.
 
 To save the summary report to a file, start the proxy with the `--summary-file-path` option. The value can be a relative or absolute path.
 

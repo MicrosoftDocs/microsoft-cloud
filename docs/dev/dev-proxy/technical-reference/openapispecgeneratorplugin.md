@@ -3,14 +3,14 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # OpenApiSpecGeneratorPlugin
 
 Generates OpenAPI spec in JSON format from the intercepted requests and responses.
 
-:::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::
+:::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::
 
 ## Plugin instance definition
 

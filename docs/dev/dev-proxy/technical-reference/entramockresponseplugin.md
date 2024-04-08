@@ -3,14 +3,14 @@ title: EntraMockResponsePlugin
 description: EntraMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/12/2024
+ms.date: 04/08/2024
 ---
 
 # EntraMockResponsePlugin
 
 Mocks responses to Microsoft Entra. Includes all functionality of the [MockResponsePlugin](./MockResponsePlugin.md) and adds support for mocking auth flow API requests.
 
-:::image type="content" source="../media/entra-mock-response-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy mocking a response to a Microsoft Entra API." lightbox="../media/entra-mock-response-plugin.png":::
+:::image type="content" source="../media/entra-mock-response-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy mocking a response to a Microsoft Entra API." lightbox="../media/entra-mock-response-plugin.png":::
 
 When the plugin simulates auth flow API responses, it updates the state and nonce to match the API request. In the mocked response body, the plugin searches for the following tokens and replaces them with the actual values from the intercepted API requests.
 

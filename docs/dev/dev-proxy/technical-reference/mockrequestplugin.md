@@ -3,16 +3,16 @@ title: MockRequestPlugin
 description: MockRequestPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/22/2024
+ms.date: 04/08/2024
 ---
 
 # MockRequestPlugin
 
 Allows you to issue web requests using Dev Proxy. This plugin is convenient for simulating requests such as webhook notifications.
 
-To issue the configured request, press `w` in the terminal session where Dev Proxy is running.
+To issue the configured request, press `w` in the command prompt session where Dev Proxy is running.
 
-:::image type="content" source="../media/mock-request-plugin.png" alt-text="Screenshot of a terminal split in two. The top part is showing Dev Proxy issuing a web request. The bottom part is showing an API that receives the request and prints the request body." lightbox="../media/mock-request-plugin.png":::
+:::image type="content" source="../media/mock-request-plugin.png" alt-text="Screenshot of a command prompt split in two. The top part is showing Dev Proxy issuing a web request. The bottom part is showing an API that receives the request and prints the request body." lightbox="../media/mock-request-plugin.png":::
 
 ## Plugin instance definition
 
