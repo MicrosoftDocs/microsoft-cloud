@@ -3,7 +3,7 @@ title: Change logging level
 description: How to change logging level
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/28/2024
+ms.date: 04/08/2024
 ---
 
 # Change logging level
@@ -20,7 +20,7 @@ To change the default logging level, update the `logLevel` setting in the `devpr
 
 To change the logging level at run time, use the `--log-level` command line option.
 
-```sh
+```console
 devproxy --log-level debug
 ```
 

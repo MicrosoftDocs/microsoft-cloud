@@ -3,7 +3,7 @@ title: Change mocks file
 description: How to specify which mocks file to use
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 04/08/2024
 ---
 
 # Change mocks file
@@ -12,7 +12,7 @@ By default, the [MockResponsePlugin](../technical-reference/mockresponseplugin.m
 
 To use a file with a different name, use:
 
-```sh
+```console
 devproxy --mocks-file my-mocks.json
 ```
 

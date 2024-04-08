@@ -3,14 +3,14 @@ title: Change request failure rate
 description: How to configure the request failure rate
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Change request failure rate
 
 By default, there's 50% chance that Dev Proxy returns a random error for your API. You can change the likelihood to a different value using the `--failure-rate` option, for example:
 
-```sh
+```console
 devproxy --failure-rate 80
 ```
 

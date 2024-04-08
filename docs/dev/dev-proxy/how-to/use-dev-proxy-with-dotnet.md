@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications
 description: How to use Dev Proxy with .NET applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/06/2024
+ms.date: 04/08/2024
 ---
 
 # Use Dev Proxy with .NET applications
@@ -20,7 +20,7 @@ Console.WriteLine(response);
 
 To simulate errors from this request, start Dev Proxy with the default preset, which is configured for intercepting requests to `https://jsonplaceholder.typicode.com/*`.
 
-```bash
+```console
 devproxy
 ```
 

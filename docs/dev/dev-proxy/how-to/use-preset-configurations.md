@@ -3,7 +3,7 @@ title: Use preset configurations
 description: How to choose a preset configuration
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/18/2023
+ms.date: 04/08/2024
 ---
 
 # Use preset configurations
@@ -17,6 +17,6 @@ We include several preset configurations with Dev Proxy. You can find them in th
 
 To use a preset, use the `--config-file` option and pass the path to the preset file:
 
-```sh
+```console
 devproxy --config-file presets/microsoft-graph-rate-limiting.json
 ```

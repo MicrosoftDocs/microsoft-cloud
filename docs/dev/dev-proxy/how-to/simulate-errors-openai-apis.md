@@ -3,7 +3,7 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Simulate errors from OpenAI APIs
@@ -119,7 +119,7 @@ In the same folder, create the `errors-openai.json` file. This file contains the
 
 Start Dev Proxy with the configuration file:
 
-```sh
+```console
 devproxy --config-file "~appFolder/presets/openai-errors.json"
 ```
 

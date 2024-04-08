@@ -3,7 +3,7 @@ title: Mock Teams Admin Center notification for Microsoft Graph connectors
 description: How to test that your Microsoft Graph connector properly handles notifications from the Teams Admin Center.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/22/2024
+ms.date: 04/08/2024
 ---
 
 # Mock Teams Admin Center notification for Microsoft Graph connectors
@@ -22,7 +22,7 @@ Before you start mocking Teams Admin Center notifications, complete the followin
 
 Start, by downloading the Dev Proxy preset for simulating Teams Admin Center notifications for Microsoft Graph connectors. In the terminal, run the following command:
 
-```shell
+```console
 devproxy preset get microsoft-graph-connector-notification
 ```
 
@@ -55,7 +55,7 @@ Start your API that receives the notification from the Teams Admin Center. Ensur
 
 Next, in a terminal, start Dev Proxy with the preset for simulating the Teams Admin Center notification for enabling the Microsoft Graph connector.
 
-```shell
+```console
 devproxy --config-file "~appFolder/presets/microsoft-graph-connector-notification/devproxyrc.json"
 ```
 
