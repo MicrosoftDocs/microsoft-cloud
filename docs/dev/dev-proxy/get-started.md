@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/28/2024
+ms.date: 04/08/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -95,7 +95,7 @@ The first time you start Dev Proxy on your machine there are a few steps to foll
 
 ::: zone pivot="client-operating-system-windows"
 
-1. **Start Dev Proxy**. Open a terminal session. Enter `devproxy` and press <kbd>Enter</kbd>.
+1. **Start Dev Proxy**. Open a command prompt session. Enter `devproxy` and press <kbd>Enter</kbd>.
 1. **Trust certificate**. Dev Proxy installs a certificate named `Dev Proxy CA`. A warning shows. Select `Yes` to confirm that you want to install the certificate. Dev Proxy uses this certificate to decrypt HTTPS traffic sent from your machine.
 1. **Allow firewall access**. Windows Firewall blocks the proxy. A warning shows. Select `Allow access` button to allow traffic through the firewall.
 
@@ -103,13 +103,13 @@ The first time you start Dev Proxy on your machine there are a few steps to foll
 
 ::: zone pivot="client-operating-system-macos"
 
-1. **Start Dev Proxy**. Open a terminal session. Enter `devproxy` and press <kbd>Enter</kbd>.
+1. **Start Dev Proxy**. Open a command prompt session. Enter `devproxy` and press <kbd>Enter</kbd>.
 1. **Trust certificate**. Dev Proxy installs a certificate named `Dev Proxy CA`, which it uses to decrypt HTTPS traffic sent from your machine. A warning shows. Press <kbd>y</kbd> to confirm that you want to trust the certificate.
 1. **Accept incoming connections**. A warning shows. Select `Allow` to confirm.
 
 ::: zone-end
 
-The terminal displays the following output:
+The command prompt displays the following output:
 
 ```text
 8 error responses loaded from devproxy-errors.json
@@ -180,7 +180,7 @@ When you no longer require Dev Proxy to be running, you should always stop it sa
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-If you shut down the terminal session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](./how-to/overview.md#common-problems).
+If you shut down the command prompt session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](./how-to/overview.md#common-problems).
 
 ## Update the URLs to watch
 

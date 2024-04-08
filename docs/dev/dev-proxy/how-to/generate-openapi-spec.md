@@ -3,7 +3,7 @@ title: Generate an OpenAPI spec
 description: How to generate an OpenAPI spec from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # Generate an OpenAPI spec
@@ -49,4 +49,4 @@ To generate an OpenAPI spec using Dev Proxy:
 1. Stop recording requests by pressing `s`
 1. Dev Proxy generates an OpenAPI spec and saves it to a file in the current directory. Dev Proxy names the file after the host name of the API followed by the current date and time, for example: `api.example.com-20231219091700.json`.
 
-:::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two terminal windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::
+:::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::

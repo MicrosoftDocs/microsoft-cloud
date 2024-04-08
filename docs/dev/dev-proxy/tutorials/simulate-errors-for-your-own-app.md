@@ -3,7 +3,7 @@ title: Simulate random errors for your own application
 description: Learn how to use Dev Proxy to simulate random errors for your own application.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/08/2024
+ms.date: 04/08/2024
 ---
 
 # Simulate random errors for your own application
@@ -55,7 +55,7 @@ devproxy --urls-to-watch "https://api.contoso.com/*"
 
 The `--urls-to-watch` parameter tells Dev Proxy, which requests to intercept. The wildcard `*` at the end of the URL tells Dev Proxy to intercept all requests to URLs that start with `https://api.contoso.com/`.
 
-Start using your application as you normally would. Dev Proxy intercepts all requests to the URLs that you specified. In the terminal, you see messages about the requests that Dev Proxy intercepts.
+Start using your application as you normally would. Dev Proxy intercepts all requests to the URLs that you specified. In the command prompt, you see messages about the requests that Dev Proxy intercepts.
 
 ```text
 ```text
@@ -68,7 +68,7 @@ Start using your application as you normally would. Dev Proxy intercepts all req
 ```
 
 > [!IMPORTANT]
-> If you don't see any messages in the terminal, make sure that you correctly configured your application to use Dev Proxy. Also, check if Dev Proxy is intercepting requests to API URLs that your application uses. If you have any questions, ask for help in the [Dev Proxy community](https://aka.ms/devproxy/discord) on Discord.
+> If you don't see any messages in the command prompt, make sure that you correctly configured your application to use Dev Proxy. Also, check if Dev Proxy is intercepting requests to API URLs that your application uses. If you have any questions, ask for help in the [Dev Proxy community](https://aka.ms/devproxy/discord) on Discord.
 
 ## Create your own configuration files
 
@@ -86,7 +86,7 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
 1. Locate the `RetryAfterPlugin` plugin in the `plugins` array.
 1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
-1. In a terminal, change the working directory to your project folder.
+1. In a command prompt, change the working directory to your project folder.
 1. Enter `devproxy --config-file devproxyrc.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
 1. Send a request to the JSON Placeholder API from the command line and view the output.
 1. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.

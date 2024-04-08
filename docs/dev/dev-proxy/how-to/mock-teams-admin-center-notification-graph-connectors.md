@@ -3,7 +3,7 @@ title: Mock Teams Admin Center notification for Microsoft Graph connectors
 description: How to test that your Microsoft Graph connector properly handles notifications from the Teams Admin Center.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/22/2024
+ms.date: 04/08/2024
 ---
 
 # Mock Teams Admin Center notification for Microsoft Graph connectors
@@ -20,7 +20,7 @@ Before you start mocking Teams Admin Center notifications, complete the followin
 
 ### Download the Teams Admin Center notifications for Microsoft Graph connectors Dev Proxy preset
 
-Start, by downloading the Dev Proxy preset for simulating Teams Admin Center notifications for Microsoft Graph connectors. In the terminal, run the following command:
+Start, by downloading the Dev Proxy preset for simulating Teams Admin Center notifications for Microsoft Graph connectors. In the command prompt, run the following command:
 
 ```shell
 devproxy preset get microsoft-graph-connector-notification
@@ -53,7 +53,7 @@ Dev Proxy simulates validating the token from the Teams Admin Center notificatio
 
 Start your API that receives the notification from the Teams Admin Center. Ensure, that it proxies its requests through Dev Proxy.
 
-Next, in a terminal, start Dev Proxy with the preset for simulating the Teams Admin Center notification for enabling the Microsoft Graph connector.
+Next, in a command prompt, start Dev Proxy with the preset for simulating the Teams Admin Center notification for enabling the Microsoft Graph connector.
 
 ```shell
 devproxy --config-file "~appFolder/presets/microsoft-graph-connector-notification/devproxyrc.json"
@@ -61,7 +61,7 @@ devproxy --config-file "~appFolder/presets/microsoft-graph-connector-notificatio
 
 After Dev Proxy starts, press <kbd>w</kbd> to simulate the webhook from the Teams Admin Center for enabling the Microsoft Graph connector. Dev Proxy sends the notification to your API, which should process it as if it came from the Teams Admin Center.
 
-:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a terminal split in two. Top: Dev Proxy issuing a simulated notification. Bottom: a Microsoft Graph connector that receives it." lightbox="../media/graph-connector-notification-plugin.png":::
+:::image type="content" source="../media/graph-connector-notification-plugin.png" alt-text="Screenshot of a command prompt split in two. Top: Dev Proxy issuing a simulated notification. Bottom: a Microsoft Graph connector that receives it." lightbox="../media/graph-connector-notification-plugin.png":::
 
 When ready, to stop Dev Proxy, press <kbd>Ctrl</kbd>+<kbd>c</kbd>.
 

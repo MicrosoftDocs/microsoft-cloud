@@ -3,14 +3,14 @@ title: GenericRandomErrorPlugin
 description: GenericRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2024
+ms.date: 04/08/2024
 ---
 
 # GenericRandomErrorPlugin
 
 Fails requests with a random selected error from file containing mocked errors.
 
-:::image type="content" source="../media/generic-random-error-plugin.png" alt-text="Screenshot of a terminal with the Dev Proxy simulating one of the errors for an OpenAI API request as defined in the config file." lightbox="../media/generic-random-error-plugin.png":::
+:::image type="content" source="../media/generic-random-error-plugin.png" alt-text="Screenshot of a command prompt with the Dev Proxy simulating one of the errors for an OpenAI API request as defined in the config file." lightbox="../media/generic-random-error-plugin.png":::
 
 ## Plugin instance definition
 

@@ -3,14 +3,14 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/14/2024
+ms.date: 04/08/2024
 ---
 
 # GraphRandomErrorPlugin
 
 Fails requests made to Microsoft Graph with random errors.
 
-:::image type="content" source="../media/microsoft-graph-random-error.png" alt-text="Screenshot of a terminal with Dev Proxy simulating a random error for a Microsoft Graph request." lightbox="../media/microsoft-graph-random-error.png":::
+:::image type="content" source="../media/microsoft-graph-random-error.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating a random error for a Microsoft Graph request." lightbox="../media/microsoft-graph-random-error.png":::
 
 ## Plugin instance definition
 

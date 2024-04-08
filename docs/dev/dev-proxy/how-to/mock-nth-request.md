@@ -3,7 +3,7 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Mock nth request
@@ -11,7 +11,7 @@ ms.date: 01/25/2024
 Dev Proxy supports mocking n-th through the `nth` property on the [request](../technical-reference/response-object.md) object.
 
 > [!TIP]
-> Download this preset by running in the terminal `devproxy preset get microsoft-graph-connector`.
+> Download this preset by running in the command prompt `devproxy preset get microsoft-graph-connector`.
 
 Using the following mock file as an example, we can see that it contains two mocks to the same request URL. Proxy uses the first response that uses the `nth` property, when it intercepts a request with the specified URL for the second time. For all other requests, the proxy returns the second response.
 

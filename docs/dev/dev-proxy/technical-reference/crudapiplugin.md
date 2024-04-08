@@ -3,14 +3,14 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/28/2024
+ms.date: 04/08/2024
 ---
 
 # CrudApiPlugin
 
 Simulates a CRUD API with an in-memory data store. Sends JSON responses. Supports CORS for cross-domain usage from client-side applications. Optionally, simulates CRUD APIs secured with Microsoft Entra.
 
-:::image type="content" source="../media/crud-api-plugin.png" alt-text="Screenshot of a terminal with Dev Proxy simulating a CRUD API." lightbox="../media/crud-api-plugin.png":::
+:::image type="content" source="../media/crud-api-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating a CRUD API." lightbox="../media/crud-api-plugin.png":::
 
 ## Plugin instance definition
 

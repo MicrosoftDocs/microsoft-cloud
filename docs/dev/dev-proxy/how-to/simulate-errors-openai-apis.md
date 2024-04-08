@@ -3,7 +3,7 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Simulate errors from OpenAI APIs
@@ -11,7 +11,7 @@ ms.date: 01/25/2024
 When you use OpenAI APIs in your app, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any OpenAI API using the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md).
 
 > [!TIP]
-> Download this preset by running in the terminal `devproxy preset get openai-throttling`.
+> Download this preset by running in the command prompt `devproxy preset get openai-throttling`.
 
 In the Dev Proxy install folder, locate the `presets` folder. In the `presets` folder, create a new file named `openai-errors.json`. Open the file in a code editor.
 

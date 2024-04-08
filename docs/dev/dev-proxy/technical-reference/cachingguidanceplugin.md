@@ -3,14 +3,14 @@ title: CachingGuidancePlugin
 description: CachingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # CachingGuidancePlugin
 
 Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
 
-:::image type="content" source="../media/guidance-caching.png" alt-text="Screenshot of a terminal with the Dev Proxy caching guidance plugin showing a warning about a request that's been issued too frequently." lightbox="../media/guidance-caching.png":::
+:::image type="content" source="../media/guidance-caching.png" alt-text="Screenshot of a command prompt with the Dev Proxy caching guidance plugin showing a warning about a request that's been issued too frequently." lightbox="../media/guidance-caching.png":::
 
 ## Plugin instance definition
 
