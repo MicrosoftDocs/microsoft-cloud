@@ -3,7 +3,7 @@ title: Record and export proxy activity
 description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/26/2024
+ms.date: 04/08/2024
 ---
 
 # Record and export proxy activity
@@ -31,19 +31,19 @@ By default, the summary report is returned to the terminal output.
 
 To save the summary report to a file, start the proxy with the `--summary-file-path` option. The value can be a relative or absolute path.
 
-```sh
+```console
 devproxy --summary-file-path report.md
 ```
 
 By default, proxy reports activities grouped by URL. To group activity by message type, use the `--summary-group-by` option.
 
-```sh
+```console
 devproxy --summary-group-by messageType
 ```
 
 To record all activity immediately, save the report to a file and group by message type, use:
 
-```sh
+```console
 devproxy --record --summary-file-path report.md --summary-group-by messageType
 ```
 

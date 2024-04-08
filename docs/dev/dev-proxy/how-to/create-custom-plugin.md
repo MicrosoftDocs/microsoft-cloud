@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 03/28/2024
+ms.date: 04/08/2024
 ---
 
 # Create a custom plugin
@@ -23,13 +23,13 @@ Follow the next steps to create a new project:
 
 1. Create a new class library project using the `dotnet new classlib` command.
 
-    ```bash
+    ```console
     dotnet new classlib -n MyCustomPlugin
     ```
 
 1. Open the newly created project in Visual Studio Code.
 
-    ```bash
+    ```console
     code MyCustomPlugin
     ```
 
@@ -48,7 +48,7 @@ Follow the next steps to create a new project:
 
 1. Add the NuGet packages required for your project.
 
-    ```bash
+    ```console
     dotnet add package Microsoft.Extensions.Configuration
     dotnet add package Microsoft.Extensions.Configuration.Binder
     dotnet add package Microsoft.Extensions.Logging.Abstractions
@@ -108,7 +108,7 @@ Follow the next steps to create a new project:
 
 1. Build your project.
 
-    ```bash
+    ```console
     dotnet build
     ```
 
@@ -130,7 +130,7 @@ To use your custom plugin, you need to add it to the Dev Proxy configuration fil
 
 1. Run the Dev Proxy.
 
-    ```bash
+    ```console
     devproxy
     ```
 
@@ -206,7 +206,7 @@ You can extend your plugin's logic by adding custom configuration. Here's an exa
 
 1. Build your project.
 
-    ```bash
+    ```console
     dotnet build
     ```
   
@@ -228,6 +228,6 @@ You can extend your plugin's logic by adding custom configuration. Here's an exa
 
 1. Run the Dev Proxy.
 
-    ```bash
+    ```console
     devproxy
     ```

@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET Aspire applications
 description: How to use Dev Proxy with Use Dev Proxy with .NET Aspire applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/07/2024
+ms.date: 04/08/2024
 ---
 
 # Use Dev Proxy with .NET Aspire applications
@@ -18,7 +18,7 @@ To discover the internal URLs that your .NET Aspire application uses:
 
 1. In a terminal, start the app host project
 
-    ```sh
+    ```console
     dotnet run --project src/MyApp.Host/MyApp.Host.csproj
     ```
 
@@ -30,7 +30,7 @@ To discover the internal URLs that your .NET Aspire application uses:
 
 Start Dev Proxy and configure it to intercept the requests to the internal URLs that you discovered in the previous step:
 
-```sh
+```console
 devproxy --urls-to-watch "http://localhost:5222/*"
 ```
 
@@ -41,7 +41,7 @@ devproxy --urls-to-watch "http://localhost:5222/*"
 
 Start your .NET Aspire application and configure it to use Dev Proxy:
 
-```sh
+```console
 HTTP_PROXY=http://127.0.0.1:8000 dotnet run --project src/MyApp.Host/MyApp.Host.csproj
 ```
 

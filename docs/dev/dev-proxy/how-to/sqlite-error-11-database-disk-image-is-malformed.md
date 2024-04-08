@@ -3,7 +3,7 @@ title: "SQLite Error 11: 'database disk image is malformed'"
 description: "How to fix the `SQLite Error 11: 'database disk image is malformed'` error"
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
+ms.date: 04/08/2024
 ---
 
 # SQLite Error 11: 'database disk image is malformed'
@@ -20,6 +20,6 @@ Dev Proxy uses a SQLite database for the [GraphSelectGuidancePlugin](../technica
 
 To fix the error, rebuild the database using the [`msgraphdb`](../technical-reference/msgraphdb.md) command by running:
 
-```sh
+```console
 devproxy msgraphdb
 ```

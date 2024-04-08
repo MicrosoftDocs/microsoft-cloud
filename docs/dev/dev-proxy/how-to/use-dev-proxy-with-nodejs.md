@@ -3,7 +3,7 @@ title: Use Dev Proxy with Node.js applications
 description: How to use Dev Proxy with Node.js applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2024
+ms.date: 04/08/2024
 ---
 
 # Use Dev Proxy with Node.js applications
@@ -34,7 +34,7 @@ bootstrap();
 
 When starting your application, specify the proxy using the `GLOBAL_AGENT_HTTP_PROXY` environment variable and ignore certificate errors.
 
-```bash
+```console
 NODE_TLS_REJECT_UNAUTHORIZED=0 GLOBAL_AGENT_HTTP_PROXY=http://127.0.0.1:8000 node global-node-fetch.mjs
 ```
 
@@ -78,7 +78,7 @@ import axios from 'axios';
 
 Specify the `https_proxy` environment variable either globally or when starting your app.
 
-```bash
+```console
 https_proxy=http://127.0.0.1:8000 node axios.mjs
 ```
 
@@ -155,6 +155,6 @@ FetchError: request to https://jsonplaceholder.typicode.com/posts failed, reason
 
 To fix this issue, you need to set the `NODE_TLS_REJECT_UNAUTHORIZED` environment variable to `0`. You can define it globally, or in-line when starting your app.
 
-```bash
+```console
 NODE_TLS_REJECT_UNAUTHORIZED=0 node index.js
 ```

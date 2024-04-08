@@ -3,7 +3,7 @@ title: Intercept requests from specific processes
 description: How to configure the proxy to intercept requests only from specific processes
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 04/08/2024
 ---
 
 # Intercept requests from specific processes
@@ -16,12 +16,12 @@ However, you might also want to only intercept requests being made from specific
 
 To intercept request from processes by their given process IDs, use the `--watch-pids` option:
 
-```sh
+```console
 devproxy –-watch-pids 870 135100
 ```
 
 To intercept request from processes by their given process names, use the `--watch-process-names` option:
 
-```sh
+```console
 devproxy --watch-process-names msedge pwsh
 ```

@@ -3,7 +3,7 @@ title: Simulate errors from Microsoft Graph APIs
 description: How to configure Dev Proxy to simulate errors from Microsoft Graph APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Simulate errors from Microsoft Graph APIs
@@ -57,7 +57,7 @@ By default, the `GraphRandomErrorPlugin` simulates the following errors.
 
 If you want to test specific behaviors, such as throttling, configure the plugin to only use the relevant errors using the `--allowed-errors` option.
 
-```sh
+```console
 devproxy --allowed-errors 429
 ```
 

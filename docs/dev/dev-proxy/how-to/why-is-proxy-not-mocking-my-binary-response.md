@@ -3,7 +3,7 @@ title: Why is proxy not mocking my binary response
 description: How to fix proxy not mocking binary responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/18/2024
+ms.date: 04/08/2024
 ---
 
 # Why is proxy not mocking my binary response
@@ -18,6 +18,6 @@ Invoke-WebRequest -Method GET -Uri "https://graph.microsoft.com/v1.0/users/id/ph
 
 In bash, wrap the URL in double quotes and add a backslash:
 
-```sh
+```console
 curl -ikx http://localhost:8000 "https://graph.microsoft.com/v1.0/users/id/photo/\$value"
 ```

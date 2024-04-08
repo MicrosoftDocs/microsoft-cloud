@@ -3,7 +3,7 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/08/2024
 ---
 
 # Resolve relative paths
@@ -48,6 +48,6 @@ The `~appFolder` token can be used in any path used by the proxy.
 
 Let's say you want to load a preset configuration, you can use the `~appFolder` token in the path to reference the configuration file located in the proxy installation directory.
 
-```sh
+```console
 devproxy --config-file ~appFolder/presets/microsoft-graph.json
 ```

@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/25/2024
+ms.date: 04/08/2024
 ---
 
 # Test my app with random errors
@@ -75,7 +75,7 @@ Start Dev Proxy with your configuration file and use your app to see how it hand
 
 If you use mocks in your configuration file, you can temporarily disable them by using the `--no-mocks` option.
 
-```sh
+```console
 devproxy --no-mocks
 ```
 

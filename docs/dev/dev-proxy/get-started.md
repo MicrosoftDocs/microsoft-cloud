@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/28/2024
+ms.date: 04/08/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -31,8 +31,8 @@ After executing the script, follow the steps in the output.
 
 # [bash](#tab/bash)
 
-```bash
-bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
+```console
+/bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
 ```
 
 After executing the script, follow the steps in the output.
@@ -79,8 +79,8 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 >
 > # [bash](#tab/bash)
 >
-> ```bash
-> bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
+> ```console
+> /bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
 > ```
 >
 > After executing the script, follow the steps in the output.
@@ -137,7 +137,7 @@ Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
 
 # [bash](#tab/bash)
 
-```sh
+```console
 curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 ```
 
