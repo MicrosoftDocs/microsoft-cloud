@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/20/2024
+ms.date: 04/08/2024
 zone_pivot_groups: client-operating-system
 ---
 
@@ -15,7 +15,7 @@ If you run your .NET application in a Docker container and want to use Dev Proxy
 
 Because your .NET app is running inside a Docker container and Dev Proxy is running on your host, you need to configure the proxy to point to the IP address of your computer (`http://192.0.2.13` in the following example). .NET uses the `HTTPS_PROXY` environment variable to configure the proxy for its HTTP client. To configure the variable for your Docker container, use the `--env, -e` option when starting the container:
 
-```bash
+```console
 docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000 mcr.microsoft.com/dotnet/sdk:8.0 bash
 ```
 
@@ -27,7 +27,7 @@ docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000
 > [!IMPORTANT]
 > When you use Dev Proxy on macOS, you need to attach it to the `0.0.0.0` address to make it accessible from the Docker container. To configure the IP address for Dev Proxy, start it with the following command:
 >
-> ```bash
+> ```console
 > devproxy --ip-address 0.0.0.0
 > ```
 
@@ -84,7 +84,7 @@ When prompted to enter the password, press <kbd>Enter</kbd> without typing anyth
 
 ::: zone pivot="client-operating-system-macos"
 
-```bash
+```console
 # export Dev Proxy certificate
 security find-certificate -c "Dev Proxy CA" -a -p > dev-proxy-ca.pem
 # rename to .crt
@@ -97,7 +97,7 @@ Next, copy the certificate to your Docker container. The easiest way to copy the
 
 Then, in the Docker container, trust the certificate. If you're using the `mcr.microsoft.com/dotnet/sdk` image, you can use the following commands:
 
-```bash
+```console
 # change to the directory where your application is located
 cd /usr/app/src
 # copy the certificate to the trusted certificates directory

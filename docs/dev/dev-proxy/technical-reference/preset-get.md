@@ -3,7 +3,7 @@ title: preset get
 description: preset get command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/26/2024
+ms.date: 04/08/2024
 ---
 
 # preset get
@@ -14,7 +14,7 @@ Downloads a Dev Proxy preset from the [Sample Solution Gallery](https://aka.ms/d
 
 ## Usage
 
-```shell
+```console
 devproxy preset get <preset-id>
 ```
 

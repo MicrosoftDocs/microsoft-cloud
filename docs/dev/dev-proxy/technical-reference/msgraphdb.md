@@ -3,7 +3,7 @@ title: msgraphdb
 description: msgraphdb command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/21/2023
+ms.date: 04/08/2024
 ---
 
 # msgraphdb
@@ -14,7 +14,7 @@ Updates the internal database of Microsoft Graph API metadata.
 
 ## Usage
 
-```shell
+```console
 devproxy msgraphdb
 ```
 

@@ -3,7 +3,7 @@ title: Simulate random errors for your own application
 description: Learn how to use Dev Proxy to simulate random errors for your own application.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/08/2024
+ms.date: 04/08/2024
 ---
 
 # Simulate random errors for your own application
@@ -49,7 +49,7 @@ If you want to use Dev Proxy with a server-side application built with a technol
 
 Start Dev Proxy and monitor the URLs of the APIs that your application calls. For example, if your application calls an API located at `https://api.contoso.com/v1/customers`, start Dev Proxy and monitor the URL pattern `https://api.contoso.com/*`.
 
-```bash
+```console
 devproxy --urls-to-watch "https://api.contoso.com/*"
 ```
 
