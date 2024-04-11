@@ -23,7 +23,9 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 
 You can install Dev Proxy by script, or manually.
 
-# [PowerShell](#tab/powershell)
+# [Automated](#tab/automated)
+
+Install Dev Proxy by running the following PowerShell script:
 
 ```powershell
 (Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
@@ -47,9 +49,11 @@ To start Dev Proxy from any directory, add its installation folder location to y
 ---
 
 > [!NOTE]
-> To try the latest preview features, install the beta version of Dev Proxy by running the following command:
+> To try the latest preview features, install the beta version of Dev Proxy.
 >
-> # [PowerShell](#tab/powershell)
+> # [Automated](#tab/automated)
+>
+> Run the following PowerShell script to install the beta version:
 >
 > ```powershell
 > (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | Invoke-Expression
@@ -67,7 +71,9 @@ To start Dev Proxy from any directory, add its installation folder location to y
 
 The easiest way to install Dev Proxy is by using Homebrew. Alternatively, you can install Dev Proxy manually.
 
-# [Homebrew](#tab/homebrew)
+# [Automated](#tab/automated)
+
+To install Dev Proxy using Homebrew, run the following commands:
 
 ```console
 brew tap microsoft/dev-proxy
@@ -91,7 +97,9 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 > [!NOTE]
 > To try the latest preview features, install the beta version of Dev Proxy.
 >
-> # [Homebrew](#tab/homebrew)
+> # [Automated](#tab/automated)
+>
+> To install Dev Proxy using Homebrew, run the following commands:
 >
 > ```console
 > brew tap microsoft/dev-proxy
@@ -144,23 +152,19 @@ Dev Proxy will intercept requests made to known URLs from any application on you
 
 - Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
 
-# [PowerShell](#tab/powershell)
+In PowerShell, use the `Invoke-WebRequest` cmdlet to send a GET request to the JSON Placeholder API.
 
 ```powershell
 Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
 ```
 
-# [bash](#tab/bash)
+If you use `curl`, send a GET request to the JSON Placeholder API using the following command.
 
 ```console
 curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 ```
 
-# [Manual](#tab/manual)
-
-Use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
-
----
+You can also use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
 
 An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
 
@@ -201,6 +205,10 @@ If you shut down the command prompt session, Dev Proxy doesn't unregister correc
 
 By default, Dev Proxy is configured to intercept any request made to the [JSON Placeholder API](https://jsonplaceholder.typicode.com/). You can configure Dev Proxy to intercept requests to any HTTP API.
 
+::: zone pivot="client-operating-system-macos"
+- In a command prompt, run `brew list dev-proxy` to locate the installation folder.
+- Open the Dev Proxy installation folder in Finder.
+::: zone-end
 - In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
 - Locate the `urlsToWatch` array.
 
