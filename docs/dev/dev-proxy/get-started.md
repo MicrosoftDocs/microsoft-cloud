@@ -1,9 +1,9 @@
 ---
 title: Get started with Dev Proxy
-description: Learn how to install, run and configure Dev Proxy.
+description: Learn how to install, run, and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/11/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -13,26 +13,22 @@ zone_pivot_groups: client-operating-system
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this tutorial, you learn how to install, run and configure Dev Proxy.
+In this tutorial, you learn how to install, run, and configure Dev Proxy.
 
 If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
 
 ## Install Dev Proxy
 
+::: zone pivot="client-operating-system-windows"
+
 You can install Dev Proxy by script, or manually.
 
-# [PowerShell](#tab/powershell)
+# [Automated](#tab/automated)
+
+Install Dev Proxy by running the following PowerShell script:
 
 ```powershell
 (Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
-```
-
-After executing the script, follow the steps in the output.
-
-# [bash](#tab/bash)
-
-```console
-/bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
 ```
 
 After executing the script, follow the steps in the output.
@@ -43,33 +39,21 @@ After executing the script, follow the steps in the output.
 
 To start Dev Proxy from any directory, add its installation folder location to your PATH.
 
-::: zone pivot="client-operating-system-windows"
-
-  1. Open the `Start` menu.
-  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
-  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
-  1. In the `Edit environment variable` dialog box, select the `New` button.
-  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
-  1. Select `OK` to confirm changes.
-
-::: zone-end
-
-::: zone pivot="client-operating-system-macos"
-
-The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
-
-  1. Open your shell profile in a text editor > `~/.zshrc`.
-  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
-  1. Reload your profile > `source ~/.zshrc`.
-
-::: zone-end
+1. Open the `Start` menu.
+1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
+1. In the `Edit environment variable` dialog box, select the `New` button.
+1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
+1. Select `OK` to confirm changes.
 
 ---
 
 > [!NOTE]
-> To try the latest preview features, install the beta version of Dev Proxy by running the following command:
+> To try the latest preview features, install the beta version of Dev Proxy.
 >
-> # [PowerShell](#tab/powershell)
+> # [Automated](#tab/automated)
+>
+> Run the following PowerShell script to install the beta version:
 >
 > ```powershell
 > (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | Invoke-Expression
@@ -77,17 +61,56 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 >
 > After executing the script, follow the steps in the output.
 >
-> # [bash](#tab/bash)
+> # [Manual](#tab/manual)
+>
+> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+
+::: zone-end
+
+::: zone pivot="client-operating-system-macos"
+
+The easiest way to install Dev Proxy is by using Homebrew. Alternatively, you can install Dev Proxy manually.
+
+# [Automated](#tab/automated)
+
+To install Dev Proxy using Homebrew, run the following commands:
+
+```console
+brew tap microsoft/dev-proxy
+brew install dev-proxy
+```
+
+# [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
+
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
+
+  1. Open your shell profile in a text editor > `~/.zshrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
+  1. Reload your profile > `source ~/.zshrc`.
+
+---
+
+> [!NOTE]
+> To try the latest preview features, install the beta version of Dev Proxy.
+>
+> # [Automated](#tab/automated)
+>
+> To install Dev Proxy using Homebrew, run the following commands:
 >
 > ```console
-> /bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
+> brew tap microsoft/dev-proxy
+> brew install dev-proxy-beta
 > ```
->
-> After executing the script, follow the steps in the output.
 >
 > # [Manual](#tab/manual)
 >
 > [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+
+::: zone-end
 
 ## Start Dev Proxy for the first time
 
@@ -114,7 +137,7 @@ The command prompt displays the following output:
 ```text
 8 error responses loaded from devproxy-errors.json
 Listening on 127.0.0.1:8000...
-Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
+Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
 ```
 
@@ -129,23 +152,19 @@ Dev Proxy will intercept requests made to known URLs from any application on you
 
 - Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
 
-# [PowerShell](#tab/powershell)
+In PowerShell, use the `Invoke-WebRequest` cmdlet to send a GET request to the JSON Placeholder API.
 
 ```powershell
 Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
 ```
 
-# [bash](#tab/bash)
+If you use `curl`, send a GET request to the JSON Placeholder API using the following command.
 
 ```console
 curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 ```
 
-# [Manual](#tab/manual)
-
-Use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
-
----
+You can also use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
 
 An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
 
@@ -186,6 +205,10 @@ If you shut down the command prompt session, Dev Proxy doesn't unregister correc
 
 By default, Dev Proxy is configured to intercept any request made to the [JSON Placeholder API](https://jsonplaceholder.typicode.com/). You can configure Dev Proxy to intercept requests to any HTTP API.
 
+::: zone pivot="client-operating-system-macos"
+- In a command prompt, run `brew list dev-proxy` to locate the installation folder.
+- Open the Dev Proxy installation folder in Finder.
+::: zone-end
 - In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
 - Locate the `urlsToWatch` array.
 
