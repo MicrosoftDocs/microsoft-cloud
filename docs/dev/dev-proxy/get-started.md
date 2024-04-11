@@ -1,9 +1,9 @@
 ---
 title: Get started with Dev Proxy
-description: Learn how to install, run and configure Dev Proxy.
+description: Learn how to install, run, and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/11/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -13,11 +13,13 @@ zone_pivot_groups: client-operating-system
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this tutorial, you learn how to install, run and configure Dev Proxy.
+In this tutorial, you learn how to install, run, and configure Dev Proxy.
 
 If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
 
 ## Install Dev Proxy
+
+::: zone pivot="client-operating-system-windows"
 
 You can install Dev Proxy by script, or manually.
 
@@ -29,40 +31,18 @@ You can install Dev Proxy by script, or manually.
 
 After executing the script, follow the steps in the output.
 
-# [bash](#tab/bash)
-
-```console
-/bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
-```
-
-After executing the script, follow the steps in the output.
-
 # [Manual](#tab/manual)
 
 [Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
 
 To start Dev Proxy from any directory, add its installation folder location to your PATH.
 
-::: zone pivot="client-operating-system-windows"
-
-  1. Open the `Start` menu.
-  1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
-  1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
-  1. In the `Edit environment variable` dialog box, select the `New` button.
-  1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
-  1. Select `OK` to confirm changes.
-
-::: zone-end
-
-::: zone pivot="client-operating-system-macos"
-
-The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
-
-  1. Open your shell profile in a text editor > `~/.zshrc`.
-  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
-  1. Reload your profile > `source ~/.zshrc`.
-
-::: zone-end
+1. Open the `Start` menu.
+1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
+1. In the `Edit environment variable` dialog box, select the `New` button.
+1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
+1. Select `OK` to confirm changes.
 
 ---
 
@@ -77,17 +57,52 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 >
 > After executing the script, follow the steps in the output.
 >
-> # [bash](#tab/bash)
+> # [Manual](#tab/manual)
+>
+> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+
+::: zone-end
+
+::: zone pivot="client-operating-system-macos"
+
+The easiest way to install Dev Proxy is by using Homebrew. Alternatively, you can install Dev Proxy manually.
+
+# [Homebrew](#tab/homebrew)
+
+```console
+brew tap microsoft/dev-proxy
+brew install dev-proxy
+```
+
+# [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
+
+The below steps show how to add the proxy to PATH when using [zsh](https://www.zsh.org/) shell. Depending on the shell you use, your profile file might differ.
+
+  1. Open your shell profile in a text editor > `~/.zshrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
+  1. Reload your profile > `source ~/.zshrc`.
+
+---
+
+> [!NOTE]
+> To try the latest preview features, install the beta version of Dev Proxy.
+>
+> # [Homebrew](#tab/homebrew)
 >
 > ```console
-> /bin/bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
+> brew tap microsoft/dev-proxy
+> brew install dev-proxy-beta
 > ```
->
-> After executing the script, follow the steps in the output.
 >
 > # [Manual](#tab/manual)
 >
 > [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+
+::: zone-end
 
 ## Start Dev Proxy for the first time
 
@@ -114,7 +129,7 @@ The command prompt displays the following output:
 ```text
 8 error responses loaded from devproxy-errors.json
 Listening on 127.0.0.1:8000...
-Set endpoint at Ip 127.0.0.1 and port: 8000 as System HTTPS Proxy
+Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
 ```
 
