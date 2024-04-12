@@ -1,9 +1,9 @@
 ---
-title: Mock response object
-description: Structure of the mock response object
+title: Mock object
+description: Structure of the mock object
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 1/09/2024
+ms.date: 04/12/2024
 ---
 
 # Mock object
@@ -24,6 +24,7 @@ Each request has the following properties:
 | `url` | Absolute URL to an API endpoint to respond to | yes | | `https://jsonplaceholder.typicode.com/posts` |
 | `method` | HTTP verb used to match request with `url` | no | `GET` | `GET` |
 | `nth` | Determines that proxy should respond only after when intercepting the request for the nth time | no | | `2` |
+| `bodyFragment` | A string that should be present in the request body | no | | `foo` |
 
 ### Remarks
 
@@ -32,6 +33,8 @@ Use asterisk (`*`) in the `url` property if you want to match any series of char
 When defining mocks, place the most specific mocks first. For example, if you have two mocks, one for `https://jsonplaceholder.typicode.com/posts` and one for `https://jsonplaceholder.typicode.com/*`, place the first mock first. Otherwise, Dev Proxy matches the second mock first and return the response for `https://jsonplaceholder.typicode.com/*` for all requests.
 
 Use the `nth` property if you need to send a different to the same request URL. For example, use it to simulate a long-running operation. The first time you call the API, it returns a response with an `inprogress` message. The second time you call the API, it returns a response with the `completed` message. For more information about the `nth` property, see [Mock nth request](../how-to/mock-nth-request.md).
+
+Using the `bodyFragment` property, you can match requests based on the body content. For example, if you want to match requests that contain the `foo` string in the body, set the `bodyFragment` property to `foo`. Dev Proxy uses `bodyFragment` only for requests other than `GET`.
 
 ## Response object
 
@@ -131,6 +134,32 @@ Respond on `nth` request
       "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
       "status": "completed",
       "error": null
+    }
+  }
+}
+```
+
+Respond matching the request body:
+
+```json
+{
+  "request": {
+    "url": "https://login.microsoftonline.com/fa15d692-e9c7-4460-a743-29f29522229/oauth2/v2.0/token",
+    "method": "POST",
+    "bodyFragment": "scope=https%3A%2F%2Fapi.contoso.com%2FDocuments.Read"
+  },
+  "response": {
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      }
+    ],
+    "body": {
+      "token_type": "Bearer",
+      "expires_in": 3599,
+      "ext_expires_in": 3599,
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSU..."
     }
   }
 }
