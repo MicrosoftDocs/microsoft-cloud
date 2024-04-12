@@ -3,7 +3,7 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/12/2024
 ---
 
 # MockResponsePlugin
@@ -46,3 +46,7 @@ Simulates responses.
 | ---------------- | ------------------------------------------ | :-----: |
 | `-n, --no-mocks` | Disable loading mock requests              | `false` |
 | `--mocks-file`   | Path to the file containing mock responses |    -    |
+
+## More information
+
+- [Mock object](../technical-reference/response-object.md)
