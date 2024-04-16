@@ -21,17 +21,15 @@ If you do run into any difficulties, don’t hesitate to contact us by raising a
 
 ::: zone pivot="client-operating-system-windows"
 
-You can install Dev Proxy by script, or manually.
+The easiest way to install Dev Proxy is by using winget. Alternatively, you can install Dev Proxy manually.
 
 # [Automated](#tab/automated)
 
-Install Dev Proxy by running the following PowerShell script:
+Install Dev Proxy using winget, run the following command:
 
-```powershell
-(Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
+```console
+winget install Microsoft.DevProxy --silent
 ```
-
-After executing the script, follow the steps in the output.
 
 # [Manual](#tab/manual)
 

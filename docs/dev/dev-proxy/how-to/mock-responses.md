@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/12/2024
+ms.date: 04/16/2024
 ---
 
 # Mock responses
@@ -168,6 +168,32 @@ When you use the following configuration, proxy returns the same response when y
   }
 },
 ```
+
+## Respond with contents of a file
+
+To keep your mocks file clean and organized, you can store the contents of the response in a separate file and reference it in the mocks file. To instruct Dev Proxy, to load the mock response body from a file, set the `body` property to `@` followed by the file path relative to the mocks file.
+
+For example, the following mock response configuration, instructs Dev Proxy to respond to any request to `https://graph.microsoft.com/v1.0/me` with the contents of the `response.json` file located in the same folder as the mocks file.
+
+```json
+{
+  "request": {
+    "url": "https://graph.microsoft.com/v1.0/me",
+    "method": "GET"
+  },
+  "response": {
+    "body": "@response.json",
+    "headers": [
+      {
+        "name": "content-type",
+        "value": "application/json; odata.metadata=minimal"
+      }
+    ]
+  }
+}
+```
+
+Using the `@`-token works with text and [binary files](./mock-responses-that-return-binary-data.md).
 
 ## Microsoft Graph Batch support
 
