@@ -27,7 +27,7 @@ The easiest way to install Dev Proxy is by using winget. Alternatively, you can 
 
 Install Dev Proxy using winget, run the following command:
 
-```powershell
+```console
 winget install Microsoft.DevProxy --silent
 ```
 
