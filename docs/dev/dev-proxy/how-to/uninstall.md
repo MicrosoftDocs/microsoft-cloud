@@ -13,7 +13,7 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-windows"
 
-1. Remove the folder where you extracted the files from the ZIP on your disk.
+1. Uninstall Dev Proxy by running in the command prompt: `winget uninstall Microsoft.DevProxy`
 1. Remove the `Dev Proxy` certificate from your machine.
     1. Open `Start Menu`.
     1. In the search box, Enter `Manage user certificates`.
