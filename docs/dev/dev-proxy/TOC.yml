@@ -240,5 +240,7 @@
       items:
       - name: msgraphdb
         href: technical-reference/msgraphdb.md
+      - name: outdated
+        href: technical-reference/outdated.md
       - name: preset get
         href: technical-reference/preset-get.md
