@@ -10,7 +10,6 @@ ms.date: 04/19/2024
 
 Checks if the APIs used in an app are production version of the APIs registered in the specified Azure API Center instance.
 
-// todo update image
 :::image type="content" source="../media/api-center-production-version-plugin.png" alt-text="Screenshot of a command prompt showing Dev Proxy checking if the recorded API requests match production version APIs registered in Azure API Center." lightbox="../media/api-center-production-version-plugin.png":::
 
 ## Plugin instance definition
