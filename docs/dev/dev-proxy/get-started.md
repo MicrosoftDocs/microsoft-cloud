@@ -51,13 +51,11 @@ To start Dev Proxy from any directory, add its installation folder location to y
 >
 > # [Automated](#tab/automated)
 >
-> Run the following PowerShell script to install the beta version:
+> To install Dev Proxy using winget, run the following command:
 >
-> ```powershell
-> (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | Invoke-Expression
+> ```console
+> winget install Microsoft.DevProxy.Beta --silent
 > ```
->
-> After executing the script, follow the steps in the output.
 >
 > # [Manual](#tab/manual)
 >
