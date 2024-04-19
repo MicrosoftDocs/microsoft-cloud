@@ -22,4 +22,5 @@ None
 
 ## Options
 
-None
+| Name | Description |
+| `--short` | Return version only |
