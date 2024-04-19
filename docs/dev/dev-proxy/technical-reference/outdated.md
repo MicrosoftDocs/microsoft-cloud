@@ -23,4 +23,5 @@ None
 ## Options
 
 | Name | Description |
+| --- | --- |
 | `--short` | Return version only |
