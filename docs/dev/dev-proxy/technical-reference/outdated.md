@@ -8,7 +8,7 @@ ms.date: 04/18/2024
 
 # outdated
 
-Checks if the installed version is outdated and returns the version to upgrade to. The version check behavior is determined by the `newVersionNotification` in the `devproxyrc.json` file.
+Checks if the installed version is outdated and returns the version to upgrade to. The `newVersionNotification` property `devproxyrc.json` file determines the version check behavior.
 
 ## Usage
 
@@ -22,4 +22,6 @@ None
 
 ## Options
 
-None
+| Name | Description |
+| --- | --- |
+| `--short` | Return version only |
