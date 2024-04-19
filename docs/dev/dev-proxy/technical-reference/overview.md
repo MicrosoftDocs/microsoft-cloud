@@ -38,6 +38,7 @@ List of plugins that work with Azure API Center.
 Name | Description
 --- | ---
 [ApiCenterOnboardingPlugin](./apicenteronboardingplugin.md)|Checks if the APIs used in an app are registered in the specified Azure API Center instance.
+[ApiCenterProductionVersionPlugin](./apicenterproductionversionplugin.md)|Checks if the APIs used in an app are production version of the APIs registered in the specified Azure API Center instance.
 
 ## Microsoft Entra plugins
 

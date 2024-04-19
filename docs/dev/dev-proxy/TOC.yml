@@ -184,6 +184,8 @@
       items:
       - name: ApiCenterOnboardingPlugin
         href: technical-reference/apicenteronboardingplugin.md
+      - name: ApiCenterProductionVersionPlugin
+        href: technical-reference/apicenterproductionversionplugin.md
       - name: CachingGuidancePlugin
         href: technical-reference/CachingGuidancePlugin.md
       - name: CrudApiPlugin
