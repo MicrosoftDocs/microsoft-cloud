@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/25/2024
+ms.date: 04/19/2024
 ---
 
 # devproxyrc
@@ -12,17 +12,17 @@ Default configuration.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.17.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
     },
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "plugins\\dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
       "configSection": "genericRandomErrorPlugin"
     }
   ],
@@ -34,6 +34,7 @@ Default configuration.
   },
   "rate": 50,
   "labelMode": "text",
-  "logLevel": "info"
+  "logLevel": "information",
+  "newVersionNotification": "stable"
 }
 ```
