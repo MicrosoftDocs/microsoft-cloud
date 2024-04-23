@@ -57,9 +57,15 @@ To start Dev Proxy from any directory, add its installation folder location to y
 > winget install Microsoft.DevProxy.Beta --silent
 > ```
 >
+>
 > # [Manual](#tab/manual)
 >
 > [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+>
+> ---
+>
+> To run the beta version of Dev Proxy use `devproxy-beta`
+>
 
 ::: zone-end
 
@@ -105,6 +111,11 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 > # [Manual](#tab/manual)
 >
 > [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+>
+> ---
+>
+> To run the beta version of Dev Proxy use `devproxy-beta`
+>
 
 ::: zone-end
 
