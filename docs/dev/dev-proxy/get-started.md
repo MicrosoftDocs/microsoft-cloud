@@ -300,7 +300,7 @@ First let's locate the location of the file that contains the error definitions.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.17.0/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,
