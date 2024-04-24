@@ -1,6 +1,6 @@
 ---
 title: Simulate a CRUD API across the internet
-description: How to simulate a CRUD API across the internet
+description: How to simulate a CRUD API across the internet.
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 04/24/2024
