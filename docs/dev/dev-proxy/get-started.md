@@ -32,7 +32,7 @@ winget install Microsoft.DevProxy --silent
 ```
 
 > [!IMPORTANT]
-> The Dev Proxy installer will add a new entry to PATH. To use Dev Proxy after installation you must first create a new session to ensure that the PATH environment variables have refreshed
+> Dev Proxy installer adds a new entry to PATH. To use Dev Proxy after installation, you must restart the command prompt to ensure that the PATH environment variables have refreshed.
 >
 
 # [Manual](#tab/manual)
