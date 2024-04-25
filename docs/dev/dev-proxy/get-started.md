@@ -31,6 +31,10 @@ Install Dev Proxy using winget, run the following command:
 winget install Microsoft.DevProxy --silent
 ```
 
+> [!IMPORTANT]
+> The Dev Proxy installer will add a new entry to PATH. To use Dev Proxy after installation you must first create a new session to ensure that the PATH environment variables have refreshed
+>
+
 # [Manual](#tab/manual)
 
 [Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
