@@ -25,11 +25,15 @@ The easiest way to install Dev Proxy is by using winget. Alternatively, you can 
 
 # [Automated](#tab/automated)
 
-Install Dev Proxy using winget, run the following command:
+To install Dev Proxy using winget, run the following command:
 
 ```console
 winget install Microsoft.DevProxy --silent
 ```
+
+> [!IMPORTANT]
+> Dev Proxy installer adds a new entry to PATH. To use Dev Proxy after installation, you must restart the command prompt to ensure that the PATH environment variables have refreshed.
+>
 
 # [Manual](#tab/manual)
 
