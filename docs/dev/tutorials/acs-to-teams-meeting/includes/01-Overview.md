@@ -18,6 +18,7 @@ In this tutorial, you'll learn how Azure Communication Services can be used in a
 - [git](/devops/develop/git/install-and-set-up-git)
 - [Visual Studio Code](https://code.visualstudio.com/) or another IDE of your choice.
 - [Azure Functions Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+- [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp)
 - [Azure subscription](https://azure.microsoft.com/free/search)
 - [Microsoft 365 developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
 - [GitHub account](https://github.com)
