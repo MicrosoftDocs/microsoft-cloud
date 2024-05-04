@@ -2,19 +2,26 @@
 
 1. Open *local.settings.json* and update the `ACS_CONNECTION_STRING` value with the ACS connection string you saved in an earlier exercise.
 
-1. Open *Startup.cs* in Visual Studio and explore the second `AddSingleton()` call in the `Configure()` method.
+1. Open *Startup.cs* in Visual Studio and explore the second `AddSingleton()` call in the `ConfigureServices()` method.
 
     ```csharp
-    public override void Configure(IFunctionsHostBuilder builder)
-    {
-        ...
+    var host = new HostBuilder()
+        .ConfigureFunctionsWebApplication()
+        .ConfigureServices(services => {
 
-        builder.Services.AddSingleton(static p =>
-        {
-            var config = p.GetRequiredService<IConfiguration>();
-            var connectionString = config.GetValue<string>("ACS_CONNECTION_STRING");
-            return new CommunicationIdentityClient(connectionString);
-        });
+            ...
+
+            services.AddSingleton(static p =>
+            {
+                var config = p.GetRequiredService<IConfiguration>();
+                var connectionString = config.GetValue<string>("ACS_CONNECTION_STRING");
+                return new CommunicationIdentityClient(connectionString);
+            });
+
+            ...
+
+        })
+        .Build();
     }
     ```
 
@@ -26,10 +33,10 @@
     - A field named `Scopes` is defined that includes the `CommunicationTokenScope.VoIP` scope. This scope is used to create the access token for the video call.
 
         ```csharp
-        private static readonly CommunicationTokenScope[] Scopes = new[]
-        {
+        private static readonly CommunicationTokenScope[] Scopes =
+        [
             CommunicationTokenScope.VoIP,
-        };
+        ];
         ```
 
     - The `CommunicationIdentityClient` singleton instance created in *Startup.cs* is injected into the constructor and assigned to the `_tokenClient` field.
@@ -46,24 +53,28 @@
 1. Explore the `Run()` method in *ACSTokenFunction.cs*:
 
     ```csharp
-    [FunctionName("ACSTokenFunction")]
-    public async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
+    [Function("HttpTriggerAcsToken")]
+    public async Task<HttpResponseData> Run(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequestData req,
         ILogger log)
     {
         var user = await _tokenClient.CreateUserAsync();
         var userToken = await _tokenClient.GetTokenAsync(user, Scopes);
-    
-        return new OkObjectResult(new 
-        { 
-            userId = user.Value.Id, 
-            userToken.Value.Token, 
-            userToken.Value.ExpiresOn 
-        });
+
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        await response.WriteAsJsonAsync(
+            new
+            {
+                userId = user.Value.Id,
+                userToken.Value.Token,
+                userToken.Value.ExpiresOn
+            }
+        );
+        return response;
     }
     ```
 
-    - It defines a function named of `ACSTokenFunction` that can be called with an HTTP GET request.
+    - It defines a function named of `HttpTriggerAcsToken` that can be called with an HTTP GET request.
     - A new ACS user is created by calling the `_tokenClient.CreateUserAsync()` method.
     - An access token used for video calls is created by calling the `_tokenClient. GetTokenAsync()` method.
     - The user ID and token are returned from the function as a JSON object.
@@ -71,7 +82,7 @@
 1. Run the program by pressing <kbd>F5</kbd> in Visual Studio or by selecting **Debug --> Start Debugging** from the menu. This will start the Azure Functions project and make the `ACSTokenFunction` available to call.
 
     > [!NOTE]
-    > If you're using VS Code you can open a terminal window in the *GraphACSFunctions* folder and run `dotnet run`.
+    > If you're using VS Code you can open a terminal window in the *GraphACSFunctions* folder and run `func start`. This assumes that you have the [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp) installed on your machine.
 
 1. Now that the Azure Functions are running locally, the client needs to be able to call into them to get the ACS user identity and token values.
 

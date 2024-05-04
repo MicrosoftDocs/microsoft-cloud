@@ -39,10 +39,10 @@ items:
     content: |
       [!INCLUDE [](acs-to-teams-meeting/includes/05-Create-ACS-Identity-Token.md)]
 
-  - title: Deploy the App to Azure Static Web Apps
-    durationInMinutes: 15
-    content: |
-      [!INCLUDE [](acs-to-teams-meeting/includes/06-Deploy-to-SWA.md)]
+  # - title: Deploy the App to Azure Static Web Apps
+  #   durationInMinutes: 15
+  #   content: |
+  #     [!INCLUDE [](acs-to-teams-meeting/includes/06-Deploy-to-SWA.md)]
 
   - title: Deploy the App to Azure Functions and Azure Container Apps
     durationInMinutes: 15
