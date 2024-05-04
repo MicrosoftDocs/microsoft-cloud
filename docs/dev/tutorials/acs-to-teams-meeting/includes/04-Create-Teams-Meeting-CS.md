@@ -8,7 +8,7 @@
     {
         "IsEncrypted": false,
         "Values": {
-            "FUNCTIONS_WORKER_RUNTIME": "node",
+            "FUNCTIONS_WORKER_RUNTIME": "dotnet",
             "TENANT_ID": "",
             "CLIENT_ID": "",
             "CLIENT_SECRET": "",
