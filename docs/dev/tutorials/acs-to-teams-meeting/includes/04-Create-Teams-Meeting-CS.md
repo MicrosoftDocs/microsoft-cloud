@@ -8,7 +8,7 @@
     {
         "IsEncrypted": false,
         "Values": {
-            "FUNCTIONS_WORKER_RUNTIME": "node",
+            "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
             "TENANT_ID": "",
             "CLIENT_ID": "",
             "CLIENT_SECRET": "",
@@ -45,34 +45,39 @@
 1. Open `GraphACSFunctions.sln` located in the *acs-to-teams-meeting/server/csharp* folder and note that it includes the following Microsoft Graph and Identity packages:
 
     ```xml
-    <PackageReference Include="Azure.Communication.Identity" Version="1.2.0" />
-    <PackageReference Include="Azure.Identity" Version="1.8.2" />
-    <PackageReference Include="Microsoft.Graph" Version="4.53.0" />
+    <PackageReference Include="Azure.Communication.Identity" Version="1.3.1" />
+    <PackageReference Include="Azure.Identity" Version="1.11.2" />
+    <PackageReference Include="Microsoft.Graph" Version="5.51.0" />
     ```
 
-1. Go to *Startup.cs* and note the following code in the `Configure` method:
+1. Go to *Program.cs* and note the following code in the `ConfigureServices` method:
 
     ```csharp
-    public override void Configure(IFunctionsHostBuilder builder)
-    {
-        builder.Services.AddSingleton(static p =>
-        {
-            var config = p.GetRequiredService<IConfiguration>();
-            var clientSecretCredential = new ClientSecretCredential(
-                config.GetValue<string>("TENANT_ID"),
-                config.GetValue<string>("CLIENT_ID"),
-                config.GetValue<string>("CLIENT_SECRET")
-            );
+        var host = new HostBuilder()
+            .ConfigureFunctionsWebApplication()
+            .ConfigureServices(services => {
+                services.AddApplicationInsightsTelemetryWorkerService();
+                services.ConfigureFunctionsApplicationInsights();
+                services.AddSingleton(static p =>
+                {
+                    var config = p.GetRequiredService<IConfiguration>();
+                    var clientSecretCredential = new ClientSecretCredential(
+                        config.GetValue<string>("TENANT_ID"),
+                        config.GetValue<string>("CLIENT_ID"),
+                        config.GetValue<string>("CLIENT_SECRET")
+                    );
 
-            return new GraphServiceClient(
-                clientSecretCredential,
-                new[] { "https://graph.microsoft.com/.default" }
-            );
-        });
+                    return new GraphServiceClient(
+                        clientSecretCredential,
+                        ["https://graph.microsoft.com/.default"]
+                    );
+                });
 
-        ...
+                ...
 
-        builder.Services.AddSingleton<IGraphService, GraphService>();
+                services.AddSingleton<IGraphService, GraphService>();
+            })
+            .Build();
     }
     ```
 
@@ -109,8 +114,7 @@
                 .Users[userId]
                 .Calendar
                 .Events
-                .Request()
-                .AddAsync(new()
+                .PostAsync(new()
                 {
                     Subject = "Customer Service Meeting",
                     Start = new()
@@ -145,17 +149,21 @@
 1. Locate the `Run` method:
 
     ```csharp
-    [FunctionName("TeamsMeetingFunction")]
-    public async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
-        ILogger log) => 
-        new OkObjectResult(await _graphService.CreateMeetingAsync());
+    [Function("HttpTriggerTeamsUrl")]
+    public async Task<HttpResponseData> Run(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequestData req,
+        ILogger log)
+    {
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        await response.WriteStringAsync(await _graphService.CreateMeetingAsync());
+        return response;
+    }
     ```
 
-    - It defines a function named of `TeamsMeetingFunction` that can be called with an HTTP GET request.
+    - It defines a function name of `HttpTriggerTeamsUrl` that can be called with an HTTP GET request.
     - It calls `_graphService.CreateMeetingAsync()`, which creates a new event and returns the join URL.
     
 1. Run the program by pressing <kbd>F5</kbd> in Visual Studio or by selecting **Debug --> Start Debugging** from the menu. This action starts the Azure Functions project and make the `ACSTokenFunction` available to call.
 
 > [!NOTE]
-> If you're using VS Code you can open a terminal window in the *GraphACSFunctions* folder and run `dotnet run`.
+> If you're using VS Code you can open a terminal window in the *GraphACSFunctions* folder and run `func start`. This assumes that you have the [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?tabs=linux%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp) installed on your machine.
