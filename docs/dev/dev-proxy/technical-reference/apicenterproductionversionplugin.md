@@ -3,7 +3,7 @@ title: ApiCenterProductionVersionPlugin
 description: ApiCenterProductionVersionPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/19/2024
+ms.date: 05/16/2024
 ---
 
 # ApiCenterProductionVersionPlugin
@@ -40,8 +40,6 @@ Checks if the APIs used in an app are production version of the APIs registered 
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| `excludeDevCredentials` | Set to `true` for Dev Proxy not to use Azure dev tools credentials to connect to Azure API Center. | `false` |
-| `excludeProdCredentials` | Set to `true` for Dev Proxy not to use Azure production credentials to connect to Azure API Center. | `true` |
 | `resourceGroupName` | Name of the resource group where the Azure API Center is located. | None |
 | `serviceName` | Name of the Azure API Center instance that Dev Proxy should use to check if the APIs used in the app are registered. | None |
 | `subscriptionId` | ID of the Azure subscription where the Azure API Center instance is located. | None |
@@ -55,21 +53,30 @@ None
 
 The `ApiCenterProductionVersionPlugin` plugin checks if the APIs used in an app are production version of the APIs registered in the specified Azure API Center instance. If the APIs match nonproduction versions, the plugin shows a warning.
 
-To connect to Azure API Center, the plugin uses Azure credentials. If you configure the `excludeDevCredentials` property to `false` (default), the plugin uses the following credentials (in this order):
+To connect to Azure API Center, the plugin uses Azure credentials (in this order):
 
-- Shared Token Cache
+- Environment
+- Workload Identity
+- Managed Identity
 - Visual Studio
 - Visual Studio Code
 - Azure CLI
 - Azure PowerShell
 - Azure Developer CLI
 
-If you configure the `excludeProdCredentials` property to `false`, the plugin uses the following credentials (in this order):
-
-- Environment
-- Workload Identity
-- Managed Identity
-
-For local use, we recommend configuring the `excludeDevCredentials` property to `false` and the `excludeProdCredentials` property to `true` to use the development credentials. For use in CI/CD environments, configure the `excludeDevCredentials` property to `true` and the `excludeProdCredentials` property to `false` to use the production credentials.
-
 If the plugin fails to get an access token to access Azure, it shows an error and Dev Proxy disables it. Sign in to Azure using either of these tools, and restart Dev Proxy to use the `ApiCenterProductionVersionPlugin` plugin.
+
+If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
+
+```json
+{
+  "apiCenterOnboardingPlugin": {
+    "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
+    "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
+    "serviceName": "@AZURE_APIC_INSTANCE_NAME",
+    "workspaceName": "@AZURE_APIC_WORKSPACE_NAME"
+  }
+}
+```
+
+In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
