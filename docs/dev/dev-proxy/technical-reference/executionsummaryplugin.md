@@ -3,7 +3,7 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 05/22/2024
 ---
 
 # ExecutionSummaryPlugin
@@ -39,12 +39,10 @@ Generates a summary report of the requests that pass through the proxy.
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| `filePath` | Path to the file where the summary should be saved. If not specified, the summary is printed to the console. Path can be absolute or relative to the current working directory. | No default |
 | `groupBy` | How proxy should group the information in the summary. Available options: `url`, `messageType` | `url` |
 
 ## Command line options
 
 | Name | Description | Default |
 |----------|-------------|:-------:|
-| `--summary-file-path` | Path to the file where the summary should be saved. If not specified, the summary is printed to the console. Path can be absolute or relative to the current working directory. | No default |
 | `--summary-group-by` | How proxy should group the information in the summary. Available options: `url`, `messageType` | `url` |
