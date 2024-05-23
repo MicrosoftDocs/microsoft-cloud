@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 05/22/2024
 ---
 
 # MinimalPermissionsGuidancePlugin
@@ -18,29 +18,18 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 {
   "name": "MinimalPermissionsGuidancePlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "minimalPermissionsGuidancePlugin"
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
 }
 ```
 
 ## Configuration example
 
-```json
-{
-  "minimalPermissionsGuidancePlugin": {
-    "filePath": "permissions-summary.json"
-  }
-}
-```
+None
 
 ## Configuration properties
 
-| Property | Description | Default |
-|----------|-------------|:-------:|
-| `filePath` | Path to the file where proxy saves the generated permissions summary. If not specified, proxy only displays the summary in the command prompt. | None |
+None
 
 ## Command line options
 
-| Name | Description | Default |
-|----------|-------------|:-------:|
-| `--minimal-permissions-summary-file-path` | Path to the file where proxy saves the generated permissions summary. If not specified, proxy only displays the summary in the command prompt. | None |
+None
