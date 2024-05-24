@@ -104,6 +104,16 @@
          "source_path": "docs/dev/dev-proxy/technical-reference/supported-http-error-status-codes.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/graphrandomerrorplugin",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/change-console-output-to-use-icons.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/console-output-ascii-icons.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
+         "redirect_document_id": false
       }
    ]
 }
