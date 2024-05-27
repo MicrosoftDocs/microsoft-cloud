@@ -114,6 +114,11 @@
          "source_path": "docs/dev/dev-proxy/technical-reference/console-output-ascii-icons.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/response-object.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/mockresponseplugin",
+         "redirect_document_id": false
       }
    ]
 }

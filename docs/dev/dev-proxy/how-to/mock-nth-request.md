@@ -8,7 +8,7 @@ ms.date: 04/08/2024
 
 # Mock nth request
 
-Dev Proxy supports mocking n-th through the `nth` property on the [request](../technical-reference/response-object.md) object.
+Dev Proxy supports mocking n-th through the `nth` property on the [request](../technical-reference/mockresponseplugin.md#request-object) object.
 
 > [!TIP]
 > Download this preset by running in the command prompt `devproxy preset get microsoft-graph-connector`.
