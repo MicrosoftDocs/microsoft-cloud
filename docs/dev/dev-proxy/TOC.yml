@@ -18,6 +18,8 @@
       items: 
       - name: Intercept requests from specific processes
         href: how-to/intercept-requests-from-specific-processes.md
+      - name: Intercept requests to localhost
+        href: how-to/intercept-localhost-requests.md
       - name: Exclude a URL
         href: how-to/exclude-a-URL.md
       - name: Inspect requests and responses using Chrome DevTools
@@ -106,8 +108,12 @@
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
-      - name: With GitHub Actions
-        href: how-to/use-dev-proxy-with-github-actions.md
+      - name: In CI/CD scenarios
+        items:
+          - name: Overview
+            href: how-to/use-dev-proxy-in-ci-cd-overview.md
+          - name: With GitHub Actions
+            href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
@@ -164,8 +170,6 @@
   items: 
     - name: Overview
       href: technical-reference/overview.md
-    - name: Console output ASCII icons
-      href: technical-reference/console-output-ASCII-icons.md
     - name: Console output text labels
       href: technical-reference/console-output-text-labels.md
     - name: devproxyrc
@@ -180,8 +184,6 @@
       href: technical-reference/Proxy-settings.md
     - name: Keyboard shortcuts
       href: technical-reference/Keyboard-shortcuts.md
-    - name: Response object
-      href: technical-reference/Response-object.md
     - name: Plugins
       items:
       - name: ApiCenterOnboardingPlugin
@@ -240,6 +242,14 @@
             href: technical-reference/MinimalPermissionsPlugin.md
           - name: ODSPSearchGuidancePlugin
             href: technical-reference/odspsearchguidanceplugin.md
+      - name: Reporters
+        items:
+          - name: JsonReporter
+            href: technical-reference/jsonreporter.md
+          - name: MarkdownReporter
+            href: technical-reference/markdownreporter.md
+          - name: PlainTextReporter
+            href: technical-reference/plaintextreporter.md
     - name: Commands
       items:
       - name: msgraphdb

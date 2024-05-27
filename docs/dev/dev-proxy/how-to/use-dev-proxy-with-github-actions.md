@@ -3,7 +3,7 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 03/28/2024
+ms.date: 05/27/2024
 ---
 
 # Use Dev Proxy with GitHub Actions
@@ -13,110 +13,62 @@ Using Dev Proxy with GitHub Actions is a great way to test your applications in 
 > [!NOTE]
 > In this example, we will make use of an Ubuntu runner for GitHub Actions.
 
-## Install the Dev Proxy
+## Install Dev Proxy and cache it
 
-The first step is to install the Dev Proxy on the runner. You can do this by adding the following steps to your workflow file:
+Start, by installing Dev Proxy on the runner, but do it only if it isn't already installed. To install and cache Dev Proxy, add the following steps to your workflow file:
 
 ```yaml
+- name: Cache Dev Proxy
+  id: cache-devproxy
+  uses: actions/cache@v4
+  with:
+    path: ./devproxy
+    key: devproxy-linux-v0.18.0
+
 - name: Install Dev Proxy
+  if: steps.cache-devproxy.outputs.cache-hit != 'true'
   run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
 ```
 
 ## Run the Dev Proxy
 
-After installing the Dev Proxy, you need to start it. You can do this by adding the following step to your workflow file:
+When you run Dev Proxy in a CI/CD pipeline, you need to [start it from a script](./use-dev-proxy-in-ci-cd-overview.md), so that you can close it gracefully. When you have your script ready, invoke it in your workflow file:
 
 ```yaml
-- name: Start Dev Proxy
-  run: devproxy
+- name: Run Dev Proxy
+  run: /bin/bash run-dev-proxy.sh
 ```
 
-## Trust the Dev Proxy certificate
+## Upload Dev Proxy logs as artifacts
 
-Once the Dev Proxy is started, it will have generated a self-signed certificate. To trust this certificate, you need to add the following step to your workflow file:
+When you run Dev Proxy in a CI/CD pipeline, you might want to analyze the logs later. To keep Dev Proxy logs, you can upload them as artifacts:
 
 ```yaml
-- name: Install the Dev Proxy's certificate
-  timeout-minutes: 1
+- name: Upload Dev Proxy logs
+  uses: actions/upload-artifact@v4
+  with:
+    name: ${{ env.LOG_FILE }}
+    path: ${{ env.LOG_FILE }}
+```
+
+## Upload Dev Proxy reports
+
+If you're using Dev Proxy to analyze the requests, you might want to upload the reports as artifacts as well:
+
+```yaml
+- name: Upload Dev Proxy reports
+  uses: actions/upload-artifact@v4
+  with:
+    name: Reports
+    path: ./*Reporter*
+```
+
+## Write job summary
+
+To make it easier to understand the results of your workflow, you can write a summary at the end of your job. Typically, you use the `MarkdownReporter` for generating job summaries, because it produces output in Markdown format:
+
+```yaml
+- name: Write summary
   run: |
-    echo "Export the Dev Proxy's Root Certificate"
-    openssl pkcs12 -in ~/.config/dev-proxy/rootCert.pfx -clcerts -nokeys -out dev-proxy-ca.crt -passin pass:""
-
-    echo "Installing the Dev Proxy's Root Certificate"
-    sudo cp dev-proxy-ca.crt /usr/local/share/ca-certificates/
-
-    echo "Updating the CA certificates"
-    sudo update-ca-certificates
-    echo "Certificate trusted."
-
-    # Set the system proxy settings (optional)
-    echo "http_proxy=http://127.0.0.1:8000" >> $GITHUB_ENV
-    echo "https_proxy=http://127.0.0.1:8000" >> $GITHUB_ENV    
-```
-
-## Test the Dev Proxy
-
-With the Dev Proxy installed, started, and the certificate trusted, you can now run your application and see how it behaves with the Dev Proxy.
-
-```yaml
-- name: Testing the Dev Proxy
-  run: |
-    # Using the Dev Proxy
-    curl -ix http://127.0.0.1:8000 https://jsonplaceholder.typicode.com/posts
-
-    # Using the system proxy settings (when http_proxy and https_proxy are set)
-    curl -i https://jsonplaceholder.typicode.com/posts
-```
-
-## Full workflow file
-
-Here is the full workflow file with all the steps included:
-
-```yaml
-name: Ubuntu Dev Proxy
-
-on:
-  push:
-    branches:
-      - main
-      - dev
-  workflow_dispatch:
-
-jobs:
-  test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Dev Proxy
-        run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
-
-      - name: Run Dev Proxy
-        run: ./devproxy/devproxy &
-
-      - name: Install the Dev Proxy's certificate
-        timeout-minutes: 1
-        run: |
-          echo "Export the Dev Proxy's Root Certificate"
-          openssl pkcs12 -in ~/.config/dev-proxy/rootCert.pfx -clcerts -nokeys -out dev-proxy-ca.crt -passin pass:""
-
-          echo "Installing the Dev Proxy's Root Certificate"
-          sudo cp dev-proxy-ca.crt /usr/local/share/ca-certificates/
-
-          echo "Updating the CA certificates"
-          sudo update-ca-certificates
-          echo "Certificate trusted."
-
-          # Set the system proxy settings (optional)
-          echo "http_proxy=http://127.0.0.1:8000" >> $GITHUB_ENV
-          echo "https_proxy=http://127.0.0.1:8000" >> $GITHUB_ENV          
-
-      - name: Testing the Dev Proxy
-        run: |
-          # Using the Dev Proxy
-          curl -ix http://127.0.0.1:8000 https://jsonplaceholder.typicode.com/posts
-
-          # Using the system proxy settings (when http_proxy and https_proxy are set)
-          curl -i https://jsonplaceholder.typicode.com/posts    
+    cat YourPlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
 ```

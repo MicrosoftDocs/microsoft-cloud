@@ -3,66 +3,45 @@ title: Plugin architecture
 description: The architecture of Dev Proxy plugins
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 05/24/2024
 ---
 
 # Plugin architecture
 
-A plugin is a piece of code (DLL) that determines proxy behavior. The proxy executes the plugin code at runtime. Developers can write custom plugins to provide behaviors of their own custom APIs.
+A plugin is a .NET class registered with Dev Proxy that introduces a specific Dev Proxy behavior. A plugin can offer real-time guidance about API usage, simulate API behavior, analyze multiple API requests, or produce a report. Dev Proxy has three types of plugins:
 
-The [`devproxyrc.json`](../technical-reference/devproxyrc.md) file contains the plugin configuration.
+- **intercepting plugins** that intercept requests and responses and can analyze and modify them
+- **reporting plugins** that run on requests [recorded](../how-to/record-and-export-proxy-activity.md) by Dev Proxy
+- **reporters** that generate reports based on the data collected by reporting plugins
 
-The proxy has standard plugins that can be used with any API, and plugins specifically for use with the Microsoft Graph API.
+You register plugins in the [`devproxyrc.json` file](devproxyrc.md). The file contains a list of plugins to load and their configuration.
 
-The standard plugins are:
+Dev Proxy comes with a [collection of plugins](overview.md#plugins) and you can [create custom plugins](../how-to/create-custom-plugin.md) to extend Dev Proxy functionality to match your needs.
 
-- **MockResponsePlugin** responds to requests with a mocked response.
-- **RateLimitingPlugin** simulates behaviors of APIs that return `Rate-Limit` headers in responses.
-- **ODataPluginGuidance** provides guidance to help developers correctly handle retrieving multiple pages of data.
-- **ExecutionSummaryPlugin** exports proxy activity to a summary report.
-- **GenericRandomErrorPlugin** fails requests.
+When Dev Proxy starts, it loads plugins enabled in its configuration file. Depending which plugins you enable, Dev Proxy can provide guidance, simulate API behavior, or analyze API requests. Following sections explain how the different types of plugins work.
 
-Example configuration of the `MockResponsePlugin`:
+## Intercepting plugins
 
-```json
-{
-  "name": "MockResponsePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "mocksPlugin"
-}
-```
+When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch` array, it invokes each intercepting plugin in the order they're listed in the configuration file. Each intercepting plugin inherits from the [`BaseProxyPlugin`](https://github.com/microsoft/dev-proxy/blob/main/dev-proxy-abstractions/BaseProxyPlugin.cs) class, and can subscribe to the following events:
 
-The `configSection` takes a reference to a configuration object. The `mocksPlugin` object describes the name of the file containing mocked responses.
+- `BeforeRequest` - raised when Dev Proxy intercepts a request
+- `BeforeResponse` - raised after Dev Proxy receives a response from the server
+- `AfterResponse` - raised after Dev Proxy sends the response to the client
 
-```json
-"mocksPlugin": {
-  "mocksFile": "mocks.json"
-}
-```
+For each of these events, plugins can define an event handler. In the handler, the plugin can analyze the request and response, and modify it if needed. It can also output guidance messages. To see what's possible, see the [code of plugins provided with Dev Proxy](https://github.com/microsoft/dev-proxy/tree/main/dev-proxy-plugins).
 
-The five Microsoft Graph API plugins provided are:
+## Reporting plugins
 
-- **GraphRandomErrorPlugin** provides random error responses for Microsoft Graph. It returns a random error response from a list of [supported HTTP codes](../technical-reference/graphrandomerrorplugin.md).
-- **GraphSdkGuidancePlugin** provides guidance when a Microsoft Graph SDK isn't used.
-- **GraphSelectGuidancePlugin** provides guidance when the `$select` query-string parameter isn't used on a GET request.
-- **GraphBetaSupportGuidancePlugin** provides guidance when a Microsoft Graph v1.0 endpoint isn't used.
-- **GraphClientRequestIdGuidancePlugin** provides guidance when the `client-request-id` request header isn't used.
+Dev Proxy allows you to record API requests and responses. You typically use recording to report on API usage or analyze multiple API requests. Reporting plugins inherit from the `BaseReportingPlugin` class, and register an event handler with the `AfterRecordingStop` event.
 
-Example configuration of the `GraphSelectGuidancePlugin`:
+When you stop recording, Dev Proxy raises the `AfterRecordingStop` event, passing the list of recorded requests and responses as an argument to the registered event handlers. Reporting plugins can then analyze the recorded data and generate a report object. A report object is an arbitrary object defined by the reporting plugin. Reporting plugins store the reports by calling the [`StoreReport`](https://github.com/microsoft/dev-proxy/blob/ecb4e1d56e327204f359152f7aff1057663edfe6/dev-proxy-abstractions/BaseReportingPlugin.cs#L15) method.
 
-```json
-{
-  "name": "GraphBetaSupportGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "urlsToWatch": [
-    "https://graph.microsoft.com/beta/*",
-    "https://graph.microsoft.us/beta/*",
-    "https://dod-graph.microsoft.us/beta/*",
-    "https://microsoftgraph.chinacloudapi.cn/beta/*"
-  ]
-}
-```
+> [!IMPORTANT]
+> Reporting plugins generate report objects, which Dev Proxy stores in memory. To convert these report objects into user-readable reports, you must enable one or more reporters in the Dev Proxy configuration file.
 
-Plugins watch requests made to URLs in the global `urlsToWatch` array. But, each plugin can override this list for their own needs. In the above example, the `GraphBetaSupportGuidancePlugin` watches only Microsoft Graph Beta endpoint URLs.
+## Reporters
+
+Dev Proxy uses reporters to convert report objects generated by reporting plugins into user-readable reports. For example, the MarkdownReporter converts a report object into a Markdown file. Reporters are special plugins that inherit from the [`BaseReporter`](https://github.com/microsoft/dev-proxy/blob/main/dev-proxy-plugins/Reporters/BaseReporter.cs) class. They implement the [`GetReport`](https://github.com/microsoft/dev-proxy/blob/ecb4e1d56e327204f359152f7aff1057663edfe6/dev-proxy-plugins/Reporters/BaseReporter.cs#L25) method, which takes as argument a report created by a reporting plugin and converts it into a string. This string is then saved on disk following the `PluginName_Reporter.ReporterExtension` pattern.
+
+> [!IMPORTANT]
+> Because reporters depend on the report objects generated by reporting plugins, you must enable the reporting plugins in the Dev Proxy configuration file after reporting plugins. If you enable them before reporting plugins, reporters won't have any data to report on.
