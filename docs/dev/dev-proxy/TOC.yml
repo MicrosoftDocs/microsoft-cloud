@@ -180,8 +180,6 @@
       href: technical-reference/Proxy-settings.md
     - name: Keyboard shortcuts
       href: technical-reference/Keyboard-shortcuts.md
-    - name: Response object
-      href: technical-reference/Response-object.md
     - name: Plugins
       items:
       - name: ApiCenterOnboardingPlugin

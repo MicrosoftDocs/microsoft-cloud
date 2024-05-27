@@ -8,7 +8,7 @@ ms.date: 04/16/2024
 
 # Mock responses
 
-To define mock responses, create a file named `mocks.json` in the current working directory. This file allows you to define a specific set of mocks for each project that you work with. The file contains an object with a `mocks` array containing [mock](../technical-reference/response-object.md) objects.
+To define mock responses, create a file named `mocks.json` in the current working directory. This file allows you to define a specific set of mocks for each project that you work with. The file contains an object with a `mocks` array containing [mock](../technical-reference/mockresponseplugin.md#response-object) objects.
 
 > [!TIP]
 > Instead of creating the mocks file manually, you can use the [`MockGeneratorPlugin`](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
@@ -232,7 +232,3 @@ See also the related Dev Proxy samples:
 - [Microsoft Graph mocks from Microsoft Graph API docs](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-docs-mocks/)
 - [Microsoft Graph mocks from Microsoft Graph API docs with sandbox data](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-sandbox-mocks/)
 - [Simulate creating a Microsoft Graph connector and its schema](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-connector/)
-
-## More information
-
-- [Mock object](../technical-reference/response-object.md)
