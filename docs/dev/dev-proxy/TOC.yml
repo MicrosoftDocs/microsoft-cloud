@@ -106,8 +106,12 @@
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
-      - name: With GitHub Actions
-        href: how-to/use-dev-proxy-with-github-actions.md
+      - name: In CI/CD scenarios
+        items:
+          - name: Overview
+            href: how-to/use-dev-proxy-in-ci-cd-overview.md
+          - name: With GitHub Actions
+            href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
       items: 
       - name: No random errors are thrown when using mocks
