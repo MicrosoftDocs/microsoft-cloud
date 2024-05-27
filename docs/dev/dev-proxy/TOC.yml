@@ -164,8 +164,6 @@
   items: 
     - name: Overview
       href: technical-reference/overview.md
-    - name: Console output ASCII icons
-      href: technical-reference/console-output-ASCII-icons.md
     - name: Console output text labels
       href: technical-reference/console-output-text-labels.md
     - name: devproxyrc
