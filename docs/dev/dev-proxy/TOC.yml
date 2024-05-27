@@ -240,6 +240,14 @@
             href: technical-reference/MinimalPermissionsPlugin.md
           - name: ODSPSearchGuidancePlugin
             href: technical-reference/odspsearchguidanceplugin.md
+      - name: Reporters
+        items:
+          - name: JsonReporter
+            href: technical-reference/jsonreporter.md
+          - name: MarkdownReporter
+            href: technical-reference/markdownreporter.md
+          - name: PlainTextReporter
+            href: technical-reference/plaintextreporter.md
     - name: Commands
       items:
       - name: msgraphdb
