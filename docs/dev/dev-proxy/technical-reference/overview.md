@@ -66,6 +66,16 @@ Name | Description
 [MinimalPermissionsGuidancePlugin](./minimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [ODSPSearchGuidancePlugin](./odspsearchguidanceplugin.md)|Shows a warning when Dev Proxy detects a request to OneDrive and SharePoint search APIs.
 
+## Reporters
+
+List of reporters that generate reports in different formats.
+
+Name | Description
+--- | ---
+[JsonReporter](./jsonreporter.md)|Generates reports in JSON format.
+[MarkdownReporter](./markdownreporter.md)|Generates reports in Markdown format.
+[PlainTextReporter](./plaintextreporter.md)|Generates reports in plain-text format.
+
 ## Configuration
 
 Reference of Dev Proxy configuration options.
