@@ -75,7 +75,7 @@ To make it easier to understand the results of your workflow, you can write a su
 
 ## Example workflow file
 
-Here's an example of a complete workflow file that uses Dev Proxy (based on an [example by [Elio Struyf(https://www.eliostruyf.com/playwright-microsoft-dev-proxy-github-actions/)):
+Here's an example of a complete workflow file that uses Dev Proxy (based on an [example by [Elio Struyf](https://www.eliostruyf.com/playwright-microsoft-dev-proxy-github-actions/)):
 
 ```yaml
 name: Test app using Dev Proxy
