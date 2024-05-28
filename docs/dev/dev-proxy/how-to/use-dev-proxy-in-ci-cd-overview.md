@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/27/2024
+ms.date: 05/28/2024
 ---
 
 # Use Dev Proxy in CI/CD scenarios
@@ -25,6 +25,13 @@ In most cases, your runner doesn't have Dev Proxy installed. So before you can u
 
 > [!TIP]
 > To speed up your pipeline, consider caching the Dev Proxy installation folder. This way, you won't need to download the Dev Proxy every time you run your pipeline. For the exact steps, refer to the documentation of your CI/CD system.
+
+When installing Dev Proxy in a CI/CD setup, you'll likely want to pin the version of Dev Proxy that you install. Pinning the version ensures that your pipeline uses the same version of Dev Proxy every time you run it. The exact steps to pin a version depend on the operating system of your runner. Here's an example of how you can pin the version of Dev Proxy on a Linux-based runner:
+
+```bash
+# install Dev Proxy v0.18.0
+bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v0.18.0
+```
 
 ## Run Dev Proxy from a script
 
@@ -94,7 +101,7 @@ After you stop the Dev Proxy process, it can take a moment for it to fully close
 ```bash
 echo "Waiting for Dev Proxy to complete..."
 while true; do
-  if grep -q -e "^DONE$" -e "No requests to process" -e "An error occurred in a plugin" $log_file; then
+  if grep -q -e "DONE" -e "No requests to process" -e "An error occurred in a plugin" $log_file; then
     break
   fi
   sleep 1
@@ -152,7 +159,7 @@ kill -INT $proxy_pid
 
 echo "Waiting for Dev Proxy to complete..."
 while true; do
-  if grep -q -e "^DONE$" -e "No requests to process" -e "An error occurred in a plugin" $log_file; then
+  if grep -q -e "DONE" -e "No requests to process" -e "An error occurred in a plugin" $log_file; then
     break
   fi
   sleep 1
