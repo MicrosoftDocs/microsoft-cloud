@@ -118,6 +118,8 @@ Here's an example of a bash script that starts Dev Proxy, waits for it to start,
 # enable job control so that we can send SIGINT to Dev Proxy
 set -m
 
+log_file=devproxy.log
+
 echo "Starting Dev Proxy..."
 
 # start Dev Proxy in the background
