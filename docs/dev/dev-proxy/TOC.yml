@@ -112,6 +112,8 @@
         items:
           - name: Overview
             href: how-to/use-dev-proxy-in-ci-cd-overview.md
+          - name: With Azure Pipelines
+            href: how-to/use-dev-proxy-with-azure-pipelines.md
           - name: With GitHub Actions
             href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
