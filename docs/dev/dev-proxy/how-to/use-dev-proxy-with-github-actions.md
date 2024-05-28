@@ -72,3 +72,91 @@ To make it easier to understand the results of your workflow, you can write a su
   run: |
     cat YourPlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
 ```
+
+## Example workflow file
+
+Here's an example of a complete workflow file that uses Dev Proxy (based on an [example by [Elio Struyf(https://www.eliostruyf.com/playwright-microsoft-dev-proxy-github-actions/)):
+
+```yaml
+name: Test app using Dev Proxy
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test app using Dev Proxy
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    env:
+      LOG_FILE: devproxy.log
+      DEVPROXY_VERSION: v0.18.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      #################################
+      # Cache + install of Playwright #
+      #################################
+      - name: Store Playwright's Version
+        run: |
+          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
+          echo "Playwright's Version: $PLAYWRIGHT_VERSION"
+          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV          
+
+      - name: Cache Playwright Browsers for Playwright's Version
+        id: cache-playwright
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-ubuntu-${{ env.PLAYWRIGHT_VERSION }}
+
+      - name: Install Playwright Browsers
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps
+
+      ################################
+      # Cache + install of Dev Proxy #
+      ################################
+      - name: Cache Dev Proxy
+        id: cache-devproxy
+        uses: actions/cache@v4
+        with:
+          path: ./devproxy
+          key: devproxy-ubuntu-${{ env.DEVPROXY_VERSION }}
+
+      - name: Install Dev Proxy
+        if: steps.cache-devproxy.outputs.cache-hit != 'true'
+        run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" ${{ env.DEVPROXY_VERSION }}
+
+      - name: Run Dev Proxy
+        run: /bin/bash run.sh
+
+      - name: Upload Dev Proxy logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.LOG_FILE }}
+          path: ${{ env.LOG_FILE }}
+
+      # only when using a reporting plugin with the Markdown reporter
+      - name: Upload Dev Proxy reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: Reports
+          path: ./*Reporter*
+      
+      # only when using a reporting plugin with the Markdown reporter
+      - name: Write summary
+        run: |
+          cat SomePlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
+```
