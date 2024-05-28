@@ -1,6 +1,6 @@
 ---
 title: Use Dev Proxy with Azure Pipelines
-description: How to use Dev Proxy with Azure Pipelines
+description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 05/28/2024
