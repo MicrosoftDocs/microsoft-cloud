@@ -20,7 +20,7 @@ Start, by installing Dev Proxy on the agent, but do it only if it isn't already 
 ```yaml
 variables:
 - name: DEV_PROXY_VERSION
-  value: v0.18.0-beta.8
+  value: v0.18.0
 - name: DEV_PROXY_CACHE_RESTORED
   value: 'false'
 
