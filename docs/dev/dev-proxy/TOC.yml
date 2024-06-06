@@ -190,6 +190,8 @@
       href: technical-reference/Keyboard-shortcuts.md
     - name: Plugins
       items:
+      - name: ApiCenterMinimalPermissionsPlugin
+        href: technical-reference/apicenterminimalpermissionsplugin.md
       - name: ApiCenterOnboardingPlugin
         href: technical-reference/apicenteronboardingplugin.md
       - name: ApiCenterProductionVersionPlugin
