@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/24/2024
+ms.date: 06/06/2024
 ---
 
 # Proxy settings
@@ -16,7 +16,8 @@ The following table describes the settings.
 
 |Setting|Description|Command-line option|Allowed values|Default value|
 |--|--|--|--|--|
-|`asSystemProxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be set to `true`|`--as-system-proxy`|`true`, `false`|`true`|
+|`asSystemProxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`--as-system-proxy`|`true`, `false`|`true`|
+|`filterByHeaders`|Only intercept requests with specific headers|n/a|`{"filterByHeaders": [ { "name": "value" } ] }`. Value can be empty to include requests with the specified header no matter its value.|n/a|
 |`installCert`|Whether to install the root certificate|`--install-cert`|`true`, `false`|`true`|
 |`ipAddress`|The IP address for the proxy to bind to|`--ip-address <ipAddress>`|IPv4 address|`127.0.0.1`|
 |`logLevel`|Level of messages to log|`--log-level <loglevel>`|`trace`, `debug`, `information`, `warning`, `error`| `information`|

@@ -18,6 +18,8 @@
       items: 
       - name: Intercept requests from specific processes
         href: how-to/intercept-requests-from-specific-processes.md
+      - name: Intercept requests with specific headers
+        href: how-to/intercept-requests-specific-headers.md
       - name: Intercept requests to localhost
         href: how-to/intercept-localhost-requests.md
       - name: Exclude a URL
