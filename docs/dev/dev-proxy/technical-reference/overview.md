@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/16/2024
+ms.date: 06/06/2024
 ms.topic: overview
 ---
 
@@ -37,6 +37,7 @@ List of plugins that work with Azure API Center.
 
 Name | Description
 --- | ---
+[ApiCenterMinimalPermissionsPlugin](./apicenterminimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified Azure API Center instance.
 [ApiCenterOnboardingPlugin](./apicenteronboardingplugin.md)|Checks if the APIs used in an app are registered in the specified Azure API Center instance.
 [ApiCenterProductionVersionPlugin](./apicenterproductionversionplugin.md)|Checks if the APIs used in an app are production version of the APIs registered in the specified Azure API Center instance.
 
