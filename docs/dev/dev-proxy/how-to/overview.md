@@ -63,6 +63,7 @@ ms.topic: overview
 
 - [Change logging level](./Change-logging-level.md)
 - [Clear the output](./Clear-the-output.md)
+- [Use local language model with Dev Proxy](./use-language-model.md)
 - [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database.md)
 
 ## Common problems
