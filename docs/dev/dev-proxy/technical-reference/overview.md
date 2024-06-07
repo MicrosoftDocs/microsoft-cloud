@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/06/2024
+ms.date: 06/07/2024
 ms.topic: overview
 ---
 
@@ -27,6 +27,7 @@ Name | Description
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
+[OpenAIMockResponsePlugin](./openaimockresponseplugin.md)|Simulates responses from Azure OpenAI and OpenAI using a local language model.
 [OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec in JSON format from the intercepted requests and responses.
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
