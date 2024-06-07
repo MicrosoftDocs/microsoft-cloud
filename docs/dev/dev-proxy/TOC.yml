@@ -220,6 +220,8 @@
         href: technical-reference/MockResponsePlugin.md
       - name: ODataPagingGuidancePlugin
         href: technical-reference/ODataPagingGuidancePlugin.md
+      - name: OpenAIMockResponsePlugin
+        href: technical-reference/openaimockresponseplugin.md
       - name: OpenApiSpecGeneratorPlugin
         href: technical-reference/openapispecgeneratorplugin.md
       - name: RateLimitingPlugin
