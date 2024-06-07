@@ -92,6 +92,8 @@
         href: how-to/change-logging-level.md
       - name: Clear the output
         href: how-to/clear-the-output.md
+      - name: Use local language model with Dev Proxy
+        href: how-to/use-language-model.md
       - name: Refresh local Microsoft Graph database
         href: how-to/refresh-local-Microsoft-Graph-database.md
     - name: Use Dev Proxy

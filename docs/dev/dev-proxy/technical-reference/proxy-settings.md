@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/06/2024
+ms.date: 06/07/2024
 ---
 
 # Proxy settings
@@ -20,6 +20,7 @@ The following table describes the settings.
 |`filterByHeaders`|Only intercept requests with specific headers|n/a|`{"filterByHeaders": [ { "name": "value" } ] }`. Value can be empty to include requests with the specified header no matter its value.|n/a|
 |`installCert`|Whether to install the root certificate|`--install-cert`|`true`, `false`|`true`|
 |`ipAddress`|The IP address for the proxy to bind to|`--ip-address <ipAddress>`|IPv4 address|`127.0.0.1`|
+|`languageModel`|Settings for the language model|n/a|See the [language model](./use-language-model.md) section for more information.|n/a|
 |`logLevel`|Level of messages to log|`--log-level <loglevel>`|`trace`, `debug`, `information`, `warning`, `error`| `information`|
 |`newVersionNotification`|Whether to notify about new versions|n/a|`none`, `stable`, `beta`|`stable`|
 |n/a|Skip the first run experience (don't trust certificate on macOS)|`--no-first-run`|n/a|n/a|
