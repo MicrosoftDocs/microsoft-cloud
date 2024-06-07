@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/08/2024
+ms.date: 06/07/2024
 ms.topic: overview
 ---
 
@@ -61,7 +61,6 @@ ms.topic: overview
 
 ## Change settings
 
-- [Change console output to use icons](./Change-console-output-to-use-icons.md)
 - [Change logging level](./Change-logging-level.md)
 - [Clear the output](./Clear-the-output.md)
 - [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database.md)
