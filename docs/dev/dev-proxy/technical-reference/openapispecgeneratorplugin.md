@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/06/2024
+ms.date: 06/10/2024
 ---
 
 # OpenApiSpecGeneratorPlugin
@@ -42,3 +42,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 ## Command line options
 
 None
+
+## Remarks
+
+To create better OpenAPI specs, consider using a local language model with Dev Proxy. Using a local language model, the `OpenApiSpecGeneratorPlugin` generates clearer operation IDs and descriptions, giving you a better starting point for your OpenAPI spec. To use a local language model with the `OpenApiSpecGeneratorPlugin`, enable the language model in the configuration file. For more information, see [Use a local language model](../how-to/use-language-model.md).
