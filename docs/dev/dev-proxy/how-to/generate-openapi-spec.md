@@ -3,7 +3,7 @@ title: Generate an OpenAPI spec
 description: How to generate an OpenAPI spec from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 06/10/2024
 ---
 
 # Generate an OpenAPI spec
@@ -38,10 +38,13 @@ To generate an OpenAPI spec using Dev Proxy:
     }
     ```
 
-1. Start Dev Proxy without failing requests:
+    > [!TIP]
+    > To create better OpenAPI specs, consider using a local language model with Dev Proxy. For more information, see [Use a local language model](./use-language-model.md).
+
+1. Start Dev Proxy:
 
     ```console
-    devproxy --failure-rate 0
+    devproxy
     ```
 
 1. Start recording requests by pressing `r`
