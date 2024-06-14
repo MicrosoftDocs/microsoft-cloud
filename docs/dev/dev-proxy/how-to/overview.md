@@ -25,6 +25,8 @@ ms.topic: overview
 - [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint.md)
 - [Change mocks file](./Change-mocks-file.md)
 - [Simulate a CRUD API](./simulate-crud-api.md)
+- [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md)
+- [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
 - [Mock Teams Admin Center notification for Microsoft Graph connectors](./mock-teams-admin-center-notification-graph-connectors.md)
 
 ## Simulate errors
