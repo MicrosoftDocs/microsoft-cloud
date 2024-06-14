@@ -42,6 +42,8 @@
         href: how-to/simulate-crud-api.md
       - name: Simulate a CRUD API across the internet
         href: how-to/simulate-crud-api-dev-tunnel.md
+      - name: Simulate a CRUD API secured with Microsoft Entra
+        href: how-to/simulate-crud-api-entra.md
       - name: Mock Teams Admin Center notification for Microsoft Graph connectors
         href: how-to/mock-teams-admin-center-notification-graph-connectors.md
     - name: Simulate errors
@@ -78,6 +80,8 @@
       items:
       - name: Check if my app is using production-level APIs
         href: how-to/check-production-level-apis.md
+      - name: Find shadow APIs
+        href: how-to/check-shadow-apis.md
       - name: Generate an OpenAPI spec
         href: how-to/generate-openapi-spec.md
       - name: Update my application code to use Microsoft Graph JavaScript SDK

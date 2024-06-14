@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/07/2024
+ms.date: 06/14/2024
 ms.topic: overview
 ---
 
@@ -25,6 +25,8 @@ ms.topic: overview
 - [Mock multiple responses to the same endpoint](./Mock-multiple-responses-to-the-same-endpoint.md)
 - [Change mocks file](./Change-mocks-file.md)
 - [Simulate a CRUD API](./simulate-crud-api.md)
+- [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md)
+- [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
 - [Mock Teams Admin Center notification for Microsoft Graph connectors](./mock-teams-admin-center-notification-graph-connectors.md)
 
 ## Simulate errors
@@ -52,6 +54,8 @@ ms.topic: overview
 
 ## Improve my app
 
+- [Check if my app is using production-level APIs](./check-production-level-apis.md)
+- [Find shadow APIs](./check-shadow-apis.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
