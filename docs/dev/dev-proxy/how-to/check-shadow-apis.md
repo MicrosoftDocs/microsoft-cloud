@@ -24,7 +24,7 @@ To detect shadow APIs, you need to have an [Azure API Center](/azure/api-center/
 
 Before you start, create an Azure API Center instance and register APIs that you use in your organization.
 
-:::image type="content" source="../media/api-center-registered-apis.png" alt-text="Screenshot of Azure API Center with several APIs that are used in the organization" lightbox="../media/api-center-registered-apis.png":::
+:::image type="content" source="../media/api-center-registered-apis.png" alt-text="Screenshot of Azure API Center with several APIs that are used in the organization." lightbox="../media/api-center-registered-apis.png":::
 
 The `ApiCenterOnboardingPlugin` uses this information to check if the APIs, that your app is using, are registered in your organization.
 
@@ -32,7 +32,7 @@ The `ApiCenterOnboardingPlugin` uses this information to check if the APIs, that
 
 From the Azure API Center instance Overview page, copy the **name** of the API Center instance, the name of the **resource group** and the **subscription ID**. You need this information to configure the `ApiCenterOnboardingPlugin` so that it can connect to your Azure API Center instance.
 
-:::image type="content" source="../media/api-center-overview.png" alt-text="Screenshot of Azure API Center overview page with several properties highlighted" lightbox="../media/api-center-overview.png":::
+:::image type="content" source="../media/api-center-overview.png" alt-text="Screenshot of Azure API Center overview page with several properties highlighted." lightbox="../media/api-center-overview.png":::
 
 ## Configure Dev Proxy
 
@@ -224,7 +224,7 @@ The `ApiCenterOnboardingPlugin` can not only detect shadow APIs, but also automa
 
 When you run Dev Proxy with `createApicEntryForNewApis` set to `true`, it automatically creates new API entries in Azure API Center for the shadow APIs that it detects.
 
-:::image type="content" source="../media/api-center-onboarding-new-api.png" alt-text="Screenshot of API Center showing a newly onboarded API" lightbox="../media/api-center-onboarding-new-api.png":::
+:::image type="content" source="../media/api-center-onboarding-new-api.png" alt-text="Screenshot of API Center showing a newly onboarded API." lightbox="../media/api-center-onboarding-new-api.png":::
 
 ### Automatically onboard shadow APIs with OpenAPI spec
 
@@ -300,7 +300,7 @@ https://jsonplaceholder.typicode.com:
  info    DONE
 ```
 
-:::image type="content" source="../media/api-center-onboarding-new-api-openapi-spec.png" alt-text="Screenshot of Azure API Center showing a newly onboarded API with an OpenAPI spec" lightbox="../media/api-center-onboarding-new-api-openapi-spec.png":::
+:::image type="content" source="../media/api-center-onboarding-new-api-openapi-spec.png" alt-text="Screenshot of Azure API Center showing a newly onboarded API with an OpenAPI spec." lightbox="../media/api-center-onboarding-new-api-openapi-spec.png":::
 
 ## Summary
 
