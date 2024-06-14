@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/07/2024
+ms.date: 06/14/2024
 ms.topic: overview
 ---
 
@@ -52,6 +52,8 @@ ms.topic: overview
 
 ## Improve my app
 
+- [Check if my app is using production-level APIs](./check-production-level-apis.md)
+- [Find shadow APIs](./check-shadow-apis.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
