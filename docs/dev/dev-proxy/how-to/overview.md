@@ -53,7 +53,7 @@ ms.topic: overview
 ## Improve my app
 
 - [Check if my app is using production-level APIs](./check-production-level-apis.md)
-- [check if my app is calling APIs with minimal permissions](./check-minimal-api-permissions.md)
+- [Check if my app is calling APIs with minimal permissions](./check-minimal-api-permissions.md)
 - [Find shadow APIs](./check-shadow-apis.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
