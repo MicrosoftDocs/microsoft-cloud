@@ -78,6 +78,8 @@
       items:
       - name: Check if my app is using production-level APIs
         href: how-to/check-production-level-apis.md
+      - name: Check if my app is calling APIs with minimal permissions
+        href: how-to/check-minimal-api-permissions.md
       - name: Find shadow APIs
         href: how-to/check-shadow-apis.md
       - name: Generate an OpenAPI spec
