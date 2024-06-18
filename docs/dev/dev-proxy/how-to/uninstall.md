@@ -3,7 +3,7 @@ title: Uninstall
 description: How to uninstall Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/11/2024
+ms.date: 06/18/2024
 zone_pivot_groups: client-operating-system
 ---
 
@@ -33,5 +33,18 @@ If you want to remove Dev Proxy from your machine, follow these steps.
     1. In the list of certificates, find the `Dev Proxy CA` certificate.
     1. Right select the certificate and from the menu, select `Delete Dev Proxy CA`.
     1. In Finder, locate and remove the `~/Library/Application Support/dev-proxy` folder.
+
+::: zone-end
+
+::: zone pivot="client-operating-system-linux"
+
+1. Uninstall Dev Proxy by deleting the Dev Proxy installation folder
+1. Remove Dev Proxy from your system path
+    1. Open your shell profile in a text editor > `~/.bashrc`.
+    1. Update `PATH` environment variable.
+    1. Reload your profile > `source ~/.bashrc`.
+1. Remove the `Dev Proxy` certificate from your machine.
+    1. Remove the certificate > `sudo rm /usr/local/share/ca-certificates/dev-proxy-ca.crt`
+    1. Update certificates > `sudo update-ca-certificates`
 
 ::: zone-end

@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run, and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/11/2024
+ms.date: 06/18/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -123,6 +123,66 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 ::: zone-end
 
+::: zone pivot="client-operating-system-linux"
+
+The easiest way to install Dev Proxy is by using the setup script. Alternatively, you can install Dev Proxy manually.
+
+# [Automated](#tab/automated)
+
+To install Dev Proxy using the setup script, run the following commands:
+
+```console
+bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
+```
+
+If you use PowerShell, run the following command:
+
+```powershell
+(Invoke-WebRequest https://aka.ms/devproxy/setup.ps1).Content | Invoke-Expression
+```
+
+# [Manual](#tab/manual)
+
+[Download](https://aka.ms/devproxy/download/) the latest release and extract the files into a folder. For this tutorial, we assume you extract the files into a folder named `devproxy` located in your home directory.
+
+To start Dev Proxy from any directory, add its installation folder location to your PATH.
+
+The below steps show how to add the proxy to PATH when using bash shell. Depending on the shell you use, your profile file might differ.
+
+  1. Open your shell profile in a text editor > `~/.bashrc`.
+  1. Update `PATH` environment variable with location of the proxy > `export PATH=".:$PATH:$HOME/devproxy"`.
+  1. Reload your profile > `source ~/.bashrc`.
+
+---
+
+> [!NOTE]
+> To try the latest preview features, install the beta version of Dev Proxy.
+>
+> # [Automated](#tab/automated)
+>
+> To install Dev Proxy using the setup script, run the following commands:
+>
+> ```console
+> bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
+> ```
+>
+> If you use PowerShell, run the following command:
+>
+> ```powershell
+> (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | Invoke-Expression
+> ```
+>
+> # [Manual](#tab/manual)
+>
+> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
+>
+> ---
+>
+> To run the beta version of Dev Proxy use `devproxy-beta`
+>
+
+::: zone-end
+
 ## Start Dev Proxy for the first time
 
 The first time you start Dev Proxy on your machine there are a few steps to follow to ensure that Dev Proxy can intercept requests from your machine and respond successfully. You won't have to repeat these steps after the first run.
@@ -143,11 +203,33 @@ The first time you start Dev Proxy on your machine there are a few steps to foll
 
 ::: zone-end
 
+::: zone pivot="client-operating-system-linux"
+
+1. **Start Dev Proxy**. Open a command prompt session. Enter `devproxy` and press <kbd>Enter</kbd>.
+1. **Trust certificate**. Dev Proxy uses a custom SSL certificate to decrypt HTTPS traffic sent from your machine.
+
+    > [!IMPORTANT]
+    > The following instructions are for Ubuntu. For other Linux distributions, the steps might differ.
+
+    To install and trust the certificate, in a new command prompt, run the following commands:
+
+    ```console
+    # Export Dev Proxy root certificate
+    openssl pkcs12 -in ~/.config/dev-proxy/rootCert.pfx -clcerts -nokeys -out dev-proxy-ca.crt -passin pass:""
+    # Install the certificate
+    sudo cp dev-proxy-ca.crt /usr/local/share/ca-certificates/
+    # Update certificates
+    sudo update-ca-certificates
+    ```
+
+::: zone-end
+
 The command prompt displays the following output:
 
 ```text
-8 error responses loaded from devproxy-errors.json
-Listening on 127.0.0.1:8000...
+ info    8 error responses loaded from devproxy-errors.json
+ info    Listening on 127.0.0.1:8000...
+
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
 ```
@@ -180,20 +262,18 @@ You can also use an API client like [Postman](https://www.postman.com/product/ap
 An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
 
 ```text
- request     GET https://jsonplaceholder.typicode.com/posts
-     api   ╭ Passed through
-           ╰ GET https://jsonplaceholder.typicode.com/posts
+ req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ api   ╰ Passed through
 ```
 
 - Repeat sending requests to the JSON Placeholder API from the command line, until an error response is returned.
 
 ```text
- request     GET https://jsonplaceholder.typicode.com/posts
-     api   ╭ Passed through
-           ╰ GET https://jsonplaceholder.typicode.com/posts
- request     GET https://jsonplaceholder.typicode.com/posts
-   chaos   ╭ 403 Forbidden
-           ╰ GET https://jsonplaceholder.typicode.com/posts
+ req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ api   ╰ Passed through
+
+ req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ oops  ╰ 403 Forbidden
 ```
 
 When Dev Proxy returns an error response, a `chaos` label is displayed in the entry.
@@ -250,9 +330,8 @@ The exclamation mark at the beginning of the URL tells Dev Proxy to ignore any r
 An entry is shown confirming that the request was ignored and passed through to the API.
 
 ```text
-request     GET https://jsonplaceholder.typicode.com/posts/2
-     api   ╭ Passed through
-           ╰ GET https://jsonplaceholder.typicode.com/posts/2
+ req   ╭ GET https://jsonplaceholder.typicode.com/posts/2
+ api   ╰ Passed through
 ```
 
 The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy processes these URLs in order. When a URL matches, it isn’t processed again. Therefore, placing the URL first ensures that the request is ignored before the next URL is processed.
@@ -304,7 +383,7 @@ First let's locate the location of the file that contains the error definitions.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.17.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.18.0/genericrandomerrorplugin.schema.json",
   "responses": [
     {
       "statusCode": 429,
@@ -324,9 +403,8 @@ First let's locate the location of the file that contains the error definitions.
 - Send a request to the JSON Placeholder API from the command line and view the output.
 
 ```text
- request     GET https://jsonplaceholder.typicode.com/posts
-   chaos   ╭ 429 TooManyRequests
-           ╰ GET https://jsonplaceholder.typicode.com/posts
+ req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ oops  ╰ 429 TooManyRequests
 ```
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
