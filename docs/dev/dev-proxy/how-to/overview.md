@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/17/2024
+ms.date: 06/18/2024
 ms.topic: overview
 ---
 
@@ -27,6 +27,7 @@ ms.topic: overview
 - [Simulate a CRUD API](./simulate-crud-api.md)
 - [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md)
 - [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
+- [Simulate Azure OpenAI API](./simulate-azure-openai.md)
 - [Mock Teams Admin Center notification for Microsoft Graph connectors](./mock-teams-admin-center-notification-graph-connectors.md)
 
 ## Simulate errors
