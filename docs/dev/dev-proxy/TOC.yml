@@ -44,6 +44,8 @@
         href: how-to/simulate-crud-api-dev-tunnel.md
       - name: Simulate a CRUD API secured with Microsoft Entra
         href: how-to/simulate-crud-api-entra.md
+      - name: Simulate OpenAI API
+        href: how-to/simulate-openai.md
       - name: Mock Teams Admin Center notification for Microsoft Graph connectors
         href: how-to/mock-teams-admin-center-notification-graph-connectors.md
     - name: Simulate errors
