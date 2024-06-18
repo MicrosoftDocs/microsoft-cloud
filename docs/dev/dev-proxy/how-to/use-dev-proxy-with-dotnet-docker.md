@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 06/18/2024
 zone_pivot_groups: client-operating-system
 ---
 
@@ -26,6 +26,17 @@ docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000
 
 > [!IMPORTANT]
 > When you use Dev Proxy on macOS, you need to attach it to the `0.0.0.0` address to make it accessible from the Docker container. To configure the IP address for Dev Proxy, start it with the following command:
+>
+> ```console
+> devproxy --ip-address 0.0.0.0
+> ```
+
+::: zone-end
+
+::: zone pivot="client-operating-system-linux"
+
+> [!IMPORTANT]
+> When you use Dev Proxy on Linux, you need to attach it to the `0.0.0.0` address to make it accessible from the Docker container. To configure the IP address for Dev Proxy, start it with the following command:
 >
 > ```console
 > devproxy --ip-address 0.0.0.0
@@ -87,6 +98,17 @@ When prompted to enter the password, press <kbd>Enter</kbd> without typing anyth
 ```console
 # export Dev Proxy certificate
 security find-certificate -c "Dev Proxy CA" -a -p > dev-proxy-ca.pem
+# rename to .crt
+mv dev-proxy-ca.pem dev-proxy-ca.crt
+```
+
+::: zone-end
+
+::: zone pivot="client-operating-system-linux"
+
+```console
+# export Dev Proxy certificate
+openssl pkcs12 -in ~/.config/dev-proxy/rootCert.pfx -clcerts -nokeys -out dev-proxy-ca.crt -passin pass:""
 # rename to .crt
 mv dev-proxy-ca.pem dev-proxy-ca.crt
 ```

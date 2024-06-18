@@ -3,7 +3,7 @@ title: Intercept requests to localhost
 description: How to configure Dev Proxy to intercept requests to localhost in Chromium browsers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/27/2024
+ms.date: 06/18/2024
 zone_pivot_groups: client-operating-system
 ---
 
@@ -25,6 +25,14 @@ msedge --proxy-bypass-list="<-loopback>"
 
 ```console
 /Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge --proxy-bypass-list="<-loopback>"
+```
+
+::: zone-end
+
+::: zone pivot="client-operating-system-linux"
+
+```console
+/opt/microsoft/msedge-dev/msedge --proxy-bypass-list="<-loopback>"
 ```
 
 ::: zone-end

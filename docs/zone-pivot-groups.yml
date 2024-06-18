@@ -18,3 +18,5 @@ groups:
     title: Windows
   - id: client-operating-system-macos
     title: macOS
+  - id: client-operating-system-linux
+    title: Linux
