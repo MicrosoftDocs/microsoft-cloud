@@ -222,6 +222,8 @@
         href: technical-reference/ExecutionSummaryPlugin.md
       - name: GenericRandomErrorPlugin
         href: technical-reference/GenericRandomErrorPlugin.md
+      - name: HttpFileGeneratorPlugin
+        href: technical-reference/httpfilegeneratorplugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
       - name: MockGeneratorPlugin
