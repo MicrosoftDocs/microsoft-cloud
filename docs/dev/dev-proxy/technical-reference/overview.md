@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/07/2024
+ms.date: 06/20/2024
 ms.topic: overview
 ---
 
@@ -22,6 +22,7 @@ Name | Description
 [CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with an in-memory data store.
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
+[HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.
