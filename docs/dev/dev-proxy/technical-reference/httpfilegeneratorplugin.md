@@ -3,7 +3,7 @@ title: HttpFileGeneratorPlugin
 description: HttpFileGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/20/2024
+ms.date: 06/21/2024
 ---
 
 # HttpFileGeneratorPlugin
@@ -66,7 +66,6 @@ GET https://jsonplaceholder.typicode.com/posts?api-key={{jsonplaceholder_typicod
 Host: jsonplaceholder.typicode.com
 User-Agent: curl/8.6.0
 Accept: */*
-Authorization: {{jsonplaceholder_typicode_com_authorization}}
 Via: 1.1 dev-proxy/0.19.0
 ```
 
