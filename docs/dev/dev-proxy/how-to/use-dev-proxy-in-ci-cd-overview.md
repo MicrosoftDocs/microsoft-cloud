@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2024
+ms.date: 06/25/2024
 ---
 
 # Use Dev Proxy in CI/CD scenarios
@@ -30,7 +30,7 @@ When installing Dev Proxy in a CI/CD setup, you'll likely want to pin the versio
 
 ```bash
 # install Dev Proxy v0.18.0
-bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v0.18.0
+bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.18.0
 ```
 
 ## Run Dev Proxy from a script
