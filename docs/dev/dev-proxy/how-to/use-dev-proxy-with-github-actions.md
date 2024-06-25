@@ -3,7 +3,7 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 05/28/2024
+ms.date: 06/25/2024
 ---
 
 # Use Dev Proxy with GitHub Actions
@@ -27,7 +27,7 @@ Start, by installing Dev Proxy on the runner, but do it only if it isn't already
 
 - name: Install Dev Proxy
   if: steps.cache-devproxy.outputs.cache-hit != 'true'
-  run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v0.18.0
+  run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.18.0
 ```
 
 ## Run the Dev Proxy
@@ -137,7 +137,7 @@ jobs:
 
       - name: Install Dev Proxy
         if: steps.cache-devproxy.outputs.cache-hit != 'true'
-        run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" ${{ env.DEVPROXY_VERSION }}
+        run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- ${{ env.DEVPROXY_VERSION }}
 
       - name: Run Dev Proxy
         run: /bin/bash run.sh
