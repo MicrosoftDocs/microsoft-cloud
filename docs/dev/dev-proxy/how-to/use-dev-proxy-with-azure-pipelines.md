@@ -55,7 +55,7 @@ When you run Dev Proxy in a CI/CD pipeline, you might want to analyze the logs l
   displayName: Upload Dev Proxy logs
   inputs:
     targetPath: $(LOG_FILE)
-    ArtifactName: $(LOG_FILE)
+    artifact: $(LOG_FILE)
 ```
 
 ## Upload Dev Proxy reports
@@ -71,7 +71,7 @@ If you're using Dev Proxy to analyze the requests, you might want to upload the 
   displayName: Upload Dev Proxy reports
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)/Reports'
-    artifactName: 'Reports'
+    artifact: 'Reports'
 ```
 
 ## Example pipeline file
@@ -113,7 +113,7 @@ steps:
   displayName: Upload Dev Proxy logs
   inputs:
     targetPath: $(LOG_FILE)
-    ArtifactName: $(LOG_FILE)
+    artifact: $(LOG_FILE)
 
 - script: |
     mkdir -p $(Build.ArtifactStagingDirectory)/Reports
@@ -123,5 +123,5 @@ steps:
   displayName: Upload Dev Proxy reports
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)/Reports'
-    artifactName: 'Reports'
+    artifact: 'Reports'
 ```
