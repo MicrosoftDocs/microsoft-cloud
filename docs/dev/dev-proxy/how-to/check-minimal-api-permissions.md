@@ -3,7 +3,7 @@ title: How to check if my app is calling APIs with minimal permissions
 description: How to check if my app is calling APIs with minimal permissions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/17/2024
+ms.date: 06/26/2024
 ---
 
 # How to check if my app is calling APIs with minimal permissions
@@ -15,6 +15,8 @@ What's hard about checking if your app is calling APIs with minimal permissions 
 To check if your app is calling APIs using minimal permissions, you can use the [`ApiCenterMinimalPermissionsPlugin`](../technical-reference/apicenterminimalpermissionsplugin.md) plugin. This plugin compares the permissions that your app uses with the permissions defined in Azure API Center and reports on any excessive permissions. It also recommends the minimal set of permissions that you should use.
 
 :::image type="content" source="../media/api-center-minimal-permissions-plugin.png" alt-text="Screenshot of a command prompt showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/api-center-minimal-permissions-plugin.png":::
+
+> [!VIDEO https://www.youtube.com/embed/fFr3tFBp1Z8]
 
 ## Before you start
 
