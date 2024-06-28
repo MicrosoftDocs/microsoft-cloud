@@ -3,7 +3,7 @@ title: Use Dev Proxy with Azure Pipelines
 description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2024
+ms.date: 06/28/2024
 ---
 
 # Use Dev Proxy with Azure Pipelines
@@ -20,7 +20,7 @@ Start, by installing Dev Proxy on the agent, but do it only if it isn't already 
 ```yaml
 variables:
 - name: DEV_PROXY_VERSION
-  value: v0.18.0
+  value: v0.19.0
 - name: DEV_PROXY_CACHE_RESTORED
   value: 'false'
 
@@ -32,8 +32,8 @@ steps:
     cacheHitVar: DEV_PROXY_CACHE_RESTORED
   displayName: Cache Dev Proxy
 
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)" $DEV_PROXY_VERSION
-  displayName: 'Install Dev Proxy beta'
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION
+  displayName: 'Install Dev Proxy'
   condition: ne(variables.DEV_PROXY_CACHE_RESTORED, 'true')
 ```
 
@@ -65,8 +65,13 @@ If you're using Dev Proxy to analyze the requests, you might want to upload the 
 ```yaml
 - script: |
     mkdir -p $(Build.ArtifactStagingDirectory)/Reports
-    find . -name "*Reporter*" -exec cp {} $(Build.ArtifactStagingDirectory)/Reports \;
+    for file in *Reporter*; do
+      if [ -f "$file" ]; then
+        cp "$file" $(Build.ArtifactStagingDirectory)/Reports
+      fi
+    done
   displayName: 'Copy reports to artifact directory'
+
 - task: PublishPipelineArtifact@1
   displayName: Upload Dev Proxy reports
   inputs:
@@ -90,11 +95,45 @@ variables:
 - name: LOG_FILE
   value: devproxy.log
 - name: DEV_PROXY_VERSION
-  value: v0.18.0
+  value: v0.19.0
 - name: DEV_PROXY_CACHE_RESTORED
+  value: 'false'
+- name: PLAYWRIGHT_CACHE_RESTORED
   value: 'false'
 
 steps:
+
+- task: UseNode@1
+  inputs:
+    version: '20.x'
+  displayName: 'Install Node.js'
+
+- script: npm ci
+  displayName: 'Install dependencies'
+
+#################################
+# Cache + install of Playwright #
+#################################
+- script: |
+    PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
+    echo "Playwright's Version: $PLAYWRIGHT_VERSION"
+    echo "##vso[task.setvariable variable=PLAYWRIGHT_VERSION]$PLAYWRIGHT_VERSION"
+  displayName: Store Playwright's Version
+
+- task: Cache@2
+  inputs:
+    key: '"playwright-ubuntu-$(PLAYWRIGHT_VERSION)"'
+    path: '$(HOME)/.cache/ms-playwright'
+    cacheHitVar: PLAYWRIGHT_CACHE_RESTORED
+  displayName: Cache Playwright Browsers for Playwright's Version
+
+- script: npx playwright install --with-deps
+  condition: ne(variables['PLAYWRIGHT_CACHE_RESTORED'], 'true')
+  displayName: 'Install Playwright Browsers'
+
+################################
+# Cache + install of Dev Proxy #
+################################
 - task: Cache@2
   inputs:
     key: '"dev-proxy-$(DEV_PROXY_VERSION)"'
@@ -102,8 +141,8 @@ steps:
     cacheHitVar: DEV_PROXY_CACHE_RESTORED
   displayName: Cache Dev Proxy
 
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)" $DEV_PROXY_VERSION
-  displayName: 'Install Dev Proxy beta'
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION
+  displayName: 'Install Dev Proxy'
   condition: ne(variables.DEV_PROXY_CACHE_RESTORED, 'true')
 
 - script: bash ./run.sh
@@ -117,8 +156,13 @@ steps:
 
 - script: |
     mkdir -p $(Build.ArtifactStagingDirectory)/Reports
-    find . -name "*Reporter*" -exec cp {} $(Build.ArtifactStagingDirectory)/Reports \;
+    for file in *Reporter*; do
+      if [ -f "$file" ]; then
+        cp "$file" $(Build.ArtifactStagingDirectory)/Reports
+      fi
+    done
   displayName: 'Copy reports to artifact directory'
+
 - task: PublishPipelineArtifact@1
   displayName: Upload Dev Proxy reports
   inputs:
