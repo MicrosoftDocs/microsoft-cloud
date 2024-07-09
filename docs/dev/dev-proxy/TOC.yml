@@ -276,6 +276,8 @@
             href: technical-reference/plaintextreporter.md
     - name: Commands
       items:
+      - name: config
+        href: technical-reference/config.md
       - name: msgraphdb
         href: technical-reference/msgraphdb.md
       - name: outdated
