@@ -3,7 +3,7 @@ title: Use Dev Proxy with Node.js applications
 description: How to use Dev Proxy with Node.js applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 07/09/2024
 ---
 
 # Use Dev Proxy with Node.js applications
@@ -18,7 +18,7 @@ In v17.5.0, Node.js introduces experimental support for the `fetch` API. Unfortu
 
 [`global-agent`](https://www.npmjs.com/package/global-agent) is a popular library that provides a global HTTP/HTTPS agent for Node.js. It allows you to specify the proxy using environment variables. The benefit of using `global-agent` is that you don't need to change how you issue HTTP requests in your application to use Dev Proxy.
 
-Here's an example of how you can use `global-agent` in a Node.js application that uses `node-fetch`
+Here's an example of how you can use `global-agent` in a Node.js application that uses `node-fetch`:
 
 ```javascript
 import fetch from 'node-fetch';
@@ -30,6 +30,27 @@ bootstrap();
   const jsonResult = await result.json();
   console.log(JSON.stringify(jsonResult, null, 2));
 })();
+```
+
+Here's how you can use `global-agent` with Node.js and the standard `https` module:
+
+```javascript
+const https = require('https');
+const globalAgent = require('global-agent');
+globalAgent.bootstrap();
+
+https.get('https://jsonplaceholder.typicode.com/posts', (resp) => {
+  let data = '';
+  resp.on('data', (d) => {
+    data += d;
+  });
+  resp.on('end', () => {
+    console.log(JSON.parse(data));
+  });
+  resp.on('error', (err) => {
+    console.error(err);
+  });
+});
 ```
 
 When starting your application, specify the proxy using the `GLOBAL_AGENT_HTTP_PROXY` environment variable and ignore certificate errors.
@@ -58,7 +79,7 @@ const { HttpsProxyAgent } = require('https-proxy-agent');
 })();
 ```
 
-### Axios
+## Axios
 
 [Axios](https://www.npmjs.com/package/axios) is another popular library for making HTTP requests in Node.js. Axios allows you to specify the proxy using environment variables or specify the agent directly in the request configuration.
 
@@ -82,7 +103,7 @@ Specify the `https_proxy` environment variable either globally or when starting 
 https_proxy=http://127.0.0.1:8000 node axios.mjs
 ```
 
-### Got
+## Got
 
 Similar to `node-fetch`, [Got](https://www.npmjs.com/package/got) doesn't support specifying the proxy using environment variables. Instead, you need to create a custom agent and pass it to the request.
 
@@ -109,7 +130,7 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 })();
 ```
 
-### SuperAgent
+## SuperAgent
 
 [`SuperAgent`](https://www.npmjs.com/package/superagent) doesn't support specifying the proxy using environment variables. To use Dev Proxy with SuperAgent, you need to install the `superagent-proxy` plugin and configure the proxy using the `proxy` method.
 
