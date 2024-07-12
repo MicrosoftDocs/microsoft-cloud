@@ -6,12 +6,13 @@ metadata:
   audience: Developer
   level: Intermediate
   displayType: one-column
-  ms.date: 04/09/2023
+  ms.date: 7/12/2024
   author: danwahlin 
   ms.author: dwahlin 
   ms.topic: tutorial
   ms.custom: scenarios:microsoft-cloud, languages:HTML, CSS, TypeScript, services:azure communication services, azure openai, microsoft graph, microsoft graph toolkit
   ms.service: microsoft-cloud-for-developers
+  ms.collection: ce-advocates-ai-copilot
 
 items:
   - title: |
