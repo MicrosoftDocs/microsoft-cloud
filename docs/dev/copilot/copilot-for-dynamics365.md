@@ -3,9 +3,10 @@ title: Copilot for Dynamics 365
 description: Learn about Copilot features for Dynamics 365
 author: scottdurow
 ms.author: DanWahlin
-ms.date: 11/15/2023
+ms.date: 7/12/2024
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
+ms.collection: ce-advocates-ai-copilot
 
 categories:
   - developer-tools
