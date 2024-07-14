@@ -64,9 +64,9 @@ Getting identity and access management right is a fundamental part of doing secu
 
 Everybody building applications today should assume that their software is targeted by attackers. Given this, your organization must continuously monitor and manage the security of your applications and the environment that they run in. The Microsoft Cloud provides several tools for doing this.
 
-One of the most important of these is [Microsoft Sentinel](/azure/sentinel). Sentinel provides security information and event management (SIEM), letting you capture and analyze a wide range of security-related data. It can also respond automatically to threats, providing security orchestration, automation, and response (SOAR). Sentinel can help your organization find and fix security problems more effectively.
+One of the most important of these is [Microsoft Sentinel](/azure/sentinel). Microsoft Sentinel provides security information and event management (SIEM), letting you capture and analyze a wide range of security-related data. It can also respond automatically to threats, providing security orchestration, automation, and response (SOAR). Microsoft Sentinel can help your organization find and fix security problems more effectively.
 
-Sentinel’s broad reach encompasses the Microsoft Cloud and beyond through a large set of connectors. These connectors let Sentinel interact with many other services and technologies. Among the most important of these are the Microsoft Defender tools, including:
+Microsoft Sentinel’s broad reach encompasses the Microsoft Cloud and beyond through a large set of connectors. These connectors let Microsoft Sentinel interact with many other services and technologies. Among the most important of these are the Microsoft Defender tools, including:
 
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud), which helps your organization understand and improve the security of your Azure applications. It can also protect specific cloud services such as Azure Storage.
 - [Microsoft 365 Defender](/microsoft-365/security/defender), which provides components such as:
@@ -74,7 +74,7 @@ Sentinel’s broad reach encompasses the Microsoft Cloud and beyond through a la
   - [Microsoft Defender for Identity](/defender-for-identity), which monitors Active Directory to detect compromised identities and other threats.
   - [Microsoft Defender for Cloud Apps](/defender-cloud-apps), which acts as a cloud access security broker between the users in your organization and the cloud resources that they use. It helps you better understand which apps you use, both in the Microsoft Cloud and elsewhere, and who is using them.
 
-Microsoft Sentinel can also import Office 365 audit logs, Azure activity logs, and other security relevant information within the Microsoft Cloud. Sentinel can also access security related information from many other sources provided by a diverse set of vendors. Once you’ve connected Sentinel to your information sources, you can analyze the data to understand security incidents and respond to them.
+Microsoft Sentinel can also import Office 365 audit logs, Azure activity logs, and other security relevant information within the Microsoft Cloud. Microsoft Sentinel can also access security related information from many other sources provided by a diverse set of vendors. Once you’ve connected Microsoft Sentinel to your information sources, you can analyze the data to understand security incidents and respond to them.
 
 Security isn’t a simple topic. Because of this, Microsoft provides Microsoft Sentinel and other security offerings to address this area. All these technologies work together to improve the security of applications running on the Microsoft Cloud.
 
