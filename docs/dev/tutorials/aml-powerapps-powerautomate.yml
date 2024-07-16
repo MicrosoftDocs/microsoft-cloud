@@ -6,12 +6,13 @@ metadata:
   audience: Developer
   level: Beginner
   displayType: one-column
-  ms.date: 07/22/2023
+  ms.date: 7/15/2024
   author: john0isaac
   ms.author: dwahlin 
   ms.topic: tutorial
   ms.custom: scenarios:microsoft-cloud
   ms.service: machine-learning, powerapps, power-automate
+  ms.collection: ce-advocates-ai-copilot
 
 items:
   - title: |
