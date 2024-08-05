@@ -37,4 +37,4 @@ msedge --proxy-bypass-list="<-loopback> --proxy-server="127.0.0.1:8000"
 
 ::: zone-end
 
-To configure Mozilla Firefox to send requests to the system proxy for `localhost` URLs, you need to set the `network.proxy.allow_hijacking_localhost` preference to `true`. To do this, open the `about:config` page in Firefox, search for the `network.proxy.allow_hijacking_localhost` preference, and set it to `true`.
+To configure Mozilla Firefox to send requests to the system proxy for `localhost` URLs, you need to set the `network.proxy.allow_hijacking_localhost` preference to `true`. To do that, open the `about:config` page in Firefox, search for the `network.proxy.allow_hijacking_localhost` preference, and set it to `true`.
