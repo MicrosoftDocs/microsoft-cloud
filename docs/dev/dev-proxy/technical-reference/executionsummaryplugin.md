@@ -3,12 +3,15 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/22/2024
+ms.date: 08/05/2024
 ---
 
 # ExecutionSummaryPlugin
 
-Generates a summary report of the requests that pass through the proxy.
+Creates a summary of the requests that pass through the proxy.
+
+> [!TIP]
+> Use a reporter plugin in your configuration to save the summary to a file.
 
 :::image type="content" source="../media/execution-summary-1.png" alt-text="Screenshot of a command prompt with the Dev Proxy execution summary with information about intercepted requests." lightbox="../media/execution-summary-1.png":::
 
@@ -19,7 +22,7 @@ Generates a summary report of the requests that pass through the proxy.
 ```json
 {
   "name": "ExecutionSummaryPlugin",
-  "enabled": false,
+  "enabled": true,
   "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
