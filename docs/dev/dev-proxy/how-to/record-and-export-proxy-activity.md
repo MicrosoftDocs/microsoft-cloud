@@ -39,8 +39,8 @@ To record activity, Dev Proxy must be placed in record mode.
 
 There are two ways to start recording:
 
-1. **Record immediately**. Start proxy with `--record` option, for example, `devproxy --record`.
-1. **Record adhoc**. Press <kbd>R</kbd> while proxy is running.
+- **Record immediately**. Start proxy with `--record` option, for example, `devproxy --record`.
+- **Record adhoc**. Press <kbd>R</kbd> while proxy is running.
 
 When recording is enabled, `? Recording...` is shown in the proxy output.
 
@@ -48,8 +48,8 @@ To generate a report from the recorded activity, stop recording.
 
 There are two ways to stop recording:
 
-1. **Stop proxy**. Press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
-1. **Stop adhoc**. Press <kbd>S</kbd>.
+- **Stop proxy**. Press <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+- **Stop adhoc**. Press <kbd>S</kbd>.
 
 By default, activities grouped by URL. To group activity by message type, use the `--summary-group-by` option.
 
@@ -58,4 +58,4 @@ devproxy --record --summary-group-by messageType
 ```
 
 > [!NOTE]
-> All recording is local, no data is sent to Microsoft.
+> All recording is local. No data is sent to Microsoft.
