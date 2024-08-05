@@ -8,7 +8,7 @@ ms.date: 08/05/2024
 
 # Record and export proxy activity
 
-To record and export proxy activity use the [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) and a reporter plugin in your configuration file.
+To record and export proxy activity, use the [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) and a reporter plugin in your configuration file.
 
 The following example shows how to configure the Dev Proxy to record and export proxy activity using the [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) and the [MarkdownReporter](../technical-reference/markdownreporter.md) plugin.
 
@@ -40,7 +40,7 @@ To record activity, Dev Proxy must be placed in record mode.
 There are two ways to start recording:
 
 1. **Record immediately**. Start proxy with `--record` option, for example, `devproxy --record`.
-1. **Record adhoc**. Press <kbd>R</kbd> whilst the proxy is running.
+1. **Record adhoc**. Press <kbd>R</kbd> while proxy is running.
 
 When recording is enabled, `? Recording...` is shown in the proxy output.
 
