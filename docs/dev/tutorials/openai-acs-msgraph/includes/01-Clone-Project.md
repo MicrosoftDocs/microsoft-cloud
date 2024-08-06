@@ -38,8 +38,8 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     CHANNEL_ID=
     OPENAI_API_KEY=
     OPENAI_ENDPOINT=
-    OPENAI_API_VERSION=2023-06-01-preview
-    OPENAI_MODEL=gpt-35-turbo
+    OPENAI_MODEL=gpt-4o
+    OPENAI_API_VERSION=2024-06-01
     POSTGRES_USER=
     POSTGRES_PASSWORD=
     ACS_CONNECTION_STRING=
@@ -48,9 +48,9 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     CUSTOMER_EMAIL_ADDRESS=
     CUSTOMER_PHONE_NUMBER=
     API_PORT=3000
-    AZURE_COGNITIVE_SEARCH_ENDPOINT=
-    AZURE_COGNITIVE_SEARCH_KEY=
-    AZURE_COGNITIVE_SEARCH_INDEX=
+    AZURE_AI_SEARCH_ENDPOINT=
+    AZURE_AI_SEARCH_KEY=
+    AZURE_AI_SEARCH_INDEX=
     ```
 
 1. Update the following values in *.env*. These values will be used by the API server to connect to the local PostgreSQL database.

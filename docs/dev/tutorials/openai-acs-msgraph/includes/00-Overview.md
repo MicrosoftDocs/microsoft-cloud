@@ -2,7 +2,7 @@
 
 **Level**: Intermediate
 
-This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into Line of Business (LOB) applications to enhance user productivity, elevate the user experience, and take LOB apps to the next level. 
+This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit can be integrated into a Line of Business (LOB) application to enhance user productivity, elevate the user experience, and take LOB apps to the next level. Key features in the application include:
 
 - **AI**: Enable users to ask questions in natural language and convert their answers to SQL that can be used to query a database, allow users to define rules that can be used to automatically generate email and SMS messages, and learn how natural language can be used to retrieve data from your own custom data sources. Azure OpenAI is used for these features.
 - **Communication**: Enable in-app phone calling to customers and Email/SMS functionality using Azure Communication Services.
@@ -20,7 +20,7 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 ### Choose Your Own Adventure
 
-You can complete the entire tutorial from start to finish or complete specific topics of interest you. The tutorial is broken down into the following topic areas:
+You can complete the entire tutorial from start to finish or complete specific topics of interest. The tutorial is broken down into the following topics:
 
 - [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=1) (required exercise).
 - **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
@@ -32,7 +32,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 <a id="prerequisites"></a>
 ### Prerequisites
 
-- [Node](https://nodejs.org) - Node 16+ and npm 7+ will be used for this project
+- [Node](https://nodejs.org) - Node 20+ and npm 10+ will be used for this project
 - [git](/devops/develop/git/install-and-set-up-git?WT.mc_id=m365-94501-dwahlin)
 - [Visual Studio Code](https://code.visualstudio.com?WT.mc_id=m365-94501-dwahlin) (although Visual Studio Code is recommended, any editor can be used)
 - [Azure subscription](https://azure.microsoft.com/free/search?WT.mc_id=m365-94501-dwahlin)
@@ -41,8 +41,8 @@ You can complete the entire tutorial from start to finish or complete specific t
 
 ### Microsoft Cloud Technologies used in this Tutorial
 
-- Microsoft Entra ID
 - Azure Communication Services
 - Azure OpenAI Service
+- Microsoft Entra ID
 - Microsoft Graph
 - Microsoft Graph Toolkit
