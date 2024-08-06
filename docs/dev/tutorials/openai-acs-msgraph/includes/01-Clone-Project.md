@@ -39,7 +39,7 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     OPENAI_API_KEY=
     OPENAI_ENDPOINT=
     OPENAI_MODEL=gpt-4o
-    OPENAI_API_VERSION=2024-06-01
+    OPENAI_API_VERSION=2024-05-01-preview
     POSTGRES_USER=
     POSTGRES_PASSWORD=
     ACS_CONNECTION_STRING=

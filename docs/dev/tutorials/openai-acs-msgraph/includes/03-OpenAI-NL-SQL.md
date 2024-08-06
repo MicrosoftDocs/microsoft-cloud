@@ -89,7 +89,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     Notice the following functionality in the `generateSql` route:
 
-    - It retrieves the user query value from `req.body.query` and assigns it to a variable named `userQuery`. This value will be used in the GPT prompt.
+    - It retrieves the user query value from `req.body.prompt` and assigns it to a variable named `userPrompt`. This value will be used in the GPT prompt.
     - It calls a `getSQLFromNLP()` function to convert natural language to SQL.
     - It passes the generated SQL to a function named `queryDb` that executes the SQL query and returns results from the database.
 
@@ -103,39 +103,36 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         const dbSchema = await fs.promises.readFile('db.schema', 'utf8');
 
         const systemPrompt = `
-          Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
-          the parameter values in it. The SQL will query a PostgreSQL database.
+        Assistant is a natural language to SQL bot that returns a JSON object with the SQL query and 
+        the parameter values in it. The SQL will query a PostgreSQL database.
         
-          PostgreSQL tables, with their columns:    
+        PostgreSQL tables with their columns:    
     
-          ${dbSchema}
+        ${dbSchema}
     
-          Rules:
-          - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-          - Always return a JSON object with the SQL query and the parameter values in it.
-          - Return a JSON object. Do NOT include any text outside of the JSON object.
-          - Example JSON object to return: { "sql": "", "paramValues": [] }
+        Rules:
+        - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
+        - Return a JSON object with the following structure: { "sql": "", "paramValues": [] }
 
-          User: "Display all company reviews. Group by company."      
-          Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
+        Examples:
 
-          User: "Display all reviews for companies located in cities that start with 'L'."
-          Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
+        User: "Display all company reviews. Group by company."      
+        Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
 
-          User: "Display revenue for companies located in London. Include the company name and city."
-          Assistant: { 
-              "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
-              "paramValues": ["London"] 
-          }
+        User: "Display all reviews for companies located in cities that start with 'L'."
+        Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
 
-          User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
-          Assistant: { 
-              "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
-              "paramValues": ["Adventure Works Cycles"] 
-          }
+        User: "Display revenue for companies located in London. Include the company name and city."
+        Assistant: { 
+            "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
+            "paramValues": ["London"] 
+        }
 
-          - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-          - Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. Just the JSON object is needed.
+        User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
+        Assistant: { 
+            "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
+            "paramValues": ["Adventure Works Cycles"] 
+        }
         `;
 
         let queryData: QueryData = { sql: '', paramValues: [], error: '' };
@@ -175,39 +172,36 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
     ```typescript
     const systemPrompt = `
-        Assistant is a natural language to SQL bot that returns only a JSON object with the SQL query and 
-        the parameter values in it. The SQL will query a PostgreSQL database.
-    
-        PostgreSQL tables, with their columns:    
+      Assistant is a natural language to SQL bot that returns a JSON object with the SQL query and 
+      the parameter values in it. The SQL will query a PostgreSQL database.
+      
+      PostgreSQL tables with their columns:    
+  
+      ${dbSchema}
+  
+      Rules:
+      - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
+      - Return a JSON object with the following structure: { "sql": "", "paramValues": [] }
 
-        ${dbSchema}
+      Examples:
 
-        Rules:
-        - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-        - Always return a JSON object with the SQL query and the parameter values in it.
-        - Return a JSON object. Do NOT include any text outside of the JSON object.
-        - Example JSON object to return: { "sql": "", "paramValues": [] }
+      User: "Display all company reviews. Group by company."      
+      Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
 
-        User: "Display all company reviews. Group by company."      
-        Assistant: { "sql": "SELECT * FROM reviews", "paramValues": [] }
+      User: "Display all reviews for companies located in cities that start with 'L'."
+      Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
 
-        User: "Display all reviews for companies located in cities that start with 'L'."
-        Assistant: { "sql": "SELECT r.* FROM reviews r INNER JOIN customers c ON r.customer_id = c.id WHERE c.city LIKE 'L%'", "paramValues": [] }
+      User: "Display revenue for companies located in London. Include the company name and city."
+      Assistant: { 
+        "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
+        "paramValues": ["London"] 
+      }
 
-        User: "Display revenue for companies located in London. Include the company name and city."
-        Assistant: { 
-            "sql": "SELECT c.company, c.city, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.city = $1 GROUP BY c.company, c.city", 
-            "paramValues": ["London"] 
-        }
-
-        User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
-        Assistant: { 
-            "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
-            "paramValues": ["Adventure Works Cycles"] 
-        }
-
-        - Convert any strings to a PostgreSQL parameterized query value to avoid SQL injection attacks.
-        - Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. Just the JSON object is needed.
+      User: "Get the total revenue for Adventure Works Cycles. Include the contact information as well."
+      Assistant: { 
+        "sql": "SELECT c.company, c.city, c.email, SUM(o.total) AS revenue FROM customers c INNER JOIN orders o ON c.id = o.customer_id WHERE c.company = $1 GROUP BY c.company, c.city, c.email", 
+        "paramValues": ["Adventure Works Cycles"] 
+      }
     `;
     ```
 
@@ -225,13 +219,8 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         > You may consider creating read-only views that only contain the data users are allowed to query using natural language to SQL.
 
     - A rule is defined to convert any string values to a parameterized query value to avoid SQL injection attacks.
-    - A rule is defined to always return a JSON object (and nothing else) with the SQL query and the parameter values in it.
-    - An example is given for the type of JSON object to return.
+    - A rule is defined to always return a JSON object with the SQL query and the parameter values in it.
     - Example user prompts and the expected SQL query and parameter values are provided. This is referred to as ["few-shot" learning](/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example is provided and the model is expected to generate the correct SQL query and parameter values.
-    - Two critical rules are repeated again at the bottom of the system prompt to avoid "recency bias". 
-    
-        > [!TIP]
-        > Learn more about [recency bias in the Azure OpenAI documentation](/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end).
 
 1. The `getSQLFromNLP()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
 
@@ -239,11 +228,10 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
 
-        if (isAzureOpenAI && useBYOD) {
-            return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
-        }
-
         if (isAzureOpenAI) {
+            if (useBYOD) {
+                return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
+            }
             return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
 
@@ -252,47 +240,70 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     ```
 
     > [!NOTE]
-    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. **If you choose to use OpenAI instead of Azure OpenAI you may see different results in some cases.**
+    > Although we'll focus on Azure OpenAI throughout this tutorial, if you only supply an `OPENAI_API_KEY` value in the *.env* file, the application will use OpenAI instead. If you choose to use OpenAI instead of Azure OpenAI you may see different results in some cases.
 
 1. Locate the `getAzureOpenAICompletion()` function.
 
     ```typescript
     async function getAzureOpenAICompletion(systemPrompt: string, userPrompt: string, temperature: number): Promise<string> {
-        checkRequiredEnvVars(['OPENAI_API_KEY', 'OPENAI_ENDPOINT', 'OPENAI_MODEL']);
-
-        const fetchUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/chat/completions?api-version=${OPENAI_API_VERSION}`;
-
-        const messageData: ChatGPTData = {
-            max_tokens: 1024,
-            temperature,
-            messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: userPrompt }
-            ]
-        };
-
-        const headersBody: OpenAIHeadersBody = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'api-key': OPENAI_API_KEY
-            },
-            body: JSON.stringify(messageData),
-        };
-
-        const completion = await fetchAndParse(fetchUrl, headersBody);
-        console.log(completion);
-
-        let content = (completion.choices[0]?.message?.content?.trim() ?? '') as string;
+        const completion = await createAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
+        let content = completion.choices[0]?.message?.content?.trim() ?? '';
         console.log('Azure OpenAI Output: \n', content);
-
         if (content && content.includes('{') && content.includes('}')) {
             content = extractJson(content);
         }
-
-        console.log('After parse: \n', content);
-
         return content;
+    }
+    ```
+
+    This function does the following:
+
+    - **Parameters:**
+        - `systemPrompt`, `userPrompt`, and `temperature` are the main parameters.
+            - `systemPrompt`: Informs the Azure OpenAI model of its role and the rules to follow.
+            - `userPrompt`: Contains the user-provided information such as natural language input or rules for generating the output.
+            - `temperature`: Dictates the creativity level of the model's response. A higher value results in more creative outputs.
+
+    - **Completion Generation:**
+        - The function calls `createAzureOpenAICompletion()` with `systemPrompt`, `userPrompt`, and `temperature` to generate a completion.
+        - It extracts the content from the first choice in the completion, trimming any extra whitespace.
+        - If the content contains JSON-like structures (indicated by the presence of `{` and `}`), it extracts the JSON content.
+
+    - **Logging and Return Value:**
+        - The function logs the Azure OpenAI output to the console.
+        - It returns the processed content as a string.
+
+1. Locate the `createAzureOpenAICompletion()` function. 
+
+    ```typescript
+    async function createAzureOpenAICompletion(systemPrompt: string, userPrompt: string, temperature: number, dataSources?: any[]): Promise<any> {
+        const baseEnvVars = ['OPENAI_API_KEY', 'OPENAI_ENDPOINT', 'OPENAI_MODEL'];
+        const byodEnvVars = ['AZURE_AI_SEARCH_ENDPOINT', 'AZURE_AI_SEARCH_KEY', 'AZURE_AI_SEARCH_INDEX'];
+        const requiredEnvVars = dataSources ? [...baseEnvVars, ...byodEnvVars] : baseEnvVars;
+        checkRequiredEnvVars(requiredEnvVars);
+
+        const config = { 
+            apiKey: OPENAI_API_KEY,
+            endpoint: OPENAI_ENDPOINT,
+            apiVersion: OPENAI_API_VERSION,
+            deployment: OPENAI_MODEL
+        };
+        const aoai = new AzureOpenAI(config);
+        const completion = await aoai.chat.completions.create({
+            model: OPENAI_MODEL, // gpt-4o, gpt-3.5-turbo, etc. Pulled from .env file
+            max_tokens: 1024,
+            temperature,
+            response_format: {
+                type: "json_object",
+            },
+            messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: userPrompt }
+            ],
+            // @ts-expect-error data_sources is a custom property used with the "Azure Add Your Data" feature
+            data_sources: dataSources
+        });
+        return completion;
     }
 
     function checkRequiredEnvVars(requiredEnvVars: string[]) {
@@ -302,35 +313,33 @@ Let's start by experimenting with different GPT prompts that can be used to conv
             }
         }
     }
-
-    async function fetchAndParse(url: string, headersBody: Record<string, any>): Promise<any> {
-        try {
-            const response = await fetch(url, headersBody);
-            return await response.json();
-        } catch (error) {
-            console.error(`Error fetching data from ${url}:`, error);
-            throw error;
-        }
-    }
     ```
 
     This function does the following:
 
-    - Accepts `systemPrompt`, `userPrompt`, and `temperature` parameters. 
-        - `systemPrompt`: Lets the Azure OpenAI model know what role it should play and what rules to follow. 
-        - `userPrompt`: User information entered into the application such as natural language or rules that will be used by the model to generate the output.
-        - `temperature`: Determines how creative the model should be when generating a response. A higher value means the model will take more risks.
-    - Ensures that a valid Azure OpenAI API key, endpoint, ,and model are available by calling `checkRequiredEnvVars()`.
-    - Creates a `fetchUrl` value that is used to call Azure OpenAI's REST API and embeds the endpoint, model, and API version values from the environment variables into the URL.
-    - Creates a `messageData` object that includes `max_token`, `temperature`, and `messages` to send to Azure OpenAI.
-        - `max_tokens`: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Older [models](/azure/ai-services/openai/concepts/models?WT.mc_id=m365-94501-dwahlin#gpt-3-models-1) have a context length of 2,048 tokens while newer ones support 4,096, 8,192, or even 32,768 tokens depending on the model being used.
-        - `temperature`: What sampling temperature to use. A higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
-        - `messages`: Represents the messages to generate chat completions for, in the chat format. In this example two messages are passed in: one for the system and one for the user. The system message defines the overall behavior and rules that will be used, while the user message defines the prompt text provided by the user.
-    - Calls `fetchAndParse()` to send the `fetchUrl` and `headersBody` values to Azure OpenAI.
-    - Processes the response by retrieving the `completion.choices[0].message.content` value. If the response contains the expected results, the code extracts the JSON object from the response and returns it.
-    
-        > [!NOTE]
-        > You can learn more about these parameters and others in the [Azure OpenAI reference documentation](/azure/ai-services/openai/reference?WT.mc_id=m365-94501-dwahlin#chat-completions).
+    - **Parameters:**
+        - `systemPrompt`, `userPrompt`, and `temperature` are the main parameters discussed earlier.
+        - An optional `dataSources` parameter supports the "Azure Bring Your Own Data" feature, which will be covered later in this tutorial.
+
+    - **Environment Variables Check:**
+        - The function verifies the presence of essential environment variables, throwing an error if any are missing.
+
+    - **Configuration Object:**
+        - A `config` object is created using values from the `.env` file (`OPENAI_API_KEY`, `OPENAI_ENDPOINT`, `OPENAI_API_VERSION`, `OPENAI_MODEL`). These values are used to construct the URL for calling Azure OpenAI.
+
+    - **AzureOpenAI Instance:**
+        - An instance of `AzureOpenAI` is created using the `config` object. The `AzureOpenAI` symbol is part of the `openai` package, which should be imported at the top of your file.
+
+    - **Generating a Completion:**
+        - The `chat.completions.create()` function is called with the following properties:
+            - `model`: Specifies the GPT model (e.g., gpt-4o, gpt-3.5-turbo) as defined in your `.env` file.
+            - `max_tokens`: Defines the maximum number of tokens for the completion.
+            - `temperature`: Sets the sampling temperature. Higher values (e.g., 0.9) yield more creative responses, while lower values (e.g., 0) produce more deterministic answers.
+            - `response_format`: Defines the response format. Here, it's set to return a JSON object. More details on JSON mode can be found in the [Azure OpenAI reference documentation](/azure/ai-services/openai/how-to/json-mode?WT.mc_id=m365-94501-dwahlin).
+            - `messages`: Contains the messages for generating chat completions. This example includes two messages: one from the system (defining behavior and rules) and one from the user (containing the prompt text).
+
+    - **Return Value:**
+        - The function returns the completion object generated by Azure OpenAI.
 
 1. Comment out the following lines in the `getSQLFromNLP()` function:
 
@@ -355,29 +364,9 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Enter *Select all table names from the database* into the **Custom Query** input. Select **Run Query**. Are table names displayed?
     - Enter *Select all function names from the database.* into the **Custom Query** input and select **Run Query** again. Are function names displayed?
 
-1. QUESTION: Why is this still working after adding a rule saying that table names, function names, and procedure names aren't allowed? 
+1. QUESTION: Will a model always follow the rules you define in the prompt?
 
-    ANSWER: This is due to the "only JSON" rule. If the rules were more flexible and didn't require a JSON object to be returned, you may see a message about Azure OpenAI being unable to perform the task.
-
-    > [!NOTE]
-    > It's important to note that OpenAI models can return unexpected results on occasion that may not match the rules you've defined. It's important to plan for that in your code.
-
-1. Take out the following rule from `systemPrompt` and save the file.
-
-    ```
-    - Only return a JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-      Just the JSON object is needed.
-    ```
-
-1. Run *Select all table names from the database* query again.
-
-1. Notice the message now displayed in the browser. Azure OpenAI is unable to perform the task because of the the following rule. Since we removed the "only JSON" rule, the response can provide additional details about why the task can't be performed.
-
-    ```
-    - Do not allow the SELECT query to return table names, function names, or procedure names.
-    ```
-
-    You can see that AI may generate unexpected results even if you have specific rules in place. This is why you need to plan your prompt text and rules carefully, but also plan to add a post-processing step into your code to handle cases where you receive unexpected results.
+    ANSWER: No! It's important to note that OpenAI models can return unexpected results on occasion that may not match the rules you've defined. It's important to plan for that in your code.
 
 1. Go back to *server/openAI.ts* and locate the `isProhibitedQuery()` function. This is an example of post-processing code that can be run after Azure OpenAI returns results. Notice that it sets the `sql` property to an empty string if prohibited keywords are returned in the generated SQL query. This ensures that if unexpected results are returned from Azure OpenAI, the SQL query will not be run against the database.
 
@@ -387,7 +376,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
         const prohibitedKeywords = [
             'insert', 'update', 'delete', 'drop', 'truncate', 'alter', 'create', 'replace',
-            'information_schema', 'pg_catalog', 'pg_tables', 'pg_namespace', 'pg_class',
+            'information_schema', 'pg_catalog', 'pg_tables', 'pg_proc', 'pg_namespace', 'pg_class',
             'table_schema', 'table_name', 'column_name', 'column_default', 'is_nullable',
             'data_type', 'udt_name', 'character_maximum_length', 'numeric_precision',
             'numeric_scale', 'datetime_precision', 'interval_type', 'collation_name',

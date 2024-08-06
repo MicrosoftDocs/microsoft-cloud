@@ -14,7 +14,7 @@ In this exercise you will:
 
 1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
-1. Type *openai* in the **search bar** at the top of the portal page and select **Azure OpenAI** from the options that appear.
+1. Enter *openai* in the **search bar** at the top of the portal page and select **Azure OpenAI** from the options that appear.
 
     :::image type="content" source="../media/search-openai-portal.png" alt-text="Azure OpenAI Service in the Azure portal":::
 
@@ -69,9 +69,9 @@ In this exercise you will:
 
 1. Take a moment to read through the **System message** text that's provided. This tells the model how to act as the user interacts with it. 
 
-1. Locate the textbox in the chat area and type **Summarize what Generative AI is and how it can be used**. Select <kbd>Enter</kbd> to send the message to the model and have it generate a response.
+1. Locate the textbox in the chat area and enter **Summarize what Generative AI is and how it can be used**. Select <kbd>Enter</kbd> to send the message to the model and have it generate a response.
 
-1. Experiment with other prompts and responses. For example, type **Provide a short history about the capital of France** and notice the response that's generated.
+1. Experiment with other prompts and responses. For example, enter **Provide a short history about the capital of France** and notice the response that's generated.
 
 <a id="update-env-file"></a>
 ### Update the Project's `.env` File
