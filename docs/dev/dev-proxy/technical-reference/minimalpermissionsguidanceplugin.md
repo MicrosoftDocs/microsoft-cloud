@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/22/2024
+ms.date: 08/13/2024
 ---
 
 # MinimalPermissionsGuidancePlugin
@@ -18,17 +18,31 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 {
   "name": "MinimalPermissionsGuidancePlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "configSection": "minimalPermissionsGuidancePlugin"
 }
 ```
 
 ## Configuration example
 
-None
+```json
+{
+    "minimalPermissionsGuidancePlugin": {
+        "permissionsToIgnore": [ 
+            "profile", 
+            "openid", 
+            "offline_access", 
+            "email"
+        ]
+    }
+}
+```
 
 ## Configuration properties
 
-None
+| Property | Description | Default |
+| -------- | ----------- | :-----: |
+| `permissionsToIgnore` | The scopes to ignore and not include in the report. | `profile openid offline_access email` |
 
 ## Command line options
 
