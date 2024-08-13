@@ -327,12 +327,7 @@ The exclamation mark at the beginning of the URL tells Dev Proxy to ignore any r
 - At the command line, enter `devproxy` and press <kbd>Enter</kbd> to start Dev Proxy.
 - Send a request to `https://jsonplaceholder.typicode.com/posts/2` from the command line and view the output.
 
-An entry is shown confirming that the request was ignored and passed through to the API.
-
-```text
- req   ╭ GET https://jsonplaceholder.typicode.com/posts/2
- api   ╰ Passed through
-```
+When an ignored URL is matched to a request, Dev Proxy doesn't process the request, and so no output is displayed.
 
 The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy processes these URLs in order. When a URL matches, it isn’t processed again. Therefore, placing the URL first ensures that the request is ignored before the next URL is processed.
 
