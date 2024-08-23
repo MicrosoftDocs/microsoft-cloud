@@ -200,6 +200,8 @@
       href: technical-reference/plugin-architecture.md
     - name: Proxy settings
       href: technical-reference/Proxy-settings.md
+    - name: Proxy API
+      href: technical-reference/proxy-api.md
     - name: Keyboard shortcuts
       href: technical-reference/Keyboard-shortcuts.md
     - name: Plugins
