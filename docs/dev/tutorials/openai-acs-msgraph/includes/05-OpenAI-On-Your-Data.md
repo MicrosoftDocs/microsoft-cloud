@@ -25,18 +25,33 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Select **Deployments** from the navigation menu.
 
-1. Select **Create new deployment** and enter the following values:
-    - Model: **text-embedding-ada-002**.
-    - Model version: **Default**.
-    - Deployment name: **text-embedding-ada-002**.
+1. Select Select **Deply model** --> **Deploy base model** in the toolbar.
 
-1. After the model is created, select **Azure OpenAI** from the navigation menu to go to the welcome screen. 
+1. Select the **text-embedding-ada-002** model from the list of models and select **Confirm**.
+
+1. Select the following options:
+    - Deployment name: **text-embedding-ada-002**.
+    - Model version: **Default**.
+    - Deployment type: **Standard**.
+    - Set the **Tokens per Minute Rate Limit (thousands)** value to **120K**.
+    - Content Filter: **DefaultV2**.
+    - Enable dynamic quote: **Enabled**.
+
+1. Select the **Deploy** button.
+
+1. After the model is created, select **Home** from the navigation menu to go to the welcome screen. 
 
 2. Locate the **Bring your own data** tile on the welcome screen and select **Try it now**.
 
     :::image type="content" source="../media/aoai-studio-byod.png" alt-text="Azure OpenAI Studio Bring Your Own Data":::
 
-1. Select **Upload files** from the **Select data source** dropdown.
+1. Select **Add your data** followed by **Add a data source**.
+
+1. In the **Select data source** dropdown, select **Upload files**.
+
+1. Under the **Select Azure Blob storage resource** dropdown, select **Create a new Azure Blob storage resource**.
+
+1. Select your Azure subscription in the **Subscription** dropdown.
 
 1. Under the **Select Azure Blob storage resource** dropdown, select **Create a new Azure Blob storage resource**.
 
@@ -52,37 +67,40 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
     :::image type="content" source="../media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
 
-1. Under the **Select Azure Cognitive Search resource** dropdown, select **Create a new Azure Cognitive Search resource**.
+1. Under the **Select Azure AI Search resource** dropdown, select **Create a new Azure AI Search resource**.
 
 1. This will take you back to the Azure portal where you can perform the following tasks:
 
-    - Enter a unique name for the Cognitive Search resource such as **byodsearch[Your Last Name]**.
+    - Enter a unique name for the AI Search resource such as **byodsearch-[Your Last Name]**.
     - Select a region that's close to your location.
-    - In the **Pricing tier** section, select **Change Pricing Tier** and select **Basic** followed by **Select**. The free tier isn't supported, so you'll clean up the Cognitive Search resource at the end of this tutorial.
+    - In the **Pricing tier** section, select **Change Pricing Tier** and select **Basic** followed by **Select**. The free tier isn't supported, so you'll clean up the AI Search resource at the end of this tutorial.
     - Select **Review** followed by **Create**.
 
-1. Once the Cognitive Search resource is created, go to the resource **Overview** page and copy the **Url** value to a local file.
+1. Once the AI Search resource is created, go to the resource **Overview** page and copy the **Url** value to a local file.
 
-    :::image type="content" source="../media/cognitive-search-url.png" alt-text="Azure OpenAI Studio Cognitive Search Url":::
+    :::image type="content" source="../media/ai-search-url.png" alt-text="Azure OpenAI Studio AI Search Url":::
 
-1. Select **Keys** in the left navigation menu and copy the **Primary admin key** value to a local file. You'll need these values later in the exercise.
+1. Select **Settings** --> **Keys** in the navigation menu. 
 
-    :::image type="content" source="../media/cognitive-search-key.png" alt-text="Azure OpenAI Studio Cognitive Search Keys":::
+1. On the **API Access control** page, select **Both** to enable the service to be accessed by using Managed Identity or by using a key. Select **Yes** when prompted. 
 
-1. Select **Semantic ranker** in the left navigation menu and ensure that **Free** is selected. 
+    > [!NOTE]
+    > Although we'll use an API key in this exercise since adding role assignments can take up to 10 minutes, with a little additional effort you can enable a system assigned managed identity to access the service more securely.
+
+1. Select **Keys** in the left navigation menu and copy the **Primary admin key** value to a local file. You'll need the URL and key values later in the exercise.
+
+1. Select **Settings** --> **Semantic ranker** in the navigation menu and ensure that **Free** is selected. 
 
     > [!NOTE]
     > To check if semantic ranker is available in a specific region, [Check the Products Available by Region](https://azure.microsoft.com/global-infrastructure/services/?products=search) page on the Azure web site to see if your region is listed.
 
-1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure Cognitive Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
+1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure AI Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
 1. Enter a value of **byod-search-index** for the **Enter the index name** value.
 
 1. Select the **Add vector search to this search resource** checkbox.
 
 1. In the **Select an embedding model** dropdown, select the **text-embedding-ada-002** model you created earlier.
-
-1. Select the checkbox followed by **Next**.
 
 1. In the **Upload files** dialog, select **Browse for a file**.
 
@@ -101,23 +119,29 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 1. In the **Search type** dropdown, select **Hybrid + semantic**. 
 
     > [!NOTE]
-    > This option provides support for keyword and vector search. Once results are returned, a secondary ranking process is applied to the result set using deep learning models which improves the search relevance for the user. To learn more about semantic search, view the [Semantic search in Azure Cognitive Search](/azure/search/semantic-search-overview) documentation.
+    > This option provides support for keyword and vector search. Once results are returned, a secondary ranking process is applied to the result set using deep learning models which improves the search relevance for the user. To learn more about semantic search, view the [Semantic search in Azure AI Search](/azure/search/semantic-search-overview) documentation.
 
-1. Select the checkboxes to acknowledge the costs associated with using semantic search and vector embeddings.
+1. Ensure that the **Select a size** value is set to **1024**.
 
-1. Select **Next**, review the details, and select **Save and close**. 
+1. Select **Next**.
+
+1. For the **Azure resource authentication type**, select **API key**. Learn more about selecting the right authentication type in the [Azure AI Search authentication documentation](azure/ai-services/openai/how-to/use-your-data-securely?WT.mc_id=m365-94501-dwahlin#role-assignments).
+
+1. Select **Next**.
+
+1. Review the details and select **Save and close**. 
 
 1. Now that your custom data has been uploaded, the data will be indexed and available to use in the **Chat playground**. This process may take a few minutes. Once it's completed, continue to the next section.
 
 ## Using Your Custom Data Source in the Chat Playground
 
-1. Locate the **Chat session** section of the page in Azure AI Studio and enter the following **User message**:
+1. Locate the **Chat session** section of the page in Azure OpenAI Studio and enter the following **User query**:
 
     ```text
     What safety rules are required to install a clock?
     ```
 
-1. You should see a result similar to the following displayed:
+1. After submitting the user query you should see a result similar to the following displayed:
 
     :::image type="content" source="../media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session":::
 
@@ -133,7 +157,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
     :::image type="content" source="../media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session":::
 
-1. Now let's experiment with the Company FAQs document. Enter the following text into the **User message** field:
+1. Now let's experiment with the Company FAQs document. Enter the following text into the **User query** field:
 
     ```text
     What is the company's policy on vacation time?
@@ -141,7 +165,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. You should see that no information was found for that request. 
 
-1. Enter the following text into the **User message** field:
+1. Enter the following text into the **User query** field:
 
     ```text
     How should I handle refund requests?
@@ -153,7 +177,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Expand the **1 references** section in the chat response and notice that the *Company FAQs.docx* file is listed and that you can select it to view the document.
 
-1. Select **View code** at the top of the **Chat session** section.
+1. Select **View code** in the toolbar of the **Chat playground**.
 
     :::image type="content" source="../media/aoai-studio-chat-session-view-code.png" alt-text="Azure OpenAI Studio Chat Session - View Code":::
 
@@ -161,7 +185,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
     :::image type="content" source="../media/aoai-studio-chat-session-sample-code.png" alt-text="Azure OpenAI Studio Chat Session - Sample Code":::
 
-1. Turn on the **Show raw JSON** toggle in the **Chat session*. Notice the chat session starts with a message similar to the following:
+1. Turn on the **Show raw JSON** toggle above the chat messages. Notice the chat session starts with a message similar to the following:
 
     ```json
     {
@@ -174,12 +198,12 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 ### Using the Bring Your Own Data Feature in the Application
 
-1. Go back to the project in Visual Studio Code and open the *.env* file. Update the following values with your Cognitive Services endpoint, key, and index name. You copied the endpoint and key to a local file earlier in this exercise.
+1. Go back to the project in VS Code and open the *.env* file. Update the following values with your AI Services endpoint, key, and index name. You copied the endpoint and key to a local file earlier in this exercise.
 
     ```
-    AZURE_COGNITIVE_SEARCH_ENDPOINT=<COGNITIVE_SERVICES_ENDPOINT_VALUE>
-    AZURE_COGNITIVE_SEARCH_KEY=<COGNITIVE_SERVICES_KEY_VALUE>
-    AZURE_COGNITIVE_SEARCH_INDEX=byod-search-index
+    AZURE_AI_SEARCH_ENDPOINT=<AI_SERVICES_ENDPOINT_VALUE>
+    AZURE_AI_SEARCH_KEY=<AI_SERVICES_KEY_VALUE>
+    AZURE_AI_SEARCH_INDEX=byod-search-index
     ```
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the earlier exercise before continuing.
@@ -191,10 +215,10 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 1. The following text should appear in the chat dialog:
 
     ```text
-    How should I handle refund requests?
+    How should I handle a company refund request?
     ```
 
-1.  Select the **Get Help** button. You should see results returned from the *Company FAQs.docx* document that you uploaded earlier in Azure AI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
+1.  Select the **Get Help** button. You should see results returned from the *Company FAQs.docx* document that you uploaded earlier in Azure OpenAI Studio. If you'd like to read through the document, you can find it in the **customer documents** folder at the root of the project.
 
 1. Change the text to the following and select the **Get Help** button:
 
@@ -202,7 +226,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     What safety rules are required to install a clock?
     ```
 
-1. You should see results returned from the *Clock A102 Installation Instructions.docx* document that you uploaded earlier in Azure AI Studio. This document is also available in the **customer documents** folder at the root of the project.
+1. You should see results returned from the *Clock A102 Installation Instructions.docx* document that you uploaded earlier in Azure OpenAI Studio. This document is also available in the **customer documents** folder at the root of the project.
 
 ### Exploring the Code
 
@@ -240,8 +264,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
     ```typescript
     async function completeBYOD(userPrompt: string): Promise<string> {
-        const systemPrompt = 'You are an AI assistant that helps people find information.';
-        // Pass that we're using Cognitive Search along with Azure OpenAI.
+        const systemPrompt = 'You are an AI assistant that helps people find information in documents.';
         return await callOpenAI(systemPrompt, userPrompt, 0, true);
     }
     ```
@@ -252,7 +275,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     - the `systemPrompt` variable defines that an AI assistant designed to help people find information will be used.
     - `callOpenAI()` is used to call the Azure OpenAI API and return the results. It passes the `systemPrompt` and `userPrompt` values as well as the following parameters:
         - `temperature` - The amount of creativity to include in the response. The user needs consistent (less creative) answers in this case so the value is set to 0.
-        - `useBYOD` - A boolean value that indicates whether or not to use Cognitive Search along with Azure OpenAI. In this case, it's set to `true` so Cognitive Search functionality will be used.
+        - `useBYOD` - A boolean value that indicates whether or not to use AI Search along with Azure OpenAI. In this case, it's set to `true` so AI Search functionality will be used.
 
 1. The `callOpenAI()` function accepts a `useBYOD` parameter that is used to determine which OpenAI function to call. In this case, it sets `useBYOD` to `true` so the `getAzureOpenAIBYODCompletion()` function will be called.
 
@@ -260,120 +283,53 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
         const isAzureOpenAI = OPENAI_API_KEY && OPENAI_ENDPOINT && OPENAI_MODEL;
 
-        if (isAzureOpenAI && useBYOD) {
-            // Azure OpenAI + Cognitive Search: Bring Your Own Data
-            return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
-        }
-
         if (isAzureOpenAI) {
-            // Azure OpenAI
+            if (useBYOD) {
+                return getAzureOpenAIBYODCompletion(systemPrompt, userPrompt, temperature);
+            }
             return getAzureOpenAICompletion(systemPrompt, userPrompt, temperature);
         }
 
-        // OpenAI
         return getOpenAICompletion(systemPrompt, userPrompt, temperature);
     }
     ```
 
-1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the "bring your own data" scenario available in Azure OpenAI.
-
-    - The `fetchUrl` value includes an `extensions` segment in the URL whereas the URL for the standard Azure OpenAI API does not.
-
-        ```typescript
-        const fetchUrl = `${OPENAI_ENDPOINT}/openai/deployments/${OPENAI_MODEL}/extensions/chat/completions?api-version=${OPENAI_API_VERSION}`;
-        ```
-
-    - A `dataSources` property is added to the `messageData` object sent to Azure OpenAI. The `dataSources` property contains the Cognitive Search resource's `endpoint`, `key`, and `indexName` values that were added to the `.env` file earlier in this exercise.
-
-        ```typescript
-        const messageData: ChatGPTData = {
-            max_tokens: 1024,
-            temperature,
-            messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: userPrompt }
-            ],
-            // Adding BYOD data source so that Cognitive Search is used with Azure OpenAI
-            dataSources: [
-                {
-                    type: 'AzureCognitiveSearch',
-                    parameters: {
-                        endpoint: AZURE_COGNITIVE_SEARCH_ENDPOINT,
-                        key: AZURE_COGNITIVE_SEARCH_KEY,
-                        indexName: AZURE_COGNITIVE_SEARCH_INDEX
-                    }
-                }
-            ]
-        };
-        ```
-
-    - The `headersBody` object includes `chatpgpt_url` and `chatgpt_key` properties that are used to call Azure OpenAI once the Cognitive Search results are obtained. 
-
-        ```typescript
-        const headersBody: OpenAIHeadersBody = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'api-key': OPENAI_API_KEY,
-                chatgpt_url: fetchUrl.replace('extensions/', ''),
-                chatgpt_key: OPENAI_API_KEY
-            },
-            body: JSON.stringify(messageData),
-        };
-        ```
-
-    - The response returned by Azure OpenAI includes two messsages with roles of `tool` and `assistant`. The sample application uses the second message with a `role` of `assistant` to provide the user the information they requested. In cases where you want to provide additional information about the documents used to create the response (as you saw earlier in the Azure AI Studio playground), you can use the first message which includes the `url` to the document(s).
-
-        ```json
-        {
-            "id": "12345678-1a2b-3c4e5f-a123-12345678abcd",
-            "model": "",
-            "created": 1684304924,
-            "object": "chat.completion",
-            "choices": [
-                {
-                    "index": 0,
-                    "messages": [
-                        {
-                            "role": "tool",
-                            "content": "{\"citations\": [{\"content\": \"\\nCognitive Services are cloud-based artificial intelligence (AI) services...\", \"id\": null, \"title\": \"What is Cognitive Services\", \"filepath\": null, \"url\": null, \"metadata\": {\"chunking\": \"orignal document size=250. Scores=0.4314117431640625 and 1.72564697265625.Org Highlight count=4.\"}, \"chunk_id\": \"0\"}], \"intent\": \"[\\\"Learn about Azure Cognitive Services.\\\"]\"}",
-                            "end_turn": false
-                        },
-                        {
-                            "role": "assistant",
-                            "content": " \nAzure Cognitive Services are cloud-based artificial intelligence (AI) services that help developers build cognitive intelligence into applications without having direct AI or data science skills or knowledge. [doc1]. Azure Machine Learning is a cloud service for accelerating and managing the machine learning project lifecycle. [doc1].",
-                            "end_turn": true
-                        }
-                    ]
-                }
-            ]
-        }
-        ```
-
-1. The following code is used in `getAzureOpenAIBYODCompletion()` to access the messages. Although citations aren't being used in this example, they're logged to the console so you can see the type of data that's returned.
+1. Locate the `getAzureOpenAIBYODCompletion()` function in *server/openAI.ts*. It's quite similar to the `getAzureOpenAICompletion()` function you examined earlier, but is shown as a separate function to highlight a few key differences that are unique to the "Azure OpenAI on your data" scenario available in Azure OpenAI.
 
     ```typescript
-    const completion = await fetchAndParse(fetchUrl, headersBody);
-    console.log(completion);
+    async function getAzureOpenAIBYODCompletion(systemPrompt: string, userPrompt: string, temperature: number): Promise<string> {
+        const dataSources = [
+            {
+                type: 'azure_search',
+                parameters: {
+                    authentication: {
+                        type: 'api_key',
+                        key: AZURE_AI_SEARCH_KEY
+                    },
+                    endpoint: AZURE_AI_SEARCH_ENDPOINT,
+                    index_name: AZURE_AI_SEARCH_INDEX
+                }
+            }
+        ];
 
-    if (completion.error) {
-        console.error('Azure OpenAI BYOD Error: \n', completion.error);
-        return completion.error.message;
+        const completion = await createAzureOpenAICompletion(systemPrompt, userPrompt, temperature, dataSources) as AzureOpenAIYourDataResponse;
+        console.log('Azure OpenAI Add Your Own Data Output: \n', completion.choices[0]?.message);
+        for (let citation of completion.choices[0]?.message?.context?.citations ?? []) {
+            console.log('Citation Path:', citation.filepath);
+        }
+        return completion.choices[0]?.message?.content?.trim() ?? '';
     }
-
-    const citations = (completion.choices[0]?.messages[0]?.content?.trim() ?? '') as string;
-    console.log('Azure OpenAI BYOD Citations: \n', citations);
-
-    let content = (completion.choices[0]?.messages[1]?.content?.trim() ?? '') as string;
-    console.log('Azure OpenAI BYOD Output: \n', content);
-
-    return content;
     ```
+
+    Notice the following functionality in the `getAzureOpenAIBYODCompletion()` function:
+
+    - A `dataSources` property is created which contains the AI Search resource's `key`, `endpoint`, and `index_name` values that were added to the `.env` file earlier in this exercise
+    - The `createAzureOpenAICompletion()` function is called with the `systemPrompt`, `userPrompt`, `temperature`, and `dataSources` values. This function is used to call Azure OpenAI API and return the results.
+    - Once the response is returned, the document citations are logged to the console. The completion message content is then returned to the caller.
 
 1. A few final points to consider before moving on to the next exercise:
 
-    - The "bring your own data" feature of Azure OpenAI is currently in preview. It's not recommended to use it in production applications at this time.
-    - The sample application uses a single index in Azure Cognitive Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
+    - The sample application uses a single index in Azure AI  Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
     - Security must be carefully evaluated with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
-1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's move on to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
+1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's go to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.

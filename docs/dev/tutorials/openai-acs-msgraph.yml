@@ -46,10 +46,10 @@ items:
       [!INCLUDE [](openai-acs-msgraph/includes/04-OpenAI-Completions.md)]
 
   - title: | 
-      AI: Bring Your Own Data
+      AI: Azure OpenAI On Your Data
     durationInMinutes: 15
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/05-OpenAI-BYOD.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/05-OpenAI-On-Your-Data.md)]
 
   - title: |
       Communication: Creating an Azure Communication Services Resource
