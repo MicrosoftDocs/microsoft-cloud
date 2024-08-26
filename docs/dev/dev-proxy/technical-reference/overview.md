@@ -86,4 +86,5 @@ Reference of Dev Proxy configuration options.
 Name | Description
 --- | ---
 [devproxyrc](./devproxyrc.md)|Configuration file for Dev Proxy.
+[Proxy API](./proxy-API.md)|API for interacting with Dev Proxy programmatically.
 [Proxy settings](./proxy-settings.md)|Configuration options for proxy settings.
