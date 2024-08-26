@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run, and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/18/2024
+ms.date: 08/26/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -378,17 +378,24 @@ First let's locate the location of the file that contains the error definitions.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.18.0/genericrandomerrorplugin.schema.json",
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.20.0/genericrandomerrorplugin.schema.json",
+  "errors": [
     {
-      "statusCode": 429,
-      "body": {
-        "message": "Too Many Requests",
-        "details": "The user has sent too many requests in a given amount of time (\"rate limiting\")."
+      "request": {
+        "url": "https://jsonplaceholder.typicode.com/*"
       },
-      "headers": {
-        "Retry-After": "@dynamic"
-      }
+      "responses": [
+        {
+          "statusCode": 429,
+          "body": {
+            "message": "Too Many Requests",
+            "details": "The user has sent too many requests in a given amount of time (\"rate limiting\")."
+          },
+          "headers": {
+            "Retry-After": "@dynamic"
+          }
+        }
+      ]
     }
   ]
 }
