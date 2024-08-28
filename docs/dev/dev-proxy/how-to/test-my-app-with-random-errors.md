@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 08/26/2024
 ---
 
 # Test my app with random errors
@@ -16,7 +16,7 @@ To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.20.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -48,20 +48,27 @@ Finally, in the errors file, define the list of error responses that you want to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/genericrandomerrorplugin.schema.json",
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.20.0/genericrandomerrorplugin.schema.json",
+  "errors": [
     {
-      "statusCode": 500,
-      "headers": [
+      "request": {
+        "url": "https://api.contoso.com/*"
+      },
+      "responses": [
         {
-          "name": "content-type",
-          "value": "application/json; charset=utf-8"
+          "statusCode": 500,
+          "headers": [
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": {
+            "code": "InternalServerError",
+            "message": "Something went wrong"
+          }
         }
-      ],
-      "body": {
-        "code": "InternalServerError",
-        "message": "Something went wrong"
-      }
+      ]
     }
   ]
 }
