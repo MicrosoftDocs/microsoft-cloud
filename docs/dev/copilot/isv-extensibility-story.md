@@ -9,6 +9,7 @@ ms.date: 3/22/2024
 
 #customer intent: As a developer, I want to understand how ISVs can leverage Microsoft Cloud to extend or create copilots to create value-added solutions for their end customers.
 
+ms.custom: [copilot-learning-hub]
 ---
 
 # Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs
