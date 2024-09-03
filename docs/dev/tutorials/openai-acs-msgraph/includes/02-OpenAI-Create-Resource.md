@@ -65,6 +65,8 @@ In this exercise you will:
 
 1. The **Deployment** dropdown should display the **gpt-4o** model. 
 
+    :::image type="content" source="../media/aoai-playground-chat.png" alt-text="Azure OpenAI Chat Playground" border="true":::
+
 1. Take a moment to read through the **System message** text that's provided. This tells the model how to act as the user interacts with it. 
 
 1. Locate the textbox in the chat area and enter **Summarize what Generative AI is and how it can be used**. Select <kbd>Enter</kbd> to send the message to the model and have it generate a response.
