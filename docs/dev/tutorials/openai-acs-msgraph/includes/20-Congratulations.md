@@ -10,9 +10,9 @@ Congratulations! You've learned how Azure OpenAI can be used to enhance user pro
 
 Cleanup your Azure resources to avoid additional charges to your account. Go to the Azure portal and delete the following resources:
 
-- The Azure Cognitive Search resource
+- The Azure AI Search resource
 - The Azure Storage resource
-- The Azure OpenAI resource
+- The Azure OpenAI resource (ensure that you delete your models first and then the Azure OpenAI resource)
 - The Azure Communication Services resource
 
 ### Next Steps
