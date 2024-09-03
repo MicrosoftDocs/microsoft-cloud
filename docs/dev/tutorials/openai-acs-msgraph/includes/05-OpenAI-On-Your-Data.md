@@ -25,7 +25,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Select **Deployments** from the navigation menu.
 
-1. Select Select **Deply model** --> **Deploy base model** in the toolbar.
+1. Select Select **Deploy model** --> **Deploy base model** in the toolbar.
 
 1. Select the **text-embedding-ada-002** model from the list of models and select **Confirm**.
 

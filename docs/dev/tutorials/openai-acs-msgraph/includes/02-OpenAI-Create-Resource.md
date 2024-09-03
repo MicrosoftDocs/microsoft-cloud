@@ -44,7 +44,7 @@ In this exercise you will:
 
 1. Select the **Manage Deployments** button to go to Azure OpenAI Studio.
 
-1. Select **Deply model** --> **Deploy base model** in the toolbar.
+1. Select **Deploy model** --> **Deploy base model** in the toolbar.
 
     :::image type="content" source="../media/aoai-deploy-model.png" alt-text="Azure OpenAI Deploy base model" border="true":::
 
