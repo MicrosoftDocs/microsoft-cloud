@@ -7,7 +7,7 @@ While this feature is quite powerful on its own, there may be cases where users 
 Here's a quick overview of how the "bring your own data" feature works from the [Azure OpenAI documentation](/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin#what-is-azure-openai-on-your-data).
 
 > [!NOTE]
-> One of the key features of Azure OpenAI on your data is its ability to retrieve and utilize data in a way that enhances the model's output. Azure OpenAI on your data, together with Azure Cognitive Search, determines what data to retrieve from the designated data source based on the user input and provided conversation history. This data is then augmented and resubmitted as a prompt to the OpenAI model, with retrieved information being appended to the original prompt. Although retrieved data is being appended to the prompt, the resulting input is still processed by the model like any other prompt. Once the data has been retrieved and the prompt has been submitted to the model, the model uses this information to provide a completion. 
+> One of the key features of Azure OpenAI on your data is its ability to retrieve and utilize data in a way that enhances the model's output. Azure OpenAI on your data, together with Azure AI Search, determines what data to retrieve from the designated data source based on the user input and provided conversation history. This data is then augmented and resubmitted as a prompt to the OpenAI model, with retrieved information being appended to the original prompt. Although retrieved data is being appended to the prompt, the resulting input is still processed by the model like any other prompt. Once the data has been retrieved and the prompt has been submitted to the model, the model uses this information to provide a completion. 
 
 In this exercise, you will:
 
@@ -15,7 +15,7 @@ In this exercise, you will:
 - Deploy an embedding model using Azure AI Studio.
 - Upload custom documents.
 - Start a chat session in the Chat playground to experiment with generating completions based upon your own data.
-- Explore code that uses Azure Cognitive Search and Azure OpenAI to generate completions based upon your own data.
+- Explore code that uses Azure AI Search and Azure OpenAI to generate completions based upon your own data.
 
 Let's get started by deploying an embedding model and adding a custom data source in Azure AI Studio.
 
