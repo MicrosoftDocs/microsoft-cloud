@@ -30,12 +30,12 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 1. Select the **text-embedding-ada-002** model from the list of models and select **Confirm**.
 
 1. Select the following options:
-    - Deployment name: **text-embedding-ada-002**.
-    - Model version: **Default**.
-    - Deployment type: **Standard**.
-    - Set the **Tokens per Minute Rate Limit (thousands)** value to **120K**.
-    - Content Filter: **DefaultV2**.
-    - Enable dynamic quote: **Enabled**.
+    - Deployment name: **text-embedding-ada-002**
+    - Model version: **Default**
+    - Deployment type: **Standard**
+    - Set the **Tokens per Minute Rate Limit (thousands)** value to **120K**
+    - Content Filter: **DefaultV2**
+    - Enable dynamic quote: **Enabled**
 
 1. Select the **Deploy** button.
 
