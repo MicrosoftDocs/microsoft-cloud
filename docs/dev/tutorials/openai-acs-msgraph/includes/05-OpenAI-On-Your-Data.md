@@ -125,7 +125,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Select **Next**.
 
-1. For the **Azure resource authentication type**, select **API key**. Learn more about selecting the right authentication type in the [Azure AI Search authentication documentation](azure/ai-services/openai/how-to/use-your-data-securely?WT.mc_id=m365-94501-dwahlin#role-assignments).
+1. For the **Azure resource authentication type**, select **API key**. Learn more about selecting the right authentication type in the [Azure AI Search authentication documentation](/azure/ai-services/openai/how-to/use-your-data-securely?WT.mc_id=m365-94501-dwahlin#role-assignments).
 
 1. Select **Next**.
 
