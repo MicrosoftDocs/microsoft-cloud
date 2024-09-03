@@ -47,17 +47,21 @@ In this exercise, you will:
 1. Look below the *mgt-search-results* component in *emails.component.html* to find the data bindings used to render the email messages. This example iterates through the `data` property and writes out the email subject, body preview, and a link to view the full email message.
 
     ```html
-    <div *ngIf="data.length">
-        <mat-card *ngFor="let email of data">
-            <mat-card-header>
-                <mat-card-title>{{email.resource.subject}}</mat-card-title>
-                <mat-card-subtitle [innerHTML]="email.resource.bodyPreview"></mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-actions>
-                <a mat-stroked-button color="basic" [href]="email.resource.webLink" target="_blank">View Email Message</a>
-            </mat-card-actions>
-        </mat-card>
-    </div>
+    @if (this.data.length) {
+        <div>
+            @for (email of this.data;track $index) {
+                <mat-card>
+                    <mat-card-header>
+                    <mat-card-title>{{email.resource.subject}}</mat-card-title>
+                    <mat-card-subtitle [innerHTML]="email.resource.bodyPreview"></mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-actions>
+                    <a mat-stroked-button color="basic" [href]="email.resource.webLink" target="_blank">View Email Message</a>
+                    </mat-card-actions>
+                </mat-card>
+            }
+        </div>
+    }
     ```
 
     :::image type="content" source="../media/viewing-emails.png" alt-text="Viewing Email Messages":::
@@ -111,44 +115,57 @@ In this exercise, you will:
 1. Immediately below the `mgt-search-results` component in *calendar-events.component.html* you'll find the data bindings used to render the calendar events. This example iterates through the `data` property and writes out the start date, time, and subject of the event. Custom functions included in the component such as `dayFromDateTime()` and `timeRangeFromEvent()` are called to format data properly. The HTML bindings also include a link to view the calendar event in Outlook and the location of the event if one is specified.
 
     ```html
-    <div *ngIf="data.length">
-        <div class="root" *ngFor='let event of data'>
-            <div class="time-container">
-                <div class="date">{{ dayFromDateTime(event.resource.start.dateTime)}}</div>
-                <div class="time">{{ timeRangeFromEvent(event.resource) }}</div>
-            </div>
+    @if (this.data.length) {
+        <div>
+            @for (event of this.data;track $index) {
+                <div class="root">
+                    <div class="time-container">
+                        <div class="date">{{ dayFromDateTime(event.resource.start.dateTime)}}</div>
+                        <div class="time">{{ timeRangeFromEvent(event.resource) }}</div>
+                    </div>
 
-            <div class="separator">
-                <div class="vertical-line top"></div>
-                <div class="circle">
-                    <div *ngIf="!event.resource.bodyPreview?.includes('Join Microsoft Teams Meeting')"
-                        class="inner-circle"></div>
-                </div>
-                <div class="vertical-line bottom"></div>
-            </div>
+                    <div class="separator">
+                        <div class="vertical-line top"></div>
+                        <div class="circle">
+                            @if (!this.event.resource.bodyPreview?.includes('Join Microsoft Teams Meeting')) {
+                                <div class="inner-circle"></div>
+                            }
+                        </div>
+                        <div class="vertical-line bottom"></div>
+                    </div>
 
-            <div class="details">
-                <div class="subject">{{ event.resource.subject }}</div>
-                <div class="location" *ngIf="event.resource.location?.displayName">
-                    at
-                    <a href="https://bing.com/maps/default.aspx?where1={{event.resource.location.displayName}}"
-                        target="_blank" rel="noopener"><b>{{ event.resource.location.displayName }}</b></a>
+                    <div class="details">
+                        <div class="subject">{{ event.resource.subject }}</div>
+                        @if (this.event.resource.location?.displayName) {
+                            <div class="location">
+                                at
+                                <a href="https://bing.com/maps/default.aspx?where1={{event.resource.location.displayName}}"
+                                    target="_blank" rel="noopener"><b>{{ event.resource.location.displayName }}</b></a>
+                            </div>
+                        }
+                        @if (this.event.resource.attendees?.length) {
+                            <div class="attendees">
+                                @for (attendee of this.event.resource.attendees;track attendee.emailAddress.name) {
+                                    <span class="attendee">
+                                        <mgt-person person-query="{{attendee.emailAddress.name}}"></mgt-person>
+                                    </span>
+                                }
+                            </div>
+                        }
+                        @if (this.event.resource.bodyPreview?.includes('Join Microsoft Teams Meeting')) {
+                            <div class="online-meeting">
+                                <img class="online-meeting-icon"
+                                    src="https://img.icons8.com/color/48/000000/microsoft-teams.png" title="Online Meeting" />
+                                <a class="online-meeting-link" href="{{ event.resource.onlineMeetingUrl }}">
+                                    Join Teams Meeting
+                                </a>
+                            </div>
+                        }
+                    </div>
                 </div>
-                <div class="attendees" *ngIf="event.resource.attendees?.length">
-                    <span class="attendee" *ngFor="let attendee of event.resource.attendees">
-                        <mgt-person person-query="{{attendee.emailAddress.name}}"></mgt-person>
-                    </span>
-                </div>
-                <div class="online-meeting"
-                    *ngIf="event.resource.bodyPreview?.includes('Join Microsoft Teams Meeting')">
-                    <img class="online-meeting-icon"
-                        src="https://img.icons8.com/color/48/000000/microsoft-teams.png" title="Online Meeting" />
-                    <a class="online-meeting-link" href="{{ event.resource.onlineMeetingUrl }}">Join Teams
-                        Meeting</a>
-                </div>
-            </div>
+            }
         </div>
-    </div>
+    }
     ```
 
     :::image type="content" source="../media/viewing-calendar-events.png" alt-text="Viewing Calendar Events":::

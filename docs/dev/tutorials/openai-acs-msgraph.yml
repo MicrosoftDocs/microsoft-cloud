@@ -6,7 +6,7 @@ metadata:
   audience: Developer
   level: Intermediate
   displayType: one-column
-  ms.date: 7/12/2024
+  ms.date: 9/3/2024
   author: danwahlin 
   ms.author: dwahlin 
   ms.topic: tutorial
@@ -46,10 +46,10 @@ items:
       [!INCLUDE [](openai-acs-msgraph/includes/04-OpenAI-Completions.md)]
 
   - title: | 
-      AI: Bring Your Own Data
+      AI: Azure OpenAI On Your Data
     durationInMinutes: 15
     content: |
-      [!INCLUDE [](openai-acs-msgraph/includes/05-OpenAI-BYOD.md)]
+      [!INCLUDE [](openai-acs-msgraph/includes/05-OpenAI-On-Your-Data.md)]
 
   - title: |
       Communication: Creating an Azure Communication Services Resource

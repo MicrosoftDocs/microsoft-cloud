@@ -31,7 +31,10 @@ In this exercise, you will:
 
     :::image type="content" source="../media/acs-email-sms-customer-dialog.png" alt-text="Email/SMS Customer dialog box.":::
 
-1. Check that you received the email and SMS messages. As a reminder, the email message will be sent to the value defined for `CUSTOMER_EMAIL_ADDRESS` and the SMS message will be sent to the value defined for `CUSTOMER_PHONE_NUMBER` in the *.env* file. If you weren't able to supply a United States based phone number to use for SMS messages you can skip that step.
+    > [!NOTE]
+    > SMS verification for toll-free numbers is now mandatory in the United States and Canada. To enable SMS messaging, you must submit verification after the phone number purchase. While this tutorial won't go through that process, you can select **Telephony and SMS** --> **Regulatory Documents** from your Azure Communication Services resource in the Azure portal and add the required validation documentation.
+
+1. Check that you received the email and SMS messages. SMS functionality will only work if you submitted the regulatory documents mentioned in the previous note. As a reminder, the email message will be sent to the value defined for `CUSTOMER_EMAIL_ADDRESS` and the SMS message will be sent to the value defined for `CUSTOMER_PHONE_NUMBER` in the *.env* file. If you weren't able to supply a United States based phone number to use for SMS messages you can skip that step.
 
     > [!NOTE]
     > If you don't see the email message in your inbox for the address you defined for `CUSTOMER_EMAIL_ADDRESS` in the *.env* file, check your spam folder.
@@ -122,7 +125,7 @@ In this exercise, you will:
 
     ```typescript
     sendEmail(subject: string, message: string, customerName: string, customerEmailAddress: string) : Observable<EmailSmsResponse> {
-        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendemail', { subject, message, customerName, customerEmailAddress })
+        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendEmail', { subject, message, customerName, customerEmailAddress })
         .pipe(
             catchError(this.handleError)
         );
@@ -155,10 +158,10 @@ In this exercise, you will:
             },
             recipients: {
                 to: [
-                {
-                    address: customerEmailAddress,
-                    displayName: customerName,
-                },
+                    {
+                        address: customerEmailAddress,
+                        displayName: customerName,
+                    },
                 ],
             },
         };
@@ -184,9 +187,10 @@ In this exercise, you will:
         if (this.featureFlags.acsPhoneEnabled) {
             // Using CUSTOMER_PHONE_NUMBER instead of this.data.customerPhoneNumber for testing purposes
             this.subscription.add(
-                this.acsService.sendSms(this.smsMessage, CUSTOMER_PHONE_NUMBER /* this.data.customerPhoneNumber */).subscribe(res => {
+                this.acsService.sendSms(this.smsMessage, CUSTOMER_PHONE_NUMBER /* this.data.customerPhoneNumber */)
+                  .subscribe(res => {
                     if (res.status) {
-                    this.smsSent = true;
+                        this.smsSent = true;
                     }
                 })
             );
@@ -208,7 +212,7 @@ In this exercise, you will:
 
     ```typescript
     sendSms(message: string, customerPhoneNumber: string) : Observable<EmailSmsResponse> {
-        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendsms', { message, customerPhoneNumber })
+        return this.http.post<EmailSmsResponse>(this.apiUrl + 'sendSms', { message, customerPhoneNumber })
         .pipe(
             catchError(this.handleError)
         );
