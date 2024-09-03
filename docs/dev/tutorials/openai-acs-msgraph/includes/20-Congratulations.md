@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-### You've completed this tutorial
+### You completed this tutorial
 
 Congratulations! In this tutorial you learned how:
 - Azure OpenAI can be used to enhance user productivity.
