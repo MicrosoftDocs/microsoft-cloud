@@ -2,10 +2,10 @@
 
 ### You've completed this tutorial
 
-Congratulations! In this tutorial you learned:
-- How Azure OpenAI can be used to enhance user productivity.
-- How Azure Communication Services can be used to integrate communication features.
-- How Microsoft Graph APIs and components can be used to retrieve and display organizational data. 
+Congratulations! In this tutorial you learned how:
+- Azure OpenAI can be used to enhance user productivity.
+- Azure Communication Services can be used to integrate communication features.
+- Microsoft Graph APIs and components can be used to retrieve and display organizational data. 
 
 By using these technologies, you can create effective solutions that increase user productivity by minimizing context shifts and providing necessary decision-making information.
 
@@ -15,10 +15,10 @@ By using these technologies, you can create effective solutions that increase us
 
 Cleanup your Azure resources to avoid additional charges to your account. Go to the Azure portal and delete the following resources:
 
-- The Azure AI Search resource
-- The Azure Storage resource
-- The Azure OpenAI resource (ensure that you delete your models first and then the Azure OpenAI resource)
-- The Azure Communication Services resource
+- Azure AI Search resource
+- Azure Storage resource
+- Azure OpenAI resource (ensure that you delete your models first and then the Azure OpenAI resource)
+- Azure Communication Services resource
 
 ### Next Steps
 
