@@ -13,7 +13,7 @@ By using these technologies, you can create effective solutions that increase us
 
 ## Clean Up Azure Resources
 
-Cleanup your Azure resources to avoid additional charges to your account. Go to the Azure portal and delete the following resources:
+Cleanup your Azure resources to avoid more charges to your account. Go to the Azure portal and delete the following resources:
 
 - Azure AI Search resource
 - Azure Storage resource
