@@ -13,7 +13,7 @@ In this exercise, you will:
 ### Create a Microsoft Entra ID App Registration
 
 1. Go to [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
-1. Select the **App registration** tab followed by **+ New registration**.
+1. Select **Manage** --> **App registrations** followed by **+ New registration**.
 1. Fill in the new app registration form details as shown below and select **Register**:
     - Name: *microsoft-graph-app*
     - Supported account types: *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)*
@@ -30,7 +30,7 @@ In this exercise, you will:
 1. Go back to the **Select permissions** input and enter `Files.Read.All`, expand the **Files** node, select the **Files.Read.All** permission.
 1. Select **Add permissions** at the bottom of the panel to add the permissions to the app. 
 -->
-1. Select **Overview** in the Resource menu and copy the `Application (client) ID` value to your clipboard.
+1. Select **Overview** in the resource menu and copy the `Application (client) ID` value to your clipboard.
 
     :::image type="content" source="../media/entraid-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
 
@@ -42,19 +42,19 @@ In this exercise, you will:
     ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
     ```
 
-1. If you'd like to enable the ability to send a message from the app into a Teams Channel, sign in to [Microsoft Teams](https://teams.microsoft.com) using your Microsoft 365 dev tenant account.
+1. If you'd like to enable the ability to send a message from the app into a Teams Channel, sign in to [Microsoft Teams](https://teams.microsoft.com) using your Microsoft 365 dev tenant account (this is mentioned in the pre-reqs for the tutorial).
 
 1. Once you're signed in, expand a team, and find a channel that you want to send messages to from the app. For example, you might select the **Company** team and the **General** channel (or whatever team/channel you'd like to use).
 
     :::image type="content" source="../media/teams-team-channel-get-link.png" alt-text="Get link to Teams channel" border="true":::
 
-1. In the team header, click on the three dots (...) and select `Get link to team`.
+1. In the team header, click on the three dots (...) and select **Get link to team**.
 
 1. In the link that appears in the popup window, the team ID is the string of letters and numbers after `team/`. For example, in the link "https://teams.microsoft.com/l/team/19%3ae9b9.../", the team ID is *19%3ae9b9...* up to the following `/` character. 
 
 1. Copy the team ID and assign it to `TEAM_ID` in the *.env* file.
 
-1. In the channel header, click on the three dots (...) and select `Get link to channel`.
+1. In the channel header, click on the three dots (...) and select **Get link to channel**.
 
 1. In the link that appears in the popup window, the channel ID is the string of letters and numbers after `channel/`. For example, in the link "https://teams.microsoft.com/l/channel/19%3aQK02.../", the channel ID is *19%3aQK02...* up to the following `/` character.
 

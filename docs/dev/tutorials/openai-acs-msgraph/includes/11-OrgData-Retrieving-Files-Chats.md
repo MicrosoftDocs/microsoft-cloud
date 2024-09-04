@@ -10,9 +10,6 @@ In this exercise, you will:
 - Learn how to call Microsoft Graph directly to retrieve files from OneDrive for Business and chat messages from Microsoft Teams.
 - Understand how to send chat messages to Microsoft Teams channels using Microsoft Graph.
 
-> [!NOTE]
-> The *mgt-search-results* component is currently in preview and is subject to change. In addition to showing how *mgt-search-results* can be used, the exercises also show how to perform the same tasks using Microsoft Graph directly.
-
 ### Using the Organizational Data Feature
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
@@ -46,7 +43,7 @@ In this exercise, you will:
 
     - Add files by visiting https://onedrive.com and signing in using your Microsoft 365 Developer tenant credentials.
         - Select **My files** in the left navigation.
-        - Select **Upload** and then **Folder** from the menu.
+        - Select **+ Add new** and then **Folder upload** from the menu.
         - Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
 
         :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
@@ -54,8 +51,8 @@ In this exercise, you will:
     - Add chat messages and calendar events by visiting https://teams.microsoft.com and signing in using your Microsoft 365 Developer tenant credentials.
         - Select **Teams** in the left navigation.
         - Select a team and channel.
-        - Select **New conversation**.
-        - Enter *New order placed for Adatum Corporation* and select the **Send** button.
+        - Select **Start a post**.
+        - Enter *New order placed for Adatum Corporation* for the subject and any additional text you'd like to add in the message body. Select the **Post** button.
 
             Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
 
@@ -149,9 +146,9 @@ In this exercise, you will:
         if (searchResults.value.length !== 0) {
             for (const hitContainer of searchResults.value[0].hitsContainers) {
                 if (hitContainer.hits) {
-                for (const hit of hitContainer.hits) {
-                    files.push(hit.resource);
-                }
+                    for (const hit of hitContainer.hits) {
+                        files.push(hit.resource);
+                    }
                 }
             }
         }
@@ -202,16 +199,21 @@ In this exercise, you will:
     The results of the search are assigned to the `data` property of the component and data binding is used to iterate through the results array and render the data. This example uses an *Angular Material card* component to display the search results.
 
     ```html
-    <div *ngIf="data.length">
-        <mat-card *ngFor="let chatMessage of data">
-            <mat-card-header>
-                <mat-card-title [innerHTML]="chatMessage.summary"></mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-                <a mat-stroked-button color="basic" [href]="chatMessage.webUrl" target="_blank">View Message</a>
-            </mat-card-actions>
-        </mat-card>
-    </div>
+    @if (this.data.length) {
+        <div>
+            @for (chatMessage of this.data;track chatMessage.id) {
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title [innerHTML]="chatMessage.summary"></mat-card-title>
+                        <!-- <mat-card-subtitle [innerHTML]="chatMessage.body"></mat-card-subtitle> -->
+                    </mat-card-header>
+                    <mat-card-actions>
+                        <a mat-stroked-button color="basic" [href]="chatMessage.webUrl" target="_blank">View Message</a>
+                    </mat-card-actions>
+                </mat-card>
+            }
+        </div>
+    }
     ```
 
     :::image type="content" source="../media/viewing-teams-chats.png" alt-text="View Teams Chats":::

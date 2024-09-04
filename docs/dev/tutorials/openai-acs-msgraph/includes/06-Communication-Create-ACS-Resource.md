@@ -35,49 +35,44 @@ In this exercise, you will:
 
 1. Add a phone number and ensure that the phone number has calling capabilities enabled. You'll use this phone number to call out to a phone from the app. 
 
-    - Select `Phone numbers` from the Resource menu.
-    - Select `+ Get` in the toolbar (or select the **Get a number** button) and enter the following information:
+    - Select **Telephony and SMS** --> **Phone numbers** from the Resource menu.
+    - Select **+ Get** in the toolbar (or select the **Get a number** button) and enter the following information:
         - **Country or region**: `United States`
-        - **Use case**: Select `An application will be making calls or sending SMS mesages`
-        - **Number type**: Toll-free
+        - **Number type**: `Toll-free`
 
         > [!NOTE]
         > A credit card is required on your Azure subscription to create the toll-free number. If you don't have a card on file, feel free to skip adding a phone number and jump to the next section of the exercise that connects an email domain. You can still use the app, but won't be able to call out to a phone number.
 
-        - **Calling**: `Make calls`
-        - **SMS**: `Send and receive SMS`
+        - **Number**: Select **Add to cart** for one of the phone numbers listed.
 
-1. Select **Next: Numbers**.
+1. Select **Next**, review the phone number details, and select **Buy now**.
 
-1. Select a **Prefix** (for example `877`) and leave the **Quantity** at 1. Select **Search**.
+    > [!NOTE]
+    > SMS verification for toll-free numbers is now mandatory in the United States and Canada. To enable SMS messaging, you must submit verification after the phone number purchase. While this tutorial won't go through that process, you can select **Telephony and SMS** --> **Regulatory Documents** from the resources menu and add the required validation documentation.
 
-1. Once a toll-free number is displayed, select **Next: Summary**.
-
-1. Review the details and select **Place order** to add the phone number to your ACS resource.
-
-1. Once the phone number is created, select it to get to the **Features** panel.  Ensure that the following values are set:
+1. Once the phone number is created, select it to get to the **Features** panel.  Ensure that the following values are set (they should be set by default):
 
     - In the **Calling** section, select `Make calls`.
     - In the **SMS** section, select `Send and receive SMS`.
     - Select **Save**.
 
-1. Copy the phone number value into a file for later use.
+1. Copy the phone number value into a file for later use. The phone number should follow this general pattern: `+12345678900`.
 
 ### Connect an Email Domain
 
 1. Perform the following tasks to create a connected email domain for your ACS resource so that you can send email. This will be used to send email from the app.
 
-    - Select **Domains** from the Resource menu.
+    - Select **Email** --> **Domains** from the Resource menu.
     - Select **Connect domain** from the toolbar.
     - Select your **Subscription** and **Resource group**. 
     - Under the **Email Service** dropdown, select `Add an email service`.
     - Give the email service a name such as `acs-demo-email-service`.
-    - Select `Review + create` followed by `Create`.
+    - Select **Review + create** followed by **Create**.
     - Once the deployment completes, select `Go to resource`, and select `1-click add` to add a free Azure subdomain.
     - After the subdomain is added (it'll take a few moments to be deployed), select it.
-    - Once you're on the **AzureManagedDomain** screen, select **MailFrom addresses** from the Resource menu. 
+    - Once you're on the **AzureManagedDomain** screen, select **Email services** --> **MailFrom addresses** from the Resource menu. 
     - Copy the **MailFrom** value to a file. You'll use it later as you update the *.env* file.
-    - Go back to your Azure Communication Services resource and select `Domains` from the Resource menu.
+    - Go back to your Azure Communication Services resource and select **Email** --> **Domains** from the resource menu.
     - Select `Add domain` and enter the `MailFrom` value from the previous step (ensure you select the correct subscription, resource group, and email service). Select the `Connect` button.
 
 ### Update the `.env` File

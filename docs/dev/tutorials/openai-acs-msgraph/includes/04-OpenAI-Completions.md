@@ -2,18 +2,18 @@
 
 In addition to the natural language to SQL feature, you can also use Azure OpenAI Service to generate email and SMS messages to enhance user productivity and streamline communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. 
 
-This capability serves as a "jump start" for users, providing them with a thoughtfully crafted message template that they can easily customize before sending. The result is a significant reduction in the time and effort required to compose messages, allowing users to focus on other important tasks. Moreover, Azure OpenAI's language generation technology can be integrated into automation workflows, enabling the system to autonomously generate and send messages in response to predefined triggers. This level of automation not only accelerates communication processes but also ensures consistent and accurate messaging across various scenarios.
+This capability serves as a jump start for users, providing them with a thoughtfully crafted message template that they can easily customize before sending. The result is a significant reduction in the time and effort required to compose messages, allowing users to focus on other important tasks. Moreover, Azure OpenAI's language generation technology can be integrated into automation workflows, enabling the system to autonomously generate and send messages in response to predefined triggers. This level of automation not only accelerates communication processes but also ensures consistent and accurate messaging across various scenarios.
 
 In this exercise, you will:
 
-- Experiment with different GPT prompts.
-- Use GPT prompts to generate completions for email and SMS messages.
-- Explore code that enables GPT completions.
+- Experiment with different prompts.
+- Use prompts to generate completions for email and SMS messages.
+- Explore code that enables AI completions.
 - Learn about the importance of prompt engineering and including rules in your prompts.
 
 Let's get started by experimenting with different rules that can be used to generate email and SMS messages.
 
-### Using the GPT Completions Feature
+### Using the AI Completions Feature
 
 1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?tutorial-step=2#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the exercise before continuing.
 
@@ -32,7 +32,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Close the email/SMS dialog window in the browser. Now that you've seen this feature in action, let's examine how it's implemented.
 
-### Exploring the GPT Completions Code
+### Exploring the AI Completions Code
 
 [!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
 
@@ -84,17 +84,15 @@ Let's get started by experimenting with different rules that can be used to gene
 
         { "emailSubject": "", "emailBody": "", "sms": "" }
 
-        - The sms property value should be in plain text format and NO MORE than 160 characters. 
-        - Only return a valid JSON object. Do NOT include any text outside of the JSON object. Do not provide any additional explanations or context. 
-        Just the JSON object is needed.
+        - The sms property value should be in plain text format and NO MORE than 160 characters.
         `;
 
         const userPrompt = `
-          User Rules: 
-          ${prompt}
+        User Rules: 
+        ${prompt}
 
-          Contact Name: 
-          ${contactName}
+        Contact Name: 
+        ${contactName}
         `;
 
         let content: EmailSmsResponse = { status: true, email: '', sms: '', error: '' };
@@ -120,8 +118,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
     - `systemPrompt` is used to define that an AI assistant capable of generating email and SMS messages is required. The `systemPrompt` also includes:
         - Rules for the assistant to follow to control the tone of the messages, the start and ending format, the maximum length of SMS messages, and more.
-        - Information about data that should be included in the response - a JSON object in this case and only a JSON object.
-        - Two critical rules are repeated again at the bottom of the system prompt to avoid ["recency bias"](/azure/ai-services/openai/concepts/advanced-prompt-engineering?WT.mc_id=m365-94501-dwahlin#repeat-instructions-at-the-end). 
+        - Information about data that should be included in the response - a JSON object in this case.
     - `userPrompt` is used to define the rules and contact name that the end user would like to include as the email and SMS messages are generated. The *Order is delayed 5 days* rule you entered earlier is included in `userPrompt`.
     - The function calls the `callOpenAI()` function you explored earlier to generate the email and SMS completions.
 
@@ -143,7 +140,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 1. Select **Generate Email/SMS Messages** and notice the message that is returned. 
 
-1. What is happening in these scenarios? When using Azure OpenAI, [content filtering](/azure/ai-services/openai/concepts/content-filter) is applied to ensure that appropriate language is always used. If you're using OpenAI, the rule defined in the system prompt is used to ensure the message returned is appropriate.
+1. What is happening in these scenarios? When using Azure OpenAI, [content filtering](/azure/ai-services/openai/concepts/content-filter) can be applied to ensure that appropriate language is always used. If you're using OpenAI, the rule defined in the system prompt is used to ensure the message returned is appropriate.
 
     > [!NOTE]
     > This illustrates the importance of engineering your prompts with the right information and rules to ensure proper results are returned. Read more about this process in the <a href="/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Introduction to prompt engineering</a> documentation.
@@ -153,6 +150,6 @@ Let's get started by experimenting with different rules that can be used to gene
 1. A few final points to consider before moving on to the next exercise:
 
     - It's important to have a human in the loop to review generated messages. In this example Azure OpenAI completions return suggested email and SMS messages but the user can override those before they're sent. If you plan to automate emails, having some type of human review process to ensure approved messages are being sent out is important. View AI as being a copilot, not an autopilot.
-    - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Invite other project stakeholders to review the completions as well.
+    - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Consider using [**Prompt flow**](/azure/ai-studio/how-to/prompt-flow) to create a comprehensive solution that simplifies prototyping, experimenting, iterating, and deploying AI applications. Invite other project stakeholders to review the completions as well.
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.

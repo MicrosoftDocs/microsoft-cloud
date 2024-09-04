@@ -28,7 +28,7 @@ In this exercise, you will:
 
     :::image type="content" source="../media/acs-call-customer.png" alt-text="ACS phone calling component":::
 
-1. A phone call component will be added into the header. Enter your phone number (ensure it starts with + and includes the country code) and select **Call**. You will be prompted to allow access to your microphone.
+1. A phone call component will be added into the header. Enter your phone number you'd like to call (ensure it starts with + and includes the country code) and select **Call**. You will be prompted to allow access to your microphone.
 
     :::image type="content" source="../media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
 
@@ -112,12 +112,11 @@ In this exercise, you will:
     const connectionString = process.env.ACS_CONNECTION_STRING as string;
 
     async function createACSToken() {
-        if (!connectionString) return { userId: '', token: '' };
+    if (!connectionString) return { userId: '', token: '' };
 
-        const tokenClient = new CommunicationIdentityClient(connectionString);
-        const user = await tokenClient.createUser();
-        const userToken = await tokenClient.getToken(user, ["voip"]);
-        return { userId: user.communicationUserId, ...userToken };    
+    const tokenClient = new CommunicationIdentityClient(connectionString);
+    const { user, token } = await tokenClient.createUserAndToken(["voip"]);
+    return { userId: user.communicationUserId, token };
     }
     ```
 
@@ -125,8 +124,7 @@ In this exercise, you will:
 
     - Checks if an ACS `connectionString` value is available. If not, returns an object with an empty `userId` and `token`.
     - Creates a new instance of `CommunicationIdentityClient` and passes the `connectionString` value to it.
-    - Creates a new user using `tokenClient.createUser()`.
-    - Gets a token for the new user with the "voip" scope using `tokenClient.getToken()`.
+    - Creates a new user and token using `tokenClient.createUserAndToken()` with the "voip" scope.
     - Returns an object containing the `userId` and `token` values.
 
 1. Now that you've seen how the userId and token are retrieved, go back to `phone-call.component.ts` and locate the `startCall()` function. 
@@ -142,10 +140,19 @@ In this exercise, you will:
         console.log('Calling: ', this.customerPhoneNumber);
         console.log('Call id: ', this.call?.id);
         this.inCall = true;
+
+        // Adding event handlers to monitor call state
+        this.call?.on('stateChanged', () => {
+            console.log('Call state changed: ', this.call?.state);
+            if (this.call?.state === 'Disconnected') {
+                console.log('Call ended. Reason: ', this.call.callEndReason);
+                this.inCall = false;
+            }
+        });
     }
     ```
 
-1. The `stopCall()` function is called when **Hang Up** is selected in the phone call component.
+1. The `endCall()` function is called when **Hang Up** is selected in the phone call component.
 
     ```typescript
     endCall() {
@@ -164,7 +171,7 @@ In this exercise, you will:
 
 1. Before moving on to the next exercise, let's review the key concepts covered in this exercise:
 
-    - An ACS userId and access token are retrieved from the API server using the `acsService.getAcsToken()` function. 
+    - An ACS userId and access token are retrieved from the API server using the `acsService.createUserAndToken()` function. 
     - The token is used to create a `CallClient` and `CallAgent` object.
     - The `CallAgent` object is used to start and end a call by calling the `callAgent.startCall()` and `callAgent.hangUp()` functions respectively.
 
