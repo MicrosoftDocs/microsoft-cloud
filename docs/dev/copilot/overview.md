@@ -19,6 +19,7 @@ products:
 ms.custom:
   - fcp
   - team=cloud_advocates
+  - copilot-learning-hub
 ---
 
 # Adopt, extend and build Copilot experiences across the Microsoft Cloud
