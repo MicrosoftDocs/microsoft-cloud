@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/20/2024
+ms.date: 09/13/2024
 ms.topic: overview
 ---
 
@@ -17,6 +17,7 @@ List of plugins that work with any API.
 
 Name | Description
 --- | ---
+[AuthPlugin](./authplugin.md)|Simulates authentication and authorization using API keys or OAuth2.
 [DevToolsPlugin](./devtoolsplugin.md)|Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools.
 [CachingGuidancePlugin](./cachingguidanceplugin.md)|Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
 [CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with an in-memory data store.

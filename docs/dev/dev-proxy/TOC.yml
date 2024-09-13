@@ -212,6 +212,8 @@
         href: technical-reference/apicenteronboardingplugin.md
       - name: ApiCenterProductionVersionPlugin
         href: technical-reference/apicenterproductionversionplugin.md
+      - name: AuthPlugin
+        href: technical-reference/authplugin.md
       - name: CachingGuidancePlugin
         href: technical-reference/CachingGuidancePlugin.md
       - name: CrudApiPlugin
