@@ -3,7 +3,7 @@ title: Get started with Dev Proxy
 description: Learn how to install, run, and configure Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 08/26/2024
+ms.date: 09/13/2024
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -228,7 +228,8 @@ The command prompt displays the following output:
 
 ```text
  info    8 error responses loaded from devproxy-errors.json
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy API listening on http://localhost:8897...
+ info    Dev Proxy Listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
@@ -296,11 +297,7 @@ If you shut down the command prompt session, Dev Proxy doesn't unregister correc
 
 By default, Dev Proxy is configured to intercept any request made to the [JSON Placeholder API](https://jsonplaceholder.typicode.com/). You can configure Dev Proxy to intercept requests to any HTTP API.
 
-::: zone pivot="client-operating-system-macos"
-- In a command prompt, run `brew list dev-proxy` to locate the installation folder.
-- Open the Dev Proxy installation folder in Finder.
-::: zone-end
-- In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
+- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
 - Locate the `urlsToWatch` array.
 
 ```json
@@ -337,7 +334,7 @@ By default, Dev Proxy is configured to fail requests with a 50% chance to URLs t
 
 Let’s update the failure rate so that every request to the JSON Placeholder API returns an error response.
 
-- In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
+- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
 - Locate the `rate` property and update the value from `50` to `100`.
 
 The `devproxyrc.json` file contains configuration settings that are used when you start Dev Proxy. When changing configuration settings, you should always stop and start Dev Proxy for the changes to be persisted.
@@ -366,7 +363,7 @@ Let’s change the configuration so that Dev Proxy always returns a `429 Too Man
 
 First let's locate the location of the file that contains the error definitions.
 
-- In the Dev Proxy installation folder, open `devproxyrc.json` in a text editor.
+- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
 - In the `plugins` array, locate the entry for the [GenericRandomErrorPlugin](./technical-reference/genericrandomerrorplugin.md) plugin. Note the value of the `configSection` property.
 - Further down the file, locate the `genericRandomErrorPlugin` object. Note the value of the `errorsFile` property.
 
