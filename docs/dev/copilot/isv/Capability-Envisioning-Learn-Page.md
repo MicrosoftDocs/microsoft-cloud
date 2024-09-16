@@ -28,7 +28,7 @@ This article enables Independent Software Vendors (ISVs) to:
 
 ## Introduction
 
-Once an ISV, like yourself, has used the [business envisioning](/Business-Envisioning-Learn-Page.md) framework we used to evaluate and prioritize your most promising generative AI (GenAI) use case, the next step is to plan out how to actually build the solution.  
+Once an ISV, like yourself, has used the [business envisioning](Business-Envisioning-Learn-Page.md) framework we used to evaluate and prioritize your most promising generative AI (GenAI) use case, the next step is to plan out how to actually build the solution.  
 
 On this page, we guide you through choosing the best approach for executing your use case. We outline key considerations, provide resources to help you think through them, and explore the tools Microsoft offers for building your application based on your chosen approach. To help illustrate this process, we walk you through an example scenario, demonstrating how an ISV might evaluate their options and choose the most effective approach. We also provide an overview of the wider development journey, and how it can differ depending on the approach you select.
 
@@ -80,7 +80,7 @@ The business value row has one box spanning all of the approaches with the follo
 The Risk and Compliance row has one box spanning all of the approaches with the following text: "Consideration for relevant regulatory requirements and protected information" 
 -->
 
-This use case was prioritized for development using the business, experience, technology framework to evaluate and compare its viability with other potential use cases. Explore how you can prioritize your own use cases in more detail [here](/Business-Envisioning-Learn-Page.md).
+This use case was prioritized for development using the business, experience, technology framework to evaluate and compare its viability with other potential use cases. Explore how you can prioritize your own use cases in more detail [here](Business-Envisioning-Learn-Page.md).
 
 ## Example scenario: Contoso Shopping application
 
@@ -116,7 +116,7 @@ Given the application’s variety of interfaces and capabilities, Contoso ultima
 
 ## Microsoft Development Tools
 
-Microsoft offers various development tools to meet ISVs’ application development needs. Each of these approaches can involve a mixed array of individual Microsoft tools. We’ve summarized a number of the primary tools; you can also review a [comprehensive guide for ISVs on building GenAI experiences here](/isv-extensibility-story.md) that expands upon the possibilities each approach enables.
+Microsoft offers various development tools to meet ISVs’ application development needs. Each of these approaches can involve a mixed array of individual Microsoft tools. We’ve summarized a number of the primary tools; you can also review a [comprehensive guide for ISVs on building GenAI experiences here](isv-extensibility-story.md) that expands upon the possibilities each approach enables.
 
 <!-- Graphic: 03_Development_Tools_Graphic 
 Image description: This graphic has five boxes above a long arrow along the bottom that goes from left to right with the word "Complexity" on it. The five boxes, from left to right, read: 
@@ -184,18 +184,18 @@ Deploy: Implement with expansive deployment plan that aligns with commercial str
 Operate: Achieve operational excellence with robust observability and performance tuning
 -->
 
-Microsoft continues to build out content to provide holistic guidance for building AI and GenAI applications for the Microsoft Cloud. You can find more content and resources at [this Microsoft Copilot for ISVs Collection](https://learn.microsoft.com/collections/7rmiyjy2006wj). This page is regularly updated with newly developed content.
+Microsoft continues to build out content to provide holistic guidance for building AI and GenAI applications for the Microsoft Cloud. You can find more content and resources at [this Microsoft Copilot for ISVs Collection](/collections/7rmiyjy2006wj). This page is regularly updated with newly developed content.
 
 ## Next steps
 
-Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you’ve selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](/Low-Code-Patterns-page.md) and [pro-code patterns](/Choosing-a-pro-code-pattern.md).
+Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you’ve selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](Low-Code-Patterns-page.md) and [pro-code patterns](Choosing-a-pro-code-pattern.md).
 
 <!-- Immediately update this next steps section with links to pattern selection pages when they become available. When more ISV Journey pages have been built out, a table with the pages organized under each stage of the journey can also be added to the 'ISV Journey' section of this page. -->
 
 ## Related Content
 
-- [Official Collection | Microsoft Copilot for an Independent Software Vendor (ISV)](https://learn.microsoft.com/collections/7rmiyjy2006wj)<!--if the landing page link is changed, this link will need to be updated-->
-- [Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs](https://learn.microsoft.com/microsoft-cloud/dev/copilot/isv-extensibility-story)
+- [Official Collection | Microsoft Copilot for an Independent Software Vendor (ISV)](/collections/7rmiyjy2006wj)<!--if the landing page link is changed, this link will need to be updated-->
+- [Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs](isv-extensibility-story.md)
 - [Building AI solutions with partners: Empowering transformation with copilots | The Microsoft Cloud Blog](https://www.microsoft.com/microsoft-cloud/blog/2024/05/15/building-ai-solutions-with-partners-empowering-transformation-with-copilots/)
 
 <!-- add additional links here as they are published -->

@@ -376,5 +376,5 @@ Now that you identified a priority use case, it’s time to start thinking about
 ## Related Links
 
 - [AI Customer Stories | Microsoft AI](https://www.microsoft.com/ai/ai-customer-stories)
-- [Creating GenAI Experiences with the Microsoft Cloud: A Guide for ISVs](/dev/copilot/isv/isv-extensibility-story)
+- [Creating GenAI Experiences with the Microsoft Cloud: A Guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story.md)
 <!-- insert links to additional relevant pages as they are published -->
