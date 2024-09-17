@@ -1,6 +1,6 @@
 ---
-title: Creating solutions with the Microsoft Cloud Solution Toolkit
-description: Learn how to use the Microsoft Cloud Solution Toolkit and the C# Copilot SDK to build solutions using capabilities across the Microsoft Cloud.
+title: Creating pro-code solutions with the Microsoft Cloud Solution Toolkit
+description: Learn how to use the various pro-code techniques to build solutions using AI capabilities across the Microsoft Cloud.
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
@@ -78,7 +78,7 @@ Because Semantic Kernel interacts directly with your code, it is possible to use
 
 Building a custom copilot enables you to create an application with a moderate coding lift and more customizability than adopting or extending a first-party, Microsoft Copilot would. While you will need to build many components on your own, Microsoft provides notable support through SDKs, templates, and more, depending on the pattern you choose.
 
-![A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural langauge capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to Pattern G: Azure AI studio.](/media/1_Procode_patterns_graphic.jpg)
+A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural langauge capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI studio.](media/1_Procode_patterns_graphic.jpg)
 
 ### Microsoft Graph APIs
 
