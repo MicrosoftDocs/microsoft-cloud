@@ -1,11 +1,11 @@
 ---
 title: "Creating a dynamic UX: guidance for generative AI applications"
 description: UX tips and recomendations for ISVs building generative AI applications
-author:
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: overview #Required;
-ms.date: #Required; mm/dd/yyyy format
+author: miglaros
+ms.author: miglaros
+ms.service: cloud-for-industries
+ms.topic: overview
+ms.date: 09/16/2024
 
 #CustomerIntent: As an ISV, I want to build effective UX design for my generative AI application so that my users have a positive copilot experience.
 ---

@@ -1,11 +1,11 @@
 ---
 title: Creating solutions with the Microsoft Cloud Solution Toolkit
 description: Learn how to use the Microsoft Cloud Solution Toolkit and the C# Copilot SDK to build solutions using capabilities across the Microsoft Cloud.
-author: #Required; your GitHub user alias, with correct capitalization.
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: overview #Required; leave this attribute/value as-is.
-ms.date: #Required; mm/dd/yyyy format.
+author: miglaros
+ms.author: miglaros
+ms.service: cloud-for-industries
+ms.topic: overview 
+ms.date: 09/16/2024
 
 #CustomerIntent: As an ISV developing solutions on the Microsoft Cloud, I want to learn best practices for Observability so that I can monitor and observe my generative AI solution.
 ---

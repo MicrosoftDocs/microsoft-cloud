@@ -4,7 +4,7 @@ description: "Once you have completed business envisioning and identified a prio
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
-ms.topic: overview 
+ms.topic: tutorial 
 ms.date: 09/16/2024
 
 #CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
@@ -28,7 +28,7 @@ This article enables Independent Software Vendors (ISVs) to:
 
 ## Introduction
 
-Once an ISV, like yourself, has used the [business envisioning](Business-Envisioning-Learn-Page.md) framework we used to evaluate and prioritize your most promising generative AI (GenAI) use case, the next step is to plan out how to actually build the solution.  
+Once an ISV, like yourself, has used the [business envisioning](Business-Envisioning.md) framework we used to evaluate and prioritize your most promising generative AI (GenAI) use case, the next step is to plan out how to actually build the solution.  
 
 On this page, we guide you through choosing the best approach for executing your use case. We outline key considerations, provide resources to help you think through them, and explore the tools Microsoft offers for building your application based on your chosen approach. To help illustrate this process, we walk you through an example scenario, demonstrating how an ISV might evaluate their options and choose the most effective approach. We also provide an overview of the wider development journey, and how it can differ depending on the approach you select.
 
@@ -80,7 +80,7 @@ The business value row has one box spanning all of the approaches with the follo
 The Risk and Compliance row has one box spanning all of the approaches with the following text: "Consideration for relevant regulatory requirements and protected information" 
 -->
 
-This use case was prioritized for development using the business, experience, technology framework to evaluate and compare its viability with other potential use cases. Explore how you can prioritize your own use cases in more detail [here](Business-Envisioning-Learn-Page.md).
+This use case was prioritized for development using the business, experience, technology framework to evaluate and compare its viability with other potential use cases. Explore how you can prioritize your own use cases in more detail [here](Business-Envisioning.md).
 
 ## Example scenario: Contoso Shopping application
 
@@ -188,7 +188,7 @@ Microsoft continues to build out content to provide holistic guidance for buildi
 
 ## Next steps
 
-Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you’ve selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](Low-Code-Patterns-page.md) and [pro-code patterns](Choosing-a-pro-code-pattern.md).
+Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you’ve selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](Low-Code-Patterns.md) and [pro-code patterns](Choosing-a-pro-code-pattern.md).
 
 <!-- Immediately update this next steps section with links to pattern selection pages when they become available. When more ISV Journey pages have been built out, a table with the pages organized under each stage of the journey can also be added to the 'ISV Journey' section of this page. -->
 

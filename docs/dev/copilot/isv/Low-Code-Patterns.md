@@ -1,11 +1,11 @@
 ---
 title: "Choosing the best low-code pattern to create your generative AI solution"
 description: Guidance for choosing the most applicable pattern to use in the low-code ISV journey 
-author: #Required; your GitHub user alias, with correct capitalization
-ms.author: #Required; microsoft alias of author
-ms.service: #Required; use the name-string related to slug in ms.product/ms.service
-ms.topic: tutorial #Required; leave this attribute/value as-is
-ms.date: #Required; mm/dd/yyyy format
+author: miglaros
+ms.author: miglaros
+ms.service: cloud-for-industries
+ms.topic: tutorial 
+ms.date: 09/16/2024
 
 #CustomerIntent: As an ISV, I want build an generative AI app with low-code and need to know which Microsoft Cloud tools to use.
 ---

@@ -4,7 +4,7 @@ description: "Business envisioning is a simple, two-step process that helps part
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
-ms.topic: overview #Required; leave this attribute/value as-is.
+ms.topic: tutorial
 ms.date: 09/16/2024
 
 #CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
@@ -376,5 +376,5 @@ Now that you identified a priority use case, it’s time to start thinking about
 ## Related Links
 
 - [AI Customer Stories | Microsoft AI](https://www.microsoft.com/ai/ai-customer-stories)
-- [Creating GenAI Experiences with the Microsoft Cloud: A Guide for ISVs](/microsoft-cloud/dev/copilot/isv/isv-extensibility-story.md)
+- [Creating GenAI Experiences with the Microsoft Cloud: A Guide for ISVs](isv-extensibility-story.md)
 <!-- insert links to additional relevant pages as they are published -->
