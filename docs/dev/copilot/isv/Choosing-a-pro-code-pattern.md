@@ -60,13 +60,13 @@ The pattern you select:
 - **Enables you to work within different interfaces.** Some patterns are designed to create applications from scratch, while others are designed to work within your existing applications or platforms from Microsoft.
 - **Changes data, infrastructure, and other back-end considerations.** Pro-code patterns are generally versatile but may have limits or require modifications. Typically, your data and infrastructure options become more customizable as you choose more complex pattern options.
 
-Because of all these factors, it is essential to carefully evaluate your situation, your customers' needs, and your technical capabilities before choosing a pattern. The platform and strategy you select will impact what you can create. 
+Because of all these factors, it is essential to carefully evaluate your situation, your customers' needs, and your technical capabilities before choosing a pattern. The platform and strategy you select will impact what you can create.
 
 ## Multiple pattern options
 
 Instead of choosing just one pattern, ISVs may choose to integrate capabilities from multiple patterns. It's even possible to combine low-code and pro-code options.
 
-Whether you choose one pattern or combine multiple, it’s important to consider the situation you are in and choose the platform that works best for you. This page focuses specifically on pro-code patterns. To explore more options across pro- and low-code, you can visit the [comprehensive patterns page](https://learn.microsoft.com/microsoft-cloud/dev/copilot/isv-extensibility-story).
+Whether you choose one pattern or combine multiple, it's important to consider the situation you are in and choose the platform that works best for you. This page focuses specifically on pro-code patterns. To explore more options across pro- and low-code, you can visit the [comprehensive patterns page](/microsoft-cloud/dev/copilot/isv-extensibility-story).
 
 ### Semantic Kernel
 
@@ -84,7 +84,7 @@ Building a custom copilot enables you to create an application with a moderate c
 
 The Microsoft Graph API accesses user data from Microsoft 365 applications, such as information within Outlook, Teams, OneDrive, and SharePoint. By enabling your existing applications to call this API, you can enhance your user experience with personalized data from Microsoft 365. 
 
-These APIs can be integrated within your own solution's UI. The tenant data collected can be viewed from [Graph Explorer](https://learn.microsoft.com/graph/graph-explorer/graph-explorer-overview), which is an open-source platform designed to help you learn about Microsoft Graph APIs.
+These APIs can be integrated within your own solution's UI. The tenant data collected can be viewed from [Graph Explorer](/graph/graph-explorer/graph-explorer-overview), which is an open-source platform designed to help you learn about Microsoft Graph APIs.
 
 You might be interested in this pattern if you:
 
@@ -209,7 +209,7 @@ While many ISVs are familiar with Fabric as a data or analytics solution, it can
 
 Integrating your existing application with Fabric provides endless options for streamlining the data backend of your solution. By interoperating with Fabric, you can unify a multitude of disparate data sources on a single platform using a variety of tools and APIs.
 
-Fabric offers both OneLake APIs and Real-Time Intelligence APIs that are designed to quickly access and process your data. You can also use Data Factory to unify your data across environments through shortcuts and manage complex data processing tasks from up to 200 external sources. Even if your data isn’t on Azure, you can create shortcuts to bring your data into OneLake.
+Fabric offers both OneLake APIs and Real-Time Intelligence APIs that are designed to quickly access and process your data. You can also use Data Factory to unify your data across environments through shortcuts and manage complex data processing tasks from up to 200 external sources. Even if your data isn't on Azure, you can create shortcuts to bring your data into OneLake.
 
 You might be interested in this pattern if you:
 
@@ -270,7 +270,7 @@ By embedding Fabric's capabilities within their application, they can manage and
 
 In addition to building with Fabric's seven native workloads, ISVs can expand Fabric's capabilities by creating their own customized workloads and offering them as a separate solution. These workloads can be built from scratch to deliver a plethora of data management capabilities, whether that's creating a more wholistic view of your customers data or taking actions based on data trends and predictions.
 
-ISVs can use the [Microsoft Fabric Workload Development Kit](https://learn.microsoft.com/fabric/workload-development-kit/development-kit-overview) to create their own workload and publish it as a SaaS offering for other Fabric users on the Azure Marketplace. This pattern is easily monetizable on Azure Marketplace and uses Fabric UX when interfacing with customers, which leaves you free to focus on developing your workload.
+ISVs can use the [Microsoft Fabric Workload Development Kit](/fabric/workload-development-kit/development-kit-overview) to create their own workload and publish it as a SaaS offering for other Fabric users on the Azure Marketplace. This pattern is easily monetizable on Azure Marketplace and uses Fabric UX when interfacing with customers, which leaves you free to focus on developing your workload.
 
 You might be interested in this pattern if you:
 
@@ -305,17 +305,17 @@ Explore the resources below to learn more about your chosen pattern as well as o
 
 Links to more information for each build your own copilot pattern:
 
-- [Pattern D - Microsoft Graph APIs](https://learn.microsoft.com/graph/graph-explorer/graph-explorer-overview)
-- [Pattern E - Azure OpenAI Assistants](https://learn.microsoft.com/azure/ai-services/openai/assistants-quickstart)
-- [Pattern F - Teams AI Library](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
-- [Pattern G - Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio)
+- [Pattern D - Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview)
+- [Pattern E - Azure OpenAI Assistants](/azure/ai-services/openai/assistants-quickstart)
+- [Pattern F - Teams AI Library](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
+- [Pattern G - Azure AI Studio](/azure/ai-studio/what-is-ai-studio)
 
 ### More information about building an app on Fabric
 
 Links to more information about building apps on Fabric:
 
-- [Approach - Build an app on Fabric](https://learn.microsoft.com/fabric/cicd/partners/partner-integration)
-- [Pattern J - Build a workload on Fabric](https://learn.microsoft.com/fabric/workload-development-kit/development-kit-overview)
+- [Approach - Build an app on Fabric](/fabric/cicd/partners/partner-integration)
+- [Pattern J - Build a workload on Fabric](/fabric/workload-development-kit/development-kit-overview)
 
 ## Related links
 
