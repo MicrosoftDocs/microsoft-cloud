@@ -66,7 +66,7 @@ Because of all these factors, it is essential to carefully evaluate your situati
 
 Instead of choosing just one pattern, ISVs may choose to integrate capabilities from multiple patterns. It's even possible to combine low-code and pro-code options.
 
-Whether you choose one pattern or combine multiple, it’s important to consider the situation you are in and choose the platform that works best for you. This page focuses specifically on pro-code patterns. To explore more options across pro- and low-code, you can visit the [comprehensive patterns page](https://learn.microsoft.com/en-us/microsoft-cloud/dev/copilot/isv-extensibility-story).
+Whether you choose one pattern or combine multiple, it’s important to consider the situation you are in and choose the platform that works best for you. This page focuses specifically on pro-code patterns. To explore more options across pro- and low-code, you can visit the [comprehensive patterns page](https://learn.microsoft.com/microsoft-cloud/dev/copilot/isv-extensibility-story).
 
 ### Semantic Kernel
 
@@ -84,7 +84,7 @@ Building a custom copilot enables you to create an application with a moderate c
 
 The Microsoft Graph API accesses user data from Microsoft 365 applications, such as information within Outlook, Teams, OneDrive, and SharePoint. By enabling your existing applications to call this API, you can enhance your user experience with personalized data from Microsoft 365. 
 
-These APIs can be integrated within your own solution's UI. The tenant data collected can be viewed from [Graph Explorer](https://learn.microsoft.com/en-us/graph/graph-explorer/graph-explorer-overview), which is an open-source platform designed to help you learn about Microsoft Graph APIs.
+These APIs can be integrated within your own solution's UI. The tenant data collected can be viewed from [Graph Explorer](https://learn.microsoft.com/graph/graph-explorer/graph-explorer-overview), which is an open-source platform designed to help you learn about Microsoft Graph APIs.
 
 You might be interested in this pattern if you:
 
@@ -113,7 +113,7 @@ These changes and more enable Contoso's generative AI application to dramaticall
 
 ### Azure OpenAI Assistants
 
-Using the capabilities of [Azure OpenAI Assistants](https://learn.microsoft.com/en-us/azure/ai-services/openai/assistants-quickstart?tabs=command-line%2Ctypescript&pivots=programming-language-studio), ISVs can quickly create AI assistants and integrate them into their existing applications. Azure OpenAI Assistants can answer questions, prompt simple tasks, and even be adapted to write and execute code based on a user's inputs.
+Using the capabilities of [Azure OpenAI Assistants](/azure/ai-services/openai/assistants-quickstart), ISVs can quickly create AI assistants and integrate them into their existing applications. Azure OpenAI Assistants can answer questions, prompt simple tasks, and even be adapted to write and execute code based on a user's inputs.
 
 Creating an Azure OpenAI Assistant is as simple as writing a JSON file describing the function you would like the assistant to perform and giving it a sandboxed Python environment in which to run. This enables the assistant to call your existing APIs and begin responding to prompts.
 
@@ -143,7 +143,7 @@ By including an AI assistant within their application, Contoso's solution become
 
 ### Teams AI library
 
-If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/teams) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
+If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](/microsoftteams/platform/bots/how-to/teams) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
 
 This application requires you to input the business logic you would like your app to use while the LLM models that Microsoft provides handle the back-end aspects of the chatbot. You can even modify your chatbot to use different LLMs, plugins, and more.
 
@@ -172,7 +172,7 @@ These features help streamline the employee experience for Contoso's customers a
 
 ### Azure AI Studio
 
-If you want to create a completely customized generative AI application that is highly flexible in terms of capabilities, you can use one of the many cutting-edge options from [Azure AI Studio](https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio?tabs=home). Building generative AI solutions with Azure AI Studio enables you to customize your solution to your specific needs, including meeting highly technical or niche requirements.
+If you want to create a completely customized generative AI application that is highly flexible in terms of capabilities, you can use one of the many cutting-edge options from [Azure AI Studio](/azure/ai-studio/what-is-ai-studio). Building generative AI solutions with Azure AI Studio enables you to customize your solution to your specific needs, including meeting highly technical or niche requirements.
 
 Azure AI Studio includes many options to build an AI application, such as prompt flow and the Azure AI SDK, both of which have pretrained models from which you can build. The service is integrated with other Azure services and provides resources for ongoing application development, such as an LLMOps toolchain.
 
@@ -201,7 +201,7 @@ By accurately retrieving patient information and using natural language capabili
 
 ## Build an app on Fabric
 
-While many ISVs are familiar with Fabric as a data or analytics solution, it can also serve as a comprehensive, integrated data foundation for generative AI applications. Whether you want to build an app directly on Fabric or integrate with OneLake, [building an app on Fabric](https://learn.microsoft.com/en-us/fabric/cicd/partners/partner-integration) provides you with unmatched customization and control over your solution.
+While many ISVs are familiar with Fabric as a data or analytics solution, it can also serve as a comprehensive, integrated data foundation for generative AI applications. Whether you want to build an app directly on Fabric or integrate with OneLake, [building an app on Fabric](/fabric/cicd/partners/partner-integration) provides you with unmatched customization and control over your solution.
 
 ![A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLak using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or compine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provies ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to Pattern J: Build a Fabric workload. ](/media/2_Procode_patterns_graphic.jpg)
 
