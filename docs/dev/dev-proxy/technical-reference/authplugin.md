@@ -3,7 +3,7 @@ title: AuthPlugin
 description: AuthPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/13/2024
+ms.date: 09/17/2024
 ---
 
 # AuthPlugin
@@ -30,8 +30,16 @@ Simulates authentication and authorization using API keys or OAuth2.
   "auth": {
     "type": "apiKey",
     "apiKey": {
-      "in": "header, query",
-      "name": "x-api-key",
+      "parameters": [
+        {
+          "in": "header",
+          "name": "x-api-key"
+        },
+        {
+          "in": "query",
+          "name": "code"
+        }
+      ]
       "allowedKeys": [
         "1234"
       ]
@@ -84,8 +92,14 @@ Simulates authentication and authorization using API keys or OAuth2.
 | Property | Description | Required |
 |----------|-------------|:--------:|
 | `allowedKeys` | List of allowed API keys. | Yes |
-| `in` | Where the API key is expected. Allowed values: `header`, `query`, `cookie`. You can combine multiple values by separating them with a comma: `header, query` | Yes |
-| `name` | Name of the parameter that contains the API key. | Yes |
+| `parameters` | List of parameters that contain the API key. | Yes |
+
+#### Parameter configuration properties
+
+| Property | Description | Required |
+|----------|-------------|:--------:|
+| `in` | Where the parameter is expected to be found. Allowed values: `header`, `query`, `cookie` | Yes |
+| `name` | Name of the parameter. | Yes |
 
 ### OAuth2 configuration properties
 
