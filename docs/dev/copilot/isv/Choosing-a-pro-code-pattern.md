@@ -101,7 +101,7 @@ Let's examine how one fictional ISV was able to use this pattern in their applic
 
 #### Microsoft Graph APIs scenario
 
-Contoso has built an application that enables its customers to manage internal operations, but they are seeking to improve it. Their customers bring forward issues about basic administrative tasks-such as scheduling meetings, logging time off, and sending emails—taking too much time.
+Contoso has built an application that enables its customers to manage internal operations, but they are seeking to improve it. Their customers bring forward issues about basic administrative tasks-such as scheduling meetings, logging time off, and sending emails-taking too much time.
 
 To address this issue, Contoso decides to augment their generative AI application using Microsoft Graph APIs, which can connect to their customers' data in Microsoft 365. Contoso is able to enhance the capabilities of their AI assistant with access to more relevant personal data retrieved from the API. Microsoft Graph APIs enable Contoso's solution to:
 
@@ -143,7 +143,7 @@ By including an AI assistant within their application, Contoso's solution become
 
 ### Teams AI library
 
-If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](/microsoftteams/platform/bots/how-to/teams) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
+If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](microsoftteams/platform/bots/what-are-bots) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
 
 This application requires you to input the business logic you would like your app to use while the LLM models that Microsoft provides handle the back-end aspects of the chatbot. You can even modify your chatbot to use different LLMs, plugins, and more.
 
@@ -203,7 +203,7 @@ By accurately retrieving patient information and using natural language capabili
 
 While many ISVs are familiar with Fabric as a data or analytics solution, it can also serve as a comprehensive, integrated data foundation for generative AI applications. Whether you want to build an app directly on Fabric or integrate with OneLake, [building an app on Fabric](/fabric/cicd/partners/partner-integration) provides you with unmatched customization and control over your solution.
 
-![A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLak using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or compine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provies ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to Pattern J: Build a Fabric workload. ](/media/2_Procode_patterns_graphic.jpg)
+A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLak using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or compine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provies ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to ![Pattern J: Build a Fabric workload.](media/2_Procode_patterns_graphic.jpg)
 
 ### Interop with Fabric
 
@@ -319,6 +319,6 @@ Links to more information about building apps on Fabric:
 
 ## Related links
 
-More information on generative AI patterns and their benefits: [Creating Generative AI Experiences with the Microsoft Cloud - A Guide for ISVs | Microsoft Learn](isv-extensibility-story)
+More information on generative AI patterns and their benefits: [Creating Generative AI Experiences with the Microsoft Cloud - A Guide for ISVs | Microsoft Learn](isv-extensibility-story.md)
 
 UX guidance for ISVs designing generative AI experiences: [Next steps for designing your generative AI user experience.](UX-Guidance.md)

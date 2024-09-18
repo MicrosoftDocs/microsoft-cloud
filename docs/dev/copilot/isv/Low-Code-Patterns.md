@@ -190,7 +190,7 @@ Explore the resources below to learn more about the tools needed for your chosen
 
 ## Related links
 
-[Creating Generative AI Experiences with the Microsoft Cloud - A Guide for ISVs | Microsoft Learn](isv-extensibility-story)
+[Creating Generative AI Experiences with the Microsoft Cloud - A Guide for ISVs | Microsoft Learn](isv-extensibility-story.md)
 [Plugin architecture - Microsoft Copilot Studio | Microsoft Learn](/microsoft-copilot-studio/copilot-plugins-architecture)
 [Build and publish with ISV Success - Partner Center | Microsoft Learn](/partner-center/membership/isv-success)
 
