@@ -30,7 +30,7 @@ This article is intended to help you:
 
 The following guidance will walk you through the considerations to have in mind when developing the UX for your generative AI application, with a focus on considerations for building custom copilot experiences.
 
-This area is very much in flux and there's a lot to learn, so we've provided key resources for deeper diving. [Microsoft's responsible AI principles](https://www.microsoft.com/ai/principles-and-approach) and the [HAX (HumanAI Experience) Toolkit](https://www.microsoft.com/haxtoolkit/) give some background on the research and real-world experiences behind this article.
+This area is very much in flux and there's a lot to learn, so we've provided key resources for deeper diving. [Microsoft's responsible AI principles](https://www.microsoft.com/ai/principles-and-approach) and the [HAX (HumanAI Experience) Toolkit](https://aka.ms/haxtoolkit/) give some background on the research and real-world experiences behind this article.
 
 ## The right focus to get the job done
 
@@ -125,29 +125,29 @@ These considerations are different for every organization, so discuss it with yo
 
 When your users first invoke your copilot, they should find it engaging enough to start a conversation. They should feel confident in what copilot can and can't do, so be sure to show new users the different ways in which they can use the AI.
 
-Microsoft studies show that users prefer an experience that explains what the copilot can do and gives them suggestions on how to begin. There are many ways to create such an experience and we encourage you to try different approaches with your end users. The following considerations come from the [HAX toolkit](https://www.microsoft.com/haxtoolkit/ai-guidelines/), and have design patterns available which offer several techniques you can mix and match to set user expectations:
+Microsoft studies show that users prefer an experience that explains what the copilot can do and gives them suggestions on how to begin. There are many ways to create such an experience and we encourage you to try different approaches with your end users. The following considerations come from the [HAX toolkit](https://aka.ms/haxtoolkit), and have design patterns available which offer several techniques you can mix and match to set user expectations:
 
-* [**Make clear what the system can do.**](https://www.microsoft.com/haxtoolkit/guideline/make-clear-what-the-system-can-do/) Help the user understand what the AI system is capable of doing.
-* [**Make clear how well the system can do what it can do.**](https://www.microsoft.com/haxtoolkit/guideline/make-clear-how-well-the-system-can-do-what-it-can-do/)Help the user understand how often the AI system may make mistakes
+* **Make clear what the system can do.** Help the user understand what the AI system is capable of doing.
+* **Make clear how well the system can do what it can do.** Help the user understand how often the AI system may make mistakes.
 
 Remember, everyone's learning in this space, and to succeed in any copilot endeavor, you need to keep an open mind, and think creatively. Be ready to experiment, learn, discover, and even conduct your own research.
 
- Other guidelines should be considered over the course of the application's lifecycle. Some of the most relevant are listed here with links to their corresponding patterns. Learn more about Microsoft's other guidelines in the [HAX Design Library](https://www.microsoft.com/haxtoolkit/library/).
+ Other guidelines should be considered over the course of the application's lifecycle. Some of the most relevant are listed here with links to their corresponding patterns. Learn more about Microsoft's other guidelines in the [HAX Design Library](https://aka.ms/haxtoolkit).
 
 ### During interaction
 
-* [**Match relevant social norms.**](https://www.microsoft.com/haxtoolkit/guideline/match-relevant-social-norms/) Ensure the experience is delivered in a way that users would expect, given their social and cultural context.
-* [**Mitigate social biases.**](https://www.microsoft.com/haxtoolkit/guideline/mitigate-social-biases/) Ensure the AI system's language and behaviors don't reinforce undesirable and unfair stereotypes and biases.
+* **Match relevant social norms.** Ensure the experience is delivered in a way that users would expect, given their social and cultural context.
+* **Mitigate social biases.** Ensure the AI system's language and behaviors don't reinforce undesirable and unfair stereotypes and biases.
 
 ### When it's wrong
 
-* [**Support efficient correction.**](https://www.microsoft.com/haxtoolkit/guideline/support-efficient-correction/) Make it easy to edit, refine, or recover when the AI system is wrong.
-* [**Make it clear why the system did what it did.**](https://www.microsoft.com/haxtoolkit/guideline/make-clear-why-the-system-did-what-it-did/) Enable the user to access an explanation of why the AI system behaved as it did.
+* **Support efficient correction.** Make it easy to edit, refine, or recover when the AI system is wrong.
+* **Make it clear why the system did what it did.** Enable the user to access an explanation of why the AI system behaved as it did.
 
 ### Over time
 
-* [**Encourage granular feedback.**](https://www.microsoft.com/haxtoolkit/guideline/encourage-granular-feedback/) Enable the user to provide feedback indicating their preferences during regular interaction with the AI system.
-* [**Provide global controls.**](https://www.microsoft.com/haxtoolkit/guideline/provide-global-controls/) Allow the user to globally customize what the AI system monitors and how it behaves.
+* **Encourage granular feedback.** Enable the user to provide feedback indicating their preferences during regular interaction with the AI system.
+* **Provide global controls.** Allow the user to globally customize what the AI system monitors and how it behaves.
 
 ## Collaborative UX
 
@@ -155,7 +155,7 @@ Copilots can improve existing information by making changes or creating new exam
 
 To reduce the likelihood of fabrications, one good practice is to enable your users to guide the copilot and move it towards their personal goals and objectives in what is called **collaborative UX**.
 
-You can create a collaborative environment for the user with the following tips for input and output design. You may also find it helpful to align with these [best practices for building collaborative UX with human-AI partnership](https://learn.microsoft.com/community/content/best-practices-ai-ux)
+You can create a collaborative environment for the user with the following tips for input and output design. You may also find it helpful to align with these [best practices for building collaborative UX with human-AI partnership](/community/content/best-practices-ai-ux)
 
 ## Tips for input design
 

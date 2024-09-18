@@ -28,7 +28,7 @@ Copilot is an AI assistant powered by Large Language Models (LLMs) that offer in
 
 The core value of Copilot stems from its ability to interpret natural language commands, enhancing the user experience by making it more intuitive and user-friendly. From answering queries in Microsoft Copilot, assisting with data navigation and analysis in Copilot in Microsoft Fabric and Copilot for Microsoft 365, aiding in app and automation creation in Copilot in Power Apps and Copilot in Power Automate, to suggesting code in GitHub Copilot, they allow users to have an AI-powered assistant at their fingertips. Copilot makes complex tasks more manageable, fostering a collaborative environment for both individual users and enterprises.
 
-:::image type="content" source="/isv/media/copilot-across-microsoft-cloud.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilot across the Microsoft Cloud." border="false" :::
+:::image type="content" source="isv/media/copilot-across-microsoft-cloud.png" alt-text="A diagram showing the adopt, extend, and build capabilities of Copilot across the Microsoft Cloud." border="false" :::
 
 Users can effortlessly adopt Copilot to streamline their workflows, while developers or creators have the flexibility to extend Copilot by integrating custom data. The core features that Copilot is built upon can also be used to build custom copilot solutions, which can be seamlessly integrated into new or existing applications.
 
@@ -46,7 +46,7 @@ The following table shows differences between the adopt, extend, and build optio
 
 Microsoft offers a variety of Copilot assistants that can be adopted to enhance user productivity and creativity. Copilot is integrated into various Microsoft platforms and products, providing a more interactive and efficient digital workspace.
 
-:::image type="content" source="/isv/media/copilot-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for a Copilot across the Microsoft Cloud." border="false" :::
+:::image type="content" source="isv/media/copilot-across-microsoft-cloud-adopt.png" alt-text="A diagram showing the adopt options for a Copilot across the Microsoft Cloud." border="false" :::
 
 Copilot assistants discussed in this section include:
 
@@ -66,7 +66,7 @@ Copilot assistants discussed in this section include:
 
 Microsoft Copilot is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more. Access Microsoft Copilot by visiting [https://copilot.microsoft.com](https://copilot.microsoft.com). You can also access Microsoft Copilot by visiting [https://bing.com](https://bing.com) and selecting "Chat" at the top of the page. Microsoft Edge users can access Microsoft Copilot by selecting the "Copilot" icon in the top right corner of the browser.
 
-:::image type="content" source="/isv/media/microsoft-copilot.png" alt-text="Screenshot of Microsoft Copilot enterprise." border="false" :::
+:::image type="content" source="isv/media/microsoft-copilot.png" alt-text="Screenshot of Microsoft Copilot enterprise." border="false" :::
 
 Enterprise users can also access Microsoft Copilot with commercial data protection which includes a secure AI-powered chat, ensuring user and business data safety. The system doesn't retain chat data and restricts data access, ensuring privacy. User data isn't used for model training ensuring data integrity. Copilot with commercial data protection offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's Responsible AI principles, making it a secure and efficient tool for modern enterprises.
 
@@ -96,7 +96,7 @@ Copilot for Microsoft 365 combines Large Language Models (LLMs) with Microsoft G
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps. The integrated Copilot functionality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
-:::image type="content" source="/isv/media/copilot-for-m365.png" alt-text="Using Copilot for Microsoft 365." border="false" :::
+:::image type="content" source="isv/media/copilot-for-m365.png" alt-text="Using Copilot for Microsoft 365." border="false" :::
 
 Learn more:
 
@@ -172,7 +172,7 @@ Learn more:
 
 Copilot offers a comprehensive range of features right out of the box, yet many users depend on external tools, services, and data to carry out tasks. To bridge this gap, Copilot can be extended using plugins, connectors, or message extensions.
 
-:::image type="content" source="/isv/media/copilot-across-microsoft-cloud-extend.png" alt-text="A diagram showing extend options for a Copilot across the Microsoft Cloud." border="false" :::
+:::image type="content" source="isv/media/copilot-across-microsoft-cloud-extend.png" alt-text="A diagram showing extend options for a Copilot across the Microsoft Cloud." border="false" :::
 
 ### Benefits of extending Copilot
 
@@ -184,11 +184,11 @@ Adding plugins, connectors, or message extensions to Copilot helps users make th
 
 Plugins allow users to interact directly with APIs and services enhancing the capabilities of Copilot and broadening its range of functionality by pulling in external data. For example, plugins can enable Copilot to retrieve real-time data, such as the latest news coverage on a product launch, or knowledge-based information such as a team's project items.
 
-:::image type="content" source="/isv/media/api-data-is-processed-by-copilot.png" alt-text="A diagram showing Microsoft Copilot interacting with a plugin." border="false" :::
+:::image type="content" source="isv/media/api-data-is-processed-by-copilot.png" alt-text="A diagram showing Microsoft Copilot interacting with a plugin." border="false" :::
 
 One example of plugins is Power Platform connectors which offer a set of prebuilt actions and triggers for developers to build their own apps and workflows. They can be used to extend Copilot for Microsoft 365 and Copilot in Power Platform experiences with data from external apps.
 
-:::image type="content" source="/isv/media/power-platform-connector.png" alt-text="A diagram showing the key tasks that a Power Platform connector performs." border="false" :::
+:::image type="content" source="isv/media/power-platform-connector.png" alt-text="A diagram showing the key tasks that a Power Platform connector performs." border="false" :::
 
 Developers can also create plugins that use schemas to add custom functionality to Copilot experiences by connecting their own application data to Microsoft Copilot. Plugins enable a Copilot experience to interact with your own APIs, enhancing the experience with the ability to perform a wide range of actions.
 
@@ -207,7 +207,7 @@ Microsoft Graph connectors import external content into Microsoft 365. Once the 
 1. Defining a schema for the external content
 1. Managing external content that's imported into Microsoft 365
 
-:::image type="content" source="/isv/media/graph-connector.png" alt-text="A diagram showing the key tasks that a Microsoft Graph connector performs." border="false" :::
+:::image type="content" source="isv/media/graph-connector.png" alt-text="A diagram showing the key tasks that a Microsoft Graph connector performs." border="false" :::
 
 Learn more:
 
@@ -237,7 +237,7 @@ Learn more:
 
 In addition to adopting and extending Microsoft Copilot, a custom AI copilot can be created to create a personalized conversational AI experience for users using Azure OpenAI Service, Azure AI Search, Microsoft Copilot Studio, and other Microsoft Cloud technologies. A custom copilot can integrate company data and documents, retrieve real-time data from external APIs, and be embedded in company applications. For example, a custom copilot can be built to provide a chat interface to access help desk tickets and knowledge base articles. Rather than using traditional search techniques or navigating across multiple applications, users can use the conversational UI provided by the custom Copilot to find the information they need.
 
-:::image type="content" source="/isv/media/copilot-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating a custom Copilot." border="false" :::
+:::image type="content" source="isv/media/copilot-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating a custom Copilot." border="false" :::
 
 ### Azure AI Studio
 
@@ -245,7 +245,7 @@ Azure AI Studio brings together capabilities from across multiple Azure AI servi
 
 Companies can integrate their own data with Azure AI Search and Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
 
-:::image type="content" source="/isv/media/chat-with-your-data.png" alt-text="A diagram showing how Azure AI Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
+:::image type="content" source="isv/media/chat-with-your-data.png" alt-text="A diagram showing how Azure AI Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
 
 To chat with your own data using Azure OpenAI and Azure AI Search in Azure AI Studio, see [Deploy a web app for chat on your data](/azure/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/azure/ai-studio/tutorials/deploy-copilot-ai-studio).
 
