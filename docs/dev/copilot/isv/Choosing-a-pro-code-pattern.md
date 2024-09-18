@@ -31,34 +31,34 @@ In this article:
 
 ## Pattern selection in the pro-code ISV Journey
 
-To help ISVs build their generative AI solutions, Microsoft has created guidance to help you identify a viable use case and begin creating it. This page focuses on pro-code patterns developers can choose as they go through the journey of building their solution. If you are uncertain if a pro-code or low-code journey is right for you, visit the [capability envisioning page](Capability-Envisioning.md) to identify which approach may be best suited to your use case.
+To help independent software vendors (ISVs) build their generative AI solutions, Microsoft created guidance to help you find a viable use case and start creating it. This page focuses on pro-code patterns developers can choose as they go through the journey of building their solution. If you're unsure whether to choose a pro-code or low-code pattern, visit the [capability envisioning page](Capability-Envisioning.md) to find the best approach for your use case.
 
 ## Considerations for a pro-code journey
 
-Choosing a pro-code approach enables ISVs like you to make use of highly customizable options when designing your AI applications. Within the pro-code approach, there are a number of patterns covering many platforms to address different needs and preferences. You will likely be a good fit for one of these patterns if you are:
+Choosing a pro-code approach enables ISVs like you to make use of highly customizable options when designing your AI applications. Within the pro-code approach, there are many patterns covering several platforms to address different needs and preferences. A pro-code pattern is a good fit if you are:
 
 - Building a highly customized app and need more components within your control.
 - Integrating AI capabilities into your own application or building one from scratch.
 - Adhering to unique data or security concerns.
 
-If you require a quick path to completion and you can build your application using out-of-the-box capabilities from tools like Power Platform connectors, you may be interested in researching [low-code patterns](Low-Code-Patterns.md).
+If you need a quick solution and can use tools like Power Platform connectors, consider researching [low-code patterns](Low-Code-Patterns.md).
 
 There are two high-level approaches within pro-code:
 
-- **Building a custom copilot.** This approach encompasses patterns that help you to create a solution with natural language capabilities. This enables your AI to converse naturally with users in a wide range of situations.
+- **Building a custom copilot.** This approach encompasses patterns that help you to create a solution with natural language capabilities. Building with a custom copilot enables your AI to converse naturally with users in a wide range of situations.
 - **Building an application on Fabric.** This approach covers patterns that use Fabric to process or store data, which can be integrated with an AI application you create. These patterns provide a strong data foundation and an opportunity for more customization.
 
-Both approaches offer numerous benefits and enable you to create a customizable AI application. Depending on the pattern you choose, this could be an entirely new application or new capabilities that you introduce into an existing application. 
+Both approaches offer numerous benefits and enable you to create a customizable AI application. Depending on the pattern you choose, you may build an entirely new application or new capabilities that you introduce into an existing application.
 
 ## Choosing a pattern
 
 Choosing a pattern is the last step an ISV takes before beginning to build a solution.
 The pattern you select:
 
-- **Impacts the capabilities of your solution.** Choosing the correct pattern for the situation will enable you to align your solution to your customers' needs. Selecting a pattern with too few capabilities can limit what you can create.
+- **Impacts the capabilities of your solution.** Choosing the correct pattern for the situation enables you to align your solution to your customers' needs. Selecting a pattern with too few capabilities can limit what you can create.
 - **Affects the developmental cost of the project.** Some patterns require a heavier lift during development, costing ISVs time and money. The investment needed for the pattern you select shouldn't outpace the potential value of your use case.
 - **Enables you to work within different interfaces.** Some patterns are designed to create applications from scratch, while others are designed to work within your existing applications or platforms from Microsoft.
-- **Changes data, infrastructure, and other back-end considerations.** Pro-code patterns are generally versatile but may have limits or require modifications. Typically, your data and infrastructure options become more customizable as you choose more complex pattern options.
+- **Changes data, infrastructure, and other back-end considerations.** Pro-code patterns are versatile but may have limits or require modifications. Typically, your data and infrastructure options become more customizable as you choose more complex pattern options.
 
 Because of all these factors, it is essential to carefully evaluate your situation, your customers' needs, and your technical capabilities before choosing a pattern. The platform and strategy you select will impact what you can create.
 
@@ -70,13 +70,13 @@ Whether you choose one pattern or combine multiple, it's important to consider t
 
 ### Semantic Kernel
 
-ISVs looking to build sophisticated AI applications can use [Semantic Kernel](https://github.com/microsoft/semantic-kernel) in many of the different pattern options. Semantic Kernel is an open-source SDK that makes it easy to combine your existing C#, Python, and Java code with models from OpenAI, Azure OpenAI, Hugging Face, and more.
+ISVs looking to build sophisticated AI applications can use [Semantic Kernel](https://github.com/microsoft/semantic-kernel) in many of the different pattern options. Semantic Kernel is an open-source software development kit (SDK) that makes it easy to combine your existing C#, Python, and Java code with models from OpenAI, Azure OpenAI, Hugging Face, and more.
 
 Because Semantic Kernel interacts directly with your code, it is possible to use it many different patterns. Regardless of the pattern you choose, Semantic Kernel can support your development journey and enabling your solution with new generative AI capabilities.
 
 ## Build a custom copilot
 
-Building a custom copilot enables you to create an application with a moderate coding lift and more customizability than adopting or extending a first-party, Microsoft Copilot would. While you will need to build many components on your own, Microsoft provides notable support through SDKs, templates, and more, depending on the pattern you choose.
+Building a custom copilot enables you to create an application with a moderate coding lift and more customizability than adopting or extending a first-party, Microsoft Copilot would. While you need to build many components on your own, Microsoft provides notable support through SDKs, templates, and more, depending on the pattern you choose.
 
 A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural langauge capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI studio.](media/1_Procode_patterns_graphic.jpg)
 
@@ -143,9 +143,9 @@ By including an AI assistant within their application, Contoso's solution become
 
 ### Teams AI library
 
-If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](microsoftteams/platform/bots/what-are-bots) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
+If you already have a Teams chatbot or are interested in creating one, your chatbot can be enhanced with generative AI capabilities. Scaffolding within [Teams AI library](/microsoftteams/platform/bots/what-are-bots) is able to support conversational language for your chatbot, which can be accessed directly by users in Teams.
 
-This application requires you to input the business logic you would like your app to use while the LLM models that Microsoft provides handle the back-end aspects of the chatbot. You can even modify your chatbot to use different LLMs, plugins, and more.
+This application requires you to input the business logic you would like your app to use while the large language models (LLMs) that Microsoft provides handle the back-end aspects of the chatbot. You can even modify your chatbot to use different LLMs, plugins, and more.
 
 You might be interested in this pattern if you:
 

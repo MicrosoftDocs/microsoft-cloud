@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 #CustomerIntent: As an ISV developing solutions on the Microsoft Cloud, I want to learn best practices for Observability so that I can monitor and observe my generative AI solution.
 ---
 
-## Observability for pro-code generative AI solutions
+# Observability for pro-code generative AI solutions
 
 ## Overview
 

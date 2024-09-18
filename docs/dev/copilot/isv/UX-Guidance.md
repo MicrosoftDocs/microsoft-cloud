@@ -268,9 +268,7 @@ Design mechanisms for users to evaluate your copilot's outputs through things li
 
 Now that you know how to achieve your desired user experience, here are Microsoft's resources and tools to help you as you begin building your generative AI application.
 
-* [Microsoft HAX Toolkit](https://www.microsoft.com/haxtoolkit/)
-  * [HAX Design Library - Microsoft HAX Toolkit](https://www.microsoft.com/haxtoolkit/library/)
-  * [Design patterns - Microsoft HAX Toolkit](https://www.microsoft.com/haxtoolkit/design-patterns/)
+* [Microsoft HAX Toolkit](https://aka.ms/haxtoolkit/)
 * [UX for AI: Design Practices for AI Developers | LinkedIn Learning](https://www.linkedin.com/learning/ux-for-ai-design-practices-for-ai-developers)
 * [Learn how to use Microsoft Copilot | Microsoft Learn](/copilot)
 * [Responsible AI Principles and Approach | Microsoft AI](https://www.microsoft.com/ai/principles-and-approach)
