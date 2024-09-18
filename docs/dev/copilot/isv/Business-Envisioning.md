@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 #CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
 ---
 
-## Evaluate and Prioritize an AI Use Case with Business Envisioning
+# Evaluate and Prioritize an AI Use Case with Business Envisioning
 
 - [AI is transforming how industries operate](#ai-is-transforming-how-industries-operate)
 - [Business Envisioning](#business-envisioning)

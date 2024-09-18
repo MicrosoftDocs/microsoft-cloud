@@ -12,7 +12,7 @@ ms.date: 09/16/2024
 
 ## Observability for pro-code generative AI solutions
 
-## In this article
+## Overview
 
 - [Building and operationalizing copilot applications](#building-and-operationalizing-copilot-applications)
 - [Observability challenges in generative AI](#observability-challenges-in-generative-ai)
@@ -219,7 +219,7 @@ It supports [two types of automated metrics](https://github.com/MicrosoftDocs/az
 
 [Prompt flow](https://microsoft.github.io/promptflow/) is a suite of development tools designed to streamline the end-to-end development cycle of LLM-based AI applications, from prototyping and testing, to deployment and monitoring. The [prompt flow SDK](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/ai-studio/how-to/develop/flow-evaluate-sdk.md) provides:
 
-- [Built-in evaluators](https://github.com/microsoft/promptflow/blob/main/src/promptflow-evals/samples/built_in_evaluators.py) that support custom code-based or prompt-based evaluators via [Prompty](https://microsoft.github.io/prompty/#whatIsPrompty) to cater to task-specific evaluation needs.
+- [Built-in evaluators](https://github.com/microsoft/promptflow/blob/main/src/promptflow-evals/samples/built_in_evaluators.py) that support custom code-based or prompt-based evaluators via [Prompty](https://github.com/microsoft/prompty) to cater to task-specific evaluation needs.
 - [Prompt tracing](https://microsoft.github.io/promptflow/how-to-guides/tracing/index.html) which tracks the inputs, outputs and context of prompts, and enables developers to identify the causes and origins of model issues
 - [Monitoring dashboards](/azure/ai-studio/how-to/develop/trace-production-sdk) including system (for example, token usage, latency) and custom metrics from evaluation to support pre- and post-deployment observability in [Azure AI Studio](https://build.microsoft.com/sessions/de3dfc8d-3aaf-4dc2-97c3-5b2937961d54?source=/speakers/1ba2b218-1cde-4724-902d-9d951536366c) and [Application Insights](https://build.microsoft.com/sessions/b27da931-0604-4072-84a1-3cdc84c537cc).
 
@@ -239,6 +239,6 @@ By designing your generative AI application with observability and monitoring in
 
 Further guidance on evaluating your LLM application
 
-[Get started in prompt flow - Azure Machine Learning | Microsoft Learn](/azure/machine-learning/prompt-flow/get-started-prompt-flow?view=azureml-api-2)
+[Get started in prompt flow - Azure Machine Learning | Microsoft Learn](/azure/machine-learning/prompt-flow/get-started-prompt-flow)
 
 Information on setting up and beginning to work with prompt flow

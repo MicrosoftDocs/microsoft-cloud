@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 #CustomerIntent: As an ISV developing solutions on the Microsoft Cloud, I want to learn about ways to observe my solution and monitor it for potential issues after deployment.
 ---
 
-## Observability at scale for ISV Solutions on the Microsoft Cloud
+# Observability at scale for ISV Solutions on the Microsoft Cloud
 
 If you're an independent software vendor (ISV) building applications on the Microsoft Cloud, you likely require insight into your applications' data after deployment. Ensuring visibility into the performance of your application-no matter where it's running-is critical to maintaining and improving it. If you've deployed large-scale solutions on Azure, you might know the [Azure Monitor Metrics Data Plane API](https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-announcing-general-availability-of-azure-monitor/ba-p/4041394). It helps you query metrics across subscriptions and meet your observability needs.
 
@@ -27,7 +27,7 @@ Some of the considerations that ISVs can address through effective monitoring in
 - Processing data quickly and effectively
 - Efficiently responding to errors
 
-If you're building generative AI applications, you may have even more challenges and considerations for observability, as AI introduces complexity into topics like data regulation, ethical use, and privacy issues. For information on metrics and telemetry considerations specific to generative AI, visit this guide on [Observability for generative AI](Observability-for-AI-Learn-Page.md).
+If you're building generative AI applications, you may have even more challenges and considerations for observability, as AI introduces complexity into topics like data regulation, ethical use, and privacy issues. For information on metrics and telemetry considerations specific to generative AI, visit this guide on [Observability for generative AI](Observability-for-AI.md).
 
 ## Enabling observability at scale through Azure Monitor
 
@@ -126,4 +126,4 @@ Given these deployment scenarios, you can use the [MCSA-Observability](https://a
 - [Independent software vendor (ISV) considerations for Azure landing zones - Cloud Adoption Framework | Microsoft Learn](/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone?tabs=mg-env-yes%2Cminimal#isv-deployment-models) - An ISV guide to different landing zones within Azure.
 - [Azure Monitor- Announcing General Availability of Azure Monitor Metrics Data Plane API - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-announcing-general-availability-of-azure-monitor/ba-p/4041394) - A quick introduction to the Azure Monitor Metrics Data Plane API.
 - [Observability at scale - Azure Monitor Metrics Data Plane API - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-at-scale-azure-monitor-metrics-data-plane-api/ba-p/4085850) - An in-depth review of the Azure Monitor Metrics Data Plane API and how it related to Observability at scale.
-- [Metrics Batch - Batch - REST API (Azure Monitor) | Microsoft Learn](/rest/api/monitor/metrics-batch/batch?view=rest-monitor-2023-10-01&tabs=HTTP) - Specific information on the Azure Monitor Metrics Data Plane API, such as URI Parameters, request bodies, and more.
+- [Metrics Batch - Batch - REST API (Azure Monitor) | Microsoft Learn](/rest/api/monitor/metrics-batch/batch) - Specific information on the Azure Monitor Metrics Data Plane API, such as URI Parameters, request bodies, and more.

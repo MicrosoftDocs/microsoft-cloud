@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 #CustomerIntent: As a <type of user>, I want <what?> so that <why?>.
 ---
 
-## Choosing an approach to AI-enabled application development with Capability Envisioning
+# Choosing an approach to AI-enabled application development with Capability Envisioning
 
 - [Introduction](#introduction)
 - [Capability Envisioning](#capability-envisioning)

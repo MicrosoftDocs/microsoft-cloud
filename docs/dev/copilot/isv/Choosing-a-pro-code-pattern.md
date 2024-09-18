@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 #CustomerIntent: As an ISV developing solutions on the Microsoft Cloud, I want to see what development options I can choose from so that I can create an application.
 ---
 
-## Choosing the best pro-code pattern to create your generative AI solution
+# Choosing the best pro-code pattern to create your generative AI solution
 
 In this article:
 
