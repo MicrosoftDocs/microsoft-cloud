@@ -52,7 +52,7 @@ Copilot assistants discussed in this section include:
 - [Microsoft Copilot](#microsoft-copilot)
 - [Copilot for Azure](#copilot-for-azure)
 - [Copilot for Dynamics 365](#copilot-for-dynamics-365)
-- [Microsoft 365 Copilot](#copilot-for-microsoft-365)
+- [Microsoft 365 Copilot](#microsoft-365-copilot)
 - [Copilot for Service](#copilot-for-service)
 - [Copilot in Microsoft Fabric](#copilot-in-microsoft-fabric)
 - [Copilot in Power Apps](#copilot-in-power-apps)
