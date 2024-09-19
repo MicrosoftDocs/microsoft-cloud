@@ -1,6 +1,6 @@
 ---
 title: Choosing an approach to AI-enabled application development with Capability Envisioning
-description: "Once you have completed business envisioning and identified a prioritized AI use case, how do you think through the choices that go into its development? Capability Envisioning can help you systematically think through the considerations that go into how you will build the application."
+description: "After identifying a top AI use case, Capability Envisioning helps you plan how to develop the application."
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
@@ -28,13 +28,13 @@ This article enables Independent Software Vendors (ISVs) to:
 
 ## Introduction
 
-Once an ISV, like yourself, has used the [business envisioning](Business-Envisioning.md) framework we used to evaluate and prioritize your most promising generative AI (GenAI) use case, the next step is to plan out how to actually build the solution.  
+After using the [business envisioning](Business-Envisioning.md) framework to prioritize your top generative AI use case, the next step is to plan how to build the solution.  
 
 On this page, we guide you through choosing the best approach for executing your use case. We outline key considerations, provide resources to help you think through them, and explore the tools Microsoft offers for building your application based on your chosen approach. To help illustrate this process, we walk you through an example scenario, demonstrating how an ISV might evaluate their options and choose the most effective approach. We also provide an overview of the wider development journey, and how it can differ depending on the approach you select.
 
 ## Capability Envisioning
 
-With a prioritized use case selected, it’s time to decide how to bring its capabilities to life. ISVs have many paths to choose from when it comes to developing your solutions, but we’ve simplified these pathways into three primary approaches, spanning from low-code to pro-code development: Extend or adopt a Microsoft Copilot, build a custom copilot, and build an application on Fabric.
+After selecting a prioritized use case, it's time to decide how to develop it. ISVs can choose from three main approaches: extend or adopt a Microsoft Copilot, build a custom copilot, or create an application on Fabric.
 
 <!-- Graphic: 01_Approaches_Graphic 
 Image description: There is a bar across the top of the image with Low-code on the left and Pro Code on the right with a line 1/3 of the way across the bar starting from the left. There are three boxes below this bar titled, from right to left: "Adopt/Extend a Microsoft Copilot, Build a custom Copilot, and Build an application on Fabric." Low-Code rests above the first of these boxes while pro-code rests above both of the second boxes. Within each of the boxes is the following text: 
@@ -47,7 +47,7 @@ These approaches are not mutually exclusive, but rather offer flexibility throug
 
 ### Considerations for your approach
 
-To identify the best approach for development, we explore six primary considerations. These help you evaluate the key features of the intended solution and make an informed decision on the approach that best aligns with your goals.
+To identify the best approach for development, we explore six primary considerations. These considerations help you evaluate the key features of the intended solution and make an informed decision on the approach that best aligns with your goals.
 
 - **Data**: what types and sources of data and information does the application need to engage with?
 - **Customization**: how should customers interact with the application and what control do you need over its outputs?
@@ -84,7 +84,7 @@ This use case was prioritized for development using the business, experience, te
 
 ## Example scenario: Contoso Shopping application
 
-In our scenario, Contoso partners with retailer AdventureWorks to develop a solution that provides a virtual storefront and systems to improve employee communication, inventory planning, and data insights across operations. Let’s review how this use case aligns with our considerations for choosing a development approach.
+In our scenario, Contoso partners with retailer AdventureWorks to develop a solution that provides a virtual storefront and systems to improve employee communication, inventory planning, and data insights across operations. Let's review how this use case aligns with our considerations for choosing a development approach.
 
 ### Considerations
 
@@ -92,31 +92,31 @@ In our scenario, Contoso partners with retailer AdventureWorks to develop a solu
 
 - **Data**: The application requires distributed data from a diverse set of sources, including non-Microsoft cloud applications, surfaced via APIs.
 - **Customization**: The application is custom built for AdventureWorks with extensive customizability and control over individual features. The application needs to have multiple potentially complex components to support different stakeholders and tasks.
-- **Development complexity**: Development of the application’s capabilities require substantial resources, time, and human capital, including professional software developers.
+- **Development complexity**: Development of the application's capabilities require substantial resources, time, and human capital, including professional software developers.
 - **End-user**: The end-user can vary across AdventureWorks operations but includes technical data scientists and nontechnical frontline workers.
 - **Business value**: This application serves as a core feature of AdventureWorks operations by enabling a virtual storefront with substantive revenue potential along with data-driven insights on company operations. For Contoso, this offering represents a major business opportunity.
 - **Risk and compliance**: This solution interacts with protected financial data to complete transactions for AdventureWorks customers, necessitating significant security and regulatory compliance components.
 
-Contoso then used these considerations to assess how their development approach aligns with their overall strategy, business value, and technical capabilities, recognizing that alignment in these areas is critical for a successful application. Let’s review how each of these impacted their decision.
+Contoso then used these considerations to assess how their development approach aligns with their overall strategy, business value, and technical capabilities, recognizing that alignment in these areas is critical for a successful application. Let's review how each of these considerations impacted their decision.
 
-- **Strategy**: Given the use case prioritized in their business envisioning session, Contoso needed an application with expansive, and modular capabilities that could handle complex and highly customized functions. The Build on Fabric approach is a good fit for this scenario because it helps Contoso teams learn new tools and technology, and the application’s purpose needs features that require extensive development.
+- **Strategy**: Given the use case prioritized in their business envisioning session, Contoso needed an application with expansive, and modular capabilities that could handle complex and highly customized functions. The Build on Fabric approach is ideal for this scenario because it helps Contoso teams learn new tools and technology, and the application needs features that require extensive development.
 - **Business**: In addition to the larger revenue generating potential of this complex application, building the Contoso Shopping application on Fabric means Contoso can also templatize components of the application for reuse. With these templates, Contoso can accelerate future development efforts, potentially reducing costs and improving time to value.
-- **Technology**: Lastly, and most obviously, the technical parameters of Contoso’s use case and AdventureWorks’ problems mean the Contoso Shopping application requires substantial pro-code development, along with more advanced data infrastructure and customization. Building an application on Fabric is the best path for Contoso to be sure they have the tools they need to execute on this use case.
+- **Technology**: Lastly, and most obviously, the technical parameters of Contoso's use case and AdventureWorks' problems mean the Contoso Shopping application requires substantial pro-code development, along with more advanced data infrastructure and customization. Building an application on Fabric is the best path for Contoso to be sure they have the tools they need to execute on this use case.
 
-In this scenario, Contoso decided to develop the Shopping application using pro-code given the need for extensive customization and the variety of complex features. Low-code development does not enable the capabilities identified in this use case. Within the pro-code journey, Contoso chose to develop this application from the ground up, on Fabric, to ensure a solid foundational data infrastructure on which to build its various features. They were able to make this decision confidently because this approach to development aligned with their use case strategically, commercially, and technically. 
+In this scenario, Contoso decided to develop the Shopping application using pro-code given the need for extensive customization and the variety of complex features. Low-code development does not enable the capabilities identified in this use case. Within the pro-code journey, Contoso chose to develop this application from the ground up, on Fabric, to ensure a solid foundational data infrastructure on which to build its various features. They were able to make this decision confidently because this approach to development aligned with their use case strategically, commercially, and technically.
 
-Let’s also briefly examine why Contoso didn’t choose the adopt/extend a Microsoft Copilot, or build your own copilot approaches. First, adopting and/or extending a Microsoft Copilot limits the application to a conversational assistant, which does not satisfy the requirements of the Contoso use case or meet AdventureWorks’ needs. Similarly, while building a custom copilot enables greater customization and complex interactions, the technical data functionality required for a Shopping application extends beyond the capabilities of a copilot on its own. With these considerations, building an application on Fabric is the best choice for this scenario. 
+Let's also briefly examine why Contoso didn't choose the adopt/extend a Microsoft Copilot, or build your own copilot approaches. First, adopting and/or extending a Microsoft Copilot limits the application to a conversational assistant, which does not satisfy the requirements of the Contoso use case or meet AdventureWorks' needs. Similarly, while building a custom copilot enables greater customization and complex interactions, the technical data functionality required for a Shopping application extends beyond the capabilities of a copilot on its own. With these considerations, building an application on Fabric is the best choice for this scenario.
 
 <!-- There is potential for additional links to learn pages for each of the development tools mentioned in the above and below paragraphs. These were not requested to be added, but if they should be, here are links for rapid access: 
 -https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/
 -https://learn.microsoft.com/en-us/fabric/
 -https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio -->
 
-Given the application’s variety of interfaces and capabilities, Contoso ultimately used multiple tools, including Microsoft Fabric, Microsoft Azure, and Azure AI Studio, to complete development. It’s important to note that the three approaches are not mutually exclusive. A custom copilot, built with low-code in Copilot Studio, using the Store Operations copilot template, could easily be integrated into this Shopping application. Selecting an approach is not a walled highway, it is a tool to help think through the requirements of your application, the capabilities you envision for it, and the resources you need to develop it. Let’s dig a little bit deeper into how Microsoft solutions fit into these approaches.
+Given the application's variety of interfaces and capabilities, Contoso ultimately used multiple tools, including Microsoft Fabric, Microsoft Azure, and Azure AI Studio, to complete development. It's important to note that the three approaches are not mutually exclusive. A custom copilot, built with low-code in Copilot Studio, using the Store Operations copilot template, could easily be integrated into this Shopping application. Selecting an approach is not a walled highway, it is a tool to help think through the requirements of your application, the capabilities you envision for it, and the resources you need to develop it. Let's dig a little bit deeper into how Microsoft solutions fit into these approaches.
 
 ## Microsoft Development Tools
 
-Microsoft offers various development tools to meet ISVs’ application development needs. Each of these approaches can involve a mixed array of individual Microsoft tools. We’ve summarized a number of the primary tools; you can also review a [comprehensive guide for ISVs on building GenAI experiences here](isv-extensibility-story.md) that expands upon the possibilities each approach enables.
+Microsoft offers various development tools to meet ISVs' application development needs. Each of these approaches can involve a mixed array of individual Microsoft tools. We've summarized the main tools. You can also review a [detailed guide for ISVs on building GenAI experiences](isv-extensibility-story.md) that explains the possibilities of each approach.
 
 <!-- Graphic: 03_Development_Tools_Graphic 
 Image description: This graphic has five boxes above a long arrow along the bottom that goes from left to right with the word "Complexity" on it. The five boxes, from left to right, read: 
@@ -136,65 +136,33 @@ The store operations use case involves an AI assistant that enables rapid access
 
 Alternatively, an ISV could undertake a more complex development process and utilize Azure AI studio or Fabric to develop a more comprehensive store operations application, including data infrastructure and technical user assistants. This approach, as in the Shopping application scenario, would involve substantial pro-code development with developers interfacing with more of the full stack, as shown in the right column.
 
-Your unique needs and circumstances determine the right development approach. These tools and methods support you no matter how you develop your application, but the path will vary based on your choice. You can use this template [link to file] <!--insert file download: ISV Capability Envisioning Template: https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Capability%20Envisioning/ISV%20Capability%20Envisioning%20Template.pptx?d=wef58a8a637be412a8900a82283a449c5&csf=1&web=1&e=yx9xIQ--> to walk through the GenAI considerations for your use case and determine the best path forward.
+Your specific needs and circumstances determine the best development approach. These tools and methods support you regardless of how you develop your application, but the path varies based on your choice. You can use this ![template](media/ISV-capability-envisioning-template.pptx) to walk through the GenAI considerations for your use case and determine the best path forward.
 
-<!-- Graphic: 05_Blank_Template_Graphic 
-Image description: the title of the image is: "Which generative AI approach should you pursue". Below this are four columns, left to right: "Data, customizability, development complexity, and end user". Below each are a number of questions, with space below for the user to fill-in. The questions for each column are as follows: 
-Data: 
-Where is my data?
-What infrastructure do I need to connect it?
-How do I need my data to interface with Microsoft data and other sources?
-Customizability: 
-How will customers interact with my app?
-Do I need to control its tone and behavior?
-Am I prepared to manage security and compliance?
-Development Complexity: 
-How much time can I dedicate to app dev?
-What resources can I dedicate to this app?
-Who do I have available to staff to this project?
-End user: 
-Who is the end user?
-How much technical know—how will my end user have?
-Where would the end-user interface with the app?
-On the right side of the image are three stacked boxes reading, top to bottom: Adopt/extend a Microsoft Copilot, Build a custom Copilot, and Build an app on Fabric
--->
+:::image type="content" source="media/05_Blank_Template_Graphic.jpg" alt-text="Which generative AI approach should you pursue" border="false" :::
 
-Now that you have identified and evaluated your use case and chosen the best development approach, let’s look at the path ahead.
+Now that you have identified and evaluated your use case and chosen the best development approach, let's look at the path ahead.
 
 ## The approaches across the ISV journey
 
 The three approaches to building AI and GenAI applications on Microsoft tools can be split into two primary development journeys: a low-code journey and a pro-code journey. The low-code journey is characterized by rapid time to value and light application development lift while the pro-code journey powers more application customizability and complexity.
 
-Our experience working with ISVs has led Microsoft to develop the ISV Journey Map, a consistent, and systematic process to develop applications for the Microsoft Cloud. This framework is designed to help you reduce costs, and efficiently develop the best possible solution. If you’d like to be evaluated using this framework, contact your partner development manager.
+Our experience working with ISVs has led Microsoft to develop the ISV Journey Map, a consistent, and systematic process to develop applications for the Microsoft Cloud. This framework is designed to help you reduce costs, and efficiently develop the best possible solution. If you'd like to be evaluated using this framework, contact your partner development manager.
 
-The ISV journey provides a broad overview of the different phases you’ll go through to develop your application. Your chosen development approach will shape your experience in each phase, but the overall structure remains consistent across development lifecycles. This applies whether you are extending a Microsoft Copilot with low-code or building an application from scratch with pro-code.
+The ISV journey provides a broad overview of the different phases you'll go through to develop your application. Your chosen development approach will shape your experience in each phase, but the overall structure remains consistent across development lifecycles. This applies whether you are extending a Microsoft Copilot with low-code or building an application from scratch with pro-code.
 
-<!-- Graphic: 06_ISV_Journey_Graphic 
-Image Description: The image is titled: "The ISV Journey. Below are two rectangles titled, top to bottom, "Low-code" and "Pro-code". Within the Low-Code rectangle are sub-boxes, from left to right, with the following text:
-Plan and Design: Align resources and monetization with existing infrastructure and applications
-Build and Test: Leverage templates to simplify data, security, and infrastructure considerations
-Publish and Sell: Utilize existing platforms to seamlessly take your solution to market
-Deploy: Streamline deployment to drive accessibility, efficacy, and accuracy
-Operate: Maintain operational excellence and gather feedback through built-in monitoring
-Within the Pro-code rectangle are the sub-boxes, from left to right, with the following text: 
-Plan and Design: Align resources and monetization strategy with detailed architectural planning
-Build and Test: Address complex data and security needs with custom code and testing
-Publish and Sell: Strategize and execute a comprehensive go-to-market plan
-Deploy: Implement with expansive deployment plan that aligns with commercial strategy
-Operate: Achieve operational excellence with robust observability and performance tuning
--->
+:::image type="content" source="media/06_ISV_Journey_Graphic.jpg" alt-text="The ISV Journey. Below are two rectangles titled, top to bottom, Low-code and Pro-code." border="false" :::
 
 Microsoft continues to build out content to provide holistic guidance for building AI and GenAI applications for the Microsoft Cloud. You can find more content and resources at [this Microsoft Copilot for ISVs Collection](/collections/7rmiyjy2006wj). This page is regularly updated with newly developed content.
 
 ## Next steps
 
-Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you’ve selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](Low-Code-Patterns.md) and [pro-code patterns](Choosing-a-pro-code-pattern.md).
+Selecting the appropriate approach to your applications development is a critical stage in this process. Whether you need rapid time to value or complex customization, Microsoft is here to help you bring value to your customers. Once you've selected the right approach for your application, then comes the question of choosing the appropriate path for implementation. Each approach includes several potential tools, or patterns, you can use to develop your application. Here are pages where you can find more information about [low-code patterns](Low-Code-Patterns.md) and [pro-code patterns](Choosing-a-pro-code-pattern.md).
 
 <!-- Immediately update this next steps section with links to pattern selection pages when they become available. When more ISV Journey pages have been built out, a table with the pages organized under each stage of the journey can also be added to the 'ISV Journey' section of this page. -->
 
 ## Related Content
 
-- [Official Collection | Microsoft Copilot for an Independent Software Vendor (ISV)](/collections/7rmiyjy2006wj)<!--if the landing page link is changed, this link will need to be updated-->
+- [Official Collection | Microsoft Copilot for an Independent Software Vendor (ISV)](/collections/7rmiyjy2006wj)
 - [Creating Generative AI Experiences with the Microsoft Cloud: A Guide for ISVs](isv-extensibility-story.md)
 - [Building AI solutions with partners: Empowering transformation with copilots | The Microsoft Cloud Blog](https://www.microsoft.com/microsoft-cloud/blog/2024/05/15/building-ai-solutions-with-partners-empowering-transformation-with-copilots/)
 
