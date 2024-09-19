@@ -36,7 +36,7 @@ AI is breaking down barriers across industries, from enhancing manufacturing pro
 
 Our partners are increasingly looking to develop new solutions and features that apply this advanced technology and deliver greater value to customers. Many of our partners are focused on the potential of generative AI and it's potential to transform the way work is being done. While traditional AI and ML certainly have their place, GenAI offers a step forward in the progression of artificial intelligence. While traditional AI and chatbots existed for some time, generative AI marks a significant advancement in its capabilities and potential.
 
-:::image type="content" source="docs/dev/copilot/isv/media/01_AI_to_GenAI.jpg" alt-text="from conversational experiences using trained natural language models" border="false" :::
+:::image type="content" source="media/01_AI_to_GenAI.jpg" alt-text="from conversational experiences using trained natural language models" border="false" :::
 
 The possibilities of this transformational technology means that effectively applying the value of AI can be a major undertaking, even for large companies. While this page, and subsequent ones, are designed to help ISVs identify, build, and deploy a viable generative AI use case, there are more resources available. We developed the Microsoft AI Value Accelerator (MAIVA) Playbook to support enterprise customers with foundational knowledge and guidance for enabling AI at scale across their organization. Though not designed as a tactical guide for ISVs, MAIVA can provide valuable insights into the diverse perspectives of the different roles involved in bringing a GenAI application to life. This [open-source framework](https://microsoft.github.io/dstoolkit-maiva/MAIVA_Chapter_1.html#economics-of-governance-framework-or-the-opportunity-cost) helps you understand what makes deployment and operation successful, why it's challenging, and offers advice on leadership, building a data-driven culture, and managing change.
 
@@ -68,7 +68,7 @@ As you develop use cases, it can be helpful to consider the following questions:
 
 You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use the below template link to template:https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Business%20Envisioning/Business%20Envisioning%20Template.pptx?d=w366cb1950a9a4fa3aa5e6603a57b873d&csf=1&web=1&e=KxWTVy  to make the case for your solution, --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
 
-:::image type="content" source="docs/dev/copilot/isv/media/02_Business_Envisioning_Template.jpg" alt-text="A chart with which to input details about your use case" border="false" :::
+:::image type="content" source="media/02_Business_Envisioning_Template.jpg" alt-text="A chart with which to input details about your use case" border="false" :::
 
 In the following section, we review how our ISV Contoso used this framework to assign two different use cases strategic scores when we do so for our example scenarios. For now, set this strategic fit score aside. We'll return to it when we discuss use case prioritization, after evaluating the business value, user experience, and technical feasibility of your use case.
 
@@ -110,7 +110,7 @@ To address the situation, Contoso proposed developing the Contoso Shopping appli
 
 Based on these factors, Contoso assigned their use case a strategic fit of 5. This high score suggests a strong fit for Contoso and AdventureWorks and brings us to the next step in the business envisioning process.
 
-After examining the details of each use case and assigning them a strategic fit score, let’s evaluate how they measure up in terms of business value, user experience and demand, and technical viability using the business, experience, technology (BXT) framework.
+After examining the details of each use case and assigning them a strategic fit score, let's evaluate how they measure up in terms of business value, user experience and demand, and technical viability using the business, experience, technology (BXT) framework.
 
 ## Apply the Business, Experience, Technology Framework
 
@@ -122,7 +122,7 @@ The Business, Experience, Technology (BXT) framework enables ISVs to evaluate th
 
 We walk you through this framework step-by-step using the two example use cases we introduced earlier: Contoso store management assistant and Contoso Shopping application.
 
-:::image type="content" source="docs/dev/copilot/isv/media/03_BXT_Framework.jpg" alt-text="Business Viability, Experience desirability, and Technology feasibility" border="false" :::
+:::image type="content" source="media/03_BXT_Framework.jpg" alt-text="Business Viability, Experience desirability, and Technology feasibility" border="false" :::
 
 ## Business
 
@@ -134,7 +134,7 @@ If you'd like to dig deeper into how to drive internal alignment around your use
 ### Executive Strategy Alignment
 
 Your selected use case should align with your organization's overall mission and teams. For a use case to be successfully developed, key stakeholders and impacted users should be clearly identified and ready to engage on the effort. This helps avoid inefficiencies by aligning teams, resources, objectives, and development efforts and avoiding redundant or nonproductive work.
-:::image type="content" source="docs/dev/copilot/isv/media/04_Executive_Strategy_Alignment.jpg" alt-text="Does the use case align with the overall business strategy and goals" border="false" :::
+:::image type="content" source="media/04_Executive_Strategy_Alignment.jpg" alt-text="Does the use case align with the overall business strategy and goals" border="false" :::
 
 ### Business Value
 
@@ -144,7 +144,7 @@ A successful use case is one that generates value for the business. While this c
 - **Extend**: the application enhances product experience but may not be mission critical for all users, a nice-to-have.
 - **Add-on**: the application adds significant value to a particular subset of users for the present.
 
-:::image type="content" source="docs/dev/copilot/isv/media/05_Business_Value.jpg" alt-text="How does the use case generate business value" border="false" :::
+:::image type="content" source="media/05_Business_Value.jpg" alt-text="How does the use case generate business value" border="false" :::
 
 Considerations around commercial strategy and monetization are critical to determining the business value of your application. You can learn more about what goes into this decision on the Commercial Strategy and Monetization for ISV Applications page, coming soon.
 <!-- insert link to ISV commercialization page when it is available> -->
@@ -153,7 +153,7 @@ Considerations around commercial strategy and monetization are critical to deter
 
 The development timeline is an important factor in the business viability of your use case. Key milestones to consider are when your application will be ready for internal testing, when it is ready for initial pilot users and when it can begin generating revenue. Inaccurate time estimates could lead to costly and inefficient delays, which can after impact overall business health and pull valuable resources away from more effective or productive efforts. In addition, the implementation and maintenance of product changes can extend beyond release. Use cases that require less fundamental change and have lower impact on operations can serve as achievable quick wins. To help mitigate the potential drawbacks of complex development projects, it's critical to be realistic with how you approach timeline estimates.
 
-:::image type="content" source="docs/dev/copilot/isv/media/06_Change_Management_Timeframe.jpg" alt-text="What is the expected time required to implement the use case and manage any changes" border="false" :::
+:::image type="content" source="media/06_Change_Management_Timeframe.jpg" alt-text="What is the expected time required to implement the use case and manage any changes" border="false" :::
 
 It's important to note that a more complex use case with a longer roll-out and higher user-impact is not necessarily an unviable use case but will likely require more resources and time to develop and deploy, and potentially introduce new obstacles. For example, an application with a longer roll-out potentially has a longer path to profitability. This does not preclude the application from development, but it's important that ISVs make these decisions with eyes wide open, and balance considerations across the BXT to ensure the intended use case fits their needs, circumstances, and available resources.
 
@@ -161,7 +161,7 @@ It's important to note that a more complex use case with a longer roll-out and h
 
 Let's examine how the example Contoso use cases we introduced land with each of these subcomponents and assign them a score. We use each of these scores, together with the strategic fit score assigned earlier, to prioritize which use case to develop. You'll score each subcomponent separately, and then take the average of those three scores to find this component's overall score.
 
-:::image type="content" source="docs/dev/copilot/isv/media/07_Business_Viability_Assessment.jpg" alt-text="How does the use case align to the organization's executive strategy" border="false" :::
+:::image type="content" source="media/07_Business_Viability_Assessment.jpg" alt-text="How does the use case align to the organization's executive strategy" border="false" :::
 
 ## Experience
 
@@ -171,25 +171,25 @@ Once you've identified a use case's business value, you need to ensure there is 
 
 Understanding the key personas relevant to your use cases is critical to identifying existing demand. This includes both ultimate end-users but also stakeholders involved in building and maintaining the application. Having internal resources prepared and committed will help drive an efficient development process. Understanding these personas enables developers to prioritize use cases that address the specific needs, challenges, and goals of these critical groups, ensuring the application delivers maximum impact and value to those who matter most.
 
-:::image type="content" source="docs/dev/copilot/isv/media/08_Key_Personas.jpg" alt-text=" Who are the key stakeholders and users who will be impacted by the use case" border="false" :::
+:::image type="content" source="media/08_Key_Personas.jpg" alt-text=" Who are the key stakeholders and users who will be impacted by the use case" border="false" :::
 
 ### Value Proposition
 
 The value proposition of a use case outlines the benefits and advantages that users gain from using the application. This includes aspects like increased efficiency, cost savings, improved productivity, or enhanced end-user experience. Understanding the value proposition is vital as it determines the potential appeal and adoption of the use case. A compelling value proposition can help ensure that the application not only meets end-user needs but also stands out in a competitive market, enhancing revenue opportunities.
 
-:::image type="content" source="docs/dev/copilot/isv/media/09_Value_Proposition.jpg" alt-text="What is the value proposition for the user" border="false" :::
+:::image type="content" source="media/09_Value_Proposition.jpg" alt-text="What is the value proposition for the user" border="false" :::
 
 ### Change Resistance
 
 Change resistance is another factor to consider when prioritizing use cases as it reflects the users' willingness to adopt new technologies and processes. High levels of change resistance can hinder the successful implementation and adoption of an application. Understanding the level of change resistance enables developers to devise strategies to manage and mitigate resistance, such as enhanced training and usage-guidance. Addressing change resistance effectively can help ensure smoother transitions and higher acceptance rates, leading to more successful and sustained application usage.
 
-:::image type="content" source="docs/dev/copilot/isv/media/10_Change_Resistence.jpg" alt-text="What is the level of change resistance for the use case" border="false" :::
+:::image type="content" source="media/10_Change_Resistence.jpg" alt-text="What is the level of change resistance for the use case" border="false" :::
 
 ### Example Use Cases Experience Evaluation
 
 Let's examine how our example uses cases align with each of these subcomponents.
 
-:::image type="content" source="docs/dev/copilot/isv/media/11_Experience_Value_Assessment.jpg" alt-text="Experience Value user desirability impact assessment" border="false" :::
+:::image type="content" source="media/11_Experience_Value_Assessment.jpg" alt-text="Experience Value user desirability impact assessment" border="false" :::
 
 ## Technology
 
@@ -199,25 +199,25 @@ Lastly, when prioritizing use cases, considering technical factors such as techn
 
 Identifying and taking steps to mitigate implementation and operational risks can help developers avoid delays, bugs, and cost overruns, ultimately helping to drive the success of the application. Potential risks can include technical issues, resource constraints, and data security concerns. Mitigation strategies can involve thorough testing, contingency planning, and ensuring robust support and maintenance strategies. By addressing risks early, developers can prevent disruptions and ensure a smoother implementation process, leading to more reliable and sustainable application development and deployment.
 
-:::image type="content" source="docs/dev/copilot/isv/media/12_Implementation_Risks.jpg" alt-text="What are the potential risks associated with the use case and plans for mitigation" border="false" :::
+:::image type="content" source="media/12_Implementation_Risks.jpg" alt-text="What are the potential risks associated with the use case and plans for mitigation" border="false" :::
 
 ### Sufficient Safeguards
 
 Managing risk and compliance, especially with regards to AI, is crucial to the successful development and deployment of your application. Proactive measures such as robust security and compliance measures, data protection and access controls, and responsible and safe AI standards, can help protect users and their data. This also includes ensuring compliance with all relevant legal and regulatory requirements. By prioritizing use cases with well-established safeguards, developers can enhance the reliability and security of their applications, fostering greater user confidence and minimizing potential liabilities.
 
-:::image type="content" source="docs/dev/copilot/isv/media/13_Sufficient_Safeguards.jpg" alt-text="Are the appropriate safeguards in place to manage risk and ensure compliance" border="false" :::
+:::image type="content" source="media/13_Sufficient_Safeguards.jpg" alt-text="Are the appropriate safeguards in place to manage risk and ensure compliance" border="false" :::
 
 ### AI/LLM Fit
 
 In order to effectively implement AI into a use case, the fit of AI and LLMs with the use case must be evaluated. Use cases that align well with AI and LLM capabilities can benefit from enhanced automation, improved decision-making, and personalized user experiences. Understanding how these technologies can be integrated effectively helps maximize their potential and address specific user needs more efficiently. By prioritizing use cases that are well-suited for AI and LLM implementation, developers can create innovative applications that offer significant competitive advantages and drive substantial value for users.
 
-:::image type="content" source="docs/dev/copilot/isv/media/14_AI_Fit.jpg" alt-text="What is the fit of the use case with AI and LLM technologies" border="false" :::
+:::image type="content" source="media/14_AI_Fit.jpg" alt-text="What is the fit of the use case with AI and LLM technologies" border="false" :::
 
 ### Example Use Cases Technology Evaluation
 
 Lastly, let's look at how our example uses cases align with each of the technology subcomponents.
 
-:::image type="content" source="docs/dev/copilot/isv/media/15_Technical_Value_Assessment.jpg" alt-text="Technical value - Feasibility impact assessment" border="false" :::
+:::image type="content" source="media/15_Technical_Value_Assessment.jpg" alt-text="Technical value - Feasibility impact assessment" border="false" :::
 
 Now that you've considered each of these factors regarding the viability of your use cases, how do we evaluate the results?
 
@@ -225,7 +225,7 @@ Now that you've considered each of these factors regarding the viability of your
 
 Once you've examined your use cases using the BXT framework, the next step is to evaluate which use case to prioritize for development. At this stage, each use case you're examining should have three scores, one for business, experience, and technology each. You can use this template to consolidate the BXT and subsequent scores for your use cases:
 
-:::image type="content" source="docs/dev/copilot/isv/media/16_Use_Case_Template.jpg" alt-text="This blank use case template includes all of the subcomponents of the BXT framework" border="false" :::
+:::image type="content" source="media/16_Use_Case_Template.jpg" alt-text="This blank use case template includes all of the subcomponents of the BXT framework" border="false" :::
 
 Now let's return to the strategic fit score we calculated earlier, when we identified these use cases. Combining the strategic fit score with the business viability, experience value, and technical feasibility for each of your use cases yields the metrics we use to determine which use case is worth prioritizing. We use two metrics as axis to visualize the viability of these use cases:
 
@@ -234,7 +234,7 @@ Now let's return to the strategic fit score we calculated earlier, when we ident
 
 Using these two values, you can graph the results of your use case prioritization:
 
-:::image type="content" source="docs/dev/copilot/isv/media/17_Blank_Prioritization.jpg" alt-text="This a chart with four equally sized rectangles making up each of the quadrants" border="false" :::
+:::image type="content" source="media/17_Blank_Prioritization.jpg" alt-text="This a chart with four equally sized rectangles making up each of the quadrants" border="false" :::
 
 Where each use case falls can help you determine the best path forward for its development.
 
@@ -258,7 +258,7 @@ Besides the two analyzed use cases, another team completed a business envisionin
 
 Using our two equations, we can see where each of these use cases fall on this chart.
 
-:::image type="content" source="docs/dev/copilot/isv/media/18_Use_Case_Prioritization.jpg" alt-text="Example chart with four equally sized rectangles making up each of the quadrants" border="false" :::
+:::image type="content" source="media/18_Use_Case_Prioritization.jpg" alt-text="Example chart with four equally sized rectangles making up each of the quadrants" border="false" :::
 
 We can see that Contoso shopping application rests squarely in the "Accelerate to MVP" quadrant as shown above, suggesting this use case is best suited for development, both technically and strategically. This corner represents the meeting point of the best value and technical feasibility. In contrast, the inventory manager doesn't provide adequate strategic business impact to develop and should be incubated for more testing and revision.
 
