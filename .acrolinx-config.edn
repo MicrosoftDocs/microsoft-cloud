@@ -1,5 +1,3 @@
 {:allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["docs"]},
-{:ignored-filetypes ["**/*.pdf"] }
-
-
+ :allowed-filename-matches ["docs"]
+ :ignored-filetypes ["pdf"] }
