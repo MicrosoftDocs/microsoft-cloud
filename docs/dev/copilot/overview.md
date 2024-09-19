@@ -129,7 +129,7 @@ Learn more:
 - [Overview of Copilot in Microsoft Fabric](/fabric/get-started/copilot-fabric-overview)
 - [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
 - [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
-- [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://moaw.dev/workshop/fabric-e2e-serengeti/)
+- [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://moaw.dev/workshop/fabric-e2e-serengeti)
 
 ### Copilot in Power Apps
 

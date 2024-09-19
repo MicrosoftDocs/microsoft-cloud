@@ -183,7 +183,7 @@ The value proposition of a use case outlines the benefits and advantages that us
 
 Change resistance is another factor to consider when prioritizing use cases as it reflects the users' willingness to adopt new technologies and processes. High levels of change resistance can hinder the successful implementation and adoption of an application. Understanding the level of change resistance enables developers to devise strategies to manage and mitigate resistance, such as enhanced training and usage-guidance. Addressing change resistance effectively can help ensure smoother transitions and higher acceptance rates, leading to more successful and sustained application usage.
 
-:::image type="content" source="media/10_Change_Resistence.jpg" alt-text="What is the level of change resistance for the use case" border="false" :::
+:::image type="content" source="media/10_Change_Resistance.jpg" alt-text="What is the level of change resistance for the use case" border="false" :::
 
 ### Example Use Cases Experience Evaluation
 
