@@ -94,7 +94,7 @@ Microsoft 365 Copilot combines Large Language Models (LLMs) with Microsoft Graph
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps. The integrated Copilot functionality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
-:::image type="content" source="media/copilot-for-m365.png" alt-text="Using Microsoft 365 Copilot." border="false" :::
+:::image type="content" source="media/microsoft-365-copilot.png" alt-text="Using Microsoft 365 Copilot." border="false" :::
 
 Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
