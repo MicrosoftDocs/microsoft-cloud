@@ -1,6 +1,6 @@
 ---
 title: Evaluating and prioritizing an AI use case with ISV business envisioning
-description: "Business envisioning is a simple, two-step process that helps partners build out and prioritize business use cases, then create clear business requirements that map into solution architecture design patterns."
+description: "Business envisioning is a simple two-step process that helps partners identify and prioritize business needs, then turn them into clear requirements for designing solutions."
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
@@ -22,7 +22,7 @@ ms.date: 09/16/2024
 
 ## Introduction
 
-Artificial intelligence (AI) is revolutionizing industries, prompting businesses to embrace its potential like never before. It has the potential to unlock new opportunities and enable transformative use cases, reshaping the way businesses interact with and provide products and services to their customers. As AI becomes increasingly embedded in everyday applications, we must invest time and attention to ensure planned AI use cases align with business needs, fulfill real user demand, and are technically feasible with available resources.
+Artificial intelligence (AI) is revolutionizing industries, prompting businesses to embrace its potential like never before. It has the potential to unlock new opportunities and enable transformative use cases, reshaping the way businesses interact with and provide products and services to their customers. As AI becomes more common in daily applications, we need to ensure that AI projects match business goals, meet user needs, and can be built with the resources we have.
 
 This article enables Independent Software Vendors (ISVs) to:
 
@@ -34,14 +34,11 @@ This article enables Independent Software Vendors (ISVs) to:
 
 AI is breaking down barriers across industries, from enhancing manufacturing productivity to minimizing the environmental impact of supply chains. At Microsoft, we believe in providing you with the tools to build the best solution you can, whether that means using traditional AI and machine learning (ML) or cutting-edge generative AI (GenAI) models.
 
-Our partners are increasingly looking to develop new solutions and features that leverage this advanced technology and deliver greater value to customers. Many of our partners are focused on the potential of generative AI and it's potential to transform the way work is being done. While traditional AI and ML certainly have their place, GenAI offers a step forward in the progression of artificial intelligence. While traditional AI and chatbots have existed for some time now, generative AI represents a major step forward in its capabilities and potential.
+Our partners are increasingly looking to develop new solutions and features that apply this advanced technology and deliver greater value to customers. Many of our partners are focused on the potential of generative AI and it's potential to transform the way work is being done. While traditional AI and ML certainly have their place, GenAI offers a step forward in the progression of artificial intelligence. While traditional AI and chatbots existed for some time, generative AI marks a significant advancement in its capabilities and potential.
 
-<!-- Graphic: 01_AI_to_GenAI
-Image description: Indicates the transformation "from conversational experiences using trained natural language models..." to "...To conversational assistants powered by large language models". The graphic is split into two columns, left for traditional AI, right for LLM/GenAI, with an arrow from left to right in each of the rows. These rows read as follows: 
-Text based interfaces to natural multimodal interfaces; API-based data queries to Unified data sources and models; Prebuilt content and topics to AI-generated content and topics; Context-holding to contextual interactions; Embedded and siloed to Adaptive and responsive.
--->
+:::image type="content" source="isv/media/01_AI_to_GenAI.jpg" alt-text="from conversational experiences using trained natural language models" border="false" :::
 
-The possibilities of this transformational technology means that effectively applying the value of AI can be a major undertaking, even for large companies. While this page, and subsequent ones, are designed to help ISVs identify, build, and deploy a viable generative AI use case, there are more resources available. We developed the Microsoft AI Value Accelerator (MAIVA) Playbook to support enterprise customers with foundational knowledge and guidance for enabling AI at scale across their organization. Though not designed as a tactical guide for ISVs, MAIVA can provide valuable insights into the diverse perspectives of the different roles involved in bringing a GenAI application to life. This [open-source framework](https://microsoft.github.io/dstoolkit-maiva/MAIVA_Chapter_1.html#economics-of-governance-framework-or-the-opportunity-cost) can help you understand what successful deployment and operation look like, and why it’s so hard to achieve, as well as guidance around executive roles, developing a data-driven culture, and how to approach change management.
+The possibilities of this transformational technology means that effectively applying the value of AI can be a major undertaking, even for large companies. While this page, and subsequent ones, are designed to help ISVs identify, build, and deploy a viable generative AI use case, there are more resources available. We developed the Microsoft AI Value Accelerator (MAIVA) Playbook to support enterprise customers with foundational knowledge and guidance for enabling AI at scale across their organization. Though not designed as a tactical guide for ISVs, MAIVA can provide valuable insights into the diverse perspectives of the different roles involved in bringing a GenAI application to life. This [open-source framework](https://microsoft.github.io/dstoolkit-maiva/MAIVA_Chapter_1.html#economics-of-governance-framework-or-the-opportunity-cost) helps you understand what makes deployment and operation successful, why it's challenging, and offers advice on leadership, building a data-driven culture, and managing change.
 
 While this development in AI technology brings huge potential for new applications across industries, each opportunity should still be evaluated for its viability. The remainder of this page is devoted to helping ISV business decision makers identify and evaluate the potential business value, user demand, and technical feasibility of proposed AI use cases.
 
@@ -55,7 +52,7 @@ Microsoft possesses a deep well of experience in this space and collaborates wit
 
 | Industry         | Use Case              | Description and Benefits                                                                 |
 |------------------|-----------------------|------------------------------------------------------------------------------------------|
-| Manufacturing    | Factory assistant     | Supports factory workers with rapid identification of equipment malfunctions, remediation and resolution options, on-boarding and upskilling of frontline workers, and generation of Programmable Logic Controller (PLC) code using natural language inputs with translation capabilities. |
+| Manufacturing    | Factory assistant     | Helps factory workers quickly identify equipment issues, find solutions, train and improve skills, and generate Programmable Logic Controller (PLC) code using natural language with translation features. |
 | Healthcare       | Claims management     | Offers a conversational AI assistant experience that can help claims agents complete authorization and administrative tasks quickly. It is also capable of creating comprehensive authorization strategies based on claims data and improving visibility into the status of claims and authorizations. |
 | Financial services | Corporate banking   | Helps bankers forecast client needs based on historical data and interactions, automate routine administrative tasks, and monitor client flows in real time. |
 | Sustainability   | Supply chain characterization | Enables sustainability practitioners to review supplier data to ensure compliance with environmental standards, track product lifecycles, and optimize supply chain operations. |
@@ -64,22 +61,20 @@ Microsoft possesses a deep well of experience in this space and collaborates wit
 As you develop use cases, it can be helpful to consider the following questions:
 
 - **Problem**: What is the problem to be solved? What are the underlying root causes? How does the current process work?
-- **Opportunity**: What is your idea to capture the opportunity or solve the problem? Why do you believe this is a good approach?
+- **Opportunity**: What is your idea to capture the opportunity or solve the problem? Why do you believe this idea is a good approach?
 - **Business objective**: What business objective is being achieved by enabling this use case?
-- **Measurement of success**: How do you define success? How will success be measured? What are the measurable key results that show progress?
+- **Measurement of success**: How do you define success? How is success measured? What are the measurable key results that show progress?
 - **Accountability**: Who is the executive sponsor for the solution? Who is accountable for the Objectives and Key Results (OKRs)?
 
-You’ll probably be able to think of a variety of AI solutions that you could develop to address a variety of use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. You can use the below template <!--link to template:https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Business%20Envisioning/Business%20Envisioning%20Template.pptx?d=w366cb1950a9a4fa3aa5e6603a57b873d&csf=1&web=1&e=KxWTVy --> to make the case for your solution, starting with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. This can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
+You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use the below template link to template:https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Business%20Envisioning/Business%20Envisioning%20Template.pptx?d=w366cb1950a9a4fa3aa5e6603a57b873d&csf=1&web=1&e=KxWTVy  to make the case for your solution, --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
 
-<!-- Graphic: 02_Business_Envisioning_Template
-Image description: A chart with which to input details about your use case. Areas for the ISV to fill in include: use case name, department, internal or external use, Problem to solve, use case description, business objective, key results, and primary stakeholder. There is a final area with a chart from 1-5 with 1=low and 5=high for strategic fit.
--->
+:::image type="content" source="isv/media/02_Business_Envisioning_Template.jpg" alt-text="A chart with which to input details about your use case" border="false" :::
 
-In the following section, we will review how our ISV Contoso used this framework to assign two different use cases strategic scores when we do so for our example scenarios. For now, set this strategic fit score aside. We’ll return to it when we discuss use case prioritization, after evaluating the business value, user experience, and technical feasibility of your use case.
+In the following section, we review how our ISV Contoso used this framework to assign two different use cases strategic scores when we do so for our example scenarios. For now, set this strategic fit score aside. We'll return to it when we discuss use case prioritization, after evaluating the business value, user experience, and technical feasibility of your use case.
 
 ### Example Scenarios
 
-To help guide you through this business envisioning process, we’ll review two potential use cases that ISV Contoso analyzed with their customer AdventureWorks, a large retailer. We examine each use case in-depth and compare them to determine which presents greater value and viability for development.
+To help guide you through this business envisioning process, we'll review two potential use cases that ISV Contoso analyzed with their customer AdventureWorks, a large retailer. We examine each use case in-depth and compare them to determine which presents greater value and viability for development.
 
 #### Use Case 1: Contoso Store Operations Assistant
 

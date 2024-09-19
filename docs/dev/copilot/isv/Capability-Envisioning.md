@@ -118,19 +118,11 @@ Given the application's variety of interfaces and capabilities, Contoso ultimate
 
 Microsoft offers various development tools to meet ISVs' application development needs. Each of these approaches can involve a mixed array of individual Microsoft tools. We've summarized the main tools. You can also review a [detailed guide for ISVs on building GenAI experiences](isv-extensibility-story.md) that explains the possibilities of each approach.
 
-<!-- Graphic: 03_Development_Tools_Graphic 
-Image description: This graphic has five boxes above a long arrow along the bottom that goes from left to right with the word "Complexity" on it. The five boxes, from left to right, read: 
-- Microsoft Teams: customize conversational AI assistants embedded within Microsoft Teams through Teams AI Library
-- Copilot for Microsoft 365: Customize or build your own assistants that use data from integrated sources to enable dynamic conversational AI in natural language
-- Copilot Studio: Design intelligent, actionable, and connected AI assistants for employees and customers on one connected platform
-- Azure AI Studio: Build cutting-edge, market-ready AI applications with out-of-the-box and customizable APIs and models 
-- Retail Data solutions in Microsoft Fabric: Innovate with AI on an end-to-end platform that empowers the ingestion, preparation, curation, and analysis of data-->
+:::image type="content" source="isv/media/03_Development_Tools_Graphic.jpg" alt-text="This graphic has five boxes above a long arrow along the bottom that goes from left to right" border="false" :::
 
 You can see how these solutions map to the approaches in the graphic that follows. We use the store operations application, which we compared to our Shopping application on the business envisioning page as an example use case.
 
-<!-- Graphic: 04_Development_Tools_Example_Graphic 
-Image description: Along the top line, from left to right, are the Microsoft Teams and Copilot for Microsoft 365 Logos, then a column "Adopt or Extend a Microsoft Copilot" then the Copilot Studio logo, then "Build a custom Copilot" then the Azure AI Studio logo, then "Build an application on Fabric" then the Microsoft Fabric logo. The logos are in circles between each of the three labeled columns. In the left column reads: "Store Operations Teams agent" which connects to "M365 Plug-ins" and "Copilot Studio" below it. Below these two are greyed out boxes for "Retail data solutions in Fabric" and "Azure". In the cetner column reads: "Store Operations AI Assistant" which connects to "Copilot Studio" and "Azure AI Studio" below it. Below these two are greyed out boxes for "Retail data solutions in Fabric" and "Azure".
-Lastly, in the right column reads: "Custom store operations AI application" which connects farthest down to "Azure ML" with "Retail data solutions in Fabric" and "Azure" not greyed out.-->
+:::image type="content" source="isv/media/04_Development_Tools_Example_Graphic.jpg" alt-text="Along the top line, from left to right, are the Microsoft Teams and Copilot for Microsoft 365 Logos, then a column Adopt or Extend a Microsoft Copilot" border="false" :::
 
 The store operations use case involves an AI assistant that enables rapid access to store procedures, policies, and data in natural language. This use case could be developed using any of the three approaches, to different levels of complexity. An ISV could rapidly develop an assistant to fulfill this use case using the [Copilot Studio Store operations template](/microsoft-copilot-studio/template-store-ops). This effort would require minimal coding and involve interfacing at the surface of the stack, with M365 plug-ins or Copilot Studio, as shown in the left column.
 
