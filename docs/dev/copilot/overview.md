@@ -65,7 +65,7 @@ Copilot assistants discussed in this section include:
  
 Microsoft Copilot is an AI-powered chat assistant designed to aid users in web browsing and much more. It can answer both simple and complex queries, assist with research, and provide summaries of various content such as articles, books, or events. It can also offer product comparisons, find comprehensive answers, provide inspiration, generate images, and much more. Access Microsoft Copilot by visiting [https://copilot.microsoft.com](https://copilot.microsoft.com). You can also access Microsoft Copilot by visiting [https://bing.com](https://bing.com) and selecting "Chat" at the top of the page. Microsoft Edge users can access Microsoft Copilot by selecting the "Copilot" icon in the top right corner of the browser.
 
-:::image type="content" source="media/microsoft-copilot.png" alt-text="Screenshot of Microsoft Copilot enterprise." border="false" :::
+:::image type="content" source="media/microsoft-copilot.png" alt-text="Screenshot of Microsoft Copilot enterprise." :::
 
 Enterprise users can also access Microsoft Copilot with commercial data protection which includes a secure AI-powered chat, ensuring user and business data safety. The system doesn't retain chat data and restricts data access, ensuring privacy. User data isn't used for model training ensuring data integrity. Copilot with commercial data protection offers accurate, verifiable, and visual answers from web data, aligning with Microsoft's Responsible AI principles, making it a secure and efficient tool for modern enterprises.
 
@@ -94,7 +94,7 @@ Microsoft 365 Copilot combines Large Language Models (LLMs) with Microsoft Graph
 
 In addition, Copilot functionality is also available directly in Microsoft 365 apps. The integrated Copilot functionality provides users with a conversational interface to jumpstart their work and offer suggestions and insights to enhance productivity and creativity.
 
-:::image type="content" source="media/microsoft-365-copilot.png" alt-text="Using Microsoft 365 Copilot." border="false" :::
+:::image type="content" source="media/microsoft-365-copilot.png" alt-text="Using Microsoft 365 Copilot." :::
 
 Learn more:
 - [Microsoft 365 Copilot Documentation](/microsoft-365-copilot)
