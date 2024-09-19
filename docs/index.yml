@@ -58,7 +58,7 @@ productDirectory:
         - text: Copilot for Dynamics 365
           url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
 
-        - text: Copilot for Microsoft 365
+        - text: Microsoft 365 Copilot
           url: /microsoft-365-copilot
 
         - text: Copilot in Power Apps
