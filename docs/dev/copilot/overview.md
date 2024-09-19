@@ -129,11 +129,11 @@ Learn more:
 - [Overview of Copilot in Microsoft Fabric](/fabric/get-started/copilot-fabric-overview)
 - [Overview of Copilot for Power BI](/power-bi/create-reports/copilot-introduction)
 - [Copilot for Power BI Demo](https://www.youtube.com/watch?v=wr__6tM5U6I)
-- [Analyzing Snapshot Serengeti data with Microsoft Fabric](https://moaw.dev/workshop/fabric-e2e-serengeti)
+- [Microsoft Fabric Workload Development Kit](/fabric/workload-development-kit/development-kit-overview)
 
 ### Copilot in Power Apps
 
-Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps. 
+Copilot in Power Apps enables app creators to build applications more efficiently than ever. It enables the construction of an app, along with its data, by articulating the requirements through a conversational, natural language approach over several steps. This feature ensures a Copilot-driven experience from the initial screen, offering users a more conversational and less click-intensive interaction as they build apps.
 
 Learn more:
 
