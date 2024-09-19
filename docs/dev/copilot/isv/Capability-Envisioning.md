@@ -136,7 +136,7 @@ The store operations use case involves an AI assistant that enables rapid access
 
 Alternatively, an ISV could undertake a more complex development process and utilize Azure AI studio or Fabric to develop a more comprehensive store operations application, including data infrastructure and technical user assistants. This approach, as in the Shopping application scenario, would involve substantial pro-code development with developers interfacing with more of the full stack, as shown in the right column.
 
-Your specific needs and circumstances determine the best development approach. These tools and methods support you regardless of how you develop your application, but the path varies based on your choice. You can use this ![template](media/ISV-capability-envisioning-template.pptx) to walk through the GenAI considerations for your use case and determine the best path forward.
+Your specific needs and circumstances determine the best development approach. These tools and methods support you regardless of how you develop your application, but the path varies based on your choice. You can use this ![template](media/ISV-capability-envisioning-template.pdf) to walk through the GenAI considerations for your use case and determine the best path forward.
 
 :::image type="content" source="media/05_Blank_Template_Graphic.jpg" alt-text="Which generative AI approach should you pursue" border="false" :::
 
