@@ -39,7 +39,7 @@ Simulates authentication and authorization using API keys or OAuth2.
           "in": "query",
           "name": "code"
         }
-      ]
+      ],
       "allowedKeys": [
         "1234"
       ]
