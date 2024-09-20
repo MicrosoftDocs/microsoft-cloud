@@ -53,7 +53,7 @@ productDirectory:
           url: /microsoft-cloud/dev/copilot/overview
 
         - text: ISV Extensibility options for Copilot
-          url: /microsoft-cloud/dev/copilot/isv-extensibility-story
+          url: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story
 
         - text: Copilot for Dynamics 365
           url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
