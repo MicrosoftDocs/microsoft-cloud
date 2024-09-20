@@ -26,9 +26,9 @@ highlightedContent:
       url: /microsoft-cloud/dev/overview/introduction
 
     # Card
-    - title: GitHub Copilot
+    - title: AI learning bub
       itemType: how-to-guide
-      url: https://docs.github.com/copilot
+      url: /ai
 
     # Card
     - title: Azure OpenAI Service Prompt Engineering
@@ -36,9 +36,9 @@ highlightedContent:
       url: /azure/ai-services/openai/concepts/prompt-engineering
 
     # Card
-    - title: Dev Proxy
-      itemType: overview
-      url: /microsoft-cloud/dev/dev-proxy/overview
+    - title: GitHub Copilot
+      itemType: how-to-guide
+      url: https://docs.github.com/copilot
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
