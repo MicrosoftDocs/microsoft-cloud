@@ -26,9 +26,9 @@ highlightedContent:
       url: /microsoft-cloud/dev/overview/introduction
 
     # Card
-    - title: GitHub Copilot
-      itemType: how-to-guide
-      url: https://docs.github.com/copilot
+    - title: AI learning hub
+      itemType: get-started
+      url: /ai
 
     # Card
     - title: Azure OpenAI Service Prompt Engineering
@@ -36,9 +36,9 @@ highlightedContent:
       url: /azure/ai-services/openai/concepts/prompt-engineering
 
     # Card
-    - title: Dev Proxy
-      itemType: overview
-      url: /microsoft-cloud/dev/dev-proxy/overview
+    - title: GitHub Copilot
+      itemType: how-to-guide
+      url: https://docs.github.com/copilot
 
 productDirectory:
   title: Microsoft Cloud Learning Resources
@@ -52,8 +52,8 @@ productDirectory:
         - text: Adopt, extend and build Copilot experiences 
           url: /microsoft-cloud/dev/copilot/overview
 
-        - text: ISV Extensibility options for Copilot
-          url: /microsoft-cloud/dev/copilot/isv-extensibility-story
+        - text: ISV extensibility options for Copilot
+          url: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story
 
         - text: Copilot for Dynamics 365
           url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
