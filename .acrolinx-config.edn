@@ -1,2 +1,3 @@
 {:allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["docs"]}
+ :allowed-filename-matches ["docs"]
+ }

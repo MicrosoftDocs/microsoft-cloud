@@ -20,8 +20,26 @@
     href: copilot/overview.md
   - name: Copilot for Dynamics 365
     href: copilot/copilot-for-dynamics365.md
-  - name: ISV Extensibility for Microsoft Copilot
-    href: copilot/isv-extensibility-story.md
+  - name: ISVs
+    items:
+      - name: Copilot for ISVs 
+        href: /collections/7rmiyjy2006wj
+      - name: Initial Guidance for ISVs
+        href: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story
+      - name: Evaluating and prioritizing an AI use case with ISV business envisioning 
+        href: /microsoft-cloud/dev/copilot/isv/Business-Envisioning
+      - name: Selecting an approach to AI application development with capability envisioning 
+        href: /microsoft-cloud/dev/copilot/isv/Capability-Envisioning
+      - name: Creating a dynamic user experience with UX guidance for generative AI applications
+        href: /microsoft-cloud/dev/copilot/isv/UX-Guidance
+      - name: Build your own copilot based on Low-Code Patterns
+        href: /microsoft-cloud/dev/copilot/isv/Low-Code-Patterns
+      - name: Build your own copilot based on Pro-Code Patterns
+        href: /microsoft-cloud/dev/copilot/isv/Choosing-a-pro-code-pattern   
+      - name: Observability at scale for ISV solutions on the Microsoft Cloud
+        href: /microsoft-cloud/dev/copilot/isv/Observability-at-scale-for-ISV-Solutions
+      - name: Observability for AI applications 
+        href: /microsoft-cloud/dev/copilot/isv/Observability-for-AI    
 - name: Tutorials
   items:
     - name: Audio/Video Calling from a Custom App into a Teams Meeting

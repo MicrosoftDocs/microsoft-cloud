@@ -29,7 +29,7 @@ We refer to a copilot as an AI-powered virtual assistant that enhances user prod
 ## Scenarios and approaches
 
 :::image type="complex" source="media/isv-genai-approaches.png" alt-text="Diagram showing Microsoft Copilot components, AI orchestration, and the underlying Microsoft Cloud infrastructure." border="false":::
-A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft’s Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allows you to build your own end-to-end AI experiences. Each of the three options has more details that are outlined in the following text.
+A diagram listing the three copilot extensibility ISV approaches. First, extend Copilot allows you to surface your data and service into Microsoft's Copilots. Second, create copilots allows you to create copilots anywhere with minimal coding and optional Microsoft data ingestion. Third, full control allows you to build your own end-to-end AI experiences. Each of the three options has more details that are outlined in the following text.
 :::image-end:::
 
 This guide provides scenario-led guidance to assist ISVs in navigating the expansive field of GenAI on Microsoft Cloud. Our aim is to help you select the most suitable patterns and technologies for your unique requirements, arranged in three high-level approaches to crafting AI experiences.
@@ -39,7 +39,7 @@ Our **approaches** are broken into **patterns** based on **scenarios** to help y
 > [!IMPORTANT]
 > Please note, these approaches and their patterns **are not mutually exclusive**. They can be combined to create a tailored solution that best fits your unique requirements and scenarios.
 
-**Approach 1: Surface your data and services into Microsoft’s Copilots:**
+**Approach 1: Surface your data and services into Microsoft's Copilots:**
 
 This approach is designed for ISVs wishing to integrate their data and services into Microsoft's Copilots. The focus is using plugins and Graph connectors to enhance user experiences.
 
@@ -51,7 +51,7 @@ This approach is designed for ISVs wishing to integrate their data and services 
         ...access information using natural language interfaces and I have an existing service I want to make available via these Microsoft 365 apps.
     :::column-end:::
     :::column:::
-        **Pattern A**: [Create plugins to augment Copilot’s capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality)
+        **Pattern A**: [Create plugins to augment Copilot's capabilities with ISV data and functionality](#pattern-a-create-plugins-to-enhance-an-existing-copilots-functionality)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -420,7 +420,7 @@ With Azure AI Studio, ISVs gain full control over their copilot's behavior, pers
 
 A standout feature of Azure AI Studio is its diverse range of models, catering to various industries and use cases. It allows ISVs to combine different models within a single solution to meet their unique requirements.
 
-Integration with [Azure AI Search](/azure/search/search-what-is-azure-search) enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Studio, with the added advantage of AI Search’s Integrated Vectorization feature. This means any data your copilot needs can be automatically kept up-to-date in a vector database, facilitating fast and efficient retrieval during user prompt evaluation, saving you the task of implementing an indexing, chunking, embedding, and vectorizing pattern yourself.  
+Integration with [Azure AI Search](/azure/search/search-what-is-azure-search) enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Studio, with the added advantage of AI Search's Integrated Vectorization feature. This means any data your copilot needs can be automatically kept up-to-date in a vector database, facilitating fast and efficient retrieval during user prompt evaluation, saving you the task of implementing an indexing, chunking, embedding, and vectorizing pattern yourself.  
   
 [Prompt Flow](/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow), a feature of Azure AI Studio, offers a visualized graph for orchestrating executable flows with Large Language Models (LLMs), prompts, and Python tools. It facilitates debugging, sharing, and iterating on your flows with ease through team collaboration.  
   
@@ -484,7 +484,7 @@ The SDK comes with VS Code extension, sample [Chat Copilot](https://github.com/m
 
 One you decided to start working with Semantic Kernel, we suggest defining couple of capabilities before starting to code:
 
-- Start by defining a copilot’s persona and behavior.
+- Start by defining a copilot's persona and behavior.
 - Create plugins for common tasks your copilot will assist with.
 - Use planners to generate plans for copilot actions.
 - Plan to test thoroughly to ensure a refined user experience.
@@ -506,7 +506,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 **Where to start:**
 
 - [GitHub - microsoft/semantic-kernel: Integrate cutting-edge LLM technology quickly and easily into your apps](https://github.com/microsoft/semantic-kernel)
-- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/agents/)
+- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/concepts/agents/)
 - [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key takeaways:**
@@ -518,9 +518,9 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 
 ## Conclusion
 
-We’ve started with scenarios and bought you to one or more patterns of interest, which we’ve collected into one of three Approaches. While each pattern has some variance, there are some common features for each Approach:
+We've started with scenarios and bought you to one or more patterns of interest, which we've collected into one of three Approaches. While each pattern has some variance, there are some common features for each Approach:
 
-|  | Approach 1: Surface your data and services into Microsoft’s Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences  |
+|  | Approach 1: Surface your data and services into Microsoft's Copilots  |Approach 2: Create copilots anywhere with minimal coding and optional Microsoft data integration   |Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences  |
 |---------|---------|---------|---------|
 |**Development effort**     |  Low (No/low code) |   Medium (Minimal code)            | High (Pro code)        |
 |**Data sources**    |   Microsoft Graph (Microsoft/M365 or non-Microsoft via connectors)      |    Various. Power Platform connectors, Microsoft Graph, Your APIs.     |   Can span multiple data sources, service, and apps inside or outside of Microsoft tenant     |
