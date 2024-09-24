@@ -10,42 +10,9 @@ ms.date: 09/16/2024
 #CustomerIntent: As an ISV, I want build an generative AI app with low-code and need to know which Microsoft Cloud tools to use.
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
-
--->
-
-<!-- 1. H1 -----------------------------------------------------------------------------
-
--->
-
 # Choosing the best low-code pattern to create your generative AI solution
 
-<!-- 2. Introductory paragraph ----------------------------------------------------------
-
-Required: Lead with a light intro that describes, in customer-friendly language, what common scenario the 
-customer will accomplish in the Tutorial. Answer the fundamental "why would I want to do this?" question. Keep it short.
-
-Readers should have a clear idea of what they will do in this article after reading the introduction.
-
-* Introduction immediately follows the H1 text.
-* Introduction section should be between 1-3 paragraphs.
-* Don't link away from the article to other content.
-* Don't use a bulleted list of article H2 sections.
-
-Example: Azure Monitor alerts proactively notify you when important conditions are found in your monitoring data. Metric alert rules create an alert when a metric value from an Azure resource exceeds a threshold.
-
--->
-
 ## Overview
-
-* Considerations for the low-code approach
-  * Pattern selection in the ISV Journey
-  * Multiple pattern option
-* Explore each pattern
-  * Pattern A: Create Plugins
-  * Pattern B: Power Platform connectors
-  * Pattern C: Graph connectors
 
 To help Independent Software Vendors (ISVs) choose the best way to build their generative AI solution, Microsoft created guidance on the benefits of low code and pro code options.
 

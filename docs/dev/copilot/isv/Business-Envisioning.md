@@ -12,14 +12,6 @@ ms.date: 09/16/2024
 
 # Evaluate and Prioritize an AI Use Case with Business Envisioning
 
-- [AI is transforming how industries operate](#ai-is-transforming-how-industries-operate)
-- [Business Envisioning](#business-envisioning)
-  - [Identify potential use cases](#identify-potential-use-cases)
-  - [Example scenarios](#example-scenarios)
-  - [Business, experience, technology framework](#apply-the-business-experience-technology-framework)
-  - [Evaluate and prioritize use cases](#evaluate-the-viability-of-your-use-case)
-- [Next Steps](#next-steps)
-
 ## Introduction
 
 Artificial intelligence (AI) is revolutionizing industries, prompting businesses to embrace its potential like never before. It has the potential to unlock new opportunities and enable transformative use cases, reshaping the way businesses interact with and provide products and services to their customers. As AI becomes more common in daily applications, we need to ensure that AI projects match business goals, meet user needs, and can be built with the resources we have.
@@ -66,7 +58,7 @@ As you develop use cases, it can be helpful to consider the following questions:
 - **Measurement of success**: How do you define success? How is success measured? What are the measurable key results that show progress?
 - **Accountability**: Who is the executive sponsor for the solution? Who is accountable for the Objectives and Key Results (OKRs)?
 
-You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use the below template link to template:https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Business%20Envisioning/Business%20Envisioning%20Template.pptx?d=w366cb1950a9a4fa3aa5e6603a57b873d&csf=1&web=1&e=KxWTVy  to make the case for your solution, --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
+You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use this template [link]() to make the case for your solution. --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
 
 :::image type="content" source="media/02_Business_Envisioning_Template.jpg" alt-text="A chart with which to input details about your use case" border="false" :::
 

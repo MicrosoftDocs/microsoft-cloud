@@ -12,23 +12,6 @@ ms.date: 09/16/2024
 
 # Choosing the best pro-code pattern to create your generative AI solution
 
-In this article:
-
-- [Pattern selection in the pro-code ISV Journey](#pattern-selection-in-the-pro-code-isv-journey)
-  - [Considerations for a pro-code journey](#considerations-for-a-pro-code-journey)
-    - [Choosing a pattern](#choosing-a-pattern)
-    - [Multiple pattern options](#multiple-pattern-options)
-- [Approach: Build a custom copilot](#build-a-custom-copilot)
-  - [Pattern D: Microsoft Graph APIs](#microsoft-graph-apis)
-    - [Pattern E: Azure OpenAI Assistants](#azure-openai-assistants)
-    - [Pattern F: Teams AI Library](#teams-ai-library)
-    - [Pattern G: Azure AI Studio](#azure-ai-studio)
-- [Approach: Build an app on Fabric](#build-an-app-on-fabric)
-  - [Pattern H: Interop with Fabric](#interop-with-fabric)
-    - [Pattern I: Build on Fabric](#build-on-fabric)
-    - [Pattern J: Build a Fabric Workload](#build-a-fabric-workload)
-- [Conclusion](#conclusion)
-
 ## Pattern selection in the pro-code ISV Journey
 
 To help independent software vendors (ISVs) build their generative AI solutions, Microsoft created guidance to help you find a viable use case and start creating it. This page focuses on pro-code patterns developers can choose as they go through the journey of building their solution. If you're unsure whether to choose a pro-code or low-code pattern, visit the [capability envisioning page](Capability-Envisioning.md) to find the best approach for your use case.

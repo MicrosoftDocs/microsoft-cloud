@@ -1,6 +1,6 @@
 ---
-title: Creating solutions with the Microsoft Cloud Solution Toolkit
-description: Learn how to use the Microsoft Cloud Solution Toolkit and the C# Copilot SDK to build solutions using capabilities across the Microsoft Cloud.
+title: Observability for pro-code generative AI solutions
+description: Discover the top strategies for implementing observability features in your AI solution using Microsoft Cloud.
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
@@ -11,14 +11,6 @@ ms.date: 09/16/2024
 ---
 
 # Observability for pro-code generative AI solutions
-
-## Overview
-
-- [Building and operationalizing copilot applications](#building-and-operationalizing-copilot-applications)
-- [Observability challenges in generative AI](#observability-challenges-in-generative-ai)
-- [Metrics to monitor and evaluate](#metrics-to-monitor-and-evaluate)
-- [Developer tools to get started](#developer-tools-to-get-started)
-- [Next Steps](#next-steps)
 
 ## Introduction
 

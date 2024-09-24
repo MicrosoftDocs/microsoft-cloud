@@ -42,16 +42,13 @@ There are three framework variations to consider for your UX:
 * Assistive in-app focus
 * Embedded for single entity focus
 
-<!-- Graphic: 01_UX_Focus-Framework
-Image description: Shows three different display frameworks, from left to right they are: A full screen labelled as Immersive, Whole app, knowledge-base focus; a side-bar display labelled as Assistive, In-app focus; A pop-up sytle display labelled Embedded, Single-entity focus 
--->
+:::image type="content" source="media/01_UX_Focus-Framework.png" alt-text="A full screen labelled as Immersive, Whole app, knowledge-base focus" border="false" :::
+
 Let's explore each of these frameworks in more detail
 
 ### Immersive focus for a whole knowledge base
 
-<!-- Graphic: 02_UX_immersive
-Image description: Shows a larger version of the full screen, immersive framework 
--->
+:::image type="content" source="media/02_UX_immersive.png" alt-text="Shows a larger version of the full screen, immersive framework" border="false" :::
 
 A good rule to follow is the more important the task, the more real estate required.
 
@@ -59,19 +56,15 @@ An immersive environment provides a fully focused experience by utilizing the en
 
 ### Assistive focus for an in-app experience
 
-<!-- Graphic: 03_UX_assistive
-Image description: Shows a larger version of the side-bar, assistive framework 
--->
+:::image type="content" source="media/03_UX_assistive.png" alt-text="Shows a larger version of the side-bar, assistive framework" border="false" :::
 
-Give your users the ability to access AI powered assistance from within the applications that they already work in - like Microsoft Teams, Power BI, or your own apps - by integrating copilot as an assistant to extend existing functionality. 
+Give your users the ability to access AI powered assistance from within the applications that they already work in - like Microsoft Teams, Power BI, or your own apps - by integrating copilot as an assistant to extend existing functionality.
 
-By using in-app focus, users can avoid switching between tools or interfaces. This framework allows the copilot to seamlessly integrate into the user’s workflow, providing relevant suggestions, information, and support on demand without disrupting their current task. This view provides continuous access to tools, information, and assistance without obstructing the main content area. It is particularly effective for applications that require ongoing support or monitoring.  
+By using in-app focus, users can avoid switching between tools or interfaces. This framework allows the copilot to seamlessly integrate into the user's workflow, providing relevant suggestions, information, and support on demand without disrupting their current task. This view provides continuous access to tools, information, and assistance without obstructing the main content area. It is particularly effective for applications that require ongoing support or monitoring.  
 
 ### Embedded focus for a single entity
 
-<!-- Graphic: 04_UX_embedded
-Image description: Shows a larger version of the pop-up, embedded framework
--->
+:::image type="content" source="media/04_UX_embedded.png" alt-text="Shows a larger version of the pop-up, embedded framework" border="false" :::
 
 Embedding a single-entry point can simplify the integration of a copilot into your application, reducing complexity and allowing users to receive support on specific items or actions. This helps create a seamless copilot experience with context-aware assistance without occupying permanent screen space.
 
@@ -89,7 +82,7 @@ AI driven experiences can be impressive and it's not uncommon for people to have
 
 ### Principle 1: Human in control
 
-All great copilot experiences are grounded in the following basic concept: a copilot is simply a tool to support the user. The human is the pilot. 
+All great copilot experiences are grounded in the following basic concept: a copilot is simply a tool to support the user. The human is the pilot.
 
 To set this expectation, position the user in the driver's seat. This means giving them the information they need while still providing transparency around how the copilot works. Communicate its abilities and limitations, and give clarity to the data that outputs are based on. Package this information in meaningful human controls to enable users to confidently and iteratively guide the copilot towards their goals.
 
@@ -167,9 +160,7 @@ Because generative AI is new tech, it's hard for many people to know what to do 
 
 For more specific needs, adding features like promptbooks to give the user specific, short queries that interact with custom data in predictable and repeatable ways may serve to yield useful information faster.
 
-<!-- Graphic: 05_UX_Input-1
-Image description: Example of a input box with selectable suggestions. Text in image reads: "Help users form good inputs by providing: Clear suggestions, Large input boxes and character counters"
--->
+:::image type="content" source="media/05_UX_Input-1.png" alt-text="Example of a input box with selectable suggestions" border="false" :::
 
 ### 2: Encourage details
 
@@ -182,17 +173,13 @@ For example, you can separate one general prompt into multiple input fields. Rep
 * Include images
 * Describe the tone
 
-<!-- Graphic: 06_UX_Input-2
-Image description: Example of a dialouge box with space to enter a link, a request, images, and overall tone. Text in this image reads: Guide users to enter the right level of detail by splitting up one general question into multiple, more specific questions.
--->
+:::image type="content" source="media/06_UX_Input-2.png" alt-text="Example of a dialogue box with space to enter a link, a request, images, and overall tone" border="false" :::
 
 ### 3: Allow customization of inputs using tone and other options
 
 Speaking of tone, help users customize their inputs by providing predefined options at the start. Make sure the tone settings are clear to your users and let them know they can change tone settings anytime within a conversation.  
 
-<!-- Graphic: 07_UX_Input-3
-Image description: Shows tone setting options and prompts for ations copilot can take. Text in this image reads: Provide clear tone settings right at the start, making it clear that the user's choice can be changed at any time 
--->
+:::image type="content" source="media/07_UX_Input-3.png" alt-text="Shows tone setting options and prompts for ations copilot can take." border="false" :::
 
 ### 4: Enhance user interaction and engagement with multimodal design
 
@@ -206,9 +193,7 @@ In a collaborative UX approach, your users need to guide the copilot with a cont
 
 This helps your users associate output quality with input choice, affording a tight feedback loop where users can continue to build inputs until the model produces the outputs they desire.
 
-<!-- Graphic: 08_UX_Output-1
-Image description: shows iterations of the prompt outputs based on user updates from the input
--->
+:::image type="content" source="media/08_UX_Output-1.png" alt-text="Shows iterations of the prompt outputs based on user updates from the input" border="false" :::
 
 ### 2: Keep a history of outputs and prompts
 
@@ -218,9 +203,7 @@ Sometimes a new prompt may lead to a worse output. A timeline or history of outp
 
 Likewise, allowing users to make use of previous prompts is deeply valuable to the iterative process.
 
-<!-- Graphic: 09_UX_Output-2
-Image description: Shows recent copilot chat history. Text in this image reads: Provide a timeline or history of outputs so users can confidently try new inputs without fear of losing access to previous results
--->
+:::image type="content" source="media/09_UX_Output-2.png" alt-text="Shows recent copilot chat history." border="false" :::
 
 ### 3: Add appropriate friction (it's a good thing!)
 
@@ -230,9 +213,7 @@ The goal here is to slow down users and encourage them to review outputs through
 
 Here it's recommended that you encourage users to edit content to provide more context or add a personal touch to it. Add AI notices and disclaimers with each output that clearly express AI-generated content may be incorrect.
 
-<!-- Graphic: 10_UX_Output-3
-Image description: Shows a dialouge box warning to "be sure to review carefully before inserting, responses may contain inaccuracies". Text in this image reads: Slow users down by adding friction at key moments like save, share, copy, and paste. This should remind them that they own this content so need to look at it closely before using it.
--->
+:::image type="content" source="media/10_UX_Output-3.png" alt-text="Shows a dialogue box warning to be sure to review carefully before inserting, responses may contain inaccuracies" border="false" :::
 
 ### 4: Encourage fact-checking using citations and direct quotes
 
@@ -248,9 +229,7 @@ A copilot can come close to a desired output but may not exactly match it. You m
 
  A key part of collaborative UX is letting the user intervene and modify the output. It also shows that copilot is a helper or assistant with the user as the pilot.
 
-<!-- Graphic: 11_UX_Output-4
-Image description: Image shows where to click to edit an output. Text in this image reads: Copilot gets the user started, but remember that collaborative experiences allow a user to modify the output, making it theirs. 
--->
+:::image type="content" source="media/11_UX_Output-4.png" alt-text="Image shows where to click to edit an output" border="false" :::
 
 ### 6: Withhold outputs when necessary**
 

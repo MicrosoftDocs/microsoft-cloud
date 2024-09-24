@@ -12,15 +12,6 @@ ms.date: 09/16/2024
 
 # Choosing an approach to AI-enabled application development with Capability Envisioning
 
-- [Introduction](#introduction)
-- [Capability Envisioning](#capability-envisioning)
-  - [Approach considerations](#considerations-for-your-approach)
-    - [Example scenario](#example-scenario-contoso-shopping-application)
-    - [Microsoft development tools](#microsoft-development-tools)
-- [The ISV Journey](#the-approaches-across-the-isv-journey)
-
----
-
 This article enables Independent Software Vendors (ISVs) to:
 
 - Learn how to align selected AI use cases with an approach to application development
