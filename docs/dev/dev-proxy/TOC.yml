@@ -288,3 +288,5 @@
         href: technical-reference/outdated.md
       - name: preset get
         href: technical-reference/preset-get.md
+      - name: jwt create
+        href: technical-reference/jwt-create.md
