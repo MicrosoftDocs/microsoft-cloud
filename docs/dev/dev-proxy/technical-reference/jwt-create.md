@@ -18,7 +18,7 @@ devproxy jwt create [options]
 
 ## Example
 
-Generates a JWT for a user named "Megan Bowen" with the issuer "my-app" and audience "https://myserver.com". The token includes the role "admin", scopes "read" and "write", and a custom claim "custom:claim". The token is valid for 120 minutes.
+Generates a JWT for a user named `Megan Bowen` with the issuer `my-app` and audience `https://myserver.com`. The token includes the role `admin`, scopes `read` and `write`, and a custom claim `custom:claim`. The token is valid for 120 minutes.
 
 ```console
 devproxy jwt create --name "Megan Bowen" --issuer "my-app" --audience "https://myserver.com" --roles "admin" --scopes "read" --scopes "write" --claims "custom:claim" --valid-to 120
@@ -38,7 +38,7 @@ None
 | `-r, --roles` | A role claim to add to the token. Specify once for each role. | None |
 | `-s, --scopes` | A scope claim to add to the token. Specify once for each scope. | None |
 | `--claims` | Claims to add to the token. Specify once for each claim in the format `name:value`. | None |
-| `-v, --valid-for` | The duration for which the token is valid. Duration is set in minutes. | 60 |
+| `-v, --valid-for` | The duration which the token is valid for. Duration is set in minutes. | 60 |
 
 > [!NOTE]
 > Registered claims (e.g. `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the `--claims` option, the values you provide will be ignored.
