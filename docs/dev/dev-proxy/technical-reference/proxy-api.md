@@ -125,7 +125,7 @@ Response:
 202 Accepted
 ```
 
-### `POST /proxy/generatejwttoken`
+### `POST /proxy/createJwtToken`
 
 Generates a JWT token.
 
