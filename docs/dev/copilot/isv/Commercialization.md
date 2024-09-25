@@ -17,19 +17,19 @@ ms.date: 09/24/2024
 This article enables Independent Software Vendors (ISVs) and Software Development Companies (SDCs) to:
 
 - Learn about different approaches to commercial strategy for generative AI applications
-- Understand how other ISVs have successfully designed and implemented a commercial strategy for their applications
+- Understand how other ISVs successfully designed and implemented a commercial strategy for their applications
 
 ## Introduction
 
 As ISVs consider generative AI use cases and how to develop them, it's critical to think about the commercial strategy of your solution from the very beginning. Aligning your development and commercial approaches from the outset can help you establish a more cohesive, and successful overall product strategy.
 
-This article is intended to help you determine your application's commercialization strategy by providing a high-level view of the considerations that can impact your commercial model and real-world examples of commercial applications. This commercialization page can be useful as you evaluate use cases with the [business envisioning](Business-Envisioning.md) page and select a technical approach in the [capability envisioning](Capability-Envisioning.md) page. While there is no one-size-fits-all approach to commercialization, understanding the strategies that have proven successful for others can help guide you in successfully monetizing your investments.
+This article is intended to help you determine your application's commercialization strategy by providing a high-level view of the considerations that can impact your commercial model and real-world examples of commercial applications. This commercialization page can be useful as you evaluate use cases with the [business envisioning](Business-Envisioning.md) page and select a technical approach in the [capability envisioning](Capability-Envisioning.md) page. While there's no one-size-fits-all approach to commercialization, understanding the strategies that successfully worked for others can help guide you in successfully monetizing your investments.
 
 Let's walk through some initial challenges and considerations that your commercial strategy must address.
 
 ## Commercialization challenges and considerations
 
-When you align on the commercial strategy and monetization approach for your solution, you'll need to navigate several challenges:
+When you align on the commercial strategy and monetization approach for your solution, there are several challenges to navigate:
 
 - **Volatile demand and value perceptions** that can shift quickly as new products are brought to market
 - **Highly variable and dynamic costs**, including development, deployment, and hosting costs
@@ -37,24 +37,24 @@ When you align on the commercial strategy and monetization approach for your sol
 
 As with any solution an ISV builds, it's important to establish a clear business plan and understand the potential revenue opportunity. These initial steps help ensure clear value alignment and drive a successful approach to commercialization.
 
-To plan a successful commercial strategy, it can be helpful to examine your solution and context through multiple lenses. As you think about your solution's commercial strategy, there are three primary things to consider: value determination, costs, and your go-to-market approach. We'll discuss each of these in-depth later using a series of ISV example scenarios. The following considerations can help you think through the factors that go into choosing your commercialization strategy.  
+To plan a successful commercial strategy, it can be helpful to examine your solution and context through multiple lenses. As you think about your solution's commercial strategy, there are three primary things to consider: value determination, costs, and your go-to-market approach. We discuss each of these in-depth later using a series of ISV example scenarios. The following considerations can help you think through the factors that go into choosing your commercialization strategy.  
 
-:::image type="content" source="media/01_Considerations_Questions_Graphic.png" alt-text="a table with three columns, from left to right: focus area, consideration, and ask yourself" border="false" :::
+:::image type="content" source="media/01_Consideration_Questions_Graphic.png" alt-text="a table with three columns, from left to right: focus area, consideration, and ask yourself" border="false" :::
 
 Thinking through these considerations can help you address the challenges that many commercial efforts face. Let's briefly discuss how each of these focus areas can impact your commercial strategy.
 
 ### Value determination
 
-As you develop your commercialization strategy, it's critical to identify the value your application creates for you as well as your customer. Consider your objective as you identify your use case and build your application-are you building brand awareness in a new target market or exploring a supplemental revenue opportunity for a segment of your existing audience? Having a clear goal and success metric for your solution can help align your commercial strategy with your application. Through our conversations with ISVs, we find that many ISVs seek to achieve the following value from their offerings:  
+As you develop your commercialization strategy, it's critical to identify the value your application creates for you and your customer. Consider your objective as you identify your use case and build your application. Are you building brand awareness in a new target market or exploring a supplemental revenue opportunity in an existing audience? Having a clear goal and success metric for your solution can help align your commercial strategy with your application. Through our conversations with ISVs, we find that many ISVs seek to achieve the following value from their offerings:  
 
-- **Revenue** - the solution is offered at a charge to customers and intended to generate additional ISV revenue streams
+- **Revenue** - the solution is offered at a charge to customers and intended to generate ISV revenue streams
 - **Market share** - the solution is intended to build brand awareness and increase ISV market share in a specific area
 
-While solutions that focus on generating revenue provide obvious benefit for ISVs, there is still value in developing applications with the principal intention of expanding market share and brand awareness. For example, an ISV entering a new market may want to publish an initial series of solutions or features for free to generate interest and trust in their brand before a larger, revenue-focused release. However, regardless of your objective, aligning your solution with customer demands is critical for a successful commercial strategy.
+While solutions that focus on generating revenue provide obvious benefit for ISVs, there's still value in developing applications with the principal intention of expanding market share and brand awareness. For example, an ISV entering a new market may want to publish an initial series of solutions or features for free to generate interest and trust in their brand before a larger, revenue-focused release. However, regardless of your objective, aligning your solution with customer demands is critical for a successful commercial strategy.
 
 #### Consider customer demand
 
-Whether you are focusing on increasing market share or driving revenue, ISV solutions perform better with customers when they provide a clear value proposition to the customer. To effectively decide on a monetization and pricing strategy, it's essential to evaluate how much value your solution holds to your customer.
+Whether you're focusing on increasing market share or driving revenue, ISV solutions perform better with customers when they provide a clear value proposition to the customer. To effectively decide on a monetization and pricing strategy, it's essential to evaluate how much value your solution holds to your customer.
 
 Consider how your solution helps the customer-what value does it provide for them? Typically, solutions provide value to customers in at least one of three ways:
 
@@ -62,9 +62,9 @@ Consider how your solution helps the customer-what value does it provide for the
 - **Improve efficiency** - reduce the time, labor, or resources required to complete tasks or operations  
 - **Generate revenue** - generate revenue directly by allowing your customer to market and/or monetize their own products
 
-If your end customers find your solution valuable, they may be willing to pay more for the product. Solutions that enable customers to generate revenue can often be more in-demand for customers than those that support internal, non-revenue-generating functions. However, solutions that improve the efficiency and effectiveness of their customers' operations can still be successful, as we'll see in the following example scenarios.
+If your end customers find your solution valuable, they may be willing to pay more for the product. Solutions that enable customers to generate revenue can often be more in-demand for customers than solutions that support internal, non-revenue-generating functions. However, solutions that improve the efficiency and effectiveness of their customers' operations can still be successful, as we see in the following example scenarios.
 
-While this page and the wider journey are meant to provide ISVs with step-by-step guidance to ideate, develop, and publish new applications, there are other Microsoft resources available that can help you drive organizational buy-in around your use case. The [Microsoft AI Value Accelerator (MAIVA) Playbook](https://microsoft.github.io/dstoolkit-maiva/) provides foundational guidance to enterprise customers for industrializing AI.  This resource can help you align your use case with overall business goals, standardize your AI strategy, and effectively scale the value your solution provides.
+This page and the wider journey are meant to provide ISVs with step-by-step guidance to ideate, develop, and publish new applications. However, there are other Microsoft resources available that can help you drive organizational buy-in around your use case. The [Microsoft AI Value Accelerator (MAIVA) Playbook](https://microsoft.github.io/dstoolkit-maiva/) provides foundational guidance to enterprise customers for industrializing AI. This resource can help you align your use case with overall business goals, standardize your AI strategy, and effectively scale the value your solution provides.
 
 ### Costs
 
@@ -76,27 +76,27 @@ Generally, as you assess the costs involved with your application, there are mul
 - **Index and search engine**: Investing in an efficient index and search engine is essential to making your data accessible and useful, and enabling users to quickly retrieve the information they need.
 - **Model development and training**: Budgeting for the development, training, and refinement of your AI or machine learning models is critical, as these models form the foundation of your application and influence its effectiveness.
 - **Application hosting environment**: Selecting a cost-effective hosting environment, whether it's Azure Kubernetes Service (AKS), Virtual Machines (VMs), or AppService, is vital, as it directly impacts your application's performance, scalability, and security.
-- **Cache**: Implementing caching solutions, though technically optional, can significantly lower operational costs by reducing database strain and improving response times.
+- **Cache**: Implementing caching solutions, though technically optional, can lower operational costs by reducing database strain and improving response times.
 - **Potential security or monitoring service**: Prioritizing expenditures on security and monitoring services is crucial to safeguarding your application. It helps ensure compliance, and maintain optimal performance, preventing costly disruptions or breaches.
 
 It's important to remember that your application development process and internal functions can heavily impact costs. Thinking about your application holistically and considering all relevant factors can help drive a successful commercial strategy.
 
-### Go-to-market approaches
+### Go-to-market (GTM) approaches
 
-Once you've thought through the value your solution provides, along with the costs involved with its development, deployment, and operation, you're ready to determine the approach that fits your scenario. Through our work with ISVs, we've identified four primary go-to-market approaches for generative AI applications. While not mutually exclusive or comprehensive, these approaches provide a tangible representation of strategies successfully leveraged by ISVs.
+After considering the value your solution provides, along with the costs involved with its development, deployment, and operation, you're ready to determine the approach that fits your scenario. Through our work with ISVs, we've identified four primary go-to-market approaches for generative AI applications. While not mutually exclusive or comprehensive, these approaches provide a tangible representation of strategies successfully applied by ISVs.
 
 - **Free** - the solution is offered to end-users freely, either through a stand-alone download, or as an update to an existing free solution.
-- **Freemium** - the solution includes a free base product with additional, widely applicable features through a paid premium version or license.
+- **Freemium** - the solution includes a free base product with extra, widely applicable features through a paid premium version or license.
 - **Paid Feature** - the solution is a separate feature on a larger platform or solution with its own charge but is narrowly applicable to a select user base with specific needs.
-- **New Solution** - the solution offers clear value to the customer and reaches the level of sophistication that warrants it being monetized and sold as a separate, new solution. This solution can potentially serve as a platform for additional offerings delivered through the other approaches.
+- **New Solution** - the solution offers clear value to the customer and reaches the level of sophistication that warrants it being monetized and sold as a separate, new solution. This solution can potentially serve as a platform for future offerings delivered through the other approaches.
 
-When choosing your go-to-market strategy, it's important to weigh the cost and benefits of each approach against the investment required and the value of your desired outcome. For example, if you're thinking about developing a free solution, you'll need to fully consider the solution's purpose and benefits for it to pay off. To that end, our experience with ISVs suggests that aligning to one of the following approaches can help drive a successful and consistent commercial strategy. Here is a summary of these approaches:
+When choosing your go-to-market strategy, it's important to weigh the cost and benefits of each approach against the investment required and the value of your desired outcome. For example, if you're thinking about developing a free solution, you need to fully consider the solution's purpose and benefits for it to pay off. To that end, our experience with ISVs suggests that aligning to one of the following approaches can help drive a successful and consistent commercial strategy. Here is a summary of these approaches:
 
 :::image type="content" source="media/02_GTM_Approaches_Table_Graphic.png" alt-text="goal of your solution, target audience, intended value for the end-user, ISV investment" border="false" :::
 
-To explain these scenarios, we'll examine several examples of applications using these go-to-market approaches, including how the ISV chose their use case and solution, how they selected their commercial strategy, and the benefits they experienced from using this approach. To thoroughly examine each of these case studies, we'll use the set of considerations we discussed earlier:
+To explain these scenarios, we examine several examples of applications using these go-to-market approaches, including how they selected their commercial strategy, and the benefits they experienced from using this approach. To thoroughly examine each of these case studies, we use the set of considerations we discussed earlier:
 
-- **End user** - the persona(s) that use the solution
+- **End user** - the personas that use the solution
 - **Business value** - how the solution provides value to customers
 - **Technical approach**  - how the solution is built
 - **Costs** - the initial and ongoing costs of running the solution
@@ -105,11 +105,11 @@ Let's look at how real-world ISVs successfully put these go-to-market approaches
 
 ## Commercialization example scenarios
 
-ISVs can adopt a variety of commercial strategies for their solutions, depending on their product's strategic goals. Based on our experiences with ISVs, we've put together four generalized scenarios to explain each GTM strategy. For the purposes of this article, we'll refer to our example ISV as Contoso, a fictional software developer.
+ISVs can adopt various commercial strategies for their solutions, depending on their product's strategic goals. Based on our experiences with ISVs, we've put together four generalized scenarios to explain each GTM strategy. For the purposes of this article, we refer to our example ISV as Contoso, a fictional software developer.
 
 ### Free scenario: Invoice management copilot feature
 
-Contoso, seeking to expand the reach of their data management software, conducted a survey to identify a need they could solve to attract their target audience. They learned that many of their executive customers were frustrated with the amount of time lost to convoluted administrative processes like invoice approvals. From an initial email notification, it could take up to a few days for decision makers to locate the information needed to confirm across multiple departments if contract terms had been fulfilled before an invoice could be approved for payment.
+Contoso, seeking to expand the reach of their data management software, conducted a survey to identify a need they could solve to attract their target audience. They learned that many of their executive customers were frustrated with the amount of time lost to convoluted administrative processes like invoice approvals. From an initial email notification, it could take up to a few days for decision makers to just approve an invoice for payment. This involved locating the required information to confirm across multiple departments if contract terms were fulfilled.
 
 To drive demand for their core application among potential customers, Contoso built a copilot feature that helps improve efficiency within the customers' administrative operations. They designed this copilot feature to help reduce time that decision makers spend approving invoices for payments and focuses on the interface where users collaborate the most: Microsoft Teams. Contoso created this copilot to complement its larger data management program and showcase the full capabilities of the generative AI solution. Contoso offered this copilot feature from their overall solution to users for free to enhance the value for their target audience and drive demand towards the larger platform. They plan to sell the larger solution as a fully SaaS (Software-as-a-Service) based offering, once the user base increases.
 
@@ -118,7 +118,7 @@ Let's examine why Contoso chose this commercial approach:
 - **End users**: Decision makers seeking operational improvements through more efficient administrative operations. Contoso is specifically targeting users interested in joining their larger data management platform for its productivity benefits.
 - **Business value**: The copilot feature improves customer efficiency by quickly finding contract data and contacts relevant to each invoice. It also saves time by simplifying collaboration across departments to verify milestone completion status within the Teams UX.
 - **Technical approach**: Contoso extended some capabilities from the core application using Pro-Code and Teams Message Extensions, Teams Copilot for UX, and Azure SQL database.  
-- **Costs**: Broadly low building and testing costs including development resources and cloud services costs but leveraging investment in core solution.
+- **Costs**: Broadly low building and testing costs including development resources and cloud services costs but applying investment in core solution.
 
 With this copilot feature offered at no cost, executive decision-makers can access actionable information easily in Teams Copilot, streamlining the approval process and helping improve efficiency without a significant monetary investment.
 
@@ -147,20 +147,20 @@ Given their application's wide applicability and breadth of end users, Contoso k
 During the first few months of their application's deployment, Contoso:
 
 - Enhanced brand recognition and market presence by providing a free option available to a wide range of customers.
-- Increased revenue by driving adoption of the paid subscription amongst professional and enterprise customers.
+- Increased revenue by driving adoption of the paid subscription among professional and enterprise customers.
 - Positioned their application as a clear choice for users and industry standard by being accessible to both professionals and students.
 
 Choosing a freemium approach enabled Contoso to expand its customer base quickly and draw in new users. Despite high costs to develop and maintain their solution, Contoso quickly drew in many paying subscribers, which increased overall revenue.
 
 ### Paid feature scenario: AI industry marketing assistant
 
-Contoso offers a comprehensive marketing resource management platform that makes it easy for companies to organize their digital assets and create impactful, omnichannel experiences. While the platform already offers a variety of core marketing automation and digital asset management capabilities, Contoso saw an opportunity to help their customers optimize marketing efforts at scale by embedding a new generative AI-powered, copilot-like assistant directly in their platform.
+Contoso offers a comprehensive marketing resource management platform that makes it easy for companies to organize their digital assets and create impactful, omnichannel experiences. While the platform already offers a selection of core marketing automation and digital asset management capabilities, Contoso noticed an opportunity. They could help their customers optimize marketing efforts at scale by embedding a new generative AI-powered, copilot-like assistant directly in their platform.
 
-In addition to a generic assistant, Contoso developed a suite of industry-tailored assistants for customers with specific needs. These industry marketing assistants were built with specialized knowledge and capabilities to support industry-specific functions and are available to customers at an additional charge over the generic assistant.
+In addition to a generic assistant, Contoso developed a suite of industry-tailored assistants for customers with specific needs. These industry marketing assistants have specialized knowledge and capabilities to support industry-specific functions. They are available to customers at an additional charge over the generic assistant.
 
 Let's examine why Contoso chose this commercial approach:
 
-- **End users**: Contoso wanted to target power users who are interested in leveraging new technologies to optimize their workflows. They also wanted to broaden their market share by offering next-gen, industry-leading features on their core platform.
+- **End users**: Contoso wanted to target power users who are interested in applying new technologies to optimize their workflows. They also wanted to broaden their market share by offering next-gen, industry-leading features on their core platform.
 - **Business value**: The copilot helps increase customer effectiveness and efficiency by making it easy for users to quickly create high-quality content to meet their industry's needs.  
 - **Technical approach**: Contoso developed the copilot with Azure OpenAI Assistants and Azure AI Studio, investing in top-line models like GPT-4.0 to help drive complex and accurate assistant engagement.
 - **Costs**: The copilot's costs included development costs, ongoing cloud service charges to run the application in production, and Azure OpenAI subscription costs, warranted by the feature's demand in the market.
@@ -169,32 +169,32 @@ Offering these industry-tailored copilots as a paid feature enabled Contoso to a
 
 In doing so, Contoso:
 
-- Increased their market share by enhancing the value of their existing platform and driving adoption amongst new customers.
+- Increased their market share by enhancing the value of their existing platform and driving adoption among new customers.
 - Unlocked new revenue streams from power users that want to experiment with new technologies without alienating their core customer base.
 - Implemented a quick-win, generative AI feature without incurring significant development costs.
 
-Adding this paid feature to their existing platform enabled Contoso to experiment with a new generative AI capability without incurring high costs or alienating core components of their customer base. This approach helped them establish a solid generative AI foundation on which to expand with additional services and features in the future.
+Adding this paid feature to their existing platform enabled Contoso to experiment with a new generative AI capability without incurring high costs or alienating core components of their customer base. This approach helped them establish a solid generative AI foundation on which to expand with future services and features in the future.
 
 ### New solution scenario: Contact center agents
 
-Contoso identified an opportunity for increased AI automation in contact centers. Many customer service teams were being overwhelmed by the volume of calls, and Contoso realized that many contact requests were for simple tasks or information that could be provided by an AI assistant. These AI agents could alleviate the loads on human representatives, enabling them to deal with the most complex issues, dramatically increase the efficiency of closed tickets, and reduce overall costs for the contact center.
+Contoso identified an opportunity for increased AI automation in contact centers. Many customer service teams were overwhelmed by the volume of calls, but Contoso realized that many contact requests were for simple tasks or information that an AI assistant could provide. These AI agents could alleviate the loads on human representatives, enabling them to deal with the most complex issues, dramatically increase the efficiency of closed tickets, and reduce overall costs for the contact center.
 
 To meet this demand, Contoso developed a generative AI contact center agent that can answer questions, initiate tasks, and close tickets for customers over the phone or through a text-based interface. Given the market demand and disruption potential of this technology, Contoso built this application as a new, SaaS-based solution, charging a base subscription fee along with a small additional usage charge. Let's take a look at the factors that went into
 
 Contoso developing their application with this approach:
 
 - **End user**: This application would be targeted towards customers with queries or issues that would contact companies' call centers. The application's UI, in the case of chat interfaces, prioritizes simplicity to enable ease of use by the customer.
-- **Business value**: This solution improves both the efficiency and effectiveness of contact centers by reducing the cost-per-ticket-closed and empowering contact center workers with additional capabilities and support.  
-- **Technical approach**: Contoso built the solution using pro-code development and leveraging Microsoft Fabric, Azure AI Studio, and Azure OpenAI Assistants. The value this application provides warranted the substantial development lift and continuous support.
+- **Business value**: This solution improves both the efficiency and effectiveness of contact centers by reducing the cost-per-ticket-closed and empowering contact center workers with further capabilities and support.  
+- **Technical approach**: Contoso built the solution using pro-code development with Microsoft Fabric, Azure AI Studio, and Azure OpenAI Assistants. The value this application provides warranted the substantial development lift and continuous support.
 - **Costs**: Contoso's costs included development resources, cloud-service costs during development, testing, and production, and continuous support, justified by the core generative AI feature.
 
-Offering their solution as a SaaS model enabled Contoso to manage their application's model usage to flexibly meet demand while simultaneously layering on top of existing legacy contact center systems. These AI agents can intake data from a variety of sources and pass it through multiple levels of automated decision-making to rapidly identify and address operational tasks. As users become more accustomed to engaging with AI-powered interfaces, the underlying core system can become commoditized-valued more as data servers than core systems. This change offers a major potential for disruption in the industry, justifying Contoso's decision to develop their application as a new solution.
+Offering their solution as a SaaS model enabled Contoso to manage their application's model usage to flexibly meet demand while simultaneously layering on top of existing legacy contact center systems. These AI agents can intake data from various sources and pass it through multiple levels of automated decision-making to rapidly identify and address operational tasks. As users become more accustomed to engaging with AI-powered interfaces, the underlying core system can become commoditized-valued more as data servers than core systems. This change offers a major potential for disruption in the industry, justifying Contoso's decision to develop their application as a new solution.
 
 With this solution, Contoso:
 
-- Deployed an additional revenue opportunity through a core solution platform that improves customer efficiency.
+- Deployed another revenue opportunity through a core solution platform that improves customer efficiency.
 - Developed a new, disruptive interface for contact centers that transforms how customers engage with customer service.
-- Positioned growth opportunities through additional agents, features, and SaaS-based capabilities that can be offered through the platform.
+- Positioned growth opportunities through future agents, features, and SaaS-based capabilities that can be offered through the platform.
 
 Carefully considering the elements of their solution helped Contoso craft a commercial approach that aligned with their goals and application platform as a whole. The SaaS model that Contoso used for this solution is widely applicable and offers a transformative component to the software that ISVs develop.
 
@@ -209,7 +209,7 @@ Resources and guidance from Microsoft can help enable your SaaS journey. For mor
 
 ### Publishing and sales enablement
 
-Once you've established your commercial strategy and go-to-market approach, your next step is to choose where you want to publish your solution for customers. Microsoft offers two distinct storefronts that allow partners to list offers, enable trials, and transact directly with customers and the Microsoft ecosystem: [Azure Marketplace](https://azuremarketplace.microsoft.com/sell) and [AppSource](https://appsource.microsoft.com/). Azure Marketplace offers a more technical and infrastructurally based storefront through which to engage with customers. You can find comprehensive [guidance around publishing on Azure Marketplace here](/partner-center/marketplace-offers/). The AppSource storefront offers a place for applications oriented towards business decision makers, including Dynamics 365 and Power Platform applications. You can find [guidance for publishing on AppSource here](/marketplace/appsource-overview). These storefronts are differentiated by target audience and product to help customers find quickly find what they need. 
+Once you establish your commercial strategy and go-to-market approach, your next step is to choose where you want to publish your solution for customers. Microsoft offers two distinct storefronts that allow partners to list offers, enable trials, and transact directly with customers and the Microsoft ecosystem: [Azure Marketplace](https://azuremarketplace.microsoft.com/sell) and [AppSource](https://appsource.microsoft.com/). Azure Marketplace offers a more technical and infrastructurally based storefront through which to engage with customers. You can find comprehensive [guidance around publishing on Azure Marketplace here](/partner-center/marketplace-offers/). The AppSource storefront offers a place for applications oriented towards business decision makers, including Dynamics 365 and Power Platform applications. You can find [guidance for publishing on AppSource here](/marketplace/appsource-overview). These storefronts are differentiated by target audience and product to help customers find quickly find what they need. 
 
 |   | Azure Marketplace | AppSource |
 |---| --- | --- |
@@ -223,10 +223,10 @@ Once you've developed your application and aligned on your approach to commercia
 
 ## Conclusion
 
-As you consider the commercial strategy for your solution, it's important to remember that there is no one-size-fits-all approach. Holistically considering each of the different factors at play-from potential value and costs, to go-to-market approach-is critical as you determine the best way to monetize your product. In addition to your overall commercial strategy, it's also important to consider how your product will be priced. You can find more information on [pricing models for a multitenant solution here](/azure/architecture/guide/multitenant/considerations/pricing-models).
+As you consider the commercial strategy for your solution, it's important to remember that there is no one-size-fits-all approach. Holistically considering each of the different factors at play-from potential value and costs, to go-to-market approach-is critical as you determine the best way to monetize your product. In addition to your overall commercial strategy, it's also important to consider how your product is priced. You can find more information on [pricing models for a multitenant solution here](/azure/architecture/guide/multitenant/considerations/pricing-models).
 
 Another resource that can support you as you consider and develop your application's commercial strategy is the [ISV App Advisor](https://www.microsoft.com/isv/app-advisor?msockid=316ebbfcd786677209e7af61d6ec6618). This self-guided experience can surface the latest resources and recommendations based on your current development stage.
 
 Understanding and planning your commercial strategy is a key step towards success as you [evaluate and prioritize a use case](Business-Envisioning.md) and determine the best approach to [developing your solution](Capability-Envisioning.md). Across the ISV Journey, aligning your application's development and positioning with your commercial strategy helps drive a successful deployment and product offering.
 
-Once you've established your use case, how you'll build it, and your commercial strategy, the next step is determining the [specific low-code](Low-Code-Patterns.md) or [pro-code](Choosing-a-pro-code-pattern.md) pattern you'll follow as you develop your solution.
+Once you establish your use case, how you plan to build it, and your commercial strategy, the next step is determining the specific [low-code](Low-Code-Patterns.md) or [pro-code](Choosing-a-pro-code-pattern.md) pattern to follow as you develop your solution.
