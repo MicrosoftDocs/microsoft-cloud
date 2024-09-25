@@ -191,17 +191,8 @@ Options for generating a JWT token.
 | `issuer` | `string[]` | The issuer of the token |
 | `roles` | `string[]` | A role claim to add to the token |
 | `scopes` | `string[]` | A scope claim to add to the token |
-| `claims` | `Claim` | Claims to add to the token |
-| `validTo` | `number` | The duration (in minutes) for which the token is valid |
-
-## `Claim`
-
-A claim to add to a JWT token.
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `name` | `string` | The name of the claim |
-| `value` | `string` | The value of the claim |
+| `claims` | `KeyValuePair` | Claims to add to the token |
+| `validFor` | `number` | The duration (in minutes) for which the token is valid |
 
 ## `JwtInfo`
 
