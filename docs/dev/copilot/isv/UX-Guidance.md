@@ -1,6 +1,6 @@
 ---
 title: "Creating a dynamic UX: guidance for generative AI applications"
-description: UX tips and recomendations for ISVs building generative AI applications
+description: UX tips and recommendations for ISVs building generative AI applications
 author: miglaros
 ms.author: miglaros
 ms.service: cloud-for-industries
@@ -42,13 +42,13 @@ There are three framework variations to consider for your UX:
 * Assistive in-app focus
 * Embedded for single entity focus
 
-:::image type="content" source="media/01_UX_Focus-Framework.png" alt-text="A full screen labelled as Immersive, Whole app, knowledge-base focus" border="false" :::
+:::image type="content" source="media/01_UX_Focus-Framework.png" alt-text="A screen shot that displays a full screen labelled as Immersive, Whole app, knowledge-base focus" border="false" :::
 
 Let's explore each of these frameworks in more detail
 
 ### Immersive focus for a whole knowledge base
 
-:::image type="content" source="media/02_UX_immersive.png" alt-text="Shows a larger version of the full screen, immersive framework" border="false" :::
+:::image type="content" source="media/02_UX_immersive.png" alt-text="A screen shots that shows a larger version of the full screen, immersive framework" border="false" :::
 
 A good rule to follow is the more important the task, the more real estate required.
 
@@ -56,7 +56,7 @@ An immersive environment provides a fully focused experience by utilizing the en
 
 ### Assistive focus for an in-app experience
 
-:::image type="content" source="media/03_UX_assistive.png" alt-text="Shows a larger version of the side-bar, assistive framework" border="false" :::
+:::image type="content" source="media/03_UX_assistive.png" alt-text="A screen shot that shows a larger version of the side-bar, assistive framework" border="false" :::
 
 Give your users the ability to access AI powered assistance from within the applications that they already work in - like Microsoft Teams, Power BI, or your own apps - by integrating copilot as an assistant to extend existing functionality.
 
@@ -64,7 +64,7 @@ By using in-app focus, users can avoid switching between tools or interfaces. Th
 
 ### Embedded focus for a single entity
 
-:::image type="content" source="media/04_UX_embedded.png" alt-text="Shows a larger version of the pop-up, embedded framework" border="false" :::
+:::image type="content" source="media/04_UX_embedded.png" alt-text="A screen shot that shows a larger version of the pop-up, embedded framework" border="false" :::
 
 Embedding a single-entry point can simplify the integration of a copilot into your application, reducing complexity and allowing users to receive support on specific items or actions. This helps create a seamless copilot experience with context-aware assistance without occupying permanent screen space.
 
@@ -160,7 +160,7 @@ Because generative AI is new tech, it's hard for many people to know what to do 
 
 For more specific needs, adding features like promptbooks to give the user specific, short queries that interact with custom data in predictable and repeatable ways may serve to yield useful information faster.
 
-:::image type="content" source="media/05_UX_Input-1.png" alt-text="Example of a input box with selectable suggestions" border="false" :::
+:::image type="content" source="media/05_UX_Input-1.png" alt-text="Screen shot that shows an example of a input box with selectable suggestions" border="false" :::
 
 ### 2: Encourage details
 
@@ -173,13 +173,13 @@ For example, you can separate one general prompt into multiple input fields. Rep
 * Include images
 * Describe the tone
 
-:::image type="content" source="media/06_UX_Input-2.png" alt-text="Example of a dialogue box with space to enter a link, a request, images, and overall tone" border="false" :::
+:::image type="content" source="media/06_UX_Input-2.png" alt-text="Screen shot that shows an example of a dialogue box with space to enter a link, a request, images, and overall tone" border="false" :::
 
 ### 3: Allow customization of inputs using tone and other options
 
 Speaking of tone, help users customize their inputs by providing predefined options at the start. Make sure the tone settings are clear to your users and let them know they can change tone settings anytime within a conversation.  
 
-:::image type="content" source="media/07_UX_Input-3.png" alt-text="Shows tone setting options and prompts for ations copilot can take." border="false" :::
+:::image type="content" source="media/07_UX_Input-3.png" alt-text="Screen shot that shows the tone setting options and prompts for actions copilot can take." border="false" :::
 
 ### 4: Enhance user interaction and engagement with multimodal design
 
@@ -193,17 +193,17 @@ In a collaborative UX approach, your users need to guide the copilot with a cont
 
 This helps your users associate output quality with input choice, affording a tight feedback loop where users can continue to build inputs until the model produces the outputs they desire.
 
-:::image type="content" source="media/08_UX_Output-1.png" alt-text="Shows iterations of the prompt outputs based on user updates from the input" border="false" :::
+:::image type="content" source="media/08_UX_Output-1.png" alt-text="Screen shot that shows the iterations of the prompt outputs based on user updates from the input" border="false" :::
 
 ### 2: Keep a history of outputs and prompts
 
 Encouraging users to try various inputs to get to meaningful outputs is crucial; however, it is not always  a forward interaction with outputs getting better each time.  
 
-Sometimes a new prompt may lead to a worse output. A timeline or history of outputs allow users to try new inputs confidently without fear of losing access to previous outputs that may be better, or even use parts of multiple outputs.  
+Sometimes a new prompt may lead to a worse output. A timeline or history of outputs allows users to try new inputs confidently without fear of losing access to previous outputs that may be better, or even use parts of multiple outputs.  
 
 Likewise, allowing users to make use of previous prompts is deeply valuable to the iterative process.
 
-:::image type="content" source="media/09_UX_Output-2.png" alt-text="Shows recent copilot chat history." border="false" :::
+:::image type="content" source="media/09_UX_Output-2.png" alt-text="Screen shot that shows the recent copilot chat history." border="false" :::
 
 ### 3: Add appropriate friction (it's a good thing!)
 
@@ -213,7 +213,7 @@ The goal here is to slow down users and encourage them to review outputs through
 
 Here it's recommended that you encourage users to edit content to provide more context or add a personal touch to it. Add AI notices and disclaimers with each output that clearly express AI-generated content may be incorrect.
 
-:::image type="content" source="media/10_UX_Output-3.png" alt-text="Shows a dialogue box warning to be sure to review carefully before inserting, responses may contain inaccuracies" border="false" :::
+:::image type="content" source="media/10_UX_Output-3.png" alt-text="Screen shot that shows a dialogue box warning to be sure to review carefully before inserting, responses may contain inaccuracies" border="false" :::
 
 ### 4: Encourage fact-checking using citations and direct quotes
 
@@ -229,9 +229,9 @@ A copilot can come close to a desired output but may not exactly match it. You m
 
  A key part of collaborative UX is letting the user intervene and modify the output. It also shows that copilot is a helper or assistant with the user as the pilot.
 
-:::image type="content" source="media/11_UX_Output-4.png" alt-text="Image shows where to click to edit an output" border="false" :::
+:::image type="content" source="media/11_UX_Output-4.png" alt-text="Screen shot that shows where to click within a copilot dialogue box to edit an output" border="false" :::
 
-### 6: Withhold outputs when necessary**
+### 6: Withhold outputs when necessary
 
 In some cases, it's better for a copilot to give no answer instead of outputting something potentially inappropriate. You may want the model to disengage and prompt the user to start a new chat with "Sorry, I can't chat about this topic. To save the chat and start a fresh one, select New Chat."
 

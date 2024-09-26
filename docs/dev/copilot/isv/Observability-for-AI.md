@@ -70,7 +70,7 @@ Because generative AI prompt responses are given in natural language form, they 
 
 ISVs need to consider the best route for measuring these qualities, whether they choose manual evaluation or AI-assisted metrics with a human in the loop for final validation.
 
-No matter how you evaluate it, you also likely need preexisting datasets to compare your prompt responses to. These preperations can mean more work during development of your application as you identify an ideal response to common prompt topics.
+No matter how you evaluate it, you also likely need preexisting datasets to compare your prompt responses to. These preparations can mean more work during development of your application as you identify an ideal response to common prompt topics.
 
 ## Responsible AI
 
@@ -86,7 +86,7 @@ Tokens are the main unit of measurement for generative AI applications, and all 
 
 Monitoring your application's user satisfaction and business impact are as critical as performance or quality metrics. Because AI interacts with customers in different ways, there are new considerations for monitoring customer engagement and retention.
 
-Measuring the usefulness of your AI's responses can be accomplished in many different ways. For instance, prompt and response funnels track how long it takes for the interaction to result in a usable or helpful response. It's also important to consider tracking the time your user engages with the AI, the length of the conversation, and the amount of times your user accepts the provided response. In scenarios where your user can edit the response, it's essential to measure edit distance, or the extent to which they edit the response.
+Measuring the usefulness of your AI's responses can be accomplished in many different ways. For instance, prompt and response funnels track how long it takes for the interaction to result in a usable or helpful response. It's also important to consider tracking the time your user engages with the AI, the length of the conversation, and the number of times your user accepts the provided response. In scenarios where your user can edit the response, it's essential to measure edit distance, or the extent to which they edit the response.
 
 ## Performance metrics
 

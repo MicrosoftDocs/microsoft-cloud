@@ -1,5 +1,5 @@
 ---
-title: Developing a commercial strategy for generative AI applications
+title: Developing a commercial strategy for generative AI applications built with the Microsoft Cloud
 description: This article helps you decide your application's commercialization strategy by giving an overview of important factors and real-world examples.   
 author: miglaros
 ms.author: miglaros
@@ -21,7 +21,7 @@ This article enables Independent Software Vendors (ISVs) and Software Developmen
 
 ## Introduction
 
-As ISVs consider generative AI use cases and how to develop them, it's critical to think about the commercial strategy of your solution from the very beginning. Aligning your development and commercial approaches from the outset can help you establish a more cohesive, and successful overall product strategy.
+As software development companies consider generative AI use cases and how to develop them, it's critical to think about the commercial strategy of your solution from the very beginning. Aligning your development and commercial approaches from the outset can help you establish a more cohesive, and successful overall product strategy.
 
 This article is intended to help you determine your application's commercialization strategy by providing a high-level view of the considerations that can impact your commercial model and real-world examples of commercial applications. This commercialization page can be useful as you evaluate use cases with the [business envisioning](Business-Envisioning.md) page and select a technical approach in the [capability envisioning](Capability-Envisioning.md) page. While there's no one-size-fits-all approach to commercialization, understanding the strategies that successfully worked for others can help guide you in successfully monetizing your investments.
 
@@ -35,26 +35,26 @@ When you align on the commercial strategy and monetization approach for your sol
 - **Highly variable and dynamic costs**, including development, deployment, and hosting costs
 - **Market differentiation** that aligns firm profitability with customer affordability and keeps a path open for future scalability
 
-As with any solution an ISV builds, it's important to establish a clear business plan and understand the potential revenue opportunity. These initial steps help ensure clear value alignment and drive a successful approach to commercialization.
+As with any solution a software development company builds, it's important to establish a clear business plan and understand the potential revenue opportunity. These initial steps help ensure clear value alignment and drive a successful approach to commercialization.
 
 To plan a successful commercial strategy, it can be helpful to examine your solution and context through multiple lenses. As you think about your solution's commercial strategy, there are three primary things to consider: value determination, costs, and your go-to-market approach. We discuss each of these in-depth later using a series of ISV example scenarios. The following considerations can help you think through the factors that go into choosing your commercialization strategy.  
 
-:::image type="content" source="media/01_Consideration_Questions_Graphic.png" alt-text="a table with three columns, from left to right: focus area, consideration, and ask yourself" border="false" :::
+:::image type="content" source="media/01-consideration-questions-graphic.png" alt-text="Diagram that shows a table with three columns, from left to right: focus area, consideration, and ask yourself" border="false" :::
 
 Thinking through these considerations can help you address the challenges that many commercial efforts face. Let's briefly discuss how each of these focus areas can impact your commercial strategy.
 
 ### Value determination
 
-As you develop your commercialization strategy, it's critical to identify the value your application creates for you and your customer. Consider your objective as you identify your use case and build your application. Are you building brand awareness in a new target market or exploring a supplemental revenue opportunity in an existing audience? Having a clear goal and success metric for your solution can help align your commercial strategy with your application. Through our conversations with ISVs, we find that many ISVs seek to achieve the following value from their offerings:  
+As you develop your commercialization strategy, it's critical to identify the value your application creates for you and your customer. Consider your objective as you identify your use case and build your application. Are you building brand awareness in a new target market or exploring a supplemental revenue opportunity in an existing audience? Having a clear goal and success metric for your solution can help align your commercial strategy with your application. Through our conversations with ISVs/SDCs, we find that many ISVs/SDCs seek to achieve the following value from their offerings:  
 
-- **Revenue** - the solution is offered at a charge to customers and intended to generate ISV revenue streams
-- **Market share** - the solution is intended to build brand awareness and increase ISV market share in a specific area
+- **Revenue** - the solution is offered at a charge to customers and intended to generate revenue streams for the software development company
+- **Market share** - the solution is intended to build brand awareness and increase the publisher's market share in a specific area
 
-While solutions that focus on generating revenue provide obvious benefit for ISVs, there's still value in developing applications with the principal intention of expanding market share and brand awareness. For example, an ISV entering a new market may want to publish an initial series of solutions or features for free to generate interest and trust in their brand before a larger, revenue-focused release. However, regardless of your objective, aligning your solution with customer demands is critical for a successful commercial strategy.
+While solutions that focus on generating revenue provide obvious benefit for the publisher, there's still value in developing applications with the principal intention of expanding market share and brand awareness. For example, a software development company entering a new market may want to publish an initial series of solutions or features for free to generate interest and trust in their brand before a larger, revenue-focused release. However, regardless of your objective, aligning your solution with customer demands is critical for a successful commercial strategy.
 
 #### Consider customer demand
 
-Whether you're focusing on increasing market share or driving revenue, ISV solutions perform better with customers when they provide a clear value proposition to the customer. To effectively decide on a monetization and pricing strategy, it's essential to evaluate how much value your solution holds to your customer.
+Whether you're focusing on increasing market share or driving revenue, AI solutions perform better with customers when they provide a clear value proposition to the customer. To effectively decide on a monetization and pricing strategy, it's essential to evaluate how much value your solution holds to your customer.
 
 Consider how your solution helps the customer-what value does it provide for them? Typically, solutions provide value to customers in at least one of three ways:
 
@@ -92,7 +92,7 @@ After considering the value your solution provides, along with the costs involve
 
 When choosing your go-to-market strategy, it's important to weigh the cost and benefits of each approach against the investment required and the value of your desired outcome. For example, if you're thinking about developing a free solution, you need to fully consider the solution's purpose and benefits for it to pay off. To that end, our experience with ISVs suggests that aligning to one of the following approaches can help drive a successful and consistent commercial strategy. Here is a summary of these approaches:
 
-:::image type="content" source="media/02_GTM_Approaches_Table_Graphic.png" alt-text="goal of your solution, target audience, intended value for the end-user, ISV investment" border="false" :::
+:::image type="content" source="media/02-gtm-approaches-table-graphic.png" alt-text="Diagram that shows the goal of your solution, target audience, intended value for the end-user, ISV investment" border="false" :::
 
 To explain these scenarios, we examine several examples of applications using these go-to-market approaches, including how they selected their commercial strategy, and the benefits they experienced from using this approach. To thoroughly examine each of these case studies, we use the set of considerations we discussed earlier:
 
@@ -209,15 +209,15 @@ Resources and guidance from Microsoft can help enable your SaaS journey. For mor
 
 ### Publishing and sales enablement
 
-Once you establish your commercial strategy and go-to-market approach, your next step is to choose where you want to publish your solution for customers. Microsoft offers two distinct storefronts that allow partners to list offers, enable trials, and transact directly with customers and the Microsoft ecosystem: [Azure Marketplace](https://azuremarketplace.microsoft.com/sell) and [AppSource](https://appsource.microsoft.com/). Azure Marketplace offers a more technical and infrastructurally based storefront through which to engage with customers. You can find comprehensive [guidance around publishing on Azure Marketplace here](/partner-center/marketplace-offers/). The AppSource storefront offers a place for applications oriented towards business decision makers, including Dynamics 365 and Power Platform applications. You can find [guidance for publishing on AppSource here](/marketplace/appsource-overview). These storefronts are differentiated by target audience and product to help customers find quickly find what they need. 
+Once you establish your commercial strategy and go-to-market approach, your next step is to choose where you want to publish your solution for customers. Microsoft offers two distinct storefronts that allow partners to list offers, enable trials, and transact directly with customers and the Microsoft ecosystem: [Azure Marketplace](https://azuremarketplace.microsoft.com/sell) and [AppSource](https://appsource.microsoft.com/). Azure Marketplace offers a more technical and infrastructurally based storefront through which to engage with customers. You can find comprehensive [guidance around publishing on Azure Marketplace here](/partner-center/marketplace-offers/). The AppSource storefront offers a place for applications oriented towards business decision makers, including Dynamics 365 and Power Platform applications. You can find [guidance for publishing on AppSource here](/marketplace/appsource-overview). These storefronts are differentiated by target audience and product to help customers find quickly what they need.
 
 |   | Azure Marketplace | AppSource |
 |---| --- | --- |
 | **Target audience** | IT professionals and developers | Business decision-makers |
-| **Built to extend** | Azure | Azure, Dynamics 365, Office 365, PowerBI, Power Apps |
+| **Built to extend** | Azure | Azure, Dynamics 365, Office 365, Power BI, Power Apps |
 | **Types of solutions** | Infrastructure solutions and IT-focused professional services | Finished line of business apps and professional services | 
 | **Publishing options** | Contact me, consulting services offer, trial, virtual machine, solution templates, and managed apps | Contact me, consulting services offer, and trial |
-| **In-app experience** | Azure Portal and CLI | Office 365, Dynamics 365, PowerBI, Office client apps|
+| **In-app experience** | Azure portal and CLI | Office 365, Dynamics 365, Power BI, Office client apps|
 
 Once you've developed your application and aligned on your approach to commercialization, consider how to align your publication strategy with your solution to drive maximum adoption and impact.
 
