@@ -188,7 +188,7 @@ While many ISVs are familiar with Fabric as a data or analytics solution, it can
 
 A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLake using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or combine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provides ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to Pattern J: Build a Fabric workload.
 
-:::image type="content" source="media/2_Procode_patterns.jpg" alt-text="A link tree for the build an app on Fabric approach" border="false" :::
+:::image type="content" source="media/2_Procode_patterns_graphic.jpg" alt-text="A link tree for the build an app on Fabric approach" border="false" :::
 
 ### Interop with Fabric
 
