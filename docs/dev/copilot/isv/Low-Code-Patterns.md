@@ -10,46 +10,13 @@ ms.date: 09/16/2024
 #CustomerIntent: As an ISV, I want build an generative AI app with low-code and need to know which Microsoft Cloud tools to use.
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the main branch.
-
--->
-
-<!-- 1. H1 -----------------------------------------------------------------------------
-
--->
-
 # Choosing the best low-code pattern to create your generative AI solution
-
-<!-- 2. Introductory paragraph ----------------------------------------------------------
-
-Required: Lead with a light intro that describes, in customer-friendly language, what common scenario the 
-customer will accomplish in the Tutorial. Answer the fundamental "why would I want to do this?" question. Keep it short.
-
-Readers should have a clear idea of what they will do in this article after reading the introduction.
-
-* Introduction immediately follows the H1 text.
-* Introduction section should be between 1-3 paragraphs.
-* Don't link away from the article to other content.
-* Don't use a bulleted list of article H2 sections.
-
-Example: Azure Monitor alerts proactively notify you when important conditions are found in your monitoring data. Metric alert rules create an alert when a metric value from an Azure resource exceeds a threshold.
-
--->
 
 ## Overview
 
-* Considerations for the low-code approach
-  * Pattern selection in the ISV Journey
-  * Multiple pattern option
-* Explore each pattern
-  * Pattern A: Create Plugins
-  * Pattern B: Power Platform connectors
-  * Pattern C: Graph connectors
-
 To help Independent Software Vendors (ISVs) choose the best way to build their generative AI solution, Microsoft created guidance on the benefits of low code and pro code options.
 
-Within this low-code journey, there is one main approach: extending a copilot. This approach is comprised of multiple patterns, which are specific paths you can take to building your solution.
+Within this low-code journey, there is one main approach: extending a copilot. This approach is composed of multiple patterns, which are specific paths you can take to building your solution.
 
 This page helps you choose the best pattern for your use case if you have already chosen a low-code journey based on your needs and capabilities. If you haven't chosen a journey yet, visit the [capability envisioning page](Capability-Envisioning.md) to find the best approach for your use case.
 
@@ -99,7 +66,7 @@ Whether you choose one pattern or combine options, it's important to consider th
 
 ISVs looking to surface their existing services, data, and processes into Microsoft's Copilots or Microsoft 365 applications can do so by building plugins and connectors.
 
-ISVs can create plugins using various tools, including Power Platform plugins through Copilot Studio and Teams Message Extensions  . New plugins can be published to Microsoft's Copilot ecosystem via Partner Center, where IT admins can approve them for use by end users. This approach enables Microsoft 365 Copilot to interact with APIs from other software and services, surface up-to-date information, execute actions, and perform new types of computations.
+ISVs can create plugins using various tools, including Power Platform plugins through Copilot Studio and Teams Message Extensions. New plugins can be published to Microsoft's Copilot ecosystem via Partner Center, where IT admins can approve them for use by end users. This approach enables Microsoft 365 Copilot to interact with APIs from other software and services, surface up-to-date information, execute actions, and perform new types of computations.
 
 You might be interested in this option if you:
 
@@ -112,7 +79,7 @@ The key benefits of this pattern are:
 
 ### Scenario
 
-Let's imagine the hypothetical software vendor called Contoso who specialize in generative AI solutions. In this scenario, Contoso and AdventureWorks have teamed up to quickly create a solution for their virtual storefront challenges. AdventureWorks' existing systems force employees to context switch across multiple platforms, resulting in disjointed communication and lapses in inventory management. AdventureWorks wants to improve their overall insights to promote ongoing growth.
+Let's imagine the hypothetical software vendor called Contoso that specializes in generative AI solutions. In this scenario, Contoso and AdventureWorks have teamed up to quickly create a solution for their virtual storefront challenges. AdventureWorks' existing systems force employees to context switch across multiple platforms, resulting in disjointed communication and lapses in inventory management. AdventureWorks wants to improve their overall insights to promote ongoing growth.
 
 To address these challenges, Contoso utilizes the Store Operations copilot template from Copilot Studio to create an AI assistant in AdventureWorks' existing shopping application. This plugin integrates store procedures, policies, and data into the shopping app quickly and with minimal use of resources.
 

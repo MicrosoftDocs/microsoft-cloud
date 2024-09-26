@@ -12,14 +12,6 @@ ms.date: 09/16/2024
 
 # Evaluate and Prioritize an AI Use Case with Business Envisioning
 
-- [AI is transforming how industries operate](#ai-is-transforming-how-industries-operate)
-- [Business Envisioning](#business-envisioning)
-  - [Identify potential use cases](#identify-potential-use-cases)
-  - [Example scenarios](#example-scenarios)
-  - [Business, experience, technology framework](#apply-the-business-experience-technology-framework)
-  - [Evaluate and prioritize use cases](#evaluate-the-viability-of-your-use-case)
-- [Next Steps](#next-steps)
-
 ## Introduction
 
 Artificial intelligence (AI) is revolutionizing industries, prompting businesses to embrace its potential like never before. It has the potential to unlock new opportunities and enable transformative use cases, reshaping the way businesses interact with and provide products and services to their customers. As AI becomes more common in daily applications, we need to ensure that AI projects match business goals, meet user needs, and can be built with the resources we have.
@@ -38,7 +30,7 @@ Our partners are increasingly looking to develop new solutions and features that
 
 :::image type="content" source="media/01_AI_to_GenAI.jpg" alt-text="from conversational experiences using trained natural language models" border="false" :::
 
-The possibilities of this transformational technology means that effectively applying the value of AI can be a major undertaking, even for large companies. While this page, and subsequent ones, are designed to help ISVs identify, build, and deploy a viable generative AI use case, there are more resources available. We developed the Microsoft AI Value Accelerator (MAIVA) Playbook to support enterprise customers with foundational knowledge and guidance for enabling AI at scale across their organization. Though not designed as a tactical guide for ISVs, MAIVA can provide valuable insights into the diverse perspectives of the different roles involved in bringing a GenAI application to life. This [open-source framework](https://microsoft.github.io/dstoolkit-maiva/MAIVA_Chapter_1.html#economics-of-governance-framework-or-the-opportunity-cost) helps you understand what makes deployment and operation successful, why it's challenging, and offers advice on leadership, building a data-driven culture, and managing change.
+The possibilities of this transformational technology mean that effectively applying the value of AI can be a major undertaking, even for large companies. While this page, and subsequent ones, are designed to help ISVs identify, build, and deploy a viable generative AI use case, there are more resources available. We developed the Microsoft AI Value Accelerator (MAIVA) Playbook to support enterprise customers with foundational knowledge and guidance for enabling AI at scale across their organization. Though not designed as a tactical guide for ISVs, MAIVA can provide valuable insights into the diverse perspectives of the different roles involved in bringing a GenAI application to life. This [open-source framework](https://microsoft.github.io/dstoolkit-maiva/MAIVA_Chapter_1.html#economics-of-governance-framework-or-the-opportunity-cost) helps you understand what makes deployment and operation successful, why it's challenging, and offers advice on leadership, building a data-driven culture, and managing change.
 
 While this development in AI technology brings huge potential for new applications across industries, each opportunity should still be evaluated for its viability. The remainder of this page is devoted to helping ISV business decision makers identify and evaluate the potential business value, user demand, and technical feasibility of proposed AI use cases.
 
@@ -66,7 +58,7 @@ As you develop use cases, it can be helpful to consider the following questions:
 - **Measurement of success**: How do you define success? How is success measured? What are the measurable key results that show progress?
 - **Accountability**: Who is the executive sponsor for the solution? Who is accountable for the Objectives and Key Results (OKRs)?
 
-You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use the below template link to template:https://microsoft.sharepoint.com/:p:/r/teams/IndustryAI992/Shared%20Documents/LLM/Operations/Content%20Management/Works%20in%20progress/Generative%20AI%20for%20ISVs%20Learn%20Pages%20Project/Publication/Business%20Envisioning/Business%20Envisioning%20Template.pptx?d=w366cb1950a9a4fa3aa5e6603a57b873d&csf=1&web=1&e=KxWTVy  to make the case for your solution, --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
+You can probably come up with different AI solutions to address various use cases. Business envisioning helps you evaluate and prioritize the most viable use cases for development and execution. <!--You can use this template [link]() to make the case for your solution. --> Start with a description of the problem and your use case. Analyze factors such as the business objective, key results, and primary stakeholders to determine a strategic fit score for your application, 1 to 5. Business envisioning can serve as your starting point for bringing these various use cases to stakeholders who are needed for development and execution.
 
 :::image type="content" source="media/02_Business_Envisioning_Template.jpg" alt-text="A chart with which to input details about your use case" border="false" :::
 
@@ -146,8 +138,7 @@ A successful use case is one that generates value for the business. While this c
 
 :::image type="content" source="media/05_Business_Value.jpg" alt-text="How does the use case generate business value" border="false" :::
 
-Considerations around commercial strategy and monetization are critical to determining the business value of your application. You can learn more about what goes into this decision on the Commercial Strategy and Monetization for ISV Applications page, coming soon.
-<!-- insert link to ISV commercialization page when it is available> -->
+Considerations around commercial strategy and monetization are critical to determining the business value of your application. You can learn more about what goes into this decision on the [Commercial Strategy for Generative AI Applications](commercialization.md) page.
 
 ### Change Management Timeframe
 
@@ -203,7 +194,7 @@ Identifying and taking steps to mitigate implementation and operational risks ca
 
 ### Sufficient Safeguards
 
-Managing risk and compliance, especially with regards to AI, is crucial to the successful development and deployment of your application. Proactive measures such as robust security and compliance measures, data protection and access controls, and responsible and safe AI standards, can help protect users and their data. This also includes ensuring compliance with all relevant legal and regulatory requirements. By prioritizing use cases with well-established safeguards, developers can enhance the reliability and security of their applications, fostering greater user confidence and minimizing potential liabilities.
+Managing risk and compliance, especially with regard to AI, is crucial to the successful development and deployment of your application. Proactive measures such as robust security and compliance measures, data protection and access controls, and responsible and safe AI standards, can help protect users and their data. This also includes ensuring compliance with all relevant legal and regulatory requirements. By prioritizing use cases with well-established safeguards, developers can enhance the reliability and security of their applications, fostering greater user confidence and minimizing potential liabilities.
 
 :::image type="content" source="media/13_Sufficient_Safeguards.jpg" alt-text="Are the appropriate safeguards in place to manage risk and ensure compliance" border="false" :::
 
@@ -256,7 +247,7 @@ Besides the two analyzed use cases, another team completed a business envisionin
 | Degree of strategic business impact | (4+3)/2 = **3.5** | (5+4.3)/2 = **4.7** | (3+3)/2 = **3** |
 | Degree of executional fit | (3.7+4.3)/2 = **4** | (4+4.3)/2 = **4.2** | (3+4)/2 = **3.5** |
 
-Using our two equations, we can see where each of these use cases fall on this chart.
+Using our two equations, we can see where each of these use cases falls on this chart.
 
 :::image type="content" source="media/18_Use_Case_Prioritization.jpg" alt-text="Example chart with four equally sized rectangles making up each of the quadrants" border="false" :::
 

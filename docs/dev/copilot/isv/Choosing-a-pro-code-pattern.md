@@ -1,5 +1,5 @@
 ---
-title: Creating pro-code solutions with the Microsoft Cloud Solution Toolkit
+title: Creating pro-code solutions with the Microsoft Cloud
 description: Learn how to use the various pro-code techniques to build solutions using AI capabilities across the Microsoft Cloud.
 author: miglaros
 ms.author: miglaros
@@ -11,23 +11,6 @@ ms.date: 09/16/2024
 ---
 
 # Choosing the best pro-code pattern to create your generative AI solution
-
-In this article:
-
-- [Pattern selection in the pro-code ISV Journey](#pattern-selection-in-the-pro-code-isv-journey)
-  - [Considerations for a pro-code journey](#considerations-for-a-pro-code-journey)
-    - [Choosing a pattern](#choosing-a-pattern)
-    - [Multiple pattern options](#multiple-pattern-options)
-- [Approach: Build a custom copilot](#build-a-custom-copilot)
-  - [Pattern D: Microsoft Graph APIs](#microsoft-graph-apis)
-    - [Pattern E: Azure OpenAI Assistants](#azure-openai-assistants)
-    - [Pattern F: Teams AI Library](#teams-ai-library)
-    - [Pattern G: Azure AI Studio](#azure-ai-studio)
-- [Approach: Build an app on Fabric](#build-an-app-on-fabric)
-  - [Pattern H: Interop with Fabric](#interop-with-fabric)
-    - [Pattern I: Build on Fabric](#build-on-fabric)
-    - [Pattern J: Build a Fabric Workload](#build-a-fabric-workload)
-- [Conclusion](#conclusion)
 
 ## Pattern selection in the pro-code ISV Journey
 
@@ -78,7 +61,7 @@ Because Semantic Kernel interacts directly with your code, it is possible to use
 
 Building a custom copilot enables you to create an application with a moderate coding lift and more customizability than adopting or extending a first-party, Microsoft Copilot would. While you need to build many components on your own, Microsoft provides notable support through SDKs, templates, and more, depending on the pattern you choose.
 
-A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural langauge capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI studio.](media/1_Procode_patterns_graphic.jpg)
+A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural language capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI studio.](media/1_Procode_patterns_graphic.jpg)
 
 ### Microsoft Graph APIs
 
@@ -203,7 +186,9 @@ By accurately retrieving patient information and using natural language capabili
 
 While many ISVs are familiar with Fabric as a data or analytics solution, it can also serve as a comprehensive, integrated data foundation for generative AI applications. Whether you want to build an app directly on Fabric or integrate with OneLake, [building an app on Fabric](/fabric/cicd/partners/partner-integration) provides you with unmatched customization and control over your solution.
 
-A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLak using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or compine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provies ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to ![Pattern J: Build a Fabric workload.](media/2_Procode_patterns_graphic.jpg)
+A link tree for the "build an app on Fabric" approach. One arrow leads to a box reading "Allows ISVs to read, write and manage data within Fabric OneLake using existing APIs, shortcuts, and more", which leads to Pattern H: Interop with Fabric. A second arrow leads to a box reading "Enables ISVs to develop products on top of the Fabric platform or combine Fabric with pre-existing applications", which leads to Pattern I: Build on Fabric. A final arrow leads to a box reading "provides ISVs with tools to create highly customizable workloads within the Fabric ecosystem", which leads to Pattern J: Build a Fabric workload.
+
+:::image type="content" source="media/2_Procode_patterns_graphic.jpg" alt-text="A link tree for the build an app on Fabric approach" border="false" :::
 
 ### Interop with Fabric
 
@@ -228,7 +213,7 @@ The SaaS application that Contoso has developed for their retail customers requi
 
 To address these issues, Contoso connected their existing application to Fabric. This allows them to have better data management at an administrative level, as well as better data insights and visibility for tenants. Their application is able to:
 
-- Use data sharing and multi-cloud shortcuts to gather information from different tenants in OneLake.
+- Use data sharing and multicloud shortcuts to gather information from different tenants in OneLake.
 - Access organization data immediately through Real-Time Intelligence APIs.
 - Handle amounts of data associated with a large-scale solution.
 - Portray information about customer's data to them through interactive dashboards that Contoso created in their application.
@@ -268,7 +253,7 @@ By embedding Fabric's capabilities within their application, they can manage and
 
 ### Build a Fabric workload
 
-In addition to building with Fabric's seven native workloads, ISVs can expand Fabric's capabilities by creating their own customized workloads and offering them as a separate solution. These workloads can be built from scratch to deliver a plethora of data management capabilities, whether that's creating a more wholistic view of your customers data or taking actions based on data trends and predictions.
+In addition to building with Fabric's seven native workloads, ISVs can expand Fabric's capabilities by creating their own customized workloads and offering them as a separate solution. These workloads can be built from scratch to deliver a plethora of data management capabilities, whether that's creating a more holistic view of your customers' data or taking actions based on data trends and predictions.
 
 ISVs can use the [Microsoft Fabric Workload Development Kit](/fabric/workload-development-kit/development-kit-overview) to create their own workload and publish it as a SaaS offering for other Fabric users on the Azure Marketplace. This pattern is easily monetizable on Azure Marketplace and uses Fabric UX when interfacing with customers, which leaves you free to focus on developing your workload.
 
