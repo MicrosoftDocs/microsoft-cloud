@@ -92,7 +92,7 @@ After considering the value your solution provides, along with the costs involve
 
 When choosing your go-to-market strategy, it's important to weigh the cost and benefits of each approach against the investment required and the value of your desired outcome. For example, if you're thinking about developing a free solution, you need to fully consider the solution's purpose and benefits for it to pay off. To that end, our experience with ISVs suggests that aligning to one of the following approaches can help drive a successful and consistent commercial strategy. Here is a summary of these approaches:
 
-:::image type="content" source="media/02_GTM_Approaches_Table_Graphic.png" alt-text="Diagram of a goal of your solution, target audience, intended value for the end-user, ISV investment." border="false" :::
+:::image type="content" source="media/02-gtm-approaches-table-graphic.png" alt-text="Diagram of a goal of your solution, target audience, intended value for the end-user, ISV investment." border="false" :::
 
 To explain these scenarios, we examine several examples of applications using these go-to-market approaches, including how they selected their commercial strategy, and the benefits they experienced from using this approach. To thoroughly examine each of these case studies, we use the set of considerations we discussed earlier:
 
