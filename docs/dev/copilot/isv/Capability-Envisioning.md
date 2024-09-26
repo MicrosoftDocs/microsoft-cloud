@@ -12,15 +12,6 @@ ms.date: 09/16/2024
 
 # Choosing an approach to AI-enabled application development with Capability Envisioning
 
-- [Introduction](#introduction)
-- [Capability Envisioning](#capability-envisioning)
-  - [Approach considerations](#considerations-for-your-approach)
-    - [Example scenario](#example-scenario-contoso-shopping-application)
-    - [Microsoft development tools](#microsoft-development-tools)
-- [The ISV Journey](#the-approaches-across-the-isv-journey)
-
----
-
 This article enables Independent Software Vendors (ISVs) to:
 
 - Learn how to align selected AI use cases with an approach to application development
@@ -92,7 +83,7 @@ In our scenario, Contoso partners with retailer AdventureWorks to develop a solu
 
 - **Data**: The application requires distributed data from a diverse set of sources, including non-Microsoft cloud applications, surfaced via APIs.
 - **Customization**: The application is custom built for AdventureWorks with extensive customizability and control over individual features. The application needs to have multiple potentially complex components to support different stakeholders and tasks.
-- **Development complexity**: Development of the application's capabilities require substantial resources, time, and human capital, including professional software developers.
+- **Development complexity**: Development of the application's capabilities requires substantial resources, time, and human capital, including professional software developers.
 - **End-user**: The end-user can vary across AdventureWorks operations but includes technical data scientists and nontechnical frontline workers.
 - **Business value**: This application serves as a core feature of AdventureWorks operations by enabling a virtual storefront with substantive revenue potential along with data-driven insights on company operations. For Contoso, this offering represents a major business opportunity.
 - **Risk and compliance**: This solution interacts with protected financial data to complete transactions for AdventureWorks customers, necessitating significant security and regulatory compliance components.
@@ -124,7 +115,7 @@ You can see how these solutions map to the approaches in the graphic that follow
 
 :::image type="content" source="media/04_Development_Tools_Example_Graphic.jpg" alt-text="Along the top line, from left to right, are the Microsoft Teams and Copilot for Microsoft 365 Logos, then a column Adopt or Extend a Microsoft Copilot" border="false" :::
 
-The store operations use case involves an AI assistant that enables rapid access to store procedures, policies, and data in natural language. This use case could be developed using any of the three approaches, to different levels of complexity. An ISV could rapidly develop an assistant to fulfill this use case using the [Copilot Studio Store operations template](/microsoft-copilot-studio/template-store-ops). This effort would require minimal coding and involve interfacing at the surface of the stack, with M365 plug-ins or Copilot Studio, as shown in the left column.
+The store operations use case involves an AI assistant that enables rapid access to store procedures, policies, and data in natural language. This use case could be developed using any of the three approaches, to different levels of complexity. An ISV could rapidly develop an assistant to fulfill this use case using the [Copilot Studio Store operations template](/microsoft-copilot-studio/template-store-ops). This effort would require minimal coding and involve interfacing at the surface of the stack, with Microsoft 365 plug-ins or Copilot Studio, as shown in the left column.
 
 Alternatively, an ISV could undertake a more complex development process and utilize Azure AI studio or Fabric to develop a more comprehensive store operations application, including data infrastructure and technical user assistants. This approach, as in the Shopping application scenario, would involve substantial pro-code development with developers interfacing with more of the full stack, as shown in the right column.
 
@@ -144,7 +135,7 @@ The ISV journey provides a broad overview of the different phases you'll go thro
 
 :::image type="content" source="media/06_ISV_Journey_Graphic.jpg" alt-text="The ISV Journey. Below are two rectangles titled, top to bottom, Low-code and Pro-code." border="false" :::
 
-Microsoft continues to build out content to provide holistic guidance for building AI and GenAI applications for the Microsoft Cloud. You can find more content and resources at [this Microsoft Copilot for ISVs Collection](/collections/7rmiyjy2006wj). This page is regularly updated with newly developed content.
+Microsoft continues to build out content to provide holistic guidance for building AI and GenAI applications for the Microsoft Cloud. You can find more content and resources at [this Microsoft Copilot for ISVs Collection](/collections/penzt16genw8jx). This page is regularly updated with newly developed content.
 
 ## Next steps
 
