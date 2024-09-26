@@ -282,6 +282,8 @@
       items:
       - name: config
         href: technical-reference/config.md
+      - name: jwt create
+        href: technical-reference/jwt-create.md
       - name: msgraphdb
         href: technical-reference/msgraphdb.md
       - name: outdated
