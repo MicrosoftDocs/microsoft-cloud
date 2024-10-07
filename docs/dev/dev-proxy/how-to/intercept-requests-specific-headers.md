@@ -3,7 +3,7 @@ title: Intercept requests with specific headers
 description: How to configure Dev Proxy to only intercept requests with specific headers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/06/2024
+ms.date: 10/07/2024
 ---
 
 # Intercept requests with specific headers
@@ -18,13 +18,16 @@ The following example demonstrates how to configure Dev Proxy to intercept reque
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.21.0/rc.schema.json",
   "plugins": [
     // [...] trimmed for brevity
   ],
-  "filterByHeaders": {
-    "x-app": "contoso-intranet"
-  }
+  "filterByHeaders": [
+    {
+      "name": "x-app",
+      "value": "contoso-intranet"
+    }
+  ]
 }
 ```
 
@@ -61,9 +64,12 @@ To intercept requests that contain a specific header, regardless of its value, l
   "plugins": [
     // [...] trimmed for brevity
   ],
-  "filterByHeaders": {
-    "x-contoso": ""
-  }
+  "filterByHeaders": [
+    {
+      "name": "x-contoso",
+      "value": ""
+    }
+  ]
 }
 ```
 
