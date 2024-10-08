@@ -25,18 +25,20 @@ This page helps you choose the best pattern for your use case if you have alread
 The low-code approach is recommended for ISVs looking to quickly develop solutions, especially when the goal is for end users to perform work in Microsoft applications - such as Teams, Word, or Outlook. This approach typically involves limited code development, the utilization of templates, and a more rapid time-to-value than pro-code approaches.  
 
 The low-code approach may be the best option for you if you:
-*Need a quick turnaround
-*Have limited resources to devote to software development and coding professionals
-*Want to integrate your solution with Microsoft 365 productivity tools
+
+* Need a quick turnaround
+* Have limited resources to devote to software development and coding professionals
+* Want to integrate your solution with Microsoft 365 productivity tools
 
 For full customization and ongoing control, a [pro-code journey](Choosing-a-pro-code-pattern.md) might be better, even though it is more complex.
 
 If you think the low-code approach is best for your use case, the pattern options in this article will help you to find the best tools for your needs.
 
 There are three pattern options within the low-code approach:
-*Create plugins to enhance an existing Copilot's functionality
-*Use Microsoft Graph connectors to bring in your data to Copilot experiences
-*Use Power Platform connectors to give end users an opportunity to customize their copilot experience
+
+* Create plugins to enhance an existing Copilot's functionality
+* Use Microsoft Graph connectors to bring in your data to Copilot experiences
+* Use Power Platform connectors to give end users an opportunity to customize their copilot experience
 
 ### Pattern selection in the ISV Journey
 
