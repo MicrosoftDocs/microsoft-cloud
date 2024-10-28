@@ -10,7 +10,7 @@ ms.date: 10/28/2024
 
 Testing APIs is essential to building resilient, high-performing applications that can handle real-world scenarios and unexpected conditions. Dev Proxy equips you with the tools to test your API's behavior, providing insights into its performance, error handling, and overall robustness before it's live. With Dev Proxy, you can thoroughly evaluate your API's reliability, identify potential issues, and optimize performance.
 
-## Why Use Dev Proxy for API Testing?
+## Why Use Dev Proxy for API testing?
 
 Dev Proxy allows you to simulate real-world API conditions and errors, ensuring that your API performs consistently under various scenarios. By using Dev Proxy for API testing, you can:
 
@@ -38,7 +38,7 @@ Introduce network latency to see how your app performs under slow API conditions
 
 Easily create mock responses for testing, allowing you to test the API's expected behavior in a controlled environment and simulate different response types and structures.
 
-## Start Testing Your APIs with Dev Proxy
+## Start testing your APIs with Dev Proxy
 
 With Dev Proxy, you can make API testing a seamless part of your development process, ensuring your APIs perform consistently and predictably under various conditions. From error simulations to request inspection, Dev Proxy provides the capabilities to deliver a robust, well-tested API.
 

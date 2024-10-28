@@ -10,7 +10,7 @@ ms.date: 10/28/2024
 
 Making your API accessible to consumers is a critical step, but API publishing is about more than just going live. To drive adoption and ensure high-quality user experiences, your API needs to be optimized, fully documented, and secure. Dev Proxy streamlines the API publishing process, helping you ensure your API is ready for production use and easy to consume by developers.
 
-## Why Use Dev Proxy for API publishing?
+## Why use Dev Proxy for API publishing?
 
 Dev Proxy provides essential tools to make publishing APIs seamless, robust, and optimized for consumption. With Dev Proxy, you can:
 
@@ -27,7 +27,7 @@ Dev Proxy offers a range of features to support API publishing, enabling you to 
 
 Automatically generate comprehensive API documentation, providing consumers with clear guidance on how to use your API and reducing integration time and effort.
 
-### [Check production-level API Calls](../how-to/check-production-level-apis.md)
+### [Check production-level API calls](../how-to/check-production-level-apis.md)
 
 Ensure that all API calls adhere to production standards, preventing accidental use of development endpoints and configurations that might affect security or performance.
 
@@ -43,7 +43,7 @@ Customize and control API behavior under various conditions, enabling you to ref
 
 Dev Proxy equips you with the tools to seamlessly publish production-ready APIs that are optimized, secure, and easy for developers to adopt. Whether you're preparing for your API's initial release or optimizing an existing API for broader use, Dev Proxy provides a streamlined, reliable path to successful API publishing.
 
-### Get Started Today
+### Get started today
 
 [Download Dev Proxy](../get-started.md) to make your API publishing process faster and more effective. Explore our [how-to guides](../how-to/overview.md) and learn how to publish APIs that meet production standards from the start.
 
