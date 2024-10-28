@@ -3,7 +3,7 @@ title: jwt create
 description: jwt create command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/24/2024
+ms.date: 10/28/2024
 ---
 
 # jwt create
@@ -39,6 +39,7 @@ None
 | `-s, --scopes` | A scope claim to add to the token. Specify once for each scope. | None |
 | `--claims` | Claims to add to the token. Specify once for each claim in the format `name:value`. | None |
 | `-v, --valid-for` | The duration which the token is valid for. Duration is set in minutes. | `60` |
+| `--signing-key` | The key to use to sign the token. Must be at least 32 characters long. | Randomly generated |
 
 > [!NOTE]
 > Registered claims (e.g. `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the `--claims` option, the values you provide will be ignored.
