@@ -10,7 +10,7 @@ ms.date: 10/28/2024
 
 As your API grows and evolves, managing different versions efficiently is essential to maintain compatibility, guide adoption of the latest features, and ensure secure and reliable API usage. Dev Proxy simplifies API versioning, providing tools that help you support current and deprecated versions, enforce production-ready standards, and keep your API documentation up to date for all consumers.
 
-## Why Use Dev Proxy for API Versioning?
+## Why use Dev Proxy for API Versioning?
 
 Dev Proxy enables you to version APIs effectively, helping ensure that your users can adopt new capabilities smoothly and that outdated versions are securely managed. With Dev Proxy, you can:
 
@@ -34,11 +34,11 @@ Validate that production systems only call stable, supported API versions, preve
 
 Analyze and apply minimal required permissions for each version, optimizing security and ensuring that every API version enforces the necessary level of access.
 
-## Start Managing API Versions with Confidence
+## Start managing API versions with confidence
 
 Dev Proxy provides the tools you need to maintain, secure, and evolve your APIs over time, ensuring that consumers always have access to the latest features with minimal disruption. Whether you're managing new releases or phasing out older versions, Dev Proxy helps you stay in control of your API lifecycle.
 
-### Get Started Today
+### Get started today
 
 [Download Dev Proxy](../get-started.md) and take control of your API versioning process. With our [how-to guides](../how-to/overview.md), you're ready to manage versioning efficiently, enforce standards, and support seamless transitions to the latest versions. Try Dev Proxy today and build a sustainable, forward-compatible API ecosystem!
 
