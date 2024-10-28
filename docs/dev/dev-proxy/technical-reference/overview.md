@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/13/2024
+ms.date: 10/28/2024
 ms.topic: overview
 ---
 
@@ -25,6 +25,7 @@ Name | Description
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
+[MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
@@ -62,12 +63,12 @@ Name | Description
 [GraphClientRequestIdGuidancePlugin](./graphclientrequestidguidanceplugin.md)|Shows a tip when a request to Microsoft Graph API doesn't include the `client-request-id` header.
 [GraphConnectorGuidancePlugin](./graphconnectorguidanceplugin.md)|Shows contextual guidance for working with Microsoft Graph connectors.
 [GraphConnectorNotificationPlugin](./graphconnectornotificationplugin.md)|Simulates the notification when enabling or disabling a Microsoft Graph connector in Teams Admin Center (TAC). Validates requests for creating and deleting the external connection.
+[GraphMinimalPermissionsPlugin](./graphminimalpermissionsplugin.md)|Returns a list of the minimal permissions required for Microsoft Graph requests that proxy recorded.
+[GraphMinimalPermissionsGuidancePlugin](./graphminimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [GraphMockResponsePlugin](./graphmockresponseplugin.md)|Mocks responses to Microsoft Graph APIs.
 [GraphRandomErrorPlugin](./graphrandomerrorplugin.md)|Fails requests made to Microsoft Graph with random errors.
 [GraphSdkGuidancePlugin](./graphsdkguidanceplugin.md)|Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been issued by a Microsoft Graph SDK.
 [GraphSelectGuidancePlugin](./graphselectguidanceplugin.md)|Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doesn't include the `$select` query string parameter.
-[MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Returns a list of the minimal permissions required for Microsoft Graph requests that proxy recorded.
-[MinimalPermissionsGuidancePlugin](./minimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [ODSPSearchGuidancePlugin](./odspsearchguidanceplugin.md)|Shows a warning when Dev Proxy detects a request to OneDrive and SharePoint search APIs.
 
 ## Reporters

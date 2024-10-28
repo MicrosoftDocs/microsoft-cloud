@@ -124,6 +124,11 @@
          "source_path": "docs/dev/copilot/isv-extensibility-story.md",
          "redirect_url": "docs/dev/copilot/isv/isv-extensibility-story.md",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/minimalpermissionsguidanceplugin.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/graphminimalpermissionsguidanceplugin",
+         "redirect_document_id": false
       }
    ]
 }

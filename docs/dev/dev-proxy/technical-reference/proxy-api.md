@@ -3,7 +3,7 @@ title: Proxy API
 description: Overview of the Dev Proxy API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 08/23/2024
+ms.date: 10/28/2024
 ---
 
 # Proxy API
@@ -193,6 +193,7 @@ Options for generating a JWT token.
 | `scopes` | `string[]` | A scope claim to add to the token |
 | `claims` | `KeyValuePair` | Claims to add to the token |
 | `validFor` | `number` | The duration (in minutes) for which the token is valid |
+| `signingKey` | `string` | The key to use to sign the token. Must be at least 32 characters long. If not specified, uses a randomly generated key. |
 
 ## `JwtInfo`
 
