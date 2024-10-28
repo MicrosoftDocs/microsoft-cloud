@@ -184,6 +184,16 @@
       href: concepts/use-microsoft-graph-beta-production.md
     - name: Use the recommended search APIs on Microsoft 365
       href: concepts/use-recommended-search-apis-microsoft-365.md
+    - name: Use Dev Proxy throughout the API lifecycle
+      items:
+        - name: In API design
+          href: concepts/use-api-design.md
+        - name: In API testing
+          href: concepts/use-api-testing.md
+        - name: In API publishing
+          href: concepts/use-api-publishing.md
+        - name: In API versioning
+          href: concepts/use-api-versioning.md
 - name: Reference
   items: 
     - name: Overview
