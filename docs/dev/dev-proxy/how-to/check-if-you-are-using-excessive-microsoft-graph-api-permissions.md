@@ -3,7 +3,7 @@ title: Check if you are using excessive Microsoft Graph API permissions
 description: How to check if your app is using minimal Microsoft Graph API permissions
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/26/2024
+ms.date: 10/28/2024
 ---
 
 # Check if you're using excessive Microsoft Graph API permissions
@@ -14,7 +14,7 @@ A common approach to security is to apply the principle of least privilege (PoLP
 
 To check if your app is using more permissions than it needs:
 
-1. Enable the [`MinimalPermissionsGuidancePlugin`](../technical-reference/minimalpermissionsguidanceplugin.md) plugin.
+1. Enable the [`GraphMinimalPermissionsGuidancePlugin`](../technical-reference/graphminimalpermissionsguidanceplugin.md) plugin.
 1. [Start recording](./Record-and-export-proxy-activity.md).
 1. Use your app to issue requests as normal.
 1. [Stop recording](./Record-and-export-proxy-activity.md).
