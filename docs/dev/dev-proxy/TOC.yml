@@ -72,6 +72,8 @@
         href: how-to/simulate-slow-API-responses.md
     - name: Minimal permissions
       items:
+      - name: Check if my app is calling APIs with minimal permissions using API Center
+        href: how-to/check-minimal-api-permissions.md
       - name: Detect minimal Microsoft Graph API permissions
         href: how-to/detect-minimal-Microsoft-Graph-API-permissions.md
       - name: Check if you are using excessive Microsoft Graph API permissions
@@ -84,8 +86,6 @@
       items:
       - name: Check if my app is using production-level APIs
         href: how-to/check-production-level-apis.md
-      - name: Check if my app is calling APIs with minimal permissions
-        href: how-to/check-minimal-api-permissions.md
       - name: Find shadow APIs
         href: how-to/check-shadow-apis.md
       - name: Generate an OpenAPI spec
@@ -230,6 +230,8 @@
         href: technical-reference/httpfilegeneratorplugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
+      - name: MinimalPermissionsPlugin
+        href: technical-reference/minimalpermissionsplugin.md
       - name: MockGeneratorPlugin
         href: technical-reference/mockgeneratorplugin.md
       - name: MockRequestPlugin
@@ -256,6 +258,10 @@
             href: technical-reference/graphconnectorguidanceplugin.md
           - name: GraphConnectorNotificationPlugin
             href: technical-reference/graphconnectornotificationplugin.md
+          - name: GraphMinimalPermissionsPlugin
+            href: technical-reference/graphminimalpermissionsplugin.md
+          - name: GraphMinimalPermissionsGuidancePlugin
+            href: technical-reference/graphminimalpermissionsguidanceplugin.md
           - name: GraphMockResponsePlugin
             href: technical-reference/GraphMockResponsePlugin.md
           - name: GraphRandomErrorPlugin
@@ -264,10 +270,6 @@
             href: technical-reference/GraphSdkGuidancePlugin.md
           - name: GraphSelectGuidancePlugin
             href: technical-reference/GraphSelectGuidancePlugin.md
-          - name: MinimalPermissionsGuidancePlugin
-            href: technical-reference/MinimalPermissionsGuidancePlugin.md
-          - name: MinimalPermissionsPlugin
-            href: technical-reference/MinimalPermissionsPlugin.md
           - name: ODSPSearchGuidancePlugin
             href: technical-reference/odspsearchguidanceplugin.md
       - name: Reporters

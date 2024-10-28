@@ -1,12 +1,12 @@
 ---
-title: MinimalPermissionsGuidancePlugin
-description: MinimalPermissionsGuidancePlugin reference
+title: GraphMinimalPermissionsGuidancePlugin
+description: GraphMinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 08/13/2024
+ms.date: 10/28/2024
 ---
 
-# MinimalPermissionsGuidancePlugin
+# GraphMinimalPermissionsGuidancePlugin
 
 Compares the permissions used in the JWT token sent to Microsoft Graph against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 
@@ -16,10 +16,10 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 
 ```json
 {
-  "name": "MinimalPermissionsGuidancePlugin",
+  "name": "GraphMinimalPermissionsGuidancePlugin",
   "enabled": false,
   "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "minimalPermissionsGuidancePlugin"
+  "configSection": "graphMinimalPermissionsGuidancePlugin"
 }
 ```
 
@@ -27,14 +27,14 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 
 ```json
 {
-    "minimalPermissionsGuidancePlugin": {
-        "permissionsToIgnore": [ 
-            "profile", 
-            "openid", 
-            "offline_access", 
-            "email"
-        ]
-    }
+  "graphMinimalPermissionsGuidancePlugin": {
+    "permissionsToIgnore": [ 
+      "profile", 
+      "openid", 
+      "offline_access", 
+      "email"
+    ]
+  }
 }
 ```
 
