@@ -1,5 +1,5 @@
 ---
-title: Check if you are using excessive Microsoft Graph API permissions
+title: Check if you're using excessive Microsoft Graph API permissions
 description: How to check if your app is using minimal Microsoft Graph API permissions
 author: garrytrinder
 ms.author: garrytrinder
@@ -10,7 +10,7 @@ ms.date: 10/28/2024
 
 Microsoft Graph exposes hundreds of endpoints that allow you to tap into data and insights in Microsoft 365. To use these API endpoints, you need to request a correct set of permissions.
 
-A common approach to security is to apply the principle of least privilege (PoLP). This principle applies to users, processes and programs.
+A common approach to security is to apply the principle of least privilege (PoLP). This principle applies to users, processes, and programs.
 
 To check if your app is using more permissions than it needs:
 

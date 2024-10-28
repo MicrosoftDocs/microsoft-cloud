@@ -10,7 +10,7 @@ ms.date: 10/28/2024
 
 Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.
 
-:::image type="content" source="../media/minimal-permissions-plugin.png" alt-text="Screenshot of a command prompt showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-plugin.png":::
+:::image type="content" source="../media/minimal-permissions-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-plugin.png":::
 
 ## Plugin instance definition
 
@@ -49,7 +49,7 @@ The `MinimalPermissionsPlugin` plugin checks if the app uses minimal permissions
 
 ### Define API permissions
 
-The `MinimalPermissionsPlugin` plugin supports checking OAuth permissions for APIs secured with OAuth. The plugin computes the minimal permissions required to call the APIs used in the app using the information from the provided API specs. Then, the plugin compares the permissions used in the JSON Web Token (JWT) token against the minimum required scopes needed for the requests that Dev Proxy recorded.
+The `MinimalPermissionsPlugin` plugin supports checking OAuth permissions for APIs secured with OAuth. The plugin computes the minimal permissions required to call the APIs used in the app using the information from the provided API specifications. Then, the plugin compares the permissions used in the JSON Web Token (JWT) token against the minimum required scopes needed for the requests that Dev Proxy recorded.
 
 To define permissions for your APIs, include them in the OpenAPI definition of your API. The following example shows how to define permissions for an API in an OpenAPI definition:
 
