@@ -46,7 +46,7 @@ For handling TAC notifications, the plugin checks if the API sends a 202 Accepte
   "graphConnectorNotificationEnabled": {
     "mockFile": "graph-connector-notification-enabled.json",
     "tenant": "fa15d692-e9c7-4460-a743-29f29522229",
-    "audience": "ef1da9d4-ff77-4c3e-a005-840c3f830745"
+    "audience": "00001111-aaaa-2222-bbbb-3333cccc4444"
   }
 }
 ```
@@ -81,7 +81,7 @@ Following is an example of a notification that Teams Admin Center sends, when a 
       "value": [
         {
           "changeType": "updated",
-          "subscriptionId": "79f3b611-7f15-4bdd-9422-9606a24e49f3",
+          "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
           "resource": "external",
           "clientState": null,
           "resourceData": {

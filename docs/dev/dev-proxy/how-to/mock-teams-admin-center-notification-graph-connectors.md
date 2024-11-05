@@ -47,7 +47,7 @@ Follow the same steps for the `graph-connector-notification-disabled.json` file.
 
 ### Configure tenant ID and Entra app for your Microsoft Graph connector
 
-Dev Proxy simulates validating the token from the Teams Admin Center notification and issuing an access token for Microsoft Graph for your connector. Dev Proxy uses a simulated Microsoft 365 tenant ID and an Entra app. To intercept requests from your Graph connector, update the tenant ID to `fa15d692-e9c7-4460-a743-29f29522229` and Entra app ID to `ef1da9d4-ff77-4c3e-a005-840c3f830745`. If you want to use your own IDs, update the values in all preset files.
+Dev Proxy simulates validating the token from the Teams Admin Center notification and issuing an access token for Microsoft Graph for your connector. Dev Proxy uses a simulated Microsoft 365 tenant ID and an Entra app. To intercept requests from your Graph connector, update the tenant ID to `fa15d692-e9c7-4460-a743-29f29522229` and Entra app ID to `00001111-aaaa-2222-bbbb-3333cccc4444`. If you want to use your own IDs, update the values in all preset files.
 
 ## Mock the Teams Admin Center notification for enabling the Microsoft Graph connector
 

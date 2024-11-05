@@ -68,7 +68,7 @@ Simulates authentication and authorization using API keys or OAuth2.
       "allowedTenants":[
         "00000000-0000-0000-0000-000000000000"
       ],
-      "issuer": "https://login.microsoftonline.com/00000000-0000-0000-0000-000000000000/v2.0",
+      "issuer": "https://login.microsoftonline.com/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/v2.0",
       "scopes": [
         "Posts.Read"
       ],

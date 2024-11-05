@@ -28,7 +28,7 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 ```json
 {
   "apiCenterMinimalPermissionsPlugin": {
-    "subscriptionId": "cdae2297-7aa6-4195-bbb1-dcd89153cc72",
+    "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
     "workspaceName": "default"
