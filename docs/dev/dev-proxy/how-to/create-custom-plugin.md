@@ -112,7 +112,7 @@ Follow the next steps to create a new project:
 
 ## Use your custom plugin
 
-To use your custom plugin, you need to add it to the Dev Proxy configuration file. Here's an example of how you can do this:
+To use your custom plugin, you need to add it to the Dev Proxy configuration file:
 
 1. Add the new plugin configuration in the `devproxyrc.json` file.
 
@@ -132,11 +132,11 @@ To use your custom plugin, you need to add it to the Dev Proxy configuration fil
     devproxy
     ```
 
-The example plugin will check all matching URLs for the required Authorization header. If the header isn't present, it will show a warning message.
+The example plugin checks all matching URLs for the required Authorization header. If the header isn't present, it shows a warning message.
 
 ## Adding custom configuration to your plugin (optional)
 
-You can extend your plugin's logic by adding custom configuration. Here's an example of how you can do this:
+You can extend your plugin's logic by adding custom configuration:
 
 1. Add a new `_configuration` object and bind it in the `Register` method.
 
