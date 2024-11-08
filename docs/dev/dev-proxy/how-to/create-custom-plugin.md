@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 11/8/2024
 ---
 
 # Create a custom plugin
@@ -52,7 +52,7 @@ Follow the next steps to create a new project:
     dotnet add package Microsoft.Extensions.Configuration
     dotnet add package Microsoft.Extensions.Configuration.Binder
     dotnet add package Microsoft.Extensions.Logging.Abstractions
-    dotnet add package Titanium.Web.Proxy
+    dotnet add package Unobtanium.Web.Proxy
     ```
 
 1. Exclude the dependency DLLs from the build output by adding a `ExcludeAssets` tag per `PackageReference` in the `DevProxyCustomPlugin.csproj` file.
@@ -66,41 +66,39 @@ Follow the next steps to create a new project:
     ```csharp
     using Microsoft.DevProxy.Abstractions;
     using Microsoft.Extensions.Configuration;
-
+    using Microsoft.Extensions.Logging;
+    
     namespace MyCustomPlugin;
-
-    public class CatchApiCalls : BaseProxyPlugin
+    
+    public class CatchApiCalls(IPluginEvents pluginEvents, IProxyContext context, ILogger logger, ISet<UrlToWatch> UrlsToWatch, IConfigurationSection? configSection = null) : BaseProxyPlugin(pluginEvents, context, logger, UrlsToWatch, configSection)
     {
       public override string Name => nameof(CatchApiCalls);
-
-      public override void Register(IPluginEvents pluginEvents,
-                                    IProxyContext context,
-                                    ISet<UrlToWatch> urlsToWatch,
-                                    IConfigurationSection? configSection = null)
+    
+      public override async Task RegisterAsync()
       {
-        base.Register(pluginEvents, context, urlsToWatch, configSection);
-
-        // Register your event handlers
-        pluginEvents.BeforeRequest += OnBeforeRequest;
+        await base.RegisterAsync();
+    
+        PluginEvents.BeforeRequest += BeforeRequestAsync;
       }
-
-      private Task OnBeforeRequest(object sender, ProxyRequestArgs e)
+    
+      private Task BeforeRequestAsync(object sender, ProxyRequestArgs e)
       {
-        if (_urlsToWatch is null ||
-          !e.HasRequestUrlMatch(_urlsToWatch))
+        if (UrlsToWatch is null ||
+          !e.HasRequestUrlMatch(UrlsToWatch))
         {
           // No match for the URL, so we don't need to do anything
+          Logger.LogRequest("URL not matched", MessageType.Skipped, new LoggingContext(e.Session));
           return Task.CompletedTask;
         }
-
+    
         var headers = e.Session.HttpClient.Request.Headers;
         var header = headers.Where(h => h.Name == "Authorization").FirstOrDefault();
         if (header is null)
         {
-          _logger?.LogRequest([$"Does not contain the Authorization header"], MessageType.Warning);
+          Logger.LogRequest($"Does not contain the Authorization header", MessageType.Warning, new LoggingContext(e.Session));
           return Task.CompletedTask;
         }
-
+    
         return Task.CompletedTask;
       }
     }
@@ -114,7 +112,7 @@ Follow the next steps to create a new project:
 
 ## Use your custom plugin
 
-To use your custom plugin, you need to add it to the Dev Proxy configuration file. Here's an example of how you can do this:
+To use your custom plugin, you need to add it to the Dev Proxy configuration file:
 
 1. Add the new plugin configuration in the `devproxyrc.json` file.
 
@@ -134,71 +132,71 @@ To use your custom plugin, you need to add it to the Dev Proxy configuration fil
     devproxy
     ```
 
-The example plugin will check all matching URLs for the required Authorization header. If the header isn't present, it will show a warning message.
+The example plugin checks all matching URLs for the required Authorization header. If the header isn't present, it shows a warning message.
 
 ## Adding custom configuration to your plugin (optional)
 
-You can extend your plugin's logic by adding custom configuration. Here's an example of how you can do this:
+You can extend your plugin's logic by adding custom configuration:
 
 1. Add a new `_configuration` object and bind it in the `Register` method.
 
     ```csharp
     using Microsoft.DevProxy.Abstractions;
     using Microsoft.Extensions.Configuration;
-
+    using Microsoft.Extensions.Logging;
+    
     namespace MyCustomPlugin;
-
+    
     public class CatchApiCallsConfiguration
     {
       public string? RequiredHeader { get; set; }
     }
-
-    public class CatchApiCalls : BaseProxyPlugin
+    
+    public class CatchApiCalls(IPluginEvents pluginEvents, IProxyContext context, ILogger logger, ISet<UrlToWatch> UrlsToWatch, IConfigurationSection? configSection = null) : BaseProxyPlugin(pluginEvents, context, logger, UrlsToWatch, configSection)
     {
       public override string Name => nameof(CatchApiCalls);
-
+    
       // Define you custom configuration
       private readonly CatchApiCallsConfiguration _configuration = new();
-
-      public override void Register(IPluginEvents pluginEvents,
-                                    IProxyContext context,
-                                    ISet<UrlToWatch> urlsToWatch,
-                                    IConfigurationSection? configSection = null)
+    
+      public override async Task RegisterAsync()
       {
-        base.Register(pluginEvents, context, urlsToWatch, configSection);
-
+        await base.RegisterAsync();
+    
         // Bind your plugin configuration
         configSection?.Bind(_configuration);
-
+    
         // Register your event handlers
-        pluginEvents.BeforeRequest += OnBeforeRequest;
+        PluginEvents.BeforeRequest += BeforeRequestAsync;
       }
-
-      private Task OnBeforeRequest(object sender, ProxyRequestArgs e)
+    
+      private Task BeforeRequestAsync(object sender, ProxyRequestArgs e)
       {
-        if (_urlsToWatch is null ||
-          !e.HasRequestUrlMatch(_urlsToWatch))
+        if (UrlsToWatch is null ||
+          !e.HasRequestUrlMatch(UrlsToWatch))
         {
           // No match for the URL, so we don't need to do anything
+          Logger.LogRequest("URL not matched", MessageType.Skipped, new LoggingContext(e.Session));
           return Task.CompletedTask;
         }
-
+    
         // Start using your custom configuration
         var requiredHeader = _configuration?.RequiredHeader ?? string.Empty;
         if (string.IsNullOrEmpty(requiredHeader))
         {
           // Required header is not set, so we don't need to do anything
+          Logger.LogRequest("Required header not set", MessageType.Skipped, new LoggingContext(e.Session));
           return Task.CompletedTask;
         }
-
+    
         var headers = e.Session.HttpClient.Request.Headers;
         var header = headers.Where(h => h.Name == requiredHeader).FirstOrDefault();
         if (header is null)
         {
-          _logger?.LogRequest([$"Does not contain the {requiredHeader} header"], MessageType.Warning);
+          Logger.LogRequest($"Does not contain the {requiredHeader} header", MessageType.Warning, new LoggingContext(e.Session));
           return Task.CompletedTask;
         }
-
+    
         return Task.CompletedTask;
       }
     }
