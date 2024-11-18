@@ -210,7 +210,7 @@ Next, let's update Dev Proxy configuration to show the information about the rew
 1. Simulate a cloud service calling the cloud API by using the dev tunnel URL, by running in the command line: `curl https://tunnel_id-8000.euw.devtunnels.ms/posts/1`.
 1. In the web browser with Chrome Dev Tools, notice the information about the intercepted request and the response from the cloud API.
 
-    :::image type="content" source="../media/inspect-cloud-api-inspect-dev-proxy-second.png" alt-text="Screenshot of a web browser with Dev Proxy inspections tools showing the intercepted request." lightbox="../media/inspect-cloud-api-inspect-dev-proxy-second.png":::
+    :::image type="content" source="../media/inspect-cloud-api-inspect-dev-proxy-second.png" alt-text="Screenshot of a web browser with Dev Proxy inspections tools showing the intercepted request with cloud API URLs." lightbox="../media/inspect-cloud-api-inspect-dev-proxy-second.png":::
 
     > [!NOTE]
     > Notice that both the recorded request URL, and the host header show the URL of the cloud API.
