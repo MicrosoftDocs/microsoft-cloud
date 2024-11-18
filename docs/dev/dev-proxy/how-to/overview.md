@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/18/2024
+ms.date: 11/18/2024
 ms.topic: overview
 ---
 
@@ -14,8 +14,11 @@ ms.topic: overview
 ## Intercept requests
 
 - [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
+- [Intercept requests with specific headers](./intercept-requests-specific-headers.md)
+- [Intercept requests to localhost](./intercept-localhost-requests.md)
 - [Exclude a URL](./Exclude-a-URL.md)
 - [Inspect requests and responses using Chrome DevTool](./inspect-requests-responses-chrome-devtools.md)
+- [Inspect API requests issued by cloud services](./inspect-api-requests-cloud-services.md)
 
 ## Mock responses
 
