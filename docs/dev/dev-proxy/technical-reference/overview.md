@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 10/28/2024
+ms.date: 11/18/2024
 ms.topic: overview
 ---
 
@@ -34,6 +34,7 @@ Name | Description
 [OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec in JSON format from the intercepted requests and responses.
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
+[RewritePlugin](./rewriteplugin.md)|Rewrites requests.
 
 ## Azure API Center plugins
 
