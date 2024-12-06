@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/10/2024
+ms.date: 12/6/2024
 ---
 
 # OpenApiSpecGeneratorPlugin
@@ -28,7 +28,8 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 ```json
 {
   "openApiSpecGeneratorPlugin": {
-    "includeOptionsRequests": false
+    "includeOptionsRequests": false,
+    "specVersion": 3
   }
 }
 ```
@@ -38,6 +39,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 | Property | Description | Default |
 | -------- | ----------- | :-----: |
 | `includeOptionsRequests` | Determines whether to include `OPTIONS` requests in the generated OpenAPI spec | `false` |
+| `specVersion` | Determines which version to use for the generated OpenAPI spec. Can be set to `2` or `3` | `3` |
 
 ## Command line options
 
