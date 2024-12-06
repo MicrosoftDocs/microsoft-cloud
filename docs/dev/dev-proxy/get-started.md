@@ -255,7 +255,7 @@ Invoke-WebRequest -Uri https://jsonplaceholder.typicode.com/posts
 If you use `curl`, send a GET request to the JSON Placeholder API using the following command.
 
 ```console
-curl -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
+curl --ssl-no-revoke -ix http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 ```
 
 You can also use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
