@@ -45,7 +45,7 @@ To start Dev Proxy from any directory, add its installation folder location to y
 1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
 1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
 1. In the `Edit environment variable` dialog box, select the `New` button.
-1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
+1. Enter `%LOCALAPPDATA%\Programs\Dev Proxy` into the new row and select `OK`.
 1. Select `OK` to confirm changes.
 
 ---
