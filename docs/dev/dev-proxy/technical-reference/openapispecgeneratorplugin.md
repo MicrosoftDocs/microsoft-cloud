@@ -29,7 +29,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 {
   "openApiSpecGeneratorPlugin": {
     "includeOptionsRequests": false,
-    "specVersion": 3
+    "specVersion": "3"
   }
 }
 ```
