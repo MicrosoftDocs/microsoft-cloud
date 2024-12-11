@@ -10,7 +10,7 @@ ms.date: 11/12/2024
 
 Dev Proxy allows you to generate an OpenAPI spec from the intercepted API requests and responses. Using Dev Proxy you can quickly create an OpenAPI spec for an existing API and benefit from the tooling that supports OpenAPI.
 
-> [!VIDEO https://www.youtube.com/embed/qKiR_AS8LlE?si=VBtG3rmaSe5gYWd1&start=74]
+:::video source="https://www.youtube.com/embed/qKiR_AS8LlE?si=VBtG3rmaSe5gYWd1&start=74":::
 
 To generate an OpenAPI spec using Dev Proxy:
 
