@@ -68,7 +68,7 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
     > [!NOTE]
     > While it's not necessary to use a `.local` domain, it's a good practice that helps you distinguish between the real and the intercepted requests. Also notice, that for the `.local` domain, you use the HTTP protocol, rather than HTTPS. Dev tunnels doesn't support HTTPS for routing requests to custom host headers on your local machine which is why you need to use HTTP.
 
-1. Create a rewrite file named `devproxy-rewrites.json` that changes the URL of the intercepted requests:
+1. Create a rewrite file named `rewrites.json` that changes the URL of the intercepted requests:
 
     ```json
     {
