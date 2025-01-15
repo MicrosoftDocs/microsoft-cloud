@@ -506,7 +506,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 **Where to start:**
 
 - [GitHub - microsoft/semantic-kernel: Integrate cutting-edge LLM technology quickly and easily into your apps](https://github.com/microsoft/semantic-kernel)
-- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/Frameworks/agents/)
+- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/Frameworks/agent/)
 - [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key takeaways:**
