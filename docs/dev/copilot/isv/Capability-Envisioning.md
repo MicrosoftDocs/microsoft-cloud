@@ -103,7 +103,7 @@ Let's also briefly examine why Contoso didn't choose the adopt/extend a Microsof
 -https://learn.microsoft.com/en-us/fabric/
 -https://learn.microsoft.com/en-us/azure/ai-studio/what-is-ai-studio -->
 
-Given the application's variety of interfaces and capabilities, Contoso ultimately used multiple tools, including Microsoft Fabric, Microsoft Azure, and Azure AI Studio, to complete development. It's important to note that the three approaches are not mutually exclusive. A custom copilot, built with low-code in Copilot Studio, using the Store Operations copilot template, could easily be integrated into this Shopping application. Selecting an approach is not a walled highway, it is a tool to help think through the requirements of your application, the capabilities you envision for it, and the resources you need to develop it. Let's dig a little bit deeper into how Microsoft solutions fit into these approaches.
+Given the application's variety of interfaces and capabilities, Contoso ultimately used multiple tools, including Microsoft Fabric, Microsoft Azure, and Azure AI Foundry, to complete development. It's important to note that the three approaches are not mutually exclusive. A custom copilot, built with low-code in Copilot Studio, using the Store Operations copilot template, could easily be integrated into this Shopping application. Selecting an approach is not a walled highway, it is a tool to help think through the requirements of your application, the capabilities you envision for it, and the resources you need to develop it. Let's dig a little bit deeper into how Microsoft solutions fit into these approaches.
 
 ## Microsoft Development Tools
 
@@ -117,7 +117,7 @@ You can see how these solutions map to the approaches in the graphic that follow
 
 The store operations use case involves an AI assistant that enables rapid access to store procedures, policies, and data in natural language. This use case could be developed using any of the three approaches, to different levels of complexity. An ISV could rapidly develop an assistant to fulfill this use case using the [Copilot Studio Store operations template](/microsoft-copilot-studio/template-store-ops). This effort would require minimal coding and involve interfacing at the surface of the stack, with Microsoft 365 plug-ins or Copilot Studio, as shown in the left column.
 
-Alternatively, an ISV could undertake a more complex development process and utilize Azure AI studio or Fabric to develop a more comprehensive store operations application, including data infrastructure and technical user assistants. This approach, as in the Shopping application scenario, would involve substantial pro-code development with developers interfacing with more of the full stack, as shown in the right column.
+Alternatively, an ISV could undertake a more complex development process and utilize Azure AI Foundry or Fabric to develop a more comprehensive store operations application, including data infrastructure and technical user assistants. This approach, as in the Shopping application scenario, would involve substantial pro-code development with developers interfacing with more of the full stack, as shown in the right column.
 
 Your specific needs and circumstances determine the best development approach. These tools and methods support you regardless of how you develop your application, but the path varies based on your choice. You can use this [template](https://aka.ms/AAsogxc) to walk through the GenAI considerations for your use case and determine the best path forward.
 
