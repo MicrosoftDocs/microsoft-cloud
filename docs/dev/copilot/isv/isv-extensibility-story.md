@@ -129,7 +129,7 @@ This approach is geared towards ISVs seeking to craft entirely new AI experience
         ...provide complete control over the conversational experience, including system prompts, temperature, tone, and custom safety requirements.
     :::column-end:::
     :::column:::
-        **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Foundry](#pattern-g-build-your-own-copilot-with-azure-ai-studio)
+        **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Foundry](#pattern-g-build-your-own-copilot-with-azure-ai-foundry)
 
         **Pattern H**: [Build your own copilot with Semantic Kernel](#pattern-h-build-your-own-copilot-with-semantic-kernel)
     :::column-end:::    
@@ -506,7 +506,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 **Where to start:**
 
 - [GitHub - microsoft/semantic-kernel: Integrate cutting-edge LLM technology quickly and easily into your apps](https://github.com/microsoft/semantic-kernel)
-- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/concepts/agents/)
+- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/Frameworks/agents/)
 - [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key takeaways:**

@@ -11,8 +11,8 @@ Here's a quick overview of how the "bring your own data" feature works from the 
 
 In this exercise, you will:
 
-- Create a custom data source using Azure AI Foundry portal.
-- Deploy an embedding model using Azure AI Foundry portal.
+- Create a custom data source using the Azure AI Foundry portal.
+- Deploy an embedding model using the Azure AI Foundry portal.
 - Upload custom documents.
 - Start a chat session in the Chat playground to experiment with generating completions based upon your own data.
 - Explore code that uses Azure AI Search and Azure OpenAI to generate completions based upon your own data.
