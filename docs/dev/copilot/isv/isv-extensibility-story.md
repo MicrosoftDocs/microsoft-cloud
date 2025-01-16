@@ -115,7 +115,7 @@ This approach is for ISVs aiming to enrich their apps with Microsoft's data and 
 
 **Approach 3: Full control: Build Your Own (BYO) end-to-end AI experiences:**
 
-This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Studio and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
+This approach is geared towards ISVs seeking to craft entirely new AI experiences or copilots using tools such as Azure AI Foundry and Semantic Kernel. It offers maximum control and customization, providing limitless possibilities.
 
 :::row:::
     :::column:::
@@ -129,7 +129,7 @@ This approach is geared towards ISVs seeking to craft entirely new AI experience
         ...provide complete control over the conversational experience, including system prompts, temperature, tone, and custom safety requirements.
     :::column-end:::
     :::column:::
-        **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Studio](#pattern-g-build-your-own-copilot-with-azure-ai-studio)
+        **Pattern G**: [Build new interoperable AI experiences or copilots using your existing APIs using Azure AI Foundry](#pattern-g-build-your-own-copilot-with-azure-ai-foundry)
 
         **Pattern H**: [Build your own copilot with Semantic Kernel](#pattern-h-build-your-own-copilot-with-semantic-kernel)
     :::column-end:::    
@@ -405,32 +405,32 @@ If you want to power your bot in Teams with LLMs, Teams AI Library is the way fo
    :::column-end:::
    :::column span="":::
       :::image type="complex" source="media/isv-copilot-stack-orchestration-expanded.png" lightbox="media/isv-copilot-stack-orchestration-expanded.png" alt-text="Diagram depicting the Microsoft CopilotSstack with AI orchestration expanded between frontend apps and foundational models, all on the Microsoft Cloud." border="false":::
-      A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled "Apps and Copilot Frontend" and is connected by a bidirectional arrow to a larger box labeled "AI orchestration", which is filled with stack components. Inside Copilot Studio, Azure AI Studio, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The "AI orchestration" stack is connected to another box labeled "foundation models and data." At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
+      A square diagram showing the components of the Microsoft Copilot stack orchestration. The first box is labeled "Apps and Copilot Frontend" and is connected by a bidirectional arrow to a larger box labeled "AI orchestration", which is filled with stack components. Inside Copilot Studio, Azure AI Foundry, prompt flow, evaluations, experiments, model catalog, fine-tuning, Semantic Kernel, and Machine Learning. The "AI orchestration" stack is connected to another box labeled "foundation models and data." At the bottom of the entire stack Microsoft Cloud spans the entirety of the products.
       :::image-end:::
    :::column-end:::
 :::row-end:::
 
 With most the investment creating a copilot service in the middle of the stack, ISVs have the freedom to connect this copilot service to various surfaces, including Teams, Microsoft 365 Copilot, Microsoft Copilot, your own application surfaces, websites, chat bots – or all. Essentially, when it comes to integration with an application surface – the top of our stack – every other pattern described here is also an option.
 
-### Pattern G: Build your own copilot with Azure AI Studio
+### Pattern G: Build your own copilot with Azure AI Foundry
 
-[Azure AI Studio](/azure/ai-studio/what-is-ai-studio) is an all-in-one platform for ISVs to build custom, intelligent assistants, or copilots. It combines capabilities from various Azure AI services, providing a unified workspace for developing and deploying generative AI applications. It's a collaborative platform where data scientists, developers, and other stakeholders can converge and work together.
+[Azure AI Foundry](/azure/ai-studio/what-is-ai-studio) is an all-in-one platform for ISVs to build custom, intelligent assistants, or copilots. It combines capabilities from various Azure AI services, providing a unified workspace for developing and deploying generative AI applications. It's a collaborative platform where data scientists, developers, and other stakeholders can converge and work together.
 
-With Azure AI Studio, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether using existing pretrained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tuning models on your data, or training your own custom AI models, Azure AI Studio accelerates the development of AI experiences that handle complex multimodal data.
+With Azure AI Foundry, ISVs gain full control over their copilot's behavior, personality, and capabilities. Whether using existing pretrained models from our [extensive catalog](/azure/ai-studio/how-to/model-catalog), fine-tuning models on your data, or training your own custom AI models, Azure AI Foundry accelerates the development of AI experiences that handle complex multimodal data.
 
-A standout feature of Azure AI Studio is its diverse range of models, catering to various industries and use cases. It allows ISVs to combine different models within a single solution to meet their unique requirements.
+A standout feature of Azure AI Foundry is its diverse range of models, catering to various industries and use cases. It allows ISVs to combine different models within a single solution to meet their unique requirements.
 
-Integration with [Azure AI Search](/azure/search/search-what-is-azure-search) enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Studio, with the added advantage of AI Search's Integrated Vectorization feature. This means any data your copilot needs can be automatically kept up-to-date in a vector database, facilitating fast and efficient retrieval during user prompt evaluation, saving you the task of implementing an indexing, chunking, embedding, and vectorizing pattern yourself.  
+Integration with [Azure AI Search](/azure/search/search-what-is-azure-search) enables ISVs to implement a Retrieval Augmented Generation (RAG) pattern for unstructured data directly from Azure AI Foundry, with the added advantage of AI Search's Integrated Vectorization feature. This means any data your copilot needs can be automatically kept up-to-date in a vector database, facilitating fast and efficient retrieval during user prompt evaluation, saving you the task of implementing an indexing, chunking, embedding, and vectorizing pattern yourself.  
   
-[Prompt Flow](/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow), a feature of Azure AI Studio, offers a visualized graph for orchestrating executable flows with Large Language Models (LLMs), prompts, and Python tools. It facilitates debugging, sharing, and iterating on your flows with ease through team collaboration.  
+[Prompt Flow](/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow), a feature of Azure AI Foundry portal, offers a visualized graph for orchestrating executable flows with Large Language Models (LLMs), prompts, and Python tools. It facilitates debugging, sharing, and iterating on your flows with ease through team collaboration.  
   
-For ISV teams who prefer a code-first approach, the [Azure AI SDK](/azure/ai-studio/how-to/sdk-install) offers a suite of packages for accessing Azure AI services, including the setup of Azure AI Studio projects and related resources. This allows developers and data scientists to manage AI components, configure AI models, pipelines, and services directly from code, while still making the graphical interface available for those who prefer it.  
+For ISV teams who prefer a code-first approach, the [Azure AI SDK](/azure/ai-studio/how-to/sdk-install) offers a suite of packages for accessing Azure AI services, including the setup of Azure AI Foundry projects and related resources. This allows developers and data scientists to manage AI components, configure AI models, pipelines, and services directly from code, while still making the graphical interface available for those who prefer it.  
   
-Prototyping is easy in Azure AI Studio via its Playground. A typical journey for a team working on a project in Azure AI Studio could start with an individual validating an idea in the Playground. Once attractive results are produced, they can be prompted from the Playground to Prompt Flow as a versioned and customized flow. Now a versioned artifact in the AI Project, the wider team can contribute where the flow is accessible via Azure AI Studio UI and via code-only. Multiple branches of logic to differing LLMs can be tested and evaluated at this point.
+Prototyping is easy in Azure AI Foundry portal via its Playground. A typical journey for a team working on a project in Azure AI Foundry could start with an individual validating an idea in the Playground. Once attractive results are produced, they can be prompted from the Playground to Prompt Flow as a versioned and customized flow. Now a versioned artifact in the AI Project, the wider team can contribute where the flow is accessible via Azure AI Foundry portal UI and via code-only. Multiple branches of logic to differing LLMs can be tested and evaluated at this point.
   
-Beyond the development phase, Azure AI Studio also provides an LLMOps toolchain, handling your end-to-end prompt engineering from development to production and ongoing maintenance.  
+Beyond the development phase, Azure AI Foundry also provides an LLMOps toolchain, handling your end-to-end prompt engineering from development to production and ongoing maintenance.  
   
-Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
+Azure AI Foundry supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
 
 **ISV scenarios:**
 
@@ -453,17 +453,16 @@ Azure AI Studio supports integration with Azure AI Search, Azure Open AI Service
 
 **Where to start:**
 
-- [What is AI Studio? - Azure AI Studio | Microsoft Learn](/azure/ai-studio/what-is-ai-studio?tabs=home)
-- [Build and deploy your own copilot with Prompt Flow in Azure AI Studio | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-ai-studio)
-- [Build and deploy your own copilot with the Azure AI CLI and SDK | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-sdk)
+- [What is AI Foundry? - Azure AI Foundry | Microsoft Learn](/azure/ai-studio/what-is-ai-studio?tabs=home)
+- [Build a custom knowledge retrieval (RAG) app with the Azure AI Foundry SDK](/azure/ai-studio/tutorials/copilot-sdk-create-resources)
 
 **Key takeaways:**
 
-- Azure AI Studio offers a powerful platform for creating custom, intelligent assistants, or copilots.
+- Azure AI Foundry offers a powerful platform for creating custom, intelligent assistants, or copilots.
 - ISVs can shape their copilot's behavior, personality, and capabilities, creating a truly bespoke solution.
-- Azure AI Studio supports a wide range of scenarios and integrates seamlessly with existing infrastructure.
-- Creating a custom copilot with Azure AI Studio can enhance the user experience and provide tailored solutions for specific use cases.
-- AI Studio delivers you a copilot service (or backend), surfaced as a single scaled endpoint
+- Azure AI Foundry supports a wide range of scenarios and integrates seamlessly with existing infrastructure.
+- Creating a custom copilot with Azure AI Foundry portal can enhance the user experience and provide tailored solutions for specific use cases.
+- AI Foundry delivers you a copilot service (or backend), surfaced as a single scaled endpoint
 - An ISV then has options to connect the service to an app, front end, or conversation surface of their choice, including any of the previous patterns above.
 - Remember, this pattern can be combined with others based on your specific needs. For instance, you might want to pair this pattern with Pattern A and plug-in to a Microsoft Copilot, or Pattern F to surface your own copilot bot in Teams.
 
@@ -506,7 +505,7 @@ One you decided to start working with Semantic Kernel, we suggest defining coupl
 **Where to start:**
 
 - [GitHub - microsoft/semantic-kernel: Integrate cutting-edge LLM technology quickly and easily into your apps](https://github.com/microsoft/semantic-kernel)
-- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/concepts/agents/)
+- [Building agents and copilots with Semantic Kernel | Microsoft Learn](/semantic-kernel/Frameworks/agent/)
 - [Understanding AI plugins in Semantic Kernel and beyond | Microsoft Learn](/semantic-kernel/agents/plugins/?tabs=Csharp)
 
 **Key takeaways:**

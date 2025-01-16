@@ -61,7 +61,7 @@ Because Semantic Kernel interacts directly with your code, it is possible to use
 
 Building a custom copilot enables you to create an application with a moderate coding lift and more customizability than adopting or extending a first-party, Microsoft Copilot would. While you need to build many components on your own, Microsoft provides notable support through SDKs, templates, and more, depending on the pattern you choose.
 
-A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural language capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI studio.](media/1_Procode_patterns_graphic.jpg)
+A decision tree for the "Build a custom copilot" approach. One arrow leads into a box reading "Enhances existing apps with AI that uses ISV data", which connects with Pattern D: Microsoft Graph APIs. Another arrow leads into a box reading "Creates chatbots that can respond to user questions and offload simple tasks", which leads into Pattern E: Azure OpenAI Assistants. A third arrow leads into a box that says "Adds natural language capabilities to ISV Teams chatbots through prebuilt templates", which leads to Pattern F: Teams AI Library. A final arrow leads to a box reading "Offers high customizability using pre-trained models, Azure AI SDK, and prompt flow", which leads to ![Pattern G: Azure AI Foundry.](media/1_Procode_patterns_graphic.jpg)
 
 ### Microsoft Graph APIs
 
@@ -153,11 +153,11 @@ Using the Microsoft Teams AI library, Contoso can easily add natural language ca
 
 These features help streamline the employee experience for Contoso's customers and enables them to get more intelligent answers, faster. Incorporating generative AI into their Teams chatbot makes its users more efficient at work, as they can naturally converse with the chatbot to receive support at work.
 
-### Azure AI Studio
+### Azure AI Foundry
 
-If you want to create a completely customized generative AI application that is highly flexible in terms of capabilities, you can use one of the many cutting-edge options from [Azure AI Studio](/azure/ai-studio/what-is-ai-studio). Building generative AI solutions with Azure AI Studio enables you to customize your solution to your specific needs, including meeting highly technical or niche requirements.
+If you want to create a completely customized generative AI application that is highly flexible in terms of capabilities, you can use one of the many cutting-edge options from [Azure AI Foundry](/azure/ai-studio/what-is-ai-studio). Building generative AI solutions with Azure AI Foundry enables you to customize your solution to your specific needs, including meeting highly technical or niche requirements.
 
-Azure AI Studio includes many options to build an AI application, such as prompt flow and the Azure AI SDK, both of which have pretrained models from which you can build. The service is integrated with other Azure services and provides resources for ongoing application development, such as an LLMOps toolchain.
+Azure AI Foundry includes many options to build an AI application, such as prompt flow and the Azure AI SDK, both of which have pretrained models from which you can build. The service is integrated with other Azure services and provides resources for ongoing application development, such as an LLMOps toolchain.
 
 You might be interested in this pattern if you:
 
@@ -170,11 +170,11 @@ The key benefits of this approach include:
 - Creating a bespoke copilot that can respond to more niche questions and requests.
 - Customizing your solution to adhere to unique security or data requirements.
 
-#### Azure AI Studio scenario
+#### Azure AI Foundry scenario
 
 Contoso wants to build a fully customized generative AI application to support their healthcare customers during claims creation and processing. To commercialize the application, they needed to be able to accurately process customer information, meet specialized security considerations, and generate accurate content.
 
-By using Azure AI Studio to create their own generative AI application from scratch, they were able to build a fully customized, highly secure application tailored to the needs of their healthcare customers. Contoso's new application enables clinicians working for insurers to easily fill out forms. The copilot they created through Azure AI Studio can:
+By using Azure AI Foundry to create their own generative AI application from scratch, they were able to build a fully customized, highly secure application tailored to the needs of their healthcare customers. Contoso's new application enables clinicians working for insurers to easily fill out forms. The copilot they created through Azure AI Foundry can:
 
 - Support building conditional authorization forms through conversational prompting based on a variety of organization-specific questions.
 - Query multiple patient records and review information within Contoso's application.
@@ -293,7 +293,7 @@ Links to more information for each build your own copilot pattern:
 - [Pattern D - Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview)
 - [Pattern E - Azure OpenAI Assistants](/azure/ai-services/openai/assistants-quickstart)
 - [Pattern F - Teams AI Library](/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension)
-- [Pattern G - Azure AI Studio](/azure/ai-studio/what-is-ai-studio)
+- [Pattern G - Azure AI Foundry](/azure/ai-studio/what-is-ai-studio)
 
 ### More information about building an app on Fabric
 

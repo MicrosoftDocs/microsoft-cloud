@@ -201,9 +201,9 @@ By evaluating your application's interactions within a longer conversation, you 
 
 ISV developers and data scientists need to use tools and metrics to evaluate their LLM solutions. Microsoft has many options available for you to explore.
 
-### Azure AI Studio
+### Azure AI Foundry
 
-[Azure AI Studio](/azure/ai-studio/what-is-ai-studio?tabs=home) provides observability features for model management, model benchmarks, tracing, evaluation, and fine-tuning your LLM solution.
+[Azure AI Foundry](/azure/ai-studio/what-is-ai-studio?tabs=home) provides observability features for model management, model benchmarks, tracing, evaluation, and fine-tuning your LLM solution.
 
 It supports [two types of automated metrics](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/ai-studio/concepts/evaluation-metrics-built-in.md) to evaluate generative AI applications: traditional ML metrics and AI-assisted metrics. You can also use the [chat playground](/azure/ai-studio/quickstarts/get-started-playground) and related features easily test your model.
 
@@ -213,7 +213,7 @@ It supports [two types of automated metrics](https://github.com/MicrosoftDocs/az
 
 - [Built-in evaluators](https://github.com/microsoft/promptflow/blob/main/src/promptflow-evals/samples/built_in_evaluators.py) that support custom code-based or prompt-based evaluators via [Prompty](https://github.com/microsoft/prompty) to cater to task-specific evaluation needs.
 - [Prompt tracing](https://microsoft.github.io/promptflow/how-to-guides/tracing/index.html) which tracks the inputs, outputs and context of prompts, and enables developers to identify the causes and origins of model issues
-- [Monitoring dashboards](/azure/ai-studio/how-to/develop/trace-production-sdk) including system (for example, token usage, latency) and custom metrics from evaluation to support pre- and post-deployment observability in [Azure AI Studio](https://build.microsoft.com/sessions/de3dfc8d-3aaf-4dc2-97c3-5b2937961d54?source=/speakers/1ba2b218-1cde-4724-902d-9d951536366c) and [Application Insights](https://build.microsoft.com/sessions/b27da931-0604-4072-84a1-3cdc84c537cc).
+- [Monitoring dashboards](/azure/ai-studio/how-to/develop/trace-production-sdk) including system (for example, token usage, latency) and custom metrics from evaluation to support pre- and post-deployment observability in [Azure AI Foundry](https://build.microsoft.com/sessions/de3dfc8d-3aaf-4dc2-97c3-5b2937961d54?source=/speakers/1ba2b218-1cde-4724-902d-9d951536366c) and [Application Insights](https://build.microsoft.com/sessions/b27da931-0604-4072-84a1-3cdc84c537cc).
 
 ### Other tools
 
