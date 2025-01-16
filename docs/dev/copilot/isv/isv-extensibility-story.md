@@ -454,8 +454,7 @@ Azure AI Foundry supports integration with Azure AI Search, Azure Open AI Servic
 **Where to start:**
 
 - [What is AI Foundry? - Azure AI Foundry | Microsoft Learn](/azure/ai-studio/what-is-ai-studio?tabs=home)
-- [Build and deploy your own copilot with Prompt Flow in Azure AI Foundry portal| Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-ai-studio)
-- [Build and deploy your own copilot with the Azure AI CLI and SDK | Microsoft Learn](/azure/ai-studio/tutorials/deploy-copilot-sdk)
+- [Build a custom knowledge retrieval (RAG) app with the Azure AI Foundry SDK](/azure/ai-studio/tutorials/copilot-sdk-create-resources)
 
 **Key takeaways:**
 
