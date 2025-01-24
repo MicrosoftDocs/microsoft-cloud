@@ -13,7 +13,7 @@ ms.topic: overview
 
 ## Intercept requests
 
-- [Discover URLs to watch](./discover-urls-to-watch.md)
+- [Discover URLs to watch](./discover-urls-watch.md)
 - [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
 - [Intercept requests with specific headers](./intercept-requests-specific-headers.md)
 - [Intercept requests to localhost](./intercept-localhost-requests.md)

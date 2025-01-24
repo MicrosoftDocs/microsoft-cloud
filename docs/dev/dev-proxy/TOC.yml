@@ -17,7 +17,7 @@
     - name: Intercept requests
       items: 
       - name: Discover URLs to watch
-        href: how-to/discover-urls-to-watch.md
+        href: how-to/discover-urls-watch.md
       - name: Intercept requests from specific processes
         href: how-to/intercept-requests-from-specific-processes.md
       - name: Intercept requests with specific headers
