@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/18/2024
+ms.date: 01/24/2025
 ms.topic: overview
 ---
 
@@ -13,6 +13,7 @@ ms.topic: overview
 
 ## Intercept requests
 
+- [Discover URLs to watch](./discover-urls-watch.md)
 - [Intercept requests from specific processes](./Intercept-requests-from-specific-processes.md)
 - [Intercept requests with specific headers](./intercept-requests-specific-headers.md)
 - [Intercept requests to localhost](./intercept-localhost-requests.md)
@@ -51,7 +52,7 @@ ms.topic: overview
 ## Minimal permissions
 
 - [Detect minimal Microsoft Graph API permissions](./Detect-minimal-Microsoft-Graph-API-permissions.md)
-- [Check if you are using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
+- [Check if you're using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md)
 
 ## Record
 
@@ -81,10 +82,10 @@ ms.topic: overview
 - [No random errors are thrown when using mocks](./Why-are-random-errors-not-thrown-when-using-mocks.md)
 - [No internet connection after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)
 - [All requests fail with 429 responses](./Why-do-I-keep-getting-429-responses.md)
-- [All requests fail with gateway timeout](./Why-do-all-requests-fail-with-gateway-timeout.md)
-- [Binary responses are not mocked](./Why-is-proxy-not-mocking-my-binary-response.md)
+- [All requests fail with gateway time-out](./Why-do-all-requests-fail-with-gateway-timeout.md)
+- [Binary responses aren't mocked](./Why-is-proxy-not-mocking-my-binary-response.md)
 - [No requests are intercepted from my .NET 4.8 app](./why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md)
-- [Options are not recognized](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
+- [Options aren't recognized](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
 - [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception.md)
 - [Uninstall](./Uninstall.md)
 - [Get help and support](./Get-help-and-support.md)

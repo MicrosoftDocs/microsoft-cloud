@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/18/2024
+ms.date: 01/24/2025
 ms.topic: overview
 ---
 
@@ -35,6 +35,7 @@ Name | Description
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
 [RewritePlugin](./rewriteplugin.md)|Rewrites requests.
+[UrlDiscoveryPlugin](./urldiscoveryplugin.md)|Creates a list of URLs that the proxy has intercepted.
 
 ## Azure API Center plugins
 
