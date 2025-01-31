@@ -2,6 +2,8 @@
   href: overview.md
 - name: Get started
   href: get-started.md
+- name: Configure Dev Proxy
+  href: configure.md
 - name: Tutorials
   items:
     - name: Simulate random errors for your own application
