@@ -1,21 +1,19 @@
 ---
-title: Get started with Dev Proxy
-description: Learn how to install, run, and configure Dev Proxy.
+title: Setup Dev Proxy
+description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/31/2025
+ms.date: 02/03/2025
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
 ---
 
-# Get started with Dev Proxy
+# Setup Dev Proxy
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this tutorial, you learn how to install, run, and configure Dev Proxy.
-
-If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
+In this tutorial, you learn how to install and run Dev Proxy.
 
 ## Install Dev Proxy
 
@@ -240,7 +238,7 @@ By default, Dev Proxy is configured to:
 - Intercept requests made to any [JSON Placeholder API](https://jsonplaceholder.typicode.com/) endpoint
 - Simulate API error responses and API throttling with a failure rate of 50%
 
-## Confirm if Dev Proxy is working correctly
+## Confirm that Dev Proxy is working correctly
 
 Dev Proxy intercepts requests that applications on your machine make to URLs that you register with Dev Proxy. When Dev Proxy detects a request, it either passes it through to the API (take no action), or returns a response. Let's confirm that Dev Proxy is working as expected.
 
@@ -276,6 +274,9 @@ If Dev Proxy returns an error response, you see the error message in the output.
  skip  │ RetryAfterPlugin: Request not throttled
  oops  ╰ 403 Forbidden
 ```
+
+> [!IMPORTANT]
+> If you don't see any output in the command prompt, it's likely that Dev Proxy isn't intercepting requests. Check the [common problems](../how-to/overview.md#common-problems) section for help.
 
 ## Stop Dev Proxy safely
 
