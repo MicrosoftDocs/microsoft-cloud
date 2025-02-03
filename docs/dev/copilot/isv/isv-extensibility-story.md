@@ -430,7 +430,7 @@ Prototyping is easy in Azure AI Foundry portal via its Playground. A typical jou
   
 Beyond the development phase, Azure AI Foundry also provides an LLMOps toolchain, handling your end-to-end prompt engineering from development to production and ongoing maintenance.  
   
-Azure AI Foundry supports integration with Azure AI Search, Azure Open AI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
+Azure AI Foundry supports integration with Azure AI Search, Azure OpenAI Service, and other Azure AI services, simplifying resource management for ISVs. It also provides a project-oriented workspace, fostering collaboration against shared compute, model deployments, and services.  
 
 **ISV scenarios:**
 
