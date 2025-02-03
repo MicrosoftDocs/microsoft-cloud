@@ -284,7 +284,7 @@ When you no longer require Dev Proxy to be running, you should always stop it sa
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-If you shut down the command prompt session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](./how-to/overview.md#common-problems).
+If you shut down the command prompt session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](../how-to/overview.md#common-problems).
 
 ## Next step
 

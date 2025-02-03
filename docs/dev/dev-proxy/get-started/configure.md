@@ -9,7 +9,7 @@ ms.topic: get-started
 
 # Configure Dev Proxy
 
-Dev Proxy is highly configurable. It uses [plugins](./technical-reference/plugin-architecture.md) to implement functionality. You can combine any of the [standard plugins](./technical-reference/overview.md#plugins) and [build your own](./how-to/create-custom-plugin.md). By using plugins and custom configurations, you can tailor Dev Proxy to your specific needs. Dev Proxy includes a default configuration file, named `devproxyrc.json`. The file is located in Dev Proxy's installation folder.
+Dev Proxy is highly configurable. It uses [plugins](../technical-reference/plugin-architecture.md) to implement functionality. You can combine any of the [standard plugins](../technical-reference/overview.md#plugins) and [build your own](../how-to/create-custom-plugin.md). By using plugins and custom configurations, you can tailor Dev Proxy to your specific needs. Dev Proxy includes a default configuration file, named `devproxyrc.json`. The file is located in Dev Proxy's installation folder.
 
 > [!TIP]
 > We recommend that you create custom configuration files. By using custom configuration files, you can easily switch between different configurations and can include them in your source control system along with your project's code. Storing your configuration with your project also makes it easier to share it with your team.
@@ -54,7 +54,7 @@ The configuration file consists of three sections:
 
 1. Schema, defined in the `$schema` property. To ensure that your config file is valid, be sure to use the same schema version as the Dev Proxy version you're using.
 1. The list of plugins that Dev Proxy uses, defined in the `plugins` array.
-1. General [configuration settings](./technical-reference/proxy-settings.md).
+1. General [configuration settings](../technical-reference/proxy-settings.md).
 
 > [!IMPORTANT]
 > Dev Proxy applies plugins in the order they're listed in the configuration file. Be mindful of the order to get the desired behavior.
@@ -79,8 +79,8 @@ Some plugins are configurable and expose their own settings. Each plugin has its
 
 If you want to keep learning about using Dev Proxy, consider the following tutorials:
 
-- [Simulate random errors for your own application](./tutorials/simulate-errors-for-your-own-app.md)
-- [Test a JavaScript client-side web application that calls Microsoft Graph](./tutorials/test-javascript-client-side-web-app-microsoft-graph.md)
-- [Test a JavaScript client-side web application](./tutorials/test-javascript-client-side-web-app.md)
+- [Simulate random errors for your own application](../tutorials/simulate-errors-for-your-own-app.md)
+- [Test a JavaScript client-side web application that calls Microsoft Graph](../tutorials/test-javascript-client-side-web-app-microsoft-graph.md)
+- [Test a JavaScript client-side web application](../tutorials/test-javascript-client-side-web-app.md)
 
 Otherwise, check out our [how to guides](../how-to/overview.md) to learn how to use Dev Proxy for specific scenarios.
