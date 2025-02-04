@@ -3,7 +3,7 @@ title: Dev Proxy doesn't intercept requests
 description: What to do when Dev Proxy is running, but doesn't intercept any requests.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/03/2025
+ms.date: 02/04/2025
 ---
 
 # Dev Proxy doesn't intercept requests

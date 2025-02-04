@@ -3,7 +3,7 @@ title: Configure Dev Proxy
 description: Learn how to configure Dev Proxy to your needs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/03/2025
+ms.date: 02/04/2025
 ms.topic: get-started
 ---
 
@@ -69,6 +69,7 @@ Some plugins are configurable and expose their own settings. Each plugin has its
 [Dev Proxy Toolkit](https://aka.ms/devproxy/toolkit) is a Visual Studio Code extension that significantly simplifies configuring Dev Proxy. Here are some of the features it includes:
 
 - code snippets for common configuration scenarios
+- extended linting and IntelliSense for Dev Proxy configuration files
 - custom editor actions and commands to conveniently start and stop Dev Proxy
 - notifications about new versions of Dev Proxy
 

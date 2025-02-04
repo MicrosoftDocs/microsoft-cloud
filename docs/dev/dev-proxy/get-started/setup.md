@@ -3,7 +3,7 @@ title: Setup Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/03/2025
+ms.date: 02/04/2025
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
