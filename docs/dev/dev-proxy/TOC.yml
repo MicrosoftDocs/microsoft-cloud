@@ -2,8 +2,8 @@
   href: overview.md
 - name: Get started
   items:
-    - name: Setup & first run
-      href: get-started/setup.md
+    - name: Set up and first run
+      href: get-started/set-up.md
     - name: Configuration
       href: get-started/configure.md
 - name: Tutorials

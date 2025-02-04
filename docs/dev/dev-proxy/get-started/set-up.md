@@ -1,5 +1,5 @@
 ---
-title: Setup Dev Proxy
+title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
@@ -9,7 +9,7 @@ zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
 ---
 
-# Setup Dev Proxy
+# Set up Dev Proxy
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 

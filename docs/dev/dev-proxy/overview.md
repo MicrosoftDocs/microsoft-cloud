@@ -26,4 +26,4 @@ Dev Proxy is a command-line tool that works on any platform. Because it intercep
 How does your app handle API errors?
 
 > [!div class="nextstepaction"]
-> [Get started](./get-started/setup.md)
+> [Get started](./get-started/set-up.md)

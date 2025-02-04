@@ -71,7 +71,7 @@ landingContent:
           - text: What is Dev Proxy?
             url: dev-proxy/overview.md
           - text: Get started
-            url: dev-proxy/get-started/setup.md
+            url: dev-proxy/get-started/set-up.md
           - text: Tutorials
             url: dev-proxy/tutorials/test-javaScript-client-side-web-app-microsoft-graph.md
           - text: How-to

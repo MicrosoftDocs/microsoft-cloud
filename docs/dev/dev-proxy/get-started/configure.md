@@ -52,9 +52,9 @@ The following code snippet shows the default Dev Proxy configuration file:
 
 The configuration file consists of three sections:
 
-1. Schema, defined in the `$schema` property. To ensure that your config file is valid, be sure to use the same schema version as the Dev Proxy version you're using.
-1. The list of plugins that Dev Proxy uses, defined in the `plugins` array.
-1. General [configuration settings](../technical-reference/proxy-settings.md).
+- Schema, defined in the `$schema` property. To ensure that your config file is valid, be sure to use the same schema version as the Dev Proxy version you're using.
+- The list of plugins that Dev Proxy uses, defined in the `plugins` array.
+- General [configuration settings](../technical-reference/proxy-settings.md).
 
 > [!IMPORTANT]
 > Dev Proxy applies plugins in the order they're listed in the configuration file. Be mindful of the order to get the desired behavior.
