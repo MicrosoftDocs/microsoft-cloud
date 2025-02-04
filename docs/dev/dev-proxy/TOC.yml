@@ -1,7 +1,11 @@
 - name: Dev Proxy documentation
   href: overview.md
 - name: Get started
-  href: get-started.md
+  items:
+    - name: Set up and first run
+      href: get-started/set-up.md
+    - name: Configuration
+      href: get-started/configure.md
 - name: Tutorials
   items:
     - name: Simulate random errors for your own application
@@ -102,8 +106,6 @@
         href: how-to/use-preset-configurations.md
     - name: Change settings
       items: 
-      - name: Change console output to use icons
-        href: how-to/change-console-output-to-use-icons.md
       - name: Change logging level
         href: how-to/change-logging-level.md
       - name: Clear the output
@@ -137,7 +139,9 @@
           - name: With GitHub Actions
             href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
-      items: 
+      items:
+      - name: Dev Proxy doesn't intercept requests
+        href: how-to/no-requests-intercepted.md
       - name: No random errors are thrown when using mocks
         href: how-to/why-are-random-errors-not-thrown-when-using-mocks.md
       - name: All requests fail with gateway time out

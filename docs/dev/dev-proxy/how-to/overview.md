@@ -77,8 +77,20 @@ ms.topic: overview
 - [Use local language model with Dev Proxy](./use-language-model.md)
 - [Refresh local Microsoft Graph database](./Refresh-local-Microsoft-Graph-database.md)
 
+## Use Dev Proxy
+
+- [With Node.js applications](./use-dev-proxy-with-nodejs.md)
+- [With Node.js applications in Docker containers](./use-dev-proxy-with-nodejs-docker.md)
+- [With JavaScript Azure Functions](./use-dev-proxy-with-javascript-azure-functions.md)
+- [With .NET applications](./use-dev-proxy-with-dotnet.md)
+- [With .NET applications in Docker containers](./use-dev-proxy-with-dotnet-docker.md)
+- [With .NET Aspire applications](./use-dev-proxy-with-dotnet-aspire.md)
+- [With SharePoint Framework (SPFx) solutions](./use-dev-proxy-with-spfx.md)
+- [In CI/CD scenarios](./use-dev-proxy-in-ci-cd-overview.md)
+
 ## Common problems
 
+- [No requests are intercepted](./no-requests-intercepted.md)
 - [No random errors are thrown when using mocks](./Why-are-random-errors-not-thrown-when-using-mocks.md)
 - [No internet connection after using the proxy](./Why-is-my-internet-connection-not-working-after-using-the-proxy.md)
 - [All requests fail with 429 responses](./Why-do-I-keep-getting-429-responses.md)

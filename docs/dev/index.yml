@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 7/12/2024
+  ms.date: 02/03/2025
 
 landingContent:
   - title: Azure and Microsoft 365 Tutorials
@@ -71,7 +71,7 @@ landingContent:
           - text: What is Dev Proxy?
             url: dev-proxy/overview.md
           - text: Get started
-            url: dev-proxy/get-started.md
+            url: dev-proxy/get-started/set-up.md
           - text: Tutorials
             url: dev-proxy/tutorials/test-javaScript-client-side-web-app-microsoft-graph.md
           - text: How-to

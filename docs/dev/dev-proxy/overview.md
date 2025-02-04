@@ -3,7 +3,7 @@ title: What is Dev Proxy?
 description: Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/22/2024
+ms.date: 02/03/2025
 ms.topic: overview
 ---
 
@@ -26,4 +26,4 @@ Dev Proxy is a command-line tool that works on any platform. Because it intercep
 How does your app handle API errors?
 
 > [!div class="nextstepaction"]
-> [Get started](./get-started.md)
+> [Get started](./get-started/set-up.md)
