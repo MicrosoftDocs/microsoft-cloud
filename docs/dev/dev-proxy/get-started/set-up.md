@@ -1,21 +1,19 @@
 ---
-title: Get started with Dev Proxy
-description: Learn how to install, run, and configure Dev Proxy.
+title: Set up Dev Proxy
+description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/13/2024
+ms.date: 02/04/2025
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
 ---
 
-# Get started with Dev Proxy
+# Set up Dev Proxy
 
 Dev Proxy is a command line tool that helps you simulate behaviors and errors of cloud APIs to help you build resilient apps.
 
-In this tutorial, you learn how to install, run, and configure Dev Proxy.
-
-If you do run into any difficulties, don’t hesitate to contact us by raising a [new issue](https://github.com/microsoft/dev-proxy/issues/new) and we're glad to help you out.
+In this tutorial, you learn how to install and run Dev Proxy.
 
 ## Install Dev Proxy
 
@@ -32,7 +30,7 @@ winget install Microsoft.DevProxy --silent
 ```
 
 > [!IMPORTANT]
-> Dev Proxy installer adds a new entry to PATH. To use Dev Proxy after installation, you must restart the command prompt to ensure that the PATH environment variables have refreshed.
+> Dev Proxy installer adds a new entry to PATH. To use Dev Proxy after installation, you must restart the command prompt to refresh the PATH environment variable.
 >
 
 # [Manual](#tab/manual)
@@ -42,11 +40,11 @@ winget install Microsoft.DevProxy --silent
 To start Dev Proxy from any directory, add its installation folder location to your PATH.
 
 1. Open the `Start` menu.
-1. Enter `Edit environment variables for your account` into the search box, select the result in the list to open the `Environment Variables` dialog box.
+1. Enter `Edit environment variables for your account` into the search box. Select the result in the list to open the `Environment Variables` dialog box.
 1. In the `User variables for <username>` section, select the row with the variable name of `Path` and select the `Edit...` button.
 1. In the `Edit environment variable` dialog box, select the `New` button.
 1. Enter `%USERPROFILE%\devproxy` into the new row and select `OK`.
-1. Select `OK` to confirm changes.
+1. To confirm changes, select `OK`.
 
 ---
 
@@ -68,7 +66,7 @@ To start Dev Proxy from any directory, add its installation folder location to y
 >
 > ---
 >
-> To run the beta version of Dev Proxy use `devproxy-beta`
+> To run the beta version of Dev Proxy, use `devproxy-beta`
 >
 
 ::: zone-end
@@ -118,7 +116,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 >
 > ---
 >
-> To run the beta version of Dev Proxy use `devproxy-beta`
+> To run the beta version of Dev Proxy, use `devproxy-beta`
 >
 
 ::: zone-end
@@ -178,7 +176,7 @@ The below steps show how to add the proxy to PATH when using bash shell. Dependi
 >
 > ---
 >
-> To run the beta version of Dev Proxy use `devproxy-beta`
+> To run the beta version of Dev Proxy, use `devproxy-beta`
 >
 
 ::: zone-end
@@ -240,11 +238,9 @@ By default, Dev Proxy is configured to:
 - Intercept requests made to any [JSON Placeholder API](https://jsonplaceholder.typicode.com/) endpoint
 - Simulate API error responses and API throttling with a failure rate of 50%
 
-## Intercept requests
+## Confirm that Dev Proxy is working correctly
 
-Dev Proxy will intercept requests made to known URLs from any application on your machine. When a request is detected, Dev Proxy passes the request through to the API (take no action), or return a response.
-
-- Send a request to the JSON Placeholder API from the command line and switch back to the proxy process to view the output.
+Dev Proxy intercepts requests that applications on your machine make to URLs that you register with Dev Proxy. When Dev Proxy detects a request, it either passes it through to the API (take no action), or returns a response. Let's confirm that Dev Proxy is working as expected.
 
 In PowerShell, use the `Invoke-WebRequest` cmdlet to send a GET request to the JSON Placeholder API.
 
@@ -260,30 +256,27 @@ curl -ikx http://localhost:8000 https://jsonplaceholder.typicode.com/posts
 
 You can also use an API client like [Postman](https://www.postman.com/product/api-client/) to send a GET request to `https://jsonplaceholder.typicode.com/posts`.
 
-An entry is shown with some basic information about the incoming request and the action that Dev Proxy performed. Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
+In the command line where Dev Proxy is running, you see the information about the request and the action that Dev Proxy performed. By default, Dev Proxy simulates an error response with a 50% chance. If your request doesn't return an error, Dev Proxy passes it through.
 
 ```text
  req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ time  │ 1/31/2025 12:12:14 PM +00:00
+ skip  │ RetryAfterPlugin: Request not throttled
+ skip  │ GenericRandomErrorPlugin: Pass through
  api   ╰ Passed through
 ```
 
-- Repeat sending requests to the JSON Placeholder API from the command line, until an error response is returned.
+If Dev Proxy returns an error response, you see the error message in the output.
 
 ```text
  req   ╭ GET https://jsonplaceholder.typicode.com/posts
- api   ╰ Passed through
-
- req   ╭ GET https://jsonplaceholder.typicode.com/posts
+ time  │ 1/31/2025 12:12:37 PM +00:00
+ skip  │ RetryAfterPlugin: Request not throttled
  oops  ╰ 403 Forbidden
 ```
 
-When Dev Proxy returns an error response, a `chaos` label is displayed in the entry.
-
-- Try sending requests to other endpoints available on the JSON Placeholder API
-  - `https://jsonplaceholder.typicode.com/posts`
-  - `https://jsonplaceholder.typicode.com/posts/1`
-  - `https://jsonplaceholder.typicode.com/posts/1/comments`
-  - `https://jsonplaceholder.typicode.com/comments?postId=1`
+> [!IMPORTANT]
+> If you don't see any output in the command prompt, it's likely that Dev Proxy isn't intercepting requests. Check the [common problems](../how-to/overview.md#common-problems) section for help.
 
 ## Stop Dev Proxy safely
 
@@ -291,126 +284,11 @@ When you no longer require Dev Proxy to be running, you should always stop it sa
 
 - Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
 
-If you shut down the command prompt session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](./how-to/overview.md#common-problems).
-
-## Update the URLs to watch
-
-By default, Dev Proxy is configured to intercept any request made to the [JSON Placeholder API](https://jsonplaceholder.typicode.com/). You can configure Dev Proxy to intercept requests to any HTTP API.
-
-- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
-- Locate the `urlsToWatch` array.
-
-```json
-"urlsToWatch": [
-  "https://jsonplaceholder.typicode.com/*"
-],
-```
-
-The `urlsToWatch` array represents the known URLs. Dev Proxy watches requests from the current entry to any endpoint. The entry uses an asterisk after the URL as a wildcard. Adding more entries into this array expands the URLs that Dev Proxy watches out for.
-
-Let's consider that you don't want Dev Proxy to intercept requests made to a specific endpoint.
-
-- Add a new entry to the `urlsToWatch` array.
-
-```json
-"urlsToWatch": [
-  "!https://jsonplaceholder.typicode.com/posts/2",
-  "https://jsonplaceholder.typicode.com/*"
-],
-```
-
-The exclamation mark at the beginning of the URL tells Dev Proxy to ignore any requests that match that URL. You can mix and match exclamation marks and asterisks in a URL.
-
-- At the command line, enter `devproxy` and press <kbd>Enter</kbd> to start Dev Proxy.
-- Send a request to `https://jsonplaceholder.typicode.com/posts/2` from the command line and view the output.
-
-When an ignored URL is matched to a request, Dev Proxy doesn't process the request, and so no output is displayed.
-
-The order in which the URLs are listed in the `urlsToWatch` array is important. Dev Proxy processes these URLs in order. When a URL matches, it isn’t processed again. Therefore, placing the URL first ensures that the request is ignored before the next URL is processed.
-
-## Change failure rate
-
-By default, Dev Proxy is configured to fail requests with a 50% chance to URLs that are being watched. You can increase or decrease the chance of a request returning an error response.
-
-Let’s update the failure rate so that every request to the JSON Placeholder API returns an error response.
-
-- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
-- Locate the `rate` property and update the value from `50` to `100`.
-
-The `devproxyrc.json` file contains configuration settings that are used when you start Dev Proxy. When changing configuration settings, you should always stop and start Dev Proxy for the changes to be persisted.
-
-- At the command line, enter `devproxy` and press <kbd>Enter</kbd> to start Dev Proxy.
-- Send a request to the JSON Placeholder API from the command line and view the output.
-
-Alternatively, you can override configuration settings at runtime by using the `--failure-rate` option when starting Dev Proxy.
-
-```text
-devproxy --failure-rate 100
-```
-
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
-
-## Simulate throttling
-
-By default, Dev Proxy returns a range of generic 400 and 500 error responses. You can customize these error responses to your own needs.
-
-Dev Proxy uses [plugins](./technical-reference/overview.md#plugins) to enable different API behaviors, by default, we enable two plugins for you.
-
-- [GenericRandomErrorPlugin](./technical-reference/genericrandomerrorplugin.md) plugin provides the ability for Dev Proxy to respond with an error response.
-- [RetryAfterPlugin](./technical-reference/retryafterplugin.md) plugin provides the ability for Dev Proxy to inject a dynamic value into the Retry-After header in the error response.
-
-Let’s change the configuration so that Dev Proxy always returns a `429 Too Many requests` error response to simulate throttling.
-
-First let's locate the location of the file that contains the error definitions.
-
-- Open the Dev Proxy configuration file by running in command line: `devproxy config`.
-- In the `plugins` array, locate the entry for the [GenericRandomErrorPlugin](./technical-reference/genericrandomerrorplugin.md) plugin. Note the value of the `configSection` property.
-- Further down the file, locate the `genericRandomErrorPlugin` object. Note the value of the `errorsFile` property.
-
-> [!TIP]
-> The location of the errors file is also displayed in the output when you start Dev Proxy.
-
-- In the Dev Proxy installation folder, open `devproxy-errors.json` in a text editor.
-- Remove all response entries in the `responses` array, except for the `429` response.
-
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.20.0/genericrandomerrorplugin.schema.json",
-  "errors": [
-    {
-      "request": {
-        "url": "https://jsonplaceholder.typicode.com/*"
-      },
-      "responses": [
-        {
-          "statusCode": 429,
-          "body": {
-            "message": "Too Many Requests",
-            "details": "The user has sent too many requests in a given amount of time (\"rate limiting\")."
-          },
-          "headers": {
-            "Retry-After": "@dynamic"
-          }
-        }
-      ]
-    }
-  ]
-}
-```
-
-- At the command line, enter `devproxy` and press <kbd>Enter</kbd> to start Dev Proxy.
-- Send a request to the JSON Placeholder API from the command line and view the output.
-
-```text
- req   ╭ GET https://jsonplaceholder.typicode.com/posts
- oops  ╰ 429 TooManyRequests
-```
-
-- Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to safely stop Dev Proxy.
+If you shut down the command prompt session, Dev Proxy doesn't unregister correctly as the system proxy, and you might experience some [common problems](../how-to/overview.md#common-problems).
 
 ## Next step
 
-Learn how to use Dev Proxy to simulate random errors for your own application.
+Learn how to configure Dev Proxy to your needs. Dev Proxy is highly flexible and supports many different scenarios. Learn more about how to configure it to your specific scenario.
 
 > [!div class="nextstepaction"]
-> [Simulate errors for your own app](./tutorials/simulate-errors-for-your-own-app.md)
+> [Configure Dev Proxy](./configure.md)
