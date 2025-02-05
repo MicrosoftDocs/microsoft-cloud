@@ -3,7 +3,7 @@ title: GraphConnectorNotificationPlugin
 description: GraphConnectorNotificationPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 02/05/2025
 ---
 
 # GraphConnectorNotificationPlugin
@@ -73,7 +73,7 @@ Following is an example of a notification that Teams Admin Center sends, when a 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.16.0/mockrequestplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/mockrequestplugin.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",

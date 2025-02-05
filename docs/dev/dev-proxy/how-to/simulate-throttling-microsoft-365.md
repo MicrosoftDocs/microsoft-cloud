@@ -3,7 +3,7 @@ title: Simulate throttling on Microsoft 365 APIs
 description: How to test that your application connected to Microsoft 365 APIs handles throttling properly
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/25/2024
+ms.date: 02/05/2025
 ---
 
 # Simulate throttling on Microsoft 365 APIs
@@ -16,7 +16,7 @@ To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -55,7 +55,7 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",

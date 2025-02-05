@@ -3,7 +3,7 @@ title: Test a JavaScript client-side web application that calls Microsoft Graph
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 02/05/2025
 ---
 
 # Test a JavaScript client-side web application that calls Microsoft Graph
@@ -47,7 +47,7 @@ Dev Proxy comes with a preset configuration for testing apps that send requests 
 1. In the running app, select the `Without SDK` button.
 
   > [!CAUTION]
-  > If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/microsoft/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
+  > If you got an empty page after clicking the `Without SDK` button, check that you have [configured the Azure AD App Registration](https://github.com/dotnet/dev-proxy/tree/main/samples#configure-azure-ad-app-registration). The issue occurs when the `.env` file containing the `Client ID` of your app registration is missing.
 
 1. Select the `Login` button and complete the sign in flow.
 
