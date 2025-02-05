@@ -3,7 +3,7 @@ title: Change request failure rate
 description: How to configure the request failure rate
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 02/05/2025
 ---
 
 # Change request failure rate
@@ -18,7 +18,7 @@ Alternatively, you can configure the failure rate in the Dev Proxy configuration
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
   "rate": 80
 }
 ```

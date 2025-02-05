@@ -3,7 +3,7 @@ title: Simulate a CRUD API across the internet
 description: How to simulate a CRUD API across the internet.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/24/2024
+ms.date: 02/05/2025
 ---
 
 # Simulate a CRUD API across the internet
@@ -65,7 +65,7 @@ Next, create the API configuration file named `orders-api.json`, where you speci
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.17.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/crudapiplugin.schema.json",
   "baseUrl": "http://api.northwind.com/orders",
   "auth": "none",
   "dataFile": "orders-data.json",
@@ -101,7 +101,7 @@ Next, create a Dev Proxy configuration file named `devproxyrc.json` with the `Cr
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.17.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "CrudApiPlugin",
