@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 11/8/2024
+ms.date: 02/05/2025
 ---
 
 # Create a custom plugin
@@ -15,7 +15,7 @@ In this article, you learn how to create a custom plugin for the Dev Proxy. By c
 Before you start creating a custom plugin, make sure you have the following prerequisites:
 
 - [.NET Core SDK](https://dotnet.microsoft.com/download)
-- The latest version of the Dev Proxy Abstractions DLL, which you can find on the [Dev Proxy GitHub releases](https://github.com/microsoft/dev-proxy/releases) page
+- The latest version of the Dev Proxy Abstractions DLL, which you can find on the [Dev Proxy GitHub releases](https://github.com/dotnet/dev-proxy/releases) page
 
 ## Create a new plugin
 

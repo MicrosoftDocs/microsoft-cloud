@@ -3,7 +3,7 @@ title: Simulate OpenAI API
 description: How to simulate OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/18/2024
+ms.date: 02/05/2025
 ---
 
 # Simulate OpenAI API
@@ -25,7 +25,7 @@ To simulate OpenAI API responses using Dev Proxy, you need to enable the `OpenAI
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -62,7 +62,7 @@ The complete configuration file looks like this.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

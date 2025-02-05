@@ -3,7 +3,7 @@ title: Configure Dev Proxy
 description: Learn how to configure Dev Proxy to your needs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/04/2025
+ms.date: 02/05/2025
 ms.topic: get-started
 ---
 
@@ -22,7 +22,7 @@ The following code snippet shows the default Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
