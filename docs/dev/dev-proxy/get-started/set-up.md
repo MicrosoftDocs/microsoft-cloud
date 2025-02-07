@@ -3,7 +3,7 @@ title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/04/2025
+ms.date: 02/07/2025
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -80,7 +80,7 @@ The easiest way to install Dev Proxy is by using Homebrew. Alternatively, you ca
 To install Dev Proxy using Homebrew, run the following commands:
 
 ```console
-brew tap microsoft/dev-proxy
+brew tap dotnet/dev-proxy
 brew install dev-proxy
 ```
 
@@ -106,7 +106,7 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 > To install Dev Proxy using Homebrew, run the following commands:
 >
 > ```console
-> brew tap microsoft/dev-proxy
+> brew tap dotnet/dev-proxy
 > brew install dev-proxy-beta
 > ```
 >
