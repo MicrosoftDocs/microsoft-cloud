@@ -20,7 +20,7 @@ To mock API responses, you need to do two things:
 
 ## Create a file with mock responses
 
-Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md). The plugin allows you to define a set of mock responses. You define the mocks in a [separate file](../technical-reference/mockresponseplugin#mocks-file-properties). The following code snippet demonstrates a simple mock response for a `GET` request to `https://jsonplaceholder.typicode.com/posts/1`.
+Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md). The plugin allows you to define a set of mock responses. You define the mocks in a [separate file](../technical-reference/mockresponseplugin.md#mocks-file-properties). The following code snippet demonstrates a simple mock response for a `GET` request to `https://jsonplaceholder.typicode.com/posts/1`.
 
 ```json
 {
