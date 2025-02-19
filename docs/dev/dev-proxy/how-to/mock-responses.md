@@ -3,17 +3,24 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 02/19/2025
 ---
 
 # Mock responses
 
-To define mock responses, create a file named `mocks.json` in the current working directory. This file allows you to define a specific set of mocks for each project that you work with. The file contains an object with a `mocks` array containing [mock](../technical-reference/mockresponseplugin.md#response-object) objects.
+Using Dev Proxy is the easiest way to mock an API. Whether you're building the front-end and the API isn't ready yet, you need to integrate your back-end with an external service, or you want to test your application with different responses, Dev Proxy can help you simulate API responses. What's great about using Dev Proxy is that it doesn't require any changes to your application code. You define mock responses for any API that your application interacts with and Dev Proxy intercepts the requests and responds with the mock responses that you defined.
+
+To mock API responses, you need to do two things:
+
+1. Create a file with mock responses.
+2. Configure Dev Proxy to use the mock responses.
 
 > [!TIP]
-> Instead of creating the mocks file manually, you can use the [`MockGeneratorPlugin`](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
+> If you use Visual Studio Code, consider installing the [Dev Proxy Toolkit](https://aka.ms/devproxy/toolkit) extension. It significantly simplifies working with Dev Proxy configuration files.
 
-The following configuration demonstrates two mock responses for retrieving information about the current user. When you request information about the current user, proxy responds with a mock response. When you request the information about the user's photo, proxy returns a 404 status code.
+## Create a file with mock responses
+
+Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md). The plugin allows you to define a set of mock responses. You define the mocks in a [separate file](../technical-reference/mockresponseplugin.md#mocks-file-properties). The following code snippet demonstrates a simple mock response for a `GET` request to `https://jsonplaceholder.typicode.com/posts/1`.
 
 ```json
 {
@@ -21,48 +28,44 @@ The following configuration demonstrates two mock responses for retrieving infor
   "mocks": [
     {
       "request": {
-        "url": "https://graph.microsoft.com/v1.0/me",
+        "url": "https://jsonplaceholder.typicode.com/posts/1",
         "method": "GET"
       },
       "response": {
+        "statusCode": 200,
         "body": {
-          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-          "businessPhones": ["+1 412 555 0109"],
-          "displayName": "Megan Bowen",
-          "givenName": "Megan",
-          "jobTitle": "Auditor",
-          "mail": "MeganB@M365x214355.onmicrosoft.com",
-          "mobilePhone": null,
-          "officeLocation": "12/1110",
-          "preferredLanguage": "en-US",
-          "surname": "Bowen",
-          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+          "userId": 1,
+          "id": 1,
+          "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
         },
         "headers": [
           {
-            "name": "content-type",
-            "value": "application/json; odata.metadata=minimal"
-          }
+            "name": "Date",
+            "value": "Wed, 19 Feb 2025 09:03:37 GMT"
+          },
+          {
+            "name": "Content-Type",
+            "value": "application/json; charset=utf-8"
+          },
+          {
+            "name": "Content-Length",
+            "value": "292"
+          },
+          // [...] trimmed for brevity
         ]
-      }
-    },
-    {
-      "request": {
-        "url": "https://graph.microsoft.com/v1.0/me/photo",
-        "method": "GET"
-      },
-      "response": {
-        "statusCode": 404
       }
     }
   ]
 }
 ```
 
-## Order precedence
+> [!TIP]
+> Instead of creating the mocks file manually, you can use the [`MockGeneratorPlugin`](../technical-reference/mockgeneratorplugin.md) to generate the mocks file based on the intercepted requests.
 
-Mocks are matched in the order in which they're defined in the `mocks.json` file. If you define multiple responses with the same URL and method, the first matching response is used.
+### Order precedence
+
+Dev Proxy matches mocks in the order in which you define them in the mocks file. If you define multiple responses with the same URL and method, Dev Proxy uses the first matching response.
 
 When you use the following configuration, proxy responds to all `GET` requests to `https://graph.microsoft.com/v1.0/me/photo` with `500 Internal Server Error`.
 
@@ -92,11 +95,11 @@ When you use the following configuration, proxy responds to all `GET` requests t
 }
 ```
 
-## Wildcard support
+### Wildcard support
 
-The proxy supports the use of wildcards in the URL property. You can use the asterisk character (`*`) to match any series of characters in the URL.
+Dev Proxy supports the use of wildcards in the URL property. You can use the asterisk character (`*`) to match any series of characters in the URL.
 
-When you use the following configuration, proxy responds to all requests to get any user's profile with the same response.
+When you use the following configuration, Dev Proxy responds to all requests to get any user's profile with the same response.
 
 ```json
 {
@@ -122,7 +125,7 @@ When you use the following configuration, proxy responds to all requests to get 
 }
 ```
 
-When you use the following configuration, proxy returns the same image from disk when you request to get the binary of any user's photo.
+When you use the following configuration, Dev Proxy returns the same image from disk when you request to get the binary of any user's photo.
 
 ```json
 {
@@ -141,7 +144,7 @@ When you use the following configuration, proxy returns the same image from disk
 }
 ```
 
-When you use the following configuration, proxy returns the same response when you request to get the current user's profile with any query string parameter.
+When you use the following configuration, Dev Proxy returns the same response when you request to get the current user's profile with any query string parameter.
 
 ```json
 {
@@ -169,7 +172,7 @@ When you use the following configuration, proxy returns the same response when y
 },
 ```
 
-## Respond with contents of a file
+### Respond with contents of a file
 
 To keep your mocks file clean and organized, you can store the contents of the response in a separate file and reference it in the mocks file. To instruct Dev Proxy, to load the mock response body from a file, set the `body` property to `@` followed by the file path relative to the mocks file.
 
@@ -195,11 +198,36 @@ For example, the following mock response configuration, instructs Dev Proxy to r
 
 Using the `@`-token works with text and [binary files](./mock-responses-that-return-binary-data.md).
 
-## Microsoft Graph Batch support
+## Configure Dev Proxy to use the mock responses
 
-Dev Proxy supports mocking responses that are sent in batch requests to Microsoft Graph.
+After you create the mocks file, you need to configure Dev Proxy to use the mock responses. To configure Dev Proxy to mock responses, add the `MockResponsePlugin` to the list of plugins in the [devproxyrc](../technical-reference/devproxyrc.md) file.
 
-There are no special requirements for including responses to batch requests in your mock files, however if a request isn't matched with a mocked response, a `502 Bad Gateway` response is returned.
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MockResponsePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "configSection": "mockResponsePlugin"
+    }
+  ],
+  "urlsToWatch": [
+    "https://jsonplaceholder.typicode.com/*"
+  ],
+  "mockResponsePlugin": {
+    "mocksFile": "mocks.json"
+  },
+  "logLevel": "information",
+  "newVersionNotification": "stable",
+  "showSkipMessages": true
+}
+```
+
+First, you add the `MockResponsePlugin` to the list of plugins. You include a reference to its configuration section where you specify the path to your mocks file.
+
+When you start Dev Proxy, it reads the mocks file and uses the mock responses to respond to the requests that match the defined mocks.
 
 ## Unmocked request support
 
@@ -216,7 +244,7 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 }
 ```
 
-When an unmocked request is intercepted, a `502 Bad Gateway` response is returned.
+When Dev Proxy intercepts a request which it can't mock, it returns a `502 Bad Gateway` response.
 
 ## Next step
 
