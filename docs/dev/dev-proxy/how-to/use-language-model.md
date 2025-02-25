@@ -32,10 +32,10 @@ You can use the following options as part of the `languageModel` setting:
 | --- | --- | :---: |
 | `cacheResponses` | Specifies whether to cache responses from the language model. | `true` |
 | `enabled` | Specifies whether to use a local language model. | `false` |
-| `model` | The name of the language model to use. | `phi3` |
+| `model` | The name of the language model to use. | `llama3.2` |
 | `url` | The URL of the Ollama instance. | `http://localhost:11434` |
 
-By default, Dev Proxy uses the default Ollama configuration with the [Phi-3](https://ollama.com/library/phi3) model. It also caches responses from the language model, which means, that for the same prompt, you get an immediate response without waiting for the language model to process it.
+By default, Dev Proxy uses the default Ollama configuration with the [llama3.2](https://ollama.com/library/llama3.2) model. It also caches responses from the language model, which means, that for the same prompt, you get an immediate response without waiting for the language model to process it.
 
 > [!IMPORTANT]
 > When using a local language model, be sure to start Ollama before starting Dev Proxy.
