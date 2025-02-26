@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 2/17/2025
+ms.date: 2/26/2025
 ---
 
 # Proxy settings
@@ -29,6 +29,7 @@ The following table describes the settings.
 |`rate`|The percentage of chance that proxy fails a request. Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`|
 |`record`|Use this option to record all request logs|`--record`|n/a|n/a|
 |`showSkipMessages`|Whether to show log messages when Dev Proxy skips running a plugin.|n/a|`true`, `false`|`true`|
+|`timeout`|Automatically stop proxy after a period of inactivity|`-t, --timeout <seconds>`|integer|n/a|
 |`urlsToWatch`|List of URLs that proxy should intercept|`-u, --urls-to-watch <urlsToWatch>`|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
 |`watchPids`|The IDs of processes to watch for requests|`--watch-pids <pids>`|integer|n/a|
 |`watchProcessNames`|The names of processes to watch for requests|`--watch-process-names <processNames>`|string|n/a|
