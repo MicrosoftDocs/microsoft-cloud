@@ -134,6 +134,16 @@
          "source_path": "docs/dev/dev-proxy/get-started.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started/setup",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/preset-get.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/config-get",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/config.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/config-open",
+         "redirect_document_id": false
       }
    ]
 }
