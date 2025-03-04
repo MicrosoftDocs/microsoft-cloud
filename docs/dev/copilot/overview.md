@@ -253,7 +253,7 @@ Companies can integrate their own data with Azure AI Search and Azure OpenAI mod
 
 :::image type="content" source="isv/media/chat-with-your-data.png" alt-text="A diagram showing how Azure AI Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
 
-To chat with your own data using Azure OpenAI and Azure AI Search in Azure AI Foundry portal, see [Deploy a web app for chat on your data](/azure/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/azure/ai-studio/tutorials/deploy-copilot-ai-studio).
+To chat with your own data using Azure OpenAI and Azure AI Search in [Azure AI Foundry portal](https://ai.azure.com/), see [Deploy a web app for chat on your data](/azure/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/azure/ai-studio/tutorials/deploy-copilot-ai-studio).
 
 Learn more:
 
