@@ -11,15 +11,15 @@ Here's a quick overview of how the "bring your own data" feature works from the 
 
 In this exercise, you will:
 
-- Create a custom data source using Azure AI Studio.
-- Deploy an embedding model using Azure AI Studio.
+- Create a custom data source using the Azure AI Foundry portal.
+- Deploy an embedding model using the Azure AI Foundry portal.
 - Upload custom documents.
 - Start a chat session in the Chat playground to experiment with generating completions based upon your own data.
 - Explore code that uses Azure AI Search and Azure OpenAI to generate completions based upon your own data.
 
-Let's get started by deploying an embedding model and adding a custom data source in Azure AI Studio.
+Let's get started by deploying an embedding model and adding a custom data source in Azure AI Foundry.
 
-### Adding a Custom Data Source to Azure AI Studio
+### Adding a Custom Data Source to Azure AI Foundry
 
 1. Navigate to [Azure OpenAI Studio](https://oai.azure.com/) and sign in with credentials that have access to your Azure OpenAI resource. 
 
@@ -61,9 +61,9 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     - Select a region that's close to your location.
     - Select **Review** followed by **Create**.
 
-1. Once the blob storage resource is created, go back to the Azure AI Studio dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
+1. Once the blob storage resource is created, go back to the Azure AI Foundry dialog and select your newly created blob storage resource from the **Select Azure Blob storage resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
-1. Cross-origin resource sharing (CORS) needs to be turned on in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Studio dialog.
+1. Cross-origin resource sharing (CORS) needs to be turned on in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Foundry dialog.
 
     :::image type="content" source="../media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
 
@@ -94,7 +94,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     > [!NOTE]
     > To check if semantic ranker is available in a specific region, [Check the Products Available by Region](https://azure.microsoft.com/global-infrastructure/services/?products=search) page on the Azure web site to see if your region is listed.
 
-1. Go back to the Azure AI Studio **Add Data** dialog and select your newly created search resource from the **Select Azure AI Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
+1. Go back to the Azure AI Foundry **Add Data** dialog and select your newly created search resource from the **Select Azure AI Search resource** dropdown. If you don't see it listed, select the refresh icon next to the dropdown.
 
 1. Enter a value of **byod-search-index** for the **Enter the index name** value.
 

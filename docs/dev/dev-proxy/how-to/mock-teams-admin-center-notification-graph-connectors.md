@@ -3,7 +3,7 @@ title: Mock Teams Admin Center notification for Microsoft Graph connectors
 description: How to test that your Microsoft Graph connector properly handles notifications from the Teams Admin Center.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 02/05/2025
 ---
 
 # Mock Teams Admin Center notification for Microsoft Graph connectors
@@ -34,7 +34,7 @@ In a code editor, open the `~appFolder/presets/microsoft-graph-connector-notific
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.16.0/mockrequestplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/mockrequestplugin.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",
@@ -71,7 +71,7 @@ In a code editor, open the `~appFolder/presets/microsoft-graph-connector-notific
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.16.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphConnectorGuidancePlugin",

@@ -3,7 +3,7 @@ title: How to find shadow APIs
 description: How to check if all APIs used in my app are registered in Azure API Center
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/14/2024
+ms.date: 02/05/2025
 ---
 
 # How to find shadow APIs
@@ -44,7 +44,7 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
@@ -81,7 +81,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
@@ -195,7 +195,7 @@ The `ApiCenterOnboardingPlugin` can not only detect shadow APIs, but also automa
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
@@ -234,7 +234,7 @@ To automatically generate OpenAPI specs for onboarded APIs, update Dev Proxy con
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenApiSpecGeneratorPlugin",

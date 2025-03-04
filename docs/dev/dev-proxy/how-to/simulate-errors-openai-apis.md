@@ -3,7 +3,7 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 02/05/2025
 ---
 
 # Simulate errors from OpenAI APIs
@@ -19,7 +19,7 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -38,7 +38,7 @@ Create the plugin configuration object to provide the plugin with the location o
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.14.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.23.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -60,58 +60,66 @@ In the same folder, create the `errors-openai.json` file. This file contains the
 
 ```json
 {
-  "responses": [
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.23.0/genericrandomerrorplugin.schema.json",
+  "errors": [
     {
-      "statusCode": 429,
-      "headers": [
+      "request": {
+        "url": "https://api.openai.com/*"
+      },
+      "responses": [
         {
-          "name": "content-type",
-          "value": "application/json; charset=utf-8"
-        }
-      ],
-      "body": {
-        "error": {
-          "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on tokens per min. Limit: 150000.000000 / min. Current: 160000.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
-          "type": "tokens",
-          "param": null,
-          "code": null
-        }
-      }
-    },
-    {
-      "statusCode": 429,
-      "headers": [
+          "statusCode": 429,
+          "headers": [
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": {
+            "error": {
+              "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on tokens per min. Limit: 150000.000000 / min. Current: 160000.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
+              "type": "tokens",
+              "param": null,
+              "code": null
+            }
+          }
+        },
         {
-          "name": "content-type",
-          "value": "application/json; charset=utf-8"
-        }
-      ],
-      "body": {
-        "error": {
-          "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on requests per min. Limit: 60.000000 / min. Current: 70.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
-          "type": "requests",
-          "param": null,
-          "code": null
-        }
-      }
-    },
-    {
-      "statusCode": 429,
-      "addDynamicRetryAfter": true,
-      "headers": [
+          "statusCode": 429,
+          "headers": [
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": {
+            "error": {
+              "message": "Rate limit reached for default-text-davinci-003 in organization org-K7hT684bLccDbBRnySOoK9f2 on requests per min. Limit: 60.000000 / min. Current: 70.000000 / min. Contact support@openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://beta.openai.com/account/billing to add a payment method.",
+              "type": "requests",
+              "param": null,
+              "code": null
+            }
+          }
+        },
         {
-          "name": "content-type",
-          "value": "application/json; charset=utf-8"
+          "statusCode": 429,
+          "addDynamicRetryAfter": true,
+          "headers": [
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "body": {
+            "error": {
+              "message": "The engine is currently overloaded, please try again later.",
+              "type": "requests",
+              "param": null,
+              "code": null
+            }
+          }
         }
-      ],
-      "body": {
-        "error": {
-          "message": "The engine is currently overloaded, please try again later.",
-          "type": "requests",
-          "param": null,
-          "code": null
-        }
-      }
+      ]
     }
   ]
 }

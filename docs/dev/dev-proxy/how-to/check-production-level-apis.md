@@ -3,7 +3,7 @@ title: How to check if my app is using production-level APIs
 description: How to check if my app is using production-level APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/13/2024
+ms.date: 02/05/2025
 ---
 
 # How to check if my app is using production-level APIs
@@ -42,7 +42,7 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
@@ -78,7 +78,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/dev-proxy/main/schemas/v0.19.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",

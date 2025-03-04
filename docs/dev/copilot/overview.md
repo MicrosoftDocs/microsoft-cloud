@@ -245,20 +245,20 @@ In addition to adopting and extending Microsoft Copilot, a custom AI copilot can
 
 :::image type="content" source="isv/media/copilot-across-microsoft-cloud-build.png" alt-text="A diagram showing the build options for creating a custom Copilot." border="false" :::
 
-### Azure AI Studio
+### Azure AI Foundry
 
-Azure AI Studio brings together capabilities from across multiple Azure AI services. With Azure AI Studio, you can evaluate large language model (LLM) responses and orchestrate prompt application components with prompt flow for better performance.
+Azure AI Foundry brings together capabilities from across multiple Azure AI services. With Azure AI Foundry, you can evaluate large language model (LLM) responses and orchestrate prompt application components with prompt flow for better performance.
 
 Companies can integrate their own data with Azure AI Search and Azure OpenAI models to create an advanced conversational AI platform that can be embedded in their applications. This enables users to interact with company data and documents using natural language, making it easier to find information and complete tasks.
 
 :::image type="content" source="isv/media/chat-with-your-data.png" alt-text="A diagram showing how Azure AI Search can be used with Azure OpenAI to chat against your own data and documents." border="false" :::
 
-To chat with your own data using Azure OpenAI and Azure AI Search in Azure AI Studio, see [Deploy a web app for chat on your data](/azure/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/azure/ai-studio/tutorials/deploy-copilot-ai-studio).
+To chat with your own data using Azure OpenAI and Azure AI Search in [Azure AI Foundry portal](https://ai.azure.com/), see [Deploy a web app for chat on your data](/azure/ai-studio/tutorials/deploy-chat-web-app) and [Build your own copilot using prompt flow](/azure/ai-studio/tutorials/deploy-copilot-ai-studio).
 
 Learn more:
 
 - [Azure AI services Documentation, Samples, and Resources](/azure/developer/intro/azure-ai-for-developers?pivots=python)
-- [Azure AI Studio Documentation](/azure/ai-studio)
+- [Azure AI Foundry Documentation](/azure/ai-studio)
 - [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
 - [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
 

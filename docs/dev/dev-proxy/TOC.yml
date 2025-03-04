@@ -1,7 +1,11 @@
 - name: Dev Proxy documentation
   href: overview.md
 - name: Get started
-  href: get-started.md
+  items:
+    - name: Set up and first run
+      href: get-started/set-up.md
+    - name: Configuration
+      href: get-started/configure.md
 - name: Tutorials
   items:
     - name: Simulate random errors for your own application
@@ -16,6 +20,8 @@
       href: how-to/overview.md
     - name: Intercept requests
       items: 
+      - name: Discover URLs to watch
+        href: how-to/discover-urls-watch.md
       - name: Intercept requests from specific processes
         href: how-to/intercept-requests-from-specific-processes.md
       - name: Intercept requests with specific headers
@@ -78,7 +84,7 @@
         href: how-to/check-minimal-api-permissions.md
       - name: Detect minimal Microsoft Graph API permissions
         href: how-to/detect-minimal-Microsoft-Graph-API-permissions.md
-      - name: Check if you are using excessive Microsoft Graph API permissions
+      - name: Check if you're using excessive Microsoft Graph API permissions
         href: how-to/check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md
     - name: Record
       items: 
@@ -100,8 +106,6 @@
         href: how-to/use-preset-configurations.md
     - name: Change settings
       items: 
-      - name: Change console output to use icons
-        href: how-to/change-console-output-to-use-icons.md
       - name: Change logging level
         href: how-to/change-logging-level.md
       - name: Clear the output
@@ -135,10 +139,12 @@
           - name: With GitHub Actions
             href: how-to/use-dev-proxy-with-github-actions.md
     - name: Common problems
-      items: 
+      items:
+      - name: Dev Proxy doesn't intercept requests
+        href: how-to/no-requests-intercepted.md
       - name: No random errors are thrown when using mocks
         href: how-to/why-are-random-errors-not-thrown-when-using-mocks.md
-      - name: All requests fail with gateway timeout
+      - name: All requests fail with gateway time out
         href: how-to/why-do-all-requests-fail-with-gateway-timeout.md
       - name: All requests fail with 429 responses
         href: how-to/why-do-I-keep-getting-429-responses.md
@@ -146,9 +152,9 @@
         href: how-to/why-is-my-internet-connection-not-working-after-using-the-proxy.md
       - name: No requests are intercepted from my .NET 4.8 app
         href: how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md
-      - name: Binary responses are not mocked
+      - name: Binary responses aren't mocked
         href: how-to/why-is-proxy-not-mocking-my-binary-response.md
-      - name: Options are not recognized
+      - name: Options aren't recognized
         href: how-to/why-is-the-proxy-saying-that-an-option-is-unknown.md
       - name: The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception
         href: how-to/type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception.md
@@ -262,6 +268,8 @@
         href: technical-reference/RetryAfterPlugin.md
       - name: RewritePlugin
         href: technical-reference/rewriteplugin.md
+      - name: UrlDiscoveryPlugin
+        href: technical-reference/urldiscoveryplugin.md
       - name: Microsoft Graph
         items:
           - name: GraphBetaSupportGuidancePlugin
