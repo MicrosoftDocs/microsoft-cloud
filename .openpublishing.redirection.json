@@ -132,7 +132,7 @@
       },
       {
          "source_path": "docs/dev/dev-proxy/get-started.md",
-         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started/setup",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/get-started/set-up",
          "redirect_document_id": false
       }
    ]
