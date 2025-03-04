@@ -305,12 +305,16 @@
     - name: Commands
       items:
       - name: config
-        href: technical-reference/config.md
+        items:
+        - name: get
+          href: technical-reference/config-get.md
+        - name: new
+          href: technical-reference/config-new.md
+        - name: open
+          href: technical-reference/config-open.md
       - name: jwt create
         href: technical-reference/jwt-create.md
       - name: msgraphdb
         href: technical-reference/msgraphdb.md
       - name: outdated
         href: technical-reference/outdated.md
-      - name: preset get
-        href: technical-reference/preset-get.md
