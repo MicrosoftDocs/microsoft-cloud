@@ -6,7 +6,7 @@ ms.author: garrytrinder
 ms.date: 03/04/2025
 ---
 
-# config get
+# config new
 
 Create new Dev Proxy configuration file.
 
