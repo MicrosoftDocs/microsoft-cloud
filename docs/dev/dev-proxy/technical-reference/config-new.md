@@ -8,21 +8,21 @@ ms.date: 03/04/2025
 
 # config new
 
-Create new Dev Proxy configuration file.
+Create new Dev Proxy configuration file. If a file exists with the same name, the created file will have a number appended to it, for example, devproxyrc-2.json, and will increment with each new file created with the same name.
 
 :::image type="content" source="../media/config-new-command.png" alt-text="Screenshot of a command prompt with the output of the config new command." lightbox="../media/config-new-command.png":::
 
 ## Usage
 
 ```console
-devproxy new <name>
+devproxy config new <name>
 ```
 
 ## Arguments
 
-| Name | Description | Required |
-| ---- | ----------- | :------: |
-| `<name>` | Name of the configuration file. | `devproxyrc.json` |
+| Name | Description | Required | Default |
+| ---- | ----------- | :------: | :-----: |
+| `<name>` | Name of the configuration file. | No | `devproxyrc.json` |
 
 ## Options
 
