@@ -20,9 +20,9 @@ devproxy config get <config-id>
 
 ## Arguments
 
-| Name | Description | Required |
-| ---- | ----------- | :------: |
-| `<config-id>` | The ID of the config to download. | Yes |
+| Name | Description | Required | Default |
+| ---- | ----------- | :------: | :-----: |
+| `<config-id>` | The ID of the config to download. | Yes | None |
 
 > [!TIP]
 > Each sample lists its ID in the details section on the sample page in the Sample Solution Gallery.
