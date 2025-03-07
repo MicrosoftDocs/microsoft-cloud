@@ -306,11 +306,11 @@
       items:
       - name: config
         items:
-        - name: get
+        - name: config get
           href: technical-reference/config-get.md
-        - name: new
+        - name: config new
           href: technical-reference/config-new.md
-        - name: open
+        - name: config open
           href: technical-reference/config-open.md
       - name: jwt create
         href: technical-reference/jwt-create.md
