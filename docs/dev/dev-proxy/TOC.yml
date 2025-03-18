@@ -168,6 +168,8 @@
       href: how-to/uninstall.md
 - name: Concepts
   items:
+    - name: What is a proxy?
+      href: concepts/what-is-proxy.md
     - name: What is caching?
       href: concepts/what-is-caching.md
     - name: What is throttling?
