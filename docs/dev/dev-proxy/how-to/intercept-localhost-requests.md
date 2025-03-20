@@ -3,7 +3,7 @@ title: Intercept requests to localhost
 description: How to configure Dev Proxy to intercept requests to localhost in Chromium browsers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/18/2024
+ms.date: 03/19/2025
 zone_pivot_groups: client-operating-system
 ---
 
@@ -36,5 +36,8 @@ msedge --proxy-bypass-list="<-loopback> --proxy-server="127.0.0.1:8000"
 ```
 
 ::: zone-end
+
+> [!IMPORTANT]
+> Before you start a Chromium-based browser with these settings, be sure to close all instances of the browser. Otherwise, the new settings won't take effect.
 
 To configure Mozilla Firefox to send requests to the system proxy for `localhost` URLs, you need to set the `network.proxy.allow_hijacking_localhost` preference to `true`. To do that, open the `about:config` page in Firefox, search for the `network.proxy.allow_hijacking_localhost` preference, and set it to `true`.
