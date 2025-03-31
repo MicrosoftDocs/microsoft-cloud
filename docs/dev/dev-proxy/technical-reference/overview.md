@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2025
+ms.date: 03/31/2025
 ms.topic: overview
 ---
 
@@ -25,6 +25,7 @@ Name | Description
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
+[MinimalCsomPermissionsPlugin](./minimalcsompermissionsplugin.md)|Detects the minimal permissions needed to call the recorded SharePoint Client-Side Object Model (CSOM) API requests.
 [MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.

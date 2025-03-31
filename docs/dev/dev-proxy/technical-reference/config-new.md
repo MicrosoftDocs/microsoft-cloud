@@ -3,7 +3,7 @@ title: config new
 description: config new command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 03/04/2025
+ms.date: 03/31/2025
 ---
 
 # config new
@@ -26,4 +26,6 @@ devproxy config new <name>
 
 ## Options
 
-None
+|Name|Description|Allowed values|Default|
+|--|--|--|--|--|
+|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|

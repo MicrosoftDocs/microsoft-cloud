@@ -3,7 +3,7 @@ title: jwt create
 description: jwt create command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 10/28/2024
+ms.date: 03/31/2025
 ---
 
 # jwt create
@@ -30,16 +30,17 @@ None
 
 ## Options
 
-| Name | Description | Default |
-| --- | --- | --- |
-| `-n, --name` | The name of the user to create the token for. | `Dev Proxy` |
-| `-i, --issuer` | The issuer of the token. | `dev-proxy` |
-| `-a, --audience` | The audiences to create the token for. Specify once for each audience. | `https://myserver.com` |
-| `-r, --roles` | A role claim to add to the token. Specify once for each role. | None |
-| `-s, --scopes` | A scope claim to add to the token. Specify once for each scope. | None |
+|Name|Description|Allowed values|Default|
+|--|--|--|--|--|
+| `-n, --name` | The name of the user to create the token for. | string | `Dev Proxy` |
+| `-i, --issuer` | The issuer of the token. | string | `dev-proxy` |
+| `-a, --audience` | The audiences to create the token for. Specify once for each audience. | string | `https://myserver.com` |
+| `-r, --roles` | A role claim to add to the token. Specify once for each role. | string | None |
+| `-s, --scopes` | A scope claim to add to the token. Specify once for each scope. | string | None |
 | `--claims` | Claims to add to the token. Specify once for each claim in the format `name:value`. | None |
 | `-v, --valid-for` | The duration which the token is valid for. Duration is set in minutes. | `60` |
 | `--signing-key` | The key to use to sign the token. Must be at least 32 characters long. | Randomly generated |
+|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
 
 > [!NOTE]
 > Registered claims (e.g. `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the `--claims` option, the values you provide will be ignored.
