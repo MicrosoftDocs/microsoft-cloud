@@ -3,7 +3,7 @@ title: outdated
 description: outdated command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/18/2024
+ms.date: 03/31/2025
 ---
 
 # outdated
@@ -22,6 +22,7 @@ None
 
 ## Options
 
-| Name | Description |
-| --- | --- |
-| `--short` | Return version only |
+|Name|Description|Allowed values|Default|
+|--|--|--|--|--|
+|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
+| `--short` | Return version only | N/A | N/A |
