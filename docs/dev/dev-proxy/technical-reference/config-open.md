@@ -3,7 +3,7 @@ title: config open
 description: config open command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/04/2025
+ms.date: 03/31/2025
 ---
 
 # config open
@@ -22,4 +22,6 @@ None
 
 ## Options
 
-None
+|Name|Description|Allowed values|Default|
+|--|--|--|--|--|
+|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|

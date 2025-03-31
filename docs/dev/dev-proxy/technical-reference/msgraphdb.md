@@ -3,7 +3,7 @@ title: msgraphdb
 description: msgraphdb command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 03/31/2025
 ---
 
 # msgraphdb
@@ -24,4 +24,6 @@ None
 
 ## Options
 
-None
+|Name|Description|Allowed values|Default|
+|--|--|--|--|--|
+|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
