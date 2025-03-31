@@ -306,6 +306,10 @@
             href: technical-reference/plaintextreporter.md
     - name: Commands
       items:
+      - name: cert
+        items:
+        - name: cert ensure
+          href: technical-reference/cert-ensure.md
       - name: config
         items:
         - name: config get
