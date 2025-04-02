@@ -3,7 +3,7 @@ title: Proxy API
 description: Overview of the Dev Proxy API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/28/2024
+ms.date: 04/02/2025
 ---
 
 # Proxy API
@@ -93,20 +93,86 @@ Response:
 }
 ```
 
-### `POST /proxy/raisemockrequest`
+### `POST /proxy/jwtToken`
+
+Generates a JSON Web Token (JWT).
+
+Request:
+
+```http
+POST http://localhost:8897/proxy/jwtToken
+Content-Type: application/json
+
+{
+  "name": "Dev Proxy",
+  "audiences": [
+    "https://myserver.com"
+  ],
+  "issuer": "dev-proxy",
+  "roles": [
+    "admin"
+  ],
+  "scopes": [
+    "Post.Read",
+    "Post.Write"
+  ],
+  "claims": {
+    "claim1": "value",
+    "claim2": "value"
+  },
+  "validFor": 60
+}
+```
+
+> [!NOTE]
+> Registered claims (for example, `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the request, the API ignores the values you provide.
+
+Response:
+
+```text
+200 OK
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkRldiBQcm94eSIsInN1YiI6IkRldiBQcm94eSIsImp0aSI6IjkyZjM5YzciLCJzY3AiOlsiUG9zdC5SZWFkIiwiUG9zdC5Xcml0ZSJdLCJyb2xlcyI6ImFkbWluIiwiY2xhaW0xIjoidmFsdWUiLCJjbGFpbTIiOiJ2YWx1ZSIsImF1ZCI6Imh0dHBzOi8vbXlzZXJ2ZXIuY29tIiwibmJmIjoxNzI3MTk4MjgyLCJleHAiOjE3MjcyMDE4ODIsImlhdCI6MTcyNzE5ODI4MiwiaXNzIjoiZGV2LXByb3h5In0.E_Gj9E58OrAh9uHgc-TW8DYfq8YHFrhaUTpKA4yXEIg"
+}
+```
+
+### `POST /proxy/mockrequest`
 
 Raises a mock request. Equivalent of pressing <kbd>w</kbd> in the console where Dev Proxy is running.
 
 Request:
 
 ```http
-POST http://localhost:8897/proxy/raisemockrequest
+POST http://localhost:8897/proxy/mockrequest
 ```
 
 Response:
 
 ```text
 202 Accepted
+```
+
+### `GET /proxy/rootCertificate?format=crt`
+
+Downloads the public key of the root certificate in PEM (Privacy Enhanced Mail) format that Dev Proxy uses to decrypt HTTPS requests. This API is helpful when you want to trust the root certificate on your host while running Dev Proxy in a Docker container.
+
+At this moment, the only supported format is `crt`. The API returns a 400 Bad Request error if you specify any other format or don't specify a format at all.
+
+Request:
+
+```http
+GET http://localhost:8897/proxy/rootCertificate?format=crt
+```
+
+Response:
+
+```text
+content-type: application/x-x509-ca-cert
+
+-----BEGIN CERTIFICATE-----
+[base64 encoded certificate]
+-----END CERTIFICATE-----
 ```
 
 ### `POST /proxy/stopproxy`
@@ -123,50 +189,6 @@ Response:
 
 ```text
 202 Accepted
-```
-
-### `POST /proxy/createJwtToken`
-
-Generates a JWT token.
-
-Request:
-
-```http
-POST http://localhost:8897/proxy/createJwtToken
-Content-Type: application/json
-
-{
-    "name": "Dev Proxy",
-    "audiences": [
-        "https://myserver.com"
-    ],
-    "issuer": "dev-proxy",
-    "roles": [
-        "admin"
-    ],
-    "scopes": [
-        "Post.Read",
-        "Post.Write"
-    ],
-    "claims": {
-        "claim1": "value",
-        "claim2": "value"
-    },
-    "validFor": 60
-}
-```
-
-> [!NOTE]
-> Registered claims (e.g. `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the request, the values you provide will be ignored.
-
-Response:
-
-```text
-200 OK
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkRldiBQcm94eSIsInN1YiI6IkRldiBQcm94eSIsImp0aSI6IjkyZjM5YzciLCJzY3AiOlsiUG9zdC5SZWFkIiwiUG9zdC5Xcml0ZSJdLCJyb2xlcyI6ImFkbWluIiwiY2xhaW0xIjoidmFsdWUiLCJjbGFpbTIiOiJ2YWx1ZSIsImF1ZCI6Imh0dHBzOi8vbXlzZXJ2ZXIuY29tIiwibmJmIjoxNzI3MTk4MjgyLCJleHAiOjE3MjcyMDE4ODIsImlhdCI6MTcyNzE5ODI4MiwiaXNzIjoiZGV2LXByb3h5In0.E_Gj9E58OrAh9uHgc-TW8DYfq8YHFrhaUTpKA4yXEIg"
-}
 ```
 
 ## Models

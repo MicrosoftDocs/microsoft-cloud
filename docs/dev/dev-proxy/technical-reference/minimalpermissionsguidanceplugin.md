@@ -1,25 +1,25 @@
 ---
-title: MinimalPermissionsPlugin
-description: MinimalPermissionsPlugin reference
+title: MinimalPermissionsGuidancePlugin
+description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 04/02/2025
 ---
 
-# MinimalPermissionsPlugin
+# MinimalPermissionsGuidancePlugin
 
-Detects the minimal permissions needed to perform the specified API operations. Uses API information from the specified local folder.
+Compares the permissions used in the JWT token sent to APIs against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 
-:::image type="content" source="../media/minimal-permissions-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-plugin.png":::
+:::image type="content" source="../media/minimal-permissions-guidance-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-guidance-plugin.png":::
 
 ## Plugin instance definition
 
 ```json
 {
-  "name": "MinimalPermissionsPlugin",
+  "name": "MinimalPermissionsGuidancePlugin",
   "enabled": true,
   "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "minimalPermissionsPlugin"
+  "configSection": "minimalPermissionsGuidancePlugin"
 }
 ```
 
@@ -27,7 +27,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 
 ```json
 {
-  "minimalPermissionsPlugin": {
+  "minimalPermissionsGuidancePlugin": {
     "apiSpecsFolderPath": "./api-specs"
   }
 }
@@ -45,11 +45,11 @@ None
 
 ## Remarks
 
-The `MinimalPermissionsPlugin` plugin checks if the app uses minimal permissions to call APIs. To check permissions, the plugin uses information about APIs located in the specified local folder.
+The `MinimalPermissionsGuidancePlugin` plugin checks if the app uses minimal permissions to call APIs. To check permissions, the plugin uses information about APIs located in the specified local folder.
 
 ### Define API permissions
 
-The `MinimalPermissionsPlugin` plugin supports checking OAuth permissions for APIs secured with OAuth. The plugin computes the minimal permissions required to call the APIs used in the app using the information from the provided API specifications.
+The `MinimalPermissionsGuidancePlugin` plugin supports checking OAuth permissions for APIs secured with OAuth. The plugin computes the minimal permissions required to call the APIs used in the app using the information from the provided API specifications. Then, the plugin compares the permissions used in the JSON Web Token (JWT) token against the minimum required scopes needed for the requests that Dev Proxy recorded.
 
 To define permissions for your APIs, include them in the OpenAPI definition of your API. The following example shows how to define permissions for an API in an OpenAPI definition:
 
@@ -184,7 +184,7 @@ servers:
         default: contoso
 ```
 
-The `MinimalPermissionsPlugin` plugin supports replacing variables in the API specs contents. To replace a variable, start Dev Proxy with the `--env` option and specify the variable name and value. For example, to replace the `tenant` variable with `contoso`, use the following command:
+The `MinimalPermissionsGuidancePlugin` plugin supports replacing variables in the API specs contents. To replace a variable, start Dev Proxy with the `--env` option and specify the variable name and value. For example, to replace the `tenant` variable with `contoso`, use the following command:
 
 ```bash
 devproxy --env tenant=northwind

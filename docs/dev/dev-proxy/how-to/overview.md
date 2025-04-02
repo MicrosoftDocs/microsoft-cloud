@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2025
+ms.date: 04/02/2025
 ms.topic: overview
 ---
 
@@ -79,6 +79,7 @@ ms.topic: overview
 
 ## Use Dev Proxy
 
+- [In a Docker container](./use-dev-proxy-in-docker-container.md)
 - [With Node.js applications](./use-dev-proxy-with-nodejs.md)
 - [With Node.js applications in Docker containers](./use-dev-proxy-with-nodejs-docker.md)
 - [With JavaScript Azure Functions](./use-dev-proxy-with-javascript-azure-functions.md)
