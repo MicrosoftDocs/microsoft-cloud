@@ -116,6 +116,8 @@
         href: how-to/refresh-local-Microsoft-Graph-database.md
     - name: Use Dev Proxy
       items:
+      - name: In a Docker container
+        href: how-to/use-dev-proxy-in-docker-container.md
       - name: With Node.js applications
         href: how-to/use-dev-proxy-with-nodejs.md
       - name: With Node.js applications in Docker containers
