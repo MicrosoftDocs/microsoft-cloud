@@ -3,18 +3,18 @@ title: Simulate OpenAI API
 description: How to simulate OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 04/15/2025
 ---
 
 # Simulate OpenAI API
 
-When you build apps connected to OpenAI, often, only a portion of the app interacts with the OpenAI API. When you work on the portions of the app that don't require real replies from OpenAI API, you can simulate the responses using Dev Proxy. Using simulated responses allows you to avoid incurring unnecessary costs. The `OpenAIMockResponsePlugin` uses a local language model running on Ollama to simulate responses from OpenAI API.
+When you build apps connected to OpenAI, often, only a portion of the app interacts with the OpenAI API. When you work on the portions of the app that don't require real replies from OpenAI API, you can simulate the responses using Dev Proxy. Using simulated responses allows you to avoid incurring unnecessary costs. The `OpenAIMockResponsePlugin` uses a local language model to simulate responses from OpenAI API.
 
 ## Before you start
 
-To simulate OpenAI API responses using Dev Proxy, you need Ollama installed on your machine. To install Ollama, follow the instructions in the [Ollama documentation](https://github.com/ollama/ollama/blob/main/README.md).
+To simulate OpenAI API responses using Dev Proxy, you need a [supported language model client](./use-language-model.md) installed on your machine.
 
-By default, Dev Proxy uses the phi-3 language model. To use a different model, update the [`model` property](./use-language-model.md) in the Dev Proxy configuration file.
+By default, Dev Proxy uses the llama3.2 language model running on Ollama. To use a different client or model, update the [language model settings](./use-language-model.md) in the Dev Proxy configuration file.
 
 ## Configure Dev Proxy to simulate OpenAI API responses
 
@@ -25,7 +25,7 @@ To simulate OpenAI API responses using Dev Proxy, you need to enable the `OpenAI
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -62,7 +62,7 @@ The complete configuration file looks like this.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -81,9 +81,9 @@ The complete configuration file looks like this.
 
 ## Simulate OpenAI API responses
 
-Start Ollama with the phi-3 language model. In the command line, run `ollama run phi3`.
+Assuming the default configuration, start Ollama with the llama3.2 language model. In the command line, run `ollama run llama3.2`.
 
-Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/presets/simulate-openai/simulate-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the Ollama language model and confirms that it's ready to simulate OpenAI API responses.
+Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/presets/simulate-openai/simulate-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate OpenAI API responses.
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...
