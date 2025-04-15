@@ -276,6 +276,8 @@
         href: technical-reference/RetryAfterPlugin.md
       - name: RewritePlugin
         href: technical-reference/rewriteplugin.md
+      - name: TypeSpecGeneratorPlugin
+        href: technical-reference/typespecgeneratorplugin.md
       - name: UrlDiscoveryPlugin
         href: technical-reference/urldiscoveryplugin.md
       - name: Microsoft Graph

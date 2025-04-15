@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 03/31/2025
+ms.date: 04/15/2025
 ms.topic: overview
 ---
 
@@ -33,10 +33,11 @@ Name | Description
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 [OpenAIMockResponsePlugin](./openaimockresponseplugin.md)|Simulates responses from Azure OpenAI and OpenAI using a local language model.
-[OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec in JSON format from the intercepted requests and responses.
+[OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec from the intercepted requests and responses.
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.
 [RewritePlugin](./rewriteplugin.md)|Rewrites requests.
+[TypeSpecGeneratorPlugin](./typespecgeneratorplugin.md)|Generates TypeSpec files from the intercepted requests and responses.
 [UrlDiscoveryPlugin](./urldiscoveryplugin.md)|Creates a list of URLs that the proxy has intercepted.
 
 ## Azure API Center plugins
