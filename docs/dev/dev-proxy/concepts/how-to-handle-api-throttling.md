@@ -1,5 +1,5 @@
 ---
-title: Handle API throttling
+title: How to Handle API Throttling
 description: This article explains how developers can handle throttling in their applications.
 author: waldekmastykarz
 ms.author: wmastyka

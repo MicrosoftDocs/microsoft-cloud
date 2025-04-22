@@ -1,5 +1,5 @@
 ---
-title: What is a proxy?
+title: What Is a Proxy?
 description: This article explains what a proxy is and how it works.
 author: waldekmastykarz
 ms.author: wmastyka

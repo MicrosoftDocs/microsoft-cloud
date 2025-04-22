@@ -1,5 +1,5 @@
 ---
-title: Handle rate limiting
+title: How to Handle Rate Limiting
 description: This article explains how developers can handle rate limiting in their applications.
 author: waldekmastykarz
 ms.author: wmastyka

@@ -1,5 +1,5 @@
 ---
-title: What is rate limiting?
+title: What Is Rate Limiting?
 description: This article explains the concept of rate limiting in cloud APIs.
 author: waldekmastykarz
 ms.author: wmastyka

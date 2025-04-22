@@ -1,5 +1,5 @@
 ---
-title: What is caching?
+title: What Is Caching?
 description: This article explains what caching is.
 author: waldekmastykarz
 ms.author: wmastyka

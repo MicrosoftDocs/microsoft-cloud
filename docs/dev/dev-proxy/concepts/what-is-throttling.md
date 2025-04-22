@@ -1,5 +1,5 @@
 ---
-title: What is throttling?
+title: What Is Throttling?
 description: This article explains the concept of throttling in cloud APIs.
 author: waldekmastykarz
 ms.author: wmastyka
