@@ -1,5 +1,5 @@
 ---
-title: What Is an OpenAPI Spec?
+title: What Is an OpenAPI specification?
 description: This article explains what an OpenAPI specification (spec) is and some of the benefits of having one.
 author: waldekmastykarz
 ms.author: wmastyka

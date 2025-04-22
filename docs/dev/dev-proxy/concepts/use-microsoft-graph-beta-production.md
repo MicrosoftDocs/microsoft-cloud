@@ -1,5 +1,5 @@
 ---
-title: Can I Use Microsoft Graph Beta Endpoints in Production?
+title: Are Microsoft Graph Beta Endpoints Used in Production?
 description: This article explains the trade-offs that you should consider when you use Microsoft Graph beta endpoints in production.
 author: waldekmastykarz
 ms.author: wmastyka
