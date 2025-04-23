@@ -40,7 +40,7 @@ Always log the request ID and date from the HTTP response headers. Together with
 
 Use Dev Proxy to see if your application adds the `client-request-id` HTTP request header to the requests that it sends to Microsoft Graph.
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Check if my app uses the client-request-id header](../technical-reference/graphclientrequestidguidanceplugin.md)

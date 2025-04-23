@@ -13,7 +13,7 @@ OpenAPI Specification, formerly known as Swagger, describes various aspects of a
 Here's why you should consider having an OpenAPI spec for your API:
 
 - **Document an API in a standardized way.** Document an API specification in a consistent and human-readable format.
-- **Generate client SDK.** Use tools such as [Kiota](/openapi/kiota/overview) to automate generating of client libraries in various programming languages.
+- **Generate a client SDK.** Use tools such as [Kiota](/openapi/kiota/overview) to automate generating of client libraries in various programming languages.
 - **Create a mock API.** Create mock servers based on the API specification, which helps you during the early stages of development when the actual API isn't yet implemented.
 - **Improve collaboration.** Provide different teams (front end, back end, QA) with a clear understanding of the API's capabilities and limitations, which helps new team members to get caught up quickly.
 - **Simplify testing and validation.** Automate validation of API requests and responses against the specification, which makes it easier to identify discrepancies.
