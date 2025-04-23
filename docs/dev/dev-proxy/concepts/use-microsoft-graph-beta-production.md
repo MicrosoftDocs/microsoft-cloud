@@ -21,4 +21,4 @@ Use Dev Proxy to see if your application uses the Microsoft Graph beta endpoint.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Check if my app uses Graph beta endpoints](../technical-reference/graphbetasupportguidanceplugin.md)
+> [Check if my app uses Microsoft Graph beta endpoints](../technical-reference/graphbetasupportguidanceplugin.md)
