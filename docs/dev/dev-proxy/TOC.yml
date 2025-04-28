@@ -314,6 +314,8 @@
             href: technical-reference/plaintextreporter.md
     - name: Commands
       items:
+      - name: (root)
+        href: technical-reference/root-command.md
       - name: cert
         items:
         - name: cert ensure
