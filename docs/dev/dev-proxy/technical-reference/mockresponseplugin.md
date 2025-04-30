@@ -3,7 +3,7 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/27/2024
+ms.date: 04/30/2025
 ---
 
 # MockResponsePlugin
@@ -28,6 +28,7 @@ Simulates responses.
 ```json
 {
   "mocksPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -57,32 +58,37 @@ Response to a request with a 200 OK response and a JSON body.
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/me",
-    "method": "GET"
-  },
-  "response": {
-    "body": {
-      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-      "businessPhones": ["+1 412 555 0109"],
-      "displayName": "Megan Bowen",
-      "givenName": "Megan",
-      "jobTitle": "Auditor",
-      "mail": "MeganB@M365x214355.onmicrosoft.com",
-      "mobilePhone": null,
-      "officeLocation": "12/1110",
-      "preferredLanguage": "en-US",
-      "surname": "Bowen",
-      "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-      "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
-    },
-    "headers": [
-      {
-        "name": "content-type",
-        "value": "application/json; odata.metadata=minimal"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me",
+        "method": "GET"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": ["+1 412 555 0109"],
+          "displayName": "Megan Bowen",
+          "givenName": "Megan",
+          "jobTitle": "Auditor",
+          "mail": "MeganB@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "12/1110",
+          "preferredLanguage": "en-US",
+          "surname": "Bowen",
+          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+        },
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "application/json; odata.metadata=minimal"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
@@ -92,13 +98,18 @@ Respond to a request with a 404 Not Found response.
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/me/photo",
-    "method": "GET"
-  },
-  "response": {
-    "statusCode": 404
-  }
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me/photo",
+        "method": "GET"
+      },
+      "response": {
+        "statusCode": 404
+      }
+    }
+  ]
 }
 ```
 
@@ -108,19 +119,24 @@ Respond to a request with a binary image loaded from a file on disk.
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value",
-    "method": "GET"
-  },
-  "response": {
-    "body": "@picture.jpg",
-    "headers": [
-      {
-        "name": "content-type",
-        "value": "image/jpeg"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value",
+        "method": "GET"
+      },
+      "response": {
+        "body": "@picture.jpg",
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "image/jpeg"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
@@ -130,19 +146,24 @@ Respond to a request only after the second time it's called.
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
-    "method": "GET",
-    "nth": 2
-  },
-  "response": {
-    "statusCode": 200,
-    "body": {
-      "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
-      "status": "completed",
-      "error": null
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/external/connections/*/operations/*",
+        "method": "GET",
+        "nth": 2
+      },
+      "response": {
+        "statusCode": 200,
+        "body": {
+          "id": "1.neu.0278337E599FC8DBF5607ED12CF463E4.6410CCF8F6DB8758539FB58EB56BF8DC",
+          "status": "completed",
+          "error": null
+        }
+      }
     }
-  }
+  ]
 }
 ```
 
@@ -152,25 +173,30 @@ Respond to a request that contains a specific string in the body.
 
 ```json
 {
-  "request": {
-    "url": "https://login.microsoftonline.com/fa15d692-e9c7-4460-a743-29f29522229/oauth2/v2.0/token",
-    "method": "POST",
-    "bodyFragment": "scope=https%3A%2F%2Fapi.contoso.com%2FDocuments.Read"
-  },
-  "response": {
-    "headers": [
-      {
-        "name": "Content-Type",
-        "value": "application/json; charset=utf-8"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://login.microsoftonline.com/fa15d692-e9c7-4460-a743-29f29522229/oauth2/v2.0/token",
+        "method": "POST",
+        "bodyFragment": "scope=https%3A%2F%2Fapi.contoso.com%2FDocuments.Read"
+      },
+      "response": {
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json; charset=utf-8"
+          }
+        ],
+        "body": {
+          "token_type": "Bearer",
+          "expires_in": 3599,
+          "ext_expires_in": 3599,
+          "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSU..."
+        }
       }
-    ],
-    "body": {
-      "token_type": "Bearer",
-      "expires_in": 3599,
-      "ext_expires_in": 3599,
-      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSU..."
     }
-  }
+  ]
 }
 ```
 
@@ -215,3 +241,8 @@ Each response has the following properties:
 #### Remarks
 
 If you want to return binary data, set the `body` property to a string value that starts with `@` followed by file path relative to the mocks file. For example, `@picture.jpg` returns the image stored in the `picture.jpg` file in the same directory as the mocks file.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Mock responses](../how-to/mock-responses.md)
