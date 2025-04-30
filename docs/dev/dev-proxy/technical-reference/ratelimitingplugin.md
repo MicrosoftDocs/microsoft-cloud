@@ -3,7 +3,7 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/30/2025
 ---
 
 # RateLimitingPlugin
@@ -28,6 +28,7 @@ Simulates rate-limit behaviors.
 ```json
 {
   "rateLimiting": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/ratelimitingplugin.schema.json",
     "costPerRequest": 2,
     "rateLimit": 120
   }
@@ -53,3 +54,8 @@ Simulates rate-limit behaviors.
 ## Command line options
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Simulate Rate-Limit API responses](../how-to/simulate-rate-limit-api-responses.md)
