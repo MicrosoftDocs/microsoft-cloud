@@ -3,7 +3,7 @@ title: RetryAfterPlugin
 description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/30/2025
 ---
 
 # RetryAfterPlugin
@@ -33,3 +33,8 @@ None
 ## Command line options
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Simulate throttling on Microsoft 365 APIs](../how-to/simulate-throttling-microsoft-365.md)
