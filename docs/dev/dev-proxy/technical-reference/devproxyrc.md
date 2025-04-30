@@ -3,16 +3,16 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 04/30/2025
 ---
 
 # devproxyrc
 
-Default configuration.
+Default Dev Proxy configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -30,10 +30,14 @@ Default configuration.
     "https://jsonplaceholder.typicode.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "errorsFile": "devproxy-errors.json"
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json",
+    "rate": 50,
   },
-  "rate": 50,
   "logLevel": "information",
-  "newVersionNotification": "stable"
+  "newVersionNotification": "stable",
+  "showSkipMessages": true,
+  "showTimestamps": true,
+  "validateSchemas": true
 }
 ```
