@@ -3,7 +3,7 @@ title: RewritePlugin
 description: RewritePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2024
+ms.date: 04/30/2025
 ---
 
 # RewritePlugin
@@ -28,6 +28,7 @@ Rewrites requests.
 ```json
 {
   "rewritePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rewriteplugin.schema.json",
     "rewritesFile": "rewrites.json"
   }
 }
@@ -53,6 +54,7 @@ Rewrite all requests from HTTP to HTTPS. In this context, **all** means all requ
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rewriteplugin.rewritesfile.schema.json",
   "rewrites": [
     {
       "in": {
@@ -99,11 +101,16 @@ If you use capture groups in the regular expression in the **in** patterns, you 
 
 ```json
 {
-  "in": {
-    "url": "^http://(.*)"
-  },
-  "out": {
-    "url": "https://$1"
-  }
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rewriteplugin.rewritesfile.schema.json",
+  "rewrites": [
+    {
+      "in": {
+        "url": "^http://(.*)"
+      },
+      "out": {
+        "url": "https://$1"
+      }
+    }
+  ]
 }
 ```
