@@ -3,7 +3,7 @@ title: MinimalPermissionsPlugin
 description: MinimalPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/02/2025
+ms.date: 04/30/2025
 ---
 
 # MinimalPermissionsPlugin
@@ -28,6 +28,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 ```json
 {
   "minimalPermissionsPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/minimalpermissionsplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs"
   }
 }

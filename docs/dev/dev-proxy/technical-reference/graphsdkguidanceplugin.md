@@ -3,7 +3,7 @@ title: GraphSdkGuidancePlugin
 description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/30/2025
 ---
 
 # GraphSdkGuidancePlugin
@@ -43,3 +43,8 @@ None
 ## Command line options
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update my application code to use Microsoft Graph JavaScript SDK](../how-to/update-my-application-code-to-use-microsoft-graph-javascript-sdk.md)

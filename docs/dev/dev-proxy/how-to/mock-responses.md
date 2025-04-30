@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/19/2025
+ms.date: 04/30/2025
 ---
 
 # Mock responses
@@ -24,7 +24,7 @@ Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-refe
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -71,7 +71,7 @@ When you use the following configuration, proxy responds to all `GET` requests t
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -103,25 +103,30 @@ When you use the following configuration, Dev Proxy responds to all requests to 
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/users/*"
-  },
-  "response": {
-    "body": {
-      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-      "businessPhones": ["+1 425 555 0109"],
-      "displayName": "Adele Vance",
-      "givenName": "Adele",
-      "jobTitle": "Product Marketing Manager",
-      "mail": "AdeleV@M365x214355.onmicrosoft.com",
-      "mobilePhone": null,
-      "officeLocation": "18/2111",
-      "preferredLanguage": "en-US",
-      "surname": "Vance",
-      "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
-      "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": ["+1 425 555 0109"],
+          "displayName": "Adele Vance",
+          "givenName": "Adele",
+          "jobTitle": "Product Marketing Manager",
+          "mail": "AdeleV@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "18/2111",
+          "preferredLanguage": "en-US",
+          "surname": "Vance",
+          "userPrincipalName": "AdeleV@M365x214355.onmicrosoft.com",
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd"
+        }
+      }
     }
-  }
+  ]
 }
 ```
 
@@ -129,18 +134,23 @@ When you use the following configuration, Dev Proxy returns the same image from 
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value"
-  },
-  "response": {
-    "body": "@picture.jpg",
-    "headers": [
-      {
-        "name": "content-type",
-        "value": "image/jpeg"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users/*/photo/$value"
+      },
+      "response": {
+        "body": "@picture.jpg",
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "image/jpeg"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
@@ -148,28 +158,33 @@ When you use the following configuration, Dev Proxy returns the same response wh
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/me?*"
-  },
-  "response": {
-    "body": {
-      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
-      "businessPhones": [
-        "+1 412 555 0109"
-      ],
-      "displayName": "Megan Bowen",
-      "givenName": "Megan",
-      "jobTitle": "Auditor",
-      "mail": "MeganB@M365x214355.onmicrosoft.com",
-      "mobilePhone": null,
-      "officeLocation": "12/1110",
-      "preferredLanguage": "en-US",
-      "surname": "Bowen",
-      "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
-      "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me?*"
+      },
+      "response": {
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "businessPhones": [
+            "+1 412 555 0109"
+          ],
+          "displayName": "Megan Bowen",
+          "givenName": "Megan",
+          "jobTitle": "Auditor",
+          "mail": "MeganB@M365x214355.onmicrosoft.com",
+          "mobilePhone": null,
+          "officeLocation": "12/1110",
+          "preferredLanguage": "en-US",
+          "surname": "Bowen",
+          "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+          "id": "48d31887-5fad-4d73-a9f5-3c356e68a038"
+        }
+      }
     }
-  }
-},
+  ]
+}
 ```
 
 ### Respond with contents of a file
@@ -180,19 +195,24 @@ For example, the following mock response configuration, instructs Dev Proxy to r
 
 ```json
 {
-  "request": {
-    "url": "https://graph.microsoft.com/v1.0/me",
-    "method": "GET"
-  },
-  "response": {
-    "body": "@response.json",
-    "headers": [
-      {
-        "name": "content-type",
-        "value": "application/json; odata.metadata=minimal"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/me",
+        "method": "GET"
+      },
+      "response": {
+        "body": "@response.json",
+        "headers": [
+          {
+            "name": "content-type",
+            "value": "application/json; odata.metadata=minimal"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
@@ -204,7 +224,7 @@ After you create the mocks file, you need to configure Dev Proxy to use the mock
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -217,6 +237,7 @@ After you create the mocks file, you need to configure Dev Proxy to use the mock
     "https://jsonplaceholder.typicode.com/*"
   ],
   "mockResponsePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   },
   "logLevel": "information",
@@ -238,6 +259,7 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 ```json
 {
   "mocksPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json",
     "blockUnmockedRequests": true
   }

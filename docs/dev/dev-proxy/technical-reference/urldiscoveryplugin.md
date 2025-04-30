@@ -3,7 +3,7 @@ title: UrlDiscoveryPlugin
 description: UrlDiscoveryPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/24/2025
+ms.date: 04/30/2025
 ---
 
 # UrlDiscoveryPlugin
@@ -32,3 +32,8 @@ None
 ## Configuration properties
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Discover URLs to watch](../how-to/discover-urls-watch.md)

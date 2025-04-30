@@ -3,7 +3,7 @@ title: ApiCenterOnboardingPlugin
 description: ApiCenterOnboardingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/16/2024
+ms.date: 04/30/2025
 ---
 
 # ApiCenterOnboardingPlugin
@@ -28,6 +28,7 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
 ```json
 {
   "apiCenterOnboardingPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenteronboardingplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
@@ -73,6 +74,7 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 ```json
 {
   "apiCenterOnboardingPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenteronboardingplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",
@@ -83,3 +85,8 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 ```
 
 In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [How to find shadow APIs](../how-to/check-shadow-apis.md)

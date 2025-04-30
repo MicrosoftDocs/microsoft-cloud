@@ -3,7 +3,7 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 08/05/2024
+ms.date: 04/30/2025
 ---
 
 # ExecutionSummaryPlugin
@@ -33,6 +33,7 @@ Creates a summary of the requests that pass through the proxy.
 ```json
 {
   "executionSummaryPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }
@@ -49,3 +50,8 @@ Creates a summary of the requests that pass through the proxy.
 | Name | Description | Default |
 |----------|-------------|:-------:|
 | `--summary-group-by` | How proxy should group the information in the summary. Available options: `url`, `messageType` | `url` |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Record and export proxy activity](../how-to/record-and-export-proxy-activity.md)

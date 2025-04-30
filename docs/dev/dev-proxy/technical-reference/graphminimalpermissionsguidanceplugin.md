@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsGuidancePlugin
 description: GraphMinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 10/28/2024
+ms.date: 04/30/2025
 ---
 
 # GraphMinimalPermissionsGuidancePlugin
@@ -28,6 +28,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 ```json
 {
   "graphMinimalPermissionsGuidancePlugin": {
+   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/graphminimalpermissionsguidanceplugin.schema.json",
     "permissionsToIgnore": [ 
       "profile", 
       "openid", 
@@ -47,3 +48,8 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 ## Command line options
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Check if you're using excessive Microsoft Graph API permissions](../how-to/check-if-you-are-using-excessive-microsoft-graph-api-permissions.md)
