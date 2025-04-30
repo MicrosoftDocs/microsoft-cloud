@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/16/2024
+ms.date: 04/30/2025
 ---
 
 # LatencyPlugin
@@ -28,6 +28,7 @@ Delays responses by a random number of milliseconds from the configured range.
 ```json
 {
   "latencyPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }
@@ -44,3 +45,8 @@ Delays responses by a random number of milliseconds from the configured range.
 ## Command line options
 
 None
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Simulate slow API responses](../how-to/simulate-slow-api-responses.md)
