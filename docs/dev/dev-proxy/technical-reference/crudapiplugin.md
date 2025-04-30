@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 04/30/2025
 ---
 
 # CrudApiPlugin
@@ -28,6 +28,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 ```json
 {
   "customersApi": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
@@ -53,7 +54,7 @@ Following is an example of an API file that defines an anonymous CRUD API for in
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
@@ -93,7 +94,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -139,7 +140,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -291,3 +292,8 @@ When you create a new item using a `create` action, the plugin doesn't validate 
   }
 ]
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Simulate a CRUD API](../how-to/simulate-crud-api.md)
