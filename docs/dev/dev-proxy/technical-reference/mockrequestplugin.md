@@ -3,7 +3,7 @@ title: MockRequestPlugin
 description: MockRequestPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 04/30/2025
 ---
 
 # MockRequestPlugin
@@ -30,6 +30,7 @@ To issue the configured request, press `w` in the command prompt session where D
 ```json
 {
   "contosoNotification": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockrequestplugin.schema.json",
     "mockFile": "mock-request.json"
   }
 }
@@ -49,7 +50,7 @@ None
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/mockrequestplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockrequestplugin.mockfile.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",
