@@ -3,7 +3,7 @@ title: HttpFileGeneratorPlugin
 description: HttpFileGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/21/2024
+ms.date: 04/30/2025
 ---
 
 # HttpFileGeneratorPlugin
@@ -28,6 +28,7 @@ Generates HTTP file from the intercepted requests and responses.
 ```json
 {
   "httpFileGeneratorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/httpfilegeneratorplugin.schema.json",
     "includeOptionsRequests": false
   }
 }
@@ -66,7 +67,7 @@ GET https://jsonplaceholder.typicode.com/posts?api-key={{jsonplaceholder_typicod
 Host: jsonplaceholder.typicode.com
 User-Agent: curl/8.6.0
 Accept: */*
-Via: 1.1 dev-proxy/0.19.0
+Via: 1.1 dev-proxy/0.27.0
 ```
 
 The plugin creates variables for each combination of hostname and request header/query string parameter. If multiple requests use the same combination, the plugin reuses the variable.
