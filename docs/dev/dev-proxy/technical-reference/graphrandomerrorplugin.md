@@ -3,7 +3,7 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 04/30/2025
 ---
 
 # GraphRandomErrorPlugin
@@ -19,7 +19,7 @@ Fails requests made to Microsoft Graph with random errors.
   "name": "GraphRandomErrorPlugin",
   "enabled": false,
   "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "graphRandomErrorsPlugin"
+  "configSection": "graphRandomErrorPlugin"
 }
 ```
 
@@ -27,7 +27,8 @@ Fails requests made to Microsoft Graph with random errors.
 
 ```json
 {
-  "graphRandomErrorsPlugin": {
+  "graphRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]
   }
 }
@@ -38,6 +39,7 @@ Fails requests made to Microsoft Graph with random errors.
 | Property | Description | Default |
 |----------|-------------|:-------:|
 | `allowedErrors` | List of HTTP status codes that Dev Proxy might produce. | `429 500 502 503 504 507` |
+| `rate` | The percentage of requests to fail with a random error. Value between 0 and 100. | `50` |
 | `retryAfterInSeconds` | Value of the `Retry-After` header in seconds. | `5` |
 
 ## Command line options
@@ -45,6 +47,7 @@ Fails requests made to Microsoft Graph with random errors.
 | Name | Description | Default |
 |----------|-------------|:-------:|
 | `-a, --allowed-errors` | List of HTTP status codes that Dev Proxy might produce. | `429 500 502 503 504 507` |
+| `-f, --failure-rate <failure rate>` | The percentage of requests to fail with a random error. Value between 0 and 100. | `50` |
 
 ## HTTP error status codes used by Microsoft Graph
 
@@ -61,3 +64,8 @@ Code | Name | Description |
 503 | Service Unavailable | Indicates that the server isn't ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header should, if possible, contain the estimated time for the recovery of the service.
 504 | Gateway Timeout | Indicates that the server, while acting as a gateway or proxy, didn't get a response in time from the upstream server that it needed in order to complete the request. |
 507 | Insufficient Storage | Might be given in the context of the Web Distributed Authoring and Versioning (WebDAV) protocol (see [RFC 4918](https://datatracker.ietf.org/doc/html/rfc4918)). It indicates that a method couldn't be performed because the server can't store the representation needed to successfully complete the request.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Simulate errors from Microsoft Graph APIs](../how-to/simulate-errors-microsoft-graph-apis.md)
