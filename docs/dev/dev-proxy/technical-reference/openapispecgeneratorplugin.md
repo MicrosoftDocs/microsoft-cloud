@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/12/2024
+ms.date: 04/30/2025
 ---
 
 # OpenApiSpecGeneratorPlugin
@@ -28,6 +28,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 ```json
 {
   "openApiSpecGeneratorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
     "specVersion": "v3_0",
     "specFormat": "Json"
@@ -50,3 +51,8 @@ None
 ## Remarks
 
 To create better OpenAPI specs, consider using a local language model with Dev Proxy. Using a local language model, the `OpenApiSpecGeneratorPlugin` generates clearer operation IDs and descriptions, giving you a better starting point for your OpenAPI spec. To use a local language model with the `OpenApiSpecGeneratorPlugin`, enable the language model in the configuration file. For more information, see [Use a local language model](../how-to/use-language-model.md).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Generate an OpenAPI spec](../how-to/generate-openapi-spec.md)
