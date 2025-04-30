@@ -3,7 +3,7 @@ title: ApiCenterProductionVersionPlugin
 description: ApiCenterProductionVersionPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/16/2024
+ms.date: 04/30/2025
 ---
 
 # ApiCenterProductionVersionPlugin
@@ -28,6 +28,7 @@ Checks if the APIs used in an app are production version of the APIs registered 
 ```json
 {
   "apiCenterProductionVersionPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenterproductionversionplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
@@ -70,7 +71,8 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 
 ```json
 {
-  "apiCenterOnboardingPlugin": {
+  "apiCenterProductionVersionPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenterproductionversionplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",
@@ -79,4 +81,9 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 }
 ```
 
-In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+In this example, the `ApiCenterProductionVersionPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [How to check if my app is using production-level APIs](../how-to/check-production-level-apis.md)
