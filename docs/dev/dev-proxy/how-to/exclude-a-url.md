@@ -3,7 +3,7 @@ title: Exclude a URL
 description: How to configure URLs that proxy shouldn't intercept
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 11/03/2023
+ms.date: 04/30/2025
 ---
 
 # Exclude a URL
@@ -12,6 +12,7 @@ To exclude a URL from being intercepted, prepend it with an `!` (exclamation mar
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
