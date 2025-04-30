@@ -3,7 +3,7 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 04/30/2025
 ---
 
 # DevToolsPlugin
@@ -30,6 +30,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 ```json
 {
   "devTools": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }
@@ -39,7 +40,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 
 Property | Description | Default
 -------- | ----------- | :-----:
-`preferredBrowser` | Which browser to use to launch Dev Tools. Supported values: `Edge`, `EdgeDev`, `Chrome` | `Edge` |
+`preferredBrowser` | Which browser to use to launch Dev Tools. Supported values: `Edge`, `EdgeDev`, `Chrome` | `Edge`
 
 ## Command line options
 
@@ -59,3 +60,8 @@ To fix this issue:
 1. Disable **Startup boost**
 1. Close all Microsoft Edge windows and processes
 1. Start Dev Proxy
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Inspect requests and responses using Chrome DevTools](../how-to/inspect-requests-responses-chrome-devtools.md)
