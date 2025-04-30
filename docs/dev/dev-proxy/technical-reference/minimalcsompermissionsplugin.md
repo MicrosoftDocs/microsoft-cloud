@@ -3,7 +3,7 @@ title: MinimalCsomPermissionsPlugin
 description: MinimalCsomPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/31/2025
+ms.date: 04/30/2025
 ---
 
 # MinimalCsomPermissionsPlugin
@@ -28,6 +28,7 @@ Detects minimal permissions needed to call the recorded SharePoint Client-Side O
 ```json
 {
   "minimalCsomPermissionsPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/minimalcsompermissionsplugin.schema.json",
     "typesFilePath": "./api-specs"
   }
 }
@@ -53,7 +54,7 @@ The `MinimalCsomPermissionsPlugin` uses a CSOM types file to determine what mini
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.26.0/minimalcsompermissions.types.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/minimalcsompermissions.types.schema.json",
   "types": {
     "268004ae-ef6b-4e9b-8425-127220d84719": "Microsoft.Online.SharePoint.TenantAdministration.Tenant",
     "3747adcd-a3c3-41b9-bfab-4a64dd2f1e0a": "Microsoft.SharePoint.Client.RequestContext"
