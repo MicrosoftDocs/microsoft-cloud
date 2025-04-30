@@ -3,7 +3,7 @@ title: AuthPlugin
 description: AuthPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/17/2024
+ms.date: 04/30/2025
 ---
 
 # AuthPlugin
@@ -28,6 +28,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/authplugin.schema.json",
     "type": "apiKey",
     "apiKey": {
       "parameters": [
@@ -53,6 +54,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/authplugin.schema.json",
     "type": "oauth2",
     "oauth2": {
       "metadataUrl": "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration",
