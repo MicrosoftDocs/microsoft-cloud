@@ -3,7 +3,7 @@ title: Inspect requests and responses using Chrome DevTools
 description: How to use Chrome DevTools to inspect requests and responses intercepted by Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 04/30/2025
 ---
 
 # Inspect requests and responses using Chrome DevTools
@@ -23,7 +23,7 @@ The `DevToolsPlugin` exposes Dev Proxy messages, and information about intercept
 
 To use Chrome DevTools with Dev Proxy:
 
-1. Open the [devproxyrc.json](../technical-reference/devproxyrc.md) file stored in your Dev Proxy installation directory.
+1. Open the [devproxyrc.json](../technical-reference/devproxyrc.md) file stored in your Dev Proxy installation directory. You can also use the `devproxy config open` command.
 1. Enable the `DevToolsPlugin` plugin, by adding the following fragment to the `plugins` array:
 
     ```json
@@ -39,6 +39,7 @@ To use Chrome DevTools with Dev Proxy:
 
     ```json
     "devTools": {
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
       "preferredBrowser": "Edge"
     }
     ```
@@ -50,6 +51,7 @@ To use Chrome DevTools with Dev Proxy:
 
     ```json
     {
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
       "plugins": [
         {
           "name": "DevToolsPlugin",
@@ -59,6 +61,7 @@ To use Chrome DevTools with Dev Proxy:
         }
       ],
       "devTools": {
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
         "preferredBrowser": "Edge"
       }
     }
