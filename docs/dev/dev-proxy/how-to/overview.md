@@ -64,6 +64,7 @@ ms.topic: overview
 - [Check if my app is calling APIs with minimal permissions](./check-minimal-api-permissions.md)
 - [Find shadow APIs](./check-shadow-apis.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
+- [Generate a TypeSpec file](./generate-typespec-file.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
 
 ## Presets

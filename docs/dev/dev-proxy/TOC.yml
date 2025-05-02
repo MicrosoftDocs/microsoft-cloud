@@ -98,6 +98,8 @@
         href: how-to/check-shadow-apis.md
       - name: Generate an OpenAPI spec
         href: how-to/generate-openapi-spec.md
+      - name: Generate a TypeSpec file
+        href: how-to/generate-typespec-file.md
       - name: Update my application code to use Microsoft Graph JavaScript SDK
         href: how-to/update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md
     - name: Presets
