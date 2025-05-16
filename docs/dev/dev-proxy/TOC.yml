@@ -34,6 +34,8 @@
         href: how-to/inspect-requests-responses-chrome-devtools.md
       - name: Inspect API requests issued by cloud services
         href: how-to/inspect-api-requests-cloud-services.md
+      - name: Understand language model usage
+        href: how-to/understand-language-model-usage.md
     - name: Mock responses
       items: 
       - name: Mock responses
@@ -270,6 +272,8 @@
         href: technical-reference/ODataPagingGuidancePlugin.md
       - name: OpenAIMockResponsePlugin
         href: technical-reference/openaimockresponseplugin.md
+      - name: OpenAITelemetryPlugin
+        href: technical-reference/openaitelemetryplugin.md
       - name: OpenApiSpecGeneratorPlugin
         href: technical-reference/openapispecgeneratorplugin.md
       - name: RateLimitingPlugin
