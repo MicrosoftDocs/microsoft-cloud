@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/02/2025
+ms.date: 05/19/2025
 ms.topic: overview
 ---
 
@@ -20,6 +20,7 @@ ms.topic: overview
 - [Exclude a URL](./Exclude-a-URL.md)
 - [Inspect requests and responses using Chrome DevTool](./inspect-requests-responses-chrome-devtools.md)
 - [Inspect API requests issued by cloud services](./inspect-api-requests-cloud-services.md)
+- [Understand language model usage](./understand-language-model-usage.md)
 
 ## Mock responses
 
