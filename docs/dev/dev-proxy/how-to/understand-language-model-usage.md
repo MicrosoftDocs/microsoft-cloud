@@ -118,6 +118,7 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 ### Use language model and inspect telemetry data
 
 1. Make a request to the OpenAI-compatible endpoint that you configured Dev Proxy to intercept.
+
 1. Verify that Dev Proxy intercepted the request and response. In the console, where Dev Proxy is running, you should see similar information:
 
     ```text
@@ -136,33 +137,33 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 
 1. In the web browser, navigate to the OpenTelemetry dashboard.
 
-   # [.NET Aspire](#tab/aspire)
-
-   1. From the side menu, select **Traces**.
-   1. Select one of the traces named `DevProxy.OpenAI`.
-   1. Select the request span.
-   1. In the side panel, explore the language model usage data.
-
+    # [.NET Aspire](#tab/aspire)
+    
+    1. From the side menu, select **Traces**.
+    1. Select one of the traces named `DevProxy.OpenAI`.
+    1. Select the request span.
+    1. In the side panel, explore the language model usage data.
+    
       :::image type="content" source="../media/openai-telemetry-aspire-trace-basic.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data in a span." lightbox="../media/openai-telemetry-aspire-trace-basic.png":::
-
-   1. In the side panel, switch to **Metrics**.
-   1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
-   1. From the list of metrics, select **gen_ai.client.token.usage** to see a chart showing the number of tokens that your application uses.
-
+    
+    1. In the side panel, switch to **Metrics**.
+    1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
+    1. From the list of metrics, select **gen_ai.client.token.usage** to see a chart showing the number of tokens that your application uses.
+    
       :::image type="content" source="../media/openai-telemetry-aspire-metrics-usage.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of token usage." lightbox="../media/openai-telemetry-aspire-metrics-usage.png":::
-
-   # [OpenLIT](#tab/openlit)
-
-   1. On the dashboard, notice the intercepted request and response and the high-level overview.
-
+    
+    # [OpenLIT](#tab/openlit)
+    
+    1. On the dashboard, notice the intercepted request and response and the high-level overview.
+    
       :::image type="content" source="../media/openai-telemetry-openlit-dashboard-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing basic token usage information." lightbox="../media/openai-telemetry-openlit-dashboard-basic.png":::
-
-   1. In the side menu, switch to **Requests**.
-   1. To view the details, select the request.
-
+    
+    1. In the side menu, switch to **Requests**.
+    1. To view the details, select the request.
+    
       :::image type="content" source="../media/openai-telemetry-openlit-requests-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing information about intercepted requests." lightbox="../media/openai-telemetry-openlit-requests-basic.png":::
-
-   ---
+    
+    ---
 
 1. Stop Dev Proxy by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where it's running.
 
@@ -250,41 +251,44 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 ### View estimated costs
 
 1. Start Dev Proxy.
+
 1. Make a request to the OpenAI-compatible endpoint that you configured Dev Proxy to intercept.
+
 1. In the web browser, navigate to the OpenTelemetry dashboard.
 
-   # [.NET Aspire](#tab/aspire)
-
-   1. From the side panel, select **Metrics**.
-   1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
-   1. From the list of metrics, select **gen_ai.client.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
-
+    # [.NET Aspire](#tab/aspire)
+    
+    1. From the side panel, select **Metrics**.
+    1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
+    1. From the list of metrics, select **gen_ai.client.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
+    
       :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
-
-   # [OpenLIT](#tab/openlit)
-
-   1. On the dashboard, notice the intercepted request and response and the high-level overview.
-
+    
+    # [OpenLIT](#tab/openlit)
+    
+    1. On the dashboard, notice the intercepted request and response and the high-level overview.
+    
       :::image type="content" source="../media/openai-telemetry-openlit-dashboard-cost.png" alt-text="Screenshot of the OpenLIT dashboard showing token cost information." lightbox="../media/openai-telemetry-openlit-dashboard-cost.png":::
-
-   ---
+    
+    ---
 
 1. Stop Dev Proxy by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where it's running.
+
 1. Stop the OpenTelemetry collector.
 
-   # [.NET Aspire](#tab/aspire)
-
-   1. In the terminal where the .NET Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
-
-   # [OpenLIT](#tab/openlit)
-
-   1. In the terminal where you started OpenLIT, run the following command to stop the dashboard:
-
+    # [.NET Aspire](#tab/aspire)
+    
+    1. In the terminal where the .NET Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
+    
+    # [OpenLIT](#tab/openlit)
+    
+    1. In the terminal where you started OpenLIT, run the following command to stop the dashboard:
+    
       ```bash
       docker compose down
       ```
-
-   ---
+    
+    ---
 
 ## Next steps
 
