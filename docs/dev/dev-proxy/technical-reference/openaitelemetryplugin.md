@@ -10,9 +10,9 @@ ms.date: 05/19/2025
 
 Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and responses.
 
-:::image type="content" source="../media/openai-telemetry-aspire.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data" lightbox="../media/openai-telemetry-aspire.png":::
+:::image type="content" source="../media/openai-telemetry-aspire.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-aspire.png":::
 
-:::image type="content" source="../media/openai-telemetry-openlit.png" alt-text="Screenshot of the OpenLIT dashboard showing OpenAI telemetry data" lightbox="../media/openai-telemetry-openlit.png":::
+:::image type="content" source="../media/openai-telemetry-openlit.png" alt-text="Screenshot of the OpenLIT dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-openlit.png":::
 
 ## Plugin instance definition
 
