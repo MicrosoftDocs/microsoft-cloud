@@ -76,32 +76,32 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
     
     1. Run the following command to start the .NET Aspire OpenTelemetry collector and dashboard:
     
-      ```bash
-      docker run --rm -it -p 18888:18888 -p 4317:18889 -p 4318:18890 --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:latest
-      ```
-    
-      > [!NOTE]
-      > When you're finished using the .NET Aspire dashboard, stop the dashboard by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where you started the dashboard. Docker automatically removes the container when you stop it.
+        ```bash
+        docker run --rm -it -p 18888:18888 -p 4317:18889 -p 4318:18890 --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:latest
+        ```
+        
+        > [!NOTE]
+        > When you're finished using the .NET Aspire dashboard, stop the dashboard by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where you started the dashboard. Docker automatically removes the container when you stop it.
     
     1. Open the .NET Aspire dashboard in your browser at `http://localhost:18888/login?t=<code>`.
     
     # [OpenLIT](#tab/openlit)
     
-    To run OpenLIT, run the following command:
+    1. To run OpenLIT, run the following command:
     
-    ```bash
-    # Clone the OpenLIT repository
-    git clone git@github.com:openlit/openlit.git
-    # Start the OpenLIT OpenTelemetry collector and dashboard
-    docker compose up -d
-    ```
+        ```bash
+        # Clone the OpenLIT repository
+        git clone git@github.com:openlit/openlit.git
+        # Start the OpenLIT OpenTelemetry collector and dashboard
+        docker compose up -d
+        ```
     
-    > [!IMPORTANT]
-    > When you're finished using the OpenLIT dashboard, stop the dashboard by running the following command:
-    >
-    > ```bash
-    > docker compose down
-    > ```
+        > [!IMPORTANT]
+        > When you're finished using the OpenLIT dashboard, stop the dashboard by running the following command:
+        >
+        > ```bash
+        > docker compose down
+        > ```
     
     1. Open the OpenLIT dashboard in your browser at `http://127.0.0.1:3000`. Use the default credentials to sign in:
       - Email: `user@openlit.io`
@@ -144,24 +144,24 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
     1. Select the request span.
     1. In the side panel, explore the language model usage data.
     
-      :::image type="content" source="../media/openai-telemetry-aspire-trace-basic.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data in a span." lightbox="../media/openai-telemetry-aspire-trace-basic.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-trace-basic.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data in a span." lightbox="../media/openai-telemetry-aspire-trace-basic.png":::
     
     1. In the side panel, switch to **Metrics**.
     1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
     1. From the list of metrics, select **gen_ai.client.token.usage** to see a chart showing the number of tokens that your application uses.
     
-      :::image type="content" source="../media/openai-telemetry-aspire-metrics-usage.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of token usage." lightbox="../media/openai-telemetry-aspire-metrics-usage.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-metrics-usage.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of token usage." lightbox="../media/openai-telemetry-aspire-metrics-usage.png":::
     
     # [OpenLIT](#tab/openlit)
     
     1. On the dashboard, notice the intercepted request and response and the high-level overview.
     
-      :::image type="content" source="../media/openai-telemetry-openlit-dashboard-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing basic token usage information." lightbox="../media/openai-telemetry-openlit-dashboard-basic.png":::
+        :::image type="content" source="../media/openai-telemetry-openlit-dashboard-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing basic token usage information." lightbox="../media/openai-telemetry-openlit-dashboard-basic.png":::
     
     1. In the side menu, switch to **Requests**.
     1. To view the details, select the request.
     
-      :::image type="content" source="../media/openai-telemetry-openlit-requests-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing information about intercepted requests." lightbox="../media/openai-telemetry-openlit-requests-basic.png":::
+        :::image type="content" source="../media/openai-telemetry-openlit-requests-basic.png" alt-text="Screenshot of the OpenLIT dashboard showing information about intercepted requests." lightbox="../media/openai-telemetry-openlit-requests-basic.png":::
     
     ---
 
@@ -262,13 +262,13 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
     1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
     1. From the list of metrics, select **gen_ai.client.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
     
-      :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
     
     # [OpenLIT](#tab/openlit)
     
     1. On the dashboard, notice the intercepted request and response and the high-level overview.
     
-      :::image type="content" source="../media/openai-telemetry-openlit-dashboard-cost.png" alt-text="Screenshot of the OpenLIT dashboard showing token cost information." lightbox="../media/openai-telemetry-openlit-dashboard-cost.png":::
+        :::image type="content" source="../media/openai-telemetry-openlit-dashboard-cost.png" alt-text="Screenshot of the OpenLIT dashboard showing token cost information." lightbox="../media/openai-telemetry-openlit-dashboard-cost.png":::
     
     ---
 
@@ -278,11 +278,11 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
     # [.NET Aspire](#tab/aspire)
     
-    1. In the terminal where the .NET Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
+    In the terminal where the .NET Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
     
     # [OpenLIT](#tab/openlit)
     
-    1. In the terminal where you started OpenLIT, run the following command to stop the dashboard:
+    In the terminal where you started OpenLIT, run the following command to stop the dashboard:
     
       ```bash
       docker compose down
