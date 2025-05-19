@@ -266,9 +266,9 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
     
     # [OpenLIT](#tab/openlit)
     
-    1. On the dashboard, notice the intercepted request and response and the high-level overview.
+    On the dashboard, notice the intercepted request and response and the high-level overview.
     
-        :::image type="content" source="../media/openai-telemetry-openlit-dashboard-cost.png" alt-text="Screenshot of the OpenLIT dashboard showing token cost information." lightbox="../media/openai-telemetry-openlit-dashboard-cost.png":::
+    :::image type="content" source="../media/openai-telemetry-openlit-dashboard-cost.png" alt-text="Screenshot of the OpenLIT dashboard showing token cost information." lightbox="../media/openai-telemetry-openlit-dashboard-cost.png":::
     
     ---
 
