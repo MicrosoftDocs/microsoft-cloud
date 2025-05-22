@@ -45,12 +45,12 @@ Your custom applications built on the Microsoft Cloud should also use Microsoft 
 
 :::image type="content" source="media/ad-ad-b2c-provide-identity-services.png" alt-text="Diagram that shows Azure A D B 2 C and Azure A D providing identity services both for customer applications and employee applications." border="false" :::
 
-**Figure 9: Microsoft Entra ID and Azure Active Directory B2C provide a common identity service for applications built on the Microsoft cloud.**
+**Figure 9: Microsoft Entra ID and Microsoft Entra External ID provide a common identity service for applications built on the Microsoft cloud.**
 
 As the figure shows, custom applications can use two related identity services:
 
 - [Microsoft Entra ID](/entra), which provides identities within the Microsoft Cloud. Employees who access your custom applications will typically use Entra ID to sign in and establish the identity they use to access all Microsoft Cloud services.
-- [Microsoft Entra ID B2C](/azure/active-directory-b2c), which provides identities for external users. This service lets your customers create their own accounts or use existing public accounts from Microsoft, Google, Facebook, and others.
+- [Microsoft Entra External ID](/entra/external-id/external-identities-overview), which provides identities for external users. This service lets partners, consumers, or business customers create their own accounts or use existing public accounts from Microsoft, Google, Facebook, and others.
 
 Using Microsoft Entra ID for identity brings several benefits:
 
