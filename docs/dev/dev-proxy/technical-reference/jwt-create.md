@@ -3,7 +3,7 @@ title: jwt create
 description: jwt create command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 03/31/2025
+ms.date: 06/02/2025
 ---
 
 # jwt create
@@ -21,7 +21,7 @@ devproxy jwt create [options]
 Generates a JWT for a user named `Megan Bowen` with the issuer `my-app` and audience `https://myserver.com`. The token includes the role `admin`, scopes `read` and `write`, and a custom claim `custom:claim`. The token is valid for 120 minutes.
 
 ```console
-devproxy jwt create --name "Megan Bowen" --issuer "my-app" --audience "https://myserver.com" --roles "admin" --scopes "read" --scopes "write" --claims "custom:claim" --valid-for 120
+devproxy jwt create --name "Megan Bowen" --issuer "my-app" --audiences "https://myserver.com" --roles "admin" --scopes "read" --scopes "write" --claims "custom:claim" --valid-for 120
 ```
 
 ## Arguments
@@ -34,7 +34,7 @@ None
 |--|--|--|--|--|
 | `-n, --name` | The name of the user to create the token for. | string | `Dev Proxy` |
 | `-i, --issuer` | The issuer of the token. | string | `dev-proxy` |
-| `-a, --audience` | The audiences to create the token for. Specify once for each audience. | string | `https://myserver.com` |
+| `-a, --audiences` | The audiences to create the token for. Specify once for each audience. | string | `https://myserver.com` |
 | `-r, --roles` | A role claim to add to the token. Specify once for each role. | string | None |
 | `-s, --scopes` | A scope claim to add to the token. Specify once for each scope. | string | None |
 | `--claims` | Claims to add to the token. Specify once for each claim in the format `name:value`. | None |
@@ -43,4 +43,4 @@ None
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
 
 > [!NOTE]
-> Registered claims (e.g. `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) are automatically added to the token. If you specify any of these claims in the `--claims` option, the values you provide will be ignored.
+> Dev Proxy automatically adds registered claims (for example, `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) to the token. If you specify any of these claims using the `--claims` option, it takes precedence over the value specified in the dedicated option.
