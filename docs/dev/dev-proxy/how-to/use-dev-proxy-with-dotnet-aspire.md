@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET Aspire applications
 description: How to use Dev Proxy with Use Dev Proxy with .NET Aspire applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/19/2025
+ms.date: 06/02/2025
 ---
 
 # Use Dev Proxy with .NET Aspire applications
@@ -40,11 +40,8 @@ var apiService = builder.AddProject<Projects.AspireStarterApp_ApiService>("apise
     .WithHttpsHealthCheck("/health");
 
 var devProxy = builder.AddDevProxyExecutable("devproxy")
-    .WithArgs("-c", Path.Combine(".devproxy", "config", "devproxy.json"))
-    .WithArgs(context => {
-        context.Args.Add("-u");
-        context.Args.Add($"{apiService.GetEndpoint("https").Url}/*");
-    });
+    .WithConfigFile(".devproxy/config/devproxy.json")
+    .WithUrlsToWatch(() => [$"{apiService.GetEndpoint("https").Url}/*"]);
 
 // Add a web frontend project and configure it to use Dev Proxy
 builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
@@ -59,7 +56,10 @@ builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
 builder.Build().Run();
 ```
 
-First, using the Dev Proxy .NET Aspire extensions, you add a Dev Proxy service to your application. The `AddDevProxyExecutable` method specifies the name of the Dev Proxy executable. Using the `WithArgs` method, you specify the path to the Dev Proxy configuration file and the URLs to watch. In this example, you want Dev Proxy to intercept requests that the web app makes to the API service.
+First, using the Dev Proxy .NET Aspire extensions, you add a Dev Proxy service to your application. The `AddDevProxyExecutable` method specifies the name of the Dev Proxy executable. Using the `WithConfigFile` method, you specify the path to the Dev Proxy configuration file. Using the `WithUrlsToWatch` method, you specify the list of URLs to watch. In this example, you want Dev Proxy to intercept requests that the web app makes to the API service.
+
+> [!IMPORTANT]
+> Notice, that the `WithUrlsToWatch` method accepts a function that returns a list of URLs to watch. This is because the API service endpoint is not available when you configure Dev Proxy, so you cannot pass the URL directly. Instead, you use a lambda expression that returns the URL of the API service when it's available.
 
 Next, in the web app, you use the `HTTPS_PROXY` environment variable to configure the web app to use Dev Proxy. Using the `WaitFor` method you instruct the web app to wait for Dev Proxy to be available before starting.
 
@@ -81,19 +81,14 @@ var apiService = builder.AddProject<Projects.AspireStarterApp_ApiService>("apise
 
 // Add Dev Proxy as a container resource
 var devProxy = builder.AddDevProxyContainer("devproxy")
-    // specify the Dev Proxy configuration file
-    .WithArgs("-c", "./devproxyrc.json")
-    .WithArgs(context =>
-    {
-        context.Args.Add("-u");
-        context.Args.Add($"{apiService.GetEndpoint("https").Url}/*");
-    })
+    // specify the Dev Proxy configuration file; relative to the config folder
+    .WithConfigFile("./devproxy.json")
     // mount the local folder with PFX certificate for intercepting HTTPS traffic
-    .WithBindMount(Path.Combine(AppContext.BaseDirectory, ".devproxy", "cert"),
-        "/home/devproxy/.config/dev-proxy/rootCert")
+    .WithCertFolder(".devproxy/cert")
     // mount the local folder with Dev Proxy configuration
-    .WithBindMount(Path.Combine(AppContext.BaseDirectory, ".devproxy", "config"),
-        "/config");
+    .WithConfigFolder(".devproxy/config")
+    // let Dev Proxy intercept requests to the API service
+    .WithUrlsToWatch(() => [$"{apiService.GetEndpoint("https").Url}/*"]);
 
 // Add a web frontend project and configure it to use Dev Proxy
 builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
@@ -119,7 +114,7 @@ AspireStarterApp
 │   ├── cert
 │   │   └── rootCert.pfx
 │   └── config
-│       └── devproxyrc.json
+│       └── devproxy.json
 ├── Projects
 │   ├── AspireStarterApp_ApiService
 │   └── AspireStarterApp_Web
