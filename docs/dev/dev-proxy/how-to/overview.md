@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/19/2025
+ms.date: 06/03/2025
 ms.topic: overview
 ---
 
@@ -87,6 +87,7 @@ ms.topic: overview
 - [With JavaScript Azure Functions](./use-dev-proxy-with-javascript-azure-functions.md)
 - [With .NET applications](./use-dev-proxy-with-dotnet.md)
 - [With .NET applications in Docker containers](./use-dev-proxy-with-dotnet-docker.md)
+- [With .NET Azure Functions](./use-dev-proxy-with-dotnet-azure-functions.md)
 - [With .NET Aspire applications](./use-dev-proxy-with-dotnet-aspire.md)
 - [With SharePoint Framework (SPFx) solutions](./use-dev-proxy-with-spfx.md)
 - [In CI/CD scenarios](./use-dev-proxy-in-ci-cd-overview.md)
