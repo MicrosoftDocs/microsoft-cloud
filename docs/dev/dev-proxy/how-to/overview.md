@@ -34,7 +34,6 @@ ms.topic: overview
 - [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
 - [Simulate Azure OpenAI API](./simulate-azure-openai.md)
 - [Simulate OpenAI API](./simulate-openai.md)
-- [Mock Teams Admin Center notification for Microsoft Graph connectors](./mock-teams-admin-center-notification-graph-connectors.md)
 
 ## Simulate errors
 

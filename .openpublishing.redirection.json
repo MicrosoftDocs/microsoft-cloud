@@ -139,6 +139,16 @@
          "source_path": "docs/dev/dev-proxy/technical-reference/config.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/config-open",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/technical-reference/graphconnectornotificationplugin.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/technical-reference/overview#microsoft-graph-plugins",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/how-to/mock-teams-admin-center-notification-graph-connectors.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/how-to/overview",
+         "redirect_document_id": false
       }
    ]
 }
