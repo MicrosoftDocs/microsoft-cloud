@@ -58,8 +58,6 @@
         href: how-to/simulate-azure-openai.md
       - name: Simulate OpenAI API
         href: how-to/simulate-openai.md
-      - name: Mock Teams Admin Center notification for Microsoft Graph connectors
-        href: how-to/mock-teams-admin-center-notification-graph-connectors.md
     - name: Simulate errors
       items:
       - name: Test my app with random errors
@@ -296,8 +294,6 @@
             href: technical-reference/GraphClientRequestIdGuidancePlugin.md
           - name: GraphConnectorGuidancePlugin
             href: technical-reference/graphconnectorguidanceplugin.md
-          - name: GraphConnectorNotificationPlugin
-            href: technical-reference/graphconnectornotificationplugin.md
           - name: GraphMinimalPermissionsPlugin
             href: technical-reference/graphminimalpermissionsplugin.md
           - name: GraphMinimalPermissionsGuidancePlugin
