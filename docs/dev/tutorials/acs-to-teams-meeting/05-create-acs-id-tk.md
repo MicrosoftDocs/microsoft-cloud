@@ -35,6 +35,8 @@ In this exercise you'll learn how to dynamically retrieve user identity and toke
 
 [!INCLUDE [TypeScript](./includes/05-create-acs-id-tk-ts.md)]
 
+---
+
 ## Next Step
 
 > [!div class="nextstepaction"]
