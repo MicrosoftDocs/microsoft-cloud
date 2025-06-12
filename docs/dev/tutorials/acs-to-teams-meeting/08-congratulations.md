@@ -32,4 +32,4 @@ You've successfully integrated Azure Communication Services with Microsoft Teams
 
 ## You've completed this tutorial
 
-![ACS Audio/Video Solution](./media/architecture-no-title.png "Scenario Architecture")
+:::image type="content" source="./media/architecture-no-title.png" alt-text="ACS Teams app architecture overview":::
