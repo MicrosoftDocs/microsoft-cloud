@@ -47,19 +47,19 @@
     - name: Audio/Video Calling from a Custom App into a Teams Meeting
       items:
         - name: 1. Overview
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-Overview
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-overview
         - name: 2. Create an Azure Communication Services Resource
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/02-Create-ACS-Resource
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/02-create-acs-resource
         - name: 3. Integrate Azure Communication Services Calling into a React App
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/03-Integrate-ACS-React
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/03-integrate-acs-react
         - name: 4. Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/04-Create-Teams-Meeting
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/04-create-teams-meeting
         - name: 5. Dynamically Create an Azure Communication Services Identity and Token
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/05-Create-ACS-Identity-Token
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/05-create-acs-id-tk
         - name: 6. Deploy the App to Azure Functions and Azure Container Apps
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/07-Deploy-to-Azure-Container-Apps
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/07-deploy-to-azure-container-apps
         - name: 7. Congratulations!
-          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/08-Congratulations
+          href: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/08-congratulations
     - name: Automate Data Reporting with Azure Functions and Power Automate
       href: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
     - name: Build productivity apps by using Microsoft Graph Toolkit

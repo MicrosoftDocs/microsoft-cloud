@@ -26,7 +26,7 @@ ms.custom:
 > [!IMPORTANT]
 > In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.
 >
-> - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+> - [Azure CLI](/cli/azure/install-azure-cli)
 > - If you're using VS Code, install the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 >
 
@@ -48,7 +48,7 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 
 ### Deploy to Azure Container Apps
 
-1. The first task you'll perform is to create a new [Azure Container Registry (ACR)](https://learn.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) resource. Once the registry is created, you'll build an image and push it to the registry.
+1. The first task you'll perform is to create a new [Azure Container Registry (ACR)](/azure/container-registry/container-registry-get-started-azure-cli) resource. Once the registry is created, you'll build an image and push it to the registry.
 
 1. Open a command window and run the following command to login to your Azure subscription:
 
@@ -137,7 +137,7 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 1. Select **Create** in the toolbar.
 
     > [!NOTE]
-    > Although you're using the Azure portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](https://learn.microsoft.com/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
+    > Although you're using the Azure portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
 
 1. Perform the following tasks:
     - Select your subscription.

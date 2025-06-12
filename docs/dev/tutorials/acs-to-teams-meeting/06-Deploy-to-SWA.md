@@ -31,7 +31,7 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 
 1. Type *static web apps* in the top search bar and select **Static Web Apps** from the options that appear.
 
-    :::image type="content" source="./media/search-swa-portal.png" alt-text="Azure Static Web Apps":::
+    :::image type="content" source="./media/search-swa-portal.png" alt-text="Azure Static Web Apps search":::
 
 1. Select **Create** in the toolbar.
 
