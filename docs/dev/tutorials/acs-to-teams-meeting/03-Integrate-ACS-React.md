@@ -195,4 +195,4 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Dynamically Create a Microsoft Teams Meeting using Microsoft Graph](04-Create-Teams-Meeting.md)
+> [Dynamically Create a Microsoft Teams Meeting using Microsoft Graph](04-create-teams-meeting.md)

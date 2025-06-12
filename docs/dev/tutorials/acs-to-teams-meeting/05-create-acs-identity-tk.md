@@ -38,5 +38,5 @@ In this exercise you'll learn how to dynamically retrieve user identity and toke
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Deploy the App to Azure Functions and Azure Container Apps](07-Deploy-to-Azure-Container-Apps.md)
+> [Deploy the App to Azure Functions and Azure Container Apps](07-deploy-to-azure-container-apps.md)
 

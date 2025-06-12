@@ -73,4 +73,4 @@ To get started, perform the following tasks:
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Integrate Azure Communication Services Calling into a React App](03-Integrate-ACS-React.md)
+> [Integrate Azure Communication Services Calling into a React App](03-integrate-acs-react.md)

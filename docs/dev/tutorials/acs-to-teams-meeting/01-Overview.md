@@ -59,4 +59,4 @@ In this tutorial, you'll learn how Azure Communication Services can be used in a
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Create an Azure Communication Services Resource](02-Create-ACS-Resource.md)
+> [Create an Azure Communication Services Resource](02-create-acs-resource.md)
