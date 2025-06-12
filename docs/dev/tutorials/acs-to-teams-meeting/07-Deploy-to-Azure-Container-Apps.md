@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Deploy the App to Azure Functions and Azure Container Apps
+# Tutorial: Deploy the App to Azure Functions and Azure Container Apps
 
 > [!IMPORTANT]
 > In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.

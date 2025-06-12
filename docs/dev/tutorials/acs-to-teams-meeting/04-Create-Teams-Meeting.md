@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
+# Tutorial: Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
 
 In this exercise, you'll automate the process of creating a Microsoft Teams meeting link and passing to the ACS by using Azure Functions and Microsoft Graph.
 

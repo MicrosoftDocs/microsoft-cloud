@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Dynamically Create an Azure Communication Services Identity and Token
+# Tutorial: Dynamically Create an Azure Communication Services Identity and Token
 
 In this exercise you'll learn how to dynamically retrieve user identity and token values from Azure Communication Services using Azure Functions. Once retrieved, the values will be passed to the ACS UI composite to enable a call to be made by a customer.
 

@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Congratulations!
+# Tutorial: Congratulations!
 
 You've successfully integrated Azure Communication Services with Microsoft Teams meetings! In this tutorial, you learned how to:
 - Create an Azure Communication Services resource.
@@ -30,6 +30,6 @@ You've successfully integrated Azure Communication Services with Microsoft Teams
 - Deploy the ACS and Microsoft Graph functions to Azure Functions.
 - Deploy the ACS React app to Azure Container Apps.
 
-### You've completed this tutorial
+## You've completed this tutorial
 
 ![ACS Audio/Video Solution](./media/architecture-no-title.png "Scenario Architecture")
