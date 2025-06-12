@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Tutorial: Create an Azure Communication Services Resource
+# Create an Azure Communication Services Resource
 
 In this exercise you'll create an Azure Communication Services (ACS) resource in the Azure portal.
 

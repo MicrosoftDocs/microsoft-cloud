@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Tutorial: Congratulations!
+# Congratulations!
 
 You've successfully integrated Azure Communication Services with Microsoft Teams meetings! In this tutorial, you learned how to:
 - Create an Azure Communication Services resource.

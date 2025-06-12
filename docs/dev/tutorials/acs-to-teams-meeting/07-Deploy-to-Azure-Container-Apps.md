@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Tutorial: Deploy the App to Azure Functions and Azure Container Apps
+# Deploy the App to Azure Functions and Azure Container Apps
 
 > [!IMPORTANT]
 > In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.
@@ -38,11 +38,11 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./07-Deploy-to-Azure-Container-App-CS.md)]
+[!INCLUDE [CSharp](./includes/07-Deploy-to-Azure-Container-App-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./07-Deploy-to-Azure-Container-App-TS.md)]
+[!INCLUDE [TypeScript](./includes/07-Deploy-to-Azure-Container-App-TS.md)]
 
 ---
 

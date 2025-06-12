@@ -21,7 +21,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Tutorial: Deploy the App to Azure Static Web Apps
+# Deploy the App to Azure Static Web Apps
 
 In this exercise you'll learn how to deploy the ACS React app and the Azure Functions to the cloud using Azure Static Web Apps.
 
