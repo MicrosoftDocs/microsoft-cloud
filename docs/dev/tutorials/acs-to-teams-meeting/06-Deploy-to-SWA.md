@@ -1,6 +1,6 @@
 ---
 title: Deploy the App to Azure Static Web Apps
-description: In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
+description: Learn how to deploy both the React application and Azure Functions to Azure Static Web Apps. This provides seamless integration between frontend and backend components.
 author: DanWahlin
 ms.author: dwahlin
 ms.date: 06/12/2025

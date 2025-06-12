@@ -1,6 +1,6 @@
 ---
 title: Create an Azure Communication Services Resource
-description: In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
+description: Learn how to create an Azure Communication Services resource in the Azure portal and set up the necessary user identity and token for audio/video calling.
 author: DanWahlin
 ms.author: dwahlin
 ms.date: 06/12/2025
@@ -33,7 +33,7 @@ To get started, perform the following tasks:
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
 
-    :::image type="content" source="./media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
+    :::image type="content" source="./media/search-acs-portal.png" alt-text="Finding ACS in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 
@@ -73,4 +73,4 @@ To get started, perform the following tasks:
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Integrate Azure Communication Services Calling into a React App](03-Integrate-ACS-Calling.md)
+> [Integrate Azure Communication Services Calling into a React App](03-Integrate-ACS-React.md)

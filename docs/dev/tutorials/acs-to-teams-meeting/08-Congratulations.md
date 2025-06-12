@@ -1,6 +1,6 @@
 ---
 title: Congratulations!
-description: In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
+description: Review what you've learned about integrating Azure Communication Services with Microsoft Teams meetings and the key components used in this solution.
 author: DanWahlin
 ms.author: dwahlin
 ms.date: 06/12/2025

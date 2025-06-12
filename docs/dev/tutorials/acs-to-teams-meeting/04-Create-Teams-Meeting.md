@@ -1,6 +1,6 @@
 ---
 title: Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
-description: In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
+description: Learn how to automate the creation of Microsoft Teams meetings using Azure Functions and Microsoft Graph API. This module covers setting up Microsoft Entra app registration and permissions.
 author: DanWahlin
 ms.author: dwahlin
 ms.date: 06/12/2025
