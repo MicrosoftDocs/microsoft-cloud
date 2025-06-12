@@ -16,6 +16,7 @@ metadata:
   ms.author: dwahlin
   ms.date: 7/12/2024
   ms.collection: ce-advocates-ai-copilot
+  ms.service: microsoft-cloud-for-developers
 
 highlightedContent:
   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -87,7 +88,7 @@ productDirectory:
       imageSrc: ./media/handson.svg
       links:
         - text: Audio/Video Calling from a Custom App into a Teams Meeting
-          url: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting
+          url: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-overview
 
         - text: Automate Data Reporting with Azure Functions and Power Automate
           url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate

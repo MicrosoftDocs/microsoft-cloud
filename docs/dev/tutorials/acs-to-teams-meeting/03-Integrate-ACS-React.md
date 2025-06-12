@@ -1,8 +1,31 @@
+---
+title: Integrate Azure Communication Services Calling into a React App
+description: Learn how to integrate the Azure Communication Services UI calling composite into a React application to enable audio/video calls from your app into Microsoft Teams meetings.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure Communication Services video calling into a React application.
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Integrate Azure Communication Services Calling into a React App
 
 In this exercise you'll add the [ACS UI calling composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-joinexistingcall--join-existing-call) into a React app to enable making audio/video calls from a custom app into a Microsoft Teams meeting.
 
-:::image type="content" source="../media/2-acs-react.png" alt-text="ACS in React":::
+:::image type="content" source="./media/2-acs-react.png" alt-text="ACS in React":::
 
 1. Visit [GitHub](https://github.com) and sign in. If you don't already have a GitHub account, you can select the **Sign up** option to create one.
 
@@ -10,7 +33,7 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 
 1. Select the **Fork** option to add the repository to your desired GitHub organization/account.
 
-    :::image type="content" source="../media/fork-repo.png" alt-text="Fork a Repository":::
+    :::image type="content" source="./media/fork-repo.png" alt-text="Fork a Repository":::
 
 1. Run the following command to clone this repository to your machine. Replace *<YOUR_ORG_NAME>* with your GitHub organization/account name.
 
@@ -168,3 +191,8 @@ In this exercise you'll add the [ACS UI calling composite](https://azure.github.
 1. After the applications builds you should see a calling UI displayed. Enable selecting your microphone and camera and initiate the call. You should see that you're placed in a waiting room. If you join the meeting you setup earlier in Microsoft Teams, you can allow the guest to enter the meeting.
 
 1. Press <kbd>Ctrl + C</kbd> to stop the application. Now that you've successfully run it, let's explore how you can dynamically get the ACS user identity and token and automatically create a Microsoft Teams meeting and return the join URL using Microsoft Graph.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Dynamically Create a Microsoft Teams Meeting using Microsoft Graph](04-create-teams-meeting.md)

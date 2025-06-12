@@ -1,8 +1,31 @@
+---
+title: Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
+description: Learn how to automate the creation of Microsoft Teams meetings using Azure Functions and Microsoft Graph API. This module covers setting up Microsoft Entra app registration and permissions.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to dynamically create a Microsoft Teams meeting using Microsoft Graph.
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Dynamically Create a Microsoft Teams Meeting using Microsoft Graph
 
 In this exercise, you'll automate the process of creating a Microsoft Teams meeting link and passing to the ACS by using Azure Functions and Microsoft Graph.
 
-:::image type="content" source="../media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
+:::image type="content" source="./media/3-create-teams-meeting-link.png" alt-text="Create Teams Meeting":::
 
 1. You'll need to create a Microsoft Entra ID app for Daemon app authentication. In this step, authentication will be handled in the background with *app credentials*, and a Microsoft Entra ID app will use Application Permissions to make Microsoft Graph API calls. Microsoft Graph will be used to dynamically create a Microsoft Teams meeting and return the Teams meeting URL.
 
@@ -25,11 +48,11 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./04-Create-Teams-Meeting-CS.md)]
+[!INCLUDE [CSharp](./includes/04-create-teams-meeting-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./04-Create-Teams-Meeting-TS.md)]
+[!INCLUDE [TypeScript](./includes/04-create-teams-meeting-TS.md)]
 
 ---
 
@@ -93,6 +116,11 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 1. Stop the terminal process by entering <kbd>Ctrl + C</kbd> in the terminal window.
 
 1. Stop the Azure Functions project.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Dynamically Create an Azure Communication Services Identity and Token](05-create-acs-id-tk.md)
 
 > [!NOTE]
 > Visit the Azure Communication Services documentation to learn more about [extending Microsoft Teams meetings](/azure/communication-services/tutorials/virtual-visits/extend-teams/overview) in other ways.
