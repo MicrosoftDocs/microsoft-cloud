@@ -38,11 +38,11 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./includes/07-Deploy-to-Azure-Container-App-CS.md)]
+[!INCLUDE [CSharp](./includes/07-deploy-to-azure-container-app-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./includes/07-Deploy-to-Azure-Container-App-TS.md)]
+[!INCLUDE [TypeScript](./includes/07-deploy-to-azure-container-app-TS.md)]
 
 ---
 

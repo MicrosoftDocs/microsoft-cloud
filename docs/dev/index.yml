@@ -10,6 +10,7 @@ metadata:
   author: danwahlin
   ms.author: dwahlin
   ms.date: 02/03/2025
+  ms.service: microsoft-cloud-for-developers
 
 landingContent:
   - title: Azure and Microsoft 365 Tutorials
@@ -17,7 +18,7 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Audio/Video Calling from a Custom App into a Teams Meeting
-            url: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-Overview
+            url: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-overview.md
           - text: Build productivity apps by using Microsoft Graph Toolkit
             url: /graph/toolkit/get-started/building-one-productivity-hub
           - text: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App

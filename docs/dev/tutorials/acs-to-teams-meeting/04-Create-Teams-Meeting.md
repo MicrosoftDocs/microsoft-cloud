@@ -48,11 +48,11 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./includes/04-Create-Teams-Meeting-CS.md)]
+[!INCLUDE [CSharp](./includes/04-create-teams-meeting-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./includes/04-Create-Teams-Meeting-TS.md)]
+[!INCLUDE [TypeScript](./includes/04-create-teams-meeting-TS.md)]
 
 ---
 
