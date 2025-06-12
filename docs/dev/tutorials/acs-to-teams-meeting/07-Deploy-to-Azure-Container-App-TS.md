@@ -8,7 +8,7 @@ Let's get started by using VS Code to deploy the functions code to Azure Functio
 
 1. Open the VS Code command pallet (<kbd>Shift+Cmd+P</kbd> on Mac | <kbd>Shift+Ctrl+P</kbd> on Windows), and select **Azure Functions: Create Function App in Azure**. 
 
-    :::image type="content" source="../media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
+    :::image type="content" source="./media/create-function-app-in-azure.png" alt-text="Create Function App in Azure":::
 
     > [!NOTE]
     > If you don't see this option, ensure you have the [Azure Functions extension installed](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) in VS Code.

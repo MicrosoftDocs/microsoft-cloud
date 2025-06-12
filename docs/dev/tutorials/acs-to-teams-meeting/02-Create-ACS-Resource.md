@@ -1,8 +1,31 @@
+---
+title: Create an Azure Communication Services Resource
+description: In this tutorial you'll learn how Azure Communication Services can be used in a custom React application to allow a user to make an audio/video call into a Microsoft Teams meeting. You'll learn about the different building blocks that can be used to make this scenario possible and be provided with hands-on steps to walk you through the different Microsoft Cloud services involved.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to create a Azure Communication Services resource so that I can enable audio/video calling in my custom application.
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Create an Azure Communication Services Resource
 
 In this exercise you'll create an Azure Communication Services (ACS) resource in the Azure portal.
 
-:::image type="content" source="../media/1-acs-azure-portal.png" alt-text="ACS in the Azure portal":::
+:::image type="content" source="./media/1-acs-azure-portal.png" alt-text="ACS in the Azure portal":::
 
 To get started, perform the following tasks:
 
@@ -10,7 +33,7 @@ To get started, perform the following tasks:
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
 
-    :::image type="content" source="../media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
+    :::image type="content" source="./media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 
@@ -30,7 +53,7 @@ To get started, perform the following tasks:
 
 1. Copy the **Identity** and **User Access token** values to a local file. You'll need the values later in this exercise.
 
-    :::image type="content" source="../media/user-identity-token.png" alt-text="User identity and token" border="false":::
+    :::image type="content" source="./media/user-identity-token.png" alt-text="User identity and token" border="false":::
 
 1. Select **Settings --> Keys** and copy the **Primary key** connection string value to the local file where you copied the user identity and token values.
 
@@ -43,6 +66,11 @@ To get started, perform the following tasks:
 
 1. Select the new meeting you added in the calendar and copy the **Teams meeting link** that is displayed into the same file where you stored the ACS user identity, token, and connection string.
 
-    :::image type="content" source="../media/teams-meeting-link.png" alt-text="Teams Meeting Join Link":::
+    :::image type="content" source="./media/teams-meeting-link.png" alt-text="Teams Meeting Join Link":::
 
 1. Now that your ACS resource is setup and you have a Teams meeting join link, let's get the React application up and running.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Integrate Azure Communication Services Calling into a React App](03-Integrate-ACS-Calling.md)
