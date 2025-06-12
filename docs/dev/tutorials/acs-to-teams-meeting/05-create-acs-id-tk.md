@@ -29,11 +29,11 @@ In this exercise you'll learn how to dynamically retrieve user identity and toke
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./includes/05-create-acs-identity-tk-CS.md)]
+[!INCLUDE [CSharp](./includes/05-create-acs-id-tk-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./includes/05-create-acs-identity-tk-TS.md)]
+[!INCLUDE [TypeScript](./includes/05-create-acs-id-tk-TS.md)]
 
 ## Next Step
 

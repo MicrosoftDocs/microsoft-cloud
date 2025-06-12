@@ -120,7 +120,7 @@ In this exercise, you'll automate the process of creating a Microsoft Teams meet
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Dynamically Create an Azure Communication Services Identity and Token](05-create-acs-identity-tk.md)
+> [Dynamically Create an Azure Communication Services Identity and Token](05-create-acs-id-tk.md)
 
 > [!NOTE]
 > Visit the Azure Communication Services documentation to learn more about [extending Microsoft Teams meetings](/azure/communication-services/tutorials/virtual-visits/extend-teams/overview) in other ways.
