@@ -1,31 +1,54 @@
+---
+title: Deploy the App to Azure Functions and Azure Container Apps
+description: Learn how to deploy the Microsoft Graph and ACS functions to Azure Functions and the React app to Azure Container Apps. This module covers containerization and cloud deployment.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to deploy my application to Azure Functions and Azure Container Apps.
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Deploy the App to Azure Functions and Azure Container Apps
 
 > [!IMPORTANT]
 > In addition to the [pre-requisites listed for this tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting), you'll also need to install the following tools on your machine to complete this exercise.
 >
-> - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+> - [Azure CLI](/cli/azure/install-azure-cli)
 > - If you're using VS Code, install the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 >
 
 In this exercise you'll learn how to deploy the Microsoft Graph and ACS functions discussed in earlier exercises to Azure Functions. You'll also build a container image and deploy it to Azure Container Apps.
 
-:::image type="content" source="../media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
+:::image type="content" source="./media/6-deploy-container-apps.png" alt-text="Azure Container Apps":::
 
 ### Deploy to Azure Functions
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./07-Deploy-to-Azure-Container-App-CS.md)]
+[!INCLUDE [CSharp](./includes/07-deploy-to-azure-container-app-CS.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./07-Deploy-to-Azure-Container-App-TS.md)]
+[!INCLUDE [TypeScript](./includes/07-deploy-to-azure-container-app-TS.md)]
 
 ---
 
 ### Deploy to Azure Container Apps
 
-1. The first task you'll perform is to create a new [Azure Container Registry (ACR)](https://learn.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) resource. Once the registry is created, you'll build an image and push it to the registry.
+1. The first task you'll perform is to create a new [Azure Container Registry (ACR)](/azure/container-registry/container-registry-get-started-azure-cli) resource. Once the registry is created, you'll build an image and push it to the registry.
 
 1. Open a command window and run the following command to login to your Azure subscription:
 
@@ -114,7 +137,7 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 1. Select **Create** in the toolbar.
 
     > [!NOTE]
-    > Although you're using the Azure portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](https://learn.microsoft.com/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
+    > Although you're using the Azure portal, a Container App can also be created by using the Azure CLI. For more information, see [Quickstart: Deploy your first container app](/azure/container-apps/get-started). You'll see an example of how the Azure CLI can be used at the end of this exercise as well.
 
 1. Perform the following tasks:
     - Select your subscription.
@@ -171,6 +194,11 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
     ```
 
 1. Once your container app deployment completes, navigate to it in the Azure portal and select the **Application Url** on the **Overview** screen to view the application running in the nginx container!
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Congratulations!](./08-congratulations.md)
 
 
 

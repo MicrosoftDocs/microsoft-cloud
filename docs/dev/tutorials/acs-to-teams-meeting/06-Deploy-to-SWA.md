@@ -1,14 +1,37 @@
+---
+title: Deploy the App to Azure Static Web Apps
+description: Learn how to deploy both the React application and Azure Functions to Azure Static Web Apps. This provides seamless integration between frontend and backend components.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to deploy my application to Azure Static Web Apps.
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Deploy the App to Azure Static Web Apps
 
 In this exercise you'll learn how to deploy the ACS React app and the Azure Functions to the cloud using Azure Static Web Apps.
 
-:::image type="content" source="../media/5-deploy-swa.png" alt-text="Azure Static Web Apps":::
+:::image type="content" source="./media/5-deploy-swa.png" alt-text="Azure Static Web Apps":::
 
 1. Visit the [Azure portal](https://portal.azure.com) in your browser and sign in.
 
 1. Type *static web apps* in the top search bar and select **Static Web Apps** from the options that appear.
 
-    :::image type="content" source="../media/search-swa-portal.png" alt-text="Azure Static Web Apps":::
+    :::image type="content" source="./media/search-swa-portal.png" alt-text="Azure Static Web Apps search":::
 
 1. Select **Create** in the toolbar.
 
@@ -90,3 +113,8 @@ In this exercise you'll learn how to deploy the ACS React app and the Azure Func
 1. Once the build process completes, visit the URL for your Azure Static Web App and you should see the application running.
 
 1. You've successfully deployed your application using Azure Static Web Apps!
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Deploy the App to Azure Functions and Azure Container Apps](07-deploy-to-azure-container-apps.md)
