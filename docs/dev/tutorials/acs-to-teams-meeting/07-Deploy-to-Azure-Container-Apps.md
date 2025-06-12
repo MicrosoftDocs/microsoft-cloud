@@ -198,7 +198,7 @@ In this exercise you'll learn how to deploy the Microsoft Graph and ACS function
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Congratulations!](08-congratulations.md)
+> [Congratulations!](./08-congratulations.md)
 
 
 

@@ -25,18 +25,18 @@ ms.custom:
 
 In this exercise you'll learn how to dynamically retrieve user identity and token values from Azure Communication Services using Azure Functions. Once retrieved, the values will be passed to the ACS UI composite to enable a call to be made by a customer.
 
-:::image type="content" source="./media/4-acs-identity-token.png" alt-text="Create ACS Identity and Token":::
+:::image type="content" source="../media/4-acs-identity-token.png" alt-text="Create ACS Identity and Token":::
 
 # [C#](#tab/csharp)
 
-[!INCLUDE [CSharp](./includes/05-create-acs-id-tk-CS.md)]
+[!INCLUDE [CSharp](./includes/05-create-acs-id-tk-cs.md)]
 
 # [TypeScript](#tab/typescript)
 
-[!INCLUDE [TypeScript](./includes/05-create-acs-id-tk-TS.md)]
+[!INCLUDE [TypeScript](./includes/05-create-acs-id-tk-ts.md)]
 
 ## Next Step
 
 > [!div class="nextstepaction"]
-> [Deploy the App to Azure Functions and Azure Container Apps](07-deploy-to-azure-container-apps.md)
+> [Deploy the App to Azure Functions and Azure Container Apps](./07-deploy-to-azure-container-apps.md)
 
