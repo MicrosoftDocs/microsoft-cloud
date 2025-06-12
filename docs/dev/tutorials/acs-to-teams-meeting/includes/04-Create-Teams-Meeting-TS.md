@@ -37,7 +37,7 @@
     - Search for your user name and select it to see the user details. 
     - Inside the user details, `Object ID` represents the `User ID`. Copy the `Object ID` value and use it for the `USER_ID` value in *local.settings.json*.
 
-    :::image type="content" source="./media/aad-user-id.png" alt-text="Getting User ID from Microsoft Entra ID":::
+    :::image type="content" source="../media/aad-user-id.png" alt-text="Getting User ID from Microsoft Entra ID":::
 
     > [!NOTE]
     > `ACS_CONNECTION_STRING` will be used in the next exercise so you don't need to update it yet.
