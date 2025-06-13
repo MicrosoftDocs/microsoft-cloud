@@ -62,7 +62,7 @@ In this exercise you will:
 
 1. Locate the **KEY 1** and **Endpoint** values. You'll use both values in the next section so copy them to a local file.
 
-    :::image type="content" source="../media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
+    :::image type="content" source="./media/openai-keys-endpoint.png" alt-text="OpenAI Keys and Endpoint" border="false":::
 
 1. Select **Resource Management** --> **Model deployments**. 
 
@@ -70,7 +70,7 @@ In this exercise you will:
 
 1. Select **Deploy model** --> **Deploy base model** in the toolbar.
 
-    :::image type="content" source="../media/aoai-deploy-model.png" alt-text="Azure OpenAI Deploy base model" border="true":::
+    :::image type="content" source="./media/aoai-deploy-model.png" alt-text="Azure OpenAI Deploy base model" border="true":::
 
 1. Select **gpt-4o** from the list of models and select **Confirm**.
 
@@ -79,7 +79,7 @@ In this exercise you will:
 
 1. The following dialog will display. Take a moment to examine the default values that are provided.
 
-    :::image type="content" source="../media/aoai-studio-create-model-deployment.png" alt-text="Azure OpenAI Create Model Deployment" border="true":::
+    :::image type="content" source="./media/aoai-studio-create-model-deployment.png" alt-text="Azure OpenAI Create Model Deployment" border="true":::
 
 1. Change the **Tokens per Minute Rate Limit (thousands)** value to **100K**. This will allow you to make more requests to the model and avoid hitting the rate limit as you perform the steps that follow.
 
@@ -89,7 +89,7 @@ In this exercise you will:
 
 1. The **Deployment** dropdown should display the **gpt-4o** model. 
 
-    :::image type="content" source="../media/aoai-playground-chat.png" alt-text="Azure OpenAI Chat Playground" border="true":::
+    :::image type="content" source="./media/aoai-playground-chat.png" alt-text="Azure OpenAI Chat Playground" border="true":::
 
 1. Take a moment to read through the **System message** text that's provided. This tells the model how to act as the user interacts with it. 
 

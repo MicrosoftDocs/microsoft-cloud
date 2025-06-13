@@ -45,7 +45,7 @@ In this exercise, you will:
         - Select **Single-page application (SPA)** and enter `http://localhost:4200` in the **Redirect URI** field.
     - Select **Register** to create the app registration.
 
-    :::image type="content" source="../media/entraid-app-registration.png" alt-text="Microsoft Entra ID app registration form" border="true":::
+    :::image type="content" source="./media/entraid-app-registration.png" alt-text="Microsoft Entra ID app registration form" border="true":::
 
 <!-- 
 1. After the app is registered, select **API permissions** in the Resource menu, locate the **Configured permissions** section, and select **+ Add a permission**.
@@ -56,7 +56,7 @@ In this exercise, you will:
 -->
 1. Select **Overview** in the resource menu and copy the `Application (client) ID` value to your clipboard.
 
-    :::image type="content" source="../media/entraid-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
+    :::image type="content" source="./media/entraid-client-id.png" alt-text="Microsoft Entra ID app client ID" border="true":::
 
 ### Update the Project's *.env* File
 
@@ -70,7 +70,7 @@ In this exercise, you will:
 
 1. Once you're signed in, expand a team, and find a channel that you want to send messages to from the app. For example, you might select the **Company** team and the **General** channel (or whatever team/channel you'd like to use).
 
-    :::image type="content" source="../media/teams-team-channel-get-link.png" alt-text="Get link to Teams channel" border="true":::
+    :::image type="content" source="./media/teams-team-channel-get-link.png" alt-text="Get link to Teams channel" border="true":::
 
 1. In the team header, click on the three dots (...) and select **Get link to team**.
 
