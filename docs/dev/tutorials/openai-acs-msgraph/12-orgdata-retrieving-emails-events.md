@@ -1,5 +1,5 @@
 ---
-title: Organizational Data: Retrieving Emails and Calendar Events
+title: Retrieving Emails and Calendar Events
 description: Learn how to use Microsoft Graph and the Microsoft Graph Toolkit to retrieve and display email messages and calendar events within a Line of Business application to improve user productivity.
 author: DanWahlin
 ms.author: dwahlin

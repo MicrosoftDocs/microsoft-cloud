@@ -1,5 +1,5 @@
 ---
-title: Communication: Sending Email and SMS Messages
+title: Sending Email and SMS Messages
 description: Learn how to implement email and SMS messaging capabilities in your application using Azure Communication Services to send messages to customers directly from your Line of Business app.
 author: DanWahlin
 ms.author: dwahlin

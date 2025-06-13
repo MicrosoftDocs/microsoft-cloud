@@ -1,5 +1,5 @@
 ---
-title: Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams
+title: Retrieving Files, Chats, and Sending Messages to Teams
 description: Learn how to use Microsoft Graph and the Microsoft Graph Toolkit to retrieve OneDrive files and Teams chat messages, and send messages to Teams channels from your application.
 author: DanWahlin
 ms.author: dwahlin

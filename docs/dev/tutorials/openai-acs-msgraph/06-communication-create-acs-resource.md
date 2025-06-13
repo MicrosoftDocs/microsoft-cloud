@@ -1,5 +1,5 @@
 ---
-title: Communication: Creating an Azure Communication Services Resource
+title: Creating an Azure Communication Services Resource
 description: Learn how to create an Azure Communication Services resource, acquire a phone number, set up email capabilities, and configure your application to enable communication features.
 author: DanWahlin
 ms.author: dwahlin

@@ -1,5 +1,5 @@
 ---
-title: AI: Generating Completions
+title: Generating Completions
 description: Learn how to use Azure OpenAI to automatically generate contextual email and SMS message templates based on simple user-defined rules, streamlining communication workflows.
 author: DanWahlin
 ms.author: dwahlin

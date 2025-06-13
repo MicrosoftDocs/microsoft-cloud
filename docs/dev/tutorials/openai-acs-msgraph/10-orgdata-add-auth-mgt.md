@@ -1,5 +1,5 @@
 ---
-title: Organizational Data: Signing In a User and Getting an Access Token
+title: Signing In a User and Getting an Access Token
 description: Learn how to implement user authentication with Microsoft Entra ID and the Microsoft Graph Toolkit to obtain an access token for retrieving organizational data.
 author: DanWahlin
 ms.author: dwahlin

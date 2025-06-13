@@ -1,5 +1,5 @@
 ---
-title: Communication: Making a Phone Call
+title: Making a Phone Call
 description: Learn how to integrate Azure Communication Services' phone calling capabilities into a Line of Business application to enable seamless communication with customers directly from your app.
 author: DanWahlin
 ms.author: dwahlin

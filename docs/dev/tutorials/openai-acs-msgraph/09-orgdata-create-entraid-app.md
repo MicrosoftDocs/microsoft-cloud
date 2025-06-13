@@ -1,5 +1,5 @@
 ---
-title: Organizational Data: Creating a Microsoft Entra ID App Registration
+title: Creating a Microsoft Entra ID App Registration
 description: Learn how to create a Microsoft Entra ID app registration to securely access Microsoft Graph APIs and integrate organizational data into your Line of Business application.
 author: DanWahlin
 ms.author: dwahlin

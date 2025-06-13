@@ -1,5 +1,5 @@
 ---
-title: AI: Azure OpenAI On Your Data
+title: Azure OpenAI On Your Data
 description: Learn how to use Azure OpenAI with your own custom data sources through Azure AI Search, enabling contextually accurate responses based on your company's documents and information.
 author: DanWahlin
 ms.author: dwahlin

@@ -1,5 +1,5 @@
 ---
-title: AI: Natural Language to SQL
+title: Natural Language to SQL
 description: Learn how to use Azure OpenAI to convert natural language queries into SQL, enabling non-technical users to retrieve database information while implementing proper security controls.
 author: DanWahlin
 ms.author: dwahlin

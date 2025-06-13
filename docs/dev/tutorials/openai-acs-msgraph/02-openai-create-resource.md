@@ -1,5 +1,5 @@
 ---
-title: AI: Create an Azure OpenAI Resource and Deploy a Model
+title: Create an Azure OpenAI Resource and Deploy a Model
 description: Learn how to create an Azure OpenAI service resource, deploy a GPT model, and configure your application to use the service for natural language processing tasks.
 author: DanWahlin
 ms.author: dwahlin
