@@ -64,8 +64,6 @@
       href: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
     - name: Build productivity apps by using Microsoft Graph Toolkit
       href: /graph/toolkit/get-started/building-one-productivity-hub
-    - name: Integrating a Large Language Model on Azure with Power Platform
-      href: /microsoft-cloud/dev/tutorials/aml-powerapps-powerautomate
     - name: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
       items:
         - name: "1. Overview"

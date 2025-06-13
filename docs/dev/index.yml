@@ -30,8 +30,6 @@ landingContent:
         links:
           - text: Automate Data Reporting with Azure Functions and Power Automate
             url: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate/
-          - text: Integrating a Large Language Model on Azure with Power Platform
-            url: /microsoft-cloud/dev/tutorials/aml-powerapps-powerautomate
           - text: Java + Power Apps Workshop
             url: https://aka.ms/JavaPowerWorkshop
           - text: Power BI and Azure Synapse Workshop using SerengetiDataLab
