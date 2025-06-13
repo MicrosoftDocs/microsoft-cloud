@@ -46,10 +46,10 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 You can complete the entire tutorial from start to finish or complete specific topics of interest. The tutorial is broken down into the following topics:
 
-- [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=1) (required exercise).
-- **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
-- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=6) and use it to make phone calls from the app and send email/SMS messages.
-- **Organizational Data Exercises**: [Create a Microsoft Entra ID app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
+- [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/01-clone-project) (required exercise).
+- **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
+- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource) and use it to make phone calls from the app and send email/SMS messages.
+- **Organizational Data Exercises**: [Create a Microsoft Entra ID app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
 
 :::image type="content" source="./media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
