@@ -36,7 +36,7 @@ In this exercise, you will:
 
 [!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app.md) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -44,7 +44,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app.md) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) before continuing.
 
 1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 

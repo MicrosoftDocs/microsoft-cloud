@@ -37,7 +37,7 @@ In this exercise, you will:
 
 ### Using the Sign In Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app.md?#start-app-services), you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file (`TEAM_ID` and `CHANNEL_ID` are optional):
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app?#start-app-services), you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file (`TEAM_ID` and `CHANNEL_ID` are optional):
 
     ```
     ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -45,7 +45,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app.md?#start-app-services) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app?#start-app-services) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using an admin user account from your Microsoft 365 Developer tenant.
 

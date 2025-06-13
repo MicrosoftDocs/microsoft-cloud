@@ -32,7 +32,7 @@ In this exercise, you will:
 
 ### Using the Email and SMS Features
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource.md?#start-app-services) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource?#start-app-services) you created an Azure Communication Services (ACS) resource and started the database, web server, and API server. You also updated the following values in the *.env* file.
 
     ```
     ACS_CONNECTION_STRING=<ACS_CONNECTION_STRING>
@@ -42,7 +42,7 @@ In this exercise, you will:
     CUSTOMER_PHONE_NUMBER=<UNITED_STATES_BASED_NUMBER_TO_SEND_SMS_TO>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource.md?#start-app-services) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource?#start-app-services) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
