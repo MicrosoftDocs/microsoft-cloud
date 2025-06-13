@@ -1,4 +1,28 @@
+---
+title: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
+description: This tutorial teaches how to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph into a Line of Business application to enhance user productivity.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
 
 **Level**: Intermediate
 
@@ -10,7 +34,7 @@ This tutorial demonstrates how Azure OpenAI, Azure Communication Services, and M
 
 The application is a simple customer management app that allows users to manage their customers and related data. It consists of a front-end built using TypeScript that calls back-end APIs to retrieve data, interact with AI functionality, send email/SMS messages, and pull in organizational data. Here's an overview of the application solution that you'll walk through in this tutorial:
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+:::image type="content" source="./media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 The tutorial will walk you through the process of setting up the required Azure and Microsoft 365 resources. It'll also walk you through the code that is used to implement the AI, communication, and organizational data features. While you won't be required to copy and paste code, some of the exercises will have you modify code to try out different scenarios.
 
@@ -22,12 +46,12 @@ The tutorial will walk you through the process of setting up the required Azure 
 
 You can complete the entire tutorial from start to finish or complete specific topics of interest. The tutorial is broken down into the following topics:
 
-- [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=1) (required exercise).
-- **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=2) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
-- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=6) and use it to make phone calls from the app and send email/SMS messages.
-- **Organizational Data Exercises**: [Create a Microsoft Entra ID app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
+- [Clone the Project Exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/01-clone-project) (required exercise).
+- **AI Exercises**: Create an [Azure OpenAI resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource) and use it to convert natural language to SQL, generate email/SMS messages, and work with your own data and documents.
+- **Communication Exercises**: Create an [Azure Communication Services resource](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-communication-create-acs-resource) and use it to make phone calls from the app and send email/SMS messages.
+- **Organizational Data Exercises**: [Create a Microsoft Entra ID app registration](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) so that Microsoft Graph and Microsoft Graph Toolkit can be used to authenticate and pull organizational data into the application.
 
-:::image type="content" source="../media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
+:::image type="content" source="./media/choose-your-own-adventure.png" alt-text="Choose your own adventure. Complete the entire tutorial or select specific topic areas." border="false":::
 
 <a id="prerequisites"></a>
 ### Prerequisites
@@ -46,3 +70,8 @@ You can complete the entire tutorial from start to finish or complete specific t
 - Microsoft Entra ID
 - Microsoft Graph
 - Microsoft Graph Toolkit
+
+### Next Step
+
+> [!div class="nextstepaction"]
+> [Clone the Project](./01-clone-project.md)

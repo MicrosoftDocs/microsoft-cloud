@@ -1,4 +1,28 @@
+---
+title: Signing In a User and Getting an Access Token
+description: Learn how to implement user authentication with Microsoft Entra ID and the Microsoft Graph Toolkit to obtain an access token for retrieving organizational data.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Organizational Data: Signing In a User and Getting an Access Token
 
 Users need to authenticate with Microsoft Entra ID  in order for Microsoft Graph to access organizational data. In this exercise, you'll see how the Microsoft Graph Toolkit's `mgt-login` component can be used to authenticate users and retrieve an access token. The access token can then be used to make calls to Microsoft Graph.
 
@@ -13,7 +37,7 @@ In this exercise, you will:
 
 ### Using the Sign In Feature
 
-1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9), you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file (`TEAM_ID` and `CHANNEL_ID` are optional):
+1. In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app?#start-app-services), you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file (`TEAM_ID` and `CHANNEL_ID` are optional):
 
     ```
     ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -21,7 +45,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app?#start-app-services) before continuing.
 
 1. Go back to the browser (*http://localhost:4200*), select **Sign In** in the header, and sign in using an admin user account from your Microsoft 365 Developer tenant.
 
@@ -32,13 +56,13 @@ In this exercise, you will:
 
 1. Once you're signed in, you should see the name of the user displayed in the header.
 
-    :::image type="content" source="../media/user-signed-in.png" alt-text="Signed in user":::
+    :::image type="content" source="./media/user-signed-in.png" alt-text="Signed in user":::
 
 ### Exploring the Sign In Code
 
 Now that you've signed in, let's look at the code used to sign in the user and retrieve an access token and user profile. You'll learn about the *mgt-login* web component that's part of the Microsoft Graph Toolkit.
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Open *client/package.json* and notice that the `@microsoft/mgt` and `@microsoft/mgt-components` packages are included in the dependencies. The `@microsoft/mgt` package contains MSAL (Microsoft Authentication Library) provider features and web components such as *mgt-login* and others that can be used to sign in users and retrieve and display organizational data.
 
@@ -110,3 +134,8 @@ Now that you've signed in, let's look at the code used to sign in the user and r
     To learn more about the *mgt-login* component, visit the [Microsoft Graph Toolkit](/graph/toolkit/components/login?WT.mc_id=m365-94501-dwahlin) documentation.
 
 1. Now that you've logged into the application, let's look at how organizational data can be retrieved.
+
+### Next Step
+
+> [!div class="nextstepaction"]
+> [Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams](./11-orgdata-retrieving-files-chats.md)

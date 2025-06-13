@@ -6,6 +6,11 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/dev/tutorials/openai-acs-msgraph.yml",
+         "redirect_url": "/microsoft-cloud/dev/tutorials/openai-acs-msgraph/00-overview.md",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/dev/dev-proxy/Plugin-Reference-Template.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
          "redirect_document_id": false
