@@ -1,6 +1,30 @@
+---
+title: Retrieving Emails and Calendar Events
+description: Learn how to use Microsoft Graph and the Microsoft Graph Toolkit to retrieve and display email messages and calendar events within a Line of Business application to improve user productivity.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
 
-In the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=11) you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams channels. In this exercise, you'll learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
+# Organizational Data: Retrieving Emails and Calendar Events
+
+In the previous exercise you learned how to retrieve files from OneDrive for Business and chats from Microsoft Teams using Microsoft Graph and the *mgt-search-results* component from Microsoft Graph Toolkit. You also learned how to send messages to Microsoft Teams channels. In this exercise, you'll learn how to retrieve email messages and calendar events from Microsoft Graph and integrate them into the application.
 
 In this exercise, you will:
 
@@ -10,9 +34,9 @@ In this exercise, you will:
 
 ### Exploring Email Messages Search Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) you created an app registration in Microsoft Entra ID and started the application server and API server. You also updated the following values in the `.env` file.
 
     ```
     ENTRAID_CLIENT_ID=<APPLICATION_CLIENT_ID_VALUE>
@@ -20,7 +44,7 @@ In this exercise, you will:
     CHANNEL_ID=<TEAMS_CHANNEL_ID>
     ```
 
-    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/?tutorial-step=9) before continuing.
+    Ensure you've completed the [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-orgdata-create-entraid-app) before continuing.
 
 1. Open *emails.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/emails/emails.component.html*.
 
@@ -64,7 +88,7 @@ In this exercise, you will:
     }
     ```
 
-    :::image type="content" source="../media/viewing-emails.png" alt-text="Viewing Email Messages":::
+    :::image type="content" source="./media/viewing-emails.png" alt-text="Viewing Email Messages":::
         
 1. In addition to using the *mgt-search-results* component to retrieve messages, Microsoft Graph provides several APIs that can be used to search emails as well. The `/search/query` API that you saw earlier could certainly be used, but a more straightforward option is the `messages` API. 
 
@@ -168,7 +192,7 @@ In this exercise, you will:
     }
     ```
 
-    :::image type="content" source="../media/viewing-calendar-events.png" alt-text="Viewing Calendar Events":::
+    :::image type="content" source="./media/viewing-calendar-events.png" alt-text="Viewing Calendar Events":::
 
 1. In addition to searching for calendar events using the `search/query` API, Microsoft Graph also provides an `events` API that can be used to search calendar events as well. Locate the `searchCalendarEvents()` function in *graph.service.ts*. 
 
@@ -207,3 +231,8 @@ In this exercise, you will:
     > You can make Microsoft Graph calls from a custom API or server-side application as well. View the [following tutorial](/microsoft-cloud/dev/tutorials/acs-to-teams-meeting?WT.mc_id=m365-94501-dwahlin) to see an example of calling a Microsoft Graph API from an Azure Function.
 
 1. You've now seen example of using Microsoft Graph to retrieve files, chats, email messages, and calendar events. The same concepts can be applied to other Microsoft Graph APIs as well. For example, you could use the Microsoft Graph *users* API to search for users in your organization. You could also use the Microsoft Graph *groups* API to search for groups in your organization. You can view the full list of Microsoft Graph APIs [in the documentation](/graph/api/overview?WT.mc_id=m365-94501-dwahlin).
+
+### Next Step
+
+> [!div class="nextstepaction"]
+> [Congratulations](./20-congratulations.md)

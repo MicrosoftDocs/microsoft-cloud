@@ -64,10 +64,36 @@
       href: https://microsoft.github.io/MicrosoftCloud/tutorials/docs/Automate-Data-Reporting-with-Azure-Functions-and-Power-Automate
     - name: Build productivity apps by using Microsoft Graph Toolkit
       href: /graph/toolkit/get-started/building-one-productivity-hub
-    - name: Integrating a Large Language Model on Azure with Power Platform
-      href: /microsoft-cloud/dev/tutorials/aml-powerapps-powerautomate
     - name: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
-      href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
+      items:
+        - name: "1. Overview"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/00-Overview
+        - name: "2. Clone the Project"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/01-Clone-Project
+        - name: "3. AI: Create an Azure OpenAI Resource and Deploy a Model"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-OpenAI-Create-Resource
+        - name: "4. AI: Natural Language to SQL"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/03-OpenAI-NL-SQL
+        - name: "5. AI: Generating Completions"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/04-OpenAI-Completions
+        - name: "6. AI: Azure OpenAI On Your Data"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/05-OpenAI-On-Your-Data
+        - name: "7. Communication: Creating an Azure Communication Services Resource"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/06-Communication-Create-ACS-Resource
+        - name: "8. Communication: Making a Phone Call"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/07-Communication-Phone-Call
+        - name: "9. Communication: Sending Email and SMS Messages"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/08-Communication-Email-SMS
+        - name: "10. Organizational Data: Creating a Microsoft Entra ID App Registration"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/09-OrgData-Create-EntraID-App
+        - name: "11. Organizational Data: Signing In a User and Getting an Access Token"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/10-OrgData-Add-Auth-MGT
+        - name: "12. Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/11-OrgData-Retrieving-Files-Chats
+        - name: "13. Organizational Data: Retrieving Emails and Calendar Events"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/12-OrgData-Retrieving-Emails-Events
+        - name: "14. Congratulations!"
+          href: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/20-Congratulations
     - name: Java + Power Apps Workshop
       href: https://aka.ms/JavaPowerWorkshop
     - name: Power BI and Azure Synapse Workshop using SerengetiDataLab
