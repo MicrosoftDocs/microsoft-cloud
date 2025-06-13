@@ -9,11 +9,11 @@ zone_pivot_groups: client-operating-system
 
 # Uninstall
 
-If you want to remove Dev Proxy from your machine, follow these steps.
+If you want to remove `Dev Proxy` from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-windows"
 
-1. Uninstall Dev Proxy by running in the command prompt: `winget uninstall Microsoft.DevProxy`
+1. Uninstall `Dev Proxy` by running in the command prompt: `winget uninstall Microsoft.DevProxy`
 1. Remove the `Dev Proxy` certificate from your machine.
     1. Open `Start Menu`.
     1. In the search box, Enter `Manage user certificates`.
@@ -31,7 +31,7 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-macos"
 
-1. Uninstall Dev Proxy by running in the command prompt: `brew uninstall dev-proxy`
+1. Uninstall `Dev Proxy` by running in the command prompt: `brew uninstall dev-proxy`
 1. Remove the `Dev Proxy` certificate from your machine.
     1. Open `Keychain Access`.
     1. Switch to `My Certificates`.
@@ -43,8 +43,8 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-linux"
 
-1. Uninstall Dev Proxy by deleting the Dev Proxy installation folder
-1. Remove Dev Proxy from your system path
+1. Uninstall `Dev Proxy` by deleting the `Dev Proxy` installation folder
+1. Remove `Dev Proxy` from your system path
     1. Open your shell profile in a text editor > `~/.bashrc`.
     1. Update `PATH` environment variable.
     1. Reload your profile > `source ~/.bashrc`.
