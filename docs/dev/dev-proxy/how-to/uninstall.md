@@ -18,9 +18,14 @@ If you want to remove Dev Proxy from your machine, follow these steps.
     1. Open `Start Menu`.
     1. In the search box, Enter `Manage user certificates`.
     1. To open the `Certificates` dialog box, select the result in the list.
-    1. In the tree view, expand the `Personal` folder and select the `Certificates` child folder.
-    1. Remove the `Dev Proxy CA` certificate by selecting and pressing the <kbd>Delete</kbd> key on your keyboard, or right select and in the menu select `Delete`.
-    1. To confirm the deletion, Select `Yes`.
+    1. `Personal` folder:
+        1. In the tree view, expand the `Personal` folder and select the `Certificates` child folder.
+        1. Remove the `Dev Proxy CA` certificate by selecting and pressing the <kbd>Delete</kbd> key on your keyboard, or right select and in the menu select `Delete`.
+        1. To confirm the deletion, Select `Yes`.
+    1. `Trusted Root Certification Authorities` folder:
+        1. In the tree view and expand the `Trusted Root Certification Authorities` folder and select the `Certificates` child folder.
+        1. Remove the `Dev Proxy CA` certificate by selecting and pressing the <kbd>Delete</kbd> key on your keyboard, or right select and in the menu select `Delete`.
+        1. To confirm the deletion, Select `Yes`.
 
 ::: zone-end
 
