@@ -58,7 +58,7 @@ Cleanup your Azure resources to avoid more charges to your account. Go to the Az
 #### Training Content
 
 * [Apply prompt engineering with Azure OpenAI Service](/training/modules/apply-prompt-engineering-azure-openai//?WT.mc_id=m365-94501-dwahlin)
-* [Get started with Azure OpenAI Service](/training/modules/get-started-openai/?WT.mc_id=m365-94501-dwahlin)
+* [Utilize an Azure OpenAI model to create an app](/training/modules/utilize-azure-openai-model-create-app/?WT.mc_id=m365-94501-dwahlin)
 * [Introduction to Azure Communication Services](/training/modules/intro-azure-communication-services/?WT.mc_id=m365-94501-dwahlin)
 * [Microsoft Graph Fundamentals](/training/paths/m365-msgraph-fundamentals/?WT.mc_id=m365-94501-dwahlin)
 * [Video Course: Microsoft Graph Fundamentals for Beginners](/shows/beginners-series-to-microsoft-graph/?WT.mc_id=m365-94501-dwahlin)

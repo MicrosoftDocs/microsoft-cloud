@@ -50,11 +50,11 @@ In this exercise, you will:
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
 
-    :::image type="content" source="./media/acs-call-customer.png" alt-text="ACS phone calling component":::
+    :::image type="content" source="./media/acs-call-customer.png" alt-text="ACS phone calling component - Calling a Customer":::
 
 1. A phone call component will be added into the header. Enter your phone number you'd like to call (ensure it starts with + and includes the country code) and select **Call**. You will be prompted to allow access to your microphone.
 
-    :::image type="content" source="./media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
+    :::image type="content" source="./media/acs-phone-calling-component.png" alt-text="ACS phone calling component - Phone Dialer":::
 
 1. Select **Hang Up** to end the call. Select **Close** to close the phone call component.
 

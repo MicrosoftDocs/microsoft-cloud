@@ -167,7 +167,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. After submitting the user query you should see a result similar to the following displayed:
 
-    :::image type="content" source="./media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session - Clock Install Safety Rules":::
 
 1. Expand the **1 references** section in the chat response and notice that the *Clock A102 Installation Instructions.docx* file is listed and that you can select it to view the document.
 
@@ -179,7 +179,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. You should see a result similar to the following displayed:
 
-    :::image type="content" source="./media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session - Clock Mounting Instructions":::
 
 1. Now let's experiment with the Company FAQs document. Enter the following text into the **User query** field:
 
@@ -197,7 +197,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. You should see a result similar to the following displayed:
 
-    :::image type="content" source="./media/aoai-studio-chat-session-faq.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-faq.png" alt-text="Azure OpenAI Studio Chat Session - FAQ Results":::
 
 1. Expand the **1 references** section in the chat response and notice that the *Company FAQs.docx* file is listed and that you can select it to view the document.
 
@@ -356,7 +356,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     - The sample application uses a single index in Azure AI  Search. You can use multiple indexes and data sources with Azure OpenAI. The `dataSources` property in the `getAzureOpenAIBYODCompletion()` function can be updated to include multiple data sources as needed.
     - Security must be carefully evaluated with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
-1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's go to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
+1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's go to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/utilize-azure-openai-model-create-app/?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
 
 ## Next Step
 
