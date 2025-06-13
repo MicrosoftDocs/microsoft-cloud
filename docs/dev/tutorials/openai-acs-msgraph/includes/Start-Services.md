@@ -40,4 +40,4 @@
 
 1. A browser will launch and you'll be taken to *http://localhost:4200*. 
 
-    :::image type="content" source="./media/openai-enabled-screenshot.png" alt-text="Application screenshot with Azure OpenAI enabled":::
+    :::image type="content" source="../media/openai-enabled-screenshot.png" alt-text="Application screenshot with Azure OpenAI enabled":::
