@@ -86,6 +86,7 @@ In this exercise, you will:
 
 1. Save the *env* file before continuing.
 
+<a id="start-app-services"></a>
 [!INCLUDE [Start-Restart-Services](./includes/start-restart-services.md)]
 
 ## Next Step

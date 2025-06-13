@@ -230,7 +230,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     AZURE_AI_SEARCH_INDEX=byod-search-index
     ```
 
-1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource.md#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the earlier exercise before continuing.
+1. In a [previous exercise](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource.md?#start-app-services) you started the database, APIs, and application. You also updated the `.env` file. If you didn't complete those steps, follow the instructions at the end of the earlier exercise before continuing.
 
 1. Once the application has loaded in the browser, select the **Chat Help** icon in the upper-right of the application.
 
