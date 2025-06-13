@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
 description: This tutorial teaches how to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph into a Line of Business application to enhance user productivity.
 author: DanWahlin
 ms.author: dwahlin
@@ -22,7 +22,7 @@ ms.custom:
 
 <!-- markdownlint-disable MD041 -->
 
-# Overview
+# Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
 
 **Level**: Intermediate
 
