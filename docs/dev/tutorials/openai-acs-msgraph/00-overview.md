@@ -71,7 +71,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 - Microsoft Graph
 - Microsoft Graph Toolkit
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Clone the Project](./01-clone-project.md)

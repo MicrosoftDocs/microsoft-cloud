@@ -178,7 +178,7 @@ Let's get started by experimenting with different rules that can be used to gene
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [AI: Azure OpenAI On Your Data](./05-openai-on-your-data.md)

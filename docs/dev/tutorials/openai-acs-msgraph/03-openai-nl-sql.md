@@ -464,7 +464,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. You've now seen how to use Azure OpenAI to convert natural language to SQL and learned about the pros and cons of implementing this type of functionality. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [AI: Generating Completions](04-OpenAI-Completions.md)

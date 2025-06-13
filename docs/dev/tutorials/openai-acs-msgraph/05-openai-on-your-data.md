@@ -358,7 +358,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's go to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/utilize-azure-openai-model-create-app/?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Communication: Creating an Azure Communication Services Resource](./06-communication-create-acs-resource.md)

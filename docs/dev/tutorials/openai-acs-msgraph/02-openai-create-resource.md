@@ -126,7 +126,7 @@ It's time to start up your application services including the database, API serv
 
 [!INCLUDE [Start-Services](./includes/start-services.md)]
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [AI: Natural Language to SQL](./03-openai-nl-sql.md)

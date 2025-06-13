@@ -283,7 +283,7 @@ In this exercise, you will:
 
 1. Now that you've learned how email and SMS messages can be sent, let's switch our focus to integrating organizational data into the application.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Organizational Data: Creating a Microsoft Entra ID App Registration](./09-orgdata-create-entraid-app.md)

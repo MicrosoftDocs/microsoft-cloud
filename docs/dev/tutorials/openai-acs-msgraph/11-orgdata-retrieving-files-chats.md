@@ -276,7 +276,7 @@ In this exercise, you will:
 
 1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams directly from the application they're already using.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Organizational Data: Retrieving Emails and Calendar Events](./12-orgdata-retrieving-emails-events.md)

@@ -86,7 +86,7 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
 
 1. Now that you have the project in place, let's try out some of the application features and learn how they're built. Select the **Next** button below to continue or jump to a specific exercise using the table of contents.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [AI: Create an Azure OpenAI Resource and Deploy a Model](./02-openai-create-resource.md)

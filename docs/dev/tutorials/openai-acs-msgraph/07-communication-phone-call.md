@@ -201,7 +201,7 @@ In this exercise, you will:
 
 1. Now that you've learned how phone calling can be integrated into an application, let's switch our focus to using Azure Communication Services to send email and SMS messages.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Communication: Sending Email and SMS Messages](08-Communication-Email-SMS.md)

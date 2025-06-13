@@ -135,7 +135,7 @@ Now that you've signed in, let's look at the code used to sign in the user and r
 
 1. Now that you've logged into the application, let's look at how organizational data can be retrieved.
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams](./11-orgdata-retrieving-files-chats.md)

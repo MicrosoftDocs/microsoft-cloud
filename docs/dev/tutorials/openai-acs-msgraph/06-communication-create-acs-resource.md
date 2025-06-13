@@ -124,7 +124,7 @@ In this exercise, you will:
 <a id="start-app-services"></a>
 [!INCLUDE [Start-Restart-Services](./includes/start-restart-services.md)]
 
-## Next Step
+### Next Step
 
 > [!div class="nextstepaction"]
 > [Communication: Making a Phone Call](./07-communication-phone-call.md)

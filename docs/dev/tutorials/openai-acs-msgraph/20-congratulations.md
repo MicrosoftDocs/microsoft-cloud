@@ -44,7 +44,7 @@ Cleanup your Azure resources to avoid more charges to your account. Go to the Az
 - Azure OpenAI resource (ensure that you delete your models first and then the Azure OpenAI resource)
 - Azure Communication Services resource
 
-### Next Steps
+## Next Steps
 
 #### Documentation
 
