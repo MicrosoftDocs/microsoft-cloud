@@ -1,4 +1,28 @@
+---
+title: AI: Azure OpenAI On Your Data
+description: Learn how to use Azure OpenAI with your own custom data sources through Azure AI Search, enabling contextually accurate responses based on your company's documents and information.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# AI: Azure OpenAI On Your Data
 
 The integration of Azure OpenAI Natural Language Processing (NLP) and completion capabilities offers significant potential for enhancing user productivity. By leveraging appropriate prompts and rules, an AI assistant can efficiently generate various forms of communication, such as email messages, SMS messages, and more. This functionality leads to increased user efficiency and streamlined workflows.
 
@@ -43,7 +67,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 2. Locate the **Bring your own data** tile on the welcome screen and select **Try it now**.
 
-    :::image type="content" source="../media/aoai-studio-byod.png" alt-text="Azure OpenAI Studio Bring Your Own Data":::
+    :::image type="content" source="./media/aoai-studio-byod.png" alt-text="Azure OpenAI Studio Bring Your Own Data":::
 
 1. Select **Add your data** followed by **Add a data source**.
 
@@ -65,7 +89,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Cross-origin resource sharing (CORS) needs to be turned on in order for your storage account to be accessed. Select **Turn on CORS** in the Azure AI Foundry dialog.
 
-    :::image type="content" source="../media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
+    :::image type="content" source="./media/aoai-studio-turn-on-cors.png" alt-text="Azure OpenAI Studio Bring Your Own Data Turn on CORS":::
 
 1. Under the **Select Azure AI Search resource** dropdown, select **Create a new Azure AI Search resource**.
 
@@ -78,7 +102,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Once the AI Search resource is created, go to the resource **Overview** page and copy the **Url** value to a local file.
 
-    :::image type="content" source="../media/ai-search-url.png" alt-text="Azure OpenAI Studio AI Search Url":::
+    :::image type="content" source="./media/ai-search-url.png" alt-text="Azure OpenAI Studio AI Search Url":::
 
 1. Select **Settings** --> **Keys** in the navigation menu. 
 
@@ -143,7 +167,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. After submitting the user query you should see a result similar to the following displayed:
 
-    :::image type="content" source="../media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-clock.png" alt-text="Azure OpenAI Studio Chat Session":::
 
 1. Expand the **1 references** section in the chat response and notice that the *Clock A102 Installation Instructions.docx* file is listed and that you can select it to view the document.
 
@@ -155,7 +179,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. You should see a result similar to the following displayed:
 
-    :::image type="content" source="../media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-clock-2.png" alt-text="Azure OpenAI Studio Chat Session":::
 
 1. Now let's experiment with the Company FAQs document. Enter the following text into the **User query** field:
 
@@ -173,17 +197,17 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. You should see a result similar to the following displayed:
 
-    :::image type="content" source="../media/aoai-studio-chat-session-faq.png" alt-text="Azure OpenAI Studio Chat Session":::
+    :::image type="content" source="./media/aoai-studio-chat-session-faq.png" alt-text="Azure OpenAI Studio Chat Session":::
 
 1. Expand the **1 references** section in the chat response and notice that the *Company FAQs.docx* file is listed and that you can select it to view the document.
 
 1. Select **View code** in the toolbar of the **Chat playground**.
 
-    :::image type="content" source="../media/aoai-studio-chat-session-view-code.png" alt-text="Azure OpenAI Studio Chat Session - View Code":::
+    :::image type="content" source="./media/aoai-studio-chat-session-view-code.png" alt-text="Azure OpenAI Studio Chat Session - View Code":::
 
 1. Note that you can switch between different languages, view the endpoint, and access the endpoint's key. Close the **Sample Code** dialog window.
 
-    :::image type="content" source="../media/aoai-studio-chat-session-sample-code.png" alt-text="Azure OpenAI Studio Chat Session - Sample Code":::
+    :::image type="content" source="./media/aoai-studio-chat-session-sample-code.png" alt-text="Azure OpenAI Studio Chat Session - Sample Code":::
 
 1. Turn on the **Show raw JSON** toggle above the chat messages. Notice the chat session starts with a message similar to the following:
 
@@ -210,7 +234,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 1. Once the application has loaded in the browser, select the **Chat Help** icon in the upper-right of the application.
 
-    :::image type="content" source="../media/chat-help-icon.png" alt-text="Chat Help Icon":::
+    :::image type="content" source="./media/chat-help-icon.png" alt-text="Chat Help Icon":::
 
 1. The following text should appear in the chat dialog:
 
@@ -230,7 +254,7 @@ Let's get started by deploying an embedding model and adding a custom data sourc
 
 ### Exploring the Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Go back to the project source code in Visual Studio Code.
 
@@ -333,3 +357,8 @@ Let's get started by deploying an embedding model and adding a custom data sourc
     - Security must be carefully evaluated with this type of scenario. Users should't be able to ask questions and get results from documents that they aren't able to access.
 
 1. Now that you've learned about Azure OpenAI, prompts, completions, and how you can use your own data, let's go to the next exercise to learn how communication features can be used to enhance the application. If you'd like to learn more about Azure OpenAI, view the <a href="/training/modules/get-started-openai?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Get started with Azure OpenAI Service</a> training content. Additional information about using your own data with Azure OpenAI can be found in the <a href="/azure/ai-services/openai/concepts/use-your-data?WT.mc_id=m365-94501-dwahlin" target="_blank" rel="noopener">Azure OpenAI on your data</a> documentation.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Communication: Creating an Azure Communication Services Resource](./06-communication-create-acs-resource.md)

@@ -1,4 +1,28 @@
+---
+title: Congratulations
+description: Summary of what you've learned about integrating Azure OpenAI, Azure Communication Services, and Microsoft Graph into Line of Business applications to enhance productivity.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Congratulations
 
 ### You completed this tutorial
 
@@ -9,7 +33,7 @@ Congratulations! In this tutorial you learned how:
 
 By using these technologies, you can create effective solutions that increase user productivity by minimizing context shifts and providing necessary decision-making information.
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+:::image type="content" source="./media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 ## Clean Up Azure Resources
 

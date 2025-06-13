@@ -1,4 +1,28 @@
+---
+title: AI: Create an Azure OpenAI Resource and Deploy a Model
+description: Learn how to create an Azure OpenAI service resource, deploy a GPT model, and configure your application to use the service for natural language processing tasks.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# AI: Create an Azure OpenAI Resource and Deploy a Model
 
 To get started using Azure OpenAI in your applications, you need to create an Azure OpenAI Service and deploy a model that can be used to perform tasks such as converting natural language to SQL, generating email/SMS message content, and more.
 
@@ -8,7 +32,7 @@ In this exercise you will:
 - Deploy a model.
 - Update the *.env* file with values from your Azure OpenAI service resource.
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+:::image type="content" source="./media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 ### Create an Azure OpenAI Service Resource
 
@@ -16,7 +40,7 @@ In this exercise you will:
 
 1. Enter *openai* in the **search bar** at the top of the portal page and select **Azure OpenAI** from the options that appear.
 
-    :::image type="content" source="../media/search-openai-portal.png" alt-text="Azure OpenAI Service in the Azure portal":::
+    :::image type="content" source="./media/search-openai-portal.png" alt-text="Azure OpenAI Service in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 
@@ -100,7 +124,12 @@ In this exercise you will:
 
 It's time to start up your application services including the database, API server, and web server.
 
-[!INCLUDE [Start-Services](./Start-Services.md)]
+[!INCLUDE [Start-Services](./includes/start-services.md)]
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [AI: Natural Language to SQL](./03-openai-nl-sql.md)
 
 
 

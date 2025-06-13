@@ -1,4 +1,28 @@
+---
+title: Communication: Sending Email and SMS Messages
+description: Learn how to implement email and SMS messaging capabilities in your application using Azure Communication Services to send messages to customers directly from your Line of Business app.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Communication: Sending Email and SMS Messages
 
 In addition to phone calls, Azure Communication Services can also send email and SMS messages. This can be useful when you want to send a message to a customer or other user directly from the application.
 
@@ -22,14 +46,14 @@ In this exercise, you will:
 
 1. Go back to the browser (*http://localhost:4200*) and select **Contact Customer** followed by **Email/SMS Customer** in the first row.
 
-    :::image type="content" source="../media/acs-email-sms-customer.png" alt-text="Send an email or SMS message using ACS.":::
+    :::image type="content" source="./media/acs-email-sms-customer.png" alt-text="Send an email or SMS message using ACS.":::
 
 1. Select the **Email/SMS** tab and perform the following tasks:
 
     - Enter an Email **Subject** and **Body** and select the **Send Email** button.
     - Enter an SMS message and select the **Send SMS** button.
 
-    :::image type="content" source="../media/acs-email-sms-customer-dialog.png" alt-text="Email/SMS Customer dialog box.":::
+    :::image type="content" source="./media/acs-email-sms-customer-dialog.png" alt-text="Email/SMS Customer dialog box.":::
 
     > [!NOTE]
     > SMS verification for toll-free numbers is now mandatory in the United States and Canada. To enable SMS messaging, you must submit verification after the phone number purchase. While this tutorial won't go through that process, you can select **Telephony and SMS** --> **Regulatory Documents** from your Azure Communication Services resource in the Azure portal and add the required validation documentation.
@@ -41,7 +65,7 @@ In this exercise, you will:
 
 ### Exploring the Email Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Open the *customers-list.component.ts* file. The full path to the file is *client/src/app/customers-list/customers-list.component.ts*.
 
@@ -258,6 +282,11 @@ In this exercise, you will:
     - The server-side API uses the ACS `EmailClient` and `SmsClient` objects to send email and SMS messages.
 
 1. Now that you've learned how email and SMS messages can be sent, let's switch our focus to integrating organizational data into the application.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Organizational Data: Creating a Microsoft Entra ID App Registration](./09-orgdata-create-entraid-app.md)
 
 
 

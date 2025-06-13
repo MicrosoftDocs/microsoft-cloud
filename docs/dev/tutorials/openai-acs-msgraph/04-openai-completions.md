@@ -1,4 +1,28 @@
+---
+title: AI: Generating Completions
+description: Learn how to use Azure OpenAI to automatically generate contextual email and SMS message templates based on simple user-defined rules, streamlining communication workflows.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# AI: Generating Completions
 
 In addition to the natural language to SQL feature, you can also use Azure OpenAI Service to generate email and SMS messages to enhance user productivity and streamline communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. 
 
@@ -23,7 +47,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
     - Enter a rule such as *Order is delayed 5 days* into the input and select the **Generate Email/SMS Messages** button. 
 
-        :::image type="content" source="../media/openai-order-delayed.png" alt-text="Azure OpenAI email/SMS message generator.":::
+        :::image type="content" source="./media/openai-order-delayed.png" alt-text="Azure OpenAI email/SMS message generator.":::
 
     - You will see a subject and body generated for the email and a short message generated for the SMS. 
 
@@ -34,7 +58,7 @@ Let's get started by experimenting with different rules that can be used to gene
 
 ### Exploring the AI Completions Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Open the *server/apiRoutes.ts* file and locate the `completeEmailSmsMessages` route. This API is called by front-end portion of the app when the **Generate Email/SMS Messages** button is selected. It retrieves the user prompt, company, and contact name values from the body and passes them to the `completeEmailSMSMessages()` function in the *server/openAI.ts* file. The results are then returned to the client.
 
@@ -153,3 +177,8 @@ Let's get started by experimenting with different rules that can be used to gene
     - Completions will only be as good as the rules that you add into the prompt. Take time to test your prompts and the completions that are returned. Consider using [**Prompt flow**](/azure/ai-studio/how-to/prompt-flow) to create a comprehensive solution that simplifies prototyping, experimenting, iterating, and deploying AI applications. Invite other project stakeholders to review the completions as well.
     - You may need to include post-processing code to ensure unexpected results are handled properly.
     - Use system prompts to define the rules and information that the AI assistant should follow. Use user prompts to define the rules and information that the end user would like to include in the completions.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [AI: Azure OpenAI On Your Data](./05-openai-on-your-data.md)

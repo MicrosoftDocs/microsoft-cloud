@@ -1,4 +1,28 @@
+---
+title: AI: Natural Language to SQL
+description: Learn how to use Azure OpenAI to convert natural language queries into SQL, enabling non-technical users to retrieve database information while implementing proper security controls.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# AI: Natural Language to SQL
 
 The quote "Just because you can doesn't mean you should" is a useful guide when thinking about AI capabilities. For example, Azure OpenAI's natural language to SQL feature allows users to make database queries in plain English, which can be a powerful tool to enhance their productivity. However, *powerful* doesn't always mean *appropriate* or *safe*. This exercise will demonstrate how to use this AI feature while also discussing important considerations to keep in mind before deciding to implement it. 
 
@@ -27,7 +51,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Go back to the browser (*http://localhost:4200*) and locate the **Custom Query** section of the page below the datagrid. Notice that a sample query value is already included: *Get the total revenue for all orders. Group by company and include the city.*
 
-    :::image type="content" source="../media/openai-custom-query.png" alt-text="Natural language to SQL query.":::
+    :::image type="content" source="./media/openai-custom-query.png" alt-text="Natural language to SQL query.":::
 
 1. Select the **Run Query** button. This will pass the user's natural language query to Azure OpenAI which will convert it to SQL. The SQL query will then be used to query the database and return any potential results.
 
@@ -50,7 +74,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 ### Exploring the Natural Language to SQL Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 > [!NOTE]
 > The goal of this exercise is to show what's possible with natural language to SQL functionality and demonstrate how to get started using it. As mentioned earlier, it's important to discuss if this type of AI is appropriate for your organization before proceeding with any implementation. It's also **imperative to plan for proper prompt rules and database security measures** to prevent unauthorized access and protect sensitive data.
@@ -262,7 +286,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
         - `systemPrompt`, `userPrompt`, and `temperature` are the main parameters.
             - `systemPrompt`: Informs the Azure OpenAI model of its role and the rules to follow.
             - `userPrompt`: Contains the user-provided information such as natural language input or rules for generating the output.
-            - `temperature`: Dictates the creativity level of the model's response. A higher value results in more creative outputs.
+            - `temperature`: Dictates the creativity level of the model's response. A higher value results in more creative outputs, while lower values (e.g., 0) produce more deterministic answers.
 
     - **Completion Generation:**
         - The function calls `createAzureOpenAICompletion()` with `systemPrompt`, `userPrompt`, and `temperature` to generate a completion.
@@ -406,7 +430,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
 
 1. Go back to the browser, enter *Select all table names from the database* into the **Custom Query** input again and select the **Run Query** button. 
 
-1. Do any table results display? Even without the rule in place, the `isProhibitedQuery()` post-processing code prohibits that type of query from being run against the database.
+1. Do any table results display? Even without the rule in place, the `isProhibitedQuery` post-processing code prohibits that type of query from being run against the database.
 
 1. As discussed earlier, integrating natural language to SQL in line of business applications can be quite beneficial to users, but it does come with its own set of considerations.
 
@@ -439,3 +463,8 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
 
 1. You've now seen how to use Azure OpenAI to convert natural language to SQL and learned about the pros and cons of implementing this type of functionality. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [AI: Generating Completions](04-OpenAI-Completions.md)

@@ -1,4 +1,28 @@
+---
+title: Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams
+description: Learn how to use Microsoft Graph and the Microsoft Graph Toolkit to retrieve OneDrive files and Teams chat messages, and send messages to Teams channels from your application.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Organizational Data: Retrieving Files, Chats, and Sending Messages to Teams
 
 In today's digital environment, users work with a wide array of organizational data, including emails, chats, files, calendar events, and more. This can lead to frequent context shifts—switching between tasks or applications—which can disrupt focus and reduce productivity. For example, a user working on a project might need to switch from their current application to Outlook to find crucial details in an email or switch to OneDrive for Business to find a related file. This back-and-forth action disrupts focus and wastes time that could be better spent on the task at hand.
 
@@ -37,7 +61,7 @@ In this exercise, you will:
 
 1. Select **View Related Content** for the *Adatum Corporation* row in the datagrid. This will cause organizational data such as files, chats, emails, and calendar events to be retrieved using Microsoft Graph. Once the data loads, it'll be displayed below the datagrid in a tabbed interface. It's important to mention that you may not see any data at this point since you haven't added any files, chats, emails, or calendar events for the user in your Microsoft 365 developer tenant yet. Let's fix that in the next step.
 
-    :::image type="content" source="../media/display-org-data.png" alt-text="Displaying Organizational Data":::
+    :::image type="content" source="./media/display-org-data.png" alt-text="Displaying Organizational Data":::
 
 1. Your Microsoft 365 tenant may not have any related organizational data for *Adatum Corporation* at this stage. To add some sample data, perform at least one of the following actions:
 
@@ -46,7 +70,7 @@ In this exercise, you will:
         - Select **+ Add new** and then **Folder upload** from the menu.
         - Select the *openai-acs-msgraph/customer documents* folder from the project you cloned.
 
-        :::image type="content" source="../media/add-files-ondrive.png" alt-text="Uploading a Folder":::
+        :::image type="content" source="./media/add-files-ondrive.png" alt-text="Uploading a Folder":::
 
     - Add chat messages and calendar events by visiting https://teams.microsoft.com and signing in using your Microsoft 365 Developer tenant credentials.
         - Select **Teams** in the left navigation.
@@ -56,14 +80,14 @@ In this exercise, you will:
 
             Feel free to add additional chat messages that mention other companies used in the application such as *Adventure Works Cycles*, *Contoso Pharmaceuticals*, and *Tailwind Traders*.
 
-            :::image type="content" source="../media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
+            :::image type="content" source="./media/add-chat-teams.png" alt-text="Adding a Chat Message into a Teams Channel":::
 
         - Select **Calendar** in the left navigation.
         - Select **New meeting**.
         - Enter "Meet with Adatum Corporation about project schedule" for the title and body.
         - Select **Save**.
 
-            :::image type="content" source="../media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
+            :::image type="content" source="./media/add-calendar-event-teams.png" alt-text="Adding a Calendar Event in Teams":::
 
     - Add emails by visiting https://outlook.com and signing in using your Microsoft 365 Developer tenant credentials.
         - Select **New mail**.
@@ -71,7 +95,7 @@ In this exercise, you will:
         - Enter *New order placed for Adatum Corporation* for the subject and anything you'd like for the body.
         - Select **Send**.
 
-            :::image type="content" source="../media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
+            :::image type="content" source="./media/add-email-outlook.png" alt-text="Adding an Email in Outlook":::
 
 1. Go back to the application in the browser and refresh the page. Select **View Related Content** again for the *Adatum Corporation* row. You should now see data displayed in the tabs depending upon which tasks you performed in the previous step.
 
@@ -79,7 +103,7 @@ In this exercise, you will:
 
 ### Exploring Files Search Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Let's start by looking at how file data is retrieved from OneDrive for Business. Open *files.component.html* and take a moment to look through the code. The full path to the file is *client/src/app/files/files.component.html*.
 
@@ -102,7 +126,7 @@ In this exercise, you will:
     - The `dataChange` event fires when the search results change. In this case, a customer function named `dataChange()` is called in the *files* component and the event data is passed to the function. The parenthesis around `dataChange` indicate that the event is bound to the `dataChange()` function.
     - Since no custom template is supplied, the default template built into `mgt-search-results` is used to display the search results. 
 
-        :::image type="content" source="../media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
+        :::image type="content" source="./media/viewing-files.png" alt-text="View Files from OneDrive for Business":::
 
 1. An alternative to using components such as *mgt-search-results*, is to call Microsoft Graph APIs directly using code. To see how that works, open the *graph.service.ts* file and locate the `searchFiles()` function. The full path to the file is *client/src/app/core/graph.service.ts*.
 
@@ -216,13 +240,13 @@ In this exercise, you will:
     }
     ```
 
-    :::image type="content" source="../media/viewing-teams-chats.png" alt-text="View Teams Chats":::
+    :::image type="content" source="./media/viewing-teams-chats.png" alt-text="View Teams Chats":::
 
 ### Sending a Message to a Microsoft Teams Channel
 
 1. In addition to searching for Microsoft Teams chat messages, the application also allows a user to send messages to a Microsoft Teams channel. This can be done by calling the `/teams/${teamId}/channels/${channelId}/messages` endpoint of Microsoft Graph. 
 
-    :::image type="content" source="../media/viewing-teams-chat-dialog.png" alt-text="Sending a Teams Chat Message to a Channel":::
+    :::image type="content" source="./media/viewing-teams-chat-dialog.png" alt-text="Sending a Teams Chat Message to a Channel":::
 
 1. In the following code you'll see that a URL is created that includes the `teamId` and `channelId` values. Environment variable values are used for the team ID and channel ID in this example but those values could be dynamically retrieved as well using Microsoft Graph. The `body` constant contains the message to send. A POST request is then made and the results are returned to the caller.
 
@@ -250,4 +274,9 @@ In this exercise, you will:
     }
     ```
 
-1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams directly from the application they're already using. 
+1. Leveraging this type of functionality in Microsoft Graph provides a great way to enhance user productivbity by allowing users to interact with Microsoft Teams directly from the application they're already using.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Organizational Data: Retrieving Emails and Calendar Events](./12-orgdata-retrieving-emails-events.md)

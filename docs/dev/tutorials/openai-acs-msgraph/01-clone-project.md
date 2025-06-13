@@ -1,4 +1,28 @@
+---
+title: Clone the Project
+description: Learn how to clone the GitHub repository and set up the project files needed for this tutorial on integrating Azure OpenAI, Azure Communication Services, and Microsoft Graph.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Clone the Project
 
 The code project used in this tutorial is available at <a href="https://github.com/microsoft/MicrosoftCloud" target="_blank" rel="noopener">https://github.com/microsoft/MicrosoftCloud</a>. The project's repository includes both client-side and server-side code required to run the project, enabling you to explore the integrated features related to artificial intelligence (AI), communication, and organizational data. Additionally, the project serves as resource to guide you in incorporating similar features into your own applications.
 
@@ -61,3 +85,8 @@ Before proceeding, ensure that you have all of the prerequisites installed and c
     ```
 
 1. Now that you have the project in place, let's try out some of the application features and learn how they're built. Select the **Next** button below to continue or jump to a specific exercise using the table of contents.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [AI: Create an Azure OpenAI Resource and Deploy a Model](./02-openai-create-resource.md)

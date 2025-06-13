@@ -1,4 +1,28 @@
+---
+title: Organizational Data: Creating a Microsoft Entra ID App Registration
+description: Learn how to create a Microsoft Entra ID app registration to securely access Microsoft Graph APIs and integrate organizational data into your Line of Business application.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Organizational Data: Creating a Microsoft Entra ID App Registration
 
 Enhance user productivity by integrating organizational data (emails, files, chats, and calendar events) directly into your custom applications. By using Microsoft Graph APIs and Microsoft Entra ID, you can seamlessly retrieve and display relevant data within your apps, reducing the need for users to switch context. Whether it's referencing an email sent to a customer, reviewing a Teams message, or accessing a file, users can quickly find the information they need without leaving your app, streamlining their decision-making process.
 
@@ -8,7 +32,7 @@ In this exercise, you will:
 - Locate `team` and `channel` Ids from Microsoft Teams that are needed to send chat messages to a specific channel.
 - Update the project's *.env* file with values from your Microsoft Entra ID app registration.
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+:::image type="content" source="./media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 ### Create a Microsoft Entra ID App Registration
 
@@ -62,4 +86,9 @@ In this exercise, you will:
 
 1. Save the *env* file before continuing.
 
-[!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]
+[!INCLUDE [Start-Restart-Services](./includes/start-restart-services.md)]
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Organizational Data: Signing In a User and Getting an Access Token](./10-orgdata-add-auth-mgt.md)

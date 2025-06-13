@@ -1,4 +1,28 @@
+---
+title: Communication: Making a Phone Call
+description: Learn how to integrate Azure Communication Services' phone calling capabilities into a Line of Business application to enable seamless communication with customers directly from your app.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Communication: Making a Phone Call
 
 Integrating Azure Communication Services' phone calling capabilities into a custom Line of Business (LOB) application offers several key benefits to businesses and their users:
 
@@ -26,17 +50,17 @@ In this exercise, you will:
 
 1. Go back to the browser (*http://localhost:4200*), locate the datagrid, and select **Contact Customer** followed by **Call Customer** in the first row.
 
-    :::image type="content" source="../media/acs-call-customer.png" alt-text="ACS phone calling component":::
+    :::image type="content" source="./media/acs-call-customer.png" alt-text="ACS phone calling component":::
 
 1. A phone call component will be added into the header. Enter your phone number you'd like to call (ensure it starts with + and includes the country code) and select **Call**. You will be prompted to allow access to your microphone.
 
-    :::image type="content" source="../media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
+    :::image type="content" source="./media/acs-phone-calling-component.png" alt-text="ACS phone calling component":::
 
 1. Select **Hang Up** to end the call. Select **Close** to close the phone call component.
 
 ### Exploring the Phone Calling Code
 
-[!INCLUDE [Note-Open-Files-VS-Code](./tip-open-files-vs-code.md)]
+[!INCLUDE [Note-Open-Files-VS-Code](./includes/tip-open-files-vs-code.md)]
 
 1. Open the *customers-list.component.ts* file. The full path to the file is *client/src/app/customers-list/customers-list.component.ts*.
 
@@ -176,3 +200,8 @@ In this exercise, you will:
     - The `CallAgent` object is used to start and end a call by calling the `callAgent.startCall()` and `callAgent.hangUp()` functions respectively.
 
 1. Now that you've learned how phone calling can be integrated into an application, let's switch our focus to using Azure Communication Services to send email and SMS messages.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Communication: Sending Email and SMS Messages](08-Communication-Email-SMS.md)

@@ -22,7 +22,7 @@ landingContent:
           - text: Build productivity apps by using Microsoft Graph Toolkit
             url: /graph/toolkit/get-started/building-one-productivity-hub
           - text: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
-            url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph
+            url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/00-overview
 
   - title: Azure and Power Platform Tutorials
     linkLists:

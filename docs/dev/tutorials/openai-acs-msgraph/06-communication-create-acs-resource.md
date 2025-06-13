@@ -1,4 +1,28 @@
+---
+title: Communication: Creating an Azure Communication Services Resource
+description: Learn how to create an Azure Communication Services resource, acquire a phone number, set up email capabilities, and configure your application to enable communication features.
+author: DanWahlin
+ms.author: dwahlin
+ms.date: 06/12/2025
+ms.topic: tutorial
+ms.service: microsoft-cloud-for-developers
+
+categories:
+  - developer-tools
+products:
+  - azure
+  - github
+ms.custom:
+  - fcp
+  - team=cloud_advocates
+
+#customer intent: As a developer, I want to integrate Azure OpenAI, Azure Communication Services, and Microsoft Graph/Microsoft Graph Toolkit into a Line of Business application.
+
+---
+
 <!-- markdownlint-disable MD041 -->
+
+# Communication: Creating an Azure Communication Services Resource
 
 Effective communication is essential for successful custom business applications. By using Azure Communication Services (ACS), you can add features such as phone calls, live chat, audio/video calls, and email and SMS messaging to your applications. Earlier, you learned how Azure OpenAI can generate completions for email and SMS messages. Now, you'll learn how to send the messages. Together, ACS and OpenAI can enhance your applications by simplifying communication, improving interactions, and boosting business productivity.
 
@@ -9,7 +33,7 @@ In this exercise, you will:
  - Connect an email domain.
  - Update the project's *.env* file with values from your ACS resource.
 
-:::image type="content" source="../media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
+:::image type="content" source="./media/scenario-overview-no-title.png" alt-text="Microsoft Cloud scenario overview" border="false":::
 
 ### Create an Azure Communication Services Resource
 
@@ -17,7 +41,7 @@ In this exercise, you will:
 
 1. Type *communication services* in the **search bar** at the top of the page and select **Communication Services** from the options that appear.
 
-    :::image type="content" source="../media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
+    :::image type="content" source="./media/search-acs-portal.png" alt-text="ACS in the Azure portal":::
 
 1. Select **Create** in the toolbar.
 
@@ -98,5 +122,10 @@ In this exercise, you will:
     - `CUSTOMER_PHONE_NUMBER`: You'll need to provide a United States based phone number (as of today) due to additional verification that is required in other countries/regions for sending SMS messages. If you don't have a US-based number, you can leave it empty. 
 
 <a id="start-app-services"></a>
-[!INCLUDE [Start-Restart-Services](./Start-Restart-Services.md)]
-    
+[!INCLUDE [Start-Restart-Services](./includes/start-restart-services.md)]
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Communication: Making a Phone Call](./07-communication-phone-call.md)
+
