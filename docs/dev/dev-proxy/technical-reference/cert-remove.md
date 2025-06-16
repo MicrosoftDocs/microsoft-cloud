@@ -23,6 +23,6 @@ None
 ## Options
 
 |Name|Description|Allowed values|Default|
-|--|--|--|--|--|
+|--|--|--|--|
 |`-f, --force`|Force the root certificate removal| | |
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
