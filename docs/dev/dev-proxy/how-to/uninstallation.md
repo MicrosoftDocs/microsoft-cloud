@@ -57,13 +57,13 @@ In case Dev Proxy certificate removal is not performed automatically during unin
 1. Remove from the **Personal** store:
     1. In the navigation pane on the left, expand the **Personal** folder.
     1. Select the **Certificates** subfolder.
-    1. In the central pane, locate and select the `Dev Proxy CA` certificate.
+    1. In the central pane, locate and select the **Dev Proxy CA** certificate.
     1. Press the <kbd>Delete</kbd> key on your keyboard, or right-click the certificate and choose **Delete** from the context menu.
     1. Click **Yes** when prompted to confirm the deletion.
 1. Remove from the **Trusted Root Certification Authorities** store:
     1. In the navigation pane on the left, expand the **Trusted Root Certification Authorities** folder.
     1. Select the **Certificates** subfolder.
-    1. In the central pane, locate and select the `Dev Proxy CA` certificate.
+    1. In the central pane, locate and select the **Dev Proxy CA** certificate.
     1. Press the <kbd>Delete</kbd> key on your keyboard, or right-click the certificate and choose **Delete** from the context menu.
     1. Click **Yes** when prompted to confirm the deletion.
 
