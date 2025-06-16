@@ -9,7 +9,7 @@ zone_pivot_groups: client-operating-system
 
 # Uninstall
 
-If you want to remove `Dev Proxy` from your machine, follow these steps.
+If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-windows"
 
