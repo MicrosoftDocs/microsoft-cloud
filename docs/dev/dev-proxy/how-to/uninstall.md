@@ -13,10 +13,10 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-windows"
 
-1. Uninstall `Dev Proxy` by running in the command prompt: `winget uninstall Microsoft.DevProxy`
+1. Uninstall Dev Proxy by running in the command prompt: `winget uninstall Microsoft.DevProxy`
     > [!NOTE]
-    > The uninstaller removes `Dev Proxy` application and its certificate.
-1. Optional. Manually remove the `Dev Proxy` certificate from your machine.
+    > The uninstaller removes Dev Proxy application and its certificate.
+1. Optional. Manually remove the Dev Proxy certificate from your machine.
     1. Console. Execute in console [`devproxy cert remove`](../technical-reference/cert-remove.md)
     1. User Certificates Manager
         1. Open `Start Menu`.
@@ -35,10 +35,10 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-macos"
 
-1. Uninstall `Dev Proxy` by running in the command prompt: `brew uninstall dev-proxy`
+1. Uninstall Dev Proxy by running in the command prompt: `brew uninstall dev-proxy`
     > [!NOTE]
-    > The uninstaller removes `Dev Proxy` application and its certificate.
-1. Optional. Manually remove the `Dev Proxy` certificate from your machine.
+    > The uninstaller removes Dev Proxy application and its certificate.
+1. Optional. Manually remove the Dev Proxy certificate from your machine.
     1. Console. Execute in console [`devproxy cert remove`](../technical-reference/cert-remove.md)
     1. Keychain Access
         1. Open `Keychain Access`.
@@ -51,12 +51,12 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 
 ::: zone pivot="client-operating-system-linux"
 
-1. Uninstall `Dev Proxy` by deleting the `Dev Proxy` installation folder
-1. Remove `Dev Proxy` from your system path
+1. Uninstall Dev Proxy by deleting the Dev Proxy installation folder
+1. Remove Dev Proxy from your system path
     1. Open your shell profile in a text editor > `~/.bashrc`.
     1. Update `PATH` environment variable.
     1. Reload your profile > `source ~/.bashrc`.
-1. Remove the `Dev Proxy` certificate from your machine.
+1. Remove the Dev Proxy certificate from your machine.
     1. Remove the certificate > `sudo rm /usr/local/share/ca-certificates/dev-proxy-ca.crt`
     1. Update certificates > `sudo update-ca-certificates`
 
