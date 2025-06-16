@@ -20,7 +20,7 @@ If you want to remove Dev Proxy from your machine, follow these steps.
     1. Console. Execute in console [`devproxy cert remove`](../technical-reference/cert-remove.md)
     1. User Certificates Manager
         1. Open `Start Menu`.
-        1. In the search box, Enter `Manage user certificates`.
+        1. In the search box, enter `Manage user certificates`.
         1. To open the `Certificates` dialog box, select the result in the list.
         1. `Personal` folder:
             1. In the tree view, expand the `Personal` folder and select the `Certificates` child folder.
