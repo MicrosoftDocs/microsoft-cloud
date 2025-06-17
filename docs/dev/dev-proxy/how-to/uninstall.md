@@ -46,37 +46,37 @@ brew uninstall dev-proxy
 
 ## Dev Proxy Certificate Uninstallation
 
-In case Dev Proxy certificate removal is not performed automatically during uninstallation, follow these steps to remove it manually:
+If you haven't removed the Dev Proxy certificate automatically during uninstallation, follow these steps to remove it manually:
 
 ::: zone pivot="client-operating-system-windows"
 
 1. Open **Start Menu**.
 1. In the search box, type `Manage user certificates`.
-1. Select **Manage user certificates** that appears in the search list. This will open the **Certificates - Current User** window.
-1. Remove from the **Personal** store:
+1. Select **Manage user certificates** that appears in the search list. This opens the **Certificates - Current User** window.
+1. Remove the certificate from the **Personal** store:
     1. In the navigation pane on the left, expand the **Personal** folder.
     1. Select the **Certificates** subfolder.
     1. In the central pane, locate and select the **Dev Proxy CA** certificate.
     1. Press the <kbd>Delete</kbd> key on your keyboard, or right-click the certificate and choose **Delete** from the context menu.
-    1. Click **Yes** when prompted to confirm the deletion.
-1. Remove from the **Trusted Root Certification Authorities** store:
+    1. When prompted to confirm the deletion, select **Yes**.
+1. Remove the certificate from the **Trusted Root Certification Authorities** store:
     1. In the navigation pane on the left, expand the **Trusted Root Certification Authorities** folder.
     1. Select the **Certificates** subfolder.
     1. In the central pane, locate and select the **Dev Proxy CA** certificate.
     1. Press the <kbd>Delete</kbd> key on your keyboard, or right-click the certificate and choose **Delete** from the context menu.
-    1. Click **Yes** when prompted to confirm the deletion.
+    1. When prompted to confirm the deletion, select **Yes**.
 
 ::: zone-end
 
 ::: zone pivot="client-operating-system-macos"
 
 1. Press <kbd>Command</kbd> + <kbd>Space</kbd> to open **Spotlight**.
-1. Type `Keychain Access` and press <kbd>Return</kbd> to open **Keychain Access**.
-1. Switch to **My Certificates** category.
+1. Open **Keychain Access** by typing `Keychain Access` and pressing <kbd>Return</kbd>.
+1. Switch to the **My Certificates** category.
 1. In the list of certificates, find the **Dev Proxy CA** certificate.
 1. Right-click on the certificate, from the context menu that appears, select **Delete "Dev Proxy CA"**, and confirm the deletion.
 1. Open **Finder**, locate the **~/Library/Application Support/dev-proxy** folder.
-1. Right-click on the **dev-proxy** folder, from the context menu that appears, select **Move to Trash** to remove it.
+1. Remove the **dev-proxy** folder by opening the context menu and selecting **Move to Trash**.
 
 ::: zone-end
 
