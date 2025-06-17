@@ -102,5 +102,5 @@ ms.topic: overview
 - [No requests are intercepted from my .NET 4.8 app](./why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md)
 - [Options aren't recognized](./Why-is-the-proxy-saying-that-an-option-is-unknown.md)
 - [The type initializer for 'Microsoft.Data.Sqlite.SqliteConnection' threw an exception](./type-initializer-microsoft-data-sqlite-sqliteconnection-threw-exception.md)
-- [Uninstallation](./uninstallation.md)
+- [Uninstall](./Uninstall.md)
 - [Get help and support](./Get-help-and-support.md)

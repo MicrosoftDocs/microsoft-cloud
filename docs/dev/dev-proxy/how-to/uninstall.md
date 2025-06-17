@@ -1,5 +1,5 @@
 ---
-title: Uninstallation
+title: Uninstall
 description: How to uninstall Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
@@ -7,8 +7,7 @@ ms.date: 06/16/2025
 zone_pivot_groups: client-operating-system
 ---
 
-
-# Uninstallation
+# Uninstall
 
 If you want to remove Dev Proxy from your machine, follow these steps.
 
