@@ -70,7 +70,7 @@ If you haven't removed the Dev Proxy certificate automatically during uninstalla
 
 ::: zone pivot="client-operating-system-macos"
 
-1. Press <kbd>Command</kbd> + <kbd>Space</kbd> to open **Spotlight**.
+1. Open **Spotlight** by pressing <kbd>Command</kbd> + <kbd>Space</kbd>.
 1. Open **Keychain Access** by typing `Keychain Access` and pressing <kbd>Return</kbd>.
 1. Switch to the **My Certificates** category.
 1. In the list of certificates, find the **Dev Proxy CA** certificate.
