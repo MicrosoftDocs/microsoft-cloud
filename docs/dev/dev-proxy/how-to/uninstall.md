@@ -44,7 +44,7 @@ brew uninstall dev-proxy
 
 ::: zone-end
 
-# Dev Proxy Certificate Uninstallation
+## Dev Proxy Certificate Uninstallation
 
 In case Dev Proxy certificate removal is not performed automatically during uninstallation, follow these steps to remove it manually:
 
