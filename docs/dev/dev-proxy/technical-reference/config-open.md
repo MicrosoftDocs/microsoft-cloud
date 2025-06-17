@@ -23,5 +23,5 @@ None
 ## Options
 
 |Name|Description|Allowed values|Default|
-|--|--|--|--|--|
+|--|--|--|--|
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|

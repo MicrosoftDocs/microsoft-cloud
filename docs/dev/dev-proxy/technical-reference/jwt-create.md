@@ -31,7 +31,7 @@ None
 ## Options
 
 |Name|Description|Allowed values|Default|
-|--|--|--|--|--|
+|--|--|--|--|
 | `-n, --name` | The name of the user to create the token for. | string | `Dev Proxy` |
 | `-i, --issuer` | The issuer of the token. | string | `dev-proxy` |
 | `-a, --audiences` | The audiences to create the token for. Specify once for each audience. | string | `https://myserver.com` |

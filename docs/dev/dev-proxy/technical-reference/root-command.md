@@ -23,7 +23,7 @@ None
 ## Options
 
 |Name|Description|Allowed values|Default|
-|--|--|--|--|--|
+|--|--|--|--|
 |`--as-system-proxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`true`, `false`|`true`|
 |`-c, --config-file <configFile>`|The path to the configuration file|Local file path|`devproxyrc.json`|
 |`--discover`|Run Dev Proxy in [discovery](../how-to/discover-urls-watch.md) mode|n/a|n/a|
