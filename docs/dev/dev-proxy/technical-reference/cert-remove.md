@@ -1,19 +1,19 @@
 ---
-title: cert ensure
-description: cert ensure command reference
+title: cert remove
+description: cert remove command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/31/2025
+ms.date: 06/13/2025
 ---
 
-# cert ensure
+# cert remove
 
-Ensures that the certificate that Dev Proxy uses for decrypting SSL traffic is set up. Creates the certificate if it doesn't exist. Also, makes the certificate trusted.
+Removes the certificate that Dev Proxy uses for decrypting SSL traffic from Root Store.
 
 ## Usage
 
 ```console
-devproxy cert ensure
+devproxy cert remove
 ```
 
 ## Arguments
@@ -24,4 +24,5 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
+|`-f, --force`|Force the root certificate removal| | |
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
