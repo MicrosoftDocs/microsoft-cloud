@@ -18,7 +18,7 @@ Simulates rate-limit behaviors.
 {
   "name": "RateLimitingPlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "rateLimiting"
 }
 ```
@@ -28,7 +28,7 @@ Simulates rate-limit behaviors.
 ```json
 {
   "rateLimiting": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/ratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/ratelimitingplugin.schema.json",
     "costPerRequest": 2,
     "rateLimit": 120
   }

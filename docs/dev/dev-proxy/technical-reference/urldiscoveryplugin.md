@@ -21,7 +21,7 @@ Creates a list of URLs that Dev Proxy intercepted. Use this plugin to learn whic
 {
   "name": "UrlDiscoveryPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

@@ -20,7 +20,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 {
   "name": "DevToolsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "devTools"
 }
 ```
@@ -30,7 +30,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 ```json
 {
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }

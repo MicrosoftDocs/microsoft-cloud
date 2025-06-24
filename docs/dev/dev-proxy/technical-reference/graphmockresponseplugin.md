@@ -18,7 +18,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
 {
   "name": "GraphMockResponsePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```

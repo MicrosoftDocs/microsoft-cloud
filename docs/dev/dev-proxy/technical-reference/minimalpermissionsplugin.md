@@ -18,7 +18,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 {
   "name": "MinimalPermissionsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "minimalPermissionsPlugin"
 }
 ```
@@ -28,7 +28,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 ```json
 {
   "minimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/minimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/minimalpermissionsplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs"
   }
 }

@@ -21,13 +21,13 @@ If you want both random errors and mocks, change the order of plugins to:
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "genericRandomErrorPlugin"
     },
     {
       "name": "MockResponsePlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "mocksPlugin"
     }
     // [...] trimmed for brevity

@@ -29,7 +29,7 @@ This plugin detects the following requests:
 {
   "name": "ODSPSearchGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",

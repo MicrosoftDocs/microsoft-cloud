@@ -27,7 +27,7 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
 {
   "name": "EntraMockResponsePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```

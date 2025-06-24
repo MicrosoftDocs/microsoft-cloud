@@ -18,7 +18,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 {
   "name": "GraphMinimalPermissionsGuidancePlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "graphMinimalPermissionsGuidancePlugin"
 }
 ```
@@ -28,7 +28,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 ```json
 {
   "graphMinimalPermissionsGuidancePlugin": {
-   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/graphminimalpermissionsguidanceplugin.schema.json",
+   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/graphminimalpermissionsguidanceplugin.schema.json",
     "permissionsToIgnore": [ 
       "profile", 
       "openid", 

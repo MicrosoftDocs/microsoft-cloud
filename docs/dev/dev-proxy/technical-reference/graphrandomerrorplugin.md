@@ -18,8 +18,8 @@ Fails requests made to Microsoft Graph with random errors.
 {
   "name": "GraphRandomErrorPlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "graphRandomErrorPlugin"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "configSection": "graphRandomErrorsPlugin"
 }
 ```
 
@@ -28,7 +28,7 @@ Fails requests made to Microsoft Graph with random errors.
 ```json
 {
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]
   }
 }

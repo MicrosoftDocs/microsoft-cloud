@@ -18,7 +18,7 @@ Shows a warning when proxy intercepts an OData paging request using a URL that h
 {
   "name": "ODataPagingGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

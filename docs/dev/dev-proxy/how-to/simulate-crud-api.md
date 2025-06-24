@@ -24,7 +24,7 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
 {
   "name": "CrudApiPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "customersApi"
 }
 ```
@@ -41,7 +41,7 @@ In the `customers-api.json` file, you define the mock customers API.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/crudapiplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/crudapiplugin.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
