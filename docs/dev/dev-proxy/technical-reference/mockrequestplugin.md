@@ -30,7 +30,7 @@ To issue the configured request, press `w` in the command prompt session where D
 ```json
 {
   "contosoNotification": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockrequestplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockrequestplugin.schema.json",
     "mockFile": "mock-request.json"
   }
 }

@@ -20,7 +20,7 @@ Start, by installing Dev Proxy on the agent, but do it only if it isn't already 
 ```yaml
 variables:
 - name: DEV_PROXY_VERSION
-  value: v0.19.0
+  value: v0.29.0
 - name: DEV_PROXY_CACHE_RESTORED
   value: 'false'
 
@@ -95,7 +95,7 @@ variables:
 - name: LOG_FILE
   value: devproxy.log
 - name: DEV_PROXY_VERSION
-  value: v0.19.0
+  value: v0.29.0
 - name: DEV_PROXY_CACHE_RESTORED
   value: 'false'
 - name: PLAYWRIGHT_CACHE_RESTORED

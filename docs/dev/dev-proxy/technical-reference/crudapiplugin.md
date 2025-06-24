@@ -28,7 +28,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 ```json
 {
   "customersApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/crudapiplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
