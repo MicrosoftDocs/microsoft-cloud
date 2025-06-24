@@ -44,12 +44,12 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "apiCenterOnboardingPlugin"
     }
   ],
@@ -81,18 +81,18 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "apiCenterOnboardingPlugin"
     },
     {
       "name": "PlainTextReporter",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [
@@ -195,18 +195,18 @@ The `ApiCenterOnboardingPlugin` can not only detect shadow APIs, but also automa
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterOnboardingPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "apiCenterOnboardingPlugin"
     },
     {
       "name": "PlainTextReporter",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [
@@ -234,23 +234,23 @@ To automatically generate OpenAPI specs for onboarded APIs, update Dev Proxy con
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenApiSpecGeneratorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
       "name": "ApiCenterOnboardingPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "apiCenterOnboardingPlugin"
     },
     {
       "name": "PlainTextReporter",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [

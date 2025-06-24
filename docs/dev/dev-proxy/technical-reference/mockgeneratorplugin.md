@@ -20,7 +20,7 @@ To intercept requests, after starting Dev Proxy, start [recording](../how-to/rec
 {
   "name": "MockGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

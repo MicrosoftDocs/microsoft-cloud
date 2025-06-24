@@ -30,7 +30,7 @@ To use Chrome DevTools with Dev Proxy:
     {
       "name": "DevToolsPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "devTools"
     }
     ```
@@ -39,7 +39,7 @@ To use Chrome DevTools with Dev Proxy:
 
     ```json
     "devTools": {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/devtoolsplugin.schema.json",
       "preferredBrowser": "Edge"
     }
     ```
@@ -51,17 +51,17 @@ To use Chrome DevTools with Dev Proxy:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
       "plugins": [
         {
           "name": "DevToolsPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
           "configSection": "devTools"
         }
       ],
       "devTools": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/devtoolsplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/devtoolsplugin.schema.json",
         "preferredBrowser": "Edge"
       }
     }

@@ -18,7 +18,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 {
   "name": "CachingGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "cachingGuidance"
 }
 ```
@@ -28,7 +28,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 ```json
 {
   "cachingGuidance": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/cachingguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/cachingguidanceplugin.schema.json",
     "cacheThresholdSeconds": 5
   }
 }

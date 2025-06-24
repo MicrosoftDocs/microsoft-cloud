@@ -16,7 +16,7 @@ Generates reports in JSON format.
 {
   "name": "JsonReporter",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

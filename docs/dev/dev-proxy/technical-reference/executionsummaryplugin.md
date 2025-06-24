@@ -23,7 +23,7 @@ Creates a summary of the requests that pass through the proxy.
 {
   "name": "ExecutionSummaryPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
 ```
@@ -33,7 +33,7 @@ Creates a summary of the requests that pass through the proxy.
 ```json
 {
   "executionSummaryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/executionsummaryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }

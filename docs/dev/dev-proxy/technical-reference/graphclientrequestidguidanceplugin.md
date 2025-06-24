@@ -18,7 +18,7 @@ Shows a tip when a request to Microsoft Graph API doesn't include the `client-re
 {
   "name": "GraphClientRequestIdGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",

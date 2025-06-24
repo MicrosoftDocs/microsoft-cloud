@@ -22,7 +22,7 @@ To generate an OpenAPI spec using Dev Proxy:
         {
           "name": "OpenApiSpecGeneratorPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
         }
       ]
       // [...] shortened for brevity

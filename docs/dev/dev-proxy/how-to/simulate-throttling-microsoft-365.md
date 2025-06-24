@@ -16,17 +16,17 @@ To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
       "name": "GraphRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "graphRandomErrorPlugin"
     }
   ],
@@ -55,17 +55,17 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
       "name": "GraphRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "graphRandomErrorPlugin"
     }
   ],

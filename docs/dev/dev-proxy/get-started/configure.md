@@ -22,17 +22,17 @@ The following code snippet shows the default Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "genericRandomErrorPlugin"
     }
   ],

@@ -28,7 +28,7 @@ Generates TypeSpec files from the intercepted requests and responses.
 ```json
 {
   "typeSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/typespecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/typespecgeneratorplugin.schema.json",
     "ignoreResponseTypes": false
   }
 }

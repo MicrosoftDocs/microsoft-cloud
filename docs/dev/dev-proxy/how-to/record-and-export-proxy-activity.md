@@ -18,12 +18,12 @@ The following example shows how to configure the Dev Proxy to record and export 
     {
       "name": "ExecutionSummaryPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
         "name": "MarkdownReporter",
         "enabled": true,
-        "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+        "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [

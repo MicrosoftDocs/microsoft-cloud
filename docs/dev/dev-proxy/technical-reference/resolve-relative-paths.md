@@ -16,7 +16,7 @@ In the below example, the `pluginPath` is relative to the configuration file. Th
 {
   "name": "GraphSelectGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     ...
@@ -36,7 +36,7 @@ Use the `~appFolder` token in the file paths to ensure that the path is prepende
 {
   "name": "GraphSelectGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     ...

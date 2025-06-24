@@ -18,7 +18,7 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 {
   "name": "ApiCenterMinimalPermissionsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "apiCenterMinimalPermissionsPlugin"
 }
 ```
@@ -28,7 +28,7 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 ```json
 {
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
@@ -74,7 +74,7 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 ```json
 {
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",

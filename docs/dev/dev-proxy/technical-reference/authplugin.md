@@ -18,7 +18,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 {
   "name": "AuthPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "auth"
 }
 ```
@@ -28,7 +28,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/authplugin.schema.json",
     "type": "apiKey",
     "apiKey": {
       "parameters": [
@@ -54,7 +54,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/authplugin.schema.json",
     "type": "oauth2",
     "oauth2": {
       "metadataUrl": "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration",

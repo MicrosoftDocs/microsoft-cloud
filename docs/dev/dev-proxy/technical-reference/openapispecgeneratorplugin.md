@@ -18,7 +18,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 {
   "name": "OpenApiSpecGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "openApiSpecGeneratorPlugin"
 }
 ```
@@ -28,7 +28,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 ```json
 {
   "openApiSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/openapispecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
     "specVersion": "v3_0",
     "specFormat": "Json"
