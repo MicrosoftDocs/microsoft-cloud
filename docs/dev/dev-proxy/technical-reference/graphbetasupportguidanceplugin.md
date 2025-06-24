@@ -18,7 +18,7 @@ Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 {
   "name": "GraphBetaSupportGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/beta/*",
     "https://graph.microsoft.us/beta/*",

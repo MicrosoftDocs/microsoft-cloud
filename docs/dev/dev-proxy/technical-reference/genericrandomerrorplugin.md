@@ -18,7 +18,7 @@ Fails requests with a random selected error from file containing mocked errors.
 {
   "name": "GenericRandomErrorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "genericRandomErrorPlugin",
   "urlsToWatch": [
     "https://api.openai.com/*"

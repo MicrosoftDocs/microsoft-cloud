@@ -18,7 +18,7 @@ Generates HTTP file from the intercepted requests and responses.
 {
   "name": "HttpFileGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "httpFileGeneratorPlugin"
 }
 ```

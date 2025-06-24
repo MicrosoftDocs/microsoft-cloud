@@ -18,7 +18,7 @@ Simulates responses from Azure OpenAI and OpenAI using a local language model.
 {
   "name": "OpenAIMockResponsePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

@@ -18,7 +18,7 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 {
   "name": "ApiCenterMinimalPermissionsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "apiCenterMinimalPermissionsPlugin"
 }
 ```

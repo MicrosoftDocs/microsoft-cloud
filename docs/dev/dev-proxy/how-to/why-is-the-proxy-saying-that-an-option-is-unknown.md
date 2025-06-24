@@ -22,7 +22,7 @@ To enable a plugin and make its options available for use, open the [devproxyrc.
 {
   "name": "ExecutionSummaryPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
 ```

@@ -16,7 +16,7 @@ Generates reports in plain-text format.
 {
   "name": "PlainTextReporter",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

@@ -18,7 +18,7 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
 {
   "name": "ApiCenterOnboardingPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "apiCenterOnboardingPlugin"
 }
 ```

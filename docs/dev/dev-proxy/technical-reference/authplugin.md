@@ -18,7 +18,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 {
   "name": "AuthPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "auth"
 }
 ```

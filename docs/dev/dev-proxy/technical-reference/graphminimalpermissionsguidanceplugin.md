@@ -18,7 +18,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 {
   "name": "GraphMinimalPermissionsGuidancePlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "graphMinimalPermissionsGuidancePlugin"
 }
 ```

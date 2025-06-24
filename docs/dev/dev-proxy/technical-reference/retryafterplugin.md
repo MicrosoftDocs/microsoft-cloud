@@ -18,7 +18,7 @@ Simulates the `Retry-After` header sent by an API after throttling a request. Th
 {
   "name": "RetryAfterPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 

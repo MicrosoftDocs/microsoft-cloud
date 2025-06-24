@@ -23,7 +23,7 @@ Creates a summary of the requests that pass through the proxy.
 {
   "name": "ExecutionSummaryPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "executionSummaryPlugin"
 }
 ```

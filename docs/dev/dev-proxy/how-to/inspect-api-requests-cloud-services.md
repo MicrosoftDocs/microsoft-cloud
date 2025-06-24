@@ -41,12 +41,12 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
           "configSection": "rewritePlugin"
         }
       ],
@@ -130,17 +130,17 @@ First, let's configure Dev Proxy to inspect cloud API requests. Let's configure 
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
       "plugins": [
         {
           "name": "DevToolsPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
         },
         {
           "name": "RewritePlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
           "configSection": "rewritePlugin"
         }
       ],
@@ -181,18 +181,18 @@ Next, let's update Dev Proxy configuration to show the information about the rew
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
           "configSection": "rewritePlugin"
         },
         {
           "name": "DevToolsPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
         }
       ],
       "urlsToWatch": [

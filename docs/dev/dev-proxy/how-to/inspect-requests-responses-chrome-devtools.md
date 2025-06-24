@@ -30,7 +30,7 @@ To use Chrome DevTools with Dev Proxy:
     {
       "name": "DevToolsPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "devTools"
     }
     ```
@@ -56,7 +56,7 @@ To use Chrome DevTools with Dev Proxy:
         {
           "name": "DevToolsPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
           "configSection": "devTools"
         }
       ],

@@ -20,7 +20,7 @@ To issue the configured request, press `w` in the command prompt session where D
 {
   "name": "MockRequestPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "contosoNotification"
 }
 ```
@@ -50,7 +50,7 @@ None
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.27.0/mockrequestplugin.mockfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockrequestplugin.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",

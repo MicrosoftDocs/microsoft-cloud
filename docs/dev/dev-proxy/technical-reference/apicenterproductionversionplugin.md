@@ -18,7 +18,7 @@ Checks if the APIs used in an app are production version of the APIs registered 
 {
   "name": "ApiCenterProductionVersionPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "apiCenterProductionVersionPlugin"
 }
 ```

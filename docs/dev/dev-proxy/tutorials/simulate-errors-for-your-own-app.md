@@ -83,9 +83,9 @@ When using a configuration file that is stored outside of the Dev Proxy installa
 
 1. In a text editor, open the `devproxyrc.json` file.
 1. Locate the `GenericRandomErrorPlugin` plugin in the `plugins` array.
-1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
+1. Update the `pluginPath` to `~appFolder/plugins/DevProxy.Plugins.dll`.
 1. Locate the `RetryAfterPlugin` plugin in the `plugins` array.
-1. Update the `pluginPath` to `~appFolder/plugins/dev-proxy-plugins.dll`.
+1. Update the `pluginPath` to `~appFolder/plugins/DevProxy.Plugins.dll`.
 1. In a command prompt, change the working directory to your project folder.
 1. Enter `devproxy --config-file devproxyrc.json` and press <kbd>Enter</kbd> to start Dev Proxy using your configuration file.
 1. Send a request to the JSON Placeholder API from the command line and view the output.

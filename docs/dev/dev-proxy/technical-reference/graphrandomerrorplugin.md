@@ -18,8 +18,8 @@ Fails requests made to Microsoft Graph with random errors.
 {
   "name": "GraphRandomErrorPlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
-  "configSection": "graphRandomErrorPlugin"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "configSection": "graphRandomErrorsPlugin"
 }
 ```
 

@@ -18,7 +18,7 @@ Simulates rate-limit behaviors.
 {
   "name": "RateLimitingPlugin",
   "enabled": false,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "rateLimiting"
 }
 ```

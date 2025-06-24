@@ -20,7 +20,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 {
   "name": "DevToolsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "devTools"
 }
 ```

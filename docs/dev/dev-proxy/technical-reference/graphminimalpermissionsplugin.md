@@ -17,8 +17,8 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
 ```json
 {
   "name": "GraphMinimalPermissionsPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "enabled": false,
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "graphMinimalPermissionsPlugin"
 }
 ```

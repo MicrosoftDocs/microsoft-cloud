@@ -18,7 +18,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 {
   "name": "OpenApiSpecGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "openApiSpecGeneratorPlugin"
 }
 ```

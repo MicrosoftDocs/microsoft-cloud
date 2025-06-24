@@ -18,7 +18,7 @@ Delays responses by a random number of milliseconds from the configured range.
 {
   "name": "LatencyPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "latencyPlugin"
 }
 ```

@@ -18,7 +18,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 {
   "name": "CachingGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "cachingGuidance"
 }
 ```

@@ -18,7 +18,7 @@ Simulates responses.
 {
   "name": "MockResponsePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "mocksPlugin"
 }
 ```

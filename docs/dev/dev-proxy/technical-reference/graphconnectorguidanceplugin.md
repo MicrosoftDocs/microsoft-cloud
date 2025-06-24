@@ -24,7 +24,7 @@ Schema missing one or more semantic labels required for Microsoft Copilot for Mi
 {
   "name": "GraphConnectorGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "urlsToWatch": [
     "https://graph.microsoft.com/*/external/connections/*/schema",
     "https://graph.microsoft.us/*/external/connections/*/schema",
