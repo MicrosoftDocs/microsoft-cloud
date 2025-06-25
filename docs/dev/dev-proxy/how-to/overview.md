@@ -33,6 +33,7 @@ ms.topic: overview
 - [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md)
 - [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
 - [Simulate Azure OpenAI API](./simulate-azure-openai.md)
+- [Simulate mock responses across the internet](./simulate-mock-responses-dev-tunnel.md)
 - [Simulate OpenAI API](./simulate-openai.md)
 
 ## Simulate errors
