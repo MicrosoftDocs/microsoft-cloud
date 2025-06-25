@@ -66,7 +66,7 @@ You can complete the entire tutorial from start to finish or complete specific t
 ### Microsoft Cloud Technologies used in this Tutorial
 
 - Azure Communication Services
-- Azure OpenAI Service
+- Azure OpenAI in Foundry Models
 - Microsoft Entra ID
 - Microsoft Graph
 - Microsoft Graph Toolkit
