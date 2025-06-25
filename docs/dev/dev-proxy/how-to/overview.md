@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/03/2025
+ms.date: 06/25/2025
 ms.topic: overview
 ---
 
@@ -63,6 +63,7 @@ ms.topic: overview
 - [Check if my app is using production-level APIs](./check-production-level-apis.md)
 - [Check if my app is calling APIs with minimal permissions](./check-minimal-api-permissions.md)
 - [Find shadow APIs](./check-shadow-apis.md)
+- [Generate an HTTP file](./generate-http-file.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Generate a TypeSpec file](./generate-typespec-file.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
