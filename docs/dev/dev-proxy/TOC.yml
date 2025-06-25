@@ -56,6 +56,8 @@
         href: how-to/simulate-crud-api-entra.md
       - name: Simulate Azure OpenAI API
         href: how-to/simulate-azure-openai.md
+      - name: Simulate mock responses across the internet
+        href: how-to/simulate-mock-responses-dev-tunnel.md
       - name: Simulate OpenAI API
         href: how-to/simulate-openai.md
     - name: Simulate errors
