@@ -24,7 +24,7 @@ ms.custom:
 
 # AI: Generating Completions
 
-In addition to the natural language to SQL feature, you can also use Azure OpenAI Service to generate email and SMS messages to enhance user productivity and streamline communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. 
+In addition to the natural language to SQL feature, you can also use Azure OpenAI in Foundry Models to generate email and SMS messages to enhance user productivity and streamline communication workflows. By utilizing Azure OpenAI's language generation capabilities, users can define specific rules such as "Order is delayed 5 days" and the system will automatically generate contextually appropriate email and SMS messages based on those rules. 
 
 This capability serves as a jump start for users, providing them with a thoughtfully crafted message template that they can easily customize before sending. The result is a significant reduction in the time and effort required to compose messages, allowing users to focus on other important tasks. Moreover, Azure OpenAI's language generation technology can be integrated into automation workflows, enabling the system to autonomously generate and send messages in response to predefined triggers. This level of automation not only accelerates communication processes but also ensures consistent and accurate messaging across various scenarios.
 
