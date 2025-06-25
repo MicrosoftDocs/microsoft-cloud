@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/03/2025
+ms.date: 06/25/2025
 ms.topic: overview
 ---
 
@@ -33,6 +33,7 @@ ms.topic: overview
 - [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md)
 - [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md)
 - [Simulate Azure OpenAI API](./simulate-azure-openai.md)
+- [Simulate mock responses across the internet](./simulate-mock-responses-dev-tunnel.md)
 - [Simulate OpenAI API](./simulate-openai.md)
 
 ## Simulate errors
@@ -63,6 +64,7 @@ ms.topic: overview
 - [Check if my app is using production-level APIs](./check-production-level-apis.md)
 - [Check if my app is calling APIs with minimal permissions](./check-minimal-api-permissions.md)
 - [Find shadow APIs](./check-shadow-apis.md)
+- [Generate an HTTP file](./generate-http-file.md)
 - [Generate an OpenAPI spec](./generate-openapi-spec.md)
 - [Generate a TypeSpec file](./generate-typespec-file.md)
 - [Update my application code to use Microsoft Graph JavaScript SDK](./Update-my-application-code-to-use-Microsoft-Graph-JavaScript-SDK.md)
