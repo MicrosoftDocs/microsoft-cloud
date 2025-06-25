@@ -246,7 +246,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - A rule is defined to always return a JSON object with the SQL query and the parameter values in it.
     - Example user prompts and the expected SQL query and parameter values are provided. This is referred to as ["few-shot" learning](/azure/ai-services/openai/concepts/prompt-engineering?WT.mc_id=m365-94501-dwahlin#examples). Although LLMs are trained on large amounts of data, they can be adapted to new tasks with only a few examples. An alternative approach is "zero-shot" learning where no example is provided and the model is expected to generate the correct SQL query and parameter values.
 
-1. The `getSQLFromNLP()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if the Azure OpenAI service or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
+1. The `getSQLFromNLP()` function sends the system and user prompts to a function named `callOpenAI()` which is also located in the *server/openAI.ts* file. The `callOpenAI()` function determines if Azure OpenAI in Foundry Models or OpenAI service should be called by checking environment variables. If a key, endpoint, and model are available in the environment variables then Azure OpenAI is called, otherwise OpenAI is called.
 
     ```typescript
     function callOpenAI(systemPrompt: string, userPrompt: string, temperature = 0, useBYOD = false) {
@@ -460,7 +460,7 @@ Let's start by experimenting with different GPT prompts that can be used to conv
     - Before using this type of technology, discuss potential scenarios with your team, database administrators, security team, stakeholders, and any other relevant parties to ensure that it's appropriate for your organization. It's important to discuss if natural language to SQL meets security, privacy, and any other requirements your organization may have in place.
     - Security should be a primary concern and built into the planning, development, and deployment process.
     - While natural language to SQL can be very powerful, careful planning must go into it to ensure prompts have required rules and that post-processing functionality is included. Plan for additional time to implement and test this type of functionality and to account for scenarios where unexpected results are returned.
-    - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI Service](/legal/cognitive-services/openai/data-privacy).
+    - With Azure OpenAI, customers get the security capabilities of Microsoft Azure while running the same models as OpenAI. Azure OpenAI offers private networking, regional availability, and responsible AI content filtering. Learn more about [Data, privacy, and security for Azure OpenAI](/legal/cognitive-services/openai/data-privacy).
 
 1. You've now seen how to use Azure OpenAI to convert natural language to SQL and learned about the pros and cons of implementing this type of functionality. In the next exercise, you'll learn how email and SMS messages can be generated using Azure OpenAI.
 
