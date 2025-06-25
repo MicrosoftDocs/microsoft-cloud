@@ -96,6 +96,8 @@
         href: how-to/check-production-level-apis.md
       - name: Find shadow APIs
         href: how-to/check-shadow-apis.md
+      - name: Generate an HTTP file
+        href: how-to/generate-http-file.md
       - name: Generate an OpenAPI spec
         href: how-to/generate-openapi-spec.md
       - name: Generate a TypeSpec file
