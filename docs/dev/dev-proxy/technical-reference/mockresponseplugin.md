@@ -28,7 +28,7 @@ Simulates responses.
 ```json
 {
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -58,7 +58,7 @@ Response to a request with a 200 OK response and a JSON body.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -98,7 +98,7 @@ Respond to a request with a 404 Not Found response.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -119,7 +119,7 @@ Respond to a request with a binary image loaded from a file on disk.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -146,7 +146,7 @@ Respond to a request only after the second time it's called.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -173,7 +173,7 @@ Respond to a request that contains a specific string in the body.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {

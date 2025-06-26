@@ -28,7 +28,7 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
 ```json
 {
   "apiCenterOnboardingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/apicenteronboardingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/apicenteronboardingplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
@@ -74,7 +74,7 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 ```json
 {
   "apiCenterOnboardingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/apicenteronboardingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/apicenteronboardingplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",

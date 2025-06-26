@@ -42,7 +42,7 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
@@ -78,7 +78,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
