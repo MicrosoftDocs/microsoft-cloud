@@ -28,7 +28,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 ```json
 {
   "cachingGuidance": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/cachingguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/cachingguidanceplugin.schema.json",
     "cacheThresholdSeconds": 5
   }
 }

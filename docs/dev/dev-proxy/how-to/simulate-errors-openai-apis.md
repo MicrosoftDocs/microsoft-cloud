@@ -19,7 +19,7 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",

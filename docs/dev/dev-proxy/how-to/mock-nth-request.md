@@ -20,7 +20,7 @@ Using the following mock file as an example, we can see that it contains two moc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

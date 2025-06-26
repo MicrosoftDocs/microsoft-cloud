@@ -23,11 +23,11 @@ Start, by installing Dev Proxy on the runner, but do it only if it isn't already
   uses: actions/cache@v4
   with:
     path: ./devproxy
-    key: devproxy-linux-v0.29.0
+    key: devproxy-linux-v0.29.1
 
 - name: Install Dev Proxy
   if: steps.cache-devproxy.outputs.cache-hit != 'true'
-  run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.29.0
+  run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.29.1
 ```
 
 ## Run the Dev Proxy
@@ -94,7 +94,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LOG_FILE: devproxy.log
-      DEVPROXY_VERSION: v0.29.0
+      DEVPROXY_VERSION: v0.29.1
     steps:
       - uses: actions/checkout@v4
 
