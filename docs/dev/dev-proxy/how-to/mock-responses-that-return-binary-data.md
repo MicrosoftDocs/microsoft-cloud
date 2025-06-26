@@ -14,7 +14,7 @@ In Dev Proxy, you can define a binary response by setting the `response.body` to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
