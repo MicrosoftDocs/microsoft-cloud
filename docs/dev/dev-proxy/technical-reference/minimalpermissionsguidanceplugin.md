@@ -28,7 +28,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 ```json
 {
   "minimalPermissionsGuidancePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/minimalpermissionsguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/minimalpermissionsguidanceplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs"
   }
 }

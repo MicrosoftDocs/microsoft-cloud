@@ -28,7 +28,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 ```json
 {
   "openApiSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/openapispecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
     "specVersion": "v3_0",
     "specFormat": "Json"
