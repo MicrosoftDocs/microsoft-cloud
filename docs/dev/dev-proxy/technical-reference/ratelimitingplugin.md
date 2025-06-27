@@ -28,7 +28,7 @@ Simulates rate-limit behaviors.
 ```json
 {
   "rateLimiting": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/ratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/ratelimitingplugin.schema.json",
     "costPerRequest": 2,
     "rateLimit": 120
   }

@@ -12,7 +12,7 @@ To exclude a URL from being intercepted, prepend it with an `!` (exclamation mar
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",

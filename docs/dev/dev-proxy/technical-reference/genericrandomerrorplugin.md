@@ -31,7 +31,7 @@ Fails requests with a random selected error from file containing mocked errors.
 ```json
 {
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors.json"
   }
 }

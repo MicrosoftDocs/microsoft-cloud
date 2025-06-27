@@ -33,7 +33,7 @@ To generate an HTTP file using Dev Proxy:
    ```json
    {
      "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/httpfilegeneratorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/httpfilegeneratorplugin.schema.json",
        "includeOptionsRequests": false
      }
      // [...] shortened for brevity

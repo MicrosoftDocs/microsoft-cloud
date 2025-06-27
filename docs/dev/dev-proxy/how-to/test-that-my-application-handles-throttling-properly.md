@@ -18,7 +18,7 @@ To start, enable the `GenericRandomErrorPlugin` in your Dev Proxy configuration 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -37,7 +37,7 @@ Next, configure the plugin to use a file that contains the errors you want to si
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -59,7 +59,7 @@ In the errors file, define the throttling response so that it matches the actual
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
   "errors": [
     {
       "request": {
@@ -95,7 +95,7 @@ To configure the `Retry-After` header to a static value, add the header to your 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
   "errors": [
     {
       "request": {
@@ -131,7 +131,7 @@ To test if your app is correctly waiting before calling the API again, change th
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
   "errors": [
     {
       "request": {
@@ -165,7 +165,7 @@ Additionally, extend your Dev Proxy configuration with the [`RetryAfterPlugin`](
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",

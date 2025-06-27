@@ -33,7 +33,7 @@ Creates a summary of the requests that pass through the proxy.
 ```json
 {
   "executionSummaryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/executionsummaryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }
