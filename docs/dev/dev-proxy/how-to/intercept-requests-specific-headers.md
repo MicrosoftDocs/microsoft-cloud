@@ -18,7 +18,7 @@ The following example demonstrates how to configure Dev Proxy to intercept reque
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     // [...] trimmed for brevity
   ],
@@ -60,7 +60,7 @@ To intercept requests that contain a specific header, regardless of its value, l
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     // [...] trimmed for brevity
   ],

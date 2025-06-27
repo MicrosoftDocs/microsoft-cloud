@@ -24,7 +24,7 @@ Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-refe
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -71,7 +71,7 @@ When you use the following configuration, proxy responds to all `GET` requests t
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -103,7 +103,7 @@ When you use the following configuration, Dev Proxy responds to all requests to 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -134,7 +134,7 @@ When you use the following configuration, Dev Proxy returns the same image from 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -158,7 +158,7 @@ When you use the following configuration, Dev Proxy returns the same response wh
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -195,7 +195,7 @@ For example, the following mock response configuration, instructs Dev Proxy to r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -224,7 +224,7 @@ After you create the mocks file, you need to configure Dev Proxy to use the mock
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -237,7 +237,7 @@ After you create the mocks file, you need to configure Dev Proxy to use the mock
     "https://jsonplaceholder.typicode.com/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   },
   "logLevel": "information",
@@ -259,7 +259,7 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 ```json
 {
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json",
     "blockUnmockedRequests": true
   }

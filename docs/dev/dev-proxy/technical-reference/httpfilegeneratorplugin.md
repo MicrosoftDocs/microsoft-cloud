@@ -28,7 +28,7 @@ Generates HTTP file from the intercepted requests and responses.
 ```json
 {
   "httpFileGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/httpfilegeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/httpfilegeneratorplugin.schema.json",
     "includeOptionsRequests": false
   }
 }

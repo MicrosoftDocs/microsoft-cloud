@@ -25,7 +25,7 @@ To simulate OpenAI API responses using Dev Proxy, you need to enable the `OpenAI
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -62,7 +62,7 @@ The complete configuration file looks like this.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

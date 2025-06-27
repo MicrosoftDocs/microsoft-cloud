@@ -28,7 +28,7 @@ Delays responses by a random number of milliseconds from the configured range.
 ```json
 {
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }

@@ -23,7 +23,7 @@ Create a file named `mocks.json` that contains the mock responses for your custo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -63,7 +63,7 @@ Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `Mo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",

@@ -30,7 +30,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 ```json
 {
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.1/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }
