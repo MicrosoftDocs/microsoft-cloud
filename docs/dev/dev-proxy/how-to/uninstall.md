@@ -16,7 +16,7 @@ If you want to remove Dev Proxy from your machine, follow these steps.
 Uninstall Dev Proxy by running in the command prompt:
 
 ```console
-winget uninstall Microsoft.DevProxy
+winget uninstall DevProxy.DevProxy
 ```
 
 ::: zone-end
