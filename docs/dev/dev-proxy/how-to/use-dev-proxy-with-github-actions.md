@@ -147,11 +147,7 @@ To make it easier to understand the results of your workflow, you can write a su
     cat YourPlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
 ```
 
-## Example workflows
-
-The following examples demonstrate how to use Dev Proxy in GitHub Actions workflows. You can adapt these examples to fit your specific use case.
-
-## Simple example
+## Example workflow
 
 Here's a simple example of how to use Dev Proxy in a GitHub Actions workflow. This workflow installs Dev Proxy, starts it, sends a request through it using curl, and then shows the logs.
 
@@ -182,107 +178,4 @@ jobs:
         run: |
           echo "Dev Proxy logs:"
           cat devproxy.log
-  ```
-
-## Playwright example
-
-If you're using Playwright for testing, you can integrate Dev Proxy into your Playwright tests.
-
-Here's an example of a complete workflow file that uses Dev Proxy and Playwright (based on original example by [Elio Struyf](https://www.eliostruyf.com/playwright-microsoft-dev-proxy-github-actions/)):
-
-```yaml
-name: Test app using Dev Proxy
-
-on:
-  push:
-    branches:
-      - main
-      - dev
-  workflow_dispatch:
-
-jobs:
-  test:
-    name: Test app using Dev Proxy
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    env:
-      LOG_FILE: devproxy.log
-      DEVPROXY_VERSION: v0.29.2
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      #################################
-      # Cache + install of Playwright #
-      #################################
-      - name: Store Playwright's Version
-        run: |
-          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
-          echo "Playwright's Version: $PLAYWRIGHT_VERSION"
-          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV          
-
-      - name: Cache Playwright Browsers for Playwright's Version
-        id: cache-playwright
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-ubuntu-${{ env.PLAYWRIGHT_VERSION }}
-
-      - name: Install Playwright Browsers
-        if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps
-
-      ################################
-      # Cache + install of Dev Proxy #
-      ################################
-      - name: Cache Dev Proxy
-        id: cache-devproxy
-        uses: actions/cache@v4
-        with:
-          path: ./devproxy
-          key: devproxy-ubuntu-${{ env.DEVPROXY_VERSION }}
-
-      - name: Install Dev Proxy
-        if: steps.cache-devproxy.outputs.cache-hit != 'true'
-        uses: dev-proxy-tools/actions/install@v1
-        with:
-          version: ${{ env.DEVPROXY_VERSION }}
-      
-      - name: Start Dev Proxy
-        uses: dev-proxy-tools/actions/start@v1
-        with:
-          log-file: ${{ env.LOG_FILE }}
-
-      - name: Start recording
-        uses: dev-proxy-tools/actions/record-start@v1
-
-      - name: Run tests
-        run: npm test
-
-      - name: Stop recording
-        uses: dev-proxy-tools/actions/record-stop@v1
-
-      - name: Upload Dev Proxy logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.LOG_FILE }}
-          path: ${{ env.LOG_FILE }}
-      
-      # only when using a reporting plugin with the Markdown reporter
-      - name: Upload Dev Proxy reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: Reports
-          path: ./*Reporter*
-      
-      # only when using a reporting plugin with the Markdown reporter
-      - name: Write summary
-        run: |
-          cat SomePlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
 ```
