@@ -13,16 +13,6 @@ Using Dev Proxy with GitHub Actions is a great way to test your applications in 
 > [!IMPORTANT]
 > Dev Proxy Actions support Linux based runners only.
 
-## Actions
-
-The following actions are available for use in your GitHub Actions workflows:
-
-- `dev-proxy-tools/actions/install`
-- `dev-proxy-tools/actions/start`
-- `dev-proxy-tools/actions/stop`
-- `dev-proxy-tools/actions/record-start`
-- `dev-proxy-tools/actions/record-stop`
-
 ## Install Dev Proxy
 
 Start by installing Dev Proxy on the runner using the `dev-proxy-tools/actions/install` action.
@@ -149,7 +139,7 @@ To make it easier to understand the results of your workflow, you can write a su
 
 ## Example workflow
 
-Here's a simple example of how to use Dev Proxy in a GitHub Actions workflow. This workflow installs Dev Proxy, starts it, sends a request through it using curl, and then shows the logs.
+Here's an example of how to use Dev Proxy Actions in a GitHub Actions workflow.
 
 ```yaml
 name: Example Dev Proxy workflow
@@ -158,21 +148,35 @@ on:
 
 jobs:
   example-dev-proxy:
-    name: Example Dev Proxy Job
+    name: Test Dev Proxy Actions
     runs-on: ubuntu-latest
     steps:
-      - name: Intall Dev Proxy
+      - name: Install Dev Proxy
         id: install-latest
         uses: dev-proxy-tools/actions/install@v1
 
       - name: Start Dev Proxy
         id: start-devproxy
         uses: dev-proxy-tools/actions/start@v1
+        with:
+          auto-stop: false
+
+      - name: Start recording
+        id: start-recording
+        uses: dev-proxy-tools/actions/record-start@v1
 
       - name: Send request
         id: send-request
         run: |
           curl -ikx http://127.0.0.1:8000 https://jsonplaceholder.typicode.com/posts
+
+      - name: Stop recording
+        id: stop-recording
+        uses: dev-proxy-tools/actions/record-stop@v1
+
+      - name: Stop Dev Proxy
+        id: stop
+        uses: dev-proxy-tools/actions/stop@v1
 
       - name: Show logs
         run: |
