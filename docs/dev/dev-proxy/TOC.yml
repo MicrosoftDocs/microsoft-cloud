@@ -64,6 +64,8 @@
       items:
       - name: Test my app with random errors
         href: how-to/test-my-app-with-random-errors.md
+      - name: Test my app with language model failures
+        href: how-to/test-my-app-with-language-model-failures.md
       - name: Simulate errors from OpenAI APIs
         href: how-to/simulate-errors-openai-apis.md
       - name: Simulate errors from Microsoft Graph APIs
@@ -258,6 +260,8 @@
         href: technical-reference/GenericRandomErrorPlugin.md
       - name: HttpFileGeneratorPlugin
         href: technical-reference/httpfilegeneratorplugin.md
+      - name: LanguageModelFailurePlugin
+        href: technical-reference/languagemodelfailureplugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
       - name: MinimalCsomPermissionsPlugin
