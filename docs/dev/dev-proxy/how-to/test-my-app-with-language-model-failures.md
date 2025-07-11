@@ -63,7 +63,7 @@ To test specific failure scenarios, configure the plugin to use particular failu
 }
 ```
 
-This configuration only simulates hallucinations, plausible but incorrect responses, and biased content.
+This configuration only simulates incorrect information, plausible but incorrect responses, and biased content.
 
 ## Test different LLM APIs
 
