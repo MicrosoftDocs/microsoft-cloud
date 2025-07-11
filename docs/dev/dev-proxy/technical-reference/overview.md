@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/15/2025
+ms.date: 07/11/2025
 ms.topic: overview
 ---
 
@@ -24,6 +24,7 @@ Name | Description
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
+[LanguageModelFailurePlugin](./languagemodelfailureplugin.md)|Simulates various language model failure scenarios to test resilience of language model-dependent applications.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
 [MinimalCsomPermissionsPlugin](./minimalcsompermissionsplugin.md)|Detects the minimal permissions needed to call the recorded SharePoint Client-Side Object Model (CSOM) API requests.
 [MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.

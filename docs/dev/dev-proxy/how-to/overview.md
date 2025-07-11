@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/25/2025
+ms.date: 07/11/2025
 ms.topic: overview
 ---
 
@@ -39,6 +39,7 @@ ms.topic: overview
 ## Simulate errors
 
 - [Test my app with random errors](./Test-my-app-with-random-errors.md)
+- [Test my app with language model failures](./test-my-app-with-language-model-failures.md)
 - [Simulate errors from OpenAI APIs](./simulate-errors-openai-apis.md)
 - [Simulate errors from Microsoft Graph APIs](./simulate-errors-microsoft-graph-apis.md)
 - [Change request failure rate](./Change-request-failure-rate.md)
