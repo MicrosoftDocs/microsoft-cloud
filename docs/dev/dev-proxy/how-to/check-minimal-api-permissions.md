@@ -23,7 +23,7 @@ To check if your app is calling APIs using minimal permissions, you can use the 
 To check if your app is calling APIs using minimal permissions, you need to have an [Azure API Center](/azure/api-center/) instance with information about the APIs that you use in your organization.
 
 > [!TIP]
-> Download the preset for this how to article by running in the command prompt `devproxy preset get demo-apicenter-minimalpermissions`.
+> Download the preset for this how to article by running in the command prompt `devproxy config get demo-apicenter-minimalpermissions`.
 
 ### Create an Azure API Center instance
 

@@ -49,5 +49,5 @@ The `~appFolder` token can be used in any path used by the proxy.
 Let's say you want to load a preset configuration, you can use the `~appFolder` token in the path to reference the configuration file located in the proxy installation directory.
 
 ```console
-devproxy --config-file ~appFolder/presets/microsoft-graph.json
+devproxy --config-file ~appFolder/config/microsoft-graph.json
 ```

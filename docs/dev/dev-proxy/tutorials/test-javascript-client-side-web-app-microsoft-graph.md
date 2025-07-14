@@ -33,7 +33,7 @@ To follow this tutorial, you need:
 
 Dev Proxy comes with a preset configuration for testing apps that send requests to Microsoft Graph and SharePoint Online APIs.
 
-- Open a command prompt, enter `devproxy --config-file "~appFolder/presets/m365.json"` and press <kbd>Enter</kbd> to start Dev Proxy with configuration for Microsoft 365.
+- Open a command prompt, enter `devproxy --config-file "~appFolder/config/m365.json"` and press <kbd>Enter</kbd> to start Dev Proxy with configuration for Microsoft 365.
 
 ## Launch the sample app
 

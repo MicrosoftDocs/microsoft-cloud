@@ -19,7 +19,7 @@ By default, Dev Proxy uses the llama3.2 language model running on Ollama. To use
 ## Configure Dev Proxy to simulate Azure OpenAI API responses
 
 > [!TIP]
-> Steps described in this tutorial are available in a ready-to-use Dev Proxy preset. To use the preset, in command line, run `devproxy preset get simulate-azure-openai`, and follow the instructions.
+> Steps described in this tutorial are available in a ready-to-use Dev Proxy preset. To use the preset, in command line, run `devproxy config get simulate-azure-openai`, and follow the instructions.
 
 To simulate Azure OpenAI API responses using Dev Proxy, you need to enable the `OpenAIMockResponsePlugin` in the `devproxyrc.json` file.
 
@@ -83,7 +83,7 @@ The complete configuration file looks like this.
 
 Assuming the default configuration, start Ollama with the llama3.2 language model. In the command line, run `ollama run llama3.2`.
 
-Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/presets/simulate-azure-openai/simulate-azure-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate Azure OpenAI API responses.
+Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/config/simulate-azure-openai/simulate-azure-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate Azure OpenAI API responses.
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...

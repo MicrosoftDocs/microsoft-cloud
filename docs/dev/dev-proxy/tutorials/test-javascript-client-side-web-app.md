@@ -23,7 +23,7 @@ To follow this tutorial, you need:
 Download the [sample app](https://pnp.github.io/download-partial/?url=https://github.com/pnp/proxy-samples/tree/main/samples/demo-randomerror-js).
 
 > [!TIP]
-> You can also download the sample app by running in the command prompt `devproxy preset get demo-randomerror-js`.
+> You can also download the sample app by running in the command prompt `devproxy config get demo-randomerror-js`.
 
 The sample app comes with a Dev Proxy preset. The preset is configured to simulate random errors on API requests issued by the app. The preset also includes the [`RetryAfterPlugin`](../technical-reference/retryafterplugin.md), which helps you control if the app backs off from calling API after it's throttled.
 
