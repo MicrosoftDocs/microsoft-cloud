@@ -3,7 +3,7 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 07/14/2025
 ---
 
 # Mock nth request

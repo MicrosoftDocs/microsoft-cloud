@@ -3,7 +3,7 @@ title: Simulate Azure OpenAI API
 description: How to simulate Azure OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/15/2025
+ms.date: 07/14/2025
 ---
 
 # Simulate Azure OpenAI API

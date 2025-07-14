@@ -3,7 +3,7 @@ title: Test a JavaScript client-side web application
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 07/14/2025
 ---
 
 # Test a JavaScript client-side web application

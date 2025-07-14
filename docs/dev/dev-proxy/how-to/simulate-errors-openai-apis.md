@@ -3,7 +3,7 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 07/14/2025
 ---
 
 # Simulate errors from OpenAI APIs

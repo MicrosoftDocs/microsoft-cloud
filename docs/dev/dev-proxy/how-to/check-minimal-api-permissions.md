@@ -3,7 +3,7 @@ title: How to check if my app is calling APIs with minimal permissions
 description: How to check if my app is calling APIs with minimal permissions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 07/14/2025
 ---
 
 # How to check if my app is calling APIs with minimal permissions

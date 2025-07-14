@@ -3,7 +3,7 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 07/14/2025
 ---
 
 # Resolve relative paths

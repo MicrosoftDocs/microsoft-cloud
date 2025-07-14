@@ -3,7 +3,7 @@ title: Simulate OpenAI API
 description: How to simulate OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/15/2025
+ms.date: 07/14/2025
 ---
 
 # Simulate OpenAI API
