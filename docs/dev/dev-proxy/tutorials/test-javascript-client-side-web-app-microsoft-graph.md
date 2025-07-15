@@ -3,7 +3,7 @@ title: Test a JavaScript client-side web application that calls Microsoft Graph
 description: Learn how to use Dev Proxy with a sample JavaScript client-side web application that calls Microsoft Graph.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 07/14/2025
 ---
 
 # Test a JavaScript client-side web application that calls Microsoft Graph
@@ -33,7 +33,7 @@ To follow this tutorial, you need:
 
 Dev Proxy comes with a preset configuration for testing apps that send requests to Microsoft Graph and SharePoint Online APIs.
 
-- Open a command prompt, enter `devproxy --config-file "~appFolder/presets/m365.json"` and press <kbd>Enter</kbd> to start Dev Proxy with configuration for Microsoft 365.
+- Open a command prompt, enter `devproxy --config-file "~appFolder/config/m365.json"` and press <kbd>Enter</kbd> to start Dev Proxy with configuration for Microsoft 365.
 
 ## Launch the sample app
 
