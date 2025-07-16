@@ -75,7 +75,7 @@ To install and start Dev Proxy, use the `setup` action. To start in recording mo
 
 To interact with your application and trigger requests that Dev Proxy can record, use an end-to-end testing framework like [Playwright](https://playwright.dev/). The setup action automatically sets the `http_proxy` and `https_proxy` environment variables, which route requests through Dev Proxy.
 
-```yml
+```yaml
 - name: Setup Dev Proxy
   uses: dev-proxy-tools/actions/setup@v1
   with:
@@ -91,7 +91,6 @@ To interact with your application and trigger requests that Dev Proxy can record
 If you're using Chromium-based browsers on Linux runners to generate requests for Dev Proxy to record, you need to install the Dev Proxy certificate to avoid SSL errors. To install the certificate, use the `chromium-cert` action.
 
 ```yaml
-
 - name: Setup Dev Proxy
   uses: dev-proxy-tools/actions/setup@v1
   with:
