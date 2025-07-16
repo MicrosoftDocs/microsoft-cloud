@@ -71,7 +71,7 @@ To install and start Dev Proxy, use the `setup` action. To start in recording mo
     report-job-summary: $GITHUB_STEP_SUMMARY
 ```
 
-## Generate requests to record
+## Trigger requests to record
 
 To interact with your application and trigger requests that Dev Proxy can record, use an end-to-end testing framework like [Playwright](https://playwright.dev/). The setup action automatically sets the `http_proxy` and `https_proxy` environment variables, which route requests through Dev Proxy.
 
