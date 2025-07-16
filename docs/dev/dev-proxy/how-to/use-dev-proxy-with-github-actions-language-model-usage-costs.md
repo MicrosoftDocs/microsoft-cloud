@@ -10,13 +10,16 @@ ms.date: 07/15/2025
 
 To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
+> [!NOTE]
+> This functionality is currently in preview and only available in the latest beta version of Dev Proxy.
+
 ## Configure Dev Proxy for tracking language model usage
 
 To track language model usage, configure a Dev Proxy configuration file in your project with the [OpenAITelemetryPlugin](../technical-reference/openaitelemetryplugin.md). To generate a report with the total costs and usage details, include the [MarkdownReporter](../technical-reference/markdownreporter.md) plugin. Include the URL of the OpenAI compatible API that you want to track in the `urlsToWatch` section of the configuration file.
 
-```jsonc
+```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/devproxyrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/devproxyrc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -29,29 +32,49 @@ To track language model usage, configure a Dev Proxy configuration file in your 
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
+  {
+    "urlsToWatch": [
+      "https://*.openai.azure.com/*"
+    ]
+  }
+}
+```
+
+## Track requests to OpenAI compatible APIs
+
+To track requests from any OpenAI compatible API, add the URLs used in your requests to the `urlsToWatch` section of the Dev Proxy configuration file.
+
+```json
+{
   "urlsToWatch": [
-    // Azure OpenAI
-    "https://*.openai.azure.com/*",
-    // OpenAI
-    "https://api.openai.com/*",
-    // GitHub Models
-    "https://models.github.com/*"
+    "https://*.openai.azure.com/*"
   ]
 }
 ```
+
+The following table lists some popular OpenAI compatible APIs that you can track with Dev Proxy:
+
+| Provider | URL to watch | Description |
+|--------------|----------|-------------|
+| Anthropic | `https://api.anthropic.com/*` | Claude language models |
+| GitHub | `https://models.github.com/*` | GitHub Models API |
+| Microsoft | `https://*.openai.azure.com/*` | Microsoft Azure OpenAI Service API |
+| OpenAI | `https://api.openai.com/*` | GPT language models  |
+| x.ai | `https://api.x.ai/*` | Grok language models|
 
 ## Configure OpenAITelemetryPlugin to track language model usage costs
 
 To track language model usage costs, add a config section for the OpenAITelemetryPlugin. Set the `includeCosts` property to `true` to enable cost tracking. Specify the path to a JSON file with the model prices in the `pricesFile` property.
 
-```jsonc
+```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/devproxyrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/devproxyrc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "openAITelemetryPlugin"
     },
     {
       "name": "MarkdownReporter",
@@ -59,28 +82,22 @@ To track language model usage costs, add a config section for the OpenAITelemetr
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
   ],
-  {
-    "openAITelemetryPlugin": {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
-      "includeCosts": true,
-      "pricesFile": "prices.json"
+  "openAITelemetryPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
+    "includeCosts": true,
+    "pricesFile": "prices.json"
   },
   "urlsToWatch": [
-    // Azure OpenAI
-    "https://*.openai.azure.com/*",
-    // OpenAI
-    "https://api.openai.com/*",
-    // GitHub Models
-    "https://models.github.com/*"
+    "https://*.openai.azure.com/*"
   ]
 }
 ```
 
-Create a prices file with the input and output costs (price per million tokens), for the models you use. The model name in the prices file should match the model name returned in the API responses.
+Create a prices file with the input and output costs (price per million tokens), for the models you use. The model name in the prices file must match the model name returned in the API responses for costs to be calculated correctly.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.pricesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.pricesfile.schema.json",
   "prices": {
     "gpt-4": {
       "input": 0.03,
@@ -97,7 +114,7 @@ To change the currency used in the usage report costs, set the `currency` proper
 ```json
 {
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
     "includeCosts": true,
     "pricesFile": "prices.json",
     "currency": "EUR"
@@ -112,7 +129,7 @@ By default, the format used to create the report heading of `LLM usage report fo
 ```json
 {
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
     "application": "My application",
     "environment": "Staging"
   }
@@ -129,6 +146,7 @@ To install and start Dev Proxy, use the `setup` action. To start in recording mo
   with:
     auto-record: true
     report-job-summary: $GITHUB_STEP_SUMMARY
+    version: v1.0.0-beta.6
 ```
 
 ## Trigger requests to record
