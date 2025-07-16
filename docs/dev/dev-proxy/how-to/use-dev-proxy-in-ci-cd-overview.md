@@ -10,7 +10,6 @@ ms.date: 07/09/2025
 
 Using Dev Proxy in CI/CD scenarios is a great way to test your applications in a controlled environment. When you combine Dev Proxy with tests that generate API requests in your application, you can cover a wide range of scenarios: from ensuring that your app doesn't use shadow- or nonproduction APIs to checking that it uses minimal Microsoft Graph permissions. While the exact configuration steps vary depending on your CI/CD system, here are some general principles that you should follow.
 
-
 In most cases, your runner doesn't have Dev Proxy installed. So before you can use Dev Proxy, you need to install it. The [installation steps](../get-started/set-up.md#install-dev-proxy) depend on the operating system that your runner uses.
 
 > [!TIP]
