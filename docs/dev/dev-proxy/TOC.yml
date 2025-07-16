@@ -149,7 +149,7 @@
           - name: With GitHub Actions
             href: how-to/use-dev-proxy-with-github-actions.md
           - name: Track language model usage with GitHub Actions
-            href: how-to/track-language-model-usage-github-actions.md
+            href: how-to/use-dev-proxy-with-github-actions-language-model-usage.md
     - name: Common problems
       items:
       - name: Dev Proxy doesn't intercept requests

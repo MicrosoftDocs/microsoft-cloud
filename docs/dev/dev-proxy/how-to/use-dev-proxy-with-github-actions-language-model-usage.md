@@ -1,12 +1,12 @@
 ---
-title: How to use Dev Proxy to track language model usage in GitHub Actions workflows
-description: Use Dev Proxy Actions to monitor language model usage and costs in your GitHub workflows
+title: How to use Dev Proxy to track language model usage with GitHub Actions
+description: Use Dev Proxy Actions to track language model usage and costs in GitHub Action workflows.
 author: garrytrinder
 ms.author: wmastyka
 ms.date: 07/15/2025
 ---
 
-# How to use Dev Proxy to track language model usage in GitHub Actions workflows
+# How to use Dev Proxy to track language model usage with GitHub Actions
 
 To integrate Dev Proxy into your GitHub workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
@@ -59,7 +59,7 @@ Create a prices file with the input and output costs for the models you use. The
 }
 ```
 
-## Set up Dev Proxy in your GitHub Actions workflow
+## Set up Dev Proxy in the GitHub Actions workflow
 
 To install and start Dev Proxy, use the `setup` action. To start in recording mode to capture requests for the OpenAITelemetryPlugin to process, set `auto-record` input to `true`. To include the usage report in the workflow job summary, pass the `$GITHUB_STEP_SUMMARY` variable to the `report-job-summary` input.
 
@@ -86,11 +86,11 @@ If you're using Chromium-based browsers on Linux runners to generate requests fo
 
 ## Upload the usage report to artifacts
 
-To stop Dev Proxy manually, use the `stop` action. To upload the usage report as an artifact, use the `actions/upload-artifact` action.
+To stop Dev Proxy manually to generate the usage report, use the `stop` action. To upload the usage report as an artifact, use the `actions/upload-artifact` action.
 
 ```yaml
       - name: Stop recording
-        uses: dev-proxy-tools/actions/record-stop@v1
+        uses: dev-proxy-tools/actions/stop@v1
 
       - name: Upload Dev Proxy reports
         uses: actions/upload-artifact@v4
