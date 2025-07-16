@@ -8,118 +8,102 @@ ms.date: 07/09/2025
 
 # Use Dev Proxy with GitHub Actions
 
-Using Dev Proxy with GitHub Actions is a great way to test your applications in a controlled environment. We [published a collection of GitHub Actions](https://github.com/marketplace/actions/dev-proxy-actions), which makes it easy to integrate Dev Proxy into your GitHub Action workflows.
+To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
-> [!IMPORTANT]
-> Dev Proxy Actions support Linux based runners only.
+## Set up Dev Proxy in your GitHub Actions workflow
 
-## Install Dev Proxy
-
-Start by installing Dev Proxy on the runner using the `dev-proxy-tools/actions/install` action.
+To install and start Dev Proxy, use the `setup` action.
 
 ```yaml
-- name: Install Dev Proxy
-  uses: dev-proxy-tools/actions/install@v1
+- name: Setup Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
 ```
 
-By default, this action installs the latest version of Dev Proxy. If you want to install a specific version, you can specify it using the `version` input:
+## Install and start Dev Proxy in recording mode
 
-```yaml
-- name: Install Dev Proxy
-  uses: dev-proxy-tools/actions/install@v1
-  with:
-    version: v0.29.2
-```
-
-A recommended practice is to cache the Dev Proxy installation files to speed up subsequent runs. You can use the `actions/cache` action for this purpose. Here's how you can do it:
-
-```yaml
-- name: Cache Dev Proxy
-  id: cache-devproxy
-  uses: actions/cache@v4
-  with:
-    path: ./devproxy
-    key: devproxy-linux-v0.29.2
-
-- name: Install Dev Proxy
-  if: steps.cache-devproxy.outputs.cache-hit != 'true'
-  uses: dev-proxy-tools/actions/install@v1
-  with:
-    version: v0.29.2
-```
-
-## Start Dev Proxy
-
-After installing Dev Proxy, you can start Dev Proxy in the background using the `dev-proxy-tools/actions/start` action.
-
-```yaml
-- name: Start Dev Proxy
-  uses: dev-proxy-tools/actions/start@v1
-```
-
-By default, the action will:
-
-- Start Dev Proxy with the default configuration file
-- Output logs to `devproxy.log`
-- Install and trust Dev Proxy's root certificate on the runner
-- Set `https_proxy` and `http_proxy` environment variables to `http://127.0.0.1:8080` to route requests through Dev Proxy
-- Registers a workflow post step to stop Dev Proxy and clear the `https_proxy` and `http_proxy` environment variables at the end of the workflow
-
-You can customize the action by providing a path to a configuration file, a log file, and set whether you want to register the post step to stop Dev Proxy automatically. Here's an example:
+To start Dev Proxy in recording mode, set the `auto-record` input to `true`. This configuration allows Dev Proxy to capture requests and responses for further processing.
 
 ```yaml
 - name: Start Dev Proxy
   uses: dev-proxy-tools/actions/start@v1
   with:
-    config-file: /path/to/your/config.json
-    log-file: /path/to/your/logfile.log
+    auto-record: true
+```
+
+## Install and start Dev Proxy using a specific configuration file
+
+By default, the default Dev Proxy configuration file is used, `devproxyrc.json`. To use a specific Dev Proxy configuration file, set the `config-file` input to the path of your configuration file.
+
+```yaml
+- name: Start Dev Proxy with config
+  uses: dev-proxy-tools/actions/start@v1
+  with:
+    config-file: .devproxy/my-config.json
+```
+
+## Install and start Dev Proxy with a custom log file
+
+By default, Dev Proxy output is logged to devproxy.log file in the working directory. To specify a custom log file, set the `log-file` input.
+
+```yaml
+- name: Start Dev Proxy with custom log file
+  uses: dev-proxy-tools/actions/start@v1
+  with:
+    log-file: .devproxy/custom-devproxy.log
+```
+
+## Install a specific version of Dev Proxy
+
+By default, the `setup` action installs the latest version of Dev Proxy. If you want to install a specific version, you can specify the `version` input.
+
+```yaml
+- name: Setup Dev Proxy with specific version
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    version: 0.29.2
+```
+
+## Install Dev Proxy only
+
+To install Dev Proxy without starting it, set the `auto-start` input to `false`.
+
+```yaml
+- name: Install Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    auto-start: false
+```
+
+## Start Dev Proxy manually
+
+To start Dev Proxy manually after installation, use the `start` action.
+
+```yaml
+- name: Start Dev Proxy manually
+  uses: dev-proxy-tools/actions/start@v1
+```
+
+The `start` action behaves similarly to the `setup` action, but it can't be used to install Dev Proxy. It shares the same inputs (except for `version`) and outputs as the `setup` action.
+
+## Disable automatic stopping of Dev Proxy
+
+By default, the `setup` and `start` actions stop Dev Proxy automatically after the job complete. To disable the automatic stopping of Dev Proxy after the job completes, set the `auto-stop` input to `false`.
+
+```yaml
+- name: Setup Dev Proxy without auto-stop
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
     auto-stop: false
 ```
 
-## Stop Dev Proxy
+## Stop Dev Proxy manually
 
-To stop Dev Proxy manually, you can use the `dev-proxy-tools/actions/stop` action. This action stops the Dev Proxy process and clears the `https_proxy` and `http_proxy` environment variables. It's useful if you want to run some steps without Dev Proxy running, or if you want to stop it before the end of the workflow.
+If you want to stop Dev Proxy manually, use the `stop` action. This action is useful if you want to generate reports and upload them as artifacts, or run Dev Proxy with a different configuration.
 
 ```yaml
-- name: Stop Dev Proxy
+- name: Stop Dev Proxy manually
   uses: dev-proxy-tools/actions/stop@v1
-```
 
-## Recording
-
-Recording mode is a powerful feature of Dev Proxy that allows you to capture Dev Proxy activity. Plugins that can generate reports require recording mode to be enabled.
-
-To start recording, you can use the `dev-proxy-tools/actions/record-start` action.
-
-```yaml
-- name: Start recording
-  uses: dev-proxy-tools/actions/record-start@v1
-```
-
-To stop recording, you can use the `dev-proxy-tools/actions/record-stop` action.
-
-```yaml
-- name: Stop recording
-  uses: dev-proxy-tools/actions/record-stop@v1
-```
-
-## Upload Dev Proxy logs as artifacts
-
-At the end of your workflow, you might want to upload the Dev Proxy logs as artifacts. Use the `actions/upload-artifact` action to upload the logs.
-
-```yaml
-- name: Upload Dev Proxy logs
-  uses: actions/upload-artifact@v4
-  with:
-    name: /path/to/your/logfile.log
-    path: /path/to/your/logfile.log
-```
-
-## Upload Dev Proxy reports
-
-If you're using plugins that can generate reports, you can upload the generated reports as artifacts.
-
-```yaml
 - name: Upload Dev Proxy reports
   uses: actions/upload-artifact@v4
   with:
@@ -127,59 +111,46 @@ If you're using plugins that can generate reports, you can upload the generated 
     path: ./*Reporter*
 ```
 
-## Write job summary
+## Start recording manually
 
-To make it easier to understand the results of your workflow, you can write a summary at the end of your job. Typically, you use the `MarkdownReporter` for generating job summaries, because it produces output in Markdown format:
+To start recording manually, use the `start` action with the `auto-record` input set to `true`.
 
 ```yaml
-- name: Write summary
-  run: |
-    cat YourPlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
+- name: Start Dev Proxy in recording mode
+  uses: dev-proxy-tools/actions/record-start@v1
 ```
 
-## Example workflow
+## Stop recording manually
 
-Here's an example of how to use Dev Proxy Actions in a GitHub Actions workflow.
+To stop recording manually, use the `record-stop` action.
 
 ```yaml
-name: Example Dev Proxy workflow
-on:
-  workflow_dispatch:
+- name: Stop recording
+  uses: dev-proxy-tools/actions/record-stop@v1
+```
 
-jobs:
-  example-dev-proxy:
-    name: Test Dev Proxy Actions
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Dev Proxy
-        id: install-latest
-        uses: dev-proxy-tools/actions/install@v1
+## Get the URL of the running Dev Proxy instance
 
-      - name: Start Dev Proxy
-        id: start-devproxy
-        uses: dev-proxy-tools/actions/start@v1
-        with:
-          auto-stop: false
+To get the URL of the running Dev Proxy instance, use the `proxy-url` output from the `setup` or `start` action. Use `steps.<step_id>.outputs.proxy-url` syntax, where `<step_id>` is the ID of the step that runs the action.
 
-      - name: Start recording
-        id: start-recording
-        uses: dev-proxy-tools/actions/record-start@v1
+```yaml
+- name: Setup Dev Proxy
+  id: setup-devproxy
+  uses: dev-proxy-tools/actions/setup@v1
 
-      - name: Send request
-        id: send-request
-        run: |
-          curl -ikx http://127.0.0.1:8000 https://jsonplaceholder.typicode.com/posts
+- name: Get Dev Proxy URL
+  run: echo "Dev Proxy URL: ${{ steps.setup-devproxy.outputs.proxy-url }}"
+```
 
-      - name: Stop recording
-        id: stop-recording
-        uses: dev-proxy-tools/actions/record-stop@v1
+## Get the URL of the Dev Proxy API
 
-      - name: Stop Dev Proxy
-        id: stop
-        uses: dev-proxy-tools/actions/stop@v1
+To get the URL of the Dev Proxy API, use the `api-url` output from the `setup` or `start` action. Use `steps.<step_id>.outputs.api-url` syntax, where `<step_id>` is the ID of the step that runs the action.
 
-      - name: Show logs
-        run: |
-          echo "Dev Proxy logs:"
-          cat devproxy.log
+```yaml
+- name: Setup Dev Proxy
+  id: setup-devproxy
+  uses: dev-proxy-tools/actions/setup@v1
+
+- name: Get Dev Proxy API URL
+  run: echo "Dev Proxy API URL: ${{ steps.setup-devproxy.outputs.api-url }}"
 ```

@@ -1,14 +1,14 @@
 ---
-title: How to use Dev Proxy to track language model usage with GitHub Actions
-description: Use Dev Proxy Actions to track language model usage and costs in GitHub Action workflows.
+title: How to use Dev Proxy to track language model usage and costs with GitHub Action workflows.
+description: How to use Dev Proxy Actions to track language model usage and costs with GitHub Action workflows.
 author: garrytrinder
 ms.author: wmastyka
 ms.date: 07/15/2025
 ---
 
-# How to use Dev Proxy to track language model usage with GitHub Actions
+# How to use Dev Proxy to track language model usage and costs with GitHub Actions
 
-To integrate Dev Proxy into your GitHub workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
+To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
 ## Configure Dev Proxy for tracking language model usage
 
@@ -64,37 +64,58 @@ Create a prices file with the input and output costs for the models you use. The
 To install and start Dev Proxy, use the `setup` action. To start in recording mode to capture requests for the OpenAITelemetryPlugin to process, set `auto-record` input to `true`. To include the usage report in the workflow job summary, pass the `$GITHUB_STEP_SUMMARY` variable to the `report-job-summary` input.
 
 ```yaml
-      - name: Setup Dev Proxy
-        uses: dev-proxy-tools/actions/setup@v1
-        with:
-          auto-record: true
-          report-job-summary: $GITHUB_STEP_SUMMARY
+- name: Setup Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    auto-record: true
+    report-job-summary: $GITHUB_STEP_SUMMARY
 ```
 
 ## Generate requests to record
 
 To interact with your application and trigger requests that Dev Proxy can record, use an end-to-end testing framework like [Playwright](https://playwright.dev/). The setup action automatically sets the `http_proxy` and `https_proxy` environment variables, which route requests through Dev Proxy.
 
+```yml
+- name: Setup Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    auto-record: true
+    report-job-summary: $GITHUB_STEP_SUMMARY
+
+- name: Run Playwright tests
+  run: npx playwright test
+```
+
 ## Install Dev Proxy certificate in Chromium browsers
 
 If you're using Chromium-based browsers on Linux runners to generate requests for Dev Proxy to record, you need to install the Dev Proxy certificate to avoid SSL errors. To install the certificate, use the `chromium-cert` action.
 
 ```yaml
-      - name: Install Dev Proxy certificate for Chromium browsers
-        uses: dev-proxy-tools/actions/chromium-cert@v1
+
+- name: Setup Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    auto-record: true
+    report-job-summary: $GITHUB_STEP_SUMMARY
+
+- name: Install Dev Proxy certificate for Chromium browsers
+  uses: dev-proxy-tools/actions/chromium-cert@v1
+
+- name: Run Playwright tests
+  run: npx playwright test
 ```
 
 ## Upload the usage report to artifacts
 
-To stop Dev Proxy manually to generate the usage report, use the `stop` action. To upload the usage report as an artifact, use the `actions/upload-artifact` action.
+To generate the usage report, use the `stop` action to manually stop Dev Proxy in your workflow. To upload the usage report as an artifact, use the `actions/upload-artifact` action.
 
 ```yaml
-      - name: Stop recording
-        uses: dev-proxy-tools/actions/stop@v1
+- name: Stop recording
+  uses: dev-proxy-tools/actions/stop@v1
 
-      - name: Upload Dev Proxy reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: Reports
-          path: ./*Reporter*
+- name: Upload Dev Proxy reports
+  uses: actions/upload-artifact@v4
+  with:
+    name: Reports
+    path: ./*Reporter*
 ```
