@@ -12,17 +12,16 @@ To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Action
 
 ## Configure Dev Proxy for tracking language model usage
 
-To track language model usage and costs, configure a Dev Proxy configuration file in your project with the [OpenAITelemetryPlugin](../technical-reference/openaitelemetryplugin.md). To generate a report with the total costs and usage details, include the [MarkdownReporter](../technical-reference/markdownreporter.md) plugin.
+To track language model usage, configure a Dev Proxy configuration file in your project with the [OpenAITelemetryPlugin](../technical-reference/openaitelemetryplugin.md). To generate a report with the total costs and usage details, include the [MarkdownReporter](../technical-reference/markdownreporter.md) plugin. Include the URL of the OpenAI compatible API that you want to track in the `urlsToWatch` section of the configuration file.
 
-```json
+```jsonc
 {
   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/devproxyrc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "openAITelemetryPlugin"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     },
     {
       "name": "MarkdownReporter",
@@ -31,21 +30,53 @@ To track language model usage and costs, configure a Dev Proxy configuration fil
     }
   ],
   "urlsToWatch": [
+    // Azure OpenAI
     "https://*.openai.azure.com/*",
+    // OpenAI
     "https://api.openai.com/*",
+    // GitHub Models
     "https://models.github.com/*"
-  ],
-  "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
-    "application": "My app",
-    "currency": "USD",
-    "includeCosts": true,
-    "pricesFile": "prices.json"
-  }
+  ]
 }
 ```
 
-Create a prices file with the input and output costs for the models you use. The model name in the prices file should match the model name returned in the API responses.
+## Configure OpenAITelemetryPlugin to track language model usage costs
+
+To track language model usage costs, add a config section for the OpenAITelemetryPlugin. Set the `includeCosts` property to `true` to enable cost tracking. Specify the path to a JSON file with the model prices in the `pricesFile` property.
+
+```jsonc
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/devproxyrc.schema.json",
+  "plugins": [
+    {
+      "name": "OpenAITelemetryPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    },
+    {
+      "name": "MarkdownReporter",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    },
+  ],
+  {
+    "openAITelemetryPlugin": {
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
+      "includeCosts": true,
+      "pricesFile": "prices.json"
+  },
+  "urlsToWatch": [
+    // Azure OpenAI
+    "https://*.openai.azure.com/*",
+    // OpenAI
+    "https://api.openai.com/*",
+    // GitHub Models
+    "https://models.github.com/*"
+  ]
+}
+```
+
+Create a prices file with the input and output costs (price per million tokens), for the models you use. The model name in the prices file should match the model name returned in the API responses.
 
 ```json
 {
@@ -55,6 +86,35 @@ Create a prices file with the input and output costs for the models you use. The
       "input": 0.03,
       "output": 0.06
     }
+  }
+}
+```
+
+## Change the currency used in the usage report costs
+
+To change the currency used in the usage report costs, set the `currency` property in the OpenAITelemetryPlugin configuration. The default value is `USD`.
+
+```json
+{
+  "openAITelemetryPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
+    "includeCosts": true,
+    "pricesFile": "prices.json",
+    "currency": "EUR"
+  }
+}
+```
+
+## Change the name and environment in the usage report heading
+
+By default, the format usedd to create the report heading of `LLM usage report for <application> in <environment>`. To change the name and environment values, set the `application` and `environment` properties in the OpenAITelemetryPlugin configuration. The default values are `default` and `development`, respectively.
+
+```json
+{
+  "openAITelemetryPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/openaitelemetryplugin.schema.json",
+    "application": "My application",
+    "environment": "Staging"
   }
 }
 ```
