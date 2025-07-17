@@ -122,7 +122,7 @@ To change the currency used in the usage report costs, set the `currency` proper
 }
 ```
 
-## Change the name and environment in the usage report heading
+## Change the the usage report heading
 
 By default, the format used to create the report heading of `LLM usage report for <application> in <environment>`. To change the name and environment values, set the `application` and `environment` properties in the OpenAITelemetryPlugin configuration. The default values are `default` and `development`, respectively.
 
