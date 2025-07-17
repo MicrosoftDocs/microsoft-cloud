@@ -150,6 +150,8 @@
             href: how-to/use-dev-proxy-with-azure-pipelines.md
           - name: With GitHub Actions
             href: how-to/use-dev-proxy-with-github-actions.md
+          - name: Track language model usage and costs with GitHub Actions
+            href: how-to/use-dev-proxy-with-github-actions-language-model-usage-costs.md
     - name: Common problems
       items:
       - name: Dev Proxy doesn't intercept requests
