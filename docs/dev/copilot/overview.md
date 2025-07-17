@@ -4,6 +4,7 @@ description: Learn how you can adopt, extend and build Copilot experiences.
 author: DanWahlin
 ms.author: donasa
 ms.date: 7/12/2024
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 ms.collection: ce-advocates-ai-copilot
