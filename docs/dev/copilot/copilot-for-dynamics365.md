@@ -4,6 +4,7 @@ description: Learn about Copilot features for Dynamics 365
 author: scottdurow
 ms.author: DanWahlin
 ms.date: 7/12/2024
+ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.service: microsoft-cloud-for-developers
 ms.collection: ce-advocates-ai-copilot
