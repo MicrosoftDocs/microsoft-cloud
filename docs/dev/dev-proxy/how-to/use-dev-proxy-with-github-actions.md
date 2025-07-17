@@ -3,59 +3,107 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 06/25/2024
+ms.date: 07/09/2025
 ---
 
 # Use Dev Proxy with GitHub Actions
 
-Using Dev Proxy with GitHub Actions is a great way to test your applications in a controlled environment. If you want to use Dev Proxy with your GitHub Actions workflow, you need to include a couple of steps in your workflow file to be able to trust the Dev Proxy certificate.
+To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
-> [!NOTE]
-> In this example, we will make use of an Ubuntu runner for GitHub Actions.
+## Set up Dev Proxy in your GitHub Actions workflow
 
-## Install Dev Proxy and cache it
-
-Start, by installing Dev Proxy on the runner, but do it only if it isn't already installed. To install and cache Dev Proxy, add the following steps to your workflow file:
+To install and start Dev Proxy, use the `setup` action.
 
 ```yaml
-- name: Cache Dev Proxy
-  id: cache-devproxy
-  uses: actions/cache@v4
-  with:
-    path: ./devproxy
-    key: devproxy-linux-v0.29.2
+- name: Setup Dev Proxy
+  uses: dev-proxy-tools/actions/setup@v1
+```
 
+## Install and start Dev Proxy in recording mode
+
+To start Dev Proxy in recording mode, set the `auto-record` input to `true`. This configuration allows Dev Proxy to capture requests and responses for further processing.
+
+```yaml
+- name: Start Dev Proxy
+  uses: dev-proxy-tools/actions/start@v1
+  with:
+    auto-record: true
+```
+
+## Install and start Dev Proxy using a specific configuration file
+
+By default, the default Dev Proxy configuration file is used, `devproxyrc.json`. To use a specific Dev Proxy configuration file, set the `config-file` input to the path of your configuration file.
+
+```yaml
+- name: Start Dev Proxy with config
+  uses: dev-proxy-tools/actions/start@v1
+  with:
+    config-file: .devproxy/my-config.json
+```
+
+## Install and start Dev Proxy with a custom log file
+
+By default, Dev Proxy output is logged to devproxy.log file in the working directory. To specify a custom log file, set the `log-file` input.
+
+```yaml
+- name: Start Dev Proxy with custom log file
+  uses: dev-proxy-tools/actions/start@v1
+  with:
+    log-file: .devproxy/custom-devproxy.log
+```
+
+## Install a specific version of Dev Proxy
+
+By default, the `setup` action installs the latest version of Dev Proxy. If you want to install a specific version, you can specify the `version` input.
+
+```yaml
+- name: Setup Dev Proxy with specific version
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    version: 0.29.2
+```
+
+## Install Dev Proxy only
+
+To install Dev Proxy without starting it, set the `auto-start` input to `false`.
+
+```yaml
 - name: Install Dev Proxy
-  if: steps.cache-devproxy.outputs.cache-hit != 'true'
-  run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.29.2
-```
-
-## Run the Dev Proxy
-
-When you run Dev Proxy in a CI/CD pipeline, you need to [start it from a script](./use-dev-proxy-in-ci-cd-overview.md), so that you can close it gracefully. When you have your script ready, invoke it in your workflow file:
-
-```yaml
-- name: Run Dev Proxy
-  run: /bin/bash run-dev-proxy.sh
-```
-
-## Upload Dev Proxy logs as artifacts
-
-When you run Dev Proxy in a CI/CD pipeline, you might want to analyze the logs later. To keep Dev Proxy logs, you can upload them as artifacts:
-
-```yaml
-- name: Upload Dev Proxy logs
-  uses: actions/upload-artifact@v4
+  uses: dev-proxy-tools/actions/setup@v1
   with:
-    name: ${{ env.LOG_FILE }}
-    path: ${{ env.LOG_FILE }}
+    auto-start: false
 ```
 
-## Upload Dev Proxy reports
+## Start Dev Proxy manually
 
-If you're using Dev Proxy to analyze the requests, you might want to upload the reports as artifacts as well:
+To start Dev Proxy manually after installation, use the `start` action.
 
 ```yaml
+- name: Start Dev Proxy manually
+  uses: dev-proxy-tools/actions/start@v1
+```
+
+The `start` action behaves similarly to the `setup` action, but it can't be used to install Dev Proxy. It shares the same inputs (except for `version`) and outputs as the `setup` action.
+
+## Disable automatic stopping of Dev Proxy
+
+By default, the `setup` and `start` actions stop Dev Proxy automatically after the job complete. To disable the automatic stopping of Dev Proxy after the job completes, set the `auto-stop` input to `false`.
+
+```yaml
+- name: Setup Dev Proxy without auto-stop
+  uses: dev-proxy-tools/actions/setup@v1
+  with:
+    auto-stop: false
+```
+
+## Stop Dev Proxy manually
+
+If you want to stop Dev Proxy manually, use the `stop` action. This action is useful if you want to generate reports and upload them as artifacts, or run Dev Proxy with a different configuration.
+
+```yaml
+- name: Stop Dev Proxy manually
+  uses: dev-proxy-tools/actions/stop@v1
+
 - name: Upload Dev Proxy reports
   uses: actions/upload-artifact@v4
   with:
@@ -63,100 +111,46 @@ If you're using Dev Proxy to analyze the requests, you might want to upload the 
     path: ./*Reporter*
 ```
 
-## Write job summary
+## Start recording manually
 
-To make it easier to understand the results of your workflow, you can write a summary at the end of your job. Typically, you use the `MarkdownReporter` for generating job summaries, because it produces output in Markdown format:
+To start recording manually, use the `start` action with the `auto-record` input set to `true`.
 
 ```yaml
-- name: Write summary
-  run: |
-    cat YourPlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
+- name: Start Dev Proxy in recording mode
+  uses: dev-proxy-tools/actions/record-start@v1
 ```
 
-## Example workflow file
+## Stop recording manually
 
-Here's an example of a complete workflow file that uses Dev Proxy (based on an [example by [Elio Struyf](https://www.eliostruyf.com/playwright-microsoft-dev-proxy-github-actions/)):
+To stop recording manually, use the `record-stop` action.
 
 ```yaml
-name: Test app using Dev Proxy
+- name: Stop recording
+  uses: dev-proxy-tools/actions/record-stop@v1
+```
 
-on:
-  push:
-    branches:
-      - main
-      - dev
-  workflow_dispatch:
+## Get the URL of the running Dev Proxy instance
 
-jobs:
-  test:
-    name: Test app using Dev Proxy
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    env:
-      LOG_FILE: devproxy.log
-      DEVPROXY_VERSION: v0.29.2
-    steps:
-      - uses: actions/checkout@v4
+To get the URL of the running Dev Proxy instance, use the `proxy-url` output from the `setup` or `start` action. Use `steps.<step_id>.outputs.proxy-url` syntax, where `<step_id>` is the ID of the step that runs the action.
 
-      - uses: actions/setup-node@v4
-        with:
-          cache: "npm"
+```yaml
+- name: Setup Dev Proxy
+  id: setup-devproxy
+  uses: dev-proxy-tools/actions/setup@v1
 
-      - name: Install dependencies
-        run: npm ci
+- name: Get Dev Proxy URL
+  run: echo "Dev Proxy URL: ${{ steps.setup-devproxy.outputs.proxy-url }}"
+```
 
-      #################################
-      # Cache + install of Playwright #
-      #################################
-      - name: Store Playwright's Version
-        run: |
-          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
-          echo "Playwright's Version: $PLAYWRIGHT_VERSION"
-          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV          
+## Get the URL of the Dev Proxy API
 
-      - name: Cache Playwright Browsers for Playwright's Version
-        id: cache-playwright
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-ubuntu-${{ env.PLAYWRIGHT_VERSION }}
+To get the URL of the Dev Proxy API, use the `api-url` output from the `setup` or `start` action. Use `steps.<step_id>.outputs.api-url` syntax, where `<step_id>` is the ID of the step that runs the action.
 
-      - name: Install Playwright Browsers
-        if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps
+```yaml
+- name: Setup Dev Proxy
+  id: setup-devproxy
+  uses: dev-proxy-tools/actions/setup@v1
 
-      ################################
-      # Cache + install of Dev Proxy #
-      ################################
-      - name: Cache Dev Proxy
-        id: cache-devproxy
-        uses: actions/cache@v4
-        with:
-          path: ./devproxy
-          key: devproxy-ubuntu-${{ env.DEVPROXY_VERSION }}
-
-      - name: Install Dev Proxy
-        if: steps.cache-devproxy.outputs.cache-hit != 'true'
-        run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- ${{ env.DEVPROXY_VERSION }}
-
-      - name: Run Dev Proxy
-        run: /bin/bash run.sh
-
-      - name: Upload Dev Proxy logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.LOG_FILE }}
-          path: ${{ env.LOG_FILE }}
-
-      # only when using a reporting plugin with the Markdown reporter
-      - name: Upload Dev Proxy reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: Reports
-          path: ./*Reporter*
-      
-      # only when using a reporting plugin with the Markdown reporter
-      - name: Write summary
-        run: |
-          cat SomePlugin_MarkdownReporter.md >> $GITHUB_STEP_SUMMARY
+- name: Get Dev Proxy API URL
+  run: echo "Dev Proxy API URL: ${{ steps.setup-devproxy.outputs.api-url }}"
 ```

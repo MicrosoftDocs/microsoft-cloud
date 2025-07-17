@@ -3,7 +3,7 @@ title: Use Dev Proxy with Azure Pipelines
 description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/28/2024
+ms.date: 07/09/2025
 ---
 
 # Use Dev Proxy with Azure Pipelines
@@ -15,7 +15,21 @@ Using Dev Proxy with Azure Pipelines is a great way to test your applications in
 
 ## Install Dev Proxy and cache it
 
-Start, by installing Dev Proxy on the agent, but do it only if it isn't already installed. To install and cache Dev Proxy, add the following steps to your pipeline file:
+Start by installing Dev Proxy on the agent using a script task to install Dev Proxy.
+
+```yaml
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
+  displayName: 'Install Dev Proxy'
+```
+
+By default, this installs the latest version of Dev Proxy. If you want to install a specific version, you can specify it by passing a version at the end of the script:
+
+```yaml
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v0.29.2
+  displayName: 'Install Dev Proxy v0.29.2'
+```
+
+A recommended practice is to cache the Dev Proxy installation files to speed up subsequent runs. You can use the `Cache` task for this purpose. Here's how you can do it:
 
 ```yaml
 variables:
@@ -37,13 +51,23 @@ steps:
   condition: ne(variables.DEV_PROXY_CACHE_RESTORED, 'true')
 ```
 
-## Run the Dev Proxy
+## Start Dev Proxy
 
-When you run Dev Proxy in a CI/CD pipeline, you need to [start it from a script](./use-dev-proxy-in-ci-cd-overview.md), so that you can close it gracefully. When you have your script ready, invoke it in your pipeline file:
+When you start Dev Proxy in a CI/CD pipeline, you can [start it from a script](./use-dev-proxy-in-ci-cd-overview.md#example-start-script), or include the script inline. When you have your script ready, invoke it in your pipeline file:
 
 ```yaml
 - script: bash ./run.sh
-  displayName: 'Run Dev Proxy'
+  displayName: 'Start Dev Proxy'
+```
+
+## Control Dev Proxy
+
+To control Dev Proxy, you can use the [Dev Proxy API](../technical-reference/proxy-api.md). For example, to start recording requests, you can send a POST request to the `/proxy` endpoint:
+
+```yaml
+- script: |
+    curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
+  displayName: 'Start recording'
 ```
 
 ## Upload Dev Proxy logs as artifacts
@@ -81,7 +105,7 @@ If you're using Dev Proxy to analyze the requests, you might want to upload the 
 
 ## Example pipeline file
 
-Here's an example of a pipeline file that installs Dev Proxy, runs it, and uploads the logs and reports as artifacts:
+Here's a simple example of how to use Dev Proxy in an Azure Pipeline. This workflow installs Dev Proxy, starts it, sends a request through it using curl, and then shows the logs.
 
 ```yaml
 trigger:
@@ -92,80 +116,26 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- name: LOG_FILE
-  value: devproxy.log
 - name: DEV_PROXY_VERSION
   value: v0.29.2
-- name: DEV_PROXY_CACHE_RESTORED
-  value: 'false'
-- name: PLAYWRIGHT_CACHE_RESTORED
-  value: 'false'
 
 steps:
-
-- task: UseNode@1
-  inputs:
-    version: '20.x'
-  displayName: 'Install Node.js'
-
-- script: npm ci
-  displayName: 'Install dependencies'
-
-#################################
-# Cache + install of Playwright #
-#################################
-- script: |
-    PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
-    echo "Playwright's Version: $PLAYWRIGHT_VERSION"
-    echo "##vso[task.setvariable variable=PLAYWRIGHT_VERSION]$PLAYWRIGHT_VERSION"
-  displayName: Store Playwright's Version
-
-- task: Cache@2
-  inputs:
-    key: '"playwright-ubuntu-$(PLAYWRIGHT_VERSION)"'
-    path: '$(HOME)/.cache/ms-playwright'
-    cacheHitVar: PLAYWRIGHT_CACHE_RESTORED
-  displayName: Cache Playwright Browsers for Playwright's Version
-
-- script: npx playwright install --with-deps
-  condition: ne(variables['PLAYWRIGHT_CACHE_RESTORED'], 'true')
-  displayName: 'Install Playwright Browsers'
-
-################################
-# Cache + install of Dev Proxy #
-################################
-- task: Cache@2
-  inputs:
-    key: '"dev-proxy-$(DEV_PROXY_VERSION)"'
-    path: ./devproxy
-    cacheHitVar: DEV_PROXY_CACHE_RESTORED
-  displayName: Cache Dev Proxy
-
 - script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION
   displayName: 'Install Dev Proxy'
-  condition: ne(variables.DEV_PROXY_CACHE_RESTORED, 'true')
 
-- script: bash ./run.sh
-  displayName: 'Run Dev Proxy'
-
-- task: PublishPipelineArtifact@1
-  displayName: Upload Dev Proxy logs
-  inputs:
-    targetPath: $(LOG_FILE)
-    artifact: $(LOG_FILE)
+- script: bash ./start.sh
+  displayName: 'Start Dev Proxy'
 
 - script: |
-    mkdir -p $(Build.ArtifactStagingDirectory)/Reports
-    for file in *Reporter*; do
-      if [ -f "$file" ]; then
-        cp "$file" $(Build.ArtifactStagingDirectory)/Reports
-      fi
-    done
-  displayName: 'Copy reports to artifact directory'
+     curl -ikx http://127.0.0.1:8000 https://jsonplaceholder.typicode.com/posts
+  displayName: 'Send request'
 
-- task: PublishPipelineArtifact@1
-  displayName: Upload Dev Proxy reports
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)/Reports'
-    artifact: 'Reports'
+- script: |
+    curl -X POST http://localhost:8897/proxy/stop
+  displayName: 'Stop Dev Proxy'
+
+- script: |
+    echo "Dev Proxy logs:"
+    cat devproxy.log
+  displayName: 'Show Dev Proxy logs'
 ```
