@@ -2,8 +2,8 @@
 title: How to use Dev Proxy to track language model usage and costs with GitHub Action workflows
 description: How to use Dev Proxy Actions to track language model usage and costs with GitHub Action workflows.
 author: garrytrinder
-ms.author: wmastyka
-ms.date: 07/15/2025
+ms.author: garrytrinder
+ms.date: 07/21/2025
 ---
 
 # How to use Dev Proxy to track language model usage and costs with GitHub Actions
@@ -19,7 +19,7 @@ To track language model usage, configure a Dev Proxy configuration file in your 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/devproxyrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -68,7 +68,7 @@ To track language model usage costs, add a config section for the OpenAITelemetr
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/devproxyrc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
