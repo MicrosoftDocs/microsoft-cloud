@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/11/2025
+ms.date: 07/21/2025
 ms.topic: overview
 ---
 
@@ -47,6 +47,7 @@ ms.topic: overview
 ## Simulate behaviors
 
 - [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md)
+- [Test language model token limits](./test-language-model-token-limits.md)
 - [Simulate throttling on Microsoft 365 APIs](./simulate-throttling-microsoft-365.md)
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md)
 - [Simulate slow API responses](./Simulate-slow-API-responses.md)

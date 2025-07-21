@@ -76,6 +76,8 @@
       items: 
       - name: Test that my application handles throttling properly
         href: how-to/test-that-my-application-handles-throttling-properly.md
+      - name: Test language model token limits
+        href: how-to/test-language-model-token-limits.md
       - name: Simulate throttling on Microsoft 365 APIs
         href: how-to/simulate-throttling-microsoft-365.md
       - name: Simulate Rate Limit API responses
@@ -264,6 +266,8 @@
         href: technical-reference/httpfilegeneratorplugin.md
       - name: LanguageModelFailurePlugin
         href: technical-reference/languagemodelfailureplugin.md
+      - name: LanguageModelRateLimitingPlugin
+        href: technical-reference/languagemodelratelimitingplugin.md
       - name: LatencyPlugin
         href: technical-reference/LatencyPlugin.md
       - name: MinimalCsomPermissionsPlugin
