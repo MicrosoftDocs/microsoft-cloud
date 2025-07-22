@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsGuidancePlugin
 description: GraphMinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 07/21/2025
 ---
 
 # GraphMinimalPermissionsGuidancePlugin
@@ -29,7 +29,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 {
   "graphMinimalPermissionsGuidancePlugin": {
    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/graphminimalpermissionsguidanceplugin.schema.json",
-    "permissionsToIgnore": [ 
+    "permissionsToExclude": [ 
       "profile", 
       "openid", 
       "offline_access", 
@@ -43,7 +43,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 
 | Property | Description | Default |
 | -------- | ----------- | :-----: |
-| `permissionsToIgnore` | The scopes to ignore and not include in the report. | `profile openid offline_access email` |
+| `permissionsToExclude` | The scopes to ignore and not include in the report. | `profile openid offline_access email` |
 
 ## Command line options
 

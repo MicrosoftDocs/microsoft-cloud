@@ -3,12 +3,14 @@ title: LanguageModelRateLimitingPlugin
 description: LanguageModelRateLimitingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/21/2025
+ms.date: 07/22/2025
 ---
 
 # LanguageModelRateLimitingPlugin
 
 Simulates token-based rate limiting for language model APIs by tracking prompt and completion token consumption within configurable time windows.
+
+:::image type="content" source="../media/language-model-rate-limiting-plugin.png" alt-text="Screenshot of a command prompt with the Dev Proxy simulating a language model rate limiting response for an LLM API request." lightbox="../media/language-model-rate-limiting-plugin.png":::
 
 ## Plugin instance definition
 
