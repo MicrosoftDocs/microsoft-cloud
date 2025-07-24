@@ -39,7 +39,7 @@ Add the `start` and `stop` tasks to your `tasks.json` file in your project.
 }
 ```
 
-Configure the `preLaunchTask` and `postDebugTask` properties with the task labels you defined in the `tasks.json` file. This ensures that Dev Proxy starts before your application runs and stops after debugging is complete. The following example shows to configure the `launch.json` file to start a debug session with Dev Proxy and a Node.js application.
+Configure the `preLaunchTask` and `postDebugTask` properties with the task labels you defined in the `tasks.json` file. Dev Proxy starts before your application runs and stops after debugging is complete. The following example shows how to configure the `launch.json` file to start a debug session with Dev Proxy and a Node.js application.
 
 ```json
 {
