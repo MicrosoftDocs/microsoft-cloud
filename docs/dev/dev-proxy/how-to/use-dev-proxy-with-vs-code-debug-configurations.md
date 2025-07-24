@@ -3,7 +3,7 @@ title: Use Dev Proxy in Visual Studio Code debug configurations
 description: How to use Dev Proxy in Visual Studio Code debug configurations
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 24/07/2025
+ms.date: 07/24/2025
 ---
 
 # Use Dev Proxy with Visual Studio Code debug configurations
