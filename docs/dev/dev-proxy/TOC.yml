@@ -144,6 +144,8 @@
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
+      - name: With Visual Studio Code debug configurations
+        href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
       - name: In CI/CD scenarios
         items:
           - name: Overview
