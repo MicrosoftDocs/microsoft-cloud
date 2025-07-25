@@ -8,8 +8,6 @@ ms.date: 07/24/2025
 
 # Use Dev Proxy with Visual Studio Code debug configurations
 
-## Dev Proxy Toolkit
-
 Install [Dev Proxy Toolkit](https://marketplace.visualstudio.com/items?itemName=garrytrinder.dev-proxy-toolkit) from the extension marketplace. The extension provides tasks and watchers for Dev Proxy.
 
 ## Add Dev Proxy to your debug configuration
