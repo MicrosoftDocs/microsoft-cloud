@@ -18,7 +18,7 @@ Alternatively, you can configure the failure rate in the Dev Proxy configuration
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "rate": 80
 }
 ```

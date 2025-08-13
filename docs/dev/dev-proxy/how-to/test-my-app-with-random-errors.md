@@ -16,7 +16,7 @@ To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -48,7 +48,7 @@ Finally, in the errors file, define the list of error responses that you want to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/genericrandomerrorplugin.schema.json",
   "errors": [
     {
       "request": {
