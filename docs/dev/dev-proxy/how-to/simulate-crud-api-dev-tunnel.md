@@ -65,7 +65,7 @@ Next, create the API configuration file named `orders-api.json`, where you speci
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "http://api.northwind.com/orders",
   "auth": "none",
   "dataFile": "orders-data.json",
@@ -101,7 +101,7 @@ Next, create a Dev Proxy configuration file named `devproxyrc.json` with the `Cr
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "CrudApiPlugin",

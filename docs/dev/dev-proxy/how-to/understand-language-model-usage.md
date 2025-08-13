@@ -23,7 +23,7 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -43,7 +43,7 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -178,7 +178,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/openaitelemetryplugin.pricesfile.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.pricesfile.schema.json",
      "prices": {
        "o4-mini": {
          "input": 0.97,
@@ -197,7 +197,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -220,7 +220,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -234,7 +234,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
        "https://*.cognitiveservices.azure.com/openai/deployments/*/chat/completions*"
      ],
      "openAITelemetryPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.28.0/openaitelemetryplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
        "includeCosts": true,
        "pricesFile": "prices.json"
      },

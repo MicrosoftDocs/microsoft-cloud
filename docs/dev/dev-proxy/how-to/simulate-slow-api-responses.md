@@ -14,7 +14,7 @@ Start, by enabling the plugin in your Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
