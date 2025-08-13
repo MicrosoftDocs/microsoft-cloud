@@ -18,8 +18,8 @@ In most cases, your runner doesn't have Dev Proxy installed. So before you can u
 When installing Dev Proxy in a CI/CD setup, you typically want to pin the version of Dev Proxy that you install. Pinning the version ensures that your pipeline uses the same version of Dev Proxy every time you run it. The exact steps to pin a version depend on the operating system of your runner. Here's an example of how you can pin the version of Dev Proxy on a Linux-based runner:
 
 ```bash
-# install Dev Proxy v0.29.2
-bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v0.29.2
+# install Dev Proxy v1.0.0
+bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v1.0.0
 ```
 
 ## Start Dev Proxy

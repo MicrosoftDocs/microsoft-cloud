@@ -28,7 +28,7 @@ Fails requests made to Microsoft Graph with random errors.
 ```json
 {
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]
   }
 }

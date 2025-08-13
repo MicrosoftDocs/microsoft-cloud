@@ -32,7 +32,7 @@ To generate a TypeSpec file using Dev Proxy:
     ```json
     {
       "typeSpecGeneratorPlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/typespecgeneratorplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/typespecgeneratorplugin.schema.json",
         "ignoreResponseTypes": false
       }
       // [...] shortened for brevity

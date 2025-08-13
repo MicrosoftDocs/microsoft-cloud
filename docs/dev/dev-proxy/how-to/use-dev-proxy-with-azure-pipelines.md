@@ -25,8 +25,8 @@ Start by installing Dev Proxy on the agent using a script task to install Dev Pr
 By default, this installs the latest version of Dev Proxy. If you want to install a specific version, you can specify it by passing a version at the end of the script:
 
 ```yaml
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v0.29.2
-  displayName: 'Install Dev Proxy v0.29.2'
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v1.0.0
+  displayName: 'Install Dev Proxy v1.0.0'
 ```
 
 A recommended practice is to cache the Dev Proxy installation files to speed up subsequent runs. You can use the `Cache` task for this purpose. Here's how you can do it:
@@ -34,7 +34,7 @@ A recommended practice is to cache the Dev Proxy installation files to speed up 
 ```yaml
 variables:
 - name: DEV_PROXY_VERSION
-  value: v0.29.2
+  value: v1.0.0
 - name: DEV_PROXY_CACHE_RESTORED
   value: 'false'
 
@@ -117,7 +117,7 @@ pool:
 
 variables:
 - name: DEV_PROXY_VERSION
-  value: v0.29.2
+  value: v1.0.0
 
 steps:
 - script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION

@@ -41,7 +41,7 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
@@ -55,7 +55,7 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",
@@ -73,7 +73,7 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rewriteplugin.rewritesfile.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.rewritesfile.schema.json",
       "rewrites": [
         {
           "in": {
@@ -130,7 +130,7 @@ First, let's configure Dev Proxy to inspect cloud API requests. Let's configure 
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "DevToolsPlugin",
@@ -149,7 +149,7 @@ First, let's configure Dev Proxy to inspect cloud API requests. Let's configure 
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",
@@ -181,7 +181,7 @@ Next, let's update Dev Proxy configuration to show the information about the rew
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
@@ -200,7 +200,7 @@ Next, let's update Dev Proxy configuration to show the information about the rew
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",

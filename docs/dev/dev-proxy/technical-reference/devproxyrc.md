@@ -12,7 +12,7 @@ Default Dev Proxy configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -30,7 +30,7 @@ Default Dev Proxy configuration file.
     "https://jsonplaceholder.typicode.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "devproxy-errors.json",
     "rate": 50,
   },

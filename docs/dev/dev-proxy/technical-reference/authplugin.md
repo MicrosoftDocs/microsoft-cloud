@@ -28,7 +28,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/authplugin.schema.json",
     "type": "apiKey",
     "apiKey": {
       "parameters": [
@@ -54,7 +54,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 ```json
 {
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/authplugin.schema.json",
     "type": "oauth2",
     "oauth2": {
       "metadataUrl": "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration",

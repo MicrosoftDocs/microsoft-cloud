@@ -28,7 +28,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 ```json
 {
   "graphMinimalPermissionsGuidancePlugin": {
-   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/graphminimalpermissionsguidanceplugin.schema.json",
+   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/graphminimalpermissionsguidanceplugin.schema.json",
     "permissionsToExclude": [ 
       "profile", 
       "openid", 
