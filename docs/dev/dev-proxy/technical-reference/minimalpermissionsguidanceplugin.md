@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 08/14/2025
 ---
 
 # MinimalPermissionsGuidancePlugin
@@ -29,7 +29,13 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 {
   "minimalPermissionsGuidancePlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/minimalpermissionsguidanceplugin.schema.json",
-    "apiSpecsFolderPath": "./api-specs"
+    "apiSpecsFolderPath": "./api-specs",
+    "permissionsToExclude": [ 
+      "profile", 
+      "openid", 
+      "offline_access", 
+      "email"
+    ]
   }
 }
 ```
@@ -39,6 +45,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 | Property | Description | Default |
 |----------|-------------|:-------:|
 | `apiSpecsFolderPath` | Relative or absolute path to the folder with API specs | None |
+| `permissionsToExclude` | The scopes to ignore and not include in the report. | `profile openid offline_access email` |
 
 ## Command line options
 
