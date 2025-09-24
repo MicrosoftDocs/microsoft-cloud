@@ -271,7 +271,7 @@ x-ms-ags-diagnostic:
 Strict-Transport-Security: 
 request-id: d28ce889-febd-4c2b-a8b7-0a83e2531467
 client-request-id: d28ce889-febd-4c2b-a8b7-0a83e2531467
-Date: 9/10/2025 10:28:35?AM
+Date: 9/10/2025 10:28:35 AM
 Content-Type: application/json; odata.metadata=minimal
 Location: https://graph.microsoft.com/v1.0/users/12345678-1234-1234-1234-123456789abc
 OData-Version: 4.0
