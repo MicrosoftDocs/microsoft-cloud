@@ -247,7 +247,7 @@ Given the following request:
 
 ```http
 POST https://graph.microsoft.com/v1.0/users
-Content-Type: application/json"
+Content-Type: application/json
 
 {
   "displayName": "Megan Bowen",
