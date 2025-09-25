@@ -3,7 +3,7 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 09/24/2025
 ---
 
 # MockResponsePlugin
@@ -200,6 +200,109 @@ Respond to a request that contains a specific string in the body.
 }
 ```
 
+### Mirror request data in response
+
+Respond with data that mirrors values from the request body using `@request.body.*` placeholders.
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.2.0/mockresponseplugin.mocksfile.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "url": "https://graph.microsoft.com/v1.0/users",
+        "method": "POST"
+      },
+      "response": {
+        "statusCode": 201,
+        "body": {
+          "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+          "id": "12345678-1234-1234-1234-123456789abc",
+          "businessPhones": "@request.body.businessPhones",
+          "displayName": "@request.body.displayName",
+          "givenName": "@request.body.givenName",
+          "jobTitle": "@request.body.jobTitle",
+          "mail": "@request.body.mail",
+          "userPrincipalName": "@request.body.userPrincipalName",
+          "accountEnabled": "@request.body.accountEnabled",
+          "createdDateTime": "2024-01-15T10:30:00Z"
+        },
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json; odata.metadata=minimal"
+          },
+          {
+            "name": "Location",
+            "value": "https://graph.microsoft.com/v1.0/users/12345678-1234-1234-1234-123456789abc"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+Given the following request:
+
+```http
+POST https://graph.microsoft.com/v1.0/users
+Content-Type: application/json
+
+{
+  "displayName": "Megan Bowen",
+  "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+  "accountEnabled": true,
+  "givenName": "Megan",
+  "surname": "Bowen",
+  "jobTitle": "Product Manager"
+}
+```
+
+The response is:
+
+```http
+HTTP/1.1 200 Connection Established
+Content-Length: 0
+
+HTTP/1.1 201 Created
+Cache-Control: no-store
+x-ms-ags-diagnostic: 
+Strict-Transport-Security: 
+request-id: 12345678-1234-1234-1234-123456789abc
+client-request-id: 12345678-1234-1234-1234-123456789abc
+Date: 9/10/2025 10:28:35 AM
+Content-Type: application/json; odata.metadata=minimal
+Location: https://graph.microsoft.com/v1.0/users/12345678-1234-1234-1234-123456789abc
+OData-Version: 4.0
+Content-Length: 648
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+  "id": "12345678-1234-1234-1234-123456789abc",
+  "businessPhones": null,
+  "displayName": "Megan Bowen",
+  "givenName": "Megan",
+  "jobTitle": "Product Manager",
+  "mail": null,
+  "mobilePhone": null,
+  "officeLocation": null,
+  "preferredLanguage": null,
+  "surname": "Bowen",
+  "userPrincipalName": "MeganB@M365x214355.onmicrosoft.com",
+  "accountEnabled": true,
+  "createdDateTime": "2024-01-15T10:30:00Z",
+  "department": null,
+  "companyName": null,
+  "city": null,
+  "country": null,
+  "postalCode": null,
+  "state": null,
+  "streetAddress": null,
+  "usageLocation": null
+}
+```
+
 ## Mocks file properties
 
 | Property  | Description | Required |
@@ -241,6 +344,8 @@ Each response has the following properties:
 #### Remarks
 
 If you want to return binary data, set the `body` property to a string value that starts with `@` followed by file path relative to the mocks file. For example, `@picture.jpg` returns the image stored in the `picture.jpg` file in the same directory as the mocks file.
+
+To mirror request data in the response, use `@request.body.*` placeholders in the response body. For example, `@request.body.displayName` returns the value of the `displayName` property from the request body. This feature works with nested objects and arrays, allowing you to create dynamic responses that reflect the incoming request data. The placeholder replacement supports various JSON value types including strings, numbers, booleans, and complex objects.
 
 ## Next step
 
