@@ -269,8 +269,8 @@ HTTP/1.1 201 Created
 Cache-Control: no-store
 x-ms-ags-diagnostic: 
 Strict-Transport-Security: 
-request-id: d28ce889-febd-4c2b-a8b7-0a83e2531467
-client-request-id: d28ce889-febd-4c2b-a8b7-0a83e2531467
+request-id: 12345678-1234-1234-1234-123456789abc
+client-request-id: 12345678-1234-1234-1234-123456789abc
 Date: 9/10/2025 10:28:35 AM
 Content-Type: application/json; odata.metadata=minimal
 Location: https://graph.microsoft.com/v1.0/users/12345678-1234-1234-1234-123456789abc
