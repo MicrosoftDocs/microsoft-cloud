@@ -16,7 +16,7 @@ To configure Chromium-based browsers to send requests to the system proxy for `l
 ::: zone pivot="client-operating-system-windows"
 
 ```console
-msedge --proxy-bypass-list="<-loopback> --proxy-server="127.0.0.1:8000"
+msedge --proxy-bypass-list="<-loopback>" --proxy-server="127.0.0.1:8000"
 ```
 
 ::: zone-end
@@ -32,7 +32,7 @@ msedge --proxy-bypass-list="<-loopback> --proxy-server="127.0.0.1:8000"
 ::: zone pivot="client-operating-system-linux"
 
 ```console
-/opt/microsoft/msedge-dev/msedge --proxy-bypass-list="<-loopback> --proxy-server="127.0.0.1:8000"
+/opt/microsoft/msedge-dev/msedge --proxy-bypass-list="<-loopback>" --proxy-server="127.0.0.1:8000"
 ```
 
 ::: zone-end
