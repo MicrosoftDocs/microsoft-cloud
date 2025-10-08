@@ -3,7 +3,7 @@ title: MinimalPermissionsPlugin
 description: MinimalPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 09/22/2025
 ---
 
 # MinimalPermissionsPlugin
@@ -39,6 +39,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 | Property | Description | Default |
 |----------|-------------|:-------:|
 | `apiSpecsFolderPath` | Relative or absolute path to the folder with API specs | None |
+| `schemeName` | The name of the security scheme definition used to determine minimal permissions. If not specified, the plugin reads information from the first oauth2 scheme in the spec | None |
 
 ## Command line options
 
