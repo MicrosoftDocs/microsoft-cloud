@@ -3,7 +3,7 @@ title: ApiCenterMinimalPermissionsPlugin
 description: ApiCenterMinimalPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 10/09/2025
 ---
 
 # ApiCenterMinimalPermissionsPlugin
@@ -45,6 +45,7 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 | `serviceName` | Name of the Azure API Center instance that Dev Proxy should use to check if the APIs used in the app are registered. | None |
 | `subscriptionId` | ID of the Azure subscription where the Azure API Center instance is located. | None |
 | `workspace` | Name of the Azure API Center workspace to use. | `default` |
+| `schemeName` | Name of the security scheme definition used to determine minimal permissions. If not specified, the plugin reads information from the first oauth2 scheme in the spec | None |
 
 ## Command line options
 
