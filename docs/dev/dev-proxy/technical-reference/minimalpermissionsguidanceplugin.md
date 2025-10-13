@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 08/14/2025
+ms.date: 10/13/2025
 ---
 
 # MinimalPermissionsGuidancePlugin
@@ -46,6 +46,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 |----------|-------------|:-------:|
 | `apiSpecsFolderPath` | Relative or absolute path to the folder with API specs | None |
 | `permissionsToExclude` | The scopes to ignore and not include in the report. | `profile openid offline_access email` |
+| `schemeName` | The name of the security scheme definition used to determine minimal permissions. If not specified, the plugin reads information from the first oauth2 scheme in the spec | None |
 
 ## Command line options
 
