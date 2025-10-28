@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 10/28/2025
 ---
 
 # OpenApiSpecGeneratorPlugin
@@ -30,6 +30,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
   "openApiSpecGeneratorPlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
+    "ignoreResponseTypes": false,
     "specVersion": "v3_0",
     "specFormat": "Json",
     "includeParameters": [
@@ -44,6 +45,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 | Property | Description | Default |
 | -------- | ----------- | :-----: |
 | `includeOptionsRequests` | Determines whether to include `OPTIONS` requests in the generated OpenAPI spec | `false` |
+| `ignoreResponseTypes` | Determines whether to ignore response types in the generated OpenAPI spec. | `false` |
 | `specVersion` | Determines which version to use for the generated OpenAPI spec. Can be set to `v2_0` or `v3_0` | `v3_0` |
 | `specFormat` | Determines which format to use for the generated OpenAPI spec. Can be set to `Json` or `Yaml` | `Json` |
 | `includeParameters` | Determines the list of query string parameters to include in the generated OpenAPI spec, along with their default values. | [] |
