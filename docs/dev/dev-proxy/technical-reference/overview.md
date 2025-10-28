@@ -23,6 +23,7 @@ Name | Description
 [CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with an in-memory data store.
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
+[HarGeneratorPlugin](./hargeneratorplugin.md)|Generates HTTP Archive (HAR) files from the intercepted requests and responses.
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LanguageModelFailurePlugin](./languagemodelfailureplugin.md)|Simulates various language model failure scenarios to test resilience of language model-dependent applications.
 [LanguageModelRateLimitingPlugin](./languagemodelratelimitingplugin.md)|Simulates token-based rate limiting for language model APIs by tracking prompt and completion token consumption within configurable time windows.
