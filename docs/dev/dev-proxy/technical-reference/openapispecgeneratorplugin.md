@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/24/2025
+ms.date: 10/28/2025
 ---
 
 # OpenApiSpecGeneratorPlugin
