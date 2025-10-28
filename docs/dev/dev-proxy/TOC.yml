@@ -290,6 +290,8 @@
         href: technical-reference/openaimockresponseplugin.md
       - name: OpenAITelemetryPlugin
         href: technical-reference/openaitelemetryplugin.md
+      - name: OpenAIUsageDebuggingPlugin
+        href: technical-reference/openaiusagedebuggingplugin.md
       - name: OpenApiSpecGeneratorPlugin
         href: technical-reference/openapispecgeneratorplugin.md
       - name: RateLimitingPlugin
