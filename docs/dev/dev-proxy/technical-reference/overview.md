@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/21/2025
+ms.date: 10/28/2025
 ms.topic: overview
 ---
 
@@ -23,6 +23,7 @@ Name | Description
 [CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with an in-memory data store.
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
 [GenericRandomErrorPlugin](./genericrandomerrorplugin.md)|Fails requests with a random selected error from file containing mocked errors.
+[HarGeneratorPlugin](./hargeneratorplugin.md)|Generates HTTP Archive (HAR) files from the intercepted requests and responses.
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LanguageModelFailurePlugin](./languagemodelfailureplugin.md)|Simulates various language model failure scenarios to test resilience of language model-dependent applications.
 [LanguageModelRateLimitingPlugin](./languagemodelratelimitingplugin.md)|Simulates token-based rate limiting for language model APIs by tracking prompt and completion token consumption within configurable time windows.
@@ -36,6 +37,7 @@ Name | Description
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 [OpenAIMockResponsePlugin](./openaimockresponseplugin.md)|Simulates responses from Azure OpenAI and OpenAI using a local language model.
 [OpenAITelemetryPlugin](./openaitelemetryplugin.md)|Generates telemetry data for OpenAI-compatible API requests.
+[OpenAIUsageDebuggingPlugin](./openaiusagedebuggingplugin.md)|Logs OpenAI API usage metrics to a CSV file for debugging and analysis purposes.
 [OpenApiSpecGeneratorPlugin](./openapispecgeneratorplugin.md)|Generates OpenAPI spec from the intercepted requests and responses.
 [RateLimitingPlugin](./ratelimitingplugin.md)|Simulates rate-limit behaviors.
 [RetryAfterPlugin](./retryafterplugin.md)|Simulates the `Retry-After` header sent by an API after throttling a request.

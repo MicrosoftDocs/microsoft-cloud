@@ -264,6 +264,8 @@
         href: technical-reference/ExecutionSummaryPlugin.md
       - name: GenericRandomErrorPlugin
         href: technical-reference/GenericRandomErrorPlugin.md
+      - name: HarGeneratorPlugin
+        href: technical-reference/hargeneratorplugin.md
       - name: HttpFileGeneratorPlugin
         href: technical-reference/httpfilegeneratorplugin.md
       - name: LanguageModelFailurePlugin
@@ -290,6 +292,8 @@
         href: technical-reference/openaimockresponseplugin.md
       - name: OpenAITelemetryPlugin
         href: technical-reference/openaitelemetryplugin.md
+      - name: OpenAIUsageDebuggingPlugin
+        href: technical-reference/openaiusagedebuggingplugin.md
       - name: OpenApiSpecGeneratorPlugin
         href: technical-reference/openapispecgeneratorplugin.md
       - name: RateLimitingPlugin
