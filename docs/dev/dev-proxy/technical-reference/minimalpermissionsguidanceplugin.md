@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/13/2025
+ms.date: 11/18/2025
 ---
 
 # MinimalPermissionsGuidancePlugin
@@ -18,7 +18,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 {
   "name": "MinimalPermissionsGuidancePlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "minimalPermissionsGuidancePlugin"
 }
 ```
