@@ -3,7 +3,7 @@ title: Understand language model usage
 description: How to use Dev Proxy to intercept OpenAI-compatible requests and responses to understand how your application uses large language models.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/19/2025
+ms.date: 11/18/2025
 ---
 
 # Understand language model usage
@@ -28,7 +28,7 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
        {
          "name": "OpenAITelemetryPlugin",
          "enabled": true,
-         "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+         "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
        }
      ],
      "urlsToWatch": [
@@ -48,7 +48,7 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
        {
          "name": "OpenAITelemetryPlugin",
          "enabled": true,
-         "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+         "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
        }
      ],
      "urlsToWatch": [
@@ -202,7 +202,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
        {
          "name": "OpenAITelemetryPlugin",
          "enabled": true,
-         "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+         "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
          "configSection": "openAITelemetryPlugin"
        }
      ],
@@ -225,7 +225,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
        {
          "name": "OpenAITelemetryPlugin",
          "enabled": true,
-         "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+         "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
          "configSection": "openAITelemetryPlugin"
        }
      ],
