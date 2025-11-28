@@ -3,7 +3,7 @@ title: Generate a TypeSpec file
 description: How to generate a TypeSpec from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/02/2025
+ms.date: 11/18/2025
 ---
 
 # Generate a TypeSpec file
@@ -20,7 +20,7 @@ To generate a TypeSpec file using Dev Proxy:
         {
           "name": "TypeSpecGeneratorPlugin",
           "enabled": true,
-          "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
         }
       ]
       // [...] shortened for brevity
