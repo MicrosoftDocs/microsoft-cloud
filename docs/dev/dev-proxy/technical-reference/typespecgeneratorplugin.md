@@ -3,7 +3,7 @@ title: TypeSpecGeneratorPlugin
 description: TypeSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/15/2025
+ms.date: 11/18/2025
 ---
 
 # TypeSpecGeneratorPlugin
@@ -18,7 +18,7 @@ Generates TypeSpec files from the intercepted requests and responses.
 {
   "name": "TypeSpecGeneratorPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "typeSpecGeneratorPlugin"
 }
 ```

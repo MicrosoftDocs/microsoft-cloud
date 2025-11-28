@@ -3,7 +3,7 @@ title: OpenAITelemetryPlugin
 description: OpenAITelemetryPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/19/2025
+ms.date: 11/18/2025
 ---
 
 # OpenAITelemetryPlugin
@@ -20,7 +20,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 {
   "name": "OpenAITelemetryPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "openAITelemetryPlugin"
 }
 ```

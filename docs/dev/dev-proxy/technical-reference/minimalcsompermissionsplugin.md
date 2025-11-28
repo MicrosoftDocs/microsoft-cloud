@@ -3,7 +3,7 @@ title: MinimalCsomPermissionsPlugin
 description: MinimalCsomPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 11/18/2025
 ---
 
 # MinimalCsomPermissionsPlugin
@@ -18,7 +18,7 @@ Detects minimal permissions needed to call the recorded SharePoint Client-Side O
 {
   "name": "MinimalCsomPermissionsPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll",
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "minimalCsomPermissionsPlugin"
 }
 ```

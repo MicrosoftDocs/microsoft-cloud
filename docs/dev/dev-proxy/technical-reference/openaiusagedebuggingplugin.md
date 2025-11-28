@@ -3,7 +3,7 @@ title: OpenAIUsageDebuggingPlugin
 description: OpenAIUsageDebuggingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/28/2025
+ms.date: 11/18/2025
 ---
 
 # OpenAIUsageDebuggingPlugin
@@ -16,7 +16,7 @@ Logs OpenAI API usage metrics to a CSV file for debugging and analysis purposes.
 {
   "name": "OpenAIUsageDebuggingPlugin",
   "enabled": true,
-  "pluginPath": "~appFolder/plugins/dev-proxy-plugins.dll"
+  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
 }
 ```
 
