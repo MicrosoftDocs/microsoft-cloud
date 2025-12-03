@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 12/03/2025
 ---
 
 # LatencyPlugin
@@ -40,7 +40,7 @@ Delays responses by a random number of milliseconds from the configured range.
 | Property | Description | Default |
 | -------- | ----------- | :-----: |
 | `minMs` | The minimum amount of delay added to a request in milliseconds. |   0 |
-| `maxMs` | The maximum amount of delay added to a request in milliseconds. Max value is 10000 (10 s) |  5000  |
+| `maxMs` | The maximum amount of delay added to a request in milliseconds. |  5000  |
 
 ## Command line options
 
