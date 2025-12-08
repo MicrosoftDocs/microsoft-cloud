@@ -3,7 +3,7 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 12/07/2025
 ---
 
 # RateLimitingPlugin
@@ -17,7 +17,7 @@ Simulates rate-limit behaviors.
 ```json
 {
   "name": "RateLimitingPlugin",
-  "enabled": false,
+  "enabled": true,
   "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "rateLimiting"
 }

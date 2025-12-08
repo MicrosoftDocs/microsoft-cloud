@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsGuidancePlugin
 description: GraphMinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/21/2025
+ms.date: 12/07/2025
 ---
 
 # GraphMinimalPermissionsGuidancePlugin
@@ -17,7 +17,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 ```json
 {
   "name": "GraphMinimalPermissionsGuidancePlugin",
-  "enabled": false,
+  "enabled": true,
   "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
   "configSection": "graphMinimalPermissionsGuidancePlugin"
 }
