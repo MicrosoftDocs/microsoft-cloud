@@ -3,10 +3,23 @@ title: How to check if my app is calling APIs with minimal permissions
 description: How to check if my app is calling APIs with minimal permissions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/14/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Verify API calls use minimal permissions via Azure API Center -->
+<!-- SOLUTION: Enable ApiCenterMinimalPermissionsPlugin with API Center connection -->
+<!-- RESULT: Report showing if app uses minimal permissions per API spec -->
+<!-- PLUGINS: ApiCenterMinimalPermissionsPlugin -->
+<!-- JOB: check-permissions -->
+<!-- TIME: 20 minutes -->
+
 # How to check if my app is calling APIs with minimal permissions
+
+> **At a glance**  
+> **Goal:** Verify API calls use minimal permissions via Azure API Center  
+> **Time:** 20 minutes  
+> **Plugins:** [ApiCenterMinimalPermissionsPlugin](../technical-reference/apicenterminimalpermissionsplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Azure API Center](/azure/api-center/)
 
 When building your app, you likely integrate with several APIs and operations. To ensure that your app is secure and follows the principle of least privilege, you should check if your app is calling APIs with minimal permissions. By using minimal permissions, you reduce the risk of unauthorized access to your data and resources.
 
@@ -47,9 +60,11 @@ To check if your app is calling APIs using minimal permissions, you need to enab
 
 In the `devproxyrc.json` file, add the following configuration:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",
@@ -83,9 +98,11 @@ The `ApiCenterMinimalPermissionsPlugin` produces a report of APIs that your app 
 
 Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",

@@ -3,12 +3,34 @@ title: (root)
 description: Dev Proxy root command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/28/2025
+ms.date: 01/03/2026
 ---
+
+<!-- INTENT: Reference for devproxy command line options -->
+<!-- COMMAND: devproxy -->
 
 # (root)
 
 Starts Dev Proxy.
+
+## Synopsis
+
+```text
+devproxy [options]
+
+Options:
+  -c, --config-file <file>      Configuration file path (default: devproxyrc.json)
+  -u, --urls-to-watch <urls>    URLs to intercept (supports wildcards)
+  -p, --port <port>             Proxy port (default: 8000)
+  --log-level <level>           Logging level: trace|debug|information|warning|error
+  --record                      Start recording immediately
+  --discover                    Run in URL discovery mode
+  --watch-pids <pids>           Process IDs to watch
+  --watch-process-names <names> Process names to watch
+  -t, --timeout <seconds>       Auto-stop after inactivity
+  --version                     Show version
+  -h, --help                    Show help
+```
 
 ## Usage
 

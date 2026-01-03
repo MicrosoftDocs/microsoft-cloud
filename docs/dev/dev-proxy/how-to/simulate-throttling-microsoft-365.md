@@ -3,10 +3,23 @@ title: Simulate throttling on Microsoft 365 APIs
 description: How to test that your application connected to Microsoft 365 APIs handles throttling properly
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Test how your app handles Microsoft 365 API throttling -->
+<!-- SOLUTION: Enable GraphRandomErrorPlugin with 429 errors and RetryAfterPlugin -->
+<!-- RESULT: App receives 429 throttling responses with Retry-After -->
+<!-- PLUGINS: GraphRandomErrorPlugin, RetryAfterPlugin -->
+<!-- JOB: test-error-handling -->
+<!-- TIME: 10 minutes -->
+
 # Simulate throttling on Microsoft 365 APIs
+
+> **At a glance**  
+> **Goal:** Test how your app handles Microsoft 365 API throttling  
+> **Time:** 10 minutes  
+> **Plugins:** [GraphRandomErrorPlugin](../technical-reference/graphrandomerrorplugin.md), [RetryAfterPlugin](../technical-reference/retryafterplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Typically, testing [throttling](../concepts/what-is-throttling.md) is hard because it occurs rarely, when Microsoft 365 servers are under heavy load. Using the Dev Proxy, you can simulate throttling responses, and check if your application handles it correctly.
 
@@ -14,9 +27,11 @@ To simulate throttling on Microsoft 365 APIs, use the [GraphRandomErrorPlugin](.
 
 To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev Proxy configuration file.
 
+**File:** `devproxyrc.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -53,9 +68,11 @@ To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev
 
 Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
 
+**File:** `devproxyrc.json` (complete config)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -95,3 +112,11 @@ Start Dev Proxy with your configuration file and test your app to see how it han
 If your application backs-off when throttled, but doesn't wait for the amount of time specified on the requests, you see a message similar to `Calling https://graph.microsoft.com/v1.0/endpoint again before waiting for the Retry-After period. Request will be throttled`.
 
 This message indicates that your application isn't handling throttling correctly and unnecessarily prolongs throttling. To improve how your app handles throttling, update your code to wait for the amount of time specified in the `Retry-After` header before retrying the request.
+
+## See also
+
+- [GraphRandomErrorPlugin](../technical-reference/graphrandomerrorplugin.md) - Full reference
+- [RetryAfterPlugin](../technical-reference/retryafterplugin.md) - Verify retry behavior
+- [What is throttling](../concepts/what-is-throttling.md) - Concepts
+- [How to handle API throttling](../concepts/how-to-handle-api-throttling.md) - Best practices
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

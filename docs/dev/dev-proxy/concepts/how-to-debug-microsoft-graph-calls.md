@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Techniques for debugging Microsoft Graph API issues -->
+
 # How to debug Microsoft Graph API calls
 
 You might build an application that uses Microsoft Graph APIs to connect to Microsoft 365 and discover that the API isn't working as you expected. How do you debug it? This article shares some recommendations for debugging Microsoft Graph API calls.

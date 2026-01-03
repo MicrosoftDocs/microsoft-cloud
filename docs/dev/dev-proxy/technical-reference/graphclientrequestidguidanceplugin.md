@@ -3,8 +3,13 @@ title: GraphClientRequestIdGuidancePlugin
 description: GraphClientRequestIdGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/08/2024
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Warn about missing client-request-id header -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphSdkGuidancePlugin, GraphSelectGuidancePlugin -->
+<!-- USE-WHEN: Improving Microsoft Graph request debugging capability -->
 
 # GraphClientRequestIdGuidancePlugin
 
@@ -12,13 +17,18 @@ Shows a tip when a request to Microsoft Graph API doesn't include the `client-re
 
 :::image type="content" source="../media/microsoft-graph-client-request-id-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a tip after detecting a request to Microsoft Graph API without the client-request-id header." lightbox="../media/microsoft-graph-client-request-id-guidance.png":::
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "GraphClientRequestIdGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "GraphClientRequestIdGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ],
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
@@ -31,10 +41,6 @@ Shows a tip when a request to Microsoft Graph API doesn't include the `client-re
   ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

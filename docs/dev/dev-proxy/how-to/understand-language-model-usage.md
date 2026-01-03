@@ -3,10 +3,23 @@ title: Understand language model usage
 description: How to use Dev Proxy to intercept OpenAI-compatible requests and responses to understand how your application uses large language models.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Monitor LLM usage with OpenTelemetry -->
+<!-- SOLUTION: Enable OpenAITelemetryPlugin with OTLP exporter -->
+<!-- RESULT: LLM usage metrics exported to monitoring system -->
+<!-- PLUGINS: OpenAITelemetryPlugin -->
+<!-- JOB: analyze-usage -->
+<!-- TIME: 20 minutes -->
+
 # Understand language model usage
+
+> **At a glance**  
+> **Goal:** Monitor LLM usage with OpenTelemetry  
+> **Time:** 20 minutes  
+> **Plugins:** [OpenAITelemetryPlugin](../technical-reference/openaitelemetryplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Docker
 
 Using language models incurs costs. To understand how your application uses large language models, use Dev Proxy to intercept OpenAI-compatible requests and responses. Dev Proxy analyzes the requests and responses and logs telemetry data to help you understand how your application uses large language models. This information allows you to optimize your application and reduce costs.
 
@@ -21,9 +34,11 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 1. Create a new Dev Proxy configuration file using the `devproxy config new` command or using the Dev Proxy Toolkit extension.
 1. Add the `OpenAITelemetryPlugin` to the configuration file.
 
+   **File:** devproxyrc.json
+
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -41,9 +56,11 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 
 1. Configure the `urlsToWatch` property to include the URLs of the OpenAI-compatible requests that you want to intercept. The following example intercepts requests to Azure OpenAI chat completions.
 
+   **File:** devproxyrc.json (with Azure OpenAI URLs)
+
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -176,9 +193,11 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 1. In the same folder where you created the Dev Proxy configuration file, create a new file named `prices.json`.
 1. Add the following content to the file:
 
+   **File:** prices.json
+
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.pricesfile.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.pricesfile.schema.json",
      "prices": {
        "o4-mini": {
          "input": 0.97,
@@ -195,9 +214,11 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 1. In the code editor, open the Dev Proxy configuration file.
 1. Extend the `OpenAITelemetryPlugin` reference with a configuration section:
 
+   **File:** devproxyrc.json (add configSection to plugin)
+
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -218,9 +239,11 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
 1. Add the `openAITelemetryPlugin` section to the configuration file:
 
+   **File:** devproxyrc.json (complete with cost tracking)
+
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "OpenAITelemetryPlugin",
@@ -234,7 +257,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
        "https://*.cognitiveservices.azure.com/openai/deployments/*/chat/completions*"
      ],
      "openAITelemetryPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
        "includeCosts": true,
        "pricesFile": "prices.json"
      },

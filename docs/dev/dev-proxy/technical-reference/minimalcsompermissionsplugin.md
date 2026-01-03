@@ -3,8 +3,13 @@ title: MinimalCsomPermissionsPlugin
 description: MinimalCsomPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Detect minimal permissions for SharePoint CSOM APIs -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: MarkdownReporter, JsonReporter -->
+<!-- USE-WHEN: Auditing SharePoint CSOM permissions -->
 
 # MinimalCsomPermissionsPlugin
 
@@ -12,23 +17,21 @@ Detects minimal permissions needed to call the recorded SharePoint Client-Side O
 
 :::image type="content" source="../media/minimal-csom-permissions-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy listing minimal permissions required to call the recorded set of SharePoint CSOM APIs." lightbox="../media/minimal-permissions-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "MinimalCsomPermissionsPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "minimalCsomPermissionsPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MinimalCsomPermissionsPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "minimalCsomPermissionsPlugin"
+    }
+  ],
   "minimalCsomPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/minimalcsompermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/minimalcsompermissionsplugin.schema.json",
     "typesFilePath": "./api-specs"
   }
 }
@@ -54,7 +57,7 @@ The `MinimalCsomPermissionsPlugin` uses a CSOM types file to determine what mini
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/minimalcsompermissions.types.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/minimalcsompermissions.types.schema.json",
   "types": {
     "268004ae-ef6b-4e9b-8425-127220d84719": "Microsoft.Online.SharePoint.TenantAdministration.Tenant",
     "3747adcd-a3c3-41b9-bfab-4a64dd2f1e0a": "Microsoft.SharePoint.Client.RequestContext"

@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 03/18/2025
 ---
 
+<!-- INTENT: Understand what a proxy server does and how Dev Proxy works -->
+
 # What is a proxy?
 
 A *proxy* is an intermediary server that sits between a client (such as your application) and a destination server (such as a back-end API). When your application sends a request, the proxy receives it first. The proxy can then forward the request to the target server, modify it, block it, or return a response directly.

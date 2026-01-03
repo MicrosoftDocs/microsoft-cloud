@@ -3,10 +3,23 @@ title: Use Dev Proxy with .NET Azure Functions
 description: How to use Dev Proxy with .NET Azure Functions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/03/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Use Dev Proxy with .NET Azure Functions -->
+<!-- SOLUTION: Set HTTP_PROXY environment variable for Functions -->
+<!-- RESULT: Azure Functions HTTP requests intercepted -->
+<!-- PLUGINS: various -->
+<!-- JOB: intercept-requests -->
+<!-- TIME: 10 minutes -->
+
 # Use Dev Proxy with .NET Azure Functions
+
+> **At a glance**  
+> **Goal:** Use Dev Proxy with .NET Azure Functions  
+> **Time:** 10 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Azure Functions Core Tools
 
 If you build Azure Functions using .NET and want to use Dev Proxy, follow the general guidance for [using Dev Proxy with .NET applications](./use-dev-proxy-with-dotnet.md).
 
@@ -19,6 +32,8 @@ If you build Azure Functions using .NET and want to use Dev Proxy, follow the ge
 
 To be able to easily switch between using Dev Proxy in development and not using it in production, you can best configure the proxy in your Azure Functions app using environment variables. Change the `local.settings.json` file to include the `HTTPS_PROXY` environment variable.
 
+**File:** local.settings.json
+
 ```json
 {
   "IsEncrypted": false,
@@ -29,6 +44,8 @@ To be able to easily switch between using Dev Proxy in development and not using
 ```
 
 `HttpClient` in .NET automatically picks up the `HTTPS_PROXY` environment variable and uses it to configure the proxy for outgoing HTTP requests.
+
+**File:** MyFn.cs
 
 ```csharp
 using Microsoft.Azure.Functions.Worker;
@@ -61,3 +78,9 @@ public class MyFn(ILogger<MyFn> logger, IHttpClientFactory httpClientFactory)
     }
 }
 ```
+
+## See also
+
+- [Use Dev Proxy with .NET applications](./use-dev-proxy-with-dotnet.md)
+- [Use Dev Proxy with JavaScript Azure Functions](./use-dev-proxy-with-javascript-azure-functions.md)
+- [Use Dev Proxy with .NET applications running in Docker](./use-dev-proxy-with-dotnet-docker.md)

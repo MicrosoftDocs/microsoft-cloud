@@ -3,8 +3,13 @@ title: ApiCenterMinimalPermissionsPlugin
 description: ApiCenterMinimalPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/09/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Check API permissions against Azure API Center specs -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: ApiCenterOnboardingPlugin, ApiCenterProductionVersionPlugin, MarkdownReporter -->
+<!-- USE-WHEN: Auditing API permissions using Azure API Center governance -->
 
 # ApiCenterMinimalPermissionsPlugin
 
@@ -12,27 +17,25 @@ Checks if the app uses minimal permissions to call APIs. Uses API information fr
 
 :::image type="content" source="../media/api-center-minimal-permissions-plugin.png" alt-text="Screenshot of a command prompt showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/api-center-minimal-permissions-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "ApiCenterMinimalPermissionsPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "apiCenterMinimalPermissionsPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ApiCenterMinimalPermissionsPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "apiCenterMinimalPermissionsPlugin"
+    }
+  ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
-    "workspaceName": "default"
+    "workspace": "default"
   }
 }
 ```
@@ -70,21 +73,30 @@ To connect to Azure API Center, the plugin uses Azure credentials (in this order
 
 If the plugin fails to get an access token to access Azure, it shows an error and Dev Proxy disables it. Sign in to Azure using either of these tools, and restart Dev Proxy to use the `ApiCenterMinimalPermissionsPlugin` plugin.
 
-If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
+If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ApiCenterMinimalPermissionsPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "apiCenterMinimalPermissionsPlugin"
+    }
+  ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",
-    "workspaceName": "@AZURE_APIC_WORKSPACE_NAME"
+    "workspace": "@AZURE_APIC_WORKSPACE_NAME"
   }
 }
 ```
 
-In this example, the `ApiCenterMinimalPermissionsPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+In this example, the `ApiCenterMinimalPermissionsPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
 
 ### Define API permissions
 
@@ -124,7 +136,7 @@ To define permissions for your APIs, include them in the OpenAPI definition of y
     "schemas": {
       "Customer": {
         "type": "object",
-        // [...] trimmed for brevity
+        "properties": {}
       }
     }
   },

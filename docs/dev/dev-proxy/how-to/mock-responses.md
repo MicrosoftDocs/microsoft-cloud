@@ -3,10 +3,22 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Return predefined responses instead of calling real API -->
+<!-- SOLUTION: Enable MockResponsePlugin with mocks.json file -->
+<!-- RESULT: API calls return mock data without hitting real API -->
+<!-- PLUGINS: MockResponsePlugin -->
+<!-- JOB: mock-api -->
+
 # Mock responses
+
+> **At a glance**  
+> **Goal:** Return predefined API responses without calling the real API  
+> **Time:** 10 minutes  
+> **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Using Dev Proxy is the easiest way to mock an API. Whether you're building the front-end and the API isn't ready yet, you need to integrate your back-end with an external service, or you want to test your application with different responses, Dev Proxy can help you simulate API responses. What's great about using Dev Proxy is that it doesn't require any changes to your application code. You define mock responses for any API that your application interacts with and Dev Proxy intercepts the requests and responds with the mock responses that you defined.
 
@@ -22,9 +34,11 @@ To mock API responses, you need to do two things:
 
 Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-reference/mockresponseplugin.md). The plugin allows you to define a set of mock responses. You define the mocks in a [separate file](../technical-reference/mockresponseplugin.md#mocks-file-properties). The following code snippet demonstrates a simple mock response for a `GET` request to `https://jsonplaceholder.typicode.com/posts/1`.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -51,8 +65,7 @@ Dev Proxy mocks API responses using the [`MockResponsePlugin`](../technical-refe
           {
             "name": "Content-Length",
             "value": "292"
-          },
-          // [...] trimmed for brevity
+          }
         ]
       }
     }
@@ -69,9 +82,11 @@ Dev Proxy matches mocks in the order in which you define them in the mocks file.
 
 When you use the following configuration, proxy responds to all `GET` requests to `https://graph.microsoft.com/v1.0/me/photo` with `500 Internal Server Error`.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -101,9 +116,11 @@ Dev Proxy supports the use of wildcards in the URL property. You can use the ast
 
 When you use the following configuration, Dev Proxy responds to all requests to get any user's profile with the same response.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -132,9 +149,11 @@ When you use the following configuration, Dev Proxy responds to all requests to 
 
 When you use the following configuration, Dev Proxy returns the same image from disk when you request to get the binary of any user's photo.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -156,9 +175,11 @@ When you use the following configuration, Dev Proxy returns the same image from 
 
 When you use the following configuration, Dev Proxy returns the same response when you request to get the current user's profile with any query string parameter.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -193,9 +214,11 @@ To keep your mocks file clean and organized, you can store the contents of the r
 
 For example, the following mock response configuration, instructs Dev Proxy to respond to any request to `https://graph.microsoft.com/v1.0/me` with the contents of the `response.json` file located in the same folder as the mocks file.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -222,9 +245,11 @@ Using the `@`-token works with text and [binary files](./mock-responses-that-ret
 
 After you create the mocks file, you need to configure Dev Proxy to use the mock responses. To configure Dev Proxy to mock responses, add the `MockResponsePlugin` to the list of plugins in the [devproxyrc](../technical-reference/devproxyrc.md) file.
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -237,7 +262,7 @@ After you create the mocks file, you need to configure Dev Proxy to use the mock
     "https://jsonplaceholder.typicode.com/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   },
   "logLevel": "information",
@@ -256,10 +281,12 @@ Dev Proxy supports throwing an error when proxy intercepts an unmocked request. 
 
 To enable this feature, add and enable the `blockUnmockedRequests` setting to [MockResponsePlugin](../technical-reference/MockResponsePlugin.md) config section in the [devproxyrc](../technical-reference/devproxyrc.md) file.
 
+**File:** devproxyrc.json
+
 ```json
 {
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json",
     "blockUnmockedRequests": true
   }
@@ -282,3 +309,11 @@ See also the related Dev Proxy samples:
 - [Microsoft Graph mocks from Microsoft Graph API docs](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-docs-mocks/)
 - [Microsoft Graph mocks from Microsoft Graph API docs with sandbox data](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-sandbox-mocks/)
 - [Simulate creating a Microsoft Graph connector and its schema](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-connector/)
+
+## See also
+
+- [Simulate a CRUD API](./simulate-crud-api.md) - Create dynamic mock APIs with full CRUD operations
+- [Mock n-th request](./Mock-nth-request.md) - Return different responses for repeated requests
+- [Mock responses that return binary data](./Mock-responses-that-return-binary-data.md) - Return images and files
+- [Change mocks file](./Change-mocks-file.md) - Switch between mock files
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

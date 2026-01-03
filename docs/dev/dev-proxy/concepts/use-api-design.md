@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 10/28/2024
 ---
 
+<!-- INTENT: Use Dev Proxy to prototype and mock APIs during design phase -->
+
 # Use Dev Proxy for API design: build better APIs from the start
 
 Designing APIs is crucial to building reliable, scalable applications, but the process can be challenging without the right tools. Dev Proxy simplifies the API design process, enabling you to prototype, simulate, and refine your API before you fully implement it. With Dev Proxy, you can create, test, and document your API early, ensuring it meets the needs of your app and users from day one.

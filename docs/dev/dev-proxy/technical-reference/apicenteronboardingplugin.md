@@ -3,8 +3,13 @@ title: ApiCenterOnboardingPlugin
 description: ApiCenterOnboardingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Check if APIs are registered in Azure API Center -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: ApiCenterMinimalPermissionsPlugin, ApiCenterProductionVersionPlugin, MarkdownReporter -->
+<!-- USE-WHEN: Ensuring API governance and discovering shadow APIs -->
 
 # ApiCenterOnboardingPlugin
 
@@ -12,27 +17,25 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
 
 :::image type="content" source="../media/api-center-onboarding-plugin.png" alt-text="Screenshot of a command prompt showing Dev Proxy checking if the recorded API requests are registered in Azure API Center." lightbox="../media/api-center-onboarding-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "ApiCenterOnboardingPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "apiCenterOnboardingPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ApiCenterOnboardingPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "apiCenterOnboardingPlugin"
+    }
+  ],
   "apiCenterOnboardingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/apicenteronboardingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenteronboardingplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
-    "workspaceName": "default",
+    "workspace": "default",
     "createApicEntryForNewApis": true
   }
 }
@@ -69,22 +72,31 @@ To connect to Azure API Center, the plugin uses Azure credentials (in this order
 
 If the plugin fails to get an access token to access Azure, it shows an error and Dev Proxy disables it. Sign in to Azure using either of these tools, and restart Dev Proxy to use the `ApiCenterOnboardingPlugin` plugin.
 
-If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
+If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ApiCenterOnboardingPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "apiCenterOnboardingPlugin"
+    }
+  ],
   "apiCenterOnboardingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/apicenteronboardingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenteronboardingplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",
-    "workspaceName": "@AZURE_APIC_WORKSPACE_NAME",
+    "workspace": "@AZURE_APIC_WORKSPACE_NAME",
     "createApicEntryForNewApis": true
   }
 }
 ```
 
-In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
 
 ## Next step
 

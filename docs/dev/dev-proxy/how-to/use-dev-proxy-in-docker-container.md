@@ -3,10 +3,23 @@ title: Use Dev Proxy in a Docker container
 description: How to use Dev Proxy in Docker
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/02/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Run Dev Proxy in Docker -->
+<!-- SOLUTION: Use Dev Proxy Docker image or add to existing image -->
+<!-- RESULT: Dev Proxy running in Docker container -->
+<!-- PLUGINS: various -->
+<!-- JOB: configure-proxy -->
+<!-- TIME: 15 minutes -->
+
 # Use Dev Proxy in a Docker container
+
+> **At a glance**  
+> **Goal:** Run Dev Proxy in Docker  
+> **Time:** 15 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** Docker installed
 
 When using Dev Proxy, you can choose to run it directly on your machine or in a Docker container. Running Dev Proxy in Docker is a great way to isolate it from your local environment. It also offers you a consistent way of using Dev Proxy between your local machine and CI/CD environments.
 
@@ -126,3 +139,9 @@ docker run \
     # specify the URLs to watch
     --urls-to-watch "https://example.com/*"
 ```
+
+## See also
+
+- [Use Dev Proxy with .NET applications running in Docker](./use-dev-proxy-with-dotnet-docker.md)
+- [Use Dev Proxy with Node.js applications running in Docker](./use-dev-proxy-with-nodejs-docker.md)
+- [Use Dev Proxy in CI/CD scenarios](./use-dev-proxy-in-ci-cd-overview.md)

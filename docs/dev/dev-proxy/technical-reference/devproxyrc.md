@@ -6,13 +6,17 @@ ms.author: garrytrinder
 ms.date: 04/30/2025
 ---
 
+<!-- INTENT: Reference for devproxyrc.json configuration file structure -->
+
 # devproxyrc
 
 Default Dev Proxy configuration file.
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -30,9 +34,9 @@ Default Dev Proxy configuration file.
     "https://jsonplaceholder.typicode.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "devproxy-errors.json",
-    "rate": 50,
+    "rate": 50
   },
   "logLevel": "information",
   "newVersionNotification": "stable",

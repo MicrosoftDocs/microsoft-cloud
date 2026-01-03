@@ -6,7 +6,20 @@ ms.author: garrytrinder
 ms.date: 1/09/2024
 ---
 
+<!-- INTENT: Migrate to Graph JS SDK -->
+<!-- SOLUTION: Follow guidance from GraphSdkGuidancePlugin -->
+<!-- RESULT: Code uses Graph SDK instead of raw HTTP calls -->
+<!-- PLUGINS: none -->
+<!-- JOB: improve-code -->
+<!-- TIME: 30 minutes -->
+
 # Update my application code to use Microsoft Graph JavaScript SDK
+
+> **At a glance**  
+> **Goal:** Migrate to Graph JS SDK  
+> **Time:** 30 minutes  
+> **Plugins:** None  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 The Microsoft Graph JavaScript SDK comes with features that simplifies your code and let you focus on building your app. 
 
@@ -163,3 +176,9 @@ An easier way to handle throttling, and other errors, is to use the Graph JavaSc
 const json = await graphClient.api('/me').get();
 // do something here
 ```
+
+## See also
+
+- [Microsoft Graph JavaScript SDK documentation](/graph/sdks/sdks-overview)
+- [Simulate throttling on Microsoft 365](./simulate-throttling-microsoft-365.md)
+- [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md)

@@ -7,6 +7,8 @@ ms.date: 10/28/2025
 ms.topic: overview
 ---
 
+<!-- INTENT: Navigate technical reference docs for plugins, commands, and configuration -->
+
 # Technical reference for Dev Proxy
 
 This section contains technical reference for Dev Proxy plugins and configuration options.

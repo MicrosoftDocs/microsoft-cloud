@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Best practices for handling API throttling (retries, backoff, caching) -->
+
 # How to handle API throttling
 
 [API throttling](./what-is-throttling.md) is a common challenge that developers face when they build applications that rely on cloud APIs. Here are some common techniques that you can use to handle API throttling in your applications:

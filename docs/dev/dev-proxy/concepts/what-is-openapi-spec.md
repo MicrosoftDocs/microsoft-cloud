@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/15/2024
 ---
 
+<!-- INTENT: Understand OpenAPI specifications for API documentation -->
+
 # What is an OpenAPI spec?
 
 OpenAPI Specification, formerly known as Swagger, describes various aspects of an API. An OpenAPI specification (spec) describes the API's endpoints, parameters, and responses. OpenAPI specs are written in YAML or JSON and are used by tools to generate documentation, test cases, and client libraries. By having an OpenAPI spec, API builders can ensure that their API is accurately described, more accessible, and easier to integrate across a wide range of applications and services.

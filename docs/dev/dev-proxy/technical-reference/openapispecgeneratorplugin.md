@@ -3,8 +3,13 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/28/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Generate OpenAPI spec from intercepted API traffic -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: TypeSpecGeneratorPlugin, MarkdownReporter, JsonReporter -->
+<!-- USE-WHEN: Reverse-engineering API specs from undocumented APIs -->
 
 # OpenApiSpecGeneratorPlugin
 
@@ -12,23 +17,21 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 
 :::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "OpenApiSpecGeneratorPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "openApiSpecGeneratorPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "OpenApiSpecGeneratorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "openApiSpecGeneratorPlugin"
+    }
+  ],
   "openApiSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openapispecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
     "ignoreResponseTypes": false,
     "specVersion": "v3_0",

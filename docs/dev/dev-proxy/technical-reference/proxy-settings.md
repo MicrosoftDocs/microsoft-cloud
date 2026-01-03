@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 3/12/2025
 ---
 
+<!-- INTENT: Configure Dev Proxy behavior (ports, logging, rate, etc.) -->
+
 # Proxy settings
 
 Dev Proxy comes with several settings that you can use to control how the proxy should run.

@@ -3,10 +3,23 @@ title: Use Dev Proxy with JavaScript Azure Functions
 description: How to use Dev Proxy with JavaScript Azure Functions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/03/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Use Dev Proxy with JS Azure Functions -->
+<!-- SOLUTION: Set HTTP_PROXY in local.settings.json -->
+<!-- RESULT: JS Azure Functions HTTP requests intercepted -->
+<!-- PLUGINS: various -->
+<!-- JOB: intercept-requests -->
+<!-- TIME: 10 minutes -->
+
 # Use Dev Proxy with JavaScript Azure Functions
+
+> **At a glance**  
+> **Goal:** Use Dev Proxy with JS Azure Functions  
+> **Time:** 10 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Azure Functions Core Tools
 
 If you build Azure Functions using JavaScript and want to use Dev Proxy, follow the general guidance for [using Dev Proxy with Node.js applications](./use-dev-proxy-with-nodejs.md).
 
@@ -18,6 +31,8 @@ If you build Azure Functions using JavaScript and want to use Dev Proxy, follow 
 > ```
 
 To be able to easily switch between using Dev Proxy in development and not using it in production, you can best configure the proxy in your Azure Functions app using environment variables. Change the `local.settings.json` file to include the `HTTPS_PROXY` environment variable. Additionally, disable certificate validation to allow the Azure Functions app to trust the self-signed certificate used by Dev Proxy.
+
+**File:** local.settings.json
 
 ```json
 {
@@ -33,6 +48,8 @@ To be able to easily switch between using Dev Proxy in development and not using
 ```
 
 In your Azure Functions app, use the `process.env` object to read the environment variables and configure the proxy for your HTTP requests.
+
+**File:** src/functions/MyFnHttpTrigger.ts
 
 ```javascript
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
@@ -55,3 +72,9 @@ app.http('MyFnHttpTrigger', {
     handler: MyFnHttpTrigger
 });
 ```
+
+## See also
+
+- [Use Dev Proxy with Node.js applications](./use-dev-proxy-with-nodejs.md)
+- [Use Dev Proxy with .NET Azure Functions](./use-dev-proxy-with-dotnet-azure-functions.md)
+- [Use Dev Proxy with Node.js applications running in Docker](./use-dev-proxy-with-nodejs-docker.md)

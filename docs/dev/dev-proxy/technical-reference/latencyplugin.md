@@ -3,8 +3,13 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/03/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Add artificial latency to API responses -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GenericRandomErrorPlugin, GraphRandomErrorPlugin, RateLimitingPlugin -->
+<!-- USE-WHEN: Testing slow network conditions or UI timeout handling -->
 
 # LatencyPlugin
 
@@ -12,23 +17,21 @@ Delays responses by a random number of milliseconds from the configured range.
 
 :::image type="content" source="../media/latency-plugin.png" alt-text="Dev Proxy simulating latency for an API request." lightbox="../media/latency-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "LatencyPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "latencyPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "LatencyPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "latencyPlugin"
+    }
+  ],
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }

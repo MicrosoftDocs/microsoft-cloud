@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Configure rate limiting policies in Azure API Management -->
+
 # How to implement rate limiting in Azure API Management
 
 By using [rate limiting](./what-is-rate-limiting.md), you can limit the number of API calls that a user or service can make in a specific time period. Rate limiting helps you ensure fair usage and prevents any single user or service from monopolizing the API resources. Azure API Management provides a convenient way to implement rate limiting for your APIs.

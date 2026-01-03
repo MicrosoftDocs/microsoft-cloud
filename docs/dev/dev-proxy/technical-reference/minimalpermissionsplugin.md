@@ -3,8 +3,13 @@ title: MinimalPermissionsPlugin
 description: MinimalPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/22/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Detect minimal permissions using local OpenAPI specs -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: MinimalPermissionsGuidancePlugin, MarkdownReporter, JsonReporter -->
+<!-- USE-WHEN: Auditing API permissions without Azure API Center -->
 
 # MinimalPermissionsPlugin
 
@@ -12,23 +17,21 @@ Detects the minimal permissions needed to perform the specified API operations. 
 
 :::image type="content" source="../media/minimal-permissions-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "MinimalPermissionsPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "minimalPermissionsPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MinimalPermissionsPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "minimalPermissionsPlugin"
+    }
+  ],
   "minimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/minimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/minimalpermissionsplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs"
   }
 }
@@ -87,7 +90,7 @@ To define permissions for your APIs, include them in the OpenAPI definition of y
     "schemas": {
       "Customer": {
         "type": "object",
-        // [...] trimmed for brevity
+        "properties": {}
       }
     }
   },

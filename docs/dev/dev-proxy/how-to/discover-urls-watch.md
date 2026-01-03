@@ -3,10 +3,23 @@ title: Discover URLs to watch
 description: How to find out which URLs your app is calling and how to configure the Dev Proxy to simulate behaviors for them.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/28/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Find which URLs my app calls to configure Dev Proxy -->
+<!-- SOLUTION: Enable UrlDiscoveryPlugin and run app normally -->
+<!-- RESULT: Report listing all URLs the app called -->
+<!-- PLUGINS: UrlDiscoveryPlugin, PlainTextReporter -->
+<!-- JOB: analyze-usage -->
+<!-- TIME: 5 minutes -->
+
 # Discover URLs to watch
+
+> **At a glance**  
+> **Goal:** Identify which URLs your app calls to configure Dev Proxy  
+> **Time:** 5 minutes  
+> **Plugins:** [UrlDiscoveryPlugin](../technical-reference/urldiscoveryplugin.md), [PlainTextReporter](../technical-reference/plaintextreporter.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Dev Proxy allows you to simulate behaviors for APIs. To do that, you need to know which URLs your app is calling and configure Dev Proxy to intercept them.
 
@@ -31,3 +44,9 @@ Learn more about the UrlDiscoveryPlugin.
 
 > [!div class="nextstepaction"]
 > [UrlDiscoveryPlugin](../technical-reference/urldiscoveryplugin.md)
+
+## See also
+
+- [Intercept requests from specific processes](./intercept-requests-from-specific-processes.md) - Filter by process
+- [UrlDiscoveryPlugin](../technical-reference/urldiscoveryplugin.md) - Full reference
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

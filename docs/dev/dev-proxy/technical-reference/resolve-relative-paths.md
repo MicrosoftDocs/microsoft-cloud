@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 07/14/2025
 ---
 
+<!-- INTENT: Understand how file paths are resolved in Dev Proxy config -->
+
 # Resolve relative paths
 
 All file paths used in configuration files (`devproxyrc.json`) are relative to the location of the configuration file.

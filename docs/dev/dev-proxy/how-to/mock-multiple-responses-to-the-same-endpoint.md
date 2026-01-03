@@ -3,16 +3,31 @@ title: Mock multiple responses to the same endpoint
 description: How to mock multiple responses to the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Return different mocks based on URL patterns -->
+<!-- SOLUTION: Use URL wildcards or query params in mock definitions -->
+<!-- RESULT: Different responses returned based on URL pattern match -->
+<!-- PLUGINS: MockResponsePlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 10 minutes -->
 
 # Mock multiple responses to the same endpoint
 
+> **At a glance**  
+> **Goal:** Return different mocks based on URL patterns  
+> **Time:** 10 minutes  
+> **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
+
 When defining mock responses, you can define a specific URL to mock, but also a URL pattern by replacing part of the URL with an `*` (asterisk), for example:
+
+**File:** `mocks.json`
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -46,9 +61,11 @@ would respond to`GET` requests for `https://graph.microsoft.com/v1.0/users/bob@c
 
 If a URL of a mock response contains an `*`, the proxy considers it a regular expression, where each `*` is converted into a `.*`, basically matching any sequence of characters. Expanding wildcards is important to keep in mind, because if a pattern is too broad and defined before more specific mocks, it could unintentionally return unexpected responses, for example:
 
+**File:** `mocks.json` (incorrect ordering)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -104,9 +121,11 @@ If a URL of a mock response contains an `*`, the proxy considers it a regular ex
 
 for request `GET https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-3c356e68a038`, the proxy would return `Adele Vance` instead of `Megan Bowen`, because the asterisk at the end matches any series of characters. The correct way to define these responses, would be to change their order in the array:
 
+**File:** `mocks.json` (correct ordering)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -162,3 +181,9 @@ for request `GET https://graph.microsoft.com/v1.0/users/48d31887-5fad-4d73-a9f5-
 
 > [!TIP]
 > As a rule of thumb, define the mocks with the longest (most specific) URLs first. Put mocks with shorter URLs and URLs with wildcards (less specific) towards the end of the array.
+
+## See also
+
+- [Mock responses](./mock-responses.md)
+- [MockResponsePlugin](../technical-reference/mockresponseplugin.md)
+- [Mock responses that return binary data](./mock-responses-that-return-binary-data.md)

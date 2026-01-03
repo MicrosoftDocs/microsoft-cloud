@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 02/05/2025
 ---
 
+<!-- INTENT: Understand how Dev Proxy plugins work (intercepting, reporting, reporters) -->
+
 # Plugin architecture
 
 A plugin is a .NET class registered with Dev Proxy that introduces a specific Dev Proxy behavior. A plugin can offer real-time guidance about API usage, simulate API behavior, analyze multiple API requests, or produce a report. Dev Proxy has three types of plugins:

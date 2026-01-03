@@ -7,6 +7,8 @@ ms.date: 02/05/2025
 ms.topic: get-started
 ---
 
+<!-- INTENT: Configure Dev Proxy with plugins and custom settings -->
+
 # Configure Dev Proxy
 
 Dev Proxy is highly configurable. It uses [plugins](../technical-reference/plugin-architecture.md) to implement functionality. You can combine any of the [standard plugins](../technical-reference/overview.md#plugins) and [build your own](../how-to/create-custom-plugin.md). By using plugins and custom configurations, you can tailor Dev Proxy to your specific needs. Dev Proxy includes a default configuration file, named `devproxyrc.json`. The file is located in Dev Proxy's installation folder.

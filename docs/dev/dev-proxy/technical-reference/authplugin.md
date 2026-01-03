@@ -3,8 +3,13 @@ title: AuthPlugin
 description: AuthPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate API key or OAuth2 authentication -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: CrudApiPlugin, MockResponsePlugin -->
+<!-- USE-WHEN: Testing authentication flows without real identity providers -->
 
 # AuthPlugin
 
@@ -12,23 +17,21 @@ Simulates authentication and authorization using API keys or OAuth2.
 
 :::image type="content" source="../media/auth-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating authentication using API key on an Azure Function running locally." lightbox="../media/auth-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "AuthPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "auth"
-}
-```
-
 ## Configuration example: API key
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "AuthPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "auth"
+    }
+  ],
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/authplugin.schema.json",
     "type": "apiKey",
     "apiKey": {
       "parameters": [
@@ -53,8 +56,17 @@ Simulates authentication and authorization using API keys or OAuth2.
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "AuthPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "auth"
+    }
+  ],
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/authplugin.schema.json",
     "type": "oauth2",
     "oauth2": {
       "metadataUrl": "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration",

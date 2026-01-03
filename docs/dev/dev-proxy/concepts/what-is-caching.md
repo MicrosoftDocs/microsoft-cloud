@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Understand caching concepts for API optimization -->
+
 # What is caching?
 
 Caching is a technique that's used to improve the performance and efficiency of an application by temporarily storing frequently accessed data in a location that's faster to retrieve than its original source. Caching helps you reduce the time it takes to retrieve data and reduce the load on the original data source.

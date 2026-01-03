@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 03/11/2024
 ---
 
+<!-- INTENT: Quick reference for Dev Proxy keyboard shortcuts -->
+
 # Keyboard shortcuts
 
 The following table describes the keyboard shortcuts available when the proxy is running.
