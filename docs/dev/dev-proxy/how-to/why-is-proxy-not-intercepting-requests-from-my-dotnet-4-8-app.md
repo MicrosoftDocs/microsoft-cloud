@@ -39,4 +39,4 @@ netsh winhttp reset proxy
 
 - [Use Dev Proxy with .NET applications](./use-dev-proxy-with-dotnet.md)
 - [No requests intercepted](./no-requests-intercepted.md)
-- [Intercept requests from specific processes](./intercept-requests-from-specific-process.md)
+- [Intercept requests from specific processes](./intercept-requests-from-specific-processes.md)

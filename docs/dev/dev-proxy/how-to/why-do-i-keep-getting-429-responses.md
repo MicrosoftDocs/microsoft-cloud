@@ -28,5 +28,5 @@ If you configure a lower failure rate, then a previously throttled request is pa
 ## See also
 
 - [Change request failure rate](./change-request-failure-rate.md)
-- [Simulate throttling](./simulate-throttling.md)
+- [Simulate throttling](./simulate-throttling-microsoft-365.md)
 - [What is throttling?](../concepts/what-is-throttling.md)

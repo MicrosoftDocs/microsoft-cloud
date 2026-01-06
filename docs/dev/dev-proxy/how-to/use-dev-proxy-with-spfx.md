@@ -70,4 +70,4 @@ To avoid Dev Proxy blocking the requests made by the SharePoint Framework workbe
 
 - [Use preset configurations](./use-preset-configurations.md)
 - [Discover what URLs to intercept](./discover-urls-watch.md)
-- [Intercept requests from specific processes](./intercept-requests-from-specific-process.md)
+- [Intercept requests from specific processes](./intercept-requests-from-specific-processes.md)

@@ -41,7 +41,7 @@ Learn more about [configuring URLs to watch](../get-started/configure.md).
 
 Dev Proxy is running, is registered as a system proxy, the URL is included in the configuration, but it still doesn't intercept requests. Some apps don't automatically pick up system proxy settings, which can cause this issue. In this case, you need to configure your app to use Dev Proxy explicitly.
 
-See the section on [using Dev Proxy with different apps](./overview.md#use-dev-proxy) in this documentation.
+See the section on [using Dev Proxy with different apps](./overview.md#use-dev-proxy-with-your-stack) in this documentation.
 
 ## See also
 

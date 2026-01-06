@@ -248,4 +248,3 @@ $ curl https://vpfm55qw-8000.euw.devtunnels.ms/orders
 - [Simulate a CRUD API](./simulate-crud-api.md)
 - [CrudApiPlugin](../technical-reference/crudapiplugin.md)
 - [Dev Tunnels documentation](/azure/developer/dev-tunnels/)
-```

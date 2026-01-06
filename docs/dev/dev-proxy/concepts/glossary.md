@@ -4,7 +4,6 @@ description: Definitions of terms used in Dev Proxy documentation
 author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 01/03/2026
-ms.topic: concept
 ---
 
 <!-- INTENT: Define terminology consistently for users and LLMs -->
