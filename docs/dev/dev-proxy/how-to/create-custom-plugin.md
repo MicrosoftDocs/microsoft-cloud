@@ -89,7 +89,7 @@ Follow the next steps to create a new project:
     {
         public override string Name => nameof(CatchApiCallsPlugin);
 
-        public override Task BeforeRequestAsync(ProxyRequestArgs e)
+        public override Task BeforeRequestAsync(ProxyRequestArgs e, CancellationToken cancellationToken)
         {
             Logger.LogTrace("{Method} called", nameof(BeforeRequestAsync));
 
