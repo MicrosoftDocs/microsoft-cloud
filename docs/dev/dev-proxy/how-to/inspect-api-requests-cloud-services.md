@@ -3,10 +3,23 @@ title: Inspect API requests issued by cloud services
 description: How to use Dev Proxy and dev tunnels to intercept API requests that cloud services issue to cloud APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Inspect cloud service API requests locally -->
+<!-- SOLUTION: Use dev tunnels + RewritePlugin to redirect cloud requests -->
+<!-- RESULT: Cloud service requests routed through local Dev Proxy -->
+<!-- PLUGINS: RewritePlugin, DevToolsPlugin -->
+<!-- JOB: intercept-requests -->
+<!-- TIME: 20 minutes -->
+
 # Inspect API requests issued by cloud services
+
+> **At a glance**  
+> **Goal:** Inspect cloud service API requests locally  
+> **Time:** 20 minutes  
+> **Plugins:** [RewritePlugin](../technical-reference/rewriteplugin.md), [DevToolsPlugin](../technical-reference/devtoolsplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Dev Tunnels](/azure/developer/dev-tunnels/get-started)
 
 When you integrate your application with cloud services, one of the challenges you might face is understanding how the cloud service interacts with the APIs it uses. Being able to inspect API requests is especially important when you're troubleshooting issues or when you're trying to understand how the cloud service works. Typically, it's challenging, because you don't have access to the cloud service's runtime, and you also might not have access to the monitoring tools for the cloud API. By using Dev Proxy and dev tunnels, you can inspect the API requests that cloud services issue to cloud APIs.
 
@@ -39,9 +52,11 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
 
 1. Configure Dev Proxy to intercept requests to `https://jsonplaceholder.typicode.com` and `http://jsonplaceholder.typicode.local`:
 
+    **File:** devproxyrc.json
+
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
@@ -55,7 +70,7 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",
@@ -71,9 +86,11 @@ You can inspect the requests either by using dev tunnels inspections tools, or u
 
 1. Create a rewrite file named `devproxy-rewrites.json` that changes the URL of the intercepted requests:
 
+    **File:** devproxy-rewrites.json
+
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.rewritesfile.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.rewritesfile.schema.json",
       "rewrites": [
         {
           "in": {
@@ -128,9 +145,11 @@ First, let's configure Dev Proxy to inspect cloud API requests. Let's configure 
 
 1. Update the Dev Proxy configuration file to use the DevToolsPlugin:
 
+    **File:** devproxyrc.json
+
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "DevToolsPlugin",
@@ -149,7 +168,7 @@ First, let's configure Dev Proxy to inspect cloud API requests. Let's configure 
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",
@@ -179,9 +198,11 @@ Next, let's update Dev Proxy configuration to show the information about the rew
 
 1. Update the Dev Proxy configuration file by moving the DevToolsPlugin after the RewritePlugin:
 
+    **File:** devproxyrc.json
+
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
       "plugins": [
         {
           "name": "RewritePlugin",
@@ -200,7 +221,7 @@ Next, let's update Dev Proxy configuration to show the information about the rew
         "http://jsonplaceholder.typicode.local/*"
       ],
       "rewritePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.schema.json",
         "rewritesFile": "devproxy-rewrites.json"
       },
       "logLevel": "information",
@@ -231,3 +252,9 @@ Learn more about the RewritePlugin.
 
 > [!div class="nextstepaction"]
 > [RewritePlugin](../technical-reference/rewriteplugin.md)
+
+## See also
+
+- [Inspect requests and responses using Chrome DevTools](./inspect-requests-responses-chrome-devtools.md)
+- [DevToolsPlugin](../technical-reference/devtoolsplugin.md)
+- [Dev Tunnels documentation](/azure/developer/dev-tunnels/)

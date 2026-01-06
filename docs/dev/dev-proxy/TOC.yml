@@ -158,6 +158,8 @@
             href: how-to/use-dev-proxy-with-github-actions-language-model-usage-costs.md
     - name: Common problems
       items:
+      - name: Troubleshooting overview
+        href: how-to/troubleshooting.md
       - name: Dev Proxy doesn't intercept requests
         href: how-to/no-requests-intercepted.md
       - name: No random errors are thrown when using mocks
@@ -186,6 +188,8 @@
       href: how-to/uninstall.md
 - name: Concepts
   items:
+    - name: Glossary
+      href: concepts/glossary.md
     - name: What is a proxy?
       href: concepts/what-is-proxy.md
     - name: What is caching?

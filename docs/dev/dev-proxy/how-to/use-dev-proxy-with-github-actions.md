@@ -3,10 +3,23 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 07/09/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Use Dev Proxy in GitHub Actions -->
+<!-- SOLUTION: Add Dev Proxy GitHub Actions to workflow -->
+<!-- RESULT: Dev Proxy tests running in GitHub Actions -->
+<!-- PLUGINS: various -->
+<!-- JOB: automate-testing -->
+<!-- TIME: 15 minutes -->
+
 # Use Dev Proxy with GitHub Actions
+
+> **At a glance**  
+> **Goal:** Use Dev Proxy in GitHub Actions  
+> **Time:** 15 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), GitHub repository
 
 To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
 
@@ -154,3 +167,9 @@ To get the URL of the Dev Proxy API, use the `api-url` output from the `setup` o
 - name: Get Dev Proxy API URL
   run: echo "Dev Proxy API URL: ${{ steps.setup-devproxy.outputs.api-url }}"
 ```
+
+## See also
+
+- [Use Dev Proxy in CI/CD scenarios](./use-dev-proxy-in-ci-cd-overview.md)
+- [Use Dev Proxy with Azure Pipelines](./use-dev-proxy-with-azure-pipelines.md)
+- [Track language model usage and costs in GitHub Actions](./use-dev-proxy-with-github-actions-language-model-usage-costs.md)

@@ -3,10 +3,23 @@ title: Test my app with language model failures
 description: How to test your app with language model failures
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/11/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Test LLM failures like hallucinations -->
+<!-- SOLUTION: Enable LanguageModelFailurePlugin with failure types -->
+<!-- RESULT: LLM calls return configured failure responses -->
+<!-- PLUGINS: LanguageModelFailurePlugin -->
+<!-- JOB: test-error-handling -->
+<!-- TIME: 15 minutes -->
+
 # Test my app with language model failures
+
+> **At a glance**  
+> **Goal:** Test LLM failures like hallucinations  
+> **Time:** 15 minutes  
+> **Plugins:** [LanguageModelFailurePlugin](../technical-reference/languagemodelfailureplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When building apps that integrate with large language models (LLM), you should test how your app handles various LLM failure scenarios. Dev Proxy allows you to simulate realistic language model failures on any LLM API that you use in your app using the [LanguageModelFailurePlugin](../technical-reference/languagemodelfailureplugin.md).
 
@@ -14,9 +27,11 @@ When building apps that integrate with large language models (LLM), you should t
 
 To start, enable the `LanguageModelFailurePlugin` in your configuration file.
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelFailurePlugin",
@@ -37,9 +52,11 @@ With this basic configuration, the plugin randomly selects from all available fa
 
 To test specific failure scenarios, configure the plugin to use particular failure types:
 
+**File:** devproxyrc.json (complete with failure types)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelFailurePlugin",
@@ -53,7 +70,7 @@ To test specific failure scenarios, configure the plugin to use particular failu
     }
   ],
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "Hallucination",
       "PlausibleIncorrect",
@@ -69,9 +86,11 @@ This configuration only simulates incorrect information, plausible but incorrect
 
 You can test different LLM APIs by configuring multiple instances of the plugin with different URL patterns:
 
+**File:** devproxyrc.json (multiple plugin instances)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelFailurePlugin",
@@ -93,11 +112,11 @@ You can test different LLM APIs by configuring multiple instances of the plugin 
     }
   ],
   "openaiFailures": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": ["Hallucination", "OutdatedInformation"]
   },
   "ollamaFailures": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": ["Overgeneralization", "IncorrectFormatStyle"]
   }
 }
@@ -114,10 +133,12 @@ Here are some recommended failure combinations for different testing scenarios:
 
 Test how your app handles incorrect or misleading information:
 
+**File:** devproxyrc.json (languageModelFailurePlugin section only)
+
 ```json
 {
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "Hallucination",
       "PlausibleIncorrect",
@@ -132,10 +153,12 @@ Test how your app handles incorrect or misleading information:
 
 Test how your app responds to biased or stereotypical content:
 
+**File:** devproxyrc.json (languageModelFailurePlugin section only)
+
 ```json
 {
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "BiasStereotyping",
       "Overgeneralization"
@@ -148,10 +171,12 @@ Test how your app responds to biased or stereotypical content:
 
 Test how your app handles responses that don't follow instructions:
 
+**File:** devproxyrc.json (languageModelFailurePlugin section only)
+
 ```json
 {
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "FailureFollowInstructions",
       "Misinterpretation",
@@ -165,10 +190,12 @@ Test how your app handles responses that don't follow instructions:
 
 Test how your app handles vague or overly complex responses:
 
+**File:** devproxyrc.json (languageModelFailurePlugin section only)
+
 ```json
 {
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "AmbiguityVagueness",
       "OverSpecification",
@@ -207,10 +234,12 @@ You can create custom failure scenarios by adding `.prompty` files to the `~appF
 
 1. Reference it in your configuration as `TechnicalJargonOveruse`
 
+    **File:** devproxyrc.json (languageModelFailurePlugin section only)
+
     ```json
     {
       "languageModelFailurePlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnetdev-proxy/main/schemas/v1.0.0languagemodelfailureplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
         "failures": [
           "TechnicalJargonOveruse",
           "Hallucination"

@@ -3,10 +3,23 @@ title: Refresh local Microsoft Graph database
 description: How to refresh the local Microsoft Graph database
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Update local Microsoft Graph metadata -->
+<!-- SOLUTION: Run devproxy msgraphdb update command -->
+<!-- RESULT: Local Graph database refreshed with latest metadata -->
+<!-- PLUGINS: GraphSelectGuidancePlugin -->
+<!-- JOB: configure-proxy -->
+<!-- TIME: 5 minutes -->
+
 # Refresh local Microsoft Graph database
+
+> **At a glance**  
+> **Goal:** Update local Microsoft Graph metadata  
+> **Time:** 5 minutes  
+> **Plugins:** [GraphSelectGuidancePlugin](../technical-reference/GraphSelectGuidancePlugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 The [GraphSelectGuidancePlugin](../technical-reference/GraphSelectGuidancePlugin.md) uses a local SQLite database to store the OpenAPI specifications for both the v1.0 and beta endpoints of Microsoft Graph. This database is automatically created and updated for you, but there maybe occasions when you want to refresh this database yourself.
 
@@ -24,3 +37,9 @@ Filling database...
 Inserted 17306 endpoints in the database
 Microsoft Graph database successfully updated
 ```
+
+## See also
+
+- [GraphSelectGuidancePlugin](../technical-reference/GraphSelectGuidancePlugin.md)
+- [msgraphdb command](../technical-reference/msgraphdb.md)
+- [SQLite Error 11: database disk image is malformed](./sqlite-error-11-database-disk-image-is-malformed.md)

@@ -3,10 +3,23 @@ title: Simulate Azure OpenAI API
 description: How to simulate Azure OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/14/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Simulate Azure OpenAI using local LLM -->
+<!-- SOLUTION: Enable OpenAIMockResponsePlugin with local LLM endpoint -->
+<!-- RESULT: Azure OpenAI calls answered by local LLM -->
+<!-- PLUGINS: OpenAIMockResponsePlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 15 minutes -->
+
 # Simulate Azure OpenAI API
+
+> **At a glance**  
+> **Goal:** Simulate Azure OpenAI using local LLM  
+> **Time:** 15 minutes  
+> **Plugins:** [OpenAIMockResponsePlugin](../technical-reference/openaimockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Local language model](./use-language-model.md)
 
 When you build apps connected to Azure OpenAI, often, only a portion of the app interacts with the Azure OpenAI API. When you work on the portions of the app that don't require real replies from Azure OpenAI API, you can simulate the responses using Dev Proxy. Using simulated responses allows you to avoid incurring unnecessary costs. The `OpenAIMockResponsePlugin` uses a local language model running on your machine to simulate responses from Azure OpenAI API.
 
@@ -23,9 +36,11 @@ By default, Dev Proxy uses the llama3.2 language model running on Ollama. To use
 
 To simulate Azure OpenAI API responses using Dev Proxy, you need to enable the `OpenAIMockResponsePlugin` in the `devproxyrc.json` file.
 
+**File:** `devproxyrc.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -38,6 +53,8 @@ To simulate Azure OpenAI API responses using Dev Proxy, you need to enable the `
 
 Next, configure Dev Proxy to intercept requests to Azure OpenAI API. For simplicity, use wildcards to intercept requests to all deployments.
 
+**File:** devproxyrc.json
+
 ```json
 {
   // [...] trimmed for brevity
@@ -48,6 +65,8 @@ Next, configure Dev Proxy to intercept requests to Azure OpenAI API. For simplic
 ```
 
 Finally, configure Dev Proxy to use a local language model.
+
+**File:** devproxyrc.json
 
 ```json
 {
@@ -60,9 +79,11 @@ Finally, configure Dev Proxy to use a local language model.
 
 The complete configuration file looks like this.
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

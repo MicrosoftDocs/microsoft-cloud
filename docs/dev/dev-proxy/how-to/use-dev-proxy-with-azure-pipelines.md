@@ -3,10 +3,23 @@ title: Use Dev Proxy with Azure Pipelines
 description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/09/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Use Dev Proxy in Azure Pipelines -->
+<!-- SOLUTION: Configure pipeline tasks to install and run Dev Proxy -->
+<!-- RESULT: Dev Proxy tests running in Azure Pipelines -->
+<!-- PLUGINS: various -->
+<!-- JOB: automate-testing -->
+<!-- TIME: 20 minutes -->
+
 # Use Dev Proxy with Azure Pipelines
+
+> **At a glance**  
+> **Goal:** Use Dev Proxy in Azure Pipelines  
+> **Time:** 20 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Azure DevOps
 
 Using Dev Proxy with Azure Pipelines is a great way to test your applications in a controlled environment. Following these steps, you can use Dev Proxy with your Azure Pipelines.
 
@@ -139,3 +152,9 @@ steps:
     cat devproxy.log
   displayName: 'Show Dev Proxy logs'
 ```
+
+## See also
+
+- [Use Dev Proxy in CI/CD scenarios](./use-dev-proxy-in-ci-cd-overview.md)
+- [Use Dev Proxy with GitHub Actions](./use-dev-proxy-with-github-actions.md)
+- [Dev Proxy API](../technical-reference/proxy-api.md)

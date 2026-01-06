@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Understand chaos testing/engineering for app resilience -->
+
 # What is chaos testing?
 
 Chaos testing is a technique that's used to test the resilience of software systems by introducing unexpected failures or disruptions. Chaos testing is also known as chaos engineering. The goal of chaos testing is to identify weaknesses and improve your app's resilience.

@@ -3,8 +3,13 @@ title: ODSPSearchGuidancePlugin
 description: ODSPSearchGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/16/2024
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Warn about deprecated OneDrive/SharePoint search APIs -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphSelectGuidancePlugin -->
+<!-- USE-WHEN: Migrating from legacy search APIs to Microsoft Graph Search -->
 
 # ODSPSearchGuidancePlugin
 
@@ -23,13 +28,18 @@ This plugin detects the following requests:
 - `graph.microsoft.com/{version}/users/{user-id}/drive/root/search(q='{search-text}')`
 - `graph.microsoft.com/{version}/sites?search={query}`
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "ODSPSearchGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ODSPSearchGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ],
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
@@ -42,10 +52,6 @@ This plugin detects the following requests:
   ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

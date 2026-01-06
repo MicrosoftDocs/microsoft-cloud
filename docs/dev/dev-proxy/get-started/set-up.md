@@ -3,11 +3,15 @@ title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/07/2025
+ms.date: 01/03/2026
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
 ---
+
+<!-- INTENT: Install Dev Proxy and verify it works -->
+<!-- JOB: Get started with Dev Proxy -->
+<!-- TIME: 10 minutes -->
 
 # Set up Dev Proxy
 
@@ -185,6 +189,9 @@ The below steps show how to add the proxy to PATH when using bash shell. Dependi
 
 The first time you start Dev Proxy on your machine there are a few steps to follow to ensure that Dev Proxy can intercept requests from your machine and respond successfully. You won't have to repeat these steps after the first run.
 
+> [!NOTE]
+> **About the certificate**: Dev Proxy uses a local SSL certificate to decrypt HTTPS traffic *only on your machine*. This is how the proxy can see and modify API responses. The certificate is stored locally and Dev Proxy doesn't upload any data to Microsoft. For more details, see [Does Dev Proxy upload any data to Microsoft?](../how-to/Get-help-and-support.md)
+
 ::: zone pivot="client-operating-system-windows"
 
 1. **Start Dev Proxy**. Open a command prompt session. Enter `devproxy` and press <kbd>Enter</kbd>.
@@ -275,8 +282,34 @@ If Dev Proxy returns an error response, you see the error message in the output.
  oops  ╰ 403 Forbidden
 ```
 
+🎉 **You just simulated an API failure without changing any code!**
+
+Your app would have received this same error. Now imagine testing:
+
+- What if this happens to your checkout API?
+- What if the user's profile fails to load?
+
 > [!IMPORTANT]
 > If you don't see any output in the command prompt, it's likely that Dev Proxy isn't intercepting requests. Check the [common problems](../how-to/overview.md#common-problems) section for help.
+
+## Now test YOUR app
+
+You just saw Dev Proxy fail a request to the demo API. To test with your own app:
+
+1. **Find the API URL your app calls**. Check the Network tab in your browser's DevTools, or look for HTTP client calls in your code.
+2. **Run Dev Proxy with your URL**:
+
+   ```console
+   devproxy --urls-to-watch "https://your-api.com/*"
+   ```
+
+3. **Use your app normally**. Watch Dev Proxy inject failures into your API calls.
+
+Need help configuring Dev Proxy for your stack? See guides for:
+
+- [Node.js applications](../how-to/use-dev-proxy-with-nodejs.md)
+- [.NET applications](../how-to/use-dev-proxy-with-dotnet.md)
+- [SharePoint Framework](../how-to/use-dev-proxy-with-spfx.md)
 
 ## Stop Dev Proxy safely
 

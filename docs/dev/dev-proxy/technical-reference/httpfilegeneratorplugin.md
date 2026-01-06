@@ -3,8 +3,13 @@ title: HttpFileGeneratorPlugin
 description: HttpFileGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Generate HTTP files from intercepted requests -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: OpenApiSpecGeneratorPlugin, MockGeneratorPlugin -->
+<!-- USE-WHEN: Creating replayable API request collections -->
 
 # HttpFileGeneratorPlugin
 
@@ -12,23 +17,21 @@ Generates HTTP file from the intercepted requests and responses.
 
 :::image type="content" source="../media/http-file-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated HTTP file." lightbox="../media/http-file-generator-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "HttpFileGeneratorPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "httpFileGeneratorPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "HttpFileGeneratorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "httpFileGeneratorPlugin"
+    }
+  ],
   "httpFileGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/httpfilegeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/httpfilegeneratorplugin.schema.json",
     "includeOptionsRequests": false
   }
 }

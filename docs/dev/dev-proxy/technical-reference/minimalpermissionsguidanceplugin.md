@@ -3,8 +3,13 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Compare JWT permissions against minimal scopes from local specs -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: MinimalPermissionsPlugin, MarkdownReporter, JsonReporter -->
+<!-- USE-WHEN: Identifying excessive permissions in production apps -->
 
 # MinimalPermissionsGuidancePlugin
 
@@ -12,23 +17,21 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 
 :::image type="content" source="../media/minimal-permissions-guidance-plugin.png" alt-text="Screenshot of a command line showing Dev Proxy checking if the recorded API requests use tokens minimal API permissions." lightbox="../media/minimal-permissions-guidance-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "MinimalPermissionsGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "minimalPermissionsGuidancePlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MinimalPermissionsGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "minimalPermissionsGuidancePlugin"
+    }
+  ],
   "minimalPermissionsGuidancePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/minimalpermissionsguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/minimalpermissionsguidanceplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs",
     "permissionsToExclude": [ 
       "profile", 
@@ -94,7 +97,7 @@ To define permissions for your APIs, include them in the OpenAPI definition of y
     "schemas": {
       "Customer": {
         "type": "object",
-        // [...] trimmed for brevity
+        "properties": {}
       }
     }
   },

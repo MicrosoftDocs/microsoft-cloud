@@ -3,8 +3,13 @@ title: LanguageModelFailurePlugin
 description: LanguageModelFailurePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/11/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate LLM failures like hallucinations and bias -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: OpenAIMockResponsePlugin, LanguageModelRateLimitingPlugin -->
+<!-- USE-WHEN: Testing AI app resilience to common LLM failure modes -->
 
 # LanguageModelFailurePlugin
 
@@ -12,27 +17,25 @@ Simulates various large language model (LLM) failure scenarios to test resilienc
 
 :::image type="content" source="../media/language-model-failure-plugin.png" alt-text="Screenshot of a command prompt with the Dev Proxy simulating a language model failure response for an LLM API request." lightbox="../media/language-model-failure-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "LanguageModelFailurePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "languageModelFailurePlugin",
-  "urlsToWatch": [
-    "https://api.openai.com/*",
-    "http://localhost:11434/*"
-  ]
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "LanguageModelFailurePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "languageModelFailurePlugin"
+    }
+  ],
+  "urlsToWatch": [
+    "https://api.openai.com/*",
+    "http://localhost:11434/*"
+  ],
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "Hallucination",
       "PlausibleIncorrect"

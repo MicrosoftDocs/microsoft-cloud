@@ -3,8 +3,13 @@ title: RewritePlugin
 description: RewritePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Rewrite request URLs using regex patterns -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: MockResponsePlugin, CrudApiPlugin -->
+<!-- USE-WHEN: Redirecting HTTP to HTTPS or changing API versions -->
 
 # RewritePlugin
 
@@ -12,23 +17,21 @@ Rewrites requests.
 
 :::image type="content" source="../media/rewrite-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy rewriting an incoming API request." lightbox="../media/rewrite-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "RewritePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "rewritePlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "RewritePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "rewritePlugin"
+    }
+  ],
   "rewritePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.schema.json",
     "rewritesFile": "rewrites.json"
   }
 }
@@ -54,7 +57,7 @@ Rewrite all requests from HTTP to HTTPS. In this context, **all** means all requ
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.rewritesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.rewritesfile.schema.json",
   "rewrites": [
     {
       "in": {
@@ -101,7 +104,7 @@ If you use capture groups in the regular expression in the **in** patterns, you 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rewriteplugin.rewritesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.rewritesfile.schema.json",
   "rewrites": [
     {
       "in": {

@@ -3,10 +3,22 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/17/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Create a dynamic mock API with create, read, update, delete operations -->
+<!-- SOLUTION: Enable CrudApiPlugin with data file -->
+<!-- RESULT: Working REST API with full CRUD operations -->
+<!-- PLUGINS: CrudApiPlugin -->
+<!-- JOB: mock-api -->
+
 # Simulate a CRUD API
+
+> **At a glance**  
+> **Goal:** Create a dynamic mock API with full CRUD operations  
+> **Time:** 15 minutes  
+> **Plugins:** [CrudApiPlugin](../technical-reference/crudapiplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When building apps, you often interact with backend APIs. Sometimes, these APIs aren't yet available, or other teams are updating them to meet the latest requirements. To avoid waiting, you typically create a mock API that returns the data you need. While this approach unblocks you, it requires you to spend time on building an API that you eventually replace with the real one. To avoid wasting time, you can use Dev Proxy to simulate a CRUD API and speed up development.
 
@@ -20,6 +32,8 @@ Say, you're building an app that allows users to manage customers. To get the da
 
 You start with enabling the `CrudApiPlugin` and configuring it to use the `customers-api.json` file.
 
+**File:** `devproxyrc.json` (plugin instance)
+
 ```json
 {
   "name": "CrudApiPlugin",
@@ -28,6 +42,8 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
   "configSection": "customersApi"
 }
 ```
+
+**File:** `devproxyrc.json` (config section)
 
 ```json
 {
@@ -39,9 +55,11 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
 
 In the `customers-api.json` file, you define the mock customers API.
 
+**File:** customers-api.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
@@ -81,6 +99,8 @@ In the `baseUrl` property, you define the base URL of the mock API. In the `data
 In your URLs, you use the `{customer-id}` parameter, which the plugin replaces with the actual customer ID from the URL. The plugin also uses the `{customer-id}` parameter in a JSONPath query to look up the customer in the data file.
 
 In the `customers-data.json` file, you define the mock customer data.
+
+**File:** `customers-data.json`
 
 ```json
 [
@@ -126,3 +146,10 @@ Learn more about the CrudApiPlugin.
 See also the related Dev Proxy samples:
 
 - [CRUD APIs with Northwind database data](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-northwinddb/)
+
+## See also
+
+- [Mock responses](./Mock-responses.md) - Return static mock responses
+- [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md) - Expose your mock API publicly
+- [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md) - Add authentication
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

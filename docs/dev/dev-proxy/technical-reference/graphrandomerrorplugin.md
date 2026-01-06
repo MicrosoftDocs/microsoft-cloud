@@ -3,8 +3,13 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/07/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate random errors from Microsoft Graph API -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphMinimalPermissionsPlugin, GraphSdkGuidancePlugin, LatencyPlugin -->
+<!-- USE-WHEN: Testing error handling for Microsoft Graph integrations -->
 
 # GraphRandomErrorPlugin
 
@@ -12,23 +17,21 @@ Fails requests made to Microsoft Graph with random errors.
 
 :::image type="content" source="../media/microsoft-graph-random-error.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating a random error for a Microsoft Graph request." lightbox="../media/microsoft-graph-random-error.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "GraphRandomErrorPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "graphRandomErrorsPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "GraphRandomErrorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "graphRandomErrorPlugin"
+    }
+  ],
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]
   }
 }

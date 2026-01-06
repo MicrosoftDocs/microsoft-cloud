@@ -3,10 +3,23 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/09/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Integrate Dev Proxy in CI/CD -->
+<!-- SOLUTION: Run Dev Proxy in pipeline with headless mode -->
+<!-- RESULT: Automated API testing in CI/CD pipeline -->
+<!-- PLUGINS: various -->
+<!-- JOB: automate-testing -->
+<!-- TIME: 30 minutes -->
+
 # Use Dev Proxy in CI/CD scenarios
+
+> **At a glance**  
+> **Goal:** Integrate Dev Proxy in CI/CD  
+> **Time:** 30 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Using Dev Proxy in CI/CD scenarios is a great way to test your applications in a controlled environment. When you combine Dev Proxy with tests that generate API requests in your application, you can cover a wide range of scenarios: from ensuring that your app doesn't use shadow- or nonproduction APIs to checking that it uses minimal Microsoft Graph permissions. While the exact configuration steps vary depending on your CI/CD system, here are some general principles that you should follow.
 
@@ -168,3 +181,9 @@ echo "Set proxy variables"
 export http_proxy=http://127.0.0.1:8000
 export https_proxy=http://127.0.0.1:8000
 ```
+
+## See also
+
+- [Use Dev Proxy with GitHub Actions](./use-dev-proxy-with-github-actions.md)
+- [Use Dev Proxy with Azure Pipelines](./use-dev-proxy-with-azure-pipelines.md)
+- [Dev Proxy API](../technical-reference/proxy-api.md)

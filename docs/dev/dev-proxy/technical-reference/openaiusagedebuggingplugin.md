@@ -3,26 +3,32 @@ title: OpenAIUsageDebuggingPlugin
 description: OpenAIUsageDebuggingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Log OpenAI usage metrics to CSV for debugging -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: OpenAITelemetryPlugin, LanguageModelRateLimitingPlugin -->
+<!-- USE-WHEN: Debugging token consumption and rate limit patterns -->
 
 # OpenAIUsageDebuggingPlugin
 
 Logs OpenAI API usage metrics to a CSV file for debugging and analysis purposes.
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "OpenAIUsageDebuggingPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "OpenAIUsageDebuggingPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

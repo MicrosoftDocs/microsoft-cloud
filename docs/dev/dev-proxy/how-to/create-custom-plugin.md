@@ -3,10 +3,23 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 06/26/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Build a custom Dev Proxy plugin -->
+<!-- SOLUTION: Create .NET class implementing IProxyPlugin interface -->
+<!-- RESULT: Custom plugin loaded by Dev Proxy for custom behaviors -->
+<!-- PLUGINS: custom -->
+<!-- JOB: extend-proxy -->
+<!-- TIME: 30 minutes -->
+
 # Create a custom plugin
+
+> **At a glance**  
+> **Goal:** Build a custom Dev Proxy plugin  
+> **Time:** 30 minutes  
+> **Plugins:** Custom plugin  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [.NET 9 SDK](https://dotnet.microsoft.com/download)
 
 In this article, you learn how to create a custom plugin for the Dev Proxy. By creating plugins for Dev Proxy, you can extend its functionality and add custom features to fit your needs.
 
@@ -76,7 +89,7 @@ Follow the next steps to create a new project:
     {
         public override string Name => nameof(CatchApiCallsPlugin);
 
-        public override Task BeforeRequestAsync(ProxyRequestArgs e)
+        public override Task BeforeRequestAsync(ProxyRequestArgs e, CancellationToken cancellationToken)
         {
             Logger.LogTrace("{Method} called", nameof(BeforeRequestAsync));
 
@@ -113,6 +126,8 @@ Follow the next steps to create a new project:
 To use your custom plugin, you need to add it to the Dev Proxy configuration file:
 
 1. Add the new plugin configuration in the `devproxyrc.json` file.
+
+    **File:** devproxyrc.json
 
     ```json
     {
@@ -207,6 +222,8 @@ You can extend your plugin's logic by adding custom configuration:
   
 1. Update your `devproxyrc.json` file to include the new configuration.
 
+    **File:** devproxyrc.json
+
     ```json
     {
       "plugins": [{
@@ -226,3 +243,9 @@ You can extend your plugin's logic by adding custom configuration:
     ```console
     devproxy
     ```
+
+## See also
+
+- [Plugin architecture](../technical-reference/plugin-architecture.md)
+- [Use preset configurations](./use-preset-configurations.md)
+- [Configure Dev Proxy](../get-started/configure.md)

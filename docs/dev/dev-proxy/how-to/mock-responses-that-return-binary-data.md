@@ -3,18 +3,33 @@ title: Mock responses that return binary data
 description: How to mock responses that return binary data
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Return binary files as mock responses -->
+<!-- SOLUTION: Use @-file syntax in mock body to reference binary file -->
+<!-- RESULT: Binary content returned as mock response -->
+<!-- PLUGINS: MockResponsePlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 5 minutes -->
+
 # Mock responses that return binary data
+
+> **At a glance**  
+> **Goal:** Return binary files as mock responses  
+> **Time:** 5 minutes  
+> **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 For some requests, you might want to respond with binary data like documents or images.
 
 In Dev Proxy, you can define a binary response by setting the `response.body` to a string value that starts with `@` followed by file path relative to the current working directory, for example:
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {

@@ -3,8 +3,13 @@ title: CachingGuidancePlugin
 description: CachingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Warn about repeated requests that could be cached -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: LatencyPlugin, ExecutionSummaryPlugin -->
+<!-- USE-WHEN: Optimizing API call patterns and identifying caching opportunities -->
 
 # CachingGuidancePlugin
 
@@ -12,23 +17,21 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 
 :::image type="content" source="../media/guidance-caching.png" alt-text="Screenshot of a command prompt with the Dev Proxy caching guidance plugin showing a warning about a request that's been issued too frequently." lightbox="../media/guidance-caching.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "CachingGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "cachingGuidance"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "CachingGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "cachingGuidance"
+    }
+  ],
   "cachingGuidance": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/cachingguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/cachingguidanceplugin.schema.json",
     "cacheThresholdSeconds": 5
   }
 }

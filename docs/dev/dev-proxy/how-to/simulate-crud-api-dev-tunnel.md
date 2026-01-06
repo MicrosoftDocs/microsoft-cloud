@@ -3,10 +3,23 @@ title: Simulate a CRUD API across the internet
 description: How to simulate a CRUD API across the internet.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/17/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Expose CRUD API via dev tunnels -->
+<!-- SOLUTION: Combine CrudApiPlugin with dev tunnel port forwarding -->
+<!-- RESULT: CRUD API accessible from internet -->
+<!-- PLUGINS: CrudApiPlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 15 minutes -->
+
 # Simulate a CRUD API across the internet
+
+> **At a glance**  
+> **Goal:** Expose CRUD API via dev tunnels  
+> **Time:** 15 minutes  
+> **Plugins:** [CrudApiPlugin](../technical-reference/crudapiplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Dev Tunnels](/azure/developer/dev-tunnels/get-started)
 
 Dev Proxy allows you to [simulate CRUD APIs](./simulate-crud-api.md) without having to build them. Simulating APIs using Dev Proxy allows you to save time and speed up development. When you integrate your API with cloud services, you need to expose your API across the internet so that the cloud service can access it. To expose a CRUD API simulated by Dev Proxy across the internet, use [Dev Tunnels](/azure/developer/dev-tunnels/). This article explains how to configure a CRUD API to be exposed across the internet using Dev Tunnels.
 
@@ -23,6 +36,8 @@ To expose a CRUD API simulated by Dev Proxy across the internet, start by config
 ### Define the CRUD API data
 
 Create a data file, named `orders-data.json`, that backs the CRUD API, for example:
+
+**File:** orders-data.json
 
 ```json
 [
@@ -63,9 +78,11 @@ Create a data file, named `orders-data.json`, that backs the CRUD API, for examp
 
 Next, create the API configuration file named `orders-api.json`, where you specify the CRUD API URL, its operations, and data file. Be sure to specify an HTTP URL in the `baseUrl` property:
 
+**File:** orders-api.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "http://api.northwind.com/orders",
   "auth": "none",
   "dataFile": "orders-data.json",
@@ -99,9 +116,11 @@ Next, create the API configuration file named `orders-api.json`, where you speci
 
 Next, create a Dev Proxy configuration file named `devproxyrc.json` with the `CrudApiPlugin` enabled. Configure Dev Proxy to listen to the URL that you configured for your CRUD API:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "CrudApiPlugin",
@@ -223,3 +242,9 @@ $ curl https://vpfm55qw-8000.euw.devtunnels.ms/orders
   }
 ]
 ```
+
+## See also
+
+- [Simulate a CRUD API](./simulate-crud-api.md)
+- [CrudApiPlugin](../technical-reference/crudapiplugin.md)
+- [Dev Tunnels documentation](/azure/developer/dev-tunnels/)

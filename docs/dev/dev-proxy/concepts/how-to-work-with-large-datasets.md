@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Optimize API usage with large datasets (pagination, filtering, caching) -->
+
 # How to work with large datasets
 
 When you work with APIs that expose large datasets, use techniques such as pagination, filtering, sorting, and caching to optimize API requests for performance.

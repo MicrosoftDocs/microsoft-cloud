@@ -3,10 +3,23 @@ title: How to check if my app is using production-level APIs
 description: How to check if my app is using production-level APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Ensure app uses production-ready APIs -->
+<!-- SOLUTION: Enable ApiCenterProductionVersionPlugin with API Center connection -->
+<!-- RESULT: Report showing non-production API versions being used -->
+<!-- PLUGINS: ApiCenterProductionVersionPlugin -->
+<!-- JOB: analyze-usage -->
+<!-- TIME: 20 minutes -->
+
 # How to check if my app is using production-level APIs
+
+> **At a glance**  
+> **Goal:** Ensure app uses production-ready APIs  
+> **Time:** 20 minutes  
+> **Plugins:** [ApiCenterProductionVersionPlugin](../technical-reference/apicenterproductionversionplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Azure API Center](/azure/api-center/)
 
 When building your app, you might be using APIs that are still in preview. You often use preview APIs, when you're integrating with new features that are being built along with your app. Before you release your app to production, you should ensure that you're using production-level APIs. When you use stable APIs, which are supported and covered by Service Level Agreements (SLAs), your app is more robust.
 
@@ -40,9 +53,11 @@ To check if your app is using production-level APIs, you need to enable the `Api
 
 In the `devproxyrc.json` file, add the following configuration:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
@@ -76,9 +91,11 @@ The `ApiCenterProductionVersionPlugin` produces a report of APIs that your app i
 
 Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",

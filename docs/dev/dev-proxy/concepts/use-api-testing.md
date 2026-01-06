@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 10/28/2024
 ---
 
+<!-- INTENT: Use Dev Proxy to test APIs with simulated errors, latency, and edge cases -->
+
 # Use Dev Proxy for API testing: validate API performance and reliability with confidence
 
 Testing APIs is essential to building resilient, high-performing applications that can handle real-world scenarios and unexpected conditions. Dev Proxy equips you with the tools to test your API's behavior, providing insights into its performance, error handling, and overall robustness before it's live. With Dev Proxy, you can thoroughly evaluate your API's reliability, identify potential issues, and optimize performance.

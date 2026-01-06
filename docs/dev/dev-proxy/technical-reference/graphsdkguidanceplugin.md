@@ -3,8 +3,13 @@ title: GraphSdkGuidancePlugin
 description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Suggest using Microsoft Graph SDK -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphSelectGuidancePlugin, GraphClientRequestIdGuidancePlugin, GraphBetaSupportGuidancePlugin -->
+<!-- USE-WHEN: Encouraging SDK adoption for better Graph API usage -->
 
 # GraphSdkGuidancePlugin
 
@@ -12,13 +17,18 @@ Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been 
 
 :::image type="content" source="../media/microsoft-graph-sdk-guidance.png" alt-text="Screenshot of a command prompt with Dev Proxy showing a tip suggesting using the Microsoft Graph SDK after intercepting a request to Microsoft Graph that doesn't use an SDK." lightbox="../media/microsoft-graph-sdk-guidance.png":::
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "GraphSdkGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "GraphSdkGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ],
   "urlsToWatch": [
     "https://graph.microsoft.com/v1.0/*",
     "https://graph.microsoft.com/beta/*",
@@ -31,10 +41,6 @@ Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been 
   ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

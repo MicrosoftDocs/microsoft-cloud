@@ -3,10 +3,23 @@ title: Test language model token limits
 description: How to test your app with language model token rate limiting
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/21/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Test LLM token rate limits -->
+<!-- SOLUTION: Enable LanguageModelRateLimitingPlugin with token limits -->
+<!-- RESULT: LLM calls fail when token limits exceeded -->
+<!-- PLUGINS: LanguageModelRateLimitingPlugin -->
+<!-- JOB: test-error-handling -->
+<!-- TIME: 10 minutes -->
+
 # Test language model token limits
+
+> **At a glance**  
+> **Goal:** Test LLM token rate limits  
+> **Time:** 10 minutes  
+> **Plugins:** [LanguageModelRateLimitingPlugin](../technical-reference/languagemodelratelimitingplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When building apps that use language models, you should test how your app handles token-based rate limiting. Dev Proxy allows you to simulate token limits on language model APIs using the [LanguageModelRateLimitingPlugin](../technical-reference/languagemodelratelimitingplugin.md).
 
@@ -14,9 +27,11 @@ When building apps that use language models, you should test how your app handle
 
 To start, enable the `LanguageModelRateLimitingPlugin` in your configuration file.
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelRateLimitingPlugin",
@@ -37,9 +52,11 @@ To start, enable the `LanguageModelRateLimitingPlugin` in your configuration fil
 
 Next, configure the plugin with your desired token limits and time window.
 
+**File:** devproxyrc.json (complete with token limits)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelRateLimitingPlugin",
@@ -53,7 +70,7 @@ Next, configure the plugin with your desired token limits and time window.
     }
   ],
   "languageModelRateLimitingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelratelimitingplugin.schema.json",
     "promptTokenLimit": 1000,
     "completionTokenLimit": 500,
     "resetTimeWindowSeconds": 60,
@@ -70,6 +87,8 @@ Start Dev Proxy with your configuration file and use your app to make language m
 
 You can also configure custom responses when token limits are exceeded by setting `whenLimitExceeded` to `Custom` and creating a custom response file.
 
+**File:** devproxyrc.json (languageModelRateLimitingPlugin section only)
+
 ```json
 {
   "languageModelRateLimitingPlugin": {
@@ -84,9 +103,11 @@ You can also configure custom responses when token limits are exceeded by settin
 
 Create the custom response file with your desired error format:
 
+**File:** token-limit-response.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelratelimitingplugincustomresponse.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
   "statusCode": 429,
   "headers": [
     {
@@ -118,6 +139,8 @@ The `@dynamic` value for retry-after headers automatically calculates the second
 
 ### Scenario 1: Low token limits for frequent testing
 
+**File:** devproxyrc.json (languageModelRateLimitingPlugin section only)
+
 ```json
 {
   "languageModelRateLimitingPlugin": {
@@ -132,6 +155,8 @@ Use low limits with short time windows to quickly trigger throttling during deve
 
 ### Scenario 2: Production-like limits
 
+**File:** devproxyrc.json (languageModelRateLimitingPlugin section only)
+
 ```json
 {
   "languageModelRateLimitingPlugin": {
@@ -145,6 +170,8 @@ Use low limits with short time windows to quickly trigger throttling during deve
 To test realistic token consumption patterns, configure limits similar to your production environment.
 
 ### Scenario 3: Asymmetric limits
+
+**File:** devproxyrc.json (languageModelRateLimitingPlugin section only)
 
 ```json
 {

@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 10/28/2024
 ---
 
+<!-- INTENT: Use Dev Proxy to validate APIs before publishing to production -->
+
 # Use Dev Proxy for API publishing: publish reliable, production-ready APIs
 
 Making your API accessible to consumers is a critical step, but API publishing is about more than just going live. To drive adoption and ensure high-quality user experiences, your API needs to be optimized, fully documented, and secure. Dev Proxy streamlines the API publishing process, helping you ensure your API is ready for production use and easy to consume by developers.

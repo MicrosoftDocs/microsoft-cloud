@@ -3,11 +3,24 @@ title: Uninstall
 description: How to uninstall Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/16/2025
+ms.date: 01/03/2026
 zone_pivot_groups: client-operating-system
 ---
 
+<!-- INTENT: Remove Dev Proxy from system -->
+<!-- SOLUTION: Use package manager uninstall or manual removal -->
+<!-- RESULT: Dev Proxy removed from system -->
+<!-- PLUGINS: none -->
+<!-- JOB: configure-proxy -->
+<!-- TIME: 5 minutes -->
+
 # Uninstall
+
+> **At a glance**  
+> **Goal:** Remove Dev Proxy from system  
+> **Time:** 5 minutes  
+> **Plugins:** None  
+> **Prerequisites:** Dev Proxy installed
 
 If you want to remove Dev Proxy from your machine, follow these steps.
 
@@ -95,3 +108,8 @@ If you haven't removed the Dev Proxy certificate automatically during uninstalla
     ```
 
 ::: zone-end
+
+## See also
+
+- [Set up Dev Proxy](../get-started/set-up.md)
+- [Configure Dev Proxy](../get-started/configure.md)

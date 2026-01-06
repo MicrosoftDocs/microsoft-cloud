@@ -3,10 +3,22 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Test how app handles API failures -->
+<!-- SOLUTION: Enable GenericRandomErrorPlugin with error file -->
+<!-- RESULT: App receives random HTTP errors at configured rate -->
+<!-- PLUGINS: GenericRandomErrorPlugin -->
+<!-- JOB: test-error-handling -->
+
 # Test my app with random errors
+
+> **At a glance**  
+> **Goal:** See how your app handles API errors  
+> **Time:** 5 minutes  
+> **Plugins:** [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When building apps, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any API that you use in your app using the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md).
 
@@ -14,9 +26,11 @@ When building apps, you should test how your app handles API errors. Dev Proxy a
 
 To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
+**File:** `devproxyrc.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -36,6 +50,8 @@ To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
 Next, configure the plugin to use a file that contains the errors you want to simulate.
 
+**File:** `devproxyrc.json` (add to same file)
+
 ```json
 {
   "errorsContosoApi": {
@@ -46,9 +62,11 @@ Next, configure the plugin to use a file that contains the errors you want to si
 
 Finally, in the errors file, define the list of error responses that you want to simulate. For example, to simulate a 500 error with a custom JSON response, use the following configuration:
 
+**File:** `errors-contoso-api.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -92,3 +110,11 @@ Learn more about the `GenericRandomErrorPlugin`.
 
 > [!div class="nextstepaction"]
 > [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md)
+
+## See also
+
+- [Simulate slow API responses](./Simulate-slow-API-responses.md) - Add latency to API calls
+- [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md) - Test rate limiting
+- [Change request failure rate](./Change-request-failure-rate.md) - Adjust how often errors occur
+- [Simulate errors from Microsoft Graph APIs](./simulate-errors-microsoft-graph-apis.md) - Microsoft Graph-specific errors
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

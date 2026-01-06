@@ -3,8 +3,13 @@ title: TypeSpecGeneratorPlugin
 description: TypeSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Generate TypeSpec files from intercepted API traffic -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: OpenApiSpecGeneratorPlugin, MockGeneratorPlugin -->
+<!-- USE-WHEN: Creating TypeSpec definitions from existing APIs -->
 
 # TypeSpecGeneratorPlugin
 
@@ -12,23 +17,21 @@ Generates TypeSpec files from the intercepted requests and responses.
 
 :::image type="content" source="../media/type-spec-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated TypeSpec file." lightbox="../media/type-spec-generator-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "TypeSpecGeneratorPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "typeSpecGeneratorPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "TypeSpecGeneratorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "typeSpecGeneratorPlugin"
+    }
+  ],
   "typeSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/typespecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/typespecgeneratorplugin.schema.json",
     "ignoreResponseTypes": false
   }
 }
