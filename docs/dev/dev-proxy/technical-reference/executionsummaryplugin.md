@@ -3,8 +3,13 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Generate summary report of intercepted requests -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: MarkdownReporter, JsonReporter, PlainTextReporter -->
+<!-- USE-WHEN: Analyzing API usage patterns after recording -->
 
 # ExecutionSummaryPlugin
 
@@ -17,23 +22,21 @@ Creates a summary of the requests that pass through the proxy.
 
 :::image type="content" source="../media/execution-summary-2.png" alt-text="Screenshot of a command prompt with the summary of the requests intercepted by Dev Proxy." lightbox="../media/execution-summary-2.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "ExecutionSummaryPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "executionSummaryPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "ExecutionSummaryPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "executionSummaryPlugin"
+    }
+  ],
   "executionSummaryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/executionsummaryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }

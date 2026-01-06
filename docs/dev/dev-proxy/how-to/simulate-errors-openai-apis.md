@@ -3,10 +3,23 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/14/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Test OpenAI API error handling -->
+<!-- SOLUTION: Enable GenericRandomErrorPlugin with OpenAI error file -->
+<!-- RESULT: App receives simulated OpenAI errors -->
+<!-- PLUGINS: GenericRandomErrorPlugin -->
+<!-- JOB: test-error-handling -->
+<!-- TIME: 10 minutes -->
+
 # Simulate errors from OpenAI APIs
+
+> **At a glance**  
+> **Goal:** Test OpenAI API error handling  
+> **Time:** 10 minutes  
+> **Plugins:** [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When you use OpenAI APIs in your app, you should test how your app handles API errors. Dev Proxy allows you to simulate errors on any OpenAI API using the [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md).
 
@@ -17,9 +30,11 @@ In the Dev Proxy install folder, locate the `config` folder. In the `config` fol
 
 Create a new object in the `plugins` array referencing the `GenericRandomErrorPlugin`. Define the OpenAI API URL for the plugin to watch for and add a reference to the plugin configuration.
 
+**File:** `openai-errors.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -36,9 +51,11 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 
 Create the plugin configuration object to provide the plugin with the location of the error responses.
 
+**File:** `openai-errors.json` (complete config)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -58,9 +75,11 @@ Create the plugin configuration object to provide the plugin with the location o
 
 In the same folder, create the `errors-openai.json` file. This file contains the possible error responses that can be returned when the plugin sends an error response.
 
+**File:** `errors-openai.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/genericrandomerrorplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -137,3 +156,9 @@ Learn more about the GenericRandomErrorPlugin.
 
 > [!div class="nextstepaction"]
 > [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md)
+
+## See also
+
+- [Test my app with random errors](./test-my-app-with-random-errors.md)
+- [Simulate OpenAI API](./simulate-openai.md)
+- [Simulate Azure OpenAI API](./simulate-azure-openai.md)

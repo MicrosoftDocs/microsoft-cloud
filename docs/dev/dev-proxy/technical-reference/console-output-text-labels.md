@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 05/24/2024
 ---
 
+<!-- INTENT: Understand Dev Proxy console output labels and their meanings -->
+
 # Console output text labels
 
 Dev Proxy uses the following text labels in the console output.

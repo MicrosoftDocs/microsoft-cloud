@@ -3,8 +3,13 @@ title: OpenAITelemetryPlugin
 description: OpenAITelemetryPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 11/18/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Log OpenAI telemetry to OpenTelemetry dashboards -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: OpenAIMockResponsePlugin, OpenAIUsageDebuggingPlugin, LanguageModelRateLimitingPlugin -->
+<!-- USE-WHEN: Monitoring LLM usage, costs, and performance -->
 
 # OpenAITelemetryPlugin
 
@@ -14,23 +19,21 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 :::image type="content" source="../media/openai-telemetry-openlit.png" alt-text="Screenshot of the OpenLIT dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-openlit.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "OpenAITelemetryPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "openAITelemetryPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "OpenAITelemetryPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "openAITelemetryPlugin"
+    }
+  ],
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
     "application": "My app",
     "includeCosts": true,
     "pricesFile": "prices.json"
@@ -55,7 +58,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/openaitelemetryplugin.pricesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.pricesfile.schema.json",
   "prices": {
     "gpt-3.5-turbo": {
       "input": 0.0015,

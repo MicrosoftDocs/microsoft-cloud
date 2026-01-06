@@ -3,10 +3,23 @@ title: Generate an HTTP file
 description: How to generate an HTTP file from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/25/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Create an HTTP file from intercepted API requests for reuse -->
+<!-- SOLUTION: Enable HttpFileGeneratorPlugin and record requests -->
+<!-- RESULT: .http file with all recorded requests for replay -->
+<!-- PLUGINS: HttpFileGeneratorPlugin -->
+<!-- JOB: analyze-usage -->
+<!-- TIME: 10 minutes -->
+
 # Generate an HTTP file
+
+> **At a glance**  
+> **Goal:** Create an HTTP file from intercepted API requests for reuse  
+> **Time:** 10 minutes  
+> **Plugins:** [HttpFileGeneratorPlugin](../technical-reference/httpfilegeneratorplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Dev Proxy allows you to generate an HTTP file from intercepted API requests and responses. Using HTTP files is especially useful for developers who want to simulate API behavior or share reproducible API interactions. The HTTP file includes all relevant request and response details, with sensitive information replaced by variables for security and reusability.
 
@@ -14,8 +27,11 @@ To generate an HTTP file using Dev Proxy:
 
 1. In the configuration file, enable the `HttpFileGeneratorPlugin`:
 
+   **File:** devproxyrc.json
+
    ```json
    {
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
      "plugins": [
        {
          "name": "HttpFileGeneratorPlugin",
@@ -23,33 +39,43 @@ To generate an HTTP file using Dev Proxy:
          "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
          "configSection": "httpFileGeneratorPlugin"
        }
-     ]
-     // [...] shortened for brevity
-   }
-   ```
-
-1. Optionally, configure the plugin:
-
-   ```json
-   {
-     "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/httpfilegeneratorplugin.schema.json",
-       "includeOptionsRequests": false
-     }
-     // [...] shortened for brevity
-   }
-   ```
-
-   - `includeOptionsRequests`: Determines whether to include `OPTIONS` requests in the generated HTTP file. Default is `false`.
-
-1. In the configuration file, to the list of URLs to watch, add the URL of the API for which you want to generate an HTTP file:
-
-   ```json
-   {
+     ],
      "urlsToWatch": [
        "https://api.example.com/*"
-     ]
-     // [...] shortened for brevity
+     ],
+     "httpFileGeneratorPlugin": {
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/httpfilegeneratorplugin.schema.json",
+       "includeOptionsRequests": false
+     }
+   }
+   ```
+
+1. Optionally, configure the plugin by adding the `includeOptionsRequests` property to the `httpFileGeneratorPlugin` section. This property determines whether to include `OPTIONS` requests in the generated HTTP file. Default is `false`.
+
+1. In the configuration file, to the list of URLs to watch, add the URL of the API for which you want to generate an HTTP file.
+
+   The complete configuration file looks like this.
+
+   **File:** devproxyrc.json
+
+   ```json
+   {
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+     "plugins": [
+       {
+         "name": "HttpFileGeneratorPlugin",
+         "enabled": true,
+         "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+         "configSection": "httpFileGeneratorPlugin"
+       }
+     ],
+     "urlsToWatch": [
+       "https://api.example.com/*"
+     ],
+     "httpFileGeneratorPlugin": {
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/httpfilegeneratorplugin.schema.json",
+       "includeOptionsRequests": false
+     }
    }
    ```
 
@@ -88,3 +114,9 @@ Learn more about the HttpFileGeneratorPlugin.
 
 > [!div class="nextstepaction"]
 > [HttpFileGeneratorPlugin](../technical-reference/httpfilegeneratorplugin.md)
+
+## See also
+
+- [HttpFileGeneratorPlugin](../technical-reference/httpfilegeneratorplugin.md) - Full reference
+- [Record and export proxy activity](./record-and-export-proxy-activity.md) - Recording workflow
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

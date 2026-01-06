@@ -3,10 +3,23 @@ title: Dev Proxy doesn't intercept requests
 description: What to do when Dev Proxy is running, but doesn't intercept any requests.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/04/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Fix Dev Proxy not intercepting requests -->
+<!-- SOLUTION: Check urlsToWatch patterns and app proxy settings -->
+<!-- RESULT: Requests properly intercepted by Dev Proxy -->
+<!-- PLUGINS: none -->
+<!-- JOB: troubleshoot -->
+<!-- TIME: 5 minutes -->
+
 # Dev Proxy doesn't intercept requests
+
+> **At a glance**  
+> **Goal:** Fix Dev Proxy not intercepting requests  
+> **Time:** 5 minutes  
+> **Plugins:** None  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Dev Proxy is running, but no requests are intercepted. Several reasons can cause this issue.
 
@@ -28,4 +41,10 @@ Learn more about [configuring URLs to watch](../get-started/configure.md).
 
 Dev Proxy is running, is registered as a system proxy, the URL is included in the configuration, but it still doesn't intercept requests. Some apps don't automatically pick up system proxy settings, which can cause this issue. In this case, you need to configure your app to use Dev Proxy explicitly.
 
-See the section on [using Dev Proxy with different apps](./overview.md#use-dev-proxy) in this documentation.
+See the section on [using Dev Proxy with different apps](./overview.md#use-dev-proxy-with-your-stack) in this documentation.
+
+## See also
+
+- [Configure Dev Proxy](../get-started/configure.md)
+- [Intercept requests to localhost](./intercept-localhost-requests.md)
+- [Get help and support](./get-help-and-support.md)

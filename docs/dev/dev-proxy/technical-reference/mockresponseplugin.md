@@ -3,8 +3,13 @@ title: MockResponsePlugin
 description: MockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/24/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Return predefined mock responses for any API -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: MockGeneratorPlugin, LatencyPlugin, AuthPlugin -->
+<!-- USE-WHEN: Mocking non-Microsoft Graph APIs -->
 
 # MockResponsePlugin
 
@@ -12,23 +17,21 @@ Simulates responses.
 
 :::image type="content" source="../media/mock-response-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating response for a request to GitHub API." lightbox="../media/mock-response-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "MockResponsePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "mocksPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MockResponsePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "mocksPlugin"
+    }
+  ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -56,9 +59,11 @@ Following are examples of mock objects.
 
 Response to a request with a 200 OK response and a JSON body.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -96,9 +101,11 @@ Response to a request with a 200 OK response and a JSON body.
 
 Respond to a request with a 404 Not Found response.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -117,9 +124,11 @@ Respond to a request with a 404 Not Found response.
 
 Respond to a request with a binary image loaded from a file on disk.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -144,9 +153,11 @@ Respond to a request with a binary image loaded from a file on disk.
 
 Respond to a request only after the second time it's called.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -171,9 +182,11 @@ Respond to a request only after the second time it's called.
 
 Respond to a request that contains a specific string in the body.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -204,9 +217,11 @@ Respond to a request that contains a specific string in the body.
 
 Respond with data that mirrors values from the request body using `@request.body.*` placeholders.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.2.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {

@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 04/02/2025
 ---
 
+<!-- INTENT: Control Dev Proxy programmatically via its REST API -->
+
 # Proxy API
 
 Dev Proxy comes with a web API that allows you to interact with the proxy programmatically. The API is available on the port specified in the [proxy settings](./proxy-settings.md).

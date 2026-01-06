@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 10/28/2024
 ---
 
+<!-- INTENT: Use Dev Proxy to manage API versioning and deprecation -->
+
 # Use Dev Proxy for API versioning: seamlessly support API evolution
 
 As your API grows and evolves, managing different versions efficiently is essential to maintain compatibility, guide adoption of the latest features, and ensure secure and reliable API usage. Dev Proxy simplifies API versioning, providing tools that help you support current and deprecated versions, enforce production-ready standards, and keep your API documentation up to date for all consumers.

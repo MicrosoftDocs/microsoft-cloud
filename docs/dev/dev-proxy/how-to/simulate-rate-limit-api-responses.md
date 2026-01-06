@@ -3,10 +3,23 @@ title: Simulate Rate-Limit API responses
 description: How to simulate Rate-Limit API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/24/2024
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Simulate rate limiting behavior on any API -->
+<!-- SOLUTION: Enable RateLimitingPlugin with rate limit configuration -->
+<!-- RESULT: API returns 429 responses when rate limit exceeded -->
+<!-- PLUGINS: RateLimitingPlugin -->
+<!-- JOB: test-error-handling -->
+<!-- TIME: 10 minutes -->
+
 # Simulate Rate-Limit API responses
+
+> **At a glance**  
+> **Goal:** Simulate rate limiting behavior on any API  
+> **Time:** 10 minutes  
+> **Plugins:** [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Rate-Limit headers are used in HTTP responses to limit the number of requests that a client can make within a given time period.
 
@@ -19,6 +32,8 @@ The `RateLimit-Limit` response header field indicates the request-quota associat
 When you exceed rate limit, some APIs use custom behaviors, such as returning a `403 Forbidden` status code with a custom error message. Dev Proxy allows you to simulate these custom behaviors by using the `Custom` value for the `whenLimitExceeded` property.
 
 The following example shows how you can configure how you can configure [RateLimitingPlugin](../technical-reference/RateLimitingPlugin.md) in the [devproxyrc](../technical-reference/devproxyrc.md) file to simulate rate limits for the [GitHub API](https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api?apiVersion=2022-11-28#dealing-with-rate-limits).
+
+**File:** devproxyrc.json (rateLimiting config section)
 
 ```json
 {
@@ -38,6 +53,8 @@ The following example shows how you can configure how you can configure [RateLim
 ```
 
 The `customResponseFile` contains the response that the proxy returns when your app reached the rate limit.
+
+**File:** github-rate-limit-exceeded.json
 
 ```json
 {
@@ -61,3 +78,10 @@ Learn more about the `RateLimitingPlugin`.
 
 > [!div class="nextstepaction"]
 > [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md)
+
+## See also
+
+- [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md) - Full reference
+- [What is rate limiting](../concepts/what-is-rate-limiting.md) - Concepts
+- [How to handle rate limiting](../concepts/how-to-handle-rate-limiting.md) - Best practices
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

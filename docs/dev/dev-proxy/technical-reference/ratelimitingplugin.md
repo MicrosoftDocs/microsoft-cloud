@@ -3,8 +3,13 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 12/07/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate API rate limiting with configurable limits -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: LatencyPlugin, RetryAfterPlugin -->
+<!-- USE-WHEN: Testing rate limit handling before hitting production limits -->
 
 # RateLimitingPlugin
 
@@ -12,23 +17,21 @@ Simulates rate-limit behaviors.
 
 :::image type="content" source="../media/rate-limiting-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating rate limiting on GitHub APIs." lightbox="../media/rate-limiting-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "RateLimitingPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "rateLimiting"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "RateLimitingPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "rateLimiting"
+    }
+  ],
   "rateLimiting": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/ratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/ratelimitingplugin.schema.json",
     "costPerRequest": 2,
     "rateLimit": 120
   }

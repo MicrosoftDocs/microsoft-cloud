@@ -3,12 +3,33 @@ title: jwt create
 description: jwt create command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/02/2025
+ms.date: 01/03/2026
 ---
+
+<!-- INTENT: Reference for devproxy jwt create command -->
+<!-- COMMAND: devproxy jwt create -->
 
 # jwt create
 
 Creates a new JSON Web Token (JWT) for testing purposes.
+
+## Synopsis
+
+```text
+devproxy jwt create [options]
+
+Options:
+  -n, --name <name>        User name (default: Dev Proxy)
+  -i, --issuer <issuer>    Token issuer (default: dev-proxy)
+  -a, --audiences <url>    Audience URL (repeatable)
+  -r, --roles <role>       Role claim (repeatable)
+  -s, --scopes <scope>     Scope claim (repeatable)
+  --claims <name:value>    Custom claim (repeatable)
+  -v, --valid-for <mins>   Token validity in minutes (default: 60)
+  --signing-key <key>      Signing key (min 32 chars)
+  --log-level <level>      Logging level
+  -h, --help               Show help
+```
 
 ## Usage
 

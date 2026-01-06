@@ -3,8 +3,13 @@ title: MockRequestPlugin
 description: MockRequestPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Issue web requests from Dev Proxy (e.g., webhooks) -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: MockResponsePlugin, CrudApiPlugin -->
+<!-- USE-WHEN: Simulating webhook notifications or external triggers -->
 
 # MockRequestPlugin
 
@@ -14,23 +19,21 @@ To issue the configured request, press `w` in the command prompt session where D
 
 :::image type="content" source="../media/mock-request-plugin.png" alt-text="Screenshot of a command prompt split in two. The top part is showing Dev Proxy issuing a web request. The bottom part is showing an API that receives the request and prints the request body." lightbox="../media/mock-request-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "MockRequestPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "contosoNotification"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "MockRequestPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "contosoNotification"
+    }
+  ],
   "contosoNotification": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockrequestplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockrequestplugin.schema.json",
     "mockFile": "mock-request.json"
   }
 }
@@ -50,7 +53,7 @@ None
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockrequestplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockrequestplugin.mockfile.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",

@@ -6,6 +6,8 @@ ms.author: garrytrinder
 ms.date: 12/01/2023
 ---
 
+<!-- INTENT: Confirm Dev Proxy doesn't send data to Microsoft (privacy/security) -->
+
 # Does Dev Proxy upload any data to Microsoft
 
 No, it doesn't.

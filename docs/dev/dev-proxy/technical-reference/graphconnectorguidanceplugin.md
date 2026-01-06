@@ -3,8 +3,13 @@ title: GraphConnectorGuidancePlugin
 description: GraphConnectorGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/13/2024
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Provide guidance for Microsoft Graph connector development -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphMockResponsePlugin -->
+<!-- USE-WHEN: Building Microsoft Graph connectors for Copilot -->
 
 # GraphConnectorGuidancePlugin
 
@@ -18,13 +23,18 @@ Issue | Request | Level
 --- | --- | ---
 Schema missing one or more semantic labels required for Microsoft Copilot for Microsoft 365 | `PATCH https://graph.microsoft.com/v1.0/external/connections/{id}/schema` | Failure
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "GraphConnectorGuidancePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "GraphConnectorGuidancePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ],
   "urlsToWatch": [
     "https://graph.microsoft.com/*/external/connections/*/schema",
     "https://graph.microsoft.us/*/external/connections/*/schema",
@@ -33,10 +43,6 @@ Schema missing one or more semantic labels required for Microsoft Copilot for Mi
   ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

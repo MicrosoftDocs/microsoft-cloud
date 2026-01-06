@@ -3,10 +3,23 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/14/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Return different responses for sequential requests to the same endpoint -->
+<!-- SOLUTION: Use nth property in mock definition -->
+<!-- RESULT: Sequential requests get different responses -->
+<!-- PLUGINS: MockResponsePlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 10 minutes -->
+
 # Mock nth request
+
+> **At a glance**  
+> **Goal:** Return different responses for sequential requests to the same endpoint  
+> **Time:** 10 minutes  
+> **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Dev Proxy supports mocking n-th through the `nth` property on the [request](../technical-reference/mockresponseplugin.md#request-object) object.
 
@@ -18,9 +31,11 @@ Using the following mock file as an example, we can see that it contains two moc
 > [!TIP]
 > Mocks with the `nth` property should be first. Proxy uses mocks based on the first match.
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -67,3 +82,9 @@ Learn more about the MockResponsePlugin.
 See also the related Dev Proxy samples:
 
 - [Simulate creating a Microsoft Graph connector and its schema](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-microsoft-graph-connector/)
+
+## See also
+
+- [Mock responses](./mock-responses.md) - Complete mocking guide
+- [MockResponsePlugin](../technical-reference/mockresponseplugin.md) - nth request support
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

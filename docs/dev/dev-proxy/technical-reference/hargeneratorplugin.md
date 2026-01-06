@@ -3,30 +3,33 @@ title: HarGeneratorPlugin
 description: HarGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/28/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Generate HAR files from intercepted traffic -->
+<!-- PLUGIN-TYPE: Reporting -->
+<!-- WORKS-WITH: HttpFileGeneratorPlugin, OpenApiSpecGeneratorPlugin -->
+<!-- USE-WHEN: Exporting traffic for browser dev tools or sharing -->
 
 # HarGeneratorPlugin
 
 Generates HTTP Archive (HAR) files from the intercepted requests and responses.
 
-## Plugin instance definition
-
-```json
-{
-  "name": "HarGeneratorPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "harGeneratorPlugin"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "HarGeneratorPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "harGeneratorPlugin"
+    }
+  ],
   "harGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.3.0/hargeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/hargeneratorplugin.schema.json",
     "includeSensitiveInformation": false,
     "includeResponse": true
   }

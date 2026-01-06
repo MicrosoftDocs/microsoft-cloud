@@ -3,8 +3,13 @@ title: RetryAfterPlugin
 description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate Retry-After header after throttling -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: GraphRandomErrorPlugin, GenericRandomErrorPlugin, RateLimitingPlugin -->
+<!-- USE-WHEN: Testing retry logic compliance with Retry-After headers -->
 
 # RetryAfterPlugin
 
@@ -12,19 +17,20 @@ Simulates the `Retry-After` header sent by an API after throttling a request. Th
 
 :::image type="content" source="../media/retry-after-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy forcefully failing a request that's been issued before the retry-after period." lightbox="../media/retry-after-plugin.png":::
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "RetryAfterPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "RetryAfterPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

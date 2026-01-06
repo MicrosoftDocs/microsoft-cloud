@@ -3,8 +3,13 @@ title: OpenAIMockResponsePlugin
 description: OpenAIMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/30/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate Azure OpenAI/OpenAI responses using local LLM -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: LanguageModelFailurePlugin, LanguageModelRateLimitingPlugin, OpenAITelemetryPlugin -->
+<!-- USE-WHEN: Developing AI apps without incurring API costs -->
 
 # OpenAIMockResponsePlugin
 
@@ -12,19 +17,20 @@ Simulates responses from Azure OpenAI and OpenAI using a local language model.
 
 :::image type="content" source="../media/openai-mock-response-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating response for a request to Azure OpenAI API." lightbox="../media/openai-mock-response-plugin.png":::
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "OpenAIMockResponsePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "OpenAIMockResponsePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+    }
+  ]
 }
 ```
-
-## Configuration example
-
-None
 
 ## Configuration properties
 

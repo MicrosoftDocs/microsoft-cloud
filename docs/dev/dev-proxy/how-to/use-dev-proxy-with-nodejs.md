@@ -3,10 +3,21 @@ title: Use Dev Proxy with Node.js applications
 description: How to use Dev Proxy with Node.js applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/09/2024
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Configure Node.js applications to use Dev Proxy -->
+<!-- SOLUTION: Set HTTP_PROXY/HTTPS_PROXY or configure fetch agent -->
+<!-- RESULT: Node.js HTTP requests routed through Dev Proxy -->
+<!-- JOB: intercept-requests -->
+<!-- TIME: 10 minutes -->
+
 # Use Dev Proxy with Node.js applications
+
+> **At a glance**  
+> **Goal:** Configure Node.js applications to use Dev Proxy  
+> **Time:** 10 minutes  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Node.js application
 
 There's no standard way of enabling proxies for Node.js applications. Whether you can use proxy, depends on the library you're using to make HTTP requests. Typically, you need to update your code to configure the proxy. You can however use the `global-agent` package to enable proxy support for your Node.js application with minimal code changes.
 
@@ -179,3 +190,9 @@ To fix this issue, you need to set the `NODE_TLS_REJECT_UNAUTHORIZED` environmen
 ```console
 NODE_TLS_REJECT_UNAUTHORIZED=0 node index.js
 ```
+
+## See also
+
+- [Use Dev Proxy with Node.js applications in Docker containers](./use-dev-proxy-with-nodejs-docker.md) - Docker setup
+- [Use Dev Proxy with JavaScript Azure Functions](./use-dev-proxy-with-javascript-azure-functions.md) - Azure Functions
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Best practices for handling rate limiting (retries, backoff, queuing) -->
+
 # How to handle rate limiting
 
 [Rate limiting](what-is-rate-limiting.md) is a common technique used by API providers to manage the number of requests that can be made to their service in a specific time period. API providers use rate limiting to ensure that their service remains available and responsive to all users, and to prevent abuse or overuse of the service.

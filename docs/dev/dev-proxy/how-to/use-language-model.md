@@ -3,10 +3,23 @@ title: Use local language model with Dev Proxy
 description: How to configure Dev Proxy to use a local language model
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/28/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Configure local LLM for Dev Proxy features -->
+<!-- SOLUTION: Configure languageModel section with Ollama endpoint -->
+<!-- RESULT: Dev Proxy uses local LLM for AI features -->
+<!-- PLUGINS: OpenAIMockResponsePlugin -->
+<!-- JOB: configure-proxy -->
+<!-- TIME: 10 minutes -->
+
 # Use local language model with Dev Proxy
+
+> **At a glance**  
+> **Goal:** Configure local LLM for Dev Proxy features  
+> **Time:** 10 minutes  
+> **Plugins:** [OpenAIMockResponsePlugin](../technical-reference/openaimockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), local LLM host (e.g., Ollama)
 
 By connecting Dev Proxy to a local language model, you can improve Dev Proxy's functionality. Select Dev Proxy plugins use the language model to improve their output, where natural language is involved. By using a local language model, you can benefit from the improved functionality without incurring extra costs.
 
@@ -17,6 +30,8 @@ Dev Proxy supports language model hosts that expose OpenAI-compatible APIs. It a
 ## Configure Dev Proxy to use a local language model
 
 To configure Dev Proxy to use a local language model, use the `languageModel` setting in the `devproxyrc.json` file.
+
+**File:** `devproxyrc.json`
 
 ```json
 {
@@ -48,3 +63,9 @@ The following Dev Proxy plugins use a local language model if available:
 - [OpenAIMockResponsePlugin](../technical-reference/openaimockresponseplugin.md)
 - [OpenApiSpecGeneratorPlugin](../technical-reference/openapispecgeneratorplugin.md)
 - [TypeSpecGeneratorPlugin](../technical-reference/typespecgeneratorplugin.md)
+
+## See also
+
+- [Understand language model usage in your application](./understand-language-model-usage.md)
+- [Test your app with language model failures](./test-my-app-with-language-model-failures.md)
+- [Simulate OpenAI](./simulate-openai.md)

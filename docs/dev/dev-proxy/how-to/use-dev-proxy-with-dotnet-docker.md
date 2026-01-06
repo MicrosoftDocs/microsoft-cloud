@@ -3,11 +3,24 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/18/2024
+ms.date: 01/03/2026
 zone_pivot_groups: client-operating-system
 ---
 
+<!-- INTENT: Use Dev Proxy with .NET in Docker -->
+<!-- SOLUTION: Configure proxy settings in Docker container -->
+<!-- RESULT: .NET app in Docker uses Dev Proxy -->
+<!-- PLUGINS: various -->
+<!-- JOB: intercept-requests -->
+<!-- TIME: 15 minutes -->
+
 # Use Dev Proxy with .NET applications running in Docker
+
+> **At a glance**  
+> **Goal:** Use Dev Proxy with .NET in Docker  
+> **Time:** 15 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), Docker installed
 
 If you run your .NET application in a Docker container and want to use Dev Proxy, there are several steps you need to follow to make it work.
 
@@ -140,3 +153,9 @@ ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, 
 
 > [!CAUTION]
 > Be sure to remove this code before deploying your application to production.
+
+## See also
+
+- [Use Dev Proxy with .NET applications](./use-dev-proxy-with-dotnet.md)
+- [Use Dev Proxy with Node.js applications running in Docker](./use-dev-proxy-with-nodejs-docker.md)
+- [Use Dev Proxy in a Docker container](./use-dev-proxy-in-docker-container.md)

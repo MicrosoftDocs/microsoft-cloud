@@ -3,8 +3,13 @@ title: EntraMockResponsePlugin
 description: EntraMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Mock Microsoft Entra auth flow responses -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: MockResponsePlugin, CrudApiPlugin -->
+<!-- USE-WHEN: Testing auth flows without real Microsoft Entra -->
 
 # EntraMockResponsePlugin
 
@@ -21,20 +26,27 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
 | `state=@dynamic` | The state token in the request. Dev Proxy replaces the `@dynamic` token with the value of the `state` query string parameter |
 | `"id_token": "@dynamic.eyJ0eXAiOiJKV1QiL..."` | Mocked ID token. Dev Proxy removes the `@dynamic.` token and updates the value of the `nonce` claim in the mocked ID token. |
 
-## Plugin instance definition
+## Configuration example
 
 ```json
 {
-  "name": "EntraMockResponsePlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "mocksPlugin"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "EntraMockResponsePlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "mocksPlugin"
+    }
+  ],
+  "mocksPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "mocksFile": "mocks.json"
+  }
 }
 ```
 
-## Configuration example
-
-See [MockResponsePlugin](./MockResponsePlugin.md)
+See [MockResponsePlugin](./MockResponsePlugin.md) for more configuration options.
 
 ## Configuration properties
 

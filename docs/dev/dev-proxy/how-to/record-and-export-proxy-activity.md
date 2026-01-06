@@ -3,14 +3,29 @@ title: Record and export proxy activity
 description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 08/05/2024
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Record and export Dev Proxy activity to a report file -->
+<!-- SOLUTION: Enable ExecutionSummaryPlugin with MarkdownReporter -->
+<!-- RESULT: Markdown file with summary of all intercepted requests -->
+<!-- PLUGINS: ExecutionSummaryPlugin, MarkdownReporter -->
+<!-- JOB: analyze-usage -->
+<!-- TIME: 10 minutes -->
+
 # Record and export proxy activity
+
+> **At a glance**  
+> **Goal:** Record and export Dev Proxy activity to a report file  
+> **Time:** 10 minutes  
+> **Plugins:** [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md), [MarkdownReporter](../technical-reference/markdownreporter.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 To record and export proxy activity, use the [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) and a reporter plugin in your configuration file.
 
 The following example shows how to configure the Dev Proxy to record and export proxy activity using the [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) and the [MarkdownReporter](../technical-reference/markdownreporter.md) plugin.
+
+**File:** devproxyrc.json
 
 ```json
 {
@@ -59,3 +74,9 @@ devproxy --record --summary-group-by messageType
 
 > [!NOTE]
 > All recording is local. No data is sent to Microsoft.
+
+## See also
+
+- [ExecutionSummaryPlugin](../technical-reference/executionsummaryplugin.md) - Full reference
+- [MarkdownReporter](../technical-reference/markdownreporter.md) - Report format
+- [Glossary](../concepts/glossary.md) - Dev Proxy terminology

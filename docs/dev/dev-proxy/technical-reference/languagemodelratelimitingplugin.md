@@ -3,8 +3,13 @@ title: LanguageModelRateLimitingPlugin
 description: LanguageModelRateLimitingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/22/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate token-based rate limiting for LLM APIs -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: OpenAIMockResponsePlugin, LanguageModelFailurePlugin, OpenAITelemetryPlugin -->
+<!-- USE-WHEN: Testing token quota handling before hitting real API limits -->
 
 # LanguageModelRateLimitingPlugin
 
@@ -12,27 +17,25 @@ Simulates token-based rate limiting for language model APIs by tracking prompt a
 
 :::image type="content" source="../media/language-model-rate-limiting-plugin.png" alt-text="Screenshot of a command prompt with the Dev Proxy simulating a language model rate limiting response for an LLM API request." lightbox="../media/language-model-rate-limiting-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "LanguageModelRateLimitingPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "languageModelRateLimitingPlugin",
-  "urlsToWatch": [
-    "https://api.openai.com/*",
-    "http://localhost:11434/*"
-  ]
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "LanguageModelRateLimitingPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "languageModelRateLimitingPlugin"
+    }
+  ],
+  "urlsToWatch": [
+    "https://api.openai.com/*",
+    "http://localhost:11434/*"
+  ],
   "languageModelRateLimitingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelratelimitingplugin.schema.json",
     "promptTokenLimit": 5000,
     "completionTokenLimit": 5000,
     "resetTimeWindowSeconds": 60,
@@ -59,7 +62,7 @@ When `whenLimitExceeded` is set to `Custom`, you can define a custom response in
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
   "statusCode": 429,
   "headers": [
     {

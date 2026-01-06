@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 12/18/2023
 ---
 
+<!-- INTENT: Understand API throttling concepts (429 errors, service protection) -->
+
 # What is throttling?
 
 Throttling is a technique that cloud APIs use to limit the number of requests that can be made in a specific period of time. Throttling ensures that the API remains available and responsive to all users. It also prevents any single user from consuming too many resources.

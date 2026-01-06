@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Understand rate limiting concepts (requests per time period) -->
+
 # What is rate limiting?
 
 Rate limiting is a control mechanism that cloud APIs use to regulate the number of requests that a user can make in a specific time. Cloud API producers use rate limiting to ensure that the flow of requests doesn't overwhelm the service. Rate limiting sets a cap on the speed and volume of API calls. Rate limits are typically defined in terms of requests per period of time.

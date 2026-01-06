@@ -6,6 +6,8 @@ ms.author: wmastyka
 ms.date: 01/26/2024
 ---
 
+<!-- INTENT: Understand risks of using Microsoft Graph beta endpoints in production -->
+
 # Can I use Microsoft Graph beta endpoints in production?
 
 Microsoft Graph beta endpoint is a preview version of the API that you can use to test and experiment with new features before they're released to the general public. Using the Microsoft Graph beta endpoint is a great way to take advantage of the latest innovations. *The beta endpoint isn't intended for use in production environments.*

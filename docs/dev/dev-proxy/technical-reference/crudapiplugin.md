@@ -3,8 +3,13 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/17/2025
+ms.date: 01/06/2026
 ---
+
+<!-- INTENT: Simulate full CRUD API with in-memory data store -->
+<!-- PLUGIN-TYPE: Intercepting -->
+<!-- WORKS-WITH: LatencyPlugin, AuthPlugin, DevToolsPlugin -->
+<!-- USE-WHEN: Building frontend before backend is ready -->
 
 # CrudApiPlugin
 
@@ -12,23 +17,21 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 
 :::image type="content" source="../media/crud-api-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating a CRUD API." lightbox="../media/crud-api-plugin.png":::
 
-## Plugin instance definition
-
-```json
-{
-  "name": "CrudApiPlugin",
-  "enabled": true,
-  "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-  "configSection": "customersApi"
-}
-```
-
 ## Configuration example
 
 ```json
 {
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "CrudApiPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "customersApi"
+    }
+  ],
   "customersApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
@@ -54,7 +57,7 @@ Following is an example of an API file that defines an anonymous CRUD API for in
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
@@ -94,7 +97,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -140,7 +143,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",

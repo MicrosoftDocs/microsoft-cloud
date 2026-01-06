@@ -3,10 +3,23 @@ title: Use preset configurations
 description: How to choose a preset configuration
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/14/2025
+ms.date: 01/03/2026
 ---
 
+<!-- INTENT: Use pre-built Dev Proxy configs -->
+<!-- SOLUTION: Run devproxy preset get and apply -->
+<!-- RESULT: Ready-to-use configuration for specific scenario -->
+<!-- PLUGINS: various -->
+<!-- JOB: configure-proxy -->
+<!-- TIME: 3 minutes -->
+
 # Use preset configurations
+
+> **At a glance**  
+> **Goal:** Use pre-built Dev Proxy configs  
+> **Time:** 3 minutes  
+> **Plugins:** Various  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 Using presets you can quickly configure Dev Proxy to work with common scenarios. A preset is a JSON file that contains the configuration for Dev Proxy. The file defines which plugins Dev Proxy uses and how they're configured.
 
@@ -20,3 +33,9 @@ To use a preset, use the `--config-file` option and pass the path to the preset 
 ```console
 devproxy --config-file config/microsoft-graph-rate-limiting.json
 ```
+
+## See also
+
+- [Configure Dev Proxy](../get-started/configure.md)
+- [Change the mocks file](./change-mocks-file.md)
+- [Dev Proxy presets](https://aka.ms/devproxy/samples)

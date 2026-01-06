@@ -3,10 +3,23 @@ title: Simulate mock responses across the internet
 description: How to simulate mock responses across the internet.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/25/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Expose mocks via dev tunnels -->
+<!-- SOLUTION: Combine MockResponsePlugin with dev tunnel port forwarding -->
+<!-- RESULT: Mock API accessible from internet -->
+<!-- PLUGINS: MockResponsePlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 15 minutes -->
+
 # Simulate mock responses across the internet
+
+> **At a glance**  
+> **Goal:** Expose mocks via dev tunnels  
+> **Time:** 15 minutes  
+> **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Dev Tunnels](/azure/developer/dev-tunnels/get-started)
 
 Using Dev Proxy is the easiest way to mock an API. Whether you're building the front-end and the API isn't ready yet, you need to integrate your back-end with an external service, or you want to test your application with different responses, Dev Proxy can help you simulate API responses. When you integrate your API with cloud services, you need to expose your API across the internet so that the cloud service can access it. To expose mock responses simulated by Dev Proxy across the internet, use [Dev Tunnels](/azure/developer/dev-tunnels/). This article explains how to configure mock responses to be exposed across the internet using Dev Tunnels.
 
@@ -21,9 +34,11 @@ To expose mock responses simulated by Dev Proxy across the internet, start by co
 
 Create a file named `mocks.json` that contains the mock responses for your custom API. For example, to simulate a `GET` request to `http://api.contoso.com/products`, define:
 
+**File:** mocks.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -61,9 +76,11 @@ You can also simulate errors, binary responses, or conditional responses using `
 
 Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `MockResponsePlugin`:
 
+**File:** devproxyrc.json
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -118,3 +135,9 @@ This command maps the Dev Proxy port to a public HTTP URL. You can now access yo
 ```console
 curl http://<your-tunnel-id>-8000.<region>.devtunnels.ms/products
 ```
+
+## See also
+
+- [Mock responses](./mock-responses.md)
+- [MockResponsePlugin](../technical-reference/mockresponseplugin.md)
+- [Dev Tunnels documentation](/azure/developer/dev-tunnels/)

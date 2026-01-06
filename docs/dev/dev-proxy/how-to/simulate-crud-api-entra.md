@@ -3,10 +3,23 @@ title: Simulate a CRUD API secured with Microsoft Entra
 description: How to simulate a CRUD API secured with Microsoft Entra
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/17/2025
+ms.date: 01/06/2026
 ---
 
+<!-- INTENT: Simulate CRUD API with Entra auth -->
+<!-- SOLUTION: Configure CrudApiPlugin with Entra auth settings -->
+<!-- RESULT: CRUD API requires valid Entra tokens -->
+<!-- PLUGINS: CrudApiPlugin -->
+<!-- JOB: mock-api -->
+<!-- TIME: 20 minutes -->
+
 # Simulate a CRUD API secured with Microsoft Entra
+
+> **At a glance**  
+> **Goal:** Simulate CRUD API with Entra auth  
+> **Time:** 20 minutes  
+> **Plugins:** [CrudApiPlugin](../technical-reference/crudapiplugin.md)  
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
 When building apps, you often interact with backend APIs. Sometimes, these APIs aren't yet available, or other teams are updating them to meet the latest requirements. To avoid waiting, you typically create a mock API that returns the data you need. While this approach unblocks you, it requires you to spend time on building an API that you eventually replace with the real one. It gets even more complicated, when you need to secure your API with Microsoft Entra. To avoid wasting time, you can use Dev Proxy to simulate a CRUD API and speed up development.
 
@@ -26,9 +39,11 @@ In the first example, you secure the whole API with a single scope. No matter if
 
 In the `customers-api.json` file, add information about Entra.
 
+**File:** `customers-api.json`
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -76,9 +91,11 @@ In many cases, different API operations require different permissions. For examp
 
 Update the `customers-api.json` file as follows:
 
+**File:** `customers-api.json` (with action-level scopes)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -140,9 +157,11 @@ Dev Proxy allows you to simulate a CRUD API secured with Microsoft Entra, and ch
 
 If you want Dev Proxy to validate the access token, to the `entraAuthConfig` property add the `validateSigningKey` property and set it to `true`:
 
+**File:** `customers-api.json` (with token validation)
+
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v1.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
