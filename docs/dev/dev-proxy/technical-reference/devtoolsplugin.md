@@ -3,17 +3,17 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 01/13/2026
 ---
 
 <!-- INTENT: View Dev Proxy activity in Chrome DevTools -->
-<!-- PLUGIN-TYPE: Intercepting -->
-<!-- WORKS-WITH: Any intercepting plugin -->
+<!-- PLUGIN-TYPE: Intercepting, STDIO -->
+<!-- WORKS-WITH: Any intercepting plugin, STDIO command -->
 <!-- USE-WHEN: Debugging API issues with browser dev tools -->
 
 # DevToolsPlugin
 
-Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools.
+Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools. Supports both HTTP requests and STDIO communication.
 
 :::image type="content" source="../media/devtools-messages.png" alt-text="Screenshot of Microsoft Edge with dev tools showing Dev Proxy messages." lightbox="../media/devtools-messages.png":::
 
@@ -63,6 +63,41 @@ To fix this issue:
 1. Disable **Startup boost**
 1. Close all Microsoft Edge windows and processes
 1. Start Dev Proxy
+
+## STDIO support
+
+When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can inspect STDIN/STDOUT/STDERR communication in Chrome DevTools:
+
+- Messages appear with `stdio://command-name` URLs
+- Requests show as `STDIN` method
+- Responses show as `STDOUT` (200 status) or `STDERR` (500 status)
+- Message bodies are formatted as JSON when applicable
+- Timing information is available for each request/response pair
+
+### Configuration example for STDIO
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
+  "plugins": [
+    {
+      "name": "DevToolsPlugin",
+      "enabled": true,
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "devTools"
+    }
+  ],
+  "devTools": {
+    "preferredBrowser": "Edge"
+  }
+}
+```
+
+Then run:
+
+```console
+devproxy STDIO npx -y @modelcontextprotocol/server-filesystem
+```
 
 ## Next step
 
