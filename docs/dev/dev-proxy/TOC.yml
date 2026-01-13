@@ -46,6 +46,8 @@
         href: how-to/mock-responses-that-return-binary-data.md
       - name: Mock multiple responses to the same endpoint
         href: how-to/mock-multiple-responses-to-the-same-endpoint.md
+      - name: Mock stdio responses for MCP servers
+        href: how-to/mock-stdio-responses-mcp-servers.md
       - name: Change mocks file
         href: how-to/change-mocks-file.md
       - name: Simulate a CRUD API
@@ -290,6 +292,8 @@
         href: technical-reference/mockrequestplugin.md
       - name: MockResponsePlugin
         href: technical-reference/MockResponsePlugin.md
+      - name: MockStdioResponsePlugin
+        href: technical-reference/mockstdioresponseplugin.md
       - name: ODataPagingGuidancePlugin
         href: technical-reference/ODataPagingGuidancePlugin.md
       - name: OpenAIMockResponsePlugin
@@ -362,3 +366,5 @@
         href: technical-reference/msgraphdb.md
       - name: outdated
         href: technical-reference/outdated.md
+      - name: stdio
+        href: technical-reference/stdio.md
