@@ -3,16 +3,17 @@ title: Plugin architecture
 description: The architecture of Dev Proxy plugins
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/05/2025
+ms.date: 01/13/2026
 ---
 
-<!-- INTENT: Understand how Dev Proxy plugins work (intercepting, reporting, reporters) -->
+<!-- INTENT: Understand how Dev Proxy plugins work (intercepting, reporting, reporters, stdio) -->
 
 # Plugin architecture
 
-A plugin is a .NET class registered with Dev Proxy that introduces a specific Dev Proxy behavior. A plugin can offer real-time guidance about API usage, simulate API behavior, analyze multiple API requests, or produce a report. Dev Proxy has three types of plugins:
+A plugin is a .NET class registered with Dev Proxy that introduces a specific Dev Proxy behavior. A plugin can offer real-time guidance about API usage, simulate API behavior, analyze multiple API requests, or produce a report. Dev Proxy has four types of plugins:
 
-- **intercepting plugins** that intercept requests and responses and can analyze and modify them
+- **intercepting plugins** that intercept HTTP requests and responses and can analyze and modify them
+- **STDIO plugins** that intercept stdin/stdout/stderr communication with local executables
 - **reporting plugins** that run on requests [recorded](../how-to/record-and-export-proxy-activity.md) by Dev Proxy
 - **reporters** that generate reports based on the data collected by reporting plugins
 
@@ -31,6 +32,24 @@ When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch
 - `AfterResponse` - raised after Dev Proxy sends the response to the client
 
 For each of these events, plugins can define an event handler. In the handler, the plugin can analyze the request and response, and modify it if needed. It can also output guidance messages. To see what's possible, see the [code of plugins provided with Dev Proxy](https://github.com/dotnet/dev-proxy/tree/main/dev-proxy-plugins).
+
+## STDIO plugins
+
+When you use the [`stdio` command](stdio.md), Dev Proxy proxies STDIN/STDOUT/STDERR communication with local executables. Proxying STDIO is useful for testing and debugging Model Context Protocol (MCP) servers and other STDIO-based applications.
+
+STDIO plugins implement the `IStdioPlugin` interface and can subscribe to the following events:
+
+- `BeforeStdinAsync` - raised before forwarding STDIN to the child process
+- `AfterStdoutAsync` - raised after receiving STDOUT from the child process
+- `AfterStderrAsync` - raised after receiving STDERR from the child process
+- `AfterStdioRequestLogAsync` - raised to log and record STDIO request/response pairs
+- `AfterStdioRecordingStopAsync` - raised when the session ends to process recordings
+
+Plugins can modify, consume, or mock messages by setting `ResponseState.HasBeenSet = true`. The following plugins support STDIO interception:
+
+- [MockStdioResponsePlugin](mockstdioresponseplugin.md) - mock STDIN/STDOUT/STDERR responses
+- [DevToolsPlugin](devtoolsplugin.md) - inspect STDIO traffic in Chrome DevTools
+- [LatencyPlugin](latencyplugin.md) - add artificial latency to STDIO communication
 
 ## Reporting plugins
 

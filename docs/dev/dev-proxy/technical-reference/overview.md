@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 10/28/2025
+ms.date: 01/13/2026
 ms.topic: overview
 ---
 
@@ -20,7 +20,7 @@ List of plugins that work with any API.
 Name | Description
 --- | ---
 [AuthPlugin](./authplugin.md)|Simulates authentication and authorization using API keys or OAuth2.
-[DevToolsPlugin](./devtoolsplugin.md)|Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools.
+[DevToolsPlugin](./devtoolsplugin.md)|Exposes Dev Proxy messages, and information about intercepted requests and responses in Chrome DevTools. Supports both HTTP and STDIO.
 [CachingGuidancePlugin](./cachingguidanceplugin.md)|Shows a warning when Dev Proxy intercepted the same request within the specified period of time.
 [CrudApiPlugin](./crudapiplugin.md)|Simulates a CRUD API with an in-memory data store.
 [ExecutionSummaryPlugin](./executionsummaryplugin.md)|Generates a summary report of the requests that pass through the proxy.
@@ -29,13 +29,14 @@ Name | Description
 [HttpFileGeneratorPlugin](./httpfilegeneratorplugin.md)|Generates HTTP file from the intercepted requests and responses.
 [LanguageModelFailurePlugin](./languagemodelfailureplugin.md)|Simulates various language model failure scenarios to test resilience of language model-dependent applications.
 [LanguageModelRateLimitingPlugin](./languagemodelratelimitingplugin.md)|Simulates token-based rate limiting for language model APIs by tracking prompt and completion token consumption within configurable time windows.
-[LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range.
+[LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range. Supports both HTTP and STDIO.
 [MinimalCsomPermissionsPlugin](./minimalcsompermissionsplugin.md)|Detects the minimal permissions needed to call the recorded SharePoint Client-Side Object Model (CSOM) API requests.
 [MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.
 [MinimalPermissionsGuidancePlugin](./minimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to APIs against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.
 [MockResponsePlugin](./mockresponseplugin.md)|Simulates responses.
+[MockStdioResponsePlugin](./mockstdioresponseplugin.md)|Simulates responses for STDIO-based applications, such as MCP servers.
 [ODataPagingGuidancePlugin](./odatapagingguidanceplugin.md)|Shows a warning when proxy intercepts an OData paging request using a URL that hasn't been previously returned in one of the intercepted responses.
 [OpenAIMockResponsePlugin](./openaimockresponseplugin.md)|Simulates responses from Azure OpenAI and OpenAI using a local language model.
 [OpenAITelemetryPlugin](./openaitelemetryplugin.md)|Generates telemetry data for OpenAI-compatible API requests.
