@@ -3,7 +3,7 @@ title: Configure Dev Proxy
 description: Learn how to configure Dev Proxy to your needs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/05/2025
+ms.date: 01/13/2026
 ms.topic: get-started
 ---
 
@@ -65,6 +65,10 @@ Some plugins are configurable and expose their own settings. Each plugin has its
 
 > [!TIP]
 > The value of the `configSection` property can be any string. By using different names, you can include multiple instances of the same plugin, each with a different configuration. You might need to reference the same plugin multiple times, for example, when mocking multiple APIs with different error responses and behaviors.
+
+## Configuration hot reload
+
+Dev Proxy automatically reloads its configuration when you save changes to the configuration file. This feature allows you to quickly iterate on your configuration without having to stop and restart Dev Proxy. When Dev Proxy detects a change to the configuration file, it gracefully shuts down and restarts with the new configuration.
 
 ## Dev Proxy Toolkit
 
