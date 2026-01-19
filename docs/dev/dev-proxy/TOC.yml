@@ -234,6 +234,12 @@
       href: technical-reference/overview.md
     - name: Console output text labels
       href: technical-reference/console-output-text-labels.md
+    - name: Dev Proxy Toolkit
+      items:
+        - name: Install
+          href: https://marketplace.visualstudio.com/items?itemName=garrytrinder.dev-proxy-toolkit
+        - name: Diagnostics
+          href: technical-reference/toolkit-diagnostics.md
     - name: devproxyrc
       href: technical-reference/devproxyrc.md
     - name: Does dev proxy upload any data to microsoft?
