@@ -14,7 +14,7 @@ metadata:
   ms.topic: hub-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 7/12/2024
+  ms.date: 1/31/2026
   ms.update-cycle: 180-days
   ms.collection: ce-advocates-ai-copilot
   ms.service: microsoft-cloud-for-developers
@@ -23,19 +23,14 @@ highlightedContent:
   # itemType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
   items:
     # Card
-    - title: Build applications on the Microsoft Cloud
-      itemType: get-started
-      url: /microsoft-cloud/dev/overview/introduction
-
-    # Card
     - title: AI learning hub
       itemType: get-started
       url: /ai
 
     # Card
-    - title: Azure OpenAI Service Prompt Engineering
+    - title: Prompt engineering techniques
       itemType: overview
-      url: /azure/ai-services/openai/concepts/prompt-engineering
+      url: /azure/ai-foundry/openai/concepts/prompt-engineering
 
     # Card
     - title: GitHub Copilot
@@ -57,8 +52,8 @@ productDirectory:
         - text: ISV extensibility options for Copilot
           url: /microsoft-cloud/dev/copilot/isv/isv-extensibility-story
 
-        - text: Copilot for Dynamics 365
-          url: /microsoft-cloud/dev/copilot/copilot-for-dynamics365
+        - text: Agents, Copilot, and AI capabilities in Dynamics 365 apps
+          url: /dynamics365/copilot/ai-get-started
 
         - text: Microsoft 365 Copilot
           url: /microsoft-365-copilot
@@ -68,20 +63,6 @@ productDirectory:
           
         - text: GitHub Copilot
           url: https://github.com/features/copilot
-
-    # Card
-    - title: Solutions Across the Microsoft Cloud
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/across.svg
-      links:
-        - text: Azure and Dynamics 365 Scenarios
-          url: /azure/architecture/solutions/dynamics-365-scenarios
-
-        - text: Azure and Microsoft 365 Scenarios
-          url: /azure/architecture/solutions/microsoft-365-scenarios
-
-        - text: Azure and Power Platform Scenarios
-          url: /azure/architecture/solutions/power-platform-scenarios
 
     # Card
     - title: Hands-on Tutorials
@@ -97,9 +78,6 @@ productDirectory:
         - text: Build Productivity Apps by using Microsoft Graph Toolkit
           url: /graph/toolkit/get-started/building-one-productivity-hub
 
-        - text: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
-          url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/00-overview
-
         - text: Transform your Business Applications with Fusion Development
           url: /training/paths/transform-business-applications-with-fusion-development
 
@@ -113,9 +91,6 @@ productDirectory:
 
         - text: Building Real-Time Collaborative Apps
           url: https://github.com/microsoft/brainstorm-fluidframework-m365-azure
-
-        - text: Integrate AI, Communication, and Organizational Data Features into a Line of Business App
-          url: https://github.com/microsoft/microsoftcloud
 
         - text: Microsoft Teams App Camp
           url: https://github.com/microsoft/app-camp
