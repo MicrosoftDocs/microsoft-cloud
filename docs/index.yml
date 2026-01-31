@@ -28,7 +28,7 @@ highlightedContent:
       url: /ai
 
     # Card
-    - title: Azure OpenAI Service Prompt Engineering
+    - title: Prompt engineering techniques
       itemType: overview
       url: /azure/ai-foundry/openai/concepts/prompt-engineering
 
