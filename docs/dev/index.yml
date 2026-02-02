@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: danwahlin
   ms.author: dwahlin
-  ms.date: 02/03/2025
+  ms.date: 1/31/2026
   ms.service: microsoft-cloud-for-developers
 
 landingContent:
@@ -21,8 +21,6 @@ landingContent:
             url: /microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-overview
           - text: Build productivity apps by using Microsoft Graph Toolkit
             url: /graph/toolkit/get-started/building-one-productivity-hub
-          - text: Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App
-            url: /microsoft-cloud/dev/tutorials/openai-acs-msgraph/00-overview
 
   - title: Azure and Power Platform Tutorials
     linkLists:
@@ -37,31 +35,12 @@ landingContent:
           - text: Transform your Business Applications with Fusion Development
             url: https://learn.microsoft.com/training/paths/transform-business-applications-with-fusion-development/
 
-  - title: Build Applications on the Microsoft Cloud 
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: Introduction  
-            url: overview/introduction.md
-          - text: Create and deploy apps in less time  
-            url: overview/create-deploy-more-applications-less-time.md
-          - text: Get the most value from technical talent  
-            url: overview/get-most-value-technical-talent.md
-          - text: Integrate apps with existing solutions  
-            url: overview/integrate-new-applications-existing-solutions.md
-          - text: Create and run secure apps  
-            url: overview/create-run-secure-applications.md
-          - text: Summary  
-            url: overview/summary.md  
-
   - title: Copilot
     linkLists:
       - linkListType: get-started
         links:
           - text: Adopt, extend and build Copilot experiences
             url: copilot/overview.md
-          - text: Copilot for Dynamics 365
-            url: copilot/copilot-for-dynamics365.md
             
   - title: Build resilient apps with Dev Proxy
     linkLists:

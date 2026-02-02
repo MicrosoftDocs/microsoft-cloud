@@ -1,6 +1,41 @@
 {
    "redirections": [
       {
+         "source_path": "docs/dev/overview/create-deploy-more-applications-less-time.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/overview/create-run-secure-applications.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/overview/get-most-value-technical-talent.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/overview/integrate-new-applications-existing-solutions.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/overview/introduction.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/overview/summary.md",
+         "redirect_url": "/microsoft-cloud",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/copilot/copilot-for-dynamics365.md",
+         "redirect_url": "/dynamics365/copilot/ai-get-started",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/dev/tutorials/acs-to-teams-meeting.yml",
          "redirect_url": "/microsoft-cloud/dev/tutorials/acs-to-teams-meeting/01-Overview.md",
          "redirect_document_id": false

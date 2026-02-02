@@ -260,8 +260,7 @@ Learn more:
 
 - [Azure AI services Documentation, Samples, and Resources](/azure/developer/intro/azure-ai-for-developers?pivots=python)
 - [Azure AI Foundry Documentation](/azure/ai-studio)
-- [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-services/openai/use-your-data-quickstart)
-- [Integrate OpenAI, Communication, and Organizational Data Features into a Line of Business App](/microsoft-cloud/dev/tutorials/openai-acs-msgraph?WT.mc_id=m365-94501-dwahlin)
+- [Quickstart: Chat with Azure OpenAI Models Using Your Own Data](/azure/ai-foundry/openai/use-your-data-quickstart)
 
 ### Solution accelerators and samples
 
