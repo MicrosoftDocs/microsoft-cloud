@@ -38,7 +38,7 @@ Create a file named `mocks.json` that contains the mock responses for your custo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -80,7 +80,7 @@ Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `Mo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -93,6 +93,7 @@ Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `Mo
     "http://api.contoso.com/*"
   ],
   "mocksPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }

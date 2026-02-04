@@ -21,7 +21,7 @@ Generates TypeSpec files from the intercepted requests and responses.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "TypeSpecGeneratorPlugin",
@@ -31,7 +31,7 @@ Generates TypeSpec files from the intercepted requests and responses.
     }
   ],
   "typeSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/typespecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/typespecgeneratorplugin.schema.json",
     "ignoreResponseTypes": false
   }
 }

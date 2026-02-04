@@ -21,7 +21,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "CachingGuidancePlugin",
@@ -31,7 +31,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
     }
   ],
   "cachingGuidance": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/cachingguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/cachingguidanceplugin.schema.json",
     "cacheThresholdSeconds": 5
   }
 }

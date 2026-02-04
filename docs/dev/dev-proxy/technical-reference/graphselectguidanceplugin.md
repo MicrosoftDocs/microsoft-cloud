@@ -21,7 +21,7 @@ Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doe
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphSelectGuidancePlugin",

@@ -27,7 +27,7 @@ Schema missing one or more semantic labels required for Microsoft Copilot for Mi
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphConnectorGuidancePlugin",

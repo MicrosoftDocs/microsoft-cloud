@@ -31,7 +31,7 @@ To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -72,7 +72,7 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -102,6 +102,7 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
     "https://*.sharepoint-df.*/*_vti_bin/*"
   ],
   "graphRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429 ]
   }
 }

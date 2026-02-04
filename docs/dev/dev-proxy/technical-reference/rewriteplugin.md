@@ -21,7 +21,7 @@ Rewrites requests.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "RewritePlugin",
@@ -31,7 +31,7 @@ Rewrites requests.
     }
   ],
   "rewritePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rewriteplugin.schema.json",
     "rewritesFile": "rewrites.json"
   }
 }
@@ -57,7 +57,7 @@ Rewrite all requests from HTTP to HTTPS. In this context, **all** means all requ
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.rewritesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rewriteplugin.rewritesfile.schema.json",
   "rewrites": [
     {
       "in": {
@@ -104,7 +104,7 @@ If you use capture groups in the regular expression in the **in** patterns, you 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rewriteplugin.rewritesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rewriteplugin.rewritesfile.schema.json",
   "rewrites": [
     {
       "in": {

@@ -34,7 +34,7 @@ To track language model usage, configure a Dev Proxy configuration file in your 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -85,7 +85,7 @@ To track language model usage costs, add a config section for the OpenAITelemetr
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -100,7 +100,7 @@ To track language model usage costs, add a config section for the OpenAITelemetr
     }
   ],
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.schema.json",
     "includeCosts": true,
     "pricesFile": "prices.json"
   },
@@ -116,7 +116,7 @@ Create a prices file with the input and output costs (price per million tokens),
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.pricesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.pricesfile.schema.json",
   "prices": {
     "gpt-4": {
       "input": 0.03,
@@ -135,7 +135,7 @@ To change the currency used in the usage report costs, set the `currency` proper
 ```json
 {
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.schema.json",
     "includeCosts": true,
     "pricesFile": "prices.json",
     "currency": "EUR"
@@ -152,7 +152,7 @@ By default, the format used to create the report heading of `LLM usage report fo
 ```json
 {
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.schema.json",
     "application": "My application",
     "environment": "Staging"
   }
