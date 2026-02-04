@@ -41,9 +41,11 @@ Create a `devproxyrc.json` file with the following content:
     }
   ],
   "devTools": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   },
   "mockStdioResponsePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }
@@ -196,10 +198,12 @@ To test how your application handles slow MCP server responses, add the `Latency
     }
   ],
   "latencyPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/latencyplugin.schema.json",
     "minMs": 100,
     "maxMs": 500
   },
   "mockStdioResponsePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }

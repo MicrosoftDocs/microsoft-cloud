@@ -21,7 +21,7 @@ Checks if the APIs used in an app are production version of the APIs registered 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
@@ -31,7 +31,7 @@ Checks if the APIs used in an app are production version of the APIs registered 
     }
   ],
   "apiCenterProductionVersionPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenterproductionversionplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/apicenterproductionversionplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
@@ -74,7 +74,7 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterProductionVersionPlugin",
@@ -84,7 +84,7 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
     }
   ],
   "apiCenterProductionVersionPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenterproductionversionplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/apicenterproductionversionplugin.schema.json",
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",

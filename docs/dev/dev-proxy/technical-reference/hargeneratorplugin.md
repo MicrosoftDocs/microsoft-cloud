@@ -19,7 +19,7 @@ Generates HTTP Archive (HAR) files from the intercepted requests and responses.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "HarGeneratorPlugin",
@@ -29,7 +29,7 @@ Generates HTTP Archive (HAR) files from the intercepted requests and responses.
     }
   ],
   "harGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/hargeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/hargeneratorplugin.schema.json",
     "includeSensitiveInformation": false,
     "includeResponse": true
   }

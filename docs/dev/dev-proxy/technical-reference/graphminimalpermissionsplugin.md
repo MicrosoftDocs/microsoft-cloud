@@ -21,7 +21,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphMinimalPermissionsPlugin",
@@ -31,7 +31,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
     }
   ],
   "graphMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/graphminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/graphminimalpermissionsplugin.schema.json",
     "type": "Delegated"
   }
 }

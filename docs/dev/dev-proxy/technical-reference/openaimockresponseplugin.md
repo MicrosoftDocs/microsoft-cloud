@@ -21,7 +21,7 @@ Simulates responses from Azure OpenAI and OpenAI using a local language model.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

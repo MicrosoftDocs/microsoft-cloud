@@ -31,7 +31,7 @@ To generate an HTTP file using Dev Proxy:
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
      "plugins": [
        {
          "name": "HttpFileGeneratorPlugin",
@@ -44,7 +44,7 @@ To generate an HTTP file using Dev Proxy:
        "https://api.example.com/*"
      ],
      "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/httpfilegeneratorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/httpfilegeneratorplugin.schema.json",
        "includeOptionsRequests": false
      }
    }
@@ -60,7 +60,7 @@ To generate an HTTP file using Dev Proxy:
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
      "plugins": [
        {
          "name": "HttpFileGeneratorPlugin",
@@ -73,7 +73,7 @@ To generate an HTTP file using Dev Proxy:
        "https://api.example.com/*"
      ],
      "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/httpfilegeneratorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/httpfilegeneratorplugin.schema.json",
        "includeOptionsRequests": false
      }
    }

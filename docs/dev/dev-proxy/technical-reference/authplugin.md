@@ -21,7 +21,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "AuthPlugin",
@@ -31,7 +31,7 @@ Simulates authentication and authorization using API keys or OAuth2.
     }
   ],
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/authplugin.schema.json",
     "type": "apiKey",
     "apiKey": {
       "parameters": [
@@ -56,7 +56,7 @@ Simulates authentication and authorization using API keys or OAuth2.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "AuthPlugin",
@@ -66,7 +66,7 @@ Simulates authentication and authorization using API keys or OAuth2.
     }
   ],
   "auth": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/authplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/authplugin.schema.json",
     "type": "oauth2",
     "oauth2": {
       "metadataUrl": "https://login.microsoftonline.com/organizations/v2.0/.well-known/openid-configuration",

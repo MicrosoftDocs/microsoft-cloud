@@ -21,7 +21,7 @@ Shows a tip when a request to Microsoft Graph API doesn't include the `client-re
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphClientRequestIdGuidancePlugin",

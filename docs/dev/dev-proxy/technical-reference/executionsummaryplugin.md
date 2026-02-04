@@ -26,7 +26,7 @@ Creates a summary of the requests that pass through the proxy.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "ExecutionSummaryPlugin",
@@ -36,7 +36,7 @@ Creates a summary of the requests that pass through the proxy.
     }
   ],
   "executionSummaryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/executionsummaryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }

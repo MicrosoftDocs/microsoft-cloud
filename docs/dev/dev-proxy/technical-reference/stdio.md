@@ -99,9 +99,11 @@ To use the `stdio` command with plugins, create a configuration file:
     }
   ],
   "devTools": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   },
   "mockStdioResponsePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }

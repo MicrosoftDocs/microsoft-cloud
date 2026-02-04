@@ -30,7 +30,7 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "EntraMockResponsePlugin",
@@ -40,7 +40,7 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
     }
   ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
