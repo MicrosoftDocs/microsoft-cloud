@@ -31,7 +31,7 @@ To generate a TypeSpec file using Dev Proxy:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
       "plugins": [
         {
           "name": "TypeSpecGeneratorPlugin",
@@ -44,7 +44,7 @@ To generate a TypeSpec file using Dev Proxy:
         "https://api.example.com/*"
       ],
       "typeSpecGeneratorPlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/typespecgeneratorplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/typespecgeneratorplugin.schema.json",
         "ignoreResponseTypes": false
       }
     }

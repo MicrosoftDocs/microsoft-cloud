@@ -34,7 +34,7 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -55,7 +55,7 @@ Create the plugin configuration object to provide the plugin with the location o
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -68,6 +68,7 @@ Create the plugin configuration object to provide the plugin with the location o
     }
   ],
   "openAIAPI": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors-openai.json"
   }
 }
@@ -79,7 +80,7 @@ In the same folder, create the `errors-openai.json` file. This file contains the
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {

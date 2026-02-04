@@ -21,7 +21,7 @@ Simulates various large language model (LLM) failure scenarios to test resilienc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelFailurePlugin",
@@ -35,7 +35,7 @@ Simulates various large language model (LLM) failure scenarios to test resilienc
     "http://localhost:11434/*"
   ],
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "Hallucination",
       "PlausibleIncorrect"

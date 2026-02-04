@@ -23,7 +23,7 @@ To intercept requests, after starting Dev Proxy, start [recording](../how-to/rec
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockGeneratorPlugin",

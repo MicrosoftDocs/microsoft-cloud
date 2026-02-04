@@ -23,7 +23,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -33,7 +33,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
     }
   ],
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.schema.json",
     "application": "My app",
     "includeCosts": true,
     "pricesFile": "prices.json"
@@ -58,7 +58,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaitelemetryplugin.pricesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/openaitelemetryplugin.pricesfile.schema.json",
   "prices": {
     "gpt-3.5-turbo": {
       "input": 0.0015,

@@ -21,7 +21,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "MinimalPermissionsPlugin",
@@ -31,7 +31,7 @@ Detects the minimal permissions needed to perform the specified API operations. 
     }
   ],
   "minimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/minimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/minimalpermissionsplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs"
   }
 }

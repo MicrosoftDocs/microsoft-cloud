@@ -23,7 +23,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "DevToolsPlugin",
@@ -33,7 +33,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
     }
   ],
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }
@@ -88,6 +88,7 @@ When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can insp
     }
   ],
   "devTools": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }

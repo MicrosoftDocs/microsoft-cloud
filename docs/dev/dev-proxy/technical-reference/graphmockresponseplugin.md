@@ -21,7 +21,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphMockResponsePlugin",
@@ -31,7 +31,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
     }
   ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
