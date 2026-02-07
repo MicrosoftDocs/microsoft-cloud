@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/13/2026
+ms.date: 02/07/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses -->
@@ -66,7 +66,7 @@ When you use the `LatencyPlugin` with the [`STDIO` command](stdio.md), the plugi
       "configSection": "latencyPlugin"
     },
     {
-      "name": "MockSTDIOResponsePlugin",
+      "name": "MockStdioResponsePlugin",
       "enabled": true,
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "mockSTDIOResponsePlugin"
