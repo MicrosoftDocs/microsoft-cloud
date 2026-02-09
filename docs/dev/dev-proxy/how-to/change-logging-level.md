@@ -3,7 +3,7 @@ title: Change logging level
 description: How to change logging level
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 02/07/2026
 ---
 
 <!-- INTENT: Adjust Dev Proxy logging verbosity -->
@@ -21,7 +21,7 @@ ms.date: 01/03/2026
 
 By default, the proxy is set to log information level events. These events are messages not related to requests, only the events related to the working of Dev Proxy.
 
-To change the default logging level, update the `logLevel` setting in the configuration file.
+To change the default logging level, update the `logLevel` setting in the configuration file. Dev Proxy automatically reloads its configuration when you save changes, so you don't need to restart the proxy.
 
 **File:** `devproxyrc.json`  
 **Purpose:** Set persistent logging level

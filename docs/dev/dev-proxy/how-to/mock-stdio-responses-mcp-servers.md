@@ -3,7 +3,7 @@ title: Mock STDIO responses for MCP servers
 description: How to mock STDIO responses for Model Context Protocol (MCP) servers using Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/13/2026
+ms.date: 02/07/2026
 ms.topic: how-to
 ---
 
@@ -28,7 +28,7 @@ Create a `devproxyrc.json` file with the following content:
   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
   "plugins": [
     {
-      "name": "MockSTDIOResponsePlugin",
+      "name": "MockStdioResponsePlugin",
       "enabled": true,
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
       "configSection": "mockSTDIOResponsePlugin"
@@ -57,7 +57,7 @@ Create a `stdio-mocks.json` file with mock responses for the MCP server:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
