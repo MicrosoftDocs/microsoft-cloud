@@ -3,7 +3,7 @@ title: Change request failure rate
 description: How to configure the request failure rate
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 02/07/2026
 ---
 
 <!-- INTENT: Change how often requests fail with simulated errors -->
@@ -25,7 +25,7 @@ By default, there's 50% chance that Dev Proxy returns a random error for your AP
 devproxy --failure-rate 80
 ```
 
-Alternatively, you can configure the failure rate in the Dev Proxy configuration file.
+Alternatively, you can configure the failure rate in the Dev Proxy configuration file. Dev Proxy automatically reloads its configuration when you save changes, so you don't need to restart the proxy.
 
 **File:** devproxyrc.json
 

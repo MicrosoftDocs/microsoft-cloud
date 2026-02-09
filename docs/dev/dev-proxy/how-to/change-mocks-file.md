@@ -3,7 +3,7 @@ title: Change mocks file
 description: How to specify which mocks file to use
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 02/07/2026
 ---
 
 <!-- INTENT: Use a different mocks file location -->
@@ -29,7 +29,7 @@ To use a file with a different name, use:
 devproxy --mocks-file my-mocks.json
 ```
 
-Alternatively, you can specify the mocks file in the [devproxyrc.json](../technical-reference/devproxyrc.md) configuration file.
+Alternatively, you can specify the mocks file in the [devproxyrc.json](../technical-reference/devproxyrc.md) configuration file. Dev Proxy automatically reloads its configuration when you save changes, so you don't need to restart the proxy.
 
 **File:** devproxyrc.json
 
