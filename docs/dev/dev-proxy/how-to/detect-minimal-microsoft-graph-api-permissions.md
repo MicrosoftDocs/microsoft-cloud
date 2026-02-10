@@ -60,7 +60,7 @@ To return `Application` permissions, update the `graphMinimalPermissionsPlugin` 
 
 ## See also
 
-- [Check if you're using excessive Microsoft Graph API permissions](./Check-if-you-are-using-excessive-Microsoft-Graph-API-permissions.md) - Compare your permissions to minimal set
-- [Record and export proxy activity](./Record-and-export-proxy-activity.md) - How to start and stop recording
+- [Check if you're using excessive Microsoft Graph API permissions](./check-if-you-are-using-excessive-microsoft-graph-api-permissions.md) - Compare your permissions to minimal set
+- [Record and export proxy activity](./record-and-export-proxy-activity.md) - How to start and stop recording
 - [GraphMinimalPermissionsPlugin reference](../technical-reference/graphminimalpermissionsplugin.md) - Configuration options
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology
