@@ -148,6 +148,8 @@
         href: how-to/use-dev-proxy-with-spfx.md
       - name: With Visual Studio Code debug configurations
         href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
+      - name: Debug with Dev Proxy
+        href: how-to/debug-with-dev-proxy.md
       - name: In CI/CD scenarios
         items:
           - name: Overview
