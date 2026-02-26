@@ -3,7 +3,7 @@ title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 02/27/2026
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -52,26 +52,8 @@ To start Dev Proxy from any directory, add its installation folder location to y
 
 ---
 
-> [!NOTE]
-> To try the latest preview features, install the beta version of Dev Proxy.
->
-> # [Automated](#tab/automated)
->
-> To install Dev Proxy using winget, run the following command:
->
-> ```console
-> winget install DevProxy.DevProxy.Beta --silent
-> ```
->
->
-> # [Manual](#tab/manual)
->
-> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
->
-> ---
->
-> To run the beta version of Dev Proxy, use `devproxy-beta`
->
+> [!TIP]
+> To try the latest preview features, [install the beta version](set-up-beta.md).
 
 ::: zone-end
 
@@ -102,26 +84,8 @@ The below steps show how to add the proxy to PATH when using [zsh](https://www.z
 
 ---
 
-> [!NOTE]
-> To try the latest preview features, install the beta version of Dev Proxy.
->
-> # [Automated](#tab/automated)
->
-> To install Dev Proxy using Homebrew, run the following commands:
->
-> ```console
-> brew tap dotnet/dev-proxy
-> brew install dev-proxy-beta
-> ```
->
-> # [Manual](#tab/manual)
->
-> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
->
-> ---
->
-> To run the beta version of Dev Proxy, use `devproxy-beta`
->
+> [!TIP]
+> To try the latest preview features, [install the beta version](set-up-beta.md).
 
 ::: zone-end
 
@@ -157,31 +121,8 @@ The below steps show how to add the proxy to PATH when using bash shell. Dependi
 
 ---
 
-> [!NOTE]
-> To try the latest preview features, install the beta version of Dev Proxy.
->
-> # [Automated](#tab/automated)
->
-> To install Dev Proxy using the setup script, run the following commands:
->
-> ```console
-> bash -c "$(curl -sL https://aka.ms/devproxy/setup-beta.sh)"
-> ```
->
-> If you use PowerShell, run the following command:
->
-> ```powershell
-> (Invoke-WebRequest https://aka.ms/devproxy/setup-beta.ps1).Content | Invoke-Expression
-> ```
->
-> # [Manual](#tab/manual)
->
-> [Download](https://aka.ms/devproxy/beta/) the latest beta and extract the files into a folder. Follow the manual setup steps as described previously.
->
-> ---
->
-> To run the beta version of Dev Proxy, use `devproxy-beta`
->
+> [!TIP]
+> To try the latest preview features, [install the beta version](set-up-beta.md).
 
 ::: zone-end
 
