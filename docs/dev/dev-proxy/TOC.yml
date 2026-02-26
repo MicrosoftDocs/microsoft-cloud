@@ -214,6 +214,8 @@
       href: concepts/what-is-openapi-spec.md
     - name: How to debug Microsoft Graph API calls
       href: concepts/how-to-debug-microsoft-graph-calls.md
+    - name: Why use Microsoft Graph SDK
+      href: concepts/why-use-microsoft-graph-sdk.md
     - name: Using Microsoft Graph beta endpoints in production
       href: concepts/use-microsoft-graph-beta-production.md
     - name: Use the recommended search APIs on Microsoft 365
