@@ -186,6 +186,8 @@
       href: how-to/create-custom-plugin.md
     - name: Get help and support
       href: how-to/get-help-and-support.md
+    - name: Upgrade
+      href: how-to/upgrade.md
     - name: Uninstall
       href: how-to/uninstall.md
 - name: Concepts
