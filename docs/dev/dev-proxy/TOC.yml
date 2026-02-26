@@ -130,6 +130,8 @@
       items:
       - name: In a Docker container
         href: how-to/use-dev-proxy-in-docker-container.md
+      - name: With Docker Compose
+        href: how-to/use-dev-proxy-with-docker-compose.md
       - name: With Node.js applications
         href: how-to/use-dev-proxy-with-nodejs.md
       - name: With Node.js applications in Docker containers
