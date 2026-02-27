@@ -156,6 +156,8 @@
         href: how-to/use-dev-proxy-with-powershell.md
       - name: With Visual Studio Code debug configurations
         href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
+      - name: With Windows Subsystem for Linux (WSL)
+        href: how-to/use-dev-proxy-with-wsl.md
       - name: With AI coding assistants (MCP)
         href: how-to/use-mcp-server.md
       - name: In CI/CD scenarios
