@@ -4,6 +4,8 @@
   items:
     - name: Set up and first run
       href: get-started/set-up.md
+    - name: Set up beta version
+      href: get-started/set-up-beta.md
     - name: Configuration
       href: get-started/configure.md
 - name: Tutorials
@@ -128,8 +130,12 @@
         href: how-to/refresh-local-Microsoft-Graph-database.md
     - name: Use Dev Proxy
       items:
+      - name: With a browser
+        href: how-to/use-dev-proxy-with-browser.md
       - name: In a Docker container
         href: how-to/use-dev-proxy-in-docker-container.md
+      - name: With Docker Compose
+        href: how-to/use-dev-proxy-with-docker-compose.md
       - name: With Node.js applications
         href: how-to/use-dev-proxy-with-nodejs.md
       - name: With Node.js applications in Docker containers
@@ -146,10 +152,14 @@
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
+      - name: With PowerShell
+        href: how-to/use-dev-proxy-with-powershell.md
       - name: With Visual Studio Code debug configurations
         href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
       - name: Debug with Dev Proxy
         href: how-to/debug-with-dev-proxy.md
+      - name: With AI coding assistants (MCP)
+        href: how-to/use-mcp-server.md
       - name: In CI/CD scenarios
         items:
           - name: Overview
@@ -162,10 +172,12 @@
             href: how-to/use-dev-proxy-with-github-actions-language-model-usage-costs.md
     - name: Common problems
       items:
-      - name: Troubleshooting overview
+      - name: Troubleshoot Dev Proxy
         href: how-to/troubleshooting.md
       - name: Dev Proxy doesn't intercept requests
         href: how-to/no-requests-intercepted.md
+      - name: Apps lose connectivity when Dev Proxy runs
+        href: how-to/troubleshoot-network-interference.md
       - name: No random errors are thrown when using mocks
         href: how-to/why-are-random-errors-not-thrown-when-using-mocks.md
       - name: All requests fail with gateway time out
@@ -188,6 +200,8 @@
       href: how-to/create-custom-plugin.md
     - name: Get help and support
       href: how-to/get-help-and-support.md
+    - name: Upgrade
+      href: how-to/upgrade.md
     - name: Uninstall
       href: how-to/uninstall.md
 - name: Concepts
@@ -210,12 +224,16 @@
       href: concepts/implement-rate-limiting-azure-api-management.md
     - name: What is chaos testing?
       href: concepts/what-is-chaos-testing.md
+    - name: Dev Proxy vs unit tests
+      href: concepts/dev-proxy-vs-unit-tests.md
     - name: How to work with large datasets
       href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI spec
       href: concepts/what-is-openapi-spec.md
     - name: How to debug Microsoft Graph API calls
       href: concepts/how-to-debug-microsoft-graph-calls.md
+    - name: Why use Microsoft Graph SDK
+      href: concepts/why-use-microsoft-graph-sdk.md
     - name: Using Microsoft Graph beta endpoints in production
       href: concepts/use-microsoft-graph-beta-production.md
     - name: Use the recommended search APIs on Microsoft 365

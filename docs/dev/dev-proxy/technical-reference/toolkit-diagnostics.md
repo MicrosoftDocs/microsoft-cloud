@@ -24,7 +24,7 @@ The Dev Proxy Toolkit VS Code extension analyzes your Dev Proxy configuration fi
 | [invalidConfigSectionSchema](#invalidconfigsectionschema) | Warning | Config section schema version mismatch |
 | [invalidConfigValue](#invalidconfigvalue) | Error | Invalid value in config section |
 | [invalidSchema](#invalidschema) | Warning | Schema version mismatch with installed Dev Proxy |
-| [missingLanguageModel](#missinglanguagemodel) | Warning | Language model required but not enabled |
+| [missingLanguageModel](#missinglanguagemodel) | Information | Plugin can use local language model to improve output |
 | [noEnabledPlugins](#noenabledplugins) | Warning | No plugins are enabled |
 | [pluginConfigMissing](#pluginconfigmissing) | Error/Warning | Referenced config section missing |
 | [pluginConfigNotRequired](#pluginconfignotrequired) | Error/Warning | Unnecessary config section |
@@ -242,28 +242,28 @@ Update the `$schema` property to match your installed version. Use the quick fix
 
 ## missingLanguageModel
 
-**Severity:** Warning  
+**Severity:** Information  
 **Quick fix available:** Yes
 
-A plugin requires the language model but `languageModel.enabled` isn't `true`.
+A plugin can use a local language model but `languageModel.enabled` isn't `true`.
 
 ### Cause
 
-Plugins like `LanguageModelFailurePlugin` and `LanguageModelRateLimitingPlugin` require a language model connection.
+Plugins like `OpenAIMockResponsePlugin`, `OpenApiSpecGeneratorPlugin`, and `TypeSpecGeneratorPlugin` can use a local language model to improve their output. By connecting Dev Proxy to a local language model, you can benefit from the improved functionality without incurring extra costs.
 
 ### Resolution
 
-Add or update the `languageModel` configuration. Use the quick fix to add automatically.
+Add or update the `languageModel` configuration. Use the quick fix to add or update `languageModel.enabled: true` automatically. For more information, see [Use local language model with Dev Proxy](../how-to/use-language-model.md).
 
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
   "plugins": [
     {
-      "name": "LanguageModelFailurePlugin",
+      "name": "OpenAIMockResponsePlugin",
       "enabled": true,
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "languageModelFailurePlugin"
+      "configSection": "openAIMockResponsePlugin"
     }
   ],
   "urlsToWatch": [
@@ -272,9 +272,8 @@ Add or update the `languageModel` configuration. Use the quick fix to add automa
   "languageModel": {
     "enabled": true
   },
-  "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/languagemodelfailureplugin.schema.json",
-    "rate": 50
+  "openAIMockResponsePlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaimockresponseplugin.schema.json"
   }
 }
 ```
