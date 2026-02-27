@@ -3,7 +3,7 @@ title: Troubleshoot Dev Proxy
 description: Solutions for common Dev Proxy issues
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 02/27/2026
 ms.topic: how-to
 ---
 

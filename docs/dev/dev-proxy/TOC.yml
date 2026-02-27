@@ -4,6 +4,8 @@
   items:
     - name: Set up and first run
       href: get-started/set-up.md
+    - name: Set up beta version
+      href: get-started/set-up-beta.md
     - name: Configuration
       href: get-started/configure.md
 - name: Tutorials
@@ -128,6 +130,8 @@
         href: how-to/refresh-local-Microsoft-Graph-database.md
     - name: Use Dev Proxy
       items:
+      - name: With a browser
+        href: how-to/use-dev-proxy-with-browser.md
       - name: In a Docker container
         href: how-to/use-dev-proxy-in-docker-container.md
       - name: With Node.js applications
@@ -148,6 +152,8 @@
         href: how-to/use-dev-proxy-with-spfx.md
       - name: With Visual Studio Code debug configurations
         href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
+      - name: With AI coding assistants (MCP)
+        href: how-to/use-mcp-server.md
       - name: In CI/CD scenarios
         items:
           - name: Overview
@@ -164,6 +170,8 @@
         href: how-to/troubleshooting.md
       - name: Dev Proxy doesn't intercept requests
         href: how-to/no-requests-intercepted.md
+      - name: Apps lose connectivity when Dev Proxy runs
+        href: how-to/troubleshoot-network-interference.md
       - name: No random errors are thrown when using mocks
         href: how-to/why-are-random-errors-not-thrown-when-using-mocks.md
       - name: All requests fail with gateway time out
