@@ -170,6 +170,8 @@
         href: how-to/troubleshooting.md
       - name: Dev Proxy doesn't intercept requests
         href: how-to/no-requests-intercepted.md
+      - name: Apps lose connectivity when Dev Proxy runs
+        href: how-to/troubleshoot-network-interference.md
       - name: No random errors are thrown when using mocks
         href: how-to/why-are-random-errors-not-thrown-when-using-mocks.md
       - name: All requests fail with gateway time out

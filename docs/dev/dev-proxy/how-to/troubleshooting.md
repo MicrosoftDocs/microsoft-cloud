@@ -3,7 +3,7 @@ title: Troubleshooting Dev Proxy
 description: Solutions to common problems when using Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 02/27/2026
 ms.topic: troubleshooting
 ---
 
@@ -38,6 +38,7 @@ Before diving into specific issues, try these steps:
 
 | Problem | Solution |
 |---------|----------|
+| Apps lose connectivity when Dev Proxy runs | [Configure proxy exceptions or disable system proxy](troubleshoot-network-interference.md) |
 | No internet after using Dev Proxy | [Reset system proxy settings](why-is-my-internet-connection-not-working-after-using-the-proxy.md) |
 | All requests fail with gateway timeout | [Check proxy connectivity](why-do-all-requests-fail-with-gateway-timeout.md) |
 | Certificate trust errors | Run `devproxy cert ensure` to reinstall the certificate |
