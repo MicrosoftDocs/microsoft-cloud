@@ -120,6 +120,8 @@
         href: how-to/use-preset-configurations.md
     - name: Change settings
       items: 
+      - name: Use the system proxy option
+        href: how-to/use-system-proxy-option.md
       - name: Change logging level
         href: how-to/change-logging-level.md
       - name: Clear the output
