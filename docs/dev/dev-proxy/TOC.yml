@@ -4,6 +4,8 @@
   items:
     - name: Set up and first run
       href: get-started/set-up.md
+    - name: Set up beta version
+      href: get-started/set-up-beta.md
     - name: Configuration
       href: get-started/configure.md
 - name: Tutorials
