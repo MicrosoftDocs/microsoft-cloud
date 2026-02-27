@@ -5,6 +5,7 @@ author: waldekmastykarz
 ms.author: wmastyka
 ms.date: 02/26/2026
 ms.topic: how-to
+zone_pivot_groups: client-operating-system
 ---
 
 <!-- INTENT: Fix apps losing connectivity when Dev Proxy runs -->
