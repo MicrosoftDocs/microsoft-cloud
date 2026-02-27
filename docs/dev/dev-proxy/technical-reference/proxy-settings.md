@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/13/2026
+ms.date: 02/27/2026
 ---
 
 <!-- INTENT: Configure Dev Proxy behavior (ports, logging, rate, etc.) -->
@@ -26,13 +26,16 @@ The following table describes the settings.
 |`languageModel`|Settings for the language model|n/a|See the [language model](../how-to/use-language-model.md) section for more information.|n/a|
 |`logLevel`|Level of messages to log|`--log-level <loglevel>`|`trace`, `debug`, `information`, `warning`, `error`| `information`|
 |`newVersionNotification`|Whether to notify about new versions|n/a|`none`, `stable`, `beta`|`stable`|
+|`noColor`|Disable colored output|`--no-color`|n/a|n/a|
 |`noFirstRun`|Skip the first run experience (don't trust certificate on macOS)|`--no-first-run`|n/a|n/a|
+|`noWatch`|Disable automatic proxy restart when the configuration file changes|`--no-watch`|n/a|n/a|
+|`output`|Output format for structured logging|`--output <format>`|`text`, `json`|`text`|
 |`port`|The port for the proxy server to listen on|`-p, --port <port>`|integer|`8000`|
 |`rate`|The percentage of chance that proxy fails a request. Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`|
 |`record`|Use this option to record all request logs|`--record`|n/a|n/a|
 |`showSkipMessages`|Whether to show log messages when Dev Proxy skips running a plugin.|n/a|`true`, `false`|`true`|
 |`timeout`|Automatically stop proxy after a period of inactivity|`-t, --timeout <seconds>`|integer|n/a|
 |`urlsToWatch`|List of URLs that proxy should intercept|`-u, --urls-to-watch <urlsToWatch>`|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
-|`validateSchemas`|Whether to validate configuration against the specified schema|n/a|`true`, `false`|`true`|
+|`validateSchemas`|Whether to validate configuration against the specified schema. Applies to JSON configuration files only.|n/a|`true`, `false`|`true`|
 |`watchPids`|The IDs of processes to watch for requests|`--watch-pids <pids>`|integer|n/a|
 |`watchProcessNames`|The names of processes to watch for requests|`--watch-process-names <processNames>`|string|n/a|

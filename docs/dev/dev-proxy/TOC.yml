@@ -368,6 +368,10 @@
       items:
       - name: (root)
         href: technical-reference/root-command.md
+      - name: api
+        items:
+        - name: api show
+          href: technical-reference/api-show.md
       - name: cert
         items:
         - name: cert ensure
@@ -380,6 +384,8 @@
           href: technical-reference/config-new.md
         - name: config open
           href: technical-reference/config-open.md
+        - name: config validate
+          href: technical-reference/config-validate.md
       - name: jwt create
         href: technical-reference/jwt-create.md
       - name: msgraphdb

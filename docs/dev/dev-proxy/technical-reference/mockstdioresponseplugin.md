@@ -3,7 +3,7 @@ title: MockStdioResponsePlugin
 description: MockStdioResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/13/2026
+ms.date: 02/27/2026
 ---
 
 # MockStdioResponsePlugin
@@ -161,6 +161,28 @@ Load the mock response content from an external file using `@filename` syntax.
 {"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"Mock MCP Server","version":"1.0.0"}}}
 ```
 
+### Match request using a regular expression
+
+Use `bodyRegex` to match stdin using a regular expression. This is useful when you need precise matching to avoid ambiguity with `bodyFragment` substring matching.
+
+**File:** stdio-mocks.json
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/mockstdioresponseplugin.schema.json",
+  "mocks": [
+    {
+      "request": {
+        "bodyRegex": "\"method\":\"tools/list\""
+      },
+      "response": {
+        "stdout": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"tools\":[]}}\n"
+      }
+    }
+  ]
+}
+```
+
 ### Respond on nth occurrence
 
 Respond only after intercepting the matching stdin for the nth time.
@@ -197,8 +219,12 @@ Each request has the following properties:
 
 | Property | Description | Required | Default value | Sample value |
 | -------- | ----------- | :------: | ------------- | ------------ |
-| `bodyFragment` | A string that should be present in stdin | yes | | `tools/list` |
+| `bodyFragment` | A string that should be present in stdin | no | | `tools/list` |
+| `bodyRegex` | A regular expression to match against stdin. Takes precedence over `bodyFragment` when both are specified. | no | | `^tools/` |
 | `nth` | Respond only when intercepting the request for the nth time | no | | `2` |
+
+> [!NOTE]
+> Either `bodyFragment` or `bodyRegex` is required to match a request. When both are specified, `bodyRegex` takes precedence.
 
 ### Response object
 
