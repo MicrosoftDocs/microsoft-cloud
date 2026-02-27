@@ -168,7 +168,7 @@
             href: how-to/use-dev-proxy-with-github-actions-language-model-usage-costs.md
     - name: Common problems
       items:
-      - name: Troubleshooting overview
+      - name: Troubleshoot Dev Proxy
         href: how-to/troubleshooting.md
       - name: Dev Proxy doesn't intercept requests
         href: how-to/no-requests-intercepted.md
