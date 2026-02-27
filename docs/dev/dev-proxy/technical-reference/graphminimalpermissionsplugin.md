@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsPlugin
 description: GraphMinimalPermissionsPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 02/27/2026
 ---
 
 <!-- INTENT: Detect minimal permissions needed for Microsoft Graph calls -->
@@ -32,7 +32,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
   ],
   "graphMinimalPermissionsPlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/graphminimalpermissionsplugin.schema.json",
-    "type": "Delegated"
+    "type": "delegated"
   }
 }
 ```
@@ -41,7 +41,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| `type` | Determines which type of permission scopes to return. Can be `Delegated` or `Application` | `Delegated` |
+| `type` | Determines which type of permission scopes to return. Can be `delegated` or `application` | `delegated` |
 
 ## Command line options
 

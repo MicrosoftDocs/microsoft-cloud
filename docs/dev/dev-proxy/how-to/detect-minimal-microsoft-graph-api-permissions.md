@@ -3,7 +3,7 @@ title: Detect minimal Microsoft Graph API permissions
 description: How to detect the minimal Microsoft Graph API permissions that your app requires
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 02/27/2026
 ---
 
 <!-- INTENT: Find the minimum permissions needed for Microsoft Graph API calls -->
@@ -44,9 +44,9 @@ Minimal permissions:
 User.Read, Calendars.Read
 ```
 
-By default, Dev Proxy detects minimal `Delegated` permissions.
+By default, Dev Proxy detects minimal `delegated` permissions.
 
-To return `Application` permissions, update the `graphMinimalPermissionsPlugin` configuration block in the [devproxyrc.json](../technical-reference/devproxyrc.md) file to:
+To return `application` permissions, update the `graphMinimalPermissionsPlugin` configuration block in the [devproxyrc.json](../technical-reference/devproxyrc.md) file to:
 
 **File:** devproxyrc.json
 

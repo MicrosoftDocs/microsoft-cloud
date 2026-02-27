@@ -3,7 +3,7 @@ title: cert remove
 description: cert remove command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 02/27/2026
 ---
 
 <!-- INTENT: Reference for devproxy cert remove command -->
@@ -38,5 +38,5 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
-|`-f, --force`|Force the root certificate removal| | |
+|`-f, --force`|Force the root certificate removal without confirmation. Required in non-interactive mode (CI environments, piped stdin).| | |
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
