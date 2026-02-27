@@ -50,9 +50,9 @@ Dev Proxy offers several advantages over traditional mocking approaches:
 
 The most effective approach combines both testing methods:
 
-1. **Use unit tests for logic.** Write unit tests to verify your business logic, data transformations, and specific error handling code paths.
-1. **Use Dev Proxy for resilience.** Use Dev Proxy to verify that your application handles real-world API conditions correctly—throttling, errors, and slow responses.
-1. **Use both in CI/CD.** Run unit tests for fast feedback on every commit. Use Dev Proxy in integration tests to catch resilience issues before deployment.
+- **Use unit tests for logic.** Write unit tests to verify your business logic, data transformations, and specific error handling code paths.
+- **Use Dev Proxy for resilience.** Use Dev Proxy to verify that your application handles real-world API conditions correctly—throttling, errors, and slow responses.
+- **Use both in CI/CD.** Run unit tests for fast feedback on every commit. Use Dev Proxy in integration tests to catch resilience issues before deployment.
 
 Unit tests tell you if your code is correct. Dev Proxy tells you if your application is resilient. You need both.
 
