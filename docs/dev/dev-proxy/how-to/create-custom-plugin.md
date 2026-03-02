@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 03/02/2026
 ---
 
 <!-- INTENT: Build a custom Dev Proxy plugin -->
@@ -19,15 +19,25 @@ ms.date: 01/03/2026
 > **Goal:** Build a custom Dev Proxy plugin  
 > **Time:** 30 minutes  
 > **Plugins:** Custom plugin  
-> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [.NET 9 SDK](https://dotnet.microsoft.com/download)
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [.NET 10 SDK](https://dotnet.microsoft.com/download)
 
 In this article, you learn how to create a custom plugin for the Dev Proxy. By creating plugins for Dev Proxy, you can extend its functionality and add custom features to fit your needs.
+
+## HTTP plugins vs. stdio plugins
+
+Dev Proxy supports two types of plugins depending on the traffic you want to intercept:
+
+- **HTTP plugins** intercept HTTP(S) requests and responses between your app and APIs. They inherit from `BasePlugin` and override methods like `BeforeRequestAsync` and `BeforeResponseAsync`. Use HTTP plugins when you want to simulate API errors, add mock responses, validate request headers, or otherwise inspect and modify HTTP traffic.
+
+- **Stdio plugins** intercept messages sent over standard input/output (stdin, stdout, stderr) between a parent process and a child process. They implement the `IStdioPlugin` interface (which `BasePlugin` also implements) and override methods like `BeforeStdinAsync`, `AfterStdoutAsync`, and `AfterStderrAsync`. Use stdio plugins when working with tools that communicate over stdio, such as Model Context Protocol (MCP) servers.
+
+A single plugin class can handle both HTTP and stdio traffic by overriding methods from both sets.
 
 ## Prerequisites
 
 Before you start creating a custom plugin, make sure you have the following prerequisites:
 
-- [.NET v9 Core SDK](https://dotnet.microsoft.com/download)
+- [.NET v10 Core SDK](https://dotnet.microsoft.com/download)
 - The latest version of the Dev Proxy Abstractions DLL, which you can find on the [Dev Proxy GitHub releases](https://github.com/dotnet/dev-proxy/releases) page
 
 ## Create a new plugin
@@ -68,7 +78,7 @@ Follow the next steps to create a new project:
     dotnet add package Unobtanium.Web.Proxy
     ```
 
-1. Exclude the dependency DLLs from the build output by adding a `ExcludeAssets` tag per `PackageReference` in the `DevProxyCustomPlugin.csproj` file.
+1. Exclude the dependency dynamic-link libraries (DLLs) from the build output by adding a `ExcludeAssets` tag per `PackageReference` in the `DevProxyCustomPlugin.csproj` file.
 
     ```xml
     <ExcludeAssets>runtime</ExcludeAssets>
@@ -134,7 +144,7 @@ To use your custom plugin, you need to add it to the Dev Proxy configuration fil
       "plugins": [{
         "name": "CatchApiCallsPlugin",
         "enabled": true,
-        "pluginPath": "./bin/Debug/net9.0/MyCustomPlugin.dll",
+        "pluginPath": "./bin/Debug/net10.0/MyCustomPlugin.dll",
       }]
     }
     ```
@@ -167,11 +177,13 @@ You can extend your plugin's logic by adding custom configuration:
     }
 
     public sealed class CatchApiCallsPlugin(
+        HttpClient httpClient,
         ILogger<CatchApiCallsPlugin> logger,
         ISet<UrlToWatch> urlsToWatch,
         IProxyConfiguration proxyConfiguration,
         IConfigurationSection pluginConfigurationSection) :
         BasePlugin<CatchApiCallsConfiguration>(
+            httpClient,
             logger,
             urlsToWatch,
             proxyConfiguration,
@@ -179,7 +191,7 @@ You can extend your plugin's logic by adding custom configuration:
     {
         public override string Name => nameof(CatchApiCallsPlugin);
 
-        public override Task BeforeRequestAsync(ProxyRequestArgs e)
+        public override Task BeforeRequestAsync(ProxyRequestArgs e, CancellationToken cancellationToken)
         {
             Logger.LogTrace("{Method} called", nameof(BeforeRequestAsync));
 
@@ -230,7 +242,7 @@ You can extend your plugin's logic by adding custom configuration:
       "plugins": [{
         "name": "CatchApiCallsPlugin",
         "enabled": true,
-        "pluginPath": "./bin/Debug/net9.0/MyCustomPlugin.dll",
+        "pluginPath": "./bin/Debug/net10.0/MyCustomPlugin.dll",
         "configSection": "catchApiCalls"
       }],
       "catchApiCalls": {
