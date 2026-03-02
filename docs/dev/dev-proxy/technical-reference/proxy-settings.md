@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/27/2026
+ms.date: 03/02/2026
 ---
 
 <!-- INTENT: Configure Dev Proxy behavior (ports, logging, rate, etc.) -->
@@ -18,7 +18,7 @@ The following table describes the settings.
 
 |Setting|Description|Command-line option|Allowed values|Default value|
 |--|--|--|--|--|
-|`apiPort`|The port for the Dev Proxy API to listen on|`--api-port <apiPort>`|integer|`8897`|
+|`apiPort`|The port for the Dev Proxy API to listen on. Set to `0` to let the OS assign a random available port.|`--api-port <apiPort>`|integer|`8897`|
 |`asSystemProxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`--as-system-proxy`|`true`, `false`|`true`|
 |`filterByHeaders`|Only intercept requests with specific headers|n/a|`{"filterByHeaders": [ { "name": "value" } ] }`. Value can be empty to include requests with the specified header no matter its value.|n/a|
 |`installCert`|Whether to install the root certificate|`--install-cert`|`true`, `false`|`true`|
@@ -30,7 +30,7 @@ The following table describes the settings.
 |`noFirstRun`|Skip the first run experience (don't trust certificate on macOS)|`--no-first-run`|n/a|n/a|
 |`noWatch`|Disable automatic proxy restart when the configuration file changes|`--no-watch`|n/a|n/a|
 |`output`|Output format for structured logging|`--output <format>`|`text`, `json`|`text`|
-|`port`|The port for the proxy server to listen on|`-p, --port <port>`|integer|`8000`|
+|`port`|The port for the proxy server to listen on. Set to `0` to let the OS assign a random available port.|`-p, --port <port>`|integer|`8000`|
 |`rate`|The percentage of chance that proxy fails a request. Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`|
 |`record`|Use this option to record all request logs|`--record`|n/a|n/a|
 |`showSkipMessages`|Whether to show log messages when Dev Proxy skips running a plugin.|n/a|`true`, `false`|`true`|
