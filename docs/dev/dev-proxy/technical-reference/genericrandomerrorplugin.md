@@ -3,7 +3,7 @@ title: GenericRandomErrorPlugin
 description: GenericRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 02/27/2026
 ---
 
 <!-- INTENT: Simulate random API errors for any API -->
@@ -53,6 +53,43 @@ Fails requests with a random selected error from file containing mocked errors.
 | Name | Description | Default |
 |----------|-------------|:-------:|
 | `-f, --failure-rate <failure rate>` | The percentage of requests to fail with a random error. Value between 0 and 100. | `50` |
+
+## Remarks
+
+### Per-response `Retry-After` values
+
+By default, the `Retry-After` header uses the global `retryAfterInSeconds` value. You can override this value on a per-response basis using the `@dynamic=N` syntax in the error responses file, where `N` is the number of seconds to wait before retrying.
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "errors": [
+    {
+      "request": {
+        "url": "https://api.openai.com/*"
+      },
+      "responses": [
+        {
+          "statusCode": 429,
+          "headers": [
+            {
+              "name": "Retry-After",
+              "value": "@dynamic=17"
+            }
+          ],
+          "body": {
+            "error": {
+              "message": "Rate limit exceeded. Wait 17 seconds."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+In this example, the `Retry-After` header uses `17` seconds for this response, regardless of the global `retryAfterInSeconds` setting. The value increments on each subsequent throttled request, as with the plain `@dynamic` token.
 
 ## Next step
 

@@ -120,6 +120,8 @@
         href: how-to/use-preset-configurations.md
     - name: Change settings
       items: 
+      - name: Use the system proxy option
+        href: how-to/use-system-proxy-option.md
       - name: Change logging level
         href: how-to/change-logging-level.md
       - name: Clear the output
@@ -158,6 +160,8 @@
         href: how-to/use-dev-proxy-with-vs-code-debug-configurations.md
       - name: Debug with Dev Proxy
         href: how-to/debug-with-dev-proxy.md
+      - name: With Windows Subsystem for Linux (WSL)
+        href: how-to/use-dev-proxy-with-wsl.md
       - name: With AI coding assistants (MCP)
         href: how-to/use-mcp-server.md
       - name: In CI/CD scenarios
@@ -374,6 +378,10 @@
       items:
       - name: (root)
         href: technical-reference/root-command.md
+      - name: api
+        items:
+        - name: api show
+          href: technical-reference/api-show.md
       - name: cert
         items:
         - name: cert ensure
@@ -386,6 +394,8 @@
           href: technical-reference/config-new.md
         - name: config open
           href: technical-reference/config-open.md
+        - name: config validate
+          href: technical-reference/config-validate.md
       - name: jwt create
         href: technical-reference/jwt-create.md
       - name: msgraphdb
