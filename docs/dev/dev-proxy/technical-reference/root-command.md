@@ -22,6 +22,7 @@ Options:
   -c, --config-file <file>      Configuration file path (default: devproxyrc.json)
   -u, --urls-to-watch <urls>    URLs to intercept (supports wildcards)
   -p, --port <port>             Proxy port (default: 8000)
+  --api-port <apiPort>          API port (default: 8897)
   --log-level <level>           Logging level: trace|debug|information|warning|error
   --output <format>             Output format: text|json (default: text)
   --record                      Start recording immediately
@@ -50,6 +51,7 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
+|`--api-port <apiPort>`|The port for the Dev Proxy API to listen on. Set to `0` to let the OS assign a random available port.|integer|`8897`|
 |`--as-system-proxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`true`, `false`|`true`|
 |`-c, --config-file <configFile>`|The path to the configuration file|Local file path|`devproxyrc.json`|
 |`--detach`|Run Dev Proxy in the background (detached mode)|n/a|n/a|
@@ -62,7 +64,7 @@ None
 |`--no-first-run`|Skip the first run experience (don't trust certificate on macOS)|n/a|n/a|
 |`--no-watch`|Disable automatic proxy restart when the configuration file changes|n/a|n/a|
 |`--output <format>`|Output format for structured logging|`text`, `json`|`text`|
-|`-p, --port <port>`|The port for the proxy server to listen on|integer|`8000`|
+|`-p, --port <port>`|The port for the proxy server to listen on. Set to `0` to let the OS assign a random available port.|integer|`8000`|
 |`--record`|Use this option to record all request logs|n/a|n/a|
 |`-t, --timeout <seconds>`|Automatically stop proxy after a period of inactivity|integer|n/a|
 |`-u, --urls-to-watch <urlsToWatch>`|List of URLs that proxy should intercept|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
