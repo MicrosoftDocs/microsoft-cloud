@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/27/2026
+ms.date: 03/05/2026
 ---
 
 <!-- INTENT: Reference for devproxyrc.json configuration file structure -->
@@ -12,10 +12,10 @@ ms.date: 02/27/2026
 
 Default Dev Proxy configuration file.
 
-Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for configuration files. The default file is `devproxyrc.json`, but Dev Proxy also auto-discovers `devproxyrc.yaml` and `devproxyrc.yml`.
+Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for configuration files. The default file is `devproxyrc.json`, but Dev Proxy also autodiscovers `devproxyrc.yaml` and `devproxyrc.yml`.
 
 > [!NOTE]
-> Schema validation (`validateSchemas`) only applies to JSON-based configuration files. YAML configuration files are not validated against schemas at runtime.
+> Schema validation (`validateSchemas`) only applies to JSON-based configuration files. YAML configuration files aren't validated against schemas at runtime.
 
 **File:** devproxyrc.json
 
@@ -80,10 +80,10 @@ validateSchemas: true
 YAML configuration supports anchors and merge keys for reusable configuration blocks:
 
 ```yaml
-definitions:
-  throttled: &throttled
-    statusCode: 429
-    body: '{"error": "Too many requests"}'
+# Define reusable response templates using YAML anchors
+throttled: &throttled
+  statusCode: 429
+  body: '{"error": "Too many requests"}'
 
 mocks:
   - request:
@@ -95,4 +95,3 @@ mocks:
     response:
       <<: *throttled
 ```
-
