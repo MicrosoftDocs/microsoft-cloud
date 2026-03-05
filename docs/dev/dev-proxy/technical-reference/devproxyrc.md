@@ -12,10 +12,10 @@ ms.date: 03/05/2026
 
 Default Dev Proxy configuration file.
 
-Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for configuration files. The default file is `devproxyrc.json`, but Dev Proxy also auto-discovers `devproxyrc.yaml` and `devproxyrc.yml`.
+Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for configuration files. The default file is `devproxyrc.json`, but Dev Proxy also autodiscovers `devproxyrc.yaml` and `devproxyrc.yml`.
 
 > [!NOTE]
-> Schema validation (`validateSchemas`) only applies to JSON-based configuration files. YAML configuration files are not validated against schemas at runtime.
+> Schema validation (`validateSchemas`) only applies to JSON-based configuration files. YAML configuration files aren't validated against schemas at runtime.
 
 **File:** devproxyrc.json
 
