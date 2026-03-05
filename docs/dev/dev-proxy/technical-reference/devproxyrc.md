@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/27/2026
+ms.date: 03/05/2026
 ---
 
 <!-- INTENT: Reference for devproxyrc.json configuration file structure -->
@@ -80,10 +80,10 @@ validateSchemas: true
 YAML configuration supports anchors and merge keys for reusable configuration blocks:
 
 ```yaml
-definitions:
-  throttled: &throttled
-    statusCode: 429
-    body: '{"error": "Too many requests"}'
+# Define reusable response templates using YAML anchors
+throttled: &throttled
+  statusCode: 429
+  body: '{"error": "Too many requests"}'
 
 mocks:
   - request:
@@ -95,4 +95,3 @@ mocks:
     response:
       <<: *throttled
 ```
-
