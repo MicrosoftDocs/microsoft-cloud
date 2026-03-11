@@ -48,7 +48,7 @@ To persistently disable system proxy registration, add the `asSystemProxy` setti
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://api.contoso.com/*"
@@ -117,7 +117,7 @@ Azure Functions uses gRPC for internal communication, which fails when Dev Proxy
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://jsonplaceholder.typicode.com/*"

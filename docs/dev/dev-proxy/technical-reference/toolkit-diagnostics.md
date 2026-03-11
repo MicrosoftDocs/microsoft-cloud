@@ -50,7 +50,7 @@ Place `OpenApiSpecGeneratorPlugin` before `ApiCenterOnboardingPlugin`:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenApiSpecGeneratorPlugin",
@@ -68,7 +68,7 @@ Place `OpenApiSpecGeneratorPlugin` before `ApiCenterOnboardingPlugin`:
     "https://api.example.com/*"
   ],
   "apiCenterOnboardingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/apicenteronboardingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/apicenteronboardingplugin.schema.json",
     "subscriptionId": "your-subscription-id",
     "resourceGroupName": "your-resource-group",
     "serviceName": "your-api-center",
@@ -115,7 +115,7 @@ Add URL patterns to intercept:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -129,7 +129,7 @@ Add URL patterns to intercept:
     "https://graph.microsoft.com/v1.0/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -152,7 +152,7 @@ Either remove the orphaned section or add a plugin that references it:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -165,7 +165,7 @@ Either remove the orphaned section or add a plugin that references it:
     "https://api.example.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
     "rate": 50
   }
 }
@@ -189,7 +189,7 @@ Update the config section's `$schema` property to match your installed version. 
 ```json
 {
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -213,7 +213,7 @@ Check the schema documentation for the expected value format and update accordin
 ```json
 {
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
     "rate": 50
   }
 }
@@ -236,7 +236,7 @@ Update the `$schema` property to match your installed version. Use the quick fix
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json"
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json"
 }
 ```
 
@@ -257,7 +257,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -273,7 +273,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
     "enabled": true
   },
   "openAIMockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/openaimockresponseplugin.schema.json"
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/openaimockresponseplugin.schema.json"
   }
 }
 ```
@@ -295,7 +295,7 @@ Add at least one plugin with `enabled: true`:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -308,7 +308,7 @@ Add at least one plugin with `enabled: true`:
     "https://api.example.com/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -331,7 +331,7 @@ Add the missing configuration section. Use the snippet name shown in the diagnos
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -344,7 +344,7 @@ Add the missing configuration section. Use the snippet name shown in the diagnos
     "https://api.example.com/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
@@ -367,7 +367,7 @@ Remove the `configSection` property:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -398,7 +398,7 @@ Add a `configSection` property and create the configuration object. Use the snip
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -411,7 +411,7 @@ Add a `configSection` property and create the configuration object. Use the snip
     "https://api.example.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors.json",
     "rate": 50
   }
@@ -435,7 +435,7 @@ Move reporter plugins to the end of the `plugins` array:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -459,11 +459,11 @@ Move reporter plugins to the end of the `plugins` array:
     "https://api.example.com/*"
   ],
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   },
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }
@@ -487,7 +487,7 @@ Add a reporter plugin after the summary plugin:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "ExecutionSummaryPlugin",
@@ -524,7 +524,7 @@ Remove or rename the unknown property. Use the quick fix to remove it automatica
 ```json
 {
   "mockResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.0.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }

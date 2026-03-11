@@ -238,7 +238,7 @@ You can extend your plugin's logic by adding custom configuration:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
       "plugins": [{
         "name": "CatchApiCallsPlugin",
         "enabled": true,
