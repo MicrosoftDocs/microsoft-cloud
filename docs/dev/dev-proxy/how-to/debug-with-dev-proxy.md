@@ -201,7 +201,7 @@ Create a Dev Proxy configuration file that simulates throttling:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -215,7 +215,7 @@ Create a Dev Proxy configuration file that simulates throttling:
   ],
   "rate": 100,
   "errorsConfig": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors.json"
   }
 }
@@ -227,7 +227,7 @@ Create the errors file with the specific error responses:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -270,7 +270,7 @@ To simulate server errors, add another error response:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {

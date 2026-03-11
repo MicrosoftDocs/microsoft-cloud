@@ -64,7 +64,7 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",
@@ -77,7 +77,7 @@ In the `devproxyrc.json` file, add the following configuration:
     "https://api.northwind.com/*"
   ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "demo",
     "serviceName": "contoso-api-center",
@@ -103,7 +103,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",
@@ -121,7 +121,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
     "https://api.northwind.com/*"
   ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.1.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "demo",
     "serviceName": "contoso-api-center",

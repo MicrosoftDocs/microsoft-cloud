@@ -113,7 +113,7 @@ Since WSL doesn't have a graphical desktop environment, Dev Proxy can't automati
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
      "asSystemProxy": false,
      "plugins": [
        {
@@ -132,7 +132,7 @@ Since WSL doesn't have a graphical desktop environment, Dev Proxy can't automati
        "https://jsonplaceholder.typicode.com/*"
      ],
      "genericRandomErrorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.29.2/genericrandomerrorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
        "errorsFile": "devproxy-errors.json"
      },
      "rate": 50,
