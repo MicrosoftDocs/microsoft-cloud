@@ -208,7 +208,7 @@ Create a `devproxyrc.json` file in the same directory as your `docker-compose.ya
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v0.24.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
   "urlsToWatch": [
     "https://api.example.com/*",
     "https://graph.microsoft.com/*"
