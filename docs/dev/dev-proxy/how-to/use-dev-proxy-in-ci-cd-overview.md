@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Integrate Dev Proxy in CI/CD -->
@@ -39,7 +39,38 @@ bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v1.0.0
 
 After installing Dev Proxy, you need to start it. When starting Dev Proxy in a CI/CD pipeline, it's important that you start it in the background. Otherwise, your pipeline is blocked until you stop Dev Proxy.
 
-If you're using a Linux-based runner, you can start Dev Proxy in the background:
+You can start Dev Proxy in the background using the `--detach` option:
+
+```bash
+# start Dev Proxy in detached mode
+./devproxy/devproxy --detach --as-system-proxy false
+```
+
+Dev Proxy prints startup information including the process ID (PID), Proxy URL, API URL, and log file path:
+
+```text
+Dev Proxy started in background.
+
+  PID:       6456
+  Proxy URL: http://127.0.0.1:8000
+  API URL:   http://127.0.0.1:8897
+  Log file:  /home/runner/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log
+```
+
+For machine-readable output, use `--output json` to get JSONL:
+
+```bash
+./devproxy/devproxy --detach --as-system-proxy false --output json
+```
+
+```json
+{"type":"result","data":{"pid":6456,"proxyUrl":"http://127.0.0.1:8000","apiUrl":"http://127.0.0.1:8897","logFile":"/home/runner/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log"},"timestamp":"2026-03-05T14:22:42.0000000Z"}
+```
+
+> [!TIP]
+> Use `--port 0` and `--api-port 0` to let the OS assign random available ports. The detached mode output shows the actual ports assigned by the OS, which is useful in CI/CD scenarios to avoid port conflicts.
+
+Alternatively, if you're using a Linux-based runner, you can start Dev Proxy in the background using shell job control:
 
 ```bash
 # start Dev Proxy in the background

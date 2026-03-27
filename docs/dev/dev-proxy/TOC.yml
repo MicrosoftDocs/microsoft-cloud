@@ -398,9 +398,15 @@
           href: technical-reference/config-validate.md
       - name: jwt create
         href: technical-reference/jwt-create.md
+      - name: logs
+        href: technical-reference/logs-command.md
       - name: msgraphdb
         href: technical-reference/msgraphdb.md
       - name: outdated
         href: technical-reference/outdated.md
+      - name: status
+        href: technical-reference/status-command.md
       - name: stdio
         href: technical-reference/stdio.md
+      - name: stop
+        href: technical-reference/stop-command.md
