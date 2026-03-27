@@ -3,7 +3,7 @@ title: GraphSelectGuidancePlugin
 description: GraphSelectGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Warn about missing $select in Microsoft Graph calls -->
@@ -21,7 +21,7 @@ Shows a warning when proxy intercepts a request to Microsoft Graph APIs that doe
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphSelectGuidancePlugin",

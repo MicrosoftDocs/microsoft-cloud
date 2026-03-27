@@ -3,7 +3,7 @@ title: Use the system proxy option
 description: Learn how to control whether Dev Proxy registers as the system proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 03/26/2026
 ms.topic: how-to
 zone_pivot_groups: client-operating-system
 ---
@@ -48,7 +48,7 @@ To persistently disable system proxy registration, add the `asSystemProxy` setti
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://api.contoso.com/*"
@@ -117,7 +117,7 @@ Azure Functions uses gRPC for internal communication, which fails when Dev Proxy
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://jsonplaceholder.typicode.com/*"
@@ -169,9 +169,63 @@ HTTPS_PROXY=http://127.0.0.1:8000 npm start
 
 Other applications on your machine continue to work normally without any proxy interference.
 
+## Run multiple Dev Proxy instances
+
+When you set `asSystemProxy` to `false`, you can run multiple Dev Proxy instances simultaneously. Each instance listens on its own port and tracks its own state using per-instance state files.
+
+### Start multiple instances
+
+Start each instance on a different port:
+
+```console
+devproxy --as-system-proxy false --port 8000 --config-file devproxyrc-api1.json
+```
+
+In another terminal:
+
+```console
+devproxy --as-system-proxy false --port 9000 --config-file devproxyrc-api2.json
+```
+
+### Check the status of running instances
+
+To see all running instances use the `status` command:
+
+```console
+devproxy status
+```
+
+### Stop a specific instance
+
+To target a specific instance, use the `--pid` option with the `stop` command:
+
+```console
+devproxy stop --pid 6456
+```
+
+To stop all running instances:
+
+```console
+devproxy stop
+```
+
+### View logs from a specific instance
+
+Use the `--pid` option with the `logs` command:
+
+```console
+devproxy logs --pid 6456
+```
+
+> [!NOTE]
+> Only one Dev Proxy instance can be registered as the system proxy at a time. If you try to start a new instance with `asSystemProxy` set to `true` while another system proxy instance is already running, Dev Proxy blocks the startup.
+
 ## See also
 
 - [Proxy settings](../technical-reference/proxy-settings.md) - All configuration options
+- [status command](../technical-reference/status-command.md)
+- [stop command](../technical-reference/stop-command.md)
+- [logs command](../technical-reference/logs-command.md)
 - [Use Dev Proxy with Node.js applications](./use-dev-proxy-with-nodejs.md)
 - [Use Dev Proxy with .NET applications](./use-dev-proxy-with-dotnet.md)
 - [Use Dev Proxy with .NET Azure Functions](./use-dev-proxy-with-dotnet-azure-functions.md)

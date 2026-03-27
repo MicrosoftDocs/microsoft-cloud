@@ -3,7 +3,7 @@ title: Configure Dev Proxy
 description: Learn how to configure Dev Proxy to your needs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/13/2026
+ms.date: 03/26/2026
 ms.topic: get-started
 ---
 
@@ -24,7 +24,7 @@ The following code snippet shows the default Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -42,7 +42,7 @@ The following code snippet shows the default Dev Proxy configuration file:
     "https://jsonplaceholder.typicode.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "devproxy-errors.json"
   },
   "rate": 50,

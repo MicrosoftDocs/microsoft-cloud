@@ -3,7 +3,7 @@ title: Change request failure rate
 description: How to configure the request failure rate
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/07/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Change how often requests fail with simulated errors -->
@@ -31,7 +31,7 @@ Alternatively, you can configure the failure rate in the Dev Proxy configuration
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -44,7 +44,7 @@ Alternatively, you can configure the failure rate in the Dev Proxy configuration
     "https://api.example.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors.json",
     "rate": 80
   }

@@ -3,7 +3,7 @@ title: Use Dev Proxy with Docker Compose
 description: Learn how to use Dev Proxy with applications running in Docker containers using Docker Compose
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Use Dev Proxy with Docker Compose -->
@@ -208,7 +208,7 @@ Create a `devproxyrc.json` file in the same directory as your `docker-compose.ya
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "urlsToWatch": [
     "https://api.example.com/*",
     "https://graph.microsoft.com/*"

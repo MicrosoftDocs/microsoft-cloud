@@ -3,7 +3,7 @@ title: GraphClientRequestIdGuidancePlugin
 description: GraphClientRequestIdGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Warn about missing client-request-id header -->
@@ -21,7 +21,7 @@ Shows a tip when a request to Microsoft Graph API doesn't include the `client-re
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphClientRequestIdGuidancePlugin",

@@ -3,7 +3,7 @@ title: Simulate mock responses across the internet
 description: How to simulate mock responses across the internet.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Expose mocks via dev tunnels -->
@@ -38,7 +38,7 @@ Create a file named `mocks.json` that contains the mock responses for your custo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -80,7 +80,7 @@ Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `Mo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockResponsePlugin",
@@ -93,7 +93,7 @@ Create a Dev Proxy configuration file named `devproxyrc.json` and enable the `Mo
     "http://api.contoso.com/*"
   ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }

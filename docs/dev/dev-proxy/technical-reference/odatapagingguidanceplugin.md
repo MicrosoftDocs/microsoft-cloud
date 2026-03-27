@@ -3,7 +3,7 @@ title: ODataPagingGuidancePlugin
 description: ODataPagingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Warn about incorrect OData paging patterns -->
@@ -21,7 +21,7 @@ Shows a warning when proxy intercepts an OData paging request using a URL that h
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "ODataPagingGuidancePlugin",

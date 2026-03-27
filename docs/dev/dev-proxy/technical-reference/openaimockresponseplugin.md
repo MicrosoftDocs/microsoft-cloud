@@ -3,7 +3,7 @@ title: OpenAIMockResponsePlugin
 description: OpenAIMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Simulate Azure OpenAI/OpenAI responses using local LLM -->
@@ -21,7 +21,7 @@ Simulates responses from Azure OpenAI and OpenAI using a local language model.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

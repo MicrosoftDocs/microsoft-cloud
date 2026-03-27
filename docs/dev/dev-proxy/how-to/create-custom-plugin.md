@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 03/02/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Build a custom Dev Proxy plugin -->
@@ -238,7 +238,7 @@ You can extend your plugin's logic by adding custom configuration:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
       "plugins": [{
         "name": "CatchApiCallsPlugin",
         "enabled": true,

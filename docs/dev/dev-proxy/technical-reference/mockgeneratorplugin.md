@@ -3,7 +3,7 @@ title: MockGeneratorPlugin
 description: MockGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Auto-generate mock files from intercepted requests -->
@@ -23,7 +23,7 @@ To intercept requests, after starting Dev Proxy, start [recording](../how-to/rec
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockGeneratorPlugin",

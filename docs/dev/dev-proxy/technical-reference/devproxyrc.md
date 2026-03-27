@@ -3,7 +3,7 @@ title: devproxyrc
 description: devproxyrc.json file reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 03/05/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Reference for devproxyrc.json configuration file structure -->
@@ -21,7 +21,7 @@ Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for co
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -39,7 +39,7 @@ Dev Proxy supports both JSON (`.json`) and YAML (`.yaml`, `.yml`) formats for co
     "https://jsonplaceholder.typicode.com/*"
   ],
   "genericRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "devproxy-errors.json",
     "rate": 50
   },

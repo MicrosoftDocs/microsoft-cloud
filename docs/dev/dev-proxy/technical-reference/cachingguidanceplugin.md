@@ -3,7 +3,7 @@ title: CachingGuidancePlugin
 description: CachingGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Warn about repeated requests that could be cached -->
@@ -21,7 +21,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "CachingGuidancePlugin",
@@ -31,7 +31,7 @@ Shows a warning when Dev Proxy intercepted the same request within the specified
     }
   ],
   "cachingGuidance": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/cachingguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/cachingguidanceplugin.schema.json",
     "cacheThresholdSeconds": 5
   }
 }

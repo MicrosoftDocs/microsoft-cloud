@@ -3,7 +3,7 @@ title: EntraMockResponsePlugin
 description: EntraMockResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Mock Microsoft Entra auth flow responses -->
@@ -30,7 +30,7 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "EntraMockResponsePlugin",
@@ -40,7 +40,7 @@ When the plugin simulates auth flow API responses, it updates the state and nonc
     }
   ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }

@@ -3,7 +3,7 @@ title: Simulate errors from Microsoft Graph APIs
 description: How to configure Dev Proxy to simulate errors from Microsoft Graph APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Test how your app handles Microsoft Graph API errors -->
@@ -31,7 +31,7 @@ To start, enable the `GraphRandomErrorPlugin` in your configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphRandomErrorPlugin",
@@ -83,7 +83,7 @@ Alternatively, you can configure the `allowedErrors` property in the `graphRando
 ```json
 {
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429 ]
   }
 }
