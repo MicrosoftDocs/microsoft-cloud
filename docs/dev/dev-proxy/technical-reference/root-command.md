@@ -3,7 +3,7 @@ title: (root)
 description: Dev Proxy root command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Reference for devproxy command line options -->
@@ -72,6 +72,40 @@ None
 |`--watch-pids <pids>`|The IDs of processes to watch for requests|integer|n/a|
 |`--watch-process-names <processNames>`|The names of processes to watch for requests|string|n/a|
 |`-?, -h, --help`|Show help and usage information|n/a|n/a|
+
+## Detached mode output
+
+When you start Dev Proxy with the `--detach` option, it runs in the background and prints startup information to the console.
+
+### Text output (default)
+
+```text
+Dev Proxy started in background.
+
+  PID:       6456
+  Proxy URL: http://127.0.0.1:8000
+  API URL:   http://127.0.0.1:8897
+  Log file:  /Users/user/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log
+```
+
+### JSON output
+
+When you use `--output json` with `--detach`, Dev Proxy outputs single-line JSONL for machine parsing:
+
+**Success:**
+
+```json
+{"type":"result","data":{"pid":6456,"proxyUrl":"http://127.0.0.1:8000","apiUrl":"http://127.0.0.1:8897","logFile":"/Users/user/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log"},"timestamp":"2026-03-05T14:22:42.0000000Z"}
+```
+
+**Error:**
+
+```json
+{"type":"log","level":"error","message":"Dev Proxy is already running (PID: 6456). Use 'devproxy stop' to stop it first.","timestamp":"2026-03-05T14:22:42.0000000Z"}
+```
+
+> [!TIP]
+> Use `--port 0` to let the OS assign a random available port. The `Proxy URL` in the output shows the actual port assigned by the OS.
 
 ## Exit codes
 
