@@ -19,7 +19,7 @@ Dev Proxy uses a **plugin-based architecture** with three main plugin types:
 All configuration files follow this pattern:
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "PluginName",
@@ -30,7 +30,7 @@ All configuration files follow this pattern:
   ],
   "urlsToWatch": ["https://api.example.com/*"],
   "myPluginConfig": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/pluginname.schema.json"
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/pluginname.schema.json"
   }
 }
 ```

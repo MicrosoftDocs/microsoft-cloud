@@ -3,7 +3,7 @@ title: Test language model token limits
 description: How to test your app with language model token rate limiting
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Test LLM token rate limits -->
@@ -31,7 +31,7 @@ To start, enable the `LanguageModelRateLimitingPlugin` in your configuration fil
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelRateLimitingPlugin",
@@ -56,7 +56,7 @@ Next, configure the plugin with your desired token limits and time window.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelRateLimitingPlugin",
@@ -70,7 +70,7 @@ Next, configure the plugin with your desired token limits and time window.
     }
   ],
   "languageModelRateLimitingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/languagemodelratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/languagemodelratelimitingplugin.schema.json",
     "promptTokenLimit": 1000,
     "completionTokenLimit": 500,
     "resetTimeWindowSeconds": 60,
@@ -107,7 +107,7 @@ Create the custom response file with your desired error format:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
   "statusCode": 429,
   "headers": [
     {

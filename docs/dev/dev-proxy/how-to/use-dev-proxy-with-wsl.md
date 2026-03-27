@@ -3,7 +3,7 @@ title: Use Dev Proxy with WSL
 description: Learn how to use Dev Proxy with Windows Subsystem for Linux
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 03/26/2026
 ms.topic: how-to
 ---
 
@@ -113,7 +113,7 @@ Since WSL doesn't have a graphical desktop environment, Dev Proxy can't automati
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
      "asSystemProxy": false,
      "plugins": [
        {
@@ -132,7 +132,7 @@ Since WSL doesn't have a graphical desktop environment, Dev Proxy can't automati
        "https://jsonplaceholder.typicode.com/*"
      ],
      "genericRandomErrorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
        "errorsFile": "devproxy-errors.json"
      },
      "rate": 50,

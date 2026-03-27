@@ -3,7 +3,7 @@ title: How to check if my app is calling APIs with minimal permissions
 description: How to check if my app is calling APIs with minimal permissions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Verify API calls use minimal permissions via Azure API Center -->
@@ -64,7 +64,7 @@ In the `devproxyrc.json` file, add the following configuration:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",
@@ -77,7 +77,7 @@ In the `devproxyrc.json` file, add the following configuration:
     "https://api.northwind.com/*"
   ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "demo",
     "serviceName": "contoso-api-center",
@@ -103,7 +103,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "ApiCenterMinimalPermissionsPlugin",
@@ -121,7 +121,7 @@ Update your `devproxyrc.json` file with a reference to the plain-text reporter:
     "https://api.northwind.com/*"
   ],
   "apiCenterMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/apicenterminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/apicenterminimalpermissionsplugin.schema.json",
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "demo",
     "serviceName": "contoso-api-center",

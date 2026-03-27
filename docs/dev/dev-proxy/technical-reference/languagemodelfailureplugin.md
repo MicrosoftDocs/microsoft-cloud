@@ -3,7 +3,7 @@ title: LanguageModelFailurePlugin
 description: LanguageModelFailurePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Simulate LLM failures like hallucinations and bias -->
@@ -21,7 +21,7 @@ Simulates various large language model (LLM) failure scenarios to test resilienc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelFailurePlugin",
@@ -35,7 +35,7 @@ Simulates various large language model (LLM) failure scenarios to test resilienc
     "http://localhost:11434/*"
   ],
   "languageModelFailurePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/languagemodelfailureplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/languagemodelfailureplugin.schema.json",
     "failures": [
       "Hallucination",
       "PlausibleIncorrect"

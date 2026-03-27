@@ -3,7 +3,7 @@ title: MockStdioResponsePlugin
 description: MockStdioResponsePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 03/26/2026
 ---
 
 # MockStdioResponsePlugin
@@ -25,7 +25,7 @@ Simulates responses for STDIO-based applications, such as Model Context Protocol
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockStdioResponsePlugin",
@@ -35,7 +35,7 @@ Simulates responses for STDIO-based applications, such as Model Context Protocol
     }
   ],
   "mockStdioResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }
@@ -67,7 +67,7 @@ Respond to stdin containing a specific text with a stdout response.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -89,7 +89,7 @@ Respond to stdin with an error message on stderr.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -111,7 +111,7 @@ Use `@stdin.body.*` placeholders to dynamically include values from stdin in the
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -141,7 +141,7 @@ Load the mock response content from an external file using `@filename` syntax.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -169,7 +169,7 @@ Use `bodyRegex` to match stdin using a regular expression. This is useful when y
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {
@@ -191,7 +191,7 @@ Respond only after intercepting the matching stdin for the nth time.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
   "mocks": [
     {
       "request": {

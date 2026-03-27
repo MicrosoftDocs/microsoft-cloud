@@ -3,7 +3,7 @@ title: LanguageModelRateLimitingPlugin
 description: LanguageModelRateLimitingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Simulate token-based rate limiting for LLM APIs -->
@@ -21,7 +21,7 @@ Simulates token-based rate limiting for language model APIs by tracking prompt a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "LanguageModelRateLimitingPlugin",
@@ -35,7 +35,7 @@ Simulates token-based rate limiting for language model APIs by tracking prompt a
     "http://localhost:11434/*"
   ],
   "languageModelRateLimitingPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/languagemodelratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/languagemodelratelimitingplugin.schema.json",
     "promptTokenLimit": 5000,
     "completionTokenLimit": 5000,
     "resetTimeWindowSeconds": 60,
@@ -62,7 +62,7 @@ When `whenLimitExceeded` is set to `Custom`, you can define a custom response in
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/languagemodelratelimitingplugin.customresponsefile.schema.json",
   "statusCode": 429,
   "headers": [
     {

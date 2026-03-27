@@ -3,7 +3,7 @@ title: GraphBetaSupportGuidancePlugin
 description: GraphBetaSupportGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Warn about Microsoft Graph beta endpoint usage -->
@@ -21,7 +21,7 @@ Shows a warning when proxy detects a request to Microsoft Graph beta endpoint.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphBetaSupportGuidancePlugin",

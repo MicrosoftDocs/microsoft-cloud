@@ -3,7 +3,7 @@ title: OpenAITelemetryPlugin
 description: OpenAITelemetryPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Log OpenAI telemetry to OpenTelemetry dashboards -->
@@ -23,7 +23,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAITelemetryPlugin",
@@ -33,7 +33,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
     }
   ],
   "openAITelemetryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/openaitelemetryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/openaitelemetryplugin.schema.json",
     "application": "My app",
     "includeCosts": true,
     "pricesFile": "prices.json"
@@ -58,7 +58,7 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/openaitelemetryplugin.pricesfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/openaitelemetryplugin.pricesfile.schema.json",
   "prices": {
     "gpt-3.5-turbo": {
       "input": 0.0015,
