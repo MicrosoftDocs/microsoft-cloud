@@ -3,7 +3,7 @@ title: Mock STDIO responses for MCP servers
 description: How to mock STDIO responses for Model Context Protocol (MCP) servers using Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/07/2026
+ms.date: 03/26/2026
 ms.topic: how-to
 ---
 
@@ -25,7 +25,7 @@ Create a `devproxyrc.json` file with the following content:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockStdioResponsePlugin",
@@ -41,11 +41,11 @@ Create a `devproxyrc.json` file with the following content:
     }
   ],
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   },
   "mockStdioResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }
@@ -57,7 +57,7 @@ Create a `stdio-mocks.json` file with mock responses for the MCP server:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {
@@ -182,7 +182,7 @@ To test how your application handles slow MCP server responses, add the `Latency
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
@@ -198,12 +198,12 @@ To test how your application handles slow MCP server responses, add the `Latency
     }
   ],
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/latencyplugin.schema.json",
     "minMs": 100,
     "maxMs": 500
   },
   "mockStdioResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockstdioresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }

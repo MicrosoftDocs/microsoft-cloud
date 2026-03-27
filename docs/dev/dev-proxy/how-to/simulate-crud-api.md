@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Create a dynamic mock API with create, read, update, delete operations -->
@@ -48,7 +48,7 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
 ```json
 {
   "customersApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/crudapiplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
@@ -60,7 +60,7 @@ In the `customers-api.json` file, you define the mock customers API.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [

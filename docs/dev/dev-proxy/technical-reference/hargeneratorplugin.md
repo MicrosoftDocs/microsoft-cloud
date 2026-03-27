@@ -3,7 +3,7 @@ title: HarGeneratorPlugin
 description: HarGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Generate HAR files from intercepted traffic -->
@@ -19,7 +19,7 @@ Generates HTTP Archive (HAR) files from the intercepted requests and responses.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "HarGeneratorPlugin",
@@ -29,7 +29,7 @@ Generates HTTP Archive (HAR) files from the intercepted requests and responses.
     }
   ],
   "harGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/hargeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/hargeneratorplugin.schema.json",
     "includeSensitiveInformation": false,
     "includeResponse": true
   }

@@ -3,7 +3,7 @@ title: MinimalPermissionsGuidancePlugin
 description: MinimalPermissionsGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Compare JWT permissions against minimal scopes from local specs -->
@@ -21,7 +21,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MinimalPermissionsGuidancePlugin",
@@ -31,7 +31,7 @@ Compares the permissions used in the JWT token sent to APIs against the minimum 
     }
   ],
   "minimalPermissionsGuidancePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/minimalpermissionsguidanceplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/minimalpermissionsguidanceplugin.schema.json",
     "apiSpecsFolderPath": "./api-specs",
     "permissionsToExclude": [ 
       "profile", 

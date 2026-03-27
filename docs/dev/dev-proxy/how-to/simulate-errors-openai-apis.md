@@ -3,7 +3,7 @@ title: Simulate errors from OpenAI APIs
 description: How to configure Dev Proxy to simulate errors from OpenAI APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Test OpenAI API error handling -->
@@ -34,7 +34,7 @@ Create a new object in the `plugins` array referencing the `GenericRandomErrorPl
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -55,7 +55,7 @@ Create the plugin configuration object to provide the plugin with the location o
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [    
     {
       "name": "GenericRandomErrorPlugin",
@@ -68,7 +68,7 @@ Create the plugin configuration object to provide the plugin with the location o
     }
   ],
   "openAIAPI": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors-openai.json"
   }
 }
@@ -80,7 +80,7 @@ In the same folder, create the `errors-openai.json` file. This file contains the
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {

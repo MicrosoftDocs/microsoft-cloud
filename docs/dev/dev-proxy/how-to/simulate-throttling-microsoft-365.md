@@ -3,7 +3,7 @@ title: Simulate throttling on Microsoft 365 APIs
 description: How to test that your application connected to Microsoft 365 APIs handles throttling properly
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Test how your app handles Microsoft 365 API throttling -->
@@ -31,7 +31,7 @@ To start, enable the `GraphRandomErrorPlugin` and `RetryAfterPlugin` in your Dev
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -72,7 +72,7 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -102,7 +102,7 @@ Next, configure the `GraphRandomErrorPlugin` to simulate throttling errors.
     "https://*.sharepoint-df.*/*_vti_bin/*"
   ],
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429 ]
   }
 }

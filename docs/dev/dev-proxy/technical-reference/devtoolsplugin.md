@@ -3,7 +3,7 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/13/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: View Dev Proxy activity in Chrome DevTools -->
@@ -23,7 +23,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "DevToolsPlugin",
@@ -33,7 +33,7 @@ Exposes Dev Proxy messages, and information about intercepted requests and respo
     }
   ],
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }
@@ -78,7 +78,7 @@ When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can insp
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "DevToolsPlugin",
@@ -88,7 +88,7 @@ When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can insp
     }
   ],
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   }
 }

@@ -3,7 +3,7 @@ title: Generate an HTTP file
 description: How to generate an HTTP file from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Create an HTTP file from intercepted API requests for reuse -->
@@ -31,7 +31,7 @@ To generate an HTTP file using Dev Proxy:
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
      "plugins": [
        {
          "name": "HttpFileGeneratorPlugin",
@@ -44,7 +44,7 @@ To generate an HTTP file using Dev Proxy:
        "https://api.example.com/*"
      ],
      "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/httpfilegeneratorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/httpfilegeneratorplugin.schema.json",
        "includeOptionsRequests": false
      }
    }
@@ -60,7 +60,7 @@ To generate an HTTP file using Dev Proxy:
 
    ```json
    {
-     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
      "plugins": [
        {
          "name": "HttpFileGeneratorPlugin",
@@ -73,7 +73,7 @@ To generate an HTTP file using Dev Proxy:
        "https://api.example.com/*"
      ],
      "httpFileGeneratorPlugin": {
-       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/httpfilegeneratorplugin.schema.json",
+       "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/httpfilegeneratorplugin.schema.json",
        "includeOptionsRequests": false
      }
    }

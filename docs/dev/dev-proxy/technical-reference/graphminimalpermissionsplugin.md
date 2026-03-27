@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsPlugin
 description: GraphMinimalPermissionsPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/27/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Detect minimal permissions needed for Microsoft Graph calls -->
@@ -21,7 +21,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphMinimalPermissionsPlugin",
@@ -31,7 +31,7 @@ Returns a list of the minimal permissions required for Microsoft Graph requests 
     }
   ],
   "graphMinimalPermissionsPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/graphminimalpermissionsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/graphminimalpermissionsplugin.schema.json",
     "type": "delegated"
   }
 }

@@ -3,7 +3,7 @@ title: Test that my application handles throttling properly
 description: How to test that your application handles throttling properly
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Test throttling handling with Retry-After headers on any API -->
@@ -33,7 +33,7 @@ To start, enable the `GenericRandomErrorPlugin` in your Dev Proxy configuration 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -54,7 +54,7 @@ Next, configure the plugin to use a file that contains the errors you want to si
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -67,7 +67,7 @@ Next, configure the plugin to use a file that contains the errors you want to si
     }
   ],
   "errorsContosoApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors-contoso-api.json"
   }
 }
@@ -79,7 +79,7 @@ In the errors file, define the throttling response so that it matches the actual
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -117,7 +117,7 @@ To configure the `Retry-After` header to a static value, add the header to your 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -155,7 +155,7 @@ To test if your app is correctly waiting before calling the API again, change th
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
@@ -191,7 +191,7 @@ Additionally, extend your Dev Proxy configuration with the [`RetryAfterPlugin`](
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
@@ -212,7 +212,7 @@ Additionally, extend your Dev Proxy configuration with the [`RetryAfterPlugin`](
     }
   ],
   "errorsContosoApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors-contoso-api.json"
   }
 }

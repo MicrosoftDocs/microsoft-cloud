@@ -3,7 +3,7 @@ title: MockRequestPlugin
 description: MockRequestPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Issue web requests from Dev Proxy (e.g., webhooks) -->
@@ -23,7 +23,7 @@ To issue the configured request, press `w` in the command prompt session where D
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockRequestPlugin",
@@ -33,7 +33,7 @@ To issue the configured request, press `w` in the command prompt session where D
     }
   ],
   "contosoNotification": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockrequestplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockrequestplugin.schema.json",
     "mockFile": "mock-request.json"
   }
 }
@@ -53,7 +53,7 @@ None
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/mockrequestplugin.mockfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/mockrequestplugin.mockfile.schema.json",
   "request": {
     "url": "http://localhost:3000/api/notification",
     "method": "POST",

@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/06/2026
+ms.date: 03/26/2026
 ---
 
 <!-- INTENT: Generate OpenAPI spec from intercepted API traffic -->
@@ -21,7 +21,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenApiSpecGeneratorPlugin",
@@ -31,7 +31,7 @@ Generates OpenAPI spec in JSON format from the intercepted requests and response
     }
   ],
   "openApiSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.2.0/openapispecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.3.0/openapispecgeneratorplugin.schema.json",
     "includeOptionsRequests": false,
     "ignoreResponseTypes": false,
     "specVersion": "v3_0",
