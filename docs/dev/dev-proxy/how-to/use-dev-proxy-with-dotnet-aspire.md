@@ -1,43 +1,43 @@
 ---
-title: Use Dev Proxy with .NET Aspire applications
-description: How to use Dev Proxy with Use Dev Proxy with .NET Aspire applications
+title: Use Dev Proxy with Aspire applications
+description: How to use Dev Proxy with Aspire applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 04/22/2026
 ---
 
-<!-- INTENT: Use Dev Proxy with .NET Aspire -->
+<!-- INTENT: Use Dev Proxy with Aspire -->
 <!-- SOLUTION: Configure HttpClient to use Dev Proxy in Aspire app -->
-<!-- RESULT: .NET Aspire HTTP requests intercepted by Dev Proxy -->
+<!-- RESULT: Aspire HTTP requests intercepted by Dev Proxy -->
 <!-- PLUGINS: various -->
 <!-- JOB: intercept-requests -->
 <!-- TIME: 15 minutes -->
 
-# Use Dev Proxy with .NET Aspire applications
+# Use Dev Proxy with Aspire applications
 
 > **At a glance**  
-> **Goal:** Use Dev Proxy with .NET Aspire  
+> **Goal:** Use Dev Proxy with Aspire  
 > **Time:** 15 minutes  
 > **Plugins:** Various  
-> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [.NET Aspire](/dotnet/aspire/get-started/aspire-overview)
+> **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), [Aspire](/dotnet/aspire/get-started/aspire-overview)
 
-[.NET Aspire](/dotnet/aspire/get-started/aspire-overview) is an opinionated, cloud ready stack for building observable, production ready, distributed applications. It's built on top of .NET and provides a modern, fast, and scalable platform for building web applications.
+[Aspire](/dotnet/aspire/get-started/aspire-overview) is an opinionated, cloud ready stack for building observable, production ready, distributed applications. It's built on top of .NET and provides a modern, fast, and scalable platform for building web applications.
 
-To use Dev Proxy with your .NET Aspire application, use the [DevProxy.Hosting NuGet package](https://www.nuget.org/packages/DevProxy.Hosting). The package provides Dev Proxy .NET Aspire extensions to conveniently integrate Dev Proxy into your .NET Aspire application.
+To use Dev Proxy with your Aspire application, use the [DevProxy.Hosting NuGet package](https://www.nuget.org/packages/DevProxy.Hosting). The package provides Dev Proxy Aspire extensions to conveniently integrate Dev Proxy into your Aspire application.
 
-## Install the Dev Proxy .NET Aspire extensions NuGet package
+## Install the Dev Proxy Aspire extensions NuGet package
 
-To install the Dev Proxy .NET Aspire extensions NuGet package, run the following command in the root folder of your .NET Aspire application:
+To install the Dev Proxy Aspire extensions NuGet package, run the following command in the root folder of your Aspire application:
 
 ```console
 dotnet add package DevProxy.Hosting
 ```
 
-Using the Dev Proxy .NET Aspire extensions package, you can integrate Dev Proxy either from the locally installed executable or from a Docker container.
+Using the Dev Proxy Aspire extensions package, you can integrate Dev Proxy either from the locally installed executable or from a Docker container.
 
 ## Integrate Dev Proxy from the locally installed executable
 
-If you have Dev Proxy installed locally, the most convenient way to integrate it into your .NET Aspire application is to reference the local executable. The following code snippet shows how to integrate Dev Proxy from the locally installed executable with the .NET Aspire starter application.
+If you have Dev Proxy installed locally, the most convenient way to integrate it into your Aspire application is to reference the local executable. The following code snippet shows how to integrate Dev Proxy from the locally installed executable with the Aspire starter application.
 
 > [!IMPORTANT]
 > When you configure Dev Proxy to use the local executable, ensure that the executable is available on all machines where you run your application. If you want to use Dev Proxy in a containerized environment, consider using the Docker container instead.
@@ -69,7 +69,7 @@ builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
 builder.Build().Run();
 ```
 
-First, using the Dev Proxy .NET Aspire extensions, you add a Dev Proxy service to your application. The `AddDevProxyExecutable` method specifies the name of the Dev Proxy executable. Using the `WithConfigFile` method, you specify the path to the Dev Proxy configuration file. Using the `WithUrlsToWatch` method, you specify the list of URLs to watch. In this example, you want Dev Proxy to intercept requests that the web app makes to the API service.
+First, using the Dev Proxy Aspire extensions, you add a Dev Proxy service to your application. The `AddDevProxyExecutable` method specifies the name of the Dev Proxy executable. Using the `WithConfigFile` method, you specify the path to the Dev Proxy configuration file. Using the `WithUrlsToWatch` method, you specify the list of URLs to watch. In this example, you want Dev Proxy to intercept requests that the web app makes to the API service.
 
 > [!IMPORTANT]
 > Notice, that the `WithUrlsToWatch` method accepts a function that returns a list of URLs to watch. This is because the API service endpoint is not available when you configure Dev Proxy, so you cannot pass the URL directly. Instead, you use a lambda expression that returns the URL of the API service when it's available.
@@ -78,9 +78,9 @@ Next, in the web app, you use the `HTTPS_PROXY` environment variable to configur
 
 ## Integrate Dev Proxy from a Docker container
 
-Alternatively, you can integrate Dev Proxy into your .NET Aspire application from a Docker container. Using the Dev Proxy Docker image is convenient, because .NET Aspire automatically pull the image if it's not available locally. The downside is, that there are a few more steps to configure Dev Proxy in your application.
+Alternatively, you can integrate Dev Proxy into your Aspire application from a Docker container. Using the Dev Proxy Docker image is convenient, because Aspire automatically pull the image if it's not available locally. The downside is, that there are a few more steps to configure Dev Proxy in your application.
 
-The following code snippet shows how to integrate Dev Proxy from a Docker container with the .NET Aspire starter application.
+The following code snippet shows how to integrate Dev Proxy from a Docker container with the Aspire starter application.
 
 ```csharp
 using DevProxy.Hosting;
@@ -119,7 +119,7 @@ builder.Build().Run();
 
 The basic steps are the same as when using the locally installed executable. The main difference is how you specify the configuration file and the certificate for intercepting HTTPS traffic.
 
-When integrating Dev Proxy from a Docker container, you need to mount the local folders with the configuration file and the certificate into the container. In this example, in your .NET Aspire solution, you have the following folder structure:
+When integrating Dev Proxy from a Docker container, you need to mount the local folders with the configuration file and the certificate into the container. In this example, in your Aspire solution, you have the following folder structure:
 
 ```plaintext
 AspireStarterApp
@@ -143,15 +143,15 @@ The `config` folder contains the Dev Proxy configuration file and other Dev Prox
 
 Because you're mounting the certificate and configuration files to separate volumes in the container, they must be stored in separate folders.
 
-## Use Dev Proxy with the .NET Aspire starter application
+## Use Dev Proxy with the Aspire starter application
 
 After you start the application, Dev Proxy shows as a resource in the application.
 
-:::image type="content" source="../media/aspire-dashboard-resource.png" alt-text="Screenshot of the .NET Aspire dashboard showing application resources including Dev Proxy." lightbox="../media/aspire-dashboard-resource.png":::
+:::image type="content" source="../media/aspire-dashboard-resource.png" alt-text="Screenshot of the Aspire dashboard showing application resources including Dev Proxy." lightbox="../media/aspire-dashboard-resource.png":::
 
-When you use the web application so that it makes requests to the API service, Dev Proxy intercepts the requests and handles according to your configuration. You can see the Dev Proxy output in the **Console** section of the .NET Aspire dashboard.
+When you use the web application so that it makes requests to the API service, Dev Proxy intercepts the requests and handles according to your configuration. You can see the Dev Proxy output in the **Console** section of the Aspire dashboard.
 
-:::image type="content" source="../media/aspire-logs.png" alt-text="Screenshot of the .NET Aspire dashboard showing Dev Proxy console output." lightbox="../media/aspire-logs.png":::
+:::image type="content" source="../media/aspire-logs.png" alt-text="Screenshot of the Aspire dashboard showing Dev Proxy console output." lightbox="../media/aspire-logs.png":::
 
 ## See also
 

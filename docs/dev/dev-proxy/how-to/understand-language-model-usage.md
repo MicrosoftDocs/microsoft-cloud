@@ -3,7 +3,7 @@ title: Understand language model usage
 description: How to use Dev Proxy to intercept OpenAI-compatible requests and responses to understand how your application uses large language models.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 04/22/2026
 ---
 
 <!-- INTENT: Monitor LLM usage with OpenTelemetry -->
@@ -23,7 +23,7 @@ ms.date: 03/26/2026
 
 Using language models incurs costs. To understand how your application uses large language models, use Dev Proxy to intercept OpenAI-compatible requests and responses. Dev Proxy analyzes the requests and responses and logs telemetry data to help you understand how your application uses large language models. This information allows you to optimize your application and reduce costs.
 
-Dev Proxy logs language model usage data in OpenTelemetry format. You can use any OpenTelemetry-compatible dashboard to visualize the data. For example, you can use the [.NET Aspire dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) or [OpenLIT](https://openlit.io/). The telemetry data includes the number of tokens used in the request and response, the cost of the tokens used, and the total cost of all requests over the course of a session.
+Dev Proxy logs language model usage data in OpenTelemetry format. You can use any OpenTelemetry-compatible dashboard to visualize the data. For example, you can use the [Aspire dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) or [OpenLIT](https://openlit.io/). The telemetry data includes the number of tokens used in the request and response, the cost of the tokens used, and the total cost of all requests over the course of a session.
 
 ## Intercept OpenAI-compatible requests and responses using Dev Proxy
 
@@ -83,24 +83,24 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 ### Start OpenTelemetry collector and Dev Proxy
 
 > [!IMPORTANT]
-> Both .NET Aspire and OpenLIT require Docker to run. If you don't have Docker installed, follow the instructions in the [Docker documentation](https://docs.docker.com/get-docker/) to install Docker.
+> Both Aspire and OpenLIT require Docker to run. If you don't have Docker installed, follow the instructions in the [Docker documentation](https://docs.docker.com/get-docker/) to install Docker.
 
 1. Start Docker.
 
 1. Start the OpenTelemetry collector.
 
-    # [.NET Aspire](#tab/aspire)
+    # [Aspire](#tab/aspire)
     
-    1. Run the following command to start the .NET Aspire OpenTelemetry collector and dashboard:
+    1. Run the following command to start the Aspire OpenTelemetry collector and dashboard:
     
         ```bash
         docker run --rm -it -p 18888:18888 -p 4317:18889 -p 4318:18890 --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:latest
         ```
         
         > [!NOTE]
-        > When you're finished using the .NET Aspire dashboard, stop the dashboard by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where you started the dashboard. Docker automatically removes the container when you stop it.
+        > When you're finished using the Aspire dashboard, stop the dashboard by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal where you started the dashboard. Docker automatically removes the container when you stop it.
     
-    1. Open the .NET Aspire dashboard in your browser at `http://localhost:18888/login?t=<code>`.
+    1. Open the Aspire dashboard in your browser at `http://localhost:18888/login?t=<code>`.
     
     # [OpenLIT](#tab/openlit)
     
@@ -154,20 +154,20 @@ To intercept OpenAI-compatible requests and responses, use the [OpenAITelemetryP
 
 1. In the web browser, navigate to the OpenTelemetry dashboard.
 
-    # [.NET Aspire](#tab/aspire)
+    # [Aspire](#tab/aspire)
     
     1. From the side menu, select **Traces**.
     1. Select one of the traces named `DevProxy.OpenAI`.
     1. Select the request span.
     1. In the side panel, explore the language model usage data.
     
-        :::image type="content" source="../media/openai-telemetry-aspire-trace-basic.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data in a span." lightbox="../media/openai-telemetry-aspire-trace-basic.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-trace-basic.png" alt-text="Screenshot of the Aspire dashboard showing OpenAI telemetry data in a span." lightbox="../media/openai-telemetry-aspire-trace-basic.png":::
     
     1. In the side panel, switch to **Metrics**.
     1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
     1. From the list of metrics, select **gen_ai.client.token.usage** to see a chart showing the number of tokens that your application uses.
     
-        :::image type="content" source="../media/openai-telemetry-aspire-metrics-usage.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of token usage." lightbox="../media/openai-telemetry-aspire-metrics-usage.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-metrics-usage.png" alt-text="Screenshot of the Aspire dashboard showing a chart of token usage." lightbox="../media/openai-telemetry-aspire-metrics-usage.png":::
     
     # [OpenLIT](#tab/openlit)
     
@@ -279,13 +279,13 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
 1. In the web browser, navigate to the OpenTelemetry dashboard.
 
-    # [.NET Aspire](#tab/aspire)
+    # [Aspire](#tab/aspire)
     
     1. From the side panel, select **Metrics**.
     1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
     1. From the list of metrics, select **gen_ai.client.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
     
-        :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the .NET Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
+        :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
     
     # [OpenLIT](#tab/openlit)
     
@@ -299,9 +299,9 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
 
 1. Stop the OpenTelemetry collector.
 
-    # [.NET Aspire](#tab/aspire)
+    # [Aspire](#tab/aspire)
     
-    In the terminal where the .NET Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
+    In the terminal where the Aspire dashboard is running, press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the dashboard. Docker automatically removes the container when you stop it.
     
     # [OpenLIT](#tab/openlit)
     

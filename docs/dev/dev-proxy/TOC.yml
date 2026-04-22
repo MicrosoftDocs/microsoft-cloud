@@ -150,7 +150,7 @@
         href: how-to/use-dev-proxy-with-dotnet-docker.md
       - name: With .NET Azure Functions
         href: how-to/use-dev-proxy-with-dotnet-azure-functions.md
-      - name: With .NET Aspire applications
+      - name: With Aspire applications
         href: how-to/use-dev-proxy-with-dotnet-aspire.md
       - name: With SharePoint Framework (SPFx) solutions
         href: how-to/use-dev-proxy-with-spfx.md
