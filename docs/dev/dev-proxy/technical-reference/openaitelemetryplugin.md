@@ -3,7 +3,7 @@ title: OpenAITelemetryPlugin
 description: OpenAITelemetryPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 04/22/2026
 ---
 
 <!-- INTENT: Log OpenAI telemetry to OpenTelemetry dashboards -->
@@ -15,7 +15,7 @@ ms.date: 03/26/2026
 
 Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and responses.
 
-:::image type="content" source="../media/openai-telemetry-aspire.png" alt-text="Screenshot of the .NET Aspire dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-aspire.png":::
+:::image type="content" source="../media/openai-telemetry-aspire.png" alt-text="Screenshot of the Aspire dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-aspire.png":::
 
 :::image type="content" source="../media/openai-telemetry-openlit.png" alt-text="Screenshot of the OpenLIT dashboard showing OpenAI telemetry data." lightbox="../media/openai-telemetry-openlit.png":::
 
@@ -104,7 +104,7 @@ For each intercepted request and response, the plugin logs a span. Additionally,
 > [!IMPORTANT]
 > The cost metrics are only logged if you set the `includeCosts` property to `true` and provide the prices file. Otherwise, the plugin doesn't log the metrics.
 
-To view the recorded telemetry data, you can use any OpenTelemetry-compatible dashboard. For example, you can use the [.NET Aspire dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) or [OpenLIT](https://openlit.io/).
+To view the recorded telemetry data, you can use any OpenTelemetry-compatible dashboard. For example, you can use the [Aspire dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) or [OpenLIT](https://openlit.io/).
 
 > [!IMPORTANT]
 > To see the data, start the dashboard before you issue OpenAI-compatible request. Otherwise, there's no OpenTelemetry collector to receive the data that the plugin sends.

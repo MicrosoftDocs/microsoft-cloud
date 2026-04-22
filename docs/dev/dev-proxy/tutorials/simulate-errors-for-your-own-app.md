@@ -3,7 +3,7 @@ title: Simulate random errors for your own application
 description: Learn how to use Dev Proxy to simulate random errors for your own application.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/08/2024
+ms.date: 04/22/2026
 ---
 
 # Simulate random errors for your own application
@@ -33,7 +33,7 @@ Use Dev Proxy with:
 
 - [.NET applications](../how-to/use-dev-proxy-with-dotnet.md)
 - [.NET applications in Docker](../how-to/use-dev-proxy-with-dotnet-docker.md)
-- [.NET Aspire applications](../how-to/use-dev-proxy-with-dotnet-aspire.md)
+- [Aspire applications](../how-to/use-dev-proxy-with-dotnet-aspire.md)
 
 If you're using Dev Proxy with a .NET 4.8 app, you need to [register Dev Proxy on your system](../how-to/why-is-proxy-not-intercepting-requests-from-my-dotnet-4-8-app.md) using `netsh`.
 
