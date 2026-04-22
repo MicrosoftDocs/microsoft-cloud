@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 04/22/2026
 ms.topic: overview
 ---
 
@@ -107,7 +107,7 @@ Platform and framework-specific guides.
 - [With .NET applications](./use-dev-proxy-with-dotnet.md) · 10 min
 - [With .NET applications in Docker containers](./use-dev-proxy-with-dotnet-docker.md) · 15 min
 - [With .NET Azure Functions](./use-dev-proxy-with-dotnet-azure-functions.md) · 15 min
-- [With .NET Aspire applications](./use-dev-proxy-with-dotnet-aspire.md) · 15 min
+- [With Aspire applications](./use-dev-proxy-with-dotnet-aspire.md) · 15 min
 - [With SharePoint Framework (SPFx) solutions](./use-dev-proxy-with-spfx.md) · 10 min
 - [In a Docker container](./use-dev-proxy-in-docker-container.md) · 15 min
 
