@@ -3,7 +3,7 @@ title: LanguageModelFailurePlugin
 description: LanguageModelFailurePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 05/04/2026
 ---
 
 <!-- INTENT: Simulate LLM failures like hallucinations and bias -->
@@ -85,6 +85,10 @@ The LanguageModelFailurePlugin is designed to help developers test their applica
 - **Format validation**: Ensure your app handles incorrectly formatted responses
 - **Instruction following**: Test resilience when the LLM doesn't follow instructions
 - **Uncertainty handling**: Verify your app manages overconfident incorrect responses
+
+## Remarks
+
+When simulating a failure, the plugin injects a message with the `system` role containing failure-simulating content into the request to the language model.
 
 ## Next step
 
