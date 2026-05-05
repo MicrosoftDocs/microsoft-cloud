@@ -3,7 +3,7 @@ title: config get
 description: config get command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 05/04/2026
 ---
 
 <!-- INTENT: Reference for devproxy config get command -->
@@ -48,3 +48,7 @@ devproxy config get <config-id>
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
+
+## Remarks
+
+Dev Proxy stores downloaded configs in the `~dataFolder/configs/<config-id>` folder. Upgrading Dev Proxy doesn't affect the downloaded configs.

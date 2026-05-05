@@ -86,6 +86,10 @@ The LanguageModelFailurePlugin is designed to help developers test their applica
 - **Instruction following**: Test resilience when the LLM doesn't follow instructions
 - **Uncertainty handling**: Verify your app manages overconfident incorrect responses
 
+## Remarks
+
+When simulating a failure, the plugin injects a message with the `system` role containing failure-simulating content into the request to the language model.
+
 ## Next step
 
 > [!div class="nextstepaction"]

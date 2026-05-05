@@ -43,7 +43,7 @@ devproxy-beta --version
 
 Before upgrading Dev Proxy, consider the following:
 
-- **Back up configuration files in the installation folder**. Upgrading overwrites all files in the installation folder, including the default `devproxyrc.json`, the preset configurations in the `config` folder, and any configs you downloaded with `devproxy config get`. If you modified any of these files, back them up before upgrading. To avoid this risk, store your configuration and mock files in your project folder and pass them using `--config-file`. Files stored outside the installation folder aren't affected by upgrades.
+- **Back up configuration files in the installation folder**. Upgrading overwrites all files in the installation folder, including the default `devproxyrc.json` and the preset configurations in the `config` folder. If you modified any of these files, back them up before upgrading. Configs downloaded with `devproxy config get` are stored in `~dataFolder/configs/` and aren't affected by upgrades. To avoid this risk, store your configuration and mock files in your project folder and pass them using `--config-file`. Files stored outside the installation folder aren't affected by upgrades.
 - **Review the release notes**. Check the [release notes](https://github.com/dotnet/dev-proxy/releases) for any breaking changes or new features that might affect your workflow.
 - **Configuration compatibility**. Dev Proxy configuration files include a schema reference. After upgrading, update the schema version in your configuration files to match the new version. For example, update `"$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json"` to reference the new version.
 

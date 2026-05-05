@@ -66,7 +66,8 @@ Logs OpenAI telemetry data from the intercepted OpenAI-compatible requests and r
     },
     "gpt-4": {
       "input": 0.03,
-      "output": 0.06
+      "output": 0.06,
+      "cached_input": 0.015
     }
   }
 }
@@ -86,6 +87,7 @@ Each model prices object has the following properties:
 | -------- | ----------- | :------: | ------------- | ------------ |
 | `input` | The price per million tokens for input/prompt tokens. | yes | `0.0` | `0.03` |
 | `output` | The price per million tokens for output/completion tokens. | yes | `0.0` | `0.06` |
+| `cached_input` | The price per million tokens for cached input/prompt tokens. | no | `0.0` | `0.015` |
 
 ## Command line options
 
@@ -95,7 +97,12 @@ None
 
 The OpenAITelemetryPlugin logs OpenTelemetry data from the OpenAI-compatible requests and responses that it intercepts. Without having to instrument your application with OpenTelemetry, you can quickly understand how your application uses large language models. Additionally, if you provide prices file for the models you use, you can also see the LLM-related costs that your application incurs.
 
-For each intercepted request and response, the plugin logs a span. Additionally, it logs three metrics:
+For each intercepted request and response, the plugin logs a span with the following attributes:
+
+- `gen_ai.request.model` - the name of the language model specified in the request
+- `gen_ai.response.model` - the name of the language model specified in the response
+
+Additionally, it logs three metrics:
 
 - `gen_ai.client.token.usage` - the number of tokens used in the request and response
 - `gen_ai.usage.cost` - the cost of the tokens used in the request and response
