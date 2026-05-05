@@ -3,7 +3,7 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/14/2025
+ms.date: 05/05/2026
 ---
 
 <!-- INTENT: Understand how file paths are resolved in Dev Proxy config -->
@@ -26,6 +26,8 @@ In the below example, the `pluginPath` is relative to the configuration file. Th
 }
 ```
 
+## The ~appFolder token
+
 Let's say you start the proxy from a different directory, such as from the location of a project you're working in.
 
 If an `devproxyrc.json` configuration file exists in the current directory, then the file path resolution is relative to this file. If not, the proxy falls back to the default `devproxyrc.json` file.
@@ -47,6 +49,14 @@ Use the `~appFolder` token in the file paths to ensure that the path is prepende
 ```
 
 The `~appFolder` token can be used in any path used by the proxy.
+
+## The ~dataFolder token
+
+The `~dataFolder` token resolves to the Dev Proxy user data directory. This folder is separate from the installation directory and isn't affected by upgrades. Configs downloaded with `devproxy config get` are stored in this folder.
+
+```console
+devproxy --config-file ~dataFolder/configs/my-preset/devproxyrc.json
+```
 
 Let's say you want to load a preset configuration, you can use the `~appFolder` token in the path to reference the configuration file located in the proxy installation directory.
 
