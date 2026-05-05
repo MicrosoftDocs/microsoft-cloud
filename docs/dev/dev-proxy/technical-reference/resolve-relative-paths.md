@@ -3,7 +3,7 @@ title: Resolve relative paths
 description: How Dev Proxy resolves relative paths
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/04/2026
+ms.date: 05/05/2026
 ---
 
 <!-- INTENT: Understand how file paths are resolved in Dev Proxy config -->
@@ -25,6 +25,8 @@ In the below example, the `pluginPath` is relative to the configuration file. Th
   ]
 }
 ```
+
+## The ~appFolder token
 
 Let's say you start the proxy from a different directory, such as from the location of a project you're working in.
 
