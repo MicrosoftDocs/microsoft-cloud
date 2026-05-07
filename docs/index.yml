@@ -101,7 +101,7 @@ conceptualContent:
   items:
     - title: Azure
       links:
-        - url: https://azure.microsoft.com/free
+        - url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
           itemType: get-started
           text: Create an Azure Account
         - url: https://portal.azure.com
