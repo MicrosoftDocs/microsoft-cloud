@@ -3,7 +3,7 @@ title: Use Dev Proxy with Aspire applications
 description: How to use Dev Proxy with Aspire applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/22/2026
+ms.date: 05/08/2026
 ---
 
 <!-- INTENT: Use Dev Proxy with Aspire -->
@@ -50,7 +50,8 @@ var builder = DistributedApplication
 
 // Add an API service to the application
 var apiService = builder.AddProject<Projects.AspireStarterApp_ApiService>("apiservice")
-    .WithHttpsHealthCheck("/health");
+    .WithHttpHealthCheck("/health")
+    .WithHttpsEndpoint();
 
 var devProxy = builder.AddDevProxyExecutable("devproxy")
     .WithConfigFile(".devproxy/config/devproxy.json")
@@ -59,7 +60,7 @@ var devProxy = builder.AddDevProxyExecutable("devproxy")
 // Add a web frontend project and configure it to use Dev Proxy
 builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
     .WithExternalHttpEndpoints()
-    .WithHttpsHealthCheck("/health")
+    .WithHttpHealthCheck("/health")
     .WithEnvironment("HTTPS_PROXY", devProxy.GetEndpoint(DevProxyResource.ProxyEndpointName))
     .WithReference(apiService)
     .WaitFor(apiService)
@@ -90,7 +91,8 @@ var builder = DistributedApplication
 
 // Add an API service to the application
 var apiService = builder.AddProject<Projects.AspireStarterApp_ApiService>("apiservice")
-    .WithHttpsHealthCheck("/health");
+    .WithHttpHealthCheck("/health")
+    .WithHttpsEndpoint();
 
 // Add Dev Proxy as a container resource
 var devProxy = builder.AddDevProxyContainer("devproxy")
@@ -106,7 +108,7 @@ var devProxy = builder.AddDevProxyContainer("devproxy")
 // Add a web frontend project and configure it to use Dev Proxy
 builder.AddProject<Projects.AspireStarterApp_Web>("webfrontend")
     .WithExternalHttpEndpoints()
-    .WithHttpsHealthCheck("/health")
+    .WithHttpHealthCheck("/health")
     // set the HTTPS_PROXY environment variable to the Dev Proxy endpoint
     .WithEnvironment("HTTPS_PROXY", devProxy.GetEndpoint(DevProxyResource.ProxyEndpointName))
     .WithReference(apiService)
