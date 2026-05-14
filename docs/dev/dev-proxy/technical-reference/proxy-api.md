@@ -12,10 +12,6 @@ ms.date: 04/02/2025
 
 Dev Proxy comes with a web API that allows you to interact with the proxy programmatically. The API is available on the port specified in the [proxy settings](./proxy-settings.md).
 
-## Swagger
-
-The API is documented using Swagger. You can access the Swagger UI by navigating to `http://localhost:<apiPort>/swagger` in your browser.
-
 ## Operations
 
 The following list shows available API operations.
