@@ -152,6 +152,6 @@ See also the related Dev Proxy samples:
 
 - [Mock responses](./Mock-responses.md) - Return static mock responses
 - [Simulate a CRUD API across the internet](./simulate-crud-api-dev-tunnel.md) - Expose your mock API publicly
-- [Simulate a CRUD API secured with an API key](./simulate-crud-api-apikey.md) - Add API key authentication
+- [Simulate a CRUD API secured with an API key](./simulate-crud-api-api-key.md) - Add API key authentication
 - [Simulate a CRUD API secured with Microsoft Entra](./simulate-crud-api-entra.md) - Add Entra authentication
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology

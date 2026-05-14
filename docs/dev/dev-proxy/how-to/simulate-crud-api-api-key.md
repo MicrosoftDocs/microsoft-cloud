@@ -172,7 +172,7 @@ Update the `customers-api.json` file as follows:
 }
 ```
 
-In this example, requests that include the API key in either the `X-API-Key` header or the `api_key` query parameter are authorized.
+In this example, a request that includes the API key in either the `X-API-Key` header or the `api_key` query parameter is authorized.
 
 ## Next step
 

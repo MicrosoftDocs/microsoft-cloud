@@ -57,7 +57,7 @@
       - name: Simulate a CRUD API across the internet
         href: how-to/simulate-crud-api-dev-tunnel.md
       - name: Simulate a CRUD API secured with an API key
-        href: how-to/simulate-crud-api-apikey.md
+        href: how-to/simulate-crud-api-api-key.md
       - name: Simulate a CRUD API secured with Microsoft Entra
         href: how-to/simulate-crud-api-entra.md
       - name: Simulate Azure OpenAI API
