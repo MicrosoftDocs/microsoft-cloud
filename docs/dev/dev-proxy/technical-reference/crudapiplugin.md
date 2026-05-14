@@ -13,7 +13,7 @@ ms.date: 05/04/2026
 
 # CrudApiPlugin
 
-Simulates a CRUD API with an in-memory data store. Sends JSON responses. Supports CORS for cross-domain usage from client-side applications. Optionally, simulates CRUD APIs secured with Microsoft Entra.
+Simulates a CRUD API with an in-memory data store. Sends JSON responses. Supports CORS for cross-domain usage from client-side applications. Optionally, simulates CRUD APIs secured with Microsoft Entra or an API key.
 
 :::image type="content" source="../media/crud-api-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy simulating a CRUD API." lightbox="../media/crud-api-plugin.png":::
 
@@ -137,6 +137,51 @@ Following is an example of an API file that defines a CRUD API for information a
 }
 ```
 
+### CRUD API secured with an API key
+
+Following is an example of an API file that defines a CRUD API for information about customers secured with an API key. CrudApiPlugin checks for the API key in the specified header or query parameter.
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
+  "baseUrl": "https://api.contoso.com/v1/customers",
+  "dataFile": "customers-data.json",
+  "auth": "apiKey",
+  "apiKeyAuthConfig": {
+    "apiKey": "my-secret-key",
+    "headerName": "X-API-Key"
+  },
+  "actions": [
+    {
+      "action": "getAll"
+    },
+    {
+      "action": "getOne",
+      "url": "/{customer-id}",
+      "query": "$.[?(@.id == {customer-id})]"
+    },
+    {
+      "action": "create"
+    },
+    {
+      "action": "merge",
+      "url": "/{customer-id}",
+      "query": "$.[?(@.id == {customer-id})]"
+    },
+    {
+      "action": "update",
+      "url": "/{customer-id}",
+      "query": "$.[?(@.id == {customer-id})]"
+    },
+    {
+      "action": "delete",
+      "url": "/{customer-id}",
+      "query": "$.[?(@.id == {customer-id})]"
+    }
+  ]
+}
+```
+
 ### CRUD API secured with Microsoft Entra using specific scopes
 
 Following is an example of an API file that defines a CRUD API for information about customers secured with Microsoft Entra. Actions are secured with specific scopes. CrudApiPlugin validates the token audience, issuer, and the scope.
@@ -211,7 +256,8 @@ Following is an example of an API file that defines a CRUD API for information a
 | Property | Description | Required |
 |----------|-------------|----------|
 | `actions` | List of actions that the API supports. | Yes |
-| `auth` | Determines if the API is secured or not. Allowed values: `none`, `entra`. Default `none` | No |
+| `apiKeyAuthConfig` | Configuration for API key authentication. | Yes, when you configure `auth` to `apiKey` |
+| `auth` | Determines if the API is secured or not. Allowed values: `none`, `entra`, `apiKey`. Default `none` | No |
 | `baseUrl` | Base URL where Dev Proxy exposes the URL. Dev Proxy prepends the base URL to URLs you define in actions. | Yes |
 | `dataFile` | Path to the file that contains the data for the API. | Yes |
 | `entraAuthConfig` | Configuration for Microsoft Entra authentication. | Yes, when you configure `auth` to `entra` |
@@ -219,6 +265,22 @@ Following is an example of an API file that defines a CRUD API for information a
 You can refer to the `dataFile` using an absolute- or a relative path. Dev Proxy resolves relative paths relatively to the API definition file.
 
 The `dataFile` must define a JSON array. The array can be empty or it can contain an initial set of objects.
+
+### ApiKeyAuthConfig properties
+
+When you configure the `auth` property to `apiKey`, you must define the `apiKeyAuthConfig` property. If you don't define it, CrudApiPlugin shows a warning and the API is available anonymously.
+
+You define `apiKeyAuthConfig` on the API file. It applies to all actions.
+
+The `apiKeyAuthConfig` property has the following properties.
+
+| Property | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `apiKey` | The valid API key that must be present in the request. | Yes | None |
+| `headerName` | The HTTP header name to read the API key from. | No | None |
+| `queryParameterName` | The query-string parameter name to read the API key from. | No | None |
+
+You must specify at least one of `headerName` or `queryParameterName`. If you specify both, CrudApiPlugin checks the header first. If the header doesn't contain the API key, the plugin checks the query parameter.
 
 ### EntraAuthConfig properties
 
@@ -244,7 +306,7 @@ Each action in the `actions` list has the following properties.
 | Property | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `action` | Defines how Dev Proxy interacts with the data. Possible values: `getAll`, `getOne`, `getMany`, `create`, `merge`, `update`, `delete`. | Yes | None |
-| `auth` | Determines if the action is secured or not. Allowed values: `none`, `entra`. | No | `none` |
+| `auth` | Determines if the action is secured or not. Allowed values: `none`, `entra`, `apiKey`. | No | `none` |
 | `entraAuthConfig` | Configuration for Microsoft Entra authentication. | Yes, when you configure `auth` to `entra` | None |
 | `method` | HTTP method that Dev Proxy uses to expose the action. | No | Depends on the action |
 | `query` | Newtonsoft [JSONPath](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm) query that Dev Proxy uses to find the data in the data file. | No | Empty |
