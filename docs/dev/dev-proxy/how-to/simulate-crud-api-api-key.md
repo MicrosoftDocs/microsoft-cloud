@@ -3,7 +3,7 @@ title: Simulate a CRUD API secured with an API key
 description: How to simulate a CRUD API secured with an API key
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/13/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Simulate CRUD API with API key auth -->

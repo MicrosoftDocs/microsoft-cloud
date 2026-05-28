@@ -3,7 +3,7 @@ title: MarkdownReporter
 description: MarkdownReporter reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Convert report data to Markdown format -->
@@ -19,7 +19,7 @@ Generates reports in Markdown format.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "MarkdownReporter",

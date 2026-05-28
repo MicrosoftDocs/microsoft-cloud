@@ -3,7 +3,7 @@ title: GraphMockResponsePlugin
 description: GraphMockResponsePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Mock responses for Microsoft Graph API including batch requests -->
@@ -21,7 +21,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphMockResponsePlugin",
@@ -31,7 +31,7 @@ Mocks responses to Microsoft Graph APIs. Includes all functionality of the [Mock
     }
   ],
   "mocksPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/mockresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json"
   }
 }
