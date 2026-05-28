@@ -3,7 +3,7 @@ title: Simulate a CRUD API secured with Microsoft Entra
 description: How to simulate a CRUD API secured with Microsoft Entra
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Simulate CRUD API with Entra auth -->
@@ -43,7 +43,7 @@ In the `customers-api.json` file, add information about Entra.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -95,7 +95,7 @@ Update the `customers-api.json` file as follows:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -161,7 +161,7 @@ If you want Dev Proxy to validate the access token, to the `entraAuthConfig` pro
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
