@@ -3,7 +3,7 @@ title: GraphRandomErrorPlugin
 description: GraphRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Simulate random errors from Microsoft Graph API -->
@@ -21,7 +21,7 @@ Fails requests made to Microsoft Graph with random errors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphRandomErrorPlugin",
@@ -31,7 +31,7 @@ Fails requests made to Microsoft Graph with random errors.
     }
   ],
   "graphRandomErrorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/graphrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/graphrandomerrorplugin.schema.json",
     "allowedErrors": [ 429, 500, 502, 503, 504, 507 ]
   }
 }

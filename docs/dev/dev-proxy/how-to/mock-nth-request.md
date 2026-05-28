@@ -3,7 +3,7 @@ title: Mock nth request
 description: How to simulate different responses from the same endpoint
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Return different responses for sequential requests to the same endpoint -->
@@ -35,7 +35,7 @@ Using the following mock file as an example, we can see that it contains two moc
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/mockresponseplugin.mocksfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/mockresponseplugin.mocksfile.schema.json",
   "mocks": [
     {
       "request": {

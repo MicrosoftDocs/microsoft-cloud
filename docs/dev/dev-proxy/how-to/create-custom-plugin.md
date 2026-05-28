@@ -3,7 +3,7 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Build a custom Dev Proxy plugin -->
@@ -38,7 +38,6 @@ A single plugin class can handle both HTTP and stdio traffic by overriding metho
 Before you start creating a custom plugin, make sure you have the following prerequisites:
 
 - [.NET v10 Core SDK](https://dotnet.microsoft.com/download)
-- The latest version of the Dev Proxy Abstractions DLL, which you can find on the [Dev Proxy GitHub releases](https://github.com/dotnet/dev-proxy/releases) page
 
 ## Create a new plugin
 
@@ -56,29 +55,13 @@ Follow the next steps to create a new project:
     code MyCustomPlugin
     ```
 
-1. Add the Dev Proxy Abstractions DLL (`DevProxy.Abstractions.dll`) to the project folder.
-1. Add the `DevProxy.Abstractions.dll` as a reference to your project `DevProxyCustomPlugin.csproj` file.
-
-    ```xml
-    <ItemGroup>
-      <Reference Include="DevProxy.Abstractions">
-        <HintPath>.\DevProxy.Abstractions.dll</HintPath>
-        <Private>false</Private>
-        <ExcludeAssets>runtime</ExcludeAssets>
-      </Reference>
-    </ItemGroup>
-    ```
-
-1. Add the NuGet packages required for your project.
+1. Add the Dev Proxy Abstractions NuGet package to your project.
 
     ```console
-    dotnet add package Microsoft.Extensions.Configuration
-    dotnet add package Microsoft.Extensions.Configuration.Binder
-    dotnet add package Microsoft.Extensions.Logging.Abstractions
-    dotnet add package Unobtanium.Web.Proxy
+    dotnet add package DevProxy.Abstractions
     ```
 
-1. Exclude the dependency dynamic-link libraries (DLLs) from the build output by adding a `ExcludeAssets` tag per `PackageReference` in the `DevProxyCustomPlugin.csproj` file.
+1. Exclude the dependency dynamic-link libraries (DLLs) from the build output by adding a `ExcludeAssets` tag per `PackageReference` in the `MyCustomPlugin.csproj` file.
 
     ```xml
     <ExcludeAssets>runtime</ExcludeAssets>
@@ -238,7 +221,7 @@ You can extend your plugin's logic by adding custom configuration:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
       "plugins": [{
         "name": "CatchApiCallsPlugin",
         "enabled": true,

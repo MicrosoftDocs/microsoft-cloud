@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses -->
@@ -21,7 +21,7 @@ Delays responses by a random number of milliseconds from the configured range. S
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
@@ -31,7 +31,7 @@ Delays responses by a random number of milliseconds from the configured range. S
     }
   ],
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }
@@ -57,7 +57,7 @@ When you use the `LatencyPlugin` with the [`STDIO` command](stdio.md), the plugi
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
@@ -73,12 +73,12 @@ When you use the `LatencyPlugin` with the [`STDIO` command](stdio.md), the plugi
     }
   ],
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/latencyplugin.schema.json",
     "minMs": 100,
     "maxMs": 500
   },
   "mockSTDIOResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v2.4.0/mockSTDIOresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/mockSTDIOresponseplugin.schema.json",
     "mocksFile": "STDIO-mocks.json"
   }
 }
