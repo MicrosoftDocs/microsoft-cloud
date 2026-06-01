@@ -3,7 +3,7 @@ title: What Is a Proxy?
 description: This article explains what a proxy is and how it works.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/18/2025
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand what a proxy server does and how Dev Proxy works -->
@@ -65,7 +65,7 @@ Proxies can capture and inspect HTTP traffic. Tools like Dev Proxy, Fiddler, Pro
 
 In many production systems, traffic to your application's back end is routed through an API gateway or reverse proxy, such as NGINX, or a cloud-native service like Azure API Management. These proxies handle routing, authentication, rate limiting, and more.
 
-When you design your API or building distributed services, you must understand how proxies affect headers (such as `X-Forwarded-For`), time-outs, and request size limits.
+When you design your API or building distributed services, you must understand how proxies affect headers (such as `X-Forwarded-For`), timeouts, and request size limits.
 
 ### CORS and local development
 
@@ -73,13 +73,13 @@ During local development, especially in web applications, you might encounter cr
 
 ### Service virtualization and testing
 
-Proxies can simulate back-end APIs. This capability is useful when the real service is unavailable, unstable, or expensive to use during testing. By intercepting and mocking responses, you can test application behavior under different scenarios such as time-outs, errors, or malformed data.
+Proxies can simulate back-end APIs. This capability is useful when the real service is unavailable, unstable, or expensive to use during testing. By intercepting and mocking responses, you can test application behavior under different scenarios such as timeouts, errors, or malformed data.
 
 Tools like Dev Proxy or custom proxy implementations are commonly used for this purpose in integration and end-to-end tests.
 
 ### Authentication and security
 
-Proxies are often the front line of defense in securing applications. They can enforce access controls, inject authentication headers, or terminate TLS/SSL connections. As a developer, it's important to be aware of how your application behaves when it sits behind a proxy and how to access headers that carry authentication or identity information.
+Proxies are often the frontline of defense in securing applications. They can enforce access controls, inject authentication headers, or terminate TLS/SSL connections. As a developer, it's important to be aware of how your application behaves when it sits behind a proxy and how to access headers that carry authentication or identity information.
 
 ## Common headers and proxy considerations
 
@@ -100,6 +100,15 @@ Dev Proxy is a forward proxy that you can use to intercept and modify requests f
 - See how your app handles slow APIs.
 - Quickly stand up mock APIs without writing a line of code.
 - Improve your app with contextual guidance on how you use APIs.
+
+## Try it yourself
+
+Pick a scenario that matches what you're building:
+
+- [Test how your app handles API errors](../how-to/test-my-app-with-random-errors.md) — 5 minutes
+- [Simulate rate limiting on any API](../how-to/simulate-rate-limit-api-responses.md) — 10 minutes
+- [Mock API responses without changing your code](../how-to/mock-responses.md) — 10 minutes
+- [Simulate OpenAI API locally](../how-to/simulate-openai.md) — 15 minutes
 
 ## Next step
 

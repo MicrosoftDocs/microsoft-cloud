@@ -3,7 +3,7 @@ title: Simulate Rate-Limit API responses
 description: How to simulate Rate-Limit API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Simulate rate limiting behavior on any API -->
@@ -14,6 +14,9 @@ ms.date: 01/03/2026
 <!-- TIME: 10 minutes -->
 
 # Simulate Rate-Limit API responses
+
+> [!TIP]
+> New to rate limiting? Learn [what rate limiting is](../concepts/what-is-rate-limiting.md) and [how to handle it](../concepts/how-to-handle-rate-limiting.md).
 
 > **At a glance**  
 > **Goal:** Simulate rate limiting behavior on any API  
@@ -84,4 +87,6 @@ Learn more about the `RateLimitingPlugin`.
 - [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md) - Full reference
 - [What is rate limiting](../concepts/what-is-rate-limiting.md) - Concepts
 - [How to handle rate limiting](../concepts/how-to-handle-rate-limiting.md) - Best practices
+- [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md) - Related resilience test
+- [Use Dev Proxy in CI/CD](./use-dev-proxy-in-ci-cd-overview.md) - Automate resilience testing in your pipeline
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology

@@ -3,7 +3,7 @@ title: Simulate slow API responses
 description: How to simulate slow API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses for testing -->
@@ -85,4 +85,6 @@ When a response is delayed, Dev Proxy displays the total duration it was delayed
 
 - [LatencyPlugin](../technical-reference/latencyplugin.md) - Full reference
 - [Test my app with random errors](./test-my-app-with-random-errors.md) - Simulate API failures
+- [Simulate Rate-Limit API responses](./simulate-rate-limit-api-responses.md) - Test rate limiting
+- [Use Dev Proxy in CI/CD](./use-dev-proxy-in-ci-cd-overview.md) - Automate resilience testing in your pipeline
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology

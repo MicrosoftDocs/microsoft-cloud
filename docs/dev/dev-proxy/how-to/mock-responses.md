@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Return predefined responses instead of calling real API -->
@@ -13,6 +13,9 @@ ms.date: 05/28/2026
 <!-- JOB: mock-api -->
 
 # Mock responses
+
+> [!TIP]
+> New to proxies? Learn [what a proxy is](../concepts/what-is-proxy.md) and how Dev Proxy uses it to intercept and modify API traffic.
 
 > **At a glance**  
 > **Goal:** Return predefined API responses without calling the real API  

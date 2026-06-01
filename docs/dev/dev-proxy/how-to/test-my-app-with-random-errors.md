@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Test how app handles API failures -->
@@ -13,6 +13,9 @@ ms.date: 05/28/2026
 <!-- JOB: test-error-handling -->
 
 # Test my app with random errors
+
+> [!TIP]
+> New to chaos testing? Learn [what chaos testing is](../concepts/what-is-chaos-testing.md) and how it helps you build more resilient apps.
 
 > **At a glance**  
 > **Goal:** See how your app handles API errors  
@@ -118,4 +121,5 @@ Learn more about the `GenericRandomErrorPlugin`.
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md) - Test rate limiting
 - [Change request failure rate](./Change-request-failure-rate.md) - Adjust how often errors occur
 - [Simulate errors from Microsoft Graph APIs](./simulate-errors-microsoft-graph-apis.md) - Microsoft Graph-specific errors
+- [Use Dev Proxy in CI/CD](./use-dev-proxy-in-ci-cd-overview.md) - Automate resilience testing in your pipeline
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology
