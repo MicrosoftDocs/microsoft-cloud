@@ -3,7 +3,7 @@ title: How to Implement Rate Limiting in Azure API Management
 description: This article explains how to implement rate limiting in Azure API Management.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/26/2024
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Configure rate limiting policies in Azure API Management -->
@@ -84,6 +84,13 @@ When you call your API now, each response includes the `ratelimit-remaining` and
 ## Summary
 
 Implementing rate limiting in Azure API Management helps you create robust and scalable APIs. By using rate limiting, you can ensure that your API serves your users reliably and efficiently. The key is to find the right balance. If a rate limit is too strict, you might hinder usability. If a rate limit is too lenient, you risk overwhelming your API. With careful planning and continuous monitoring, you can achieve this balance and maintain a healthy API environment.
+
+## Test your clients
+
+After you implement rate limiting on your API, verify that apps calling your API handle rate limits correctly. Use Dev Proxy to simulate the rate limiting behavior you configured and see how client apps respond.
+
+- [How to handle rate limiting](how-to-handle-rate-limiting.md) — best practices for client apps
+- [Simulate rate limiting](../how-to/simulate-rate-limit-api-responses.md) — test with Dev Proxy
 
 ## Next step
 

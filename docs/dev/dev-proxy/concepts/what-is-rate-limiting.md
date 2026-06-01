@@ -3,7 +3,7 @@ title: What Is Rate Limiting?
 description: This article explains the concept of rate limiting in cloud APIs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/26/2024
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand rate limiting concepts (requests per time period) -->
@@ -28,7 +28,14 @@ When you exceed the rate limit, the API throttles your requests and returns an H
 
 To avoid throttling and ensure that your application remains responsive, implement rate limiting in your application. Depending on your technology stack, different libraries can help you handle rate limiting in your application. After you implement rate limiting in your application, test to see if it handles rate limiting properly.
 
-## Next step
+## How does rate limiting affect your app?
+
+Most apps don't handle rate limiting correctly. When the API starts returning `429` responses, the typical app either crashes, shows an error to the user, or silently loses data. You can find out how your app behaves by simulating rate limits locally using Dev Proxy — without waiting for the real API to throttle you.
+
+## Next steps
 
 > [!div class="nextstepaction"]
-> [Test that my application handles rate limiting properly](../how-to/simulate-rate-limit-api-responses.md)
+> [How to handle rate limiting](how-to-handle-rate-limiting.md)
+
+- [Simulate rate limiting on any API](../how-to/simulate-rate-limit-api-responses.md)
+- [What is throttling?](what-is-throttling.md)

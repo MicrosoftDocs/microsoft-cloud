@@ -3,7 +3,7 @@ title: What Is Throttling?
 description: This article explains the concept of throttling in cloud APIs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 12/18/2023
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand API throttling concepts (429 errors, service protection) -->
@@ -18,7 +18,10 @@ In addition to status codes, some APIs might also provide more information in th
 
 You need to be aware of the throttling limits of the APIs that you use, and know how to handle throttling errors appropriately in your apps. Throttling helps you ensure that your apps remain responsive and reliable, even when the API is under heavy load.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Test that my application handles throttling properly](../how-to/test-that-my-application-handles-throttling-properly.md)
+
+- [How to handle API throttling](how-to-handle-api-throttling.md)
+- [What is rate limiting?](what-is-rate-limiting.md)
