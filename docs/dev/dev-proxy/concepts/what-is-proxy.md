@@ -65,7 +65,7 @@ Proxies can capture and inspect HTTP traffic. Tools like Dev Proxy, Fiddler, Pro
 
 In many production systems, traffic to your application's back end is routed through an API gateway or reverse proxy, such as NGINX, or a cloud-native service like Azure API Management. These proxies handle routing, authentication, rate limiting, and more.
 
-When you design your API or building distributed services, you must understand how proxies affect headers (such as `X-Forwarded-For`), time-outs, and request size limits.
+When you design your API or building distributed services, you must understand how proxies affect headers (such as `X-Forwarded-For`), timeouts, and request size limits.
 
 ### CORS and local development
 
@@ -73,13 +73,13 @@ During local development, especially in web applications, you might encounter cr
 
 ### Service virtualization and testing
 
-Proxies can simulate back-end APIs. This capability is useful when the real service is unavailable, unstable, or expensive to use during testing. By intercepting and mocking responses, you can test application behavior under different scenarios such as time-outs, errors, or malformed data.
+Proxies can simulate back-end APIs. This capability is useful when the real service is unavailable, unstable, or expensive to use during testing. By intercepting and mocking responses, you can test application behavior under different scenarios such as timeouts, errors, or malformed data.
 
 Tools like Dev Proxy or custom proxy implementations are commonly used for this purpose in integration and end-to-end tests.
 
 ### Authentication and security
 
-Proxies are often the front line of defense in securing applications. They can enforce access controls, inject authentication headers, or terminate TLS/SSL connections. As a developer, it's important to be aware of how your application behaves when it sits behind a proxy and how to access headers that carry authentication or identity information.
+Proxies are often the frontline of defense in securing applications. They can enforce access controls, inject authentication headers, or terminate TLS/SSL connections. As a developer, it's important to be aware of how your application behaves when it sits behind a proxy and how to access headers that carry authentication or identity information.
 
 ## Common headers and proxy considerations
 
