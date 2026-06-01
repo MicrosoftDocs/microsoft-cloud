@@ -3,7 +3,7 @@ title: Simulate OpenAI API
 description: How to simulate OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Simulate OpenAI using local LLM -->
@@ -130,3 +130,10 @@ Learn more about the OpenAIMockResponsePlugin.
 See also the related Dev Proxy samples:
 
 - [Simulate OpenAI API](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-devproxy-simulate-openai/)
+
+## See also
+
+- [Simulate Azure OpenAI API](./simulate-azure-openai.md) - Use with Azure OpenAI endpoints
+- [Test my app with language model failures](./test-my-app-with-language-model-failures.md) - Simulate LLM failures
+- [Test language model token limits](./test-language-model-token-limits.md) - Simulate token rate limiting
+- [What is chaos testing?](../concepts/what-is-chaos-testing.md) - Understand resilience testing concepts

@@ -3,7 +3,7 @@ title: What Is Caching?
 description: This article explains what caching is.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/26/2024
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand caching concepts for API optimization -->
@@ -23,7 +23,10 @@ When you implement caching in an application, consider the trade-offs between pe
 
 Caching is a powerful technique that can help you improve the performance and efficiency of your application by temporarily storing frequently accessed data in a faster location. After you implement these techniques, verify that your application handles caching properly by using Dev Proxy.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Verify caching by using the CachingGuidancePlugin](../technical-reference/cachingguidanceplugin.md)
+
+- [Inspect requests and responses using Chrome DevTools](../how-to/inspect-requests-responses-chrome-devtools.md)
+- [What is rate limiting?](what-is-rate-limiting.md)

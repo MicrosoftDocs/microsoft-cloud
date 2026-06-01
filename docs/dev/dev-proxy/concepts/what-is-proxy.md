@@ -3,7 +3,7 @@ title: What Is a Proxy?
 description: This article explains what a proxy is and how it works.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/18/2025
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand what a proxy server does and how Dev Proxy works -->
@@ -100,6 +100,15 @@ Dev Proxy is a forward proxy that you can use to intercept and modify requests f
 - See how your app handles slow APIs.
 - Quickly stand up mock APIs without writing a line of code.
 - Improve your app with contextual guidance on how you use APIs.
+
+## Try it yourself
+
+Pick a scenario that matches what you're building:
+
+- [Test how your app handles API errors](../how-to/test-my-app-with-random-errors.md) — 5 minutes
+- [Simulate rate limiting on any API](../how-to/simulate-rate-limit-api-responses.md) — 10 minutes
+- [Mock API responses without changing your code](../how-to/mock-responses.md) — 10 minutes
+- [Simulate OpenAI API locally](../how-to/simulate-openai.md) — 15 minutes
 
 ## Next step
 

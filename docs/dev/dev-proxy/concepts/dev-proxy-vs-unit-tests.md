@@ -3,7 +3,7 @@ title: Dev Proxy vs unit tests
 description: Understand how Dev Proxy complements unit testing for comprehensive API resilience testing
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 06/01/2026
 ---
 
 <!-- INTENT: Understand how Dev Proxy complements unit testing -->
@@ -56,7 +56,10 @@ The most effective approach combines both testing methods:
 
 Unit tests tell you if your code is correct. Dev Proxy tells you if your application is resilient. You need both.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [What is chaos testing?](what-is-chaos-testing.md)
+
+- [Test my app with random errors](../how-to/test-my-app-with-random-errors.md) — 5 minutes
+- [Use Dev Proxy in CI/CD](../how-to/use-dev-proxy-in-ci-cd-overview.md) — run both unit tests and Dev Proxy in your pipeline
