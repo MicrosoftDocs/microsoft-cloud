@@ -3,7 +3,7 @@ title: Simulate slow API responses
 description: How to simulate slow API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/01/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses for testing -->
@@ -29,7 +29,7 @@ Start, by enabling the plugin in your Dev Proxy configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
@@ -59,7 +59,7 @@ The complete configuration file looks like this.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "LatencyPlugin",
@@ -72,7 +72,7 @@ The complete configuration file looks like this.
     "https://api.example.com/*"
   ],
   "latencyPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/latencyplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/latencyplugin.schema.json",
     "minMs": 200,
     "maxMs": 10000
   }

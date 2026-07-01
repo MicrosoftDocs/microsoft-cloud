@@ -3,7 +3,7 @@ title: PlainTextReporter
 description: PlainTextReporter reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Convert report data to plain text format -->
@@ -19,7 +19,7 @@ Generates reports in plain-text format.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "PlainTextReporter",

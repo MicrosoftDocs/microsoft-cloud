@@ -3,7 +3,7 @@ title: GraphConnectorGuidancePlugin
 description: GraphConnectorGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Provide guidance for Microsoft Graph connector development -->
@@ -27,7 +27,7 @@ Schema missing one or more semantic labels required for Microsoft Copilot for Mi
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphConnectorGuidancePlugin",

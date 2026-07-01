@@ -3,7 +3,7 @@ title: GraphSdkGuidancePlugin
 description: GraphSdkGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Suggest using Microsoft Graph SDK -->
@@ -21,7 +21,7 @@ Shows a tip when proxy intercepts a request to Microsoft Graph that hasn't been 
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphSdkGuidancePlugin",

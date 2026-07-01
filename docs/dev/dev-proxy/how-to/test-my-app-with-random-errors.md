@@ -3,7 +3,7 @@ title: Test my app with random errors
 description: How to test your app with random errors
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/01/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Test how app handles API failures -->
@@ -33,7 +33,7 @@ To start, enable the `GenericRandomErrorPlugin` in your configuration file.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GenericRandomErrorPlugin",
@@ -58,7 +58,7 @@ Next, configure the plugin to use a file that contains the errors you want to si
 ```json
 {
   "errorsContosoApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/genericrandomerrorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/genericrandomerrorplugin.schema.json",
     "errorsFile": "errors-contoso-api.json"
   }
 }
@@ -70,7 +70,7 @@ Finally, in the errors file, define the list of error responses that you want to
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/genericrandomerrorplugin.errorsfile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/genericrandomerrorplugin.errorsfile.schema.json",
   "errors": [
     {
       "request": {
