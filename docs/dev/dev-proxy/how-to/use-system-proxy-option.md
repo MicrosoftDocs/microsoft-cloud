@@ -3,7 +3,7 @@ title: Use the system proxy option
 description: Learn how to control whether Dev Proxy registers as the system proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ms.topic: how-to
 zone_pivot_groups: client-operating-system
 ---
@@ -48,7 +48,7 @@ To persistently disable system proxy registration, add the `asSystemProxy` setti
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://api.contoso.com/*"
@@ -117,7 +117,7 @@ Azure Functions uses gRPC for internal communication, which fails when Dev Proxy
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "asSystemProxy": false,
   "urlsToWatch": [
     "https://jsonplaceholder.typicode.com/*"

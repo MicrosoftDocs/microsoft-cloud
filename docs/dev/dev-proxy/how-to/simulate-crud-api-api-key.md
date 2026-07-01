@@ -3,7 +3,7 @@ title: Simulate a CRUD API secured with an API key
 description: How to simulate a CRUD API secured with an API key
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Simulate CRUD API with API key auth -->
@@ -43,7 +43,7 @@ In the `customers-api.json` file, add information about API key authentication.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "apiKey",
@@ -91,7 +91,7 @@ Update the `customers-api.json` file as follows:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "apiKey",
@@ -137,7 +137,7 @@ Update the `customers-api.json` file as follows:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "apiKey",

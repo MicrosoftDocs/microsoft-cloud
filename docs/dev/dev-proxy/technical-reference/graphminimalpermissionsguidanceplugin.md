@@ -3,7 +3,7 @@ title: GraphMinimalPermissionsGuidancePlugin
 description: GraphMinimalPermissionsGuidancePlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Compare JWT permissions against minimal required scopes -->
@@ -21,7 +21,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "GraphMinimalPermissionsGuidancePlugin",
@@ -31,7 +31,7 @@ Compares the permissions used in the JWT token sent to Microsoft Graph against t
     }
   ],
   "graphMinimalPermissionsGuidancePlugin": {
-   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/graphminimalpermissionsguidanceplugin.schema.json",
+   "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/graphminimalpermissionsguidanceplugin.schema.json",
     "permissionsToExclude": [ 
       "profile", 
       "openid", 

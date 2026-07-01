@@ -3,7 +3,7 @@ title: RateLimitingPlugin
 description: RateLimitingPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Simulate API rate limiting with configurable limits -->
@@ -21,7 +21,7 @@ Simulates rate-limit behaviors.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "RateLimitingPlugin",
@@ -31,7 +31,7 @@ Simulates rate-limit behaviors.
     }
   ],
   "rateLimiting": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/ratelimitingplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/ratelimitingplugin.schema.json",
     "costPerRequest": 2,
     "rateLimit": 120
   }

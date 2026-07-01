@@ -3,7 +3,7 @@ title: OpenAIUsageDebuggingPlugin
 description: OpenAIUsageDebuggingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Log OpenAI usage metrics to CSV for debugging -->
@@ -19,7 +19,7 @@ Logs OpenAI API usage metrics to a CSV file for debugging and analysis purposes.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIUsageDebuggingPlugin",
