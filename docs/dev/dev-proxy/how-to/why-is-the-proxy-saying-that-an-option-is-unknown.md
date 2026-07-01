@@ -3,7 +3,7 @@ title: Why is the proxy saying that an option is unknown
 description: Why is the proxy saying that an option is unknown
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Fix unknown option error -->
@@ -27,7 +27,7 @@ Some plugins provide command line options. When the plugin is disabled, the prox
 
 By default, we ship with many plugins that are configured but disabled.
 
-For example, the [ExecutionSummaryPlugin](../technical-reference/ExecutionSummaryPlugin.md) records proxy activity and exposes command line options, such as `--summary-file-path`. As the plugin is disabled, the `--summary-file-path` option is an unknown option and so the proxy returns an error.
+For example, the [ExecutionSummaryPlugin](../technical-reference/ExecutionSummaryPlugin.md) records proxy activity and exposes command line options, such as `--summary-group-by`. As the plugin is disabled, the `--summary-group-by` option is an unknown option and so the proxy returns an error.
 
 To enable a plugin and make its options available for use, open the [devproxyrc.json](../technical-reference/devproxyrc.md) file, locate the plugin and set `enabled` to `true`.
 

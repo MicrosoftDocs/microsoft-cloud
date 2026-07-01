@@ -3,7 +3,7 @@ title: HttpFileGeneratorPlugin
 description: HttpFileGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Generate HTTP files from intercepted requests -->
@@ -21,7 +21,7 @@ Generates HTTP file from the intercepted requests and responses.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "HttpFileGeneratorPlugin",
@@ -31,7 +31,7 @@ Generates HTTP file from the intercepted requests and responses.
     }
   ],
   "httpFileGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/httpfilegeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/httpfilegeneratorplugin.schema.json",
     "includeOptionsRequests": false
   }
 }

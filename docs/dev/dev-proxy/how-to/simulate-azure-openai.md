@@ -3,7 +3,7 @@ title: Simulate Azure OpenAI API
 description: How to simulate Azure OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/28/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Simulate Azure OpenAI using local LLM -->
@@ -40,7 +40,7 @@ To simulate Azure OpenAI API responses using Dev Proxy, you need to enable the `
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",
@@ -83,7 +83,7 @@ The complete configuration file looks like this.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.0.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
   "plugins": [
     {
       "name": "OpenAIMockResponsePlugin",

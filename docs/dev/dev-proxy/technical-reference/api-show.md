@@ -3,7 +3,7 @@ title: api show
 description: api show command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 07/01/2026
 ms.topic: reference
 ---
 
@@ -65,7 +65,7 @@ The following endpoints are available:
 | `POST` | `/proxy` | Start or stop the proxy |
 | `POST` | `/proxy/mockRequest` | Send a mock request |
 | `POST` | `/proxy/stopProxy` | Stop the proxy |
-| `GET` | `/proxy/jwtToken` | Get a JSON Web Token (JWT) |
+| `POST` | `/proxy/jwtToken` | Create a JSON Web Token (JWT) |
 | `GET` | `/proxy/rootCertificate` | Get the root certificate |
 | `GET` | `/proxy/logs` | Get recorded request logs |
 

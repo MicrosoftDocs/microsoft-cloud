@@ -3,7 +3,7 @@ title: stop
 description: Dev Proxy stop command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Reference for devproxy stop command -->
@@ -19,11 +19,12 @@ Stops running Dev Proxy instances.
 devproxy stop [options]
 
 Options:
-  --pid <pid>            Stop a specific instance
-  --force                Forcefully terminate the process
-  --output <format>      Output format: text|json (default: text)
-  --log-level <level>    Logging level: trace|debug|information|warning|error
-  -h, --help             Show help
+  -f, --force              Force stop the proxy by killing the process
+  --pid <pid>              Stop a specific instance
+  --log-level <log-level>  Level of messages to log
+  --no-color               Disable colored output
+  --output <format>        Output format
+  -h, --help               Show help
 ```
 
 ## Usage
@@ -40,9 +41,10 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
-|`--force`|Forcefully terminate the Dev Proxy process instead of sending a graceful stop signal|n/a|n/a|
-|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`|`information`|
-|`--output <format>`|Output format for structured logging|`text`, `json`|`text`|
+|`-f`, `--force`|Forcefully terminate the Dev Proxy process instead of sending a graceful stop signal|n/a|n/a|
+|`--log-level <log-level>`|Level of messages to log|`Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, `None`|`Information`|
+|`--no-color`|Disable colored output|n/a|n/a|
+|`--output <format>`|Output format|`Text`, `Json`|`Text`|
 |`--pid <pid>`|Stop a specific Dev Proxy instance by process ID|integer|n/a|
 
 ## Remarks

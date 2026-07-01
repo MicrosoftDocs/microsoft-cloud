@@ -3,7 +3,7 @@ title: logs
 description: Dev Proxy logs command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 07/01/2026
 ---
 
 <!-- INTENT: Reference for devproxy logs command -->
@@ -19,10 +19,15 @@ Shows logs from a running Dev Proxy instance.
 devproxy logs [options]
 
 Options:
-  --pid <pid>            Show logs from a specific instance
-  --output <format>      Output format: text|json (default: text)
-  --log-level <level>    Logging level: trace|debug|information|warning|error
-  -h, --help             Show help
+  -f, --follow             Follow log output
+  -n, --lines <N>          Number of lines to show from the end of the log
+  --since <time>           Show logs since timestamp (e.g. '2026-01-24T14:00:00'
+                           or '5m' for 5 minutes ago)
+  --pid <pid>              Show logs from a specific instance
+  --log-level <log-level>  Level of messages to log
+  --no-color               Disable colored output
+  --output <format>        Output format
+  -h, --help               Show help
 ```
 
 ## Usage
@@ -39,9 +44,13 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
-|`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`|`information`|
-|`--output <format>`|Output format for structured logging|`text`, `json`|`text`|
+|`-f`, `--follow`|Follow log output (tail -f style)|n/a|n/a|
+|`--lines`, `-n <N>`|Number of lines to show from the end of the log|integer|`50`|
+|`--log-level <log-level>`|Level of messages to log|`Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, `None`|`Information`|
+|`--no-color`|Disable colored output|n/a|n/a|
+|`--output <format>`|Output format|`Text`, `Json`|`Text`|
 |`--pid <pid>`|Show logs from a specific Dev Proxy instance by process ID|integer|n/a|
+|`--since <time>`|Show logs since timestamp or relative time|timestamp or relative (e.g. `5m`, `2h`)|n/a|
 
 ## Remarks
 
