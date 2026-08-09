@@ -3,7 +3,7 @@ title: Creating Generative AI Experiences with the Microsoft Cloud - A Guide for
 description: "This article explores options for ISVs to extend Microsoft Copilots and how ISVs can leverage the different aspects of the Microsoft Cloud to create innovative and engaging AI experiences for users"
 author: willstan
 ms.author: willstanley
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview 
 ms.date: 3/22/2024
 
