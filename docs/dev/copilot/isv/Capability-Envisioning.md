@@ -3,7 +3,7 @@ title: Choosing an approach to AI-enabled application development with Capabilit
 description: "After identifying a top AI use case, Capability Envisioning helps you plan how to develop the application."
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: tutorial 
 ms.date: 09/16/2024
 
