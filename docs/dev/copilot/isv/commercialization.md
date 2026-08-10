@@ -3,7 +3,7 @@ title: Developing a commercial strategy for developing generative AI application
 description: This article helps you decide your application's commercialization strategy by giving an overview of important factors and real-world examples.   
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview #Required; leave this attribute/value as-is.
 ms.date: 09/24/2024
 

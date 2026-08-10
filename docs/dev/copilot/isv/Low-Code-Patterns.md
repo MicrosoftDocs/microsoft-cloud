@@ -3,7 +3,7 @@ title: "Choosing the best low-code pattern to create your generative AI solution
 description: Guidance for choosing the most applicable pattern to help ISVs in their journey to build low-code AI solutions 
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: tutorial 
 ms.date: 09/16/2024
 

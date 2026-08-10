@@ -3,7 +3,7 @@ title: Creating pro-code solutions with the Microsoft Cloud
 description: Learn how to use the various pro-code techniques to build solutions using AI capabilities across the Microsoft Cloud.
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview
 ms.date: 09/16/2024
 
