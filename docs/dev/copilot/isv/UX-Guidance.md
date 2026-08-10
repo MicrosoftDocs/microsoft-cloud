@@ -3,7 +3,7 @@ title: "Creating a dynamic UX: guidance for generative AI applications"
 description: UX tips and recommendations for ISVs building generative AI applications
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview
 ms.date: 09/16/2024
 

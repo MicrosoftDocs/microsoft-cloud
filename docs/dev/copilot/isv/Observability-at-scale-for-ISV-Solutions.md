@@ -3,7 +3,7 @@ title: Observability at scale for ISV Solutions on the Microsoft Cloud
 description: Learn how to observe and monitor your Microsoft Cloud application across different deployment types using different strategies and Microsoft tools, such as the Azure Monitor Metrics Data Plane API.
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview
 ms.date: 09/16/2024
 

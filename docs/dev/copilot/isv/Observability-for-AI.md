@@ -3,7 +3,7 @@ title: Observability for pro-code generative AI solutions
 description: Discover the top strategies for implementing observability features in your AI solution using Microsoft Cloud.
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: overview 
 ms.date: 09/16/2024
 

@@ -3,7 +3,7 @@ title: Evaluating and prioritizing an AI use case with ISV business envisioning
 description: "Business envisioning is a simple two-step process that helps partners identify and prioritize business needs, then turn them into clear requirements for designing solutions."
 author: miglaros
 ms.author: miglaros
-ms.service: cloud-for-industries
+ms.service: microsoft-industry-offerings
 ms.topic: tutorial
 ms.date: 09/16/2024
 
