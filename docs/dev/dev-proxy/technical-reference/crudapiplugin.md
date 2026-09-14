@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 <!-- INTENT: Simulate full CRUD API with in-memory data store -->
@@ -62,6 +62,11 @@ Following is an example of an API file that defines an anonymous CRUD API for in
   "dataFile": "customers-data.json",
   "actions": [
     {
+      "action": "getMany",
+      "url": "?city={customer-city}",
+      "query": "$.[?(@.city == '{customer-city}')]"
+    },
+    {
       "action": "getAll"
     },
     {
@@ -108,6 +113,11 @@ Following is an example of an API file that defines a CRUD API for information a
   },
   "actions": [
     {
+      "action": "getMany",
+      "url": "?city={customer-city}",
+      "query": "$.[?(@.city == '{customer-city}')]"
+    },
+    {
       "action": "getAll"
     },
     {
@@ -153,6 +163,11 @@ Following is an example of an API file that defines a CRUD API for information a
   },
   "actions": [
     {
+      "action": "getMany",
+      "url": "?city={customer-city}",
+      "query": "$.[?(@.city == '{customer-city}')]"
+    },
+    {
       "action": "getAll"
     },
     {
@@ -197,6 +212,15 @@ Following is an example of an API file that defines a CRUD API for information a
     "issuer": "https://login.microsoftonline.com/contoso.com"
   },
   "actions": [
+    {
+      "action": "getMany",
+      "url": "?city={customer-city}",
+      "query": "$.[?(@.city == '{customer-city}')]",
+      "auth": "entra",
+      "entraAuthConfig": {
+        "scopes": ["api://contoso.com/customer.read"]
+      }
+    },
     {
       "action": "getAll",
       "auth": "entra",
@@ -310,11 +334,24 @@ Each action in the `actions` list has the following properties.
 | `entraAuthConfig` | Configuration for Microsoft Entra authentication. | Yes, when you configure `auth` to `entra` | None |
 | `method` | HTTP method that Dev Proxy uses to expose the action. | No | Depends on the action |
 | `query` | Newtonsoft [JSONPath](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm) query that Dev Proxy uses to find the data in the data file. | No | Empty |
-| `url` | URL where Dev Proxy exposes the action on. Dev Proxy appends the URL to the base URL. | No | Empty |
+| `url` | URL where Dev Proxy exposes the action. Dev Proxy appends the URL to the base URL. The URL can contain path and query-string parameters in curly braces. | No | Empty |
 
-The URL specified in the `url` property can contain parameters. You define parameters by wrapping the parameter name in curly braces, for example, `{customer-id}`. When routing the request, Dev Proxy replaces the parameter with the value from the request URL.
+The URL specified in the `url` property can contain path and query-string parameters. You define parameters by wrapping the parameter name in curly braces, for example, `/{customer-id}` or `?city={customer-city}`. Query-string parameters must represent the complete parameter value. When routing the request, Dev Proxy replaces the parameter with the value from the request URL.
 
-You can use the same parameter in the query. For example, if you define the `url` as `/customers/{customer-id}` and the `query` as `$.[?(@.id == {customer-id})]`, Dev Proxy replaces the `{customer-id}` parameter in the query with the value from the request URL.
+You can use the same parameter in the query. For example, if you define the `url` as `/{customer-id}` and the `query` as `$.[?(@.id == {customer-id})]`, Dev Proxy replaces the `{customer-id}` parameter in the query with the value from the request URL. If you define the `url` as `?city={customer-city}` and the `query` as `$.[?(@.city == '{customer-city}')]`, calling `?city=Redmond` returns customers in Redmond.
+
+Dev Proxy matches query-string parameters independently of their order. You can use literal values, such as `?status=active`, and include query-string parameters in the request that aren't defined in the action. To capture repeated query-string parameters, define the same parameter multiple times. Dev Proxy matches repeated parameters by their position. For example:
+
+```json
+{
+  "action": "getMany",
+  "url": "?id={first-id}&id={second-id}",
+  "query": "$.[?(@.id == {first-id} || @.id == {second-id})]"
+}
+```
+
+> [!IMPORTANT]
+> Dev Proxy uses the first action that matches the HTTP method, path, and configured query-string parameters. Define query-specific actions before an action that matches the same method and path without query-string parameters.
 
 > [!IMPORTANT]
 > Dev Proxy implements JSONPath in the `query` property using Newtonsoft.Json. There are some limitations to using it such as, it supports only single quotes. Before submitting an issue, be sure to validate your query.
@@ -348,12 +385,14 @@ When you create a new item using a `create` action, the plugin doesn't validate 
   {
     "id": 1,
     "name": "Contoso",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "1 Microsoft Way",
+    "city": "Redmond"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "4567 Main St",
+    "city": "Buffalo"
   }
 ]
 ```
