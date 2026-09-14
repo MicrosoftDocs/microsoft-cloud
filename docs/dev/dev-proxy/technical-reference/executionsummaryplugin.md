@@ -3,7 +3,7 @@ title: ExecutionSummaryPlugin
 description: ExecutionSummaryPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 <!-- INTENT: Generate summary report of intercepted requests -->
@@ -26,7 +26,7 @@ Creates a summary of the requests that pass through the proxy.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "ExecutionSummaryPlugin",
@@ -36,7 +36,7 @@ Creates a summary of the requests that pass through the proxy.
     }
   ],
   "executionSummaryPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/executionsummaryplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/executionsummaryplugin.schema.json",
     "groupBy": "url"
   }
 }
