@@ -3,7 +3,7 @@ title: ODSPSearchGuidancePlugin
 description: ODSPSearchGuidancePlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 <!-- INTENT: Warn about deprecated OneDrive/SharePoint search APIs -->
@@ -32,7 +32,7 @@ This plugin detects the following requests:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "ODSPSearchGuidancePlugin",

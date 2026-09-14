@@ -3,7 +3,7 @@ title: Simulate a CRUD API
 description: How to simulate a CRUD API and speed up development with Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 <!-- INTENT: Create a dynamic mock API with create, read, update, delete operations -->
@@ -48,7 +48,7 @@ You start with enabling the `CrudApiPlugin` and configuring it to use the `custo
 ```json
 {
   "customersApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/crudapiplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
@@ -60,10 +60,15 @@ In the `customers-api.json` file, you define the mock customers API.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
+    {
+      "action": "getMany",
+      "url": "?city={customer-city}",
+      "query": "$.[?(@.city == '{customer-city}')]"
+    },
     {
       "action": "getAll"
     },
@@ -96,8 +101,12 @@ In the `baseUrl` property, you define the base URL of the mock API. In the `data
 - add a new customer, by calling `POST /v1/customers`,
 - update a customer, by calling `PATCH /v1/customers/{customer-id}`,
 - delete a customer, by calling `DELETE /v1/customers/{customer-id}`
+- get customers by city, by calling `GET /v1/customers?city={customer-city}`
 
-In your URLs, you use the `{customer-id}` parameter, which the plugin replaces with the actual customer ID from the URL. The plugin also uses the `{customer-id}` parameter in a JSONPath query to look up the customer in the data file.
+In your URLs, you define parameters by wrapping their names in curly braces. You can define parameters in the URL path, such as `{customer-id}`, and in the query string, such as `{customer-city}`. The plugin replaces the parameters in the JSONPath query with values from the request URL to look up customers in the data file.
+
+> [!IMPORTANT]
+> Define actions with query-string parameters before actions that match the same HTTP method and path without query-string parameters. Dev Proxy uses the first matching action.
 
 In the `customers-data.json` file, you define the mock customer data.
 
@@ -108,12 +117,14 @@ In the `customers-data.json` file, you define the mock customer data.
   {
     "id": 1,
     "name": "Contoso",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "1 Microsoft Way",
+    "city": "Redmond"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "4567 Main St",
+    "city": "Buffalo"
   }
 ]
 ```
@@ -125,12 +136,27 @@ You start Dev Proxy and call the `https://api.contoso.com/v1/customers` endpoint
   {
     "id": 1,
     "name": "Contoso",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "1 Microsoft Way",
+    "city": "Redmond"
   },
   {
     "id": 2,
     "name": "Fabrikam",
-    "address": "4567 Main St Buffalo, NY 98052"
+    "address": "4567 Main St",
+    "city": "Buffalo"
+  }
+]
+```
+
+To get customers in Redmond, call `https://api.contoso.com/v1/customers?city=Redmond`. Dev Proxy captures `Redmond` from the `city` query-string parameter, substitutes it for `{customer-city}` in the JSONPath query, and returns the matching customers.
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Contoso",
+    "address": "1 Microsoft Way",
+    "city": "Redmond"
   }
 ]
 ```
