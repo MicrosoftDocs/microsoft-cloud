@@ -3,7 +3,7 @@ title: TypeSpecGeneratorPlugin
 description: TypeSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 <!-- INTENT: Generate TypeSpec files from intercepted API traffic -->
@@ -21,7 +21,7 @@ Generates TypeSpec files from the intercepted requests and responses.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "TypeSpecGeneratorPlugin",
@@ -31,7 +31,7 @@ Generates TypeSpec files from the intercepted requests and responses.
     }
   ],
   "typeSpecGeneratorPlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/typespecgeneratorplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/typespecgeneratorplugin.schema.json",
     "ignoreResponseTypes": false
   }
 }

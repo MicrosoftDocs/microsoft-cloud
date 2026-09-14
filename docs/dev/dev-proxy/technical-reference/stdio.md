@@ -3,7 +3,7 @@ title: stdio
 description: Dev Proxy stdio command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/14/2026
 ---
 
 # `stdio`
@@ -83,7 +83,7 @@ To use the `stdio` command with plugins, create a configuration file:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
   "plugins": [
     {
       "name": "MockStdioResponsePlugin",
@@ -99,11 +99,11 @@ To use the `stdio` command with plugins, create a configuration file:
     }
   ],
   "devTools": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/devtoolsplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/devtoolsplugin.schema.json",
     "preferredBrowser": "Edge"
   },
   "mockStdioResponsePlugin": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.1.0/mockstdioresponseplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/mockstdioresponseplugin.schema.json",
     "mocksFile": "stdio-mocks.json"
   }
 }
