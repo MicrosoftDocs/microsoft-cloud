@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/14/2026
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Simulate full CRUD API with in-memory data store -->
@@ -21,7 +21,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/rc.schema.json",
   "plugins": [
     {
       "name": "CrudApiPlugin",
@@ -31,7 +31,7 @@ Simulates a CRUD API with an in-memory data store. Sends JSON responses. Support
     }
   ],
   "customersApi": {
-    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.schema.json",
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/crudapiplugin.schema.json",
     "apiFile": "customers-api.json"
   }
 }
@@ -57,7 +57,7 @@ Following is an example of an API file that defines an anonymous CRUD API for in
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "actions": [
@@ -102,7 +102,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
@@ -153,7 +153,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "apiKey",
@@ -203,7 +203,7 @@ Following is an example of an API file that defines a CRUD API for information a
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/crudapiplugin.apifile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/crudapiplugin.apifile.schema.json",
   "baseUrl": "https://api.contoso.com/v1/customers",
   "dataFile": "customers-data.json",
   "auth": "entra",
