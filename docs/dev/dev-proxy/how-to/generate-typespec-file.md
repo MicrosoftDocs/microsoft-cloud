@@ -3,7 +3,7 @@ title: Generate a TypeSpec file
 description: How to generate a TypeSpec from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/14/2026
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Create TypeSpec from intercepted requests -->
@@ -31,7 +31,7 @@ To generate a TypeSpec file using Dev Proxy:
 
     ```json
     {
-      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
+      "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/rc.schema.json",
       "plugins": [
         {
           "name": "TypeSpecGeneratorPlugin",
@@ -44,7 +44,7 @@ To generate a TypeSpec file using Dev Proxy:
         "https://api.example.com/*"
       ],
       "typeSpecGeneratorPlugin": {
-        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/typespecgeneratorplugin.schema.json",
+        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/typespecgeneratorplugin.schema.json",
         "ignoreResponseTypes": false
       }
     }

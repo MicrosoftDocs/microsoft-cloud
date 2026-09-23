@@ -3,7 +3,7 @@ title: (root)
 description: Dev Proxy root command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Reference for devproxy command line options -->
@@ -23,6 +23,7 @@ Options:
   -u, --urls-to-watch <urls>    URLs to intercept (supports wildcards)
   -p, --port <port>             Proxy port (default: 8000)
   --api-port <apiPort>          API port (default: 8897)
+  --api-ip-address <address>    API bind address (default: 127.0.0.1)
   --log-level <level>           Logging level: trace|debug|information|warning|error
   --output <format>             Output format: text|json (default: text)
   --record                      Start recording immediately
@@ -51,6 +52,7 @@ None
 
 |Name|Description|Allowed values|Default|
 |--|--|--|--|
+|`--api-ip-address <apiIpAddress>`|The IP address for the Dev Proxy API to bind to. This address is independent of `--ip-address`. Use a non-loopback address only on trusted networks because bearer tokens are sent over HTTP.|IPv4 or IPv6 address|`127.0.0.1`|
 |`--api-port <apiPort>`|The port for the Dev Proxy API to listen on. Set to `0` to let the OS assign a random available port.|integer|`8897`|
 |`--as-system-proxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`true`, `false`|`true`|
 |`-c, --config-file <configFile>`|The path to the configuration file|Local file path|`devproxyrc.json`|
@@ -85,6 +87,7 @@ Dev Proxy started in background.
   PID:       6456
   Proxy URL: http://127.0.0.1:8000
   API URL:   http://127.0.0.1:8897
+  API token: <token>
   Log file:  /Users/user/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log
 ```
 
@@ -95,7 +98,7 @@ When you use `--output json` with `--detach`, Dev Proxy outputs single-line JSON
 **Success:**
 
 ```json
-{"type":"result","data":{"pid":6456,"proxyUrl":"http://127.0.0.1:8000","apiUrl":"http://127.0.0.1:8897","logFile":"/Users/user/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log"},"timestamp":"2026-03-05T14:22:42.0000000Z"}
+{"type":"result","data":{"pid":6456,"proxyUrl":"http://127.0.0.1:8000","apiUrl":"http://127.0.0.1:8897","token":"<token>","logFile":"/Users/user/.local/dev-proxy/logs/devproxy-6456-2026-03-05.log"},"timestamp":"2026-03-05T14:22:42.0000000Z"}
 ```
 
 **Error:**
@@ -106,6 +109,8 @@ When you use `--output json` with `--detach`, Dev Proxy outputs single-line JSON
 
 > [!TIP]
 > Use `--port 0` to let the OS assign a random available port. The `Proxy URL` in the output shows the actual port assigned by the OS.
+
+Dev Proxy omits the API token from startup output when the `CI` environment variable is set. Use `devproxy api token --pid <PID>` to retrieve it explicitly.
 
 ## Exit codes
 

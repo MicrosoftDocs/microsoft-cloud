@@ -386,6 +386,8 @@
         items:
         - name: api show
           href: technical-reference/api-show.md
+        - name: api token
+          href: technical-reference/api-token.md
       - name: cert
         items:
         - name: cert ensure

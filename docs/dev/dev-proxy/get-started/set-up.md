@@ -3,7 +3,7 @@ title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/27/2026
+ms.date: 09/23/2026
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -174,12 +174,17 @@ The command prompt displays the following output:
 
 ```text
  info    8 error responses loaded from devproxy-errors.json
- info    Dev Proxy API listening on http://localhost:8897...
+ info    Dev Proxy API listening on http://127.0.0.1:8897...
  info    Dev Proxy Listening on 127.0.0.1:8000...
+
+API URL:   http://127.0.0.1:8897
+API token: <token>
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
 ```
+
+Dev Proxy generates a bearer token for the API when it starts. Keep the token secret and include it in the `Authorization` header of requests to the Dev Proxy API.
 
 By default, Dev Proxy is configured to:
 
