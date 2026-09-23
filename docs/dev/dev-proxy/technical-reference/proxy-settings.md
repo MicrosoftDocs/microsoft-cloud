@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 03/02/2026
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Configure Dev Proxy behavior (ports, logging, rate, etc.) -->
@@ -18,7 +18,9 @@ The following table describes the settings.
 
 |Setting|Description|Command-line option|Allowed values|Default value|
 |--|--|--|--|--|
-|`apiPort`|The port for the Dev Proxy API to listen on. Set to `0` to let the OS assign a random available port.|`--api-port <apiPort>`|integer|`8897`|
+|`apiAllowedOrigins`|Exact browser origins that can call the Dev Proxy API. All requests still require the instance bearer token.|n/a|Array of HTTP or HTTPS origins without paths, wildcards, or trailing slashes, for example, `["http://127.0.0.1:3000"]`|`[]`|
+|`apiIpAddress`|The IP address for the Dev Proxy API to bind to. This setting is independent of `ipAddress`. Use a non-loopback address only on trusted networks because bearer tokens are sent over HTTP.|`--api-ip-address <apiIpAddress>`|IPv4 or IPv6 address|`127.0.0.1`|
+|`apiPort`|The port for the authenticated Dev Proxy API to listen on. Set to `0` to let the OS assign a random available port.|`--api-port <apiPort>`|integer|`8897`|
 |`asSystemProxy`|Whether to register Dev Proxy as the system proxy on startup. When set to `true` requires `installCert` to be, set to `true`|`--as-system-proxy`|`true`, `false`|`true`|
 |`filterByHeaders`|Only intercept requests with specific headers|n/a|`{"filterByHeaders": [ { "name": "value" } ] }`. Value can be empty to include requests with the specified header no matter its value.|n/a|
 |`installCert`|Whether to install the root certificate|`--install-cert`|`true`, `false`|`true`|

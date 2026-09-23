@@ -3,7 +3,7 @@ title: api show
 description: api show command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 07/01/2026
+ms.date: 09/23/2026
 ms.topic: reference
 ---
 
@@ -53,9 +53,9 @@ devproxy api show --output json
 
 ## Remarks
 
-Dev Proxy exposes a REST API at `http://127.0.0.1:{api-port}` (default port `8897`) with Swagger documentation at `http://127.0.0.1:{api-port}/swagger`.
+Dev Proxy exposes an authenticated REST API at `http://127.0.0.1:{api-port}` (default port `8897`). All endpoints require the instance bearer token in the `Authorization` request header. To retrieve the token, use the [api token](./api-token.md) command.
 
-The `api show` command lists the available REST API endpoints. The API is available while Dev Proxy is running. Use the CLI for lifecycle operations (start, stop, configure), and use the REST API for runtime operations (proxy state, recording, mock management).
+The `api show` command lists the API base URL, authentication requirements, token file pattern, and available REST API endpoints. The API is available while Dev Proxy is running. Use the CLI for lifecycle operations (start, stop, configure), and use the REST API for runtime operations (proxy state, recording, mock management).
 
 The following endpoints are available:
 

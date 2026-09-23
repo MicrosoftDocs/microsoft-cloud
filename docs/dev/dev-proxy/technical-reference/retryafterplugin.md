@@ -3,7 +3,7 @@ title: RetryAfterPlugin
 description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/14/2026
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Simulate Retry-After header after throttling -->
@@ -21,7 +21,7 @@ Simulates the `Retry-After` header sent by an API after throttling a request. Th
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.0/rc.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/rc.schema.json",
   "plugins": [
     {
       "name": "RetryAfterPlugin",
