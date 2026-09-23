@@ -3,14 +3,24 @@ title: Proxy API
 description: Overview of the Dev Proxy API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/02/2025
+ms.date: 09/23/2026
 ---
 
 <!-- INTENT: Control Dev Proxy programmatically via its REST API -->
 
 # Proxy API
 
-Dev Proxy comes with a web API that allows you to interact with the proxy programmatically. The API is available on the port specified in the [proxy settings](./proxy-settings.md).
+Dev Proxy comes with a web API that allows you to interact with the proxy programmatically. The API is available on the IP address and port specified in the [proxy settings](./proxy-settings.md).
+
+All API operations require a bearer token. Dev Proxy generates a unique token for each running instance and stores it in a file that's accessible only to the user who started the instance. Get the token using `devproxy status` or `devproxy api token`. When the `CI` environment variable is set, use `devproxy api token` because Dev Proxy omits the token from status and startup output.
+
+Include the token in the `Authorization` header:
+
+```http
+Authorization: Bearer <token>
+```
+
+Requests without a valid token return `401 Unauthorized`. Browser requests must also come from an origin listed in the `apiAllowedOrigins` setting. Other origins return `403 Forbidden`.
 
 ## Operations
 
@@ -26,6 +36,7 @@ Request:
 
 ```http
 GET http://localhost:8897/proxy
+Authorization: Bearer <token>
 ```
 
 Response:
@@ -49,6 +60,7 @@ Request:
 
 ```http
 POST http://localhost:8897/proxy
+Authorization: Bearer <token>
 content-type: application/json
 
 {
@@ -73,6 +85,7 @@ Request:
 
 ```http
 POST http://localhost:8897/proxy
+Authorization: Bearer <token>
 content-type: application/json
 
 {
@@ -99,6 +112,7 @@ Request:
 
 ```http
 POST http://localhost:8897/proxy/jwtToken
+Authorization: Bearer <token>
 Content-Type: application/json
 
 {
@@ -143,6 +157,7 @@ Request:
 
 ```http
 POST http://localhost:8897/proxy/mockrequest
+Authorization: Bearer <token>
 ```
 
 Response:
@@ -161,6 +176,7 @@ Request:
 
 ```http
 GET http://localhost:8897/proxy/rootCertificate?format=crt
+Authorization: Bearer <token>
 ```
 
 Response:
@@ -181,6 +197,7 @@ Request:
 
 ```http
 POST http://localhost:8897/proxy/stopproxy
+Authorization: Bearer <token>
 ```
 
 Response:
