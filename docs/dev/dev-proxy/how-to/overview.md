@@ -3,7 +3,7 @@ title: How-to guides
 description: How-to guides for Dev Proxy
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 04/22/2026
+ms.date: 10/03/2026
 ms.topic: overview
 ---
 
@@ -25,6 +25,8 @@ Simulate failures and edge cases to see how your app behaves.
 - [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md) · 5 min
 - [Simulate Rate-Limit API responses](./Simulate-Rate-Limit-API-responses.md) · 10 min
 - [Change request failure rate](./Change-request-failure-rate.md) · 2 min
+- [Test retries and timeouts in .NET apps](./test-dotnet-http-resilience.md) · 15 min
+- [Test how your app handles GitHub API rate limits](./test-github-api-rate-limit-handling.md) · 15 min
 
 ### Microsoft Graph specific
 
@@ -34,6 +36,7 @@ Simulate failures and edge cases to see how your app behaves.
 ### Language models (OpenAI, Azure OpenAI)
 
 - [Test my app with language model failures](./test-my-app-with-language-model-failures.md) · 5 min
+- [Test how your app handles OpenAI rate limits](./test-openai-rate-limit-handling.md) · 10 min
 - [Simulate errors from OpenAI APIs](./simulate-errors-openai-apis.md) · 5 min
 - [Test language model token limits](./test-language-model-token-limits.md) · 10 min
 
@@ -56,7 +59,7 @@ Create mock responses without building a real API.
 
 ### Language model APIs
 
-- [Simulate OpenAI API](./simulate-openai.md) · 15 min
+- [Use a local model instead of OpenAI while you develop](./simulate-openai.md) · 15 min
 - [Simulate Azure OpenAI API](./simulate-azure-openai.md) · 15 min
 
 ## Analyze API usage
@@ -68,7 +71,7 @@ Understand what APIs your app calls and how.
 - [Generate an HTTP file](./generate-http-file.md) · 5 min
 - [Generate an OpenAPI spec](./generate-openapi-spec.md) · 10 min
 - [Generate a TypeSpec file](./generate-typespec-file.md) · 10 min
-- [Understand language model usage](./understand-language-model-usage.md) · 10 min
+- [Measure token usage and cost of your language model app](./understand-language-model-usage.md) · 10 min
 
 ## Check permissions and best practices
 

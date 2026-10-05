@@ -1,9 +1,9 @@
 ---
-title: Understand language model usage
-description: How to use Dev Proxy to intercept OpenAI-compatible requests and responses to understand how your application uses large language models.
+title: Measure token usage and cost of your language model app
+description: Log tokens and cost for every OpenAI-compatible request your app makes, in OpenTelemetry format, without changing your app's code.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Monitor LLM usage with OpenTelemetry -->
@@ -13,7 +13,7 @@ ms.date: 09/23/2026
 <!-- JOB: analyze-usage -->
 <!-- TIME: 20 minutes -->
 
-# Understand language model usage
+# Measure token usage and cost of your language model app
 
 > **At a glance**  
 > **Goal:** Monitor LLM usage with OpenTelemetry  

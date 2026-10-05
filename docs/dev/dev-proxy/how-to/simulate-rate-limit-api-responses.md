@@ -1,9 +1,9 @@
 ---
 title: Simulate Rate-Limit API responses
-description: How to simulate Rate-Limit API responses
+description: Test how your app handles API rate limits. Dev Proxy counts requests and returns 429 with rate limit headers on the real API URLs, without code changes.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 06/01/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Simulate rate limiting behavior on any API -->
@@ -85,6 +85,7 @@ Learn more about the `RateLimitingPlugin`.
 ## See also
 
 - [RateLimitingPlugin](../technical-reference/ratelimitingplugin.md) - Full reference
+- [Test how your app handles GitHub API rate limits](./test-github-api-rate-limit-handling.md) - GitHub specific
 - [What is rate limiting](../concepts/what-is-rate-limiting.md) - Concepts
 - [How to handle rate limiting](../concepts/how-to-handle-rate-limiting.md) - Best practices
 - [Test that my application handles throttling properly](./test-that-my-application-handles-throttling-properly.md) - Related resilience test

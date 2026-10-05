@@ -1,9 +1,9 @@
 ---
 title: What Is an OpenAPI specification?
-description: This article explains what an OpenAPI specification (spec) is and some of the benefits of having one.
+description: What an OpenAPI specification is, why your API benefits from one (client SDKs, mock APIs, API gateways), and how to generate one from your app's real traffic when you don't have it.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/15/2024
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Understand OpenAPI specifications for API documentation -->
@@ -24,9 +24,19 @@ Here's why you should consider having an OpenAPI spec for your API:
 
 By using OpenAPI specs, you can create APIs that are well-designed and consistently documented. They're also more maintainable and easier to use both internally and by external consumers.
 
-If you don't have an OpenAPI spec for your API, you can use Dev Proxy to generate one from the intercepted requests and responses.
+## Don't have an OpenAPI spec yet?
+
+Writing a spec by hand for an API that already exists takes time, and it drifts from what the API really does. Another option is to record what the API returns and generate the spec from that.
+
+| Approach | What you get | What to watch for |
+|---|---|---|
+| Write it by hand | Full control over descriptions and examples | It takes time, and it drifts from the real API |
+| Generate it from code annotations | A spec that stays in sync with your code | You need access to the API's code, and the framework has to support it |
+| Generate it from recorded traffic | A spec for any API you can call, including ones you don't own | It covers only the requests you recorded, so exercise the parts of the API you need |
+
+[Dev Proxy](../overview.md?WT.mc_id=devproxy-learn-what-is-openapi-spec) records the requests and responses between your app and an API, and generates an OpenAPI spec from them. For the steps, see [Generate an OpenAPI spec](../how-to/generate-openapi-spec.md?WT.mc_id=devproxy-learn-what-is-openapi-spec).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Generate an OpenAPI spec](../how-to/generate-openapi-document.md)
+> [Generate an OpenAPI spec](../how-to/generate-openapi-spec.md?WT.mc_id=devproxy-learn-what-is-openapi-spec)
