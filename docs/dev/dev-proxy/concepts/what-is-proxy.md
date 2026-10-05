@@ -1,9 +1,9 @@
 ---
 title: What Is a Proxy?
-description: This article explains what a proxy is and how it works.
+description: What a proxy is, how forward, reverse, and transparent proxies work, and how developers use a proxy to debug API calls and test how apps handle API errors, rate limits, and slow responses.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/01/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Understand what a proxy server does and how Dev Proxy works -->
@@ -91,26 +91,48 @@ When a request passes through a proxy, certain headers are added or modified to 
 
 When your application runs behind a reverse proxy, make sure that your framework or platform is configured to trust and interpret these headers correctly.
 
+## Use a proxy to test how your app handles API failures
+
+Because a forward proxy sees every request your app sends, it can also answer some of them with a failure instead of forwarding them: a `500`, a [`429 Too Many Requests`](http-429-too-many-requests.md) with a [`Retry-After`](retry-after-header.md) header, or a response that takes 8 seconds. Your app keeps calling the real API URLs, so you test the app as it runs in production, including its HTTP client, SDK, and retry policy.
+
+Compared with other ways to test API failures:
+
+| Approach | What you find | What you miss |
+|---|---|---|
+| Wait for production | Real failures | Everything, until a user hits it |
+| Mock the API in your tests, or let your coding agent write the mock | Whether your error branches run | The API's real status codes, headers, and error bodies, and your SDK's retry policy. Your app also needs a test-only switch to reach the mock. |
+| Call the real API and hope it fails | Real behavior | You can't trigger a failure on demand |
+| Run your app through a proxy that simulates failures | Errors, throttling, and latency on the real URLs, on demand | Your code in isolation. Keep your unit tests for that. |
+
 ## Dev Proxy as a forward proxy for development and testing
 
-Dev Proxy is a forward proxy that you can use to intercept and modify requests from your application to any target server. With Dev Proxy, you can:
+[Dev Proxy](../overview.md?WT.mc_id=devproxy-learn-what-is-proxy) is a forward proxy that you run on your machine or in CI to intercept and modify requests from your application to the APIs you choose. With Dev Proxy, you can:
 
 - See how your app responds to API errors.
-- Verify how your app handles API rate limits.
+- Verify how your app handles API rate limits and throttling.
 - See how your app handles slow APIs.
-- Quickly stand up mock APIs without writing a line of code.
-- Improve your app with contextual guidance on how you use APIs.
+- Stand up mock APIs without writing a line of code.
+- Get contextual guidance on how you use APIs.
+
+To try it on the API your app calls, download a preset and start Dev Proxy with it. For example, for GitHub:
+
+```console
+devproxy config get github-rate-limiting
+devproxy --config-file "~dataFolder/configs/github-rate-limiting/.devproxy/devproxyrc.json"
+```
+
+Presets are also available for OpenAI (`openai-throttling`), Anthropic (`anthropic-throttling`), and Microsoft Graph OneDrive and SharePoint endpoints (`microsoft-graph-rate-limiting`).
 
 ## Try it yourself
 
 Pick a scenario that matches what you're building:
 
-- [Test how your app handles API errors](../how-to/test-my-app-with-random-errors.md) — 5 minutes
-- [Simulate rate limiting on any API](../how-to/simulate-rate-limit-api-responses.md) — 10 minutes
-- [Mock API responses without changing your code](../how-to/mock-responses.md) — 10 minutes
-- [Simulate OpenAI API locally](../how-to/simulate-openai.md) — 15 minutes
+- [Test how your app handles API errors](../how-to/test-my-app-with-random-errors.md?WT.mc_id=devproxy-learn-what-is-proxy) (5 minutes)
+- [Simulate rate limiting on any API](../how-to/simulate-rate-limit-api-responses.md?WT.mc_id=devproxy-learn-what-is-proxy) (10 minutes)
+- [Mock API responses without changing your code](../how-to/mock-responses.md?WT.mc_id=devproxy-learn-what-is-proxy) (10 minutes)
+- [Use a local model instead of OpenAI while you develop](../how-to/simulate-openai.md?WT.mc_id=devproxy-learn-what-is-proxy) (15 minutes)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started](../get-started/set-up.md)
+> [Get started](../get-started/set-up.md?WT.mc_id=devproxy-learn-what-is-proxy)

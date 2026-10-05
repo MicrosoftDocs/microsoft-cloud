@@ -51,6 +51,41 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/dev/dev-proxy/concepts/why-use-microsoft-graph-sdk.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/use-api-design.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/use-api-testing.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/use-api-publishing.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/use-api-versioning.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/use-recommended-search-apis-microsoft-365.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/dev/dev-proxy/concepts/how-to-work-with-large-datasets.md",
+         "redirect_url": "/microsoft-cloud/dev/dev-proxy/overview",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/dev/dev-proxy/background-information/what-is-throttling.md",
          "redirect_url": "/microsoft-cloud/dev/dev-proxy/concepts/what-is-throttling",
          "redirect_document_id": false

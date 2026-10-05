@@ -8,6 +8,50 @@
       href: get-started/set-up-beta.md
     - name: Configuration
       href: get-started/configure.md
+- name: Fix API problems
+  items:
+    - name: Rate limits, errors, and timeouts
+      items:
+        - name: What is rate limiting?
+          href: concepts/what-is-rate-limiting.md
+        - name: How to handle rate limiting
+          href: concepts/how-to-handle-rate-limiting.md
+        - name: What is throttling?
+          href: concepts/what-is-throttling.md
+        - name: How to handle API throttling
+          href: concepts/how-to-handle-api-throttling.md
+        - name: 429 Too Many Requests
+          href: concepts/http-429-too-many-requests.md
+        - name: The Retry-After header
+          href: concepts/retry-after-header.md
+        - name: 500, 502, 503, and 504 errors
+          href: concepts/http-5xx-api-errors.md
+        - name: .NET HttpClient timeouts
+          href: concepts/dotnet-httpclient-timeouts.md
+    - name: Errors from popular APIs
+      items:
+        - name: GitHub API rate limit exceeded
+          href: concepts/github-api-rate-limit-exceeded.md
+        - name: OpenAI rate limit reached
+          href: concepts/openai-rate-limit-reached.md
+        - name: OpenAI insufficient_quota
+          href: concepts/openai-insufficient-quota.md
+        - name: Anthropic 529 overloaded_error
+          href: concepts/anthropic-529-overloaded-error.md
+        - name: Azure OpenAI 429
+          href: concepts/azure-openai-429-token-rate-limit.md
+    - name: AI apps and agents
+      items:
+        - name: LLM rate limits
+          href: concepts/llm-rate-limits.md
+        - name: Mocks, stubs, fakes, and emulators
+          href: concepts/mocks-stubs-fakes-coding-agents.md
+        - name: Verify error handling your coding agent wrote
+          href: concepts/verify-agent-written-error-handling.md
+        - name: Test what your AI agent does when tools fail
+          href: concepts/test-ai-agent-tool-failures.md
+        - name: Test your AI agent for prompt injection in tool responses
+          href: concepts/test-ai-agent-prompt-injection-tool-responses.md
 - name: Tutorials
   items:
     - name: Simulate random errors for your own application
@@ -36,7 +80,7 @@
         href: how-to/inspect-requests-responses-chrome-devtools.md
       - name: Inspect API requests issued by cloud services
         href: how-to/inspect-api-requests-cloud-services.md
-      - name: Understand language model usage
+      - name: Measure token usage and cost
         href: how-to/understand-language-model-usage.md
     - name: Mock responses
       items: 
@@ -66,7 +110,7 @@
         href: how-to/simulate-azure-openai.md
       - name: Simulate mock responses across the internet
         href: how-to/simulate-mock-responses-dev-tunnel.md
-      - name: Simulate OpenAI API
+      - name: Use a local model instead of OpenAI
         href: how-to/simulate-openai.md
     - name: Simulate errors
       items:
@@ -84,8 +128,14 @@
       items: 
       - name: Test that my application handles throttling properly
         href: how-to/test-that-my-application-handles-throttling-properly.md
+      - name: Test retries and timeouts in .NET apps
+        href: how-to/test-dotnet-http-resilience.md
+      - name: Test how my app handles OpenAI rate limits
+        href: how-to/test-openai-rate-limit-handling.md
       - name: Test language model token limits
         href: how-to/test-language-model-token-limits.md
+      - name: Test how my app handles GitHub API rate limits
+        href: how-to/test-github-api-rate-limit-handling.md
       - name: Simulate throttling on Microsoft 365 APIs
         href: how-to/simulate-throttling-microsoft-365.md
       - name: Simulate Rate Limit API responses
@@ -220,42 +270,18 @@
       href: concepts/what-is-proxy.md
     - name: What is caching?
       href: concepts/what-is-caching.md
-    - name: What is throttling?
-      href: concepts/what-is-throttling.md
-    - name: How to handle API throttling
-      href: concepts/how-to-handle-api-throttling.md
-    - name: What is rate limiting?
-      href: concepts/what-is-rate-limiting.md
-    - name: How to handle rate limiting
-      href: concepts/how-to-handle-rate-limiting.md
     - name: How to implement rate limiting in Azure API Management
       href: concepts/implement-rate-limiting-azure-api-management.md
     - name: What is chaos testing?
       href: concepts/what-is-chaos-testing.md
     - name: Dev Proxy vs unit tests
       href: concepts/dev-proxy-vs-unit-tests.md
-    - name: How to work with large datasets
-      href: concepts/how-to-work-with-large-datasets.md
     - name: What is an OpenAPI spec
       href: concepts/what-is-openapi-spec.md
     - name: How to debug Microsoft Graph API calls
       href: concepts/how-to-debug-microsoft-graph-calls.md
-    - name: Why use Microsoft Graph SDK
-      href: concepts/why-use-microsoft-graph-sdk.md
     - name: Using Microsoft Graph beta endpoints in production
       href: concepts/use-microsoft-graph-beta-production.md
-    - name: Use the recommended search APIs on Microsoft 365
-      href: concepts/use-recommended-search-apis-microsoft-365.md
-    - name: Use Dev Proxy throughout the API lifecycle
-      items:
-        - name: In API design
-          href: concepts/use-api-design.md
-        - name: In API testing
-          href: concepts/use-api-testing.md
-        - name: In API publishing
-          href: concepts/use-api-publishing.md
-        - name: In API versioning
-          href: concepts/use-api-versioning.md
 - name: Reference
   items: 
     - name: Overview
