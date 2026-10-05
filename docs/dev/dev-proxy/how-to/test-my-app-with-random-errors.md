@@ -1,9 +1,9 @@
 ---
 title: Test my app with random errors
-description: How to test your app with random errors
+description: Test how your app handles 500, 503, 429, and other error responses from the APIs it calls, on the real API URLs, without stubs or base-URL changes.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Test how app handles API failures -->

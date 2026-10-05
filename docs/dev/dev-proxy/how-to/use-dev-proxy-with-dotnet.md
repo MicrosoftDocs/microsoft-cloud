@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications
 description: How to use Dev Proxy with .NET applications
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Configure .NET applications to use Dev Proxy -->
@@ -41,6 +41,7 @@ When you run your .NET application, Dev Proxy intercepts the request and returns
 
 ## See also
 
+- [Test retries and timeouts in .NET apps](./test-dotnet-http-resilience.md) - Test Microsoft.Extensions.Http.Resilience handlers
 - [Use Dev Proxy with .NET applications in Docker containers](./use-dev-proxy-with-dotnet-docker.md) - Docker setup
 - [Use Dev Proxy with .NET Azure Functions](./use-dev-proxy-with-dotnet-azure-functions.md) - Azure Functions
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology

@@ -1,9 +1,9 @@
 ---
 title: Simulate slow API responses
-description: How to simulate slow API responses
+description: Test how your app handles slow APIs, like timeouts, spinners, and cancellations, by adding latency to the real API responses, without changing your code.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses for testing -->

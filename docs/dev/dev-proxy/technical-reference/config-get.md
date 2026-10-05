@@ -3,7 +3,7 @@ title: config get
 description: config get command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 05/04/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Reference for devproxy config get command -->
@@ -11,7 +11,7 @@ ms.date: 05/04/2026
 
 # config get
 
-Download the specified config from the [Sample Solution Gallery](https://aka.ms/devproxy/samples).
+Download a preset or sample from the [Dev Proxy samples gallery](https://aka.ms/devproxy/samples). A preset is a ready-made Dev Proxy config for a specific API or scenario, so you download it with `devproxy config get`.
 
 ## Synopsis
 
@@ -38,10 +38,10 @@ devproxy config get <config-id>
 
 | Name | Description | Required | Default |
 | ---- | ----------- | :------: | :-----: |
-| `<config-id>` | The ID of the config to download. | Yes | None |
+| `<config-id>` | The ID of the preset or sample to download. | Yes | None |
 
 > [!TIP]
-> Each sample lists its ID in the details section on the sample page in the Sample Solution Gallery.
+> Each preset and sample lists its ID in the details section on its page in the Dev Proxy samples gallery.
 
 ## Options
 
@@ -51,4 +51,10 @@ devproxy config get <config-id>
 
 ## Remarks
 
-Dev Proxy stores downloaded configs in the `~dataFolder/configs/<config-id>` folder. Upgrading Dev Proxy doesn't affect the downloaded configs.
+Dev Proxy stores downloaded presets and samples in the `~dataFolder/configs/<config-id>` folder. Upgrading Dev Proxy doesn't affect them.
+
+Presets keep their config in a `.devproxy` subfolder. To start Dev Proxy with a downloaded preset, run:
+
+```console
+devproxy --config-file "~dataFolder/configs/<config-id>/.devproxy/devproxyrc.json"
+```

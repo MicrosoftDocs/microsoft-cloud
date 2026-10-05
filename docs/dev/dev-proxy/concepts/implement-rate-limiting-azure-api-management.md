@@ -1,9 +1,9 @@
 ---
 title: How to Implement Rate Limiting in Azure API Management
-description: This article explains how to implement rate limiting in Azure API Management.
+description: How to implement rate limiting in Azure API Management with rate-limit and rate-limit-by-key policies, expose rate limit headers, and test that client apps handle the limits.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 06/01/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Configure rate limiting policies in Azure API Management -->
@@ -87,12 +87,20 @@ Implementing rate limiting in Azure API Management helps you create robust and s
 
 ## Test your clients
 
-After you implement rate limiting on your API, verify that apps calling your API handle rate limits correctly. Use Dev Proxy to simulate the rate limiting behavior you configured and see how client apps respond.
+After you implement rate limiting on your API, verify that the apps calling your API handle it. When a client goes over a limit set by `rate-limit` or `rate-limit-by-key`, API Management returns [`429 Too Many Requests`](http-429-too-many-requests.md) with a [`Retry-After`](retry-after-header.md) header. Clients that ignore it keep retrying and stay throttled.
 
-- [How to handle rate limiting](how-to-handle-rate-limiting.md) — best practices for client apps
-- [Simulate rate limiting](../how-to/simulate-rate-limit-api-responses.md) — test with Dev Proxy
+| Approach | What you find | What you miss |
+|---|---|---|
+| Wait for production | Real client behavior | Every broken client, until its users hit the limit |
+| Mock API Management in the client's tests | Whether the client's retry branch runs | Your real limits, headers, and reset timing, and the client's real HTTP stack |
+| Call your API Management instance until it throttles | Real behavior | You need a test instance, and you can't hit the limit on demand without burning calls |
+| Intercept the client's traffic and simulate your limits | Your limit, window, and headers on the real API URL, and whether the client waits as long as `Retry-After` says | The client's code in isolation. Keep unit tests for that. |
+
+[Dev Proxy](../overview.md?WT.mc_id=devproxy-learn-implement-rate-limiting-azure-api-management) simulates the rate limiting behavior you configured, with the same limit, time window, and response headers, while the client app keeps calling your real API URL. Use the `RateLimitingPlugin` with `rateLimit` and `resetTimeWindowSeconds` set to your policy's `calls` and `renewal-period`, `costPerRequest` set to `1` (the default is `2`, which halves your limit), and `headerLimit` and `headerRemaining` set to the header names from your policy. Add the `RetryAfterPlugin` before it so Dev Proxy tells you when a client calls again too early. For details, see [Simulate rate limit API responses](../how-to/simulate-rate-limit-api-responses.md?WT.mc_id=devproxy-learn-implement-rate-limiting-azure-api-management). To install Dev Proxy, see [Set up Dev Proxy](../get-started/set-up.md?WT.mc_id=devproxy-learn-implement-rate-limiting-azure-api-management).
+
+- [How to handle rate limiting](how-to-handle-rate-limiting.md): best practices for client apps
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Test that my application handles rate limiting properly](../how-to/simulate-rate-limit-api-responses.md)
+> [Test that my application handles rate limiting properly](../how-to/simulate-rate-limit-api-responses.md?WT.mc_id=devproxy-learn-implement-rate-limiting-azure-api-management)

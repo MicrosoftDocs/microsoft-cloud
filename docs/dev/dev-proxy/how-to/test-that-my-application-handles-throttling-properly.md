@@ -1,9 +1,9 @@
 ---
 title: Test that my application handles throttling properly
-description: How to test that your application handles throttling properly
+description: Test that your app handles 429 Too Many Requests and waits as long as the Retry-After header says, on any API, without changing your code.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Test throttling handling with Retry-After headers on any API -->
@@ -236,6 +236,9 @@ This plugin keeps track of throttling responses and forcefully fails requests is
 - [GenericRandomErrorPlugin](../technical-reference/genericrandomerrorplugin.md) - Full reference
 - [RetryAfterPlugin](../technical-reference/retryafterplugin.md) - Verify retry behavior
 - [Simulate throttling on Microsoft 365 APIs](./simulate-throttling-microsoft-365.md) - Microsoft 365 specific
+- [Test how your app handles OpenAI rate limits](./test-openai-rate-limit-handling.md) - OpenAI specific
+- [Test how your app handles GitHub API rate limits](./test-github-api-rate-limit-handling.md) - GitHub specific
+- [Test retries and timeouts in .NET apps](./test-dotnet-http-resilience.md) - Microsoft.Extensions.Http.Resilience
 - [Simulate Rate-Limit API responses](./simulate-rate-limit-api-responses.md) - Related resilience test
 - [Use Dev Proxy in CI/CD](./use-dev-proxy-in-ci-cd-overview.md) - Automate resilience testing in your pipeline
 - [Glossary](../concepts/glossary.md) - Dev Proxy terminology

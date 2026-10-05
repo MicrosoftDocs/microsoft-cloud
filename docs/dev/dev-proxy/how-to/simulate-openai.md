@@ -1,9 +1,9 @@
 ---
-title: Simulate OpenAI API
-description: How to simulate OpenAI API
+title: Use a local model instead of OpenAI while you develop
+description: Answer your app's OpenAI calls with a local model like Ollama to develop without OpenAI costs. Your app keeps calling api.openai.com, unchanged.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/03/2026
 ---
 
 <!-- INTENT: Simulate OpenAI using local LLM -->
@@ -13,7 +13,7 @@ ms.date: 09/23/2026
 <!-- JOB: mock-api -->
 <!-- TIME: 15 minutes -->
 
-# Simulate OpenAI API
+# Use a local model instead of OpenAI while you develop
 
 > **At a glance**  
 > **Goal:** Simulate OpenAI using local LLM  
