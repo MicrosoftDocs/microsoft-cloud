@@ -3,7 +3,7 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy in GitHub Actions -->
@@ -67,13 +67,13 @@ By default, Dev Proxy output is logged to devproxy.log file in the working direc
 
 ## Install a specific version of Dev Proxy
 
-By default, the `setup` action installs the latest version of Dev Proxy. If you want to install a specific version, you can specify the `version` input.
+By default, the `setup` action installs the latest version of Dev Proxy. If you want to install a specific version, you can specify the `version` input. The value must match a Dev Proxy release tag, including the `v` prefix, for example `v3.3.1`.
 
 ```yaml
 - name: Setup Dev Proxy with specific version
   uses: dev-proxy-tools/actions/setup@v1
   with:
-    version: 0.29.2
+    version: v3.3.1
 ```
 
 ## Install Dev Proxy only
