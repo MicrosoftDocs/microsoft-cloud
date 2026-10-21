@@ -3,7 +3,7 @@ title: ApiCenterOnboardingPlugin
 description: ApiCenterOnboardingPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Check if APIs are registered in Azure API Center -->
@@ -35,7 +35,7 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
     "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
     "resourceGroupName": "resource-group-name",
     "serviceName": "apic-instance",
-    "workspace": "default",
+    "workspaceName": "default",
     "createApicEntryForNewApis": true
   }
 }
@@ -49,7 +49,7 @@ Checks if the APIs used in an app are registered in the specified Azure API Cent
 | `resourceGroupName` | Name of the resource group where the Azure API Center is located. | None |
 | `serviceName` | Name of the Azure API Center instance that Dev Proxy should use to check if the APIs used in the app are registered. | None |
 | `subscriptionId` | ID of the Azure subscription where the Azure API Center instance is located. | None |
-| `workspace` | Name of the Azure API Center workspace to use. | `default` |
+| `workspaceName` | Name of the Azure API Center workspace to use. | `default` |
 
 ## Command line options
 
@@ -72,7 +72,7 @@ To connect to Azure API Center, the plugin uses Azure credentials (in this order
 
 If the plugin fails to get an access token to access Azure, it shows an error and Dev Proxy disables it. Sign in to Azure using either of these tools, and restart Dev Proxy to use the `ApiCenterOnboardingPlugin` plugin.
 
-If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
+If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties as environment variables. To use environment variables, prepend the name of the value with a `@`, for example:
 
 ```json
 {
@@ -90,13 +90,13 @@ If you use Dev Proxy in CI/CD pipelines, you can pass values for the `subscripti
     "subscriptionId": "@AZURE_SUBSCRIPTION_ID",
     "resourceGroupName": "@AZURE_RESOURCE_GROUP_NAME",
     "serviceName": "@AZURE_APIC_INSTANCE_NAME",
-    "workspace": "@AZURE_APIC_WORKSPACE_NAME",
+    "workspaceName": "@AZURE_APIC_WORKSPACE_NAME",
     "createApicEntryForNewApis": true
   }
 }
 ```
 
-In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspace` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
+In this example, the `ApiCenterOnboardingPlugin` plugin sets `subscriptionId`, `resourceGroupName`, `serviceName`, and `workspaceName` properties to the values of the `AZURE_SUBSCRIPTION_ID`, `AZURE_RESOURCE_GROUP_NAME`, `AZURE_APIC_INSTANCE_NAME`, and `AZURE_APIC_WORKSPACE_NAME` environment variables, respectively.
 
 ## Next step
 

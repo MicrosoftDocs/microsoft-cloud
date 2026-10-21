@@ -3,7 +3,7 @@ title: Proxy API
 description: Overview of the Dev Proxy API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Control Dev Proxy programmatically via its REST API -->
@@ -149,6 +149,34 @@ Response:
 }
 ```
 
+### `GET /proxy/logs`
+
+Returns the Dev Proxy log output. Equivalent of the [`logs`](./logs-command.md) command. This endpoint is available only when Dev Proxy runs in detached mode. Otherwise, the API returns `404 Not Found`.
+
+| Query parameter | Description | Default |
+|-----------------|-------------|---------|
+| `lines` | Number of lines to return from the end of the log | `50` |
+| `follow` | When `true`, streams new log lines as server-sent events | `false` |
+| `since` | Returns only lines logged since the specified time. Use a duration (for example, `30s`, `5m`, `1h`, `1d`) or a timestamp (for example, `2026-01-24T14:00:00`) | n/a |
+
+By default, the API returns the log lines as plain text. To get a JSON array of log entries, set the `Accept` header to `application/json`. To stream log lines as server-sent events, set the `Accept` header to `text/event-stream` or set `follow` to `true`.
+
+Request:
+
+```http
+GET http://localhost:8897/proxy/logs?lines=10
+Authorization: Bearer <token>
+```
+
+Response:
+
+```text
+200 OK
+content-type: text/plain
+
+[last 10 lines of the Dev Proxy log]
+```
+
 ### `POST /proxy/mockrequest`
 
 Raises a mock request. Equivalent of pressing <kbd>w</kbd> in the console where Dev Proxy is running.
@@ -224,8 +252,8 @@ Options for generating a JWT token.
 | Property | Type | Description |
 |----------|------|-------------|
 | `name` | `string` | The name of the user to create the token for |
-| `audience` | `string[]` | The audiences to create the token for |
-| `issuer` | `string[]` | The issuer of the token |
+| `audiences` | `string[]` | The audiences to create the token for |
+| `issuer` | `string` | The issuer of the token |
 | `roles` | `string[]` | A role claim to add to the token |
 | `scopes` | `string[]` | A scope claim to add to the token |
 | `claims` | `KeyValuePair` | Claims to add to the token |

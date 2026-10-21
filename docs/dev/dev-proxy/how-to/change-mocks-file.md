@@ -3,7 +3,7 @@ title: Change mocks file
 description: How to specify which mocks file to use
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 02/07/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use a different mocks file location -->
@@ -21,13 +21,15 @@ ms.date: 02/07/2026
 > **Plugins:** [MockResponsePlugin](../technical-reference/mockresponseplugin.md), [GraphMockResponsePlugin](../technical-reference/graphmockresponseplugin.md)  
 > **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
-By default, the [MockResponsePlugin](../technical-reference/mockresponseplugin.md) and [GraphMockResponsePlugin](../technical-reference/graphmockresponseplugin.md) Dev Proxy plugins looks for a file called `mocks.json` in the current working directory.
+By default, the [MockResponsePlugin](../technical-reference/mockresponseplugin.md) and [GraphMockResponsePlugin](../technical-reference/graphmockresponseplugin.md) Dev Proxy plugins look for a file called `mocks.json` in the same folder as the Dev Proxy configuration file.
 
 To use a file with a different name, use:
 
 ```console
 devproxy --mocks-file my-mocks.json
 ```
+
+Dev Proxy resolves the path that you pass with `--mocks-file` relative to the configuration file, not the current working directory. For more information, see [Resolve relative paths](../technical-reference/resolve-relative-paths.md).
 
 Alternatively, you can specify the mocks file in the [devproxyrc.json](../technical-reference/devproxyrc.md) configuration file. Dev Proxy automatically reloads its configuration when you save changes, so you don't need to restart the proxy.
 

@@ -3,7 +3,7 @@ title: Use local language model with Dev Proxy
 description: How to configure Dev Proxy to use a local language model
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Configure local LLM for Dev Proxy features -->
@@ -58,9 +58,12 @@ By default, Dev Proxy uses the standard Ollama configuration with the [llama3.2]
 
 ## Dev Proxy plugins that can use a local language model
 
-The following Dev Proxy plugins use a local language model if available:
+The following Dev Proxy plugins require a local language model. If you don't enable a local language model, Dev Proxy disables these plugins:
 
 - [OpenAIMockResponsePlugin](../technical-reference/openaimockresponseplugin.md)
+
+The following Dev Proxy plugins use a local language model if available:
+
 - [OpenApiSpecGeneratorPlugin](../technical-reference/openapispecgeneratorplugin.md)
 - [TypeSpecGeneratorPlugin](../technical-reference/typespecgeneratorplugin.md)
 

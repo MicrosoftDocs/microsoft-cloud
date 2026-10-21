@@ -3,7 +3,7 @@ title: Technical reference
 description: Technical reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/13/2026
+ms.date: 10/21/2026
 ms.topic: overview
 ---
 
@@ -31,7 +31,7 @@ Name | Description
 [LanguageModelRateLimitingPlugin](./languagemodelratelimitingplugin.md)|Simulates token-based rate limiting for language model APIs by tracking prompt and completion token consumption within configurable time windows.
 [LatencyPlugin](./latencyplugin.md)|Delays responses by a random number of milliseconds from the configured range. Supports both HTTP and STDIO.
 [MinimalCsomPermissionsPlugin](./minimalcsompermissionsplugin.md)|Detects the minimal permissions needed to call the recorded SharePoint Client-Side Object Model (CSOM) API requests.
-[MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Checks if the app uses minimal permissions to call APIs. Uses API information from the specified local folder.
+[MinimalPermissionsPlugin](./minimalpermissionsplugin.md)|Returns the minimal permissions required to call the recorded API requests. Uses API information from the specified local folder.
 [MinimalPermissionsGuidancePlugin](./minimalpermissionsguidanceplugin.md)|Compares the permissions used in the JWT token sent to APIs against the minimum required scopes needed for requests that proxy recorded and shows the difference.
 [MockGeneratorPlugin](./mockgeneratorplugin.md)|Generates Dev Proxy mocks based on the intercepted requests.
 [MockRequestPlugin](./mockrequestplugin.md)|Allows you to issue web requests using Dev Proxy.

@@ -3,7 +3,7 @@ title: Troubleshoot Dev Proxy
 description: Solutions for common Dev Proxy issues
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -60,7 +60,7 @@ Dev Proxy must be registered as the system proxy to intercept requests automatic
 
 **If Dev Proxy isn't registered as system proxy:**
 
-Check your Dev Proxy configuration. Run `devproxy config` to open the config file and verify it doesn't contain:
+Check your Dev Proxy configuration. Run `devproxy config open` to open the config file and verify it doesn't contain:
 
 ```json
 {
@@ -150,11 +150,11 @@ Use the `global-agent` package or configure your HTTP library to use the proxy. 
 
 ### Are you using Dev Proxy with PowerShell on Windows?
 
-PowerShell doesn't automatically use system proxy settings for web requests made with `Invoke-WebRequest` or `Invoke-RestMethod`.
+On Windows, PowerShell reads the system proxy settings when the session starts and caches them. If you open a PowerShell session before you start Dev Proxy, or keep using it after you stop Dev Proxy, web requests made with `Invoke-WebRequest` or `Invoke-RestMethod` use stale proxy settings. For more information, see [Use Dev Proxy with PowerShell](use-dev-proxy-with-powershell.md).
 
 **Solution:**
 
-Configure PowerShell to use the proxy by setting the `-Proxy` parameter:
+Restart your PowerShell session after you start or stop Dev Proxy, or set the proxy explicitly. To configure PowerShell to use the proxy, set the `-Proxy` parameter:
 
 ```powershell
 Invoke-WebRequest -Uri "https://api.example.com/data" -Proxy "http://127.0.0.1:8000"
@@ -375,7 +375,7 @@ See [Why do I keep getting 429 responses?](why-do-i-keep-getting-429-responses.m
 If you can't find a solution:
 
 1. **Enable debug logging**: Run `devproxy --log-level debug` for detailed output
-1. **Search existing issues**: [Dev Proxy GitHub issues](https://github.com/microsoft/dev-proxy/issues)
+1. **Search existing issues**: [Dev Proxy GitHub issues](https://github.com/dotnet/dev-proxy/issues)
 1. **Ask for help**: [Get help and support](get-help-and-support.md)
 
 ## See also

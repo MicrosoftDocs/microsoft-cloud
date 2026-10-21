@@ -3,7 +3,7 @@ title: Mock responses that return binary data
 description: How to mock responses that return binary data
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Return binary files as mock responses -->
@@ -23,7 +23,7 @@ ms.date: 09/23/2026
 
 For some requests, you might want to respond with binary data like documents or images.
 
-In Dev Proxy, you can define a binary response by setting the `response.body` to a string value that starts with `@` followed by file path relative to the current working directory, for example:
+In Dev Proxy, you can define a binary response by setting the `response.body` to a string value that starts with `@` followed by the file path relative to the mocks file, for example:
 
 **File:** mocks.json
 

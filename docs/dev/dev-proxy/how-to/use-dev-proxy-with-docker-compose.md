@@ -3,7 +3,7 @@ title: Use Dev Proxy with Docker Compose
 description: Learn how to use Dev Proxy with applications running in Docker containers using Docker Compose
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy with Docker Compose -->
@@ -217,9 +217,14 @@ Create a `devproxyrc.json` file in the same directory as your `docker-compose.ya
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "genericRandomErrorPlugin"
     }
-  ]
+  ],
+  "genericRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json"
+  }
 }
 ```
 
@@ -247,14 +252,17 @@ docker attach <container-name>
 
 #### Using the Dev Proxy API
 
-The Dev Proxy API is exposed on port 8897. You can use it to control Dev Proxy programmatically:
+The Dev Proxy API is exposed on port 8897. You can use it to control Dev Proxy programmatically. All API requests require a bearer token in the `Authorization` header. Retrieve the token from the Dev Proxy container using the [api token](../technical-reference/api-token.md) command:
 
 ```console
+# Get the API token
+TOKEN=$(docker compose exec -T dev-proxy devproxy api token)
+
 # Start recording
-curl -X POST http://localhost:8897/proxy/recording/start
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": true}'
 
 # Stop recording
-curl -X POST http://localhost:8897/proxy/recording/stop
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": false}'
 ```
 
 For more information, see [Dev Proxy API](../technical-reference/proxy-api.md).

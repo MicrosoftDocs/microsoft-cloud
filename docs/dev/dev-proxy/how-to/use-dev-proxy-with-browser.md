@@ -3,7 +3,7 @@ title: Use Dev Proxy with a browser
 description: Learn how to attach Dev Proxy directly to a browser instance without changing system proxy settings
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/26/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 zone_pivot_groups: client-operating-system
 ---
@@ -144,10 +144,10 @@ Firefox uses its own certificate store. To trust the Dev Proxy certificate in Fi
 1. Select **Import...**
 1. Navigate to the Dev Proxy certificate:
    ::: zone pivot="client-operating-system-windows"
-   - Location: `%USERPROFILE%\.config\dev-proxy\rootCert.pfx`
+   - Location: `%LOCALAPPDATA%\Programs\Dev Proxy\rootCert.pfx` (the Dev Proxy installation folder)
    ::: zone-end
    ::: zone pivot="client-operating-system-macos"
-   - Location: `~/.config/dev-proxy/rootCert.pfx`
+   - Location: `~/Library/Application Support/dev-proxy/rootCert.pfx`
    ::: zone-end
    ::: zone pivot="client-operating-system-linux"
    - Location: `~/.config/dev-proxy/rootCert.pfx`

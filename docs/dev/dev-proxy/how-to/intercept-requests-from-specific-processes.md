@@ -3,7 +3,7 @@ title: Intercept requests from specific processes
 description: How to configure the proxy to intercept requests only from specific processes
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Filter Dev Proxy to only intercept requests from specific apps -->
@@ -28,7 +28,7 @@ However, you might also want to only intercept requests being made from specific
 To intercept request from processes by their given process IDs, use the `--watch-pids` option:
 
 ```console
-devproxy –-watch-pids 870 135100
+devproxy --watch-pids 870 135100
 ```
 
 To intercept request from processes by their given process names, use the `--watch-process-names` option:

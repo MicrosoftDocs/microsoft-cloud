@@ -3,7 +3,7 @@ title: Use Dev Proxy with WSL
 description: Learn how to use Dev Proxy with Windows Subsystem for Linux
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -63,7 +63,7 @@ For Dev Proxy to intercept HTTPS traffic, applications in WSL need to trust the 
 1. In WSL, copy the certificate from Windows:
 
    ```bash
-   cp /mnt/c/Users/<your-username>/.config/dev-proxy/rootCert.pfx ~/
+   cp "/mnt/c/Users/<your-username>/AppData/Local/Programs/Dev Proxy/rootCert.pfx" ~/
    ```
 
 1. Export and install the certificate:
@@ -79,11 +79,17 @@ For Dev Proxy to intercept HTTPS traffic, applications in WSL need to trust the 
 
 #### Option B: Use the Dev Proxy API
 
-While Dev Proxy is running on Windows, download and install the certificate:
+The Dev Proxy API requires a bearer token. While Dev Proxy is running on Windows, get the token by running the [api token](../technical-reference/api-token.md) command in a Windows terminal:
+
+```console
+devproxy api token
+```
+
+Then, in WSL, download and install the certificate. Replace `<token>` with the token that you retrieved:
 
 ```bash
 # Download the certificate from Dev Proxy API
-curl -o dev-proxy-ca.crt http://127.0.0.1:8897/proxy/rootCertificate?format=crt
+curl -H "Authorization: Bearer <token>" -o dev-proxy-ca.crt "http://127.0.0.1:8897/proxy/rootCertificate?format=crt"
 # Install the certificate
 sudo cp dev-proxy-ca.crt /usr/local/share/ca-certificates/
 # Update certificates
@@ -133,9 +139,9 @@ Since WSL doesn't have a graphical desktop environment, Dev Proxy can't automati
      ],
      "genericRandomErrorPlugin": {
        "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
-       "errorsFile": "devproxy-errors.json"
+       "errorsFile": "devproxy-errors.json",
+       "rate": 50
      },
-     "rate": 50,
      "logLevel": "information"
    }
    ```

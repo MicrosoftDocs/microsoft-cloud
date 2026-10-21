@@ -3,7 +3,7 @@ title: CrudApiPlugin
 description: CrudApiPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate full CRUD API with in-memory data store -->
@@ -358,7 +358,7 @@ Dev Proxy matches query-string parameters independently of their order. You can 
 
 When the plugin can't find the data in the data file using the query, it returns a `404 Not Found` response.
 
-Each action type has a default HTTP method. You can override the default by specifying the `method` property. For example, the `get` action type has a default method of `GET`. If you want to use `POST` instead, specify the `method` property as `POST`.
+Each action type has a default HTTP method. You can override the default by specifying the `method` property. For example, the `getOne` action type has a default method of `GET`. If you want to use `POST` instead, specify the `method` property as `POST`.
 
 The `actions` array defined a collection of actions that you want to mock. You can define multiple actions for the same HTTP method and action type. For example, you can define two `getOne` actions, one that retrieves a customer by their ID and the other by their email address. Be sure to define unique URLs for each action.
 

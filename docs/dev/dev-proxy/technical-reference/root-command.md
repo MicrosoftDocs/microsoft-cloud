@@ -3,7 +3,7 @@ title: (root)
 description: Dev Proxy root command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Reference for devproxy command line options -->
@@ -22,6 +22,7 @@ Options:
   -c, --config-file <file>      Configuration file path (default: devproxyrc.json)
   -u, --urls-to-watch <urls>    URLs to intercept (supports wildcards)
   -p, --port <port>             Proxy port (default: 8000)
+  --ip-address <ipAddress>      Proxy bind address (default: 127.0.0.1)
   --api-port <apiPort>          API port (default: 8897)
   --api-ip-address <address>    API bind address (default: 127.0.0.1)
   --log-level <level>           Logging level: trace|debug|information|warning|error
@@ -30,12 +31,16 @@ Options:
   --discover                    Run in URL discovery mode
   --watch-pids <pids>           Process IDs to watch
   --watch-process-names <names> Process names to watch
+  -e, --env <env>               Variables to set for the Dev Proxy process (key=value)
+  --as-system-proxy             Register as the system proxy (default: true)
+  --install-cert                Install the root certificate (default: true)
+  --no-first-run                Skip the first run experience
   -t, --timeout <seconds>       Auto-stop after inactivity
   --no-watch                    Disable config file auto-restart on changes
   --no-color                    Disable colored output
   --detach                      Run proxy in the background (detached mode)
   --version                     Show version
-  -h, --help                    Show help
+  -?, -h, --help                Show help and usage information
 ```
 
 ## Usage
@@ -71,8 +76,8 @@ None
 |`-t, --timeout <seconds>`|Automatically stop proxy after a period of inactivity|integer|n/a|
 |`-u, --urls-to-watch <urlsToWatch>`|List of URLs that proxy should intercept|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
 |`--version`|Show version information|n/a|n/a|
-|`--watch-pids <pids>`|The IDs of processes to watch for requests|integer|n/a|
-|`--watch-process-names <processNames>`|The names of processes to watch for requests|string|n/a|
+|`--watch-pids <pids>`|The IDs of processes to watch for requests|One or more space-separated integers|n/a|
+|`--watch-process-names <processNames>`|The names of processes to watch for requests|One or more space-separated names|n/a|
 |`-?, -h, --help`|Show help and usage information|n/a|n/a|
 
 ## Detached mode output
