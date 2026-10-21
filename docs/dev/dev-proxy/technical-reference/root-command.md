@@ -3,7 +3,7 @@ title: (root)
 description: Dev Proxy root command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Reference for devproxy command line options -->
@@ -71,8 +71,8 @@ None
 |`-t, --timeout <seconds>`|Automatically stop proxy after a period of inactivity|integer|n/a|
 |`-u, --urls-to-watch <urlsToWatch>`|List of URLs that proxy should intercept|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
 |`--version`|Show version information|n/a|n/a|
-|`--watch-pids <pids>`|The IDs of processes to watch for requests|integer|n/a|
-|`--watch-process-names <processNames>`|The names of processes to watch for requests|string|n/a|
+|`--watch-pids <pids>`|The IDs of processes to watch for requests|One or more space-separated integers|n/a|
+|`--watch-process-names <processNames>`|The names of processes to watch for requests|One or more space-separated names|n/a|
 |`-?, -h, --help`|Show help and usage information|n/a|n/a|
 
 ## Detached mode output
