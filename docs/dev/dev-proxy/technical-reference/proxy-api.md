@@ -3,7 +3,7 @@ title: Proxy API
 description: Overview of the Dev Proxy API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Control Dev Proxy programmatically via its REST API -->
@@ -224,8 +224,8 @@ Options for generating a JWT token.
 | Property | Type | Description |
 |----------|------|-------------|
 | `name` | `string` | The name of the user to create the token for |
-| `audience` | `string[]` | The audiences to create the token for |
-| `issuer` | `string[]` | The issuer of the token |
+| `audiences` | `string[]` | The audiences to create the token for |
+| `issuer` | `string` | The issuer of the token |
 | `roles` | `string[]` | A role claim to add to the token |
 | `scopes` | `string[]` | A scope claim to add to the token |
 | `claims` | `KeyValuePair` | Claims to add to the token |
