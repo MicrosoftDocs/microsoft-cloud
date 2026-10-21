@@ -3,7 +3,7 @@ title: Mock STDIO responses for MCP servers
 description: How to mock STDIO responses for Model Context Protocol (MCP) servers using Dev Proxy
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -170,7 +170,7 @@ When you enable the `DevToolsPlugin`, Dev Proxy opens Chrome DevTools where you 
 
 - **Network tab**: View all stdin/stdout/stderr messages
 - **URLs**: Messages appear as `stdio://command-name`
-- **Methods**: Requests show as `stdin`
+- **Methods**: Requests show as `STDIN`
 - **Status codes**: `stdout` appears as 200, `stderr` as 500
 - **Timing**: See how long each request/response took
 
