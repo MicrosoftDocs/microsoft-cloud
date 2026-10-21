@@ -3,7 +3,7 @@ title: Use Dev Proxy with Azure Pipelines
 description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy in Azure Pipelines -->
@@ -38,7 +38,7 @@ Start by installing Dev Proxy on the agent using a script task to install Dev Pr
 By default, this installs the latest version of Dev Proxy. If you want to install a specific version, you can specify it by passing a version at the end of the script:
 
 ```yaml
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" v1.0.0
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- v1.0.0
   displayName: 'Install Dev Proxy v1.0.0'
 ```
 
@@ -59,7 +59,7 @@ steps:
     cacheHitVar: DEV_PROXY_CACHE_RESTORED
   displayName: Cache Dev Proxy
 
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- $DEV_PROXY_VERSION
   displayName: 'Install Dev Proxy'
   condition: ne(variables.DEV_PROXY_CACHE_RESTORED, 'true')
 ```
@@ -133,7 +133,7 @@ variables:
   value: v1.0.0
 
 steps:
-- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" $DEV_PROXY_VERSION
+- script: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)" -- $DEV_PROXY_VERSION
   displayName: 'Install Dev Proxy'
 
 - script: bash ./start.sh
