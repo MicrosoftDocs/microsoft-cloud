@@ -126,10 +126,10 @@ If you want to stop Dev Proxy manually, use the `stop` action. This action is us
 
 ## Start recording manually
 
-To start recording manually, use the `start` action with the `auto-record` input set to `true`.
+To start recording manually on a running Dev Proxy instance, use the `record-start` action.
 
 ```yaml
-- name: Start Dev Proxy in recording mode
+- name: Start recording
   uses: dev-proxy-tools/actions/record-start@v1
 ```
 
