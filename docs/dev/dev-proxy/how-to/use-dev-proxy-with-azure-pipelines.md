@@ -75,11 +75,12 @@ When you start Dev Proxy in a CI/CD pipeline, you can [start it from a script](.
 
 ## Control Dev Proxy
 
-To control Dev Proxy, you can use the [Dev Proxy API](../technical-reference/proxy-api.md). For example, to start recording requests, you can send a POST request to the `/proxy` endpoint:
+To control Dev Proxy, you can use the [Dev Proxy API](../technical-reference/proxy-api.md). All API requests require a bearer token in the `Authorization` header. Because Azure Pipelines sets the `CI` environment variable, Dev Proxy doesn't print the token at startup, so retrieve it using the [api token](../technical-reference/api-token.md) command. For example, to start recording requests, you can send a POST request to the `/proxy` endpoint:
 
 ```yaml
 - script: |
-    curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
+    TOKEN=$(./devproxy/devproxy api token)
+    curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": true}'
   displayName: 'Start recording'
 ```
 
@@ -144,7 +145,8 @@ steps:
   displayName: 'Send request'
 
 - script: |
-    curl -X POST http://localhost:8897/proxy/stopproxy
+    TOKEN=$(./devproxy/devproxy api token)
+    curl -X POST http://localhost:8897/proxy/stopproxy -H "Authorization: Bearer $TOKEN"
   displayName: 'Stop Dev Proxy'
 
 - script: |
