@@ -3,7 +3,7 @@ title: LatencyPlugin
 description: LatencyPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Add artificial latency to API responses -->
@@ -51,7 +51,7 @@ None
 
 ## STDIO support
 
-When you use the `LatencyPlugin` with the [`STDIO` command](stdio.md), the plugin adds artificial latency to stdout responses. Simulating latency is useful for testing how your application handles slow Model Context Protocol (MCP) server responses or other STDIO-based tools.
+When you use the `LatencyPlugin` with the [`stdio` command](stdio.md), the plugin adds artificial latency to stdout responses. Simulating latency is useful for testing how your application handles slow Model Context Protocol (MCP) server responses or other STDIO-based tools.
 
 ### Configuration example for STDIO
 
@@ -87,7 +87,7 @@ When you use the `LatencyPlugin` with the [`STDIO` command](stdio.md), the plugi
 Then run:
 
 ```console
-devproxy STDIO npx -y @modelcontextprotocol/server-filesystem
+devproxy stdio npx -y @modelcontextprotocol/server-filesystem
 ```
 
 ## Next step
