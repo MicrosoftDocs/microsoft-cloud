@@ -3,7 +3,7 @@ title: Use Dev Proxy with Docker Compose
 description: Learn how to use Dev Proxy with applications running in Docker containers using Docker Compose
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy with Docker Compose -->
@@ -217,9 +217,14 @@ Create a `devproxyrc.json` file in the same directory as your `docker-compose.ya
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "genericRandomErrorPlugin"
     }
-  ]
+  ],
+  "genericRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json"
+  }
 }
 ```
 

@@ -3,7 +3,7 @@ title: GenericRandomErrorPlugin
 description: GenericRandomErrorPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate random API errors for any API -->
@@ -44,7 +44,7 @@ Fails requests with a random selected error from file containing mocked errors.
 
 | Property | Description | Default |
 |----------|-------------|:-------:|
-| `errorsFile` | Path to the file that contains error responses. | No default |
+| `errorsFile` | Path to the file that contains error responses. | `errors.json` |
 | `rate` | The percentage of requests to fail with a random error. Value between 0 and 100. | `50` |
 | `retryAfterInSeconds` | The number of seconds to wait before retrying the request. Included on the `Retry-After` response header for dynamic throttling. | `5` |
 
