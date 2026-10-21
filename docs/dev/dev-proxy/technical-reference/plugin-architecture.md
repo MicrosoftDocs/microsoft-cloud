@@ -3,7 +3,7 @@ title: Plugin architecture
 description: The architecture of Dev Proxy plugins
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/13/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Understand how Dev Proxy plugins work (intercepting, reporting, reporters, stdio) -->
@@ -25,7 +25,7 @@ When Dev Proxy starts, it loads plugins enabled in its configuration file. Depen
 
 ## Intercepting plugins
 
-When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch` array, it invokes each intercepting plugin in the order they're listed in the configuration file. Each intercepting plugin inherits from the [`BaseProxyPlugin`](https://github.com/dotnet/dev-proxy/blob/main/dev-proxy-abstractions/BaseProxyPlugin.cs) class, and can subscribe to the following events:
+When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch` array, it invokes each intercepting plugin in the order they're listed in the configuration file. Each intercepting plugin inherits from the [`BasePlugin`](https://github.com/dotnet/dev-proxy/blob/main/DevProxy.Abstractions/Plugins/BasePlugin.cs) class, and can subscribe to the following events:
 
 - `BeforeRequest` - raised when Dev Proxy intercepts a request
 - `BeforeResponse` - raised after Dev Proxy receives a response from the server

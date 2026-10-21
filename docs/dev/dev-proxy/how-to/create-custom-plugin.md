@@ -3,11 +3,11 @@ title: Create a custom plugin
 description: How to create a custom plugin for Dev Proxy
 author: estruyf
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Build a custom Dev Proxy plugin -->
-<!-- SOLUTION: Create .NET class implementing IProxyPlugin interface -->
+<!-- SOLUTION: Create .NET class inheriting from BasePlugin (implements IPlugin) -->
 <!-- RESULT: Custom plugin loaded by Dev Proxy for custom behaviors -->
 <!-- PLUGINS: custom -->
 <!-- JOB: extend-proxy -->
@@ -67,7 +67,7 @@ Follow the next steps to create a new project:
     <ExcludeAssets>runtime</ExcludeAssets>
     ```
 
-1. Create a new class that inherits from the `BaseProxy` class.
+1. Create a new class that inherits from the `BasePlugin` class.
 
     ```csharp
     using DevProxy.Abstractions.Plugins;
