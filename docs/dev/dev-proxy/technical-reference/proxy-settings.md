@@ -35,6 +35,7 @@ The following table describes the settings.
 |`port`|The port for the proxy server to listen on. Set to `0` to let the OS assign a random available port.|`-p, --port <port>`|integer|`8000`|
 |`record`|Use this option to record all request logs|`--record`|n/a|n/a|
 |`showSkipMessages`|Whether to show log messages when Dev Proxy skips running a plugin.|n/a|`true`, `false`|`true`|
+|`showTimestamps`|Whether to show timestamps in log output|n/a|`true`, `false`|`true`|
 |`timeout`|Automatically stop proxy after a period of inactivity|`-t, --timeout <seconds>`|integer|n/a|
 |`urlsToWatch`|List of URLs that proxy should intercept|`-u, --urls-to-watch <urlsToWatch>`|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
 |`validateSchemas`|Whether to validate configuration against the specified schema. Applies to JSON configuration files only.|n/a|`true`, `false`|`true`|
