@@ -3,7 +3,7 @@ title: Use Dev Proxy with GitHub Actions
 description: How to use Dev Proxy with GitHub Actions
 author: estruyf
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy in GitHub Actions -->
@@ -126,10 +126,10 @@ If you want to stop Dev Proxy manually, use the `stop` action. This action is us
 
 ## Start recording manually
 
-To start recording manually, use the `start` action with the `auto-record` input set to `true`.
+To start recording manually on a running Dev Proxy instance, use the `record-start` action.
 
 ```yaml
-- name: Start Dev Proxy in recording mode
+- name: Start recording
   uses: dev-proxy-tools/actions/record-start@v1
 ```
 
