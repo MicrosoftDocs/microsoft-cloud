@@ -3,7 +3,7 @@ title: Mock responses
 description: How to simulate API responses
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Return predefined responses instead of calling real API -->
@@ -288,7 +288,7 @@ To enable this feature, add and enable the `blockUnmockedRequests` setting to [M
 
 ```json
 {
-  "mocksPlugin": {
+  "mockResponsePlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/mockresponseplugin.schema.json",
     "mocksFile": "mocks.json",
     "blockUnmockedRequests": true
