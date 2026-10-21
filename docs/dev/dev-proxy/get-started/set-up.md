@@ -216,7 +216,7 @@ In the command line where Dev Proxy is running, you see the information about th
  time  │ 1/31/2025 12:12:14 PM +00:00
  skip  │ RetryAfterPlugin: Request not throttled
  skip  │ GenericRandomErrorPlugin: Pass through
- api   ╰ Passed through
+ pass  ╰ Passed through
 ```
 
 If Dev Proxy returns an error response, you see the error message in the output.
