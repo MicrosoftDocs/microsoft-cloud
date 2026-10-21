@@ -3,7 +3,7 @@ title: Generate an HTTP file
 description: How to generate an HTTP file from the intercepted API requests and responses
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Create an HTTP file from intercepted API requests for reuse -->
@@ -101,7 +101,7 @@ To generate an HTTP file using Dev Proxy:
    Host: jsonplaceholder.typicode.com
    User-Agent: curl/8.6.0
    Accept: */*
-   Via: 1.1 dev-proxy/0.29.0
+   Via: 1.1 dev-proxy/3.3.1
    ```
 
    The plugin automatically creates variables for each combination of hostname and sensitive parameter, reusing them across requests when applicable.
