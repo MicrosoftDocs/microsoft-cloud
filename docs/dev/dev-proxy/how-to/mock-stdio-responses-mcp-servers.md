@@ -170,7 +170,7 @@ When you enable the `DevToolsPlugin`, Dev Proxy opens Chrome DevTools where you 
 
 - **Network tab**: View all stdin/stdout/stderr messages
 - **URLs**: Messages appear as `stdio://command-name`
-- **Methods**: Requests show as `stdin`
+- **Methods**: Requests show as `STDIN`
 - **Status codes**: `stdout` appears as 200, `stderr` as 500
 - **Timing**: See how long each request/response took
 
