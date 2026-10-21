@@ -3,7 +3,7 @@ title: Dev Proxy doesn't intercept requests
 description: What to do when Dev Proxy is running, but doesn't intercept any requests.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Fix Dev Proxy not intercepting requests -->
@@ -29,7 +29,7 @@ If Dev Proxy isn't registered as a system proxy, it doesn't intercept any reques
 
 After starting Dev Proxy, check your system proxy settings to verify that Dev Proxy is registered as a system proxy.
 
-If you start Dev Proxy and it's not registered as a system proxy, verify its settings. In the command line, open the Dev Proxy config file by running `devproxy config`. Verify, that the file doesn't contain the `asSystemProxy: false` setting.
+If you start Dev Proxy and it's not registered as a system proxy, verify its settings. In the command line, open the Dev Proxy config file by running `devproxy config open`. Verify, that the file doesn't contain the `asSystemProxy: false` setting.
 
 ## URL isn't included in the configuration
 
