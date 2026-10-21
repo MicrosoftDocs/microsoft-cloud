@@ -3,7 +3,7 @@ title: OpenApiSpecGeneratorPlugin
 description: OpenApiSpecGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Generate OpenAPI spec from intercepted API traffic -->
@@ -13,7 +13,7 @@ ms.date: 09/23/2026
 
 # OpenApiSpecGeneratorPlugin
 
-Generates OpenAPI spec in JSON format from the intercepted requests and responses.
+Generates OpenAPI spec in JSON or YAML format from the intercepted requests and responses.
 
 :::image type="content" source="../media/open-api-spec-generator-plugin.png" alt-text="Screenshot of two command prompt windows. One shows Dev Proxy recording API requests. The other shows the generated OpenAPI spec." lightbox="../media/open-api-spec-generator-plugin.png":::
 
