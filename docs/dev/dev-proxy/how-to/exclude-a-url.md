@@ -7,7 +7,7 @@ ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Prevent Dev Proxy from intercepting specific URLs -->
-<!-- SOLUTION: Add URL patterns to urlsToExclude in config -->
+<!-- SOLUTION: Prefix URL patterns in urlsToWatch with ! to exclude them -->
 <!-- RESULT: Dev Proxy ignores matching URLs -->
 <!-- JOB: configure-proxy -->
 <!-- TIME: 3 minutes -->
