@@ -3,7 +3,7 @@ title: Measure token usage and cost of your language model app
 description: Log tokens and cost for every OpenAI-compatible request your app makes, in OpenTelemetry format, without changing your app's code.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Monitor LLM usage with OpenTelemetry -->
@@ -283,7 +283,7 @@ Dev Proxy supports estimating the costs of using language models. To allow Dev P
     
     1. From the side panel, select **Metrics**.
     1. From the **Resource** drop-down list, select **DevProxy.OpenAI**.
-    1. From the list of metrics, select **gen_ai.client.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
+    1. From the list of metrics, select **gen_ai.usage.total_cost** to see a chart showing the estimated total cost that your application incurs for using the language models.
     
         :::image type="content" source="../media/openai-telemetry-aspire-metrics-cost.png" alt-text="Screenshot of the Aspire dashboard showing a chart of estimated token cost." lightbox="../media/openai-telemetry-aspire-metrics-cost.png":::
     
