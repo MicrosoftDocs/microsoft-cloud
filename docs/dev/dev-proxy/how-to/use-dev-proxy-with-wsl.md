@@ -3,7 +3,7 @@ title: Use Dev Proxy with WSL
 description: Learn how to use Dev Proxy with Windows Subsystem for Linux
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -63,7 +63,7 @@ For Dev Proxy to intercept HTTPS traffic, applications in WSL need to trust the 
 1. In WSL, copy the certificate from Windows:
 
    ```bash
-   cp /mnt/c/Users/<your-username>/.config/dev-proxy/rootCert.pfx ~/
+   cp "/mnt/c/Users/<your-username>/AppData/Local/Programs/Dev Proxy/rootCert.pfx" ~/
    ```
 
 1. Export and install the certificate:
