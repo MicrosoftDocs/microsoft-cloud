@@ -262,8 +262,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
     {
       "name": "OpenAIMockResponsePlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "openAIMockResponsePlugin"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [
@@ -271,8 +270,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
   ],
   "languageModel": {
     "enabled": true
-  },
-  "openAIMockResponsePlugin": {}
+  }
 }
 ```
 
