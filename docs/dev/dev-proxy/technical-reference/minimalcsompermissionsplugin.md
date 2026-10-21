@@ -3,7 +3,7 @@ title: MinimalCsomPermissionsPlugin
 description: MinimalCsomPermissionsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Detect minimal permissions for SharePoint CSOM APIs -->
@@ -32,7 +32,7 @@ Detects minimal permissions needed to call the recorded SharePoint Client-Side O
   ],
   "minimalCsomPermissionsPlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/minimalcsompermissionsplugin.schema.json",
-    "typesFilePath": "./api-specs"
+    "typesFilePath": "./spo-csom-types.json"
   }
 }
 ```
