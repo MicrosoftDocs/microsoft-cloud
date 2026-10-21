@@ -217,9 +217,14 @@ Create a `devproxyrc.json` file in the same directory as your `docker-compose.ya
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "genericRandomErrorPlugin"
     }
-  ]
+  ],
+  "genericRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json"
+  }
 }
 ```
 

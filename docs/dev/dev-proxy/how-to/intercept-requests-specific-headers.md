@@ -3,7 +3,7 @@ title: Intercept requests with specific headers
 description: How to configure Dev Proxy to only intercept requests with specific headers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Filter by specific headers -->
@@ -38,7 +38,8 @@ The following example demonstrates how to configure Dev Proxy to intercept reque
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "genericRandomErrorPlugin"
     }
   ],
   "urlsToWatch": [
@@ -49,7 +50,11 @@ The following example demonstrates how to configure Dev Proxy to intercept reque
       "name": "x-app",
       "value": "contoso-intranet"
     }
-  ]
+  ],
+  "genericRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json"
+  }
 }
 ```
 
@@ -89,7 +94,8 @@ To intercept requests that contain a specific header, regardless of its value, l
     {
       "name": "GenericRandomErrorPlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
+      "configSection": "genericRandomErrorPlugin"
     }
   ],
   "urlsToWatch": [
@@ -100,7 +106,11 @@ To intercept requests that contain a specific header, regardless of its value, l
       "name": "x-contoso",
       "value": ""
     }
-  ]
+  ],
+  "genericRandomErrorPlugin": {
+    "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
+    "errorsFile": "devproxy-errors.json"
+  }
 }
 ```
 
