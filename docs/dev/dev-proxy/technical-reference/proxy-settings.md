@@ -3,7 +3,7 @@ title: Proxy settings
 description: Overview of proxy settings
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Configure Dev Proxy behavior (ports, logging, rate, etc.) -->
@@ -33,7 +33,6 @@ The following table describes the settings.
 |`noWatch`|Disable automatic proxy restart when the configuration file changes|`--no-watch`|n/a|n/a|
 |`output`|Output format for structured logging|`--output <format>`|`text`, `json`|`text`|
 |`port`|The port for the proxy server to listen on. Set to `0` to let the OS assign a random available port.|`-p, --port <port>`|integer|`8000`|
-|`rate`|The percentage of chance that proxy fails a request. Set to `0` to pass all requests to APIs, and to `100` to fail all requests.|`-f, --failure-rate <failurerate>`|`0..100`|`50`|
 |`record`|Use this option to record all request logs|`--record`|n/a|n/a|
 |`showSkipMessages`|Whether to show log messages when Dev Proxy skips running a plugin.|n/a|`true`, `false`|`true`|
 |`timeout`|Automatically stop proxy after a period of inactivity|`-t, --timeout <seconds>`|integer|n/a|
@@ -41,3 +40,6 @@ The following table describes the settings.
 |`validateSchemas`|Whether to validate configuration against the specified schema. Applies to JSON configuration files only.|n/a|`true`, `false`|`true`|
 |`watchPids`|The IDs of processes to watch for requests|`--watch-pids <pids>`|integer|n/a|
 |`watchProcessNames`|The names of processes to watch for requests|`--watch-process-names <processNames>`|string|n/a|
+
+> [!NOTE]
+> The failure rate isn't a proxy setting. To configure it, set the `rate` property in the configuration section of the [GenericRandomErrorPlugin](./genericrandomerrorplugin.md) or [GraphRandomErrorPlugin](./graphrandomerrorplugin.md), or use the `-f, --failure-rate` command-line option when one of these plugins is loaded.

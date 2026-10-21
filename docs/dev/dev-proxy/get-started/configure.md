@@ -3,7 +3,7 @@ title: Configure Dev Proxy
 description: Learn how to configure Dev Proxy to your needs.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: get-started
 ---
 
@@ -43,9 +43,9 @@ The following code snippet shows the default Dev Proxy configuration file:
   ],
   "genericRandomErrorPlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
-    "errorsFile": "devproxy-errors.json"
+    "errorsFile": "devproxy-errors.json",
+    "rate": 50
   },
-  "rate": 50,
   "logLevel": "information",
   "newVersionNotification": "stable",
   "showSkipMessages": true,

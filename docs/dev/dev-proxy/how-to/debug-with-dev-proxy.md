@@ -3,7 +3,7 @@ title: Debug with Dev Proxy
 description: Learn how to debug your application while using Dev Proxy to simulate API errors
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -213,10 +213,10 @@ Create a Dev Proxy configuration file that simulates throttling:
   "urlsToWatch": [
     "https://api.contoso.com/*"
   ],
-  "rate": 100,
   "errorsConfig": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/genericrandomerrorplugin.schema.json",
-    "errorsFile": "errors.json"
+    "errorsFile": "errors.json",
+    "rate": 100
   }
 }
 ```
