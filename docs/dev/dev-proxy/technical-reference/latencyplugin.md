@@ -79,7 +79,7 @@ When you use the `LatencyPlugin` with the [`stdio` command](stdio.md), the plugi
   },
   "mockStdioResponsePlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/mockstdioresponseplugin.schema.json",
-    "mocksFile": "STDIO-mocks.json"
+    "mocksFile": "stdio-mocks.json"
   }
 }
 ```
