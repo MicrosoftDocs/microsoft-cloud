@@ -69,7 +69,7 @@ When you use the `LatencyPlugin` with the [`stdio` command](stdio.md), the plugi
       "name": "MockStdioResponsePlugin",
       "enabled": true,
       "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "mockSTDIOResponsePlugin"
+      "configSection": "mockStdioResponsePlugin"
     }
   ],
   "latencyPlugin": {
@@ -77,7 +77,7 @@ When you use the `LatencyPlugin` with the [`stdio` command](stdio.md), the plugi
     "minMs": 100,
     "maxMs": 500
   },
-  "mockSTDIOResponsePlugin": {
+  "mockStdioResponsePlugin": {
     "$schema": "https://raw.githubusercontent.com/dotnet/dev-proxy/main/schemas/v3.3.1/mockstdioresponseplugin.schema.json",
     "mocksFile": "STDIO-mocks.json"
   }
