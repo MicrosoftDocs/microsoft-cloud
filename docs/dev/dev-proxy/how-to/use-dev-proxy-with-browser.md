@@ -147,7 +147,7 @@ Firefox uses its own certificate store. To trust the Dev Proxy certificate in Fi
    - Location: `%LOCALAPPDATA%\Programs\Dev Proxy\rootCert.pfx` (the Dev Proxy installation folder)
    ::: zone-end
    ::: zone pivot="client-operating-system-macos"
-   - Location: `~/.config/dev-proxy/rootCert.pfx`
+   - Location: `~/Library/Application Support/dev-proxy/rootCert.pfx`
    ::: zone-end
    ::: zone pivot="client-operating-system-linux"
    - Location: `~/.config/dev-proxy/rootCert.pfx`
