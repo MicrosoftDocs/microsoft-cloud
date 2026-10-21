@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Integrate Dev Proxy in CI/CD -->
@@ -155,10 +155,10 @@ If you want to analyze API requests issued by your app, you can send a `POST` re
 curl -X POST http://localhost:8897/proxy/record -H "Content-Type: application/json" -d '{"recording": true}'
 ```
 
-To stop Dev Proxy, you can send a `POST` request to the `/stop` endpoint:
+To stop Dev Proxy, you can send a `POST` request to the `/proxy/stopproxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/stop
+curl -X POST http://localhost:8897/proxy/stopproxy
 ```
 
 After you stop the Dev Proxy process, it can take a moment for it to fully close. To ensure that Dev Proxy finished, wait for the process to close, for example:

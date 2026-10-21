@@ -3,7 +3,7 @@ title: Use Dev Proxy with Azure Pipelines
 description: How to use Dev Proxy with Azure Pipelines.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Use Dev Proxy in Azure Pipelines -->
@@ -144,7 +144,7 @@ steps:
   displayName: 'Send request'
 
 - script: |
-    curl -X POST http://localhost:8897/proxy/stop
+    curl -X POST http://localhost:8897/proxy/stopproxy
   displayName: 'Stop Dev Proxy'
 
 - script: |
