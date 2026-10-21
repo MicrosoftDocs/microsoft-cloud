@@ -79,11 +79,17 @@ For Dev Proxy to intercept HTTPS traffic, applications in WSL need to trust the 
 
 #### Option B: Use the Dev Proxy API
 
-While Dev Proxy is running on Windows, download and install the certificate:
+The Dev Proxy API requires a bearer token. While Dev Proxy is running on Windows, get the token by running the [api token](../technical-reference/api-token.md) command in a Windows terminal:
+
+```console
+devproxy api token
+```
+
+Then, in WSL, download and install the certificate. Replace `<token>` with the token that you retrieved:
 
 ```bash
 # Download the certificate from Dev Proxy API
-curl -o dev-proxy-ca.crt http://127.0.0.1:8897/proxy/rootCertificate?format=crt
+curl -H "Authorization: Bearer <token>" -o dev-proxy-ca.crt "http://127.0.0.1:8897/proxy/rootCertificate?format=crt"
 # Install the certificate
 sudo cp dev-proxy-ca.crt /usr/local/share/ca-certificates/
 # Update certificates

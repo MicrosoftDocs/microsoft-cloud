@@ -149,16 +149,22 @@ export https_proxy=http://127.0.0.1:8000
 
 When you run Dev Proxy in a CI/CD pipeline, you can't control it interactively. Instead, you can control it by sending requests to the [Dev Proxy API](../technical-reference/proxy-api.md).
 
+All Dev Proxy API requests require a bearer token in the `Authorization` header. When the `CI` environment variable is set, Dev Proxy doesn't print the token at startup, so retrieve it using the [api token](../technical-reference/api-token.md) command:
+
+```bash
+TOKEN=$(./devproxy/devproxy api token)
+```
+
 If you want to analyze API requests issued by your app, you can send a `POST` request to the `/proxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": true}'
 ```
 
 To stop Dev Proxy, you can send a `POST` request to the `/proxy/stopproxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/stopproxy
+curl -X POST http://localhost:8897/proxy/stopproxy -H "Authorization: Bearer $TOKEN"
 ```
 
 After you stop the Dev Proxy process, it can take a moment for it to fully close. To ensure that Dev Proxy finished, wait for the process to close, for example:

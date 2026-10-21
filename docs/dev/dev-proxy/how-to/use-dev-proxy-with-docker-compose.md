@@ -252,14 +252,17 @@ docker attach <container-name>
 
 #### Using the Dev Proxy API
 
-The Dev Proxy API is exposed on port 8897. You can use it to control Dev Proxy programmatically:
+The Dev Proxy API is exposed on port 8897. You can use it to control Dev Proxy programmatically. All API requests require a bearer token in the `Authorization` header. Retrieve the token from the Dev Proxy container using the [api token](../technical-reference/api-token.md) command:
 
 ```console
+# Get the API token
+TOKEN=$(docker compose exec -T dev-proxy devproxy api token)
+
 # Start recording
-curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": true}'
 
 # Stop recording
-curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": false}'
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": false}'
 ```
 
 For more information, see [Dev Proxy API](../technical-reference/proxy-api.md).
