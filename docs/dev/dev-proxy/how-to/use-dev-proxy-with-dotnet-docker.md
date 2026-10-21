@@ -3,7 +3,7 @@ title: Use Dev Proxy with .NET applications running in Docker
 description: How to use Dev Proxy with .NET applications running in Docker containers
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 zone_pivot_groups: client-operating-system
 ---
 
@@ -59,7 +59,7 @@ docker run --rm -it -v $(pwd):/usr/src/app -e HTTPS_PROXY=http://192.0.2.13:8000
 
 ## Handle SSL certificates
 
-Dev Proxy uses its own SSL certificate to inspect HTTPS traffic intercepted from your application. When you install Dev Proxy on your computer, it generates a self-signed SSL certificate and adds it to the list of trusted certificates. However, when running your application in a Docker container, the container doesn't have access to the SSL certificate installed on your computer. There are two ways for you to handle SSL certificates when using Dev Proxy with .NET applications running in Docker containers.
+Dev Proxy uses its own SSL certificate to inspect HTTPS traffic intercepted from your application. When you first start Dev Proxy, it generates a self-signed SSL certificate and, with your consent, adds it to the list of trusted certificates. However, when running your application in a Docker container, the container doesn't have access to the SSL certificate installed on your computer. There are two ways for you to handle SSL certificates when using Dev Proxy with .NET applications running in Docker containers.
 
 ### Configure Dev Proxy certificate in your Docker container
 
