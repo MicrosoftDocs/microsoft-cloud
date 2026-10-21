@@ -67,6 +67,6 @@ The following endpoints are available:
 | `POST` | `/proxy/stopProxy` | Stop the proxy |
 | `POST` | `/proxy/jwtToken` | Create a JSON Web Token (JWT) |
 | `GET` | `/proxy/rootCertificate` | Get the root certificate |
-| `GET` | `/proxy/logs` | Get recorded request logs |
+| `GET` | `/proxy/logs` | Get Dev Proxy logs (detached mode only) |
 
 For the full API reference, see [Proxy API](./proxy-api.md).
