@@ -25,13 +25,13 @@ When Dev Proxy starts, it loads plugins enabled in its configuration file. Depen
 
 ## Intercepting plugins
 
-When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch` array, it invokes each intercepting plugin in the order they're listed in the configuration file. Each intercepting plugin inherits from the [`BasePlugin`](https://github.com/dotnet/dev-proxy/blob/main/DevProxy.Abstractions/Plugins/BasePlugin.cs) class, and can subscribe to the following events:
+When Dev Proxy intercepts a request matching one of the URLs in the `urlsToWatch` array, it invokes each intercepting plugin in the order they're listed in the configuration file. Each intercepting plugin inherits from the [`BasePlugin`](https://github.com/dotnet/dev-proxy/blob/main/DevProxy.Abstractions/Plugins/BasePlugin.cs) class, and can override the following methods:
 
-- `BeforeRequest` - raised when Dev Proxy intercepts a request
-- `BeforeResponse` - raised after Dev Proxy receives a response from the server
-- `AfterResponse` - raised after Dev Proxy sends the response to the client
+- `BeforeRequestAsync` - called when Dev Proxy intercepts a request
+- `BeforeResponseAsync` - called after Dev Proxy receives a response from the server
+- `AfterResponseAsync` - called after Dev Proxy sends the response to the client
 
-For each of these events, plugins can define an event handler. In the handler, the plugin can analyze the request and response, and modify it if needed. It can also output guidance messages. To see what's possible, see the [code of plugins provided with Dev Proxy](https://github.com/dotnet/dev-proxy/tree/main/dev-proxy-plugins).
+In each method override, the plugin can analyze the request and response, and modify it if needed. It can also output guidance messages. To see what's possible, see the [code of plugins provided with Dev Proxy](https://github.com/dotnet/dev-proxy/tree/v3.3.1/DevProxy.Plugins).
 
 ## STDIO plugins
 
@@ -53,9 +53,9 @@ Plugins can modify, consume, or mock messages by setting `ResponseState.HasBeenS
 
 ## Reporting plugins
 
-Dev Proxy allows you to record API requests and responses. You typically use recording to report on API usage or analyze multiple API requests. Reporting plugins inherit from the `BaseReportingPlugin` class, and register an event handler with the `AfterRecordingStop` event.
+Dev Proxy allows you to record API requests and responses. You typically use recording to report on API usage or analyze multiple API requests. Reporting plugins inherit from the `BaseReportingPlugin` class, and override the `AfterRecordingStopAsync` method.
 
-When you stop recording, Dev Proxy raises the `AfterRecordingStop` event, passing the list of recorded requests and responses as an argument to the registered event handlers. Reporting plugins can then analyze the recorded data and generate a report object. A report object is an arbitrary object defined by the reporting plugin. Reporting plugins store the reports by calling the [`StoreReport`](https://github.com/dotnet/dev-proxy/blob/ecb4e1d56e327204f359152f7aff1057663edfe6/dev-proxy-abstractions/BaseReportingPlugin.cs#L15) method.
+When you stop recording, Dev Proxy calls the `AfterRecordingStopAsync` method of each plugin, passing the list of recorded requests and responses as an argument. Reporting plugins can then analyze the recorded data and generate a report object. A report object is an arbitrary object defined by the reporting plugin. Reporting plugins store the reports by calling the [`StoreReport`](https://github.com/dotnet/dev-proxy/blob/ecb4e1d56e327204f359152f7aff1057663edfe6/dev-proxy-abstractions/BaseReportingPlugin.cs#L15) method.
 
 > [!IMPORTANT]
 > Reporting plugins generate report objects, which Dev Proxy stores in memory. To convert these report objects into user-readable reports, you must enable one or more reporters in the Dev Proxy configuration file.
