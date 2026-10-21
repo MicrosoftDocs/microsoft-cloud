@@ -127,7 +127,7 @@ log_file=devproxy.log
 # wait for init
 echo "Waiting for Dev Proxy to start..."
 while true; do
-  if grep -q "Listening on 127.0.0.1:8000" $log_file; then
+  if grep -q "listening on 127.0.0.1:8000" $log_file; then
     break
   fi
   sleep 1
@@ -193,7 +193,7 @@ echo "Starting Dev Proxy"
 
 echo "Waiting for Dev Proxy to start..."
 while true; do
-  if grep -q "Listening on 127.0.0.1:8000" $log_file; then
+  if grep -q "listening on 127.0.0.1:8000" $log_file; then
     break
   fi
   sleep 1

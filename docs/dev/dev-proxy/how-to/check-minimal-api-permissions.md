@@ -3,7 +3,7 @@ title: How to check if my app is calling APIs with minimal permissions
 description: How to check if my app is calling APIs with minimal permissions
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Verify API calls use minimal permissions via Azure API Center -->
@@ -146,7 +146,7 @@ When Dev Proxy starts, it checks that it can connect to your Azure subscription.
 
 ```text
  info    Plugin ApiCenterMinimalPermissionsPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
@@ -169,7 +169,7 @@ Dev Proxy intercepts the API requests and stores information about them in memor
 
 ```text
  info    Plugin ApiCenterMinimalPermissionsPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
@@ -186,7 +186,7 @@ Stop the recording by pressing <kbd>s</kbd>. Dev Proxy connects to the API Cente
 
 ```text
  info    Plugin ApiCenterMinimalPermissionsPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
