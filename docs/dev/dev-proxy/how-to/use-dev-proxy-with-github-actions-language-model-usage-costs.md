@@ -3,7 +3,7 @@ title: How to use Dev Proxy to track language model usage and costs with GitHub 
 description: How to use Dev Proxy Actions to track language model usage and costs with GitHub Action workflows.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Track LLM costs in GitHub Actions -->
@@ -22,9 +22,6 @@ ms.date: 09/23/2026
 > **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md), GitHub repository
 
 To integrate Dev Proxy into your GitHub Actions workflows, use [Dev Proxy Actions](https://github.com/marketplace/actions/dev-proxy-actions).
-
-> [!NOTE]
-> This functionality is currently in preview and only available in the latest beta version of Dev Proxy.
 
 ## Configure Dev Proxy for tracking language model usage
 

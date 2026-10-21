@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Integrate Dev Proxy in CI/CD -->
@@ -127,7 +127,7 @@ log_file=devproxy.log
 # wait for init
 echo "Waiting for Dev Proxy to start..."
 while true; do
-  if grep -q "Listening on 127.0.0.1:8000" $log_file; then
+  if grep -q "listening on 127.0.0.1:8000" $log_file; then
     break
   fi
   sleep 1
@@ -149,16 +149,22 @@ export https_proxy=http://127.0.0.1:8000
 
 When you run Dev Proxy in a CI/CD pipeline, you can't control it interactively. Instead, you can control it by sending requests to the [Dev Proxy API](../technical-reference/proxy-api.md).
 
-If you want to analyze API requests issued by your app, you can send a `POST` request to the `/record` endpoint:
+All Dev Proxy API requests require a bearer token in the `Authorization` header. When the `CI` environment variable is set, Dev Proxy doesn't print the token at startup, so retrieve it using the [api token](../technical-reference/api-token.md) command:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/record -H "Content-Type: application/json" -d '{"recording": true}'
+TOKEN=$(./devproxy/devproxy api token)
 ```
 
-To stop Dev Proxy, you can send a `POST` request to the `/stop` endpoint:
+If you want to analyze API requests issued by your app, you can send a `POST` request to the `/proxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/stop
+curl -X POST http://localhost:8897/proxy -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"recording": true}'
+```
+
+To stop Dev Proxy, you can send a `POST` request to the `/proxy/stopproxy` endpoint:
+
+```bash
+curl -X POST http://localhost:8897/proxy/stopproxy -H "Authorization: Bearer $TOKEN"
 ```
 
 After you stop the Dev Proxy process, it can take a moment for it to fully close. To ensure that Dev Proxy finished, wait for the process to close, for example:
@@ -193,7 +199,7 @@ echo "Starting Dev Proxy"
 
 echo "Waiting for Dev Proxy to start..."
 while true; do
-  if grep -q "Listening on 127.0.0.1:8000" $log_file; then
+  if grep -q "listening on 127.0.0.1:8000" $log_file; then
     break
   fi
   sleep 1

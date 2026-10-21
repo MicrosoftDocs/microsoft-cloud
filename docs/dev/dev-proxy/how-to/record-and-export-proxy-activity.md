@@ -3,7 +3,7 @@ title: Record and export proxy activity
 description: How to record and export proxy activity
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Record and export Dev Proxy activity to a report file -->
@@ -57,7 +57,7 @@ There are two ways to start recording:
 - **Record immediately**. Start proxy with `--record` option, for example, `devproxy --record`.
 - **Record adhoc**. Press <kbd>R</kbd> while proxy is running.
 
-When recording is enabled, `? Recording...` is shown in the proxy output.
+When recording is enabled, `◉ Recording...` is shown in the proxy output.
 
 To generate a report from the recorded activity, stop recording.
 

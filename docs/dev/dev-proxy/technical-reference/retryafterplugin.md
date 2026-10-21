@@ -3,7 +3,7 @@ title: RetryAfterPlugin
 description: RetryAfterPlugin reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate Retry-After header after throttling -->
@@ -13,7 +13,7 @@ ms.date: 09/23/2026
 
 # RetryAfterPlugin
 
-Simulates the `Retry-After` header sent by an API after throttling a request. This plugin also shows a warning when proxy detects a subsequent request to the same URL before the `Retry-After` time elapses.
+Simulates the `Retry-After` header sent by an API after throttling a request. When Dev Proxy detects a subsequent request to the same URL before the `Retry-After` time elapses, the plugin reports it and fails the request with another `429 Too Many Requests` response with a `Retry-After` header.
 
 :::image type="content" source="../media/retry-after-plugin.png" alt-text="Screenshot of a command prompt with Dev Proxy forcefully failing a request that's been issued before the retry-after period." lightbox="../media/retry-after-plugin.png":::
 

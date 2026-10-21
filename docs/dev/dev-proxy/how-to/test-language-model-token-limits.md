@@ -3,7 +3,7 @@ title: Test language model token limits
 description: How to test your app with language model token rate limiting
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Test LLM token rate limits -->
@@ -125,15 +125,14 @@ Create the custom response file with your desired error format:
       "type": "quota_exceeded",
       "code": "TOKENS_EXHAUSTED",
       "details": {
-        "quota_type": "tokens",
-        "retry_after_seconds": "@dynamic"
+        "quota_type": "tokens"
       }
     }
   }
 }
 ```
 
-The `@dynamic` value for retry-after headers automatically calculates the seconds remaining until the token limits reset.
+The `@dynamic` value for retry-after headers automatically calculates the seconds remaining until the token limits reset. Dev Proxy resolves `@dynamic` only in the retry-after header and returns the response body as-is.
 
 ## Test different scenarios
 

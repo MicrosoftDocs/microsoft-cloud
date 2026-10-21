@@ -3,7 +3,7 @@ title: api show
 description: api show command reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: reference
 ---
 
@@ -62,11 +62,11 @@ The following endpoints are available:
 | Method | Endpoint | Description |
 | ------ | -------- | ----------- |
 | `GET` | `/proxy` | Get proxy status |
-| `POST` | `/proxy` | Start or stop the proxy |
+| `POST` | `/proxy` | Update proxy status (for example, start or stop recording) |
 | `POST` | `/proxy/mockRequest` | Send a mock request |
 | `POST` | `/proxy/stopProxy` | Stop the proxy |
 | `POST` | `/proxy/jwtToken` | Create a JSON Web Token (JWT) |
 | `GET` | `/proxy/rootCertificate` | Get the root certificate |
-| `GET` | `/proxy/logs` | Get recorded request logs |
+| `GET` | `/proxy/logs` | Get Dev Proxy logs (detached mode only) |
 
 For the full API reference, see [Proxy API](./proxy-api.md).

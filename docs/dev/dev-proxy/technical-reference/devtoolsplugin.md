@@ -3,7 +3,7 @@ title: DevToolsPlugin
 description: DevToolsPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: View Dev Proxy activity in Chrome DevTools -->
@@ -66,7 +66,7 @@ To fix this issue:
 
 ## STDIO support
 
-When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can inspect STDIN/STDOUT/STDERR communication in Chrome DevTools:
+When using the DevToolsPlugin with the [`stdio` command](stdio.md), you can inspect STDIN/STDOUT/STDERR communication in Chrome DevTools:
 
 - Messages appear with `stdio://command-name` URLs
 - Requests show as `STDIN` method
@@ -97,7 +97,7 @@ When using the DevToolsPlugin with the [`STDIO` command](STDIO.md), you can insp
 Then run:
 
 ```console
-devproxy STDIO npx -y @modelcontextprotocol/server-filesystem
+devproxy stdio npx -y @modelcontextprotocol/server-filesystem
 ```
 
 ## Next step

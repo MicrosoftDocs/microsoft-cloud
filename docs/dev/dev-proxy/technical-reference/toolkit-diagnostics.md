@@ -3,7 +3,7 @@ title: Dev Proxy Toolkit diagnostics
 description: Reference for diagnostic codes shown by the Dev Proxy Toolkit VS Code extension
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Help users and coding agents fix Dev Proxy configuration issues identified by the VS Code extension -->
@@ -249,7 +249,7 @@ A plugin can use a local language model but `languageModel.enabled` isn't `true`
 
 ### Cause
 
-Plugins like `OpenAIMockResponsePlugin`, `OpenApiSpecGeneratorPlugin`, and `TypeSpecGeneratorPlugin` can use a local language model to improve their output. By connecting Dev Proxy to a local language model, you can benefit from the improved functionality without incurring extra costs.
+`OpenAIMockResponsePlugin` requires a local language model. If you don't enable a local language model, Dev Proxy disables the plugin. Plugins like `OpenApiSpecGeneratorPlugin` and `TypeSpecGeneratorPlugin` can use a local language model to improve their output. By connecting Dev Proxy to a local language model, you can benefit from the improved functionality without incurring extra costs.
 
 ### Resolution
 
@@ -262,8 +262,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
     {
       "name": "OpenAIMockResponsePlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "openAIMockResponsePlugin"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [
@@ -271,8 +270,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
   ],
   "languageModel": {
     "enabled": true
-  },
-  "openAIMockResponsePlugin": {}
+  }
 }
 ```
 

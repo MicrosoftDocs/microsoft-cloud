@@ -3,7 +3,7 @@ title: Test my app with language model failures
 description: How to test your app with language model failures
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Test LLM failures like hallucinations -->
@@ -206,7 +206,7 @@ Test how your app handles vague or overly complex responses:
 }
 ```
 
-Start Dev Proxy with your configuration file and use your app to see how it handles the simulated language model failures. The plugin intercepts responses from language model APIs and replaces them with synthetic failure responses that exhibit the configured failure behaviors.
+Start Dev Proxy with your configuration file and use your app to see how it handles the simulated language model failures. The plugin intercepts requests to language model APIs and adds a failure-simulating instruction to them, so the language model returns a response that shows the configured failure behavior.
 
 ## Create custom failure scenarios
 

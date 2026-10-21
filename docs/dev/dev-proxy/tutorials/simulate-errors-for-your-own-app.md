@@ -3,7 +3,7 @@ title: Simulate random errors for your own application
 description: Learn how to use Dev Proxy to simulate random errors for your own application.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 04/22/2026
+ms.date: 10/21/2026
 ---
 
 # Simulate random errors for your own application
@@ -58,13 +58,10 @@ The `--urls-to-watch` parameter tells Dev Proxy, which requests to intercept. Th
 Start using your application as you normally would. Dev Proxy intercepts all requests to the URLs that you specified. In the command prompt, you see messages about the requests that Dev Proxy intercepts.
 
 ```text
-```text
- request     GET https://api.contoso.com/v1/customers
-     api   ╭ Passed through
-           ╰ GET https://api.contoso.com/v1/customers
- request     GET https://api.contoso.com/v1/customers
-   chaos   ╭ 403 Forbidden
-           ╰ GET https://api.contoso.com/v1/customers
+ req   ╭ GET https://api.contoso.com/v1/customers
+ pass  ╰ Passed through
+ req   ╭ GET https://api.contoso.com/v1/customers
+ oops  ╰ 403 Forbidden
 ```
 
 > [!IMPORTANT]

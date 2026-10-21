@@ -3,7 +3,7 @@ title: How to check if my app is using production-level APIs
 description: How to check if my app is using production-level APIs
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Ensure app uses production-ready APIs -->
@@ -139,7 +139,7 @@ When Dev Proxy starts, it checks that it can connect to your Azure subscription.
 
 ```text
  info    Plugin ApiCenterProductionVersionPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
@@ -153,7 +153,7 @@ Use your app as you would normally do. Dev Proxy intercepts the API requests and
 
 ```text
  info    Plugin ApiCenterProductionVersionPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
@@ -173,7 +173,7 @@ Stop the recording by pressing <kbd>s</kbd>. Dev Proxy connects to the API Cente
 
 ```text
  info    Plugin ApiCenterProductionVersionPlugin connecting to Azure...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
