@@ -144,7 +144,7 @@ steps:
   displayName: 'Send request'
 
 - script: |
-    curl -X POST http://localhost:8897/proxy/stop
+    curl -X POST http://localhost:8897/proxy/stopproxy
   displayName: 'Stop Dev Proxy'
 
 - script: |

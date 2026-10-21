@@ -155,10 +155,10 @@ If you want to analyze API requests issued by your app, you can send a `POST` re
 curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
 ```
 
-To stop Dev Proxy, you can send a `POST` request to the `/stop` endpoint:
+To stop Dev Proxy, you can send a `POST` request to the `/proxy/stopproxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/stop
+curl -X POST http://localhost:8897/proxy/stopproxy
 ```
 
 After you stop the Dev Proxy process, it can take a moment for it to fully close. To ensure that Dev Proxy finished, wait for the process to close, for example:
