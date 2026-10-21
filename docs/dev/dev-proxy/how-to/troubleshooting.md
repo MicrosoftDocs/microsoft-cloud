@@ -3,7 +3,7 @@ title: Troubleshoot Dev Proxy
 description: Solutions for common Dev Proxy issues
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -60,7 +60,7 @@ Dev Proxy must be registered as the system proxy to intercept requests automatic
 
 **If Dev Proxy isn't registered as system proxy:**
 
-Check your Dev Proxy configuration. Run `devproxy config` to open the config file and verify it doesn't contain:
+Check your Dev Proxy configuration. Run `devproxy config open` to open the config file and verify it doesn't contain:
 
 ```json
 {
