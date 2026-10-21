@@ -3,7 +3,7 @@ title: Simulate Azure OpenAI API
 description: How to simulate Azure OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate Azure OpenAI using local LLM -->
@@ -108,7 +108,7 @@ Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/confi
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy

@@ -3,7 +3,7 @@ title: Set up Dev Proxy
 description: Learn how to install and run Dev Proxy.
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: get-started
 zone_pivot_groups: client-operating-system
 #Customer intent: As a developer, I want to test the resilience of my application so that I can understand how my application reacts to cloud API failures.
@@ -175,7 +175,7 @@ The command prompt displays the following output:
 ```text
  info    8 error responses loaded from devproxy-errors.json
  info    Dev Proxy API listening on http://127.0.0.1:8897...
- info    Dev Proxy Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 API URL:   http://127.0.0.1:8897
 API token: <token>

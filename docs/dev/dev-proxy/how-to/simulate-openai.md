@@ -3,7 +3,7 @@ title: Use a local model instead of OpenAI while you develop
 description: Answer your app's OpenAI calls with a local model like Ollama to develop without OpenAI costs. Your app keeps calling api.openai.com, unchanged.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate OpenAI using local LLM -->
@@ -108,7 +108,7 @@ Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/confi
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...
- info    Listening on 127.0.0.1:8000...
+ info    Dev Proxy listening on 127.0.0.1:8000...
 
 Hotkeys: issue (w)eb request, (r)ecord, (s)top recording, (c)lear screen
 Press CTRL+C to stop Dev Proxy
