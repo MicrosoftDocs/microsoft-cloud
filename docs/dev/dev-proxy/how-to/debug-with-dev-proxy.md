@@ -3,7 +3,7 @@ title: Debug with Dev Proxy
 description: Learn how to debug your application while using Dev Proxy to simulate API errors
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
@@ -67,16 +67,17 @@ To debug a Node.js application with Dev Proxy, configure the `launch.json` file 
 ```
 
 > [!IMPORTANT]
-> The `NODE_TLS_REJECT_UNAUTHORIZED=0` setting disables TLS/SSL certificate verification. Only use this setting during development. For a more secure approach, use `NODE_EXTRA_CA_CERTS` to trust the Dev Proxy certificate directly:
+> The `NODE_TLS_REJECT_UNAUTHORIZED=0` setting disables TLS/SSL certificate verification. Only use this setting during development. For a more secure approach, use `NODE_EXTRA_CA_CERTS` to trust the Dev Proxy certificate directly. Dev Proxy stores its root certificate as `rootCert.pfx`, but Node.js requires a PEM file. While Dev Proxy is running, get the API token using [`devproxy api token`](../technical-reference/api-token.md), and download the certificate in PEM format to your workspace folder:
 >
-> **macOS/Linux:**
-> ```json
-> "NODE_EXTRA_CA_CERTS": "${env:HOME}/.devproxy/rootCert.pem"
+> ```console
+> TOKEN=$(devproxy api token)
+> curl -H "Authorization: Bearer $TOKEN" -o dev-proxy-ca.pem "http://127.0.0.1:8897/proxy/rootCertificate?format=crt"
 > ```
 >
-> **Windows:**
+> Then, point `NODE_EXTRA_CA_CERTS` to the downloaded file:
+>
 > ```json
-> "NODE_EXTRA_CA_CERTS": "${env:USERPROFILE}\\.devproxy\\rootCert.pem"
+> "NODE_EXTRA_CA_CERTS": "${workspaceFolder}/dev-proxy-ca.pem"
 > ```
 
 The `GLOBAL_AGENT_HTTP_PROXY` variable is used by the [`global-agent`](https://www.npmjs.com/package/global-agent) package, which provides proxy support for many Node.js HTTP libraries. For more information on configuring different HTTP libraries, see [Use Dev Proxy with Node.js applications](./use-dev-proxy-with-nodejs.md).
