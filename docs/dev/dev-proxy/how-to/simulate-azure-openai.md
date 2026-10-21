@@ -3,7 +3,7 @@ title: Simulate Azure OpenAI API
 description: How to simulate Azure OpenAI API
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate Azure OpenAI using local LLM -->
@@ -104,7 +104,7 @@ The complete configuration file looks like this.
 
 Assuming the default configuration, start Ollama with the llama3.2 language model. In the command line, run `ollama run llama3.2`.
 
-Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/config/simulate-azure-openai/simulate-azure-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate Azure OpenAI API responses.
+Next, start Dev Proxy. If you use the preset, run `devproxy --config-file "~dataFolder/configs/simulate-azure-openai/.devproxy/devproxyrc.json"`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate Azure OpenAI API responses.
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...

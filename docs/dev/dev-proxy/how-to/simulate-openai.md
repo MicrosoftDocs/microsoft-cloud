@@ -3,7 +3,7 @@ title: Use a local model instead of OpenAI while you develop
 description: Answer your app's OpenAI calls with a local model like Ollama to develop without OpenAI costs. Your app keeps calling api.openai.com, unchanged.
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 10/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Simulate OpenAI using local LLM -->
@@ -104,7 +104,7 @@ The complete configuration file looks like this.
 
 Assuming the default configuration, start Ollama with the llama3.2 language model. In the command line, run `ollama run llama3.2`.
 
-Next, start Dev Proxy. If you use the preset, run `devproxy -c "~appFolder/config/simulate-openai/simulate-openai.json`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate OpenAI API responses.
+Next, start Dev Proxy. If you use the preset, run `devproxy --config-file "~dataFolder/configs/simulate-openai/.devproxy/devproxyrc.json"`. If you use a custom configuration file named `devproxyrc.json`, stored in the current working directory, run `devproxy`. Dev Proxy checks that it can access the language model on Ollama and confirms that it's ready to simulate OpenAI API responses.
 
 ```text
  info    OpenAIMockResponsePlugin: Checking language model availability...
