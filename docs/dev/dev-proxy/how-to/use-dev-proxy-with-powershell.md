@@ -3,12 +3,12 @@ title: Use Dev Proxy with PowerShell
 description: Learn how to use Dev Proxy with PowerShell on Windows, macOS, and Linux
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 02/27/2026
+ms.date: 10/21/2026
 ms.topic: how-to
 ---
 
 <!-- INTENT: Use Dev Proxy with PowerShell on all operating systems -->
-<!-- SOLUTION: Restart PowerShell or set proxy manually (Windows); no extra steps needed (macOS/Linux) -->
+<!-- SOLUTION: Restart PowerShell or set proxy manually (Windows); set proxy environment variables (Linux); no extra steps needed (macOS) -->
 <!-- RESULT: PowerShell HTTP requests routed through Dev Proxy -->
 <!-- JOB: intercept-requests -->
 <!-- TIME: 5 minutes -->
@@ -20,11 +20,27 @@ ms.topic: how-to
 > **Time:** 5 minutes  
 > **Prerequisites:** [Set up Dev Proxy](../get-started/set-up.md)
 
-Dev Proxy works with PowerShell on all operating systems. On macOS and Linux, PowerShell correctly detects system proxy changes and no extra configuration is needed. On Windows, PowerShell caches proxy settings, which requires extra steps.
+Dev Proxy works with PowerShell on all operating systems. On macOS, PowerShell correctly detects system proxy changes and no extra configuration is needed. On Linux, Dev Proxy doesn't configure the system proxy, so you need to set the proxy environment variables. On Windows, PowerShell caches proxy settings, which requires extra steps.
 
-## macOS and Linux
+## macOS
 
-On macOS and Linux, PowerShell detects system proxy changes automatically. Start Dev Proxy and use PowerShell as you normally would—requests are intercepted without any extra configuration.
+On macOS, PowerShell detects system proxy changes automatically. Start Dev Proxy and use PowerShell as you normally would—requests are intercepted without any extra configuration.
+
+## Linux
+
+On Linux, Dev Proxy doesn't register itself as the system proxy, and PowerShell reads proxy settings only from environment variables. After you start Dev Proxy, set the `HTTPS_PROXY` and `HTTP_PROXY` environment variables in your PowerShell session:
+
+```powershell
+$env:HTTPS_PROXY = "http://127.0.0.1:8000"
+$env:HTTP_PROXY = "http://127.0.0.1:8000"
+```
+
+When you're done using Dev Proxy, clear the environment variables:
+
+```powershell
+$env:HTTPS_PROXY = $null
+$env:HTTP_PROXY = $null
+```
 
 ## Windows
 

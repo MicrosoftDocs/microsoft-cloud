@@ -150,11 +150,11 @@ Use the `global-agent` package or configure your HTTP library to use the proxy. 
 
 ### Are you using Dev Proxy with PowerShell on Windows?
 
-PowerShell doesn't automatically use system proxy settings for web requests made with `Invoke-WebRequest` or `Invoke-RestMethod`.
+On Windows, PowerShell reads the system proxy settings when the session starts and caches them. If you open a PowerShell session before you start Dev Proxy, or keep using it after you stop Dev Proxy, web requests made with `Invoke-WebRequest` or `Invoke-RestMethod` use stale proxy settings. For more information, see [Use Dev Proxy with PowerShell](use-dev-proxy-with-powershell.md).
 
 **Solution:**
 
-Configure PowerShell to use the proxy by setting the `-Proxy` parameter:
+Restart your PowerShell session after you start or stop Dev Proxy, or set the proxy explicitly. To configure PowerShell to use the proxy, set the `-Proxy` parameter:
 
 ```powershell
 Invoke-WebRequest -Uri "https://api.example.com/data" -Proxy "http://127.0.0.1:8000"
