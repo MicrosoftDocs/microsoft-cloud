@@ -49,7 +49,8 @@ The following code snippet shows the default Dev Proxy configuration file:
   "logLevel": "information",
   "newVersionNotification": "stable",
   "showSkipMessages": true,
-  "showTimestamps": true
+  "showTimestamps": true,
+  "validateSchemas": true
 }
 ```
 
