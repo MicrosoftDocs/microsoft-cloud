@@ -3,7 +3,7 @@ title: jwt create
 description: jwt create command reference
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 01/03/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Reference for devproxy jwt create command -->
@@ -64,4 +64,4 @@ None
 |`--log-level <loglevel>`|Level of messages to log|`trace`, `debug`, `information`, `warning`, `error`| `information`|
 
 > [!NOTE]
-> Dev Proxy automatically adds registered claims (for example, `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) to the token. If you specify any of these claims using the `--claims` option, it takes precedence over the value specified in the dedicated option.
+> Dev Proxy automatically adds registered claims (for example, `iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) to the token. If you specify any of these claims, or `scp` or `roles`, using the `--claims` option, Dev Proxy ignores them. Use the dedicated options instead.
