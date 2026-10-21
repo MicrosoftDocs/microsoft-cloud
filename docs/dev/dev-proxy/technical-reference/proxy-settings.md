@@ -38,8 +38,8 @@ The following table describes the settings.
 |`timeout`|Automatically stop proxy after a period of inactivity|`-t, --timeout <seconds>`|integer|n/a|
 |`urlsToWatch`|List of URLs that proxy should intercept|`-u, --urls-to-watch <urlsToWatch>`|Absolute URL (can contain wildcards) for example, `"https://api.contoso.com/*"`|See [devproxyrc](./devproxyrc.md) file|
 |`validateSchemas`|Whether to validate configuration against the specified schema. Applies to JSON configuration files only.|n/a|`true`, `false`|`true`|
-|`watchPids`|The IDs of processes to watch for requests|`--watch-pids <pids>`|integer|n/a|
-|`watchProcessNames`|The names of processes to watch for requests|`--watch-process-names <processNames>`|string|n/a|
+|`watchPids`|The IDs of processes to watch for requests|`--watch-pids <pids>`|array of integers; on the command line, one or more space-separated integers|n/a|
+|`watchProcessNames`|The names of processes to watch for requests|`--watch-process-names <processNames>`|array of strings; on the command line, one or more space-separated names|n/a|
 
 > [!NOTE]
 > The failure rate isn't a proxy setting. To configure it, set the `rate` property in the configuration section of the [GenericRandomErrorPlugin](./genericrandomerrorplugin.md) or [GraphRandomErrorPlugin](./graphrandomerrorplugin.md), or use the `-f, --failure-rate` command-line option when one of these plugins is loaded.
