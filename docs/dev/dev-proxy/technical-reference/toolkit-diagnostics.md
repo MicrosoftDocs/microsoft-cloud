@@ -3,7 +3,7 @@ title: Dev Proxy Toolkit diagnostics
 description: Reference for diagnostic codes shown by the Dev Proxy Toolkit VS Code extension
 author: garrytrinder
 ms.author: garrytrinder
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Help users and coding agents fix Dev Proxy configuration issues identified by the VS Code extension -->
@@ -262,8 +262,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
     {
       "name": "OpenAIMockResponsePlugin",
       "enabled": true,
-      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll",
-      "configSection": "openAIMockResponsePlugin"
+      "pluginPath": "~appFolder/plugins/DevProxy.Plugins.dll"
     }
   ],
   "urlsToWatch": [
@@ -271,8 +270,7 @@ Add or update the `languageModel` configuration. Use the quick fix to add or upd
   ],
   "languageModel": {
     "enabled": true
-  },
-  "openAIMockResponsePlugin": {}
+  }
 }
 ```
 
