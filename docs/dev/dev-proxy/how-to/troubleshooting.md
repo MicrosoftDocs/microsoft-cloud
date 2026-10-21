@@ -375,7 +375,7 @@ See [Why do I keep getting 429 responses?](why-do-i-keep-getting-429-responses.m
 If you can't find a solution:
 
 1. **Enable debug logging**: Run `devproxy --log-level debug` for detailed output
-1. **Search existing issues**: [Dev Proxy GitHub issues](https://github.com/microsoft/dev-proxy/issues)
+1. **Search existing issues**: [Dev Proxy GitHub issues](https://github.com/dotnet/dev-proxy/issues)
 1. **Ask for help**: [Get help and support](get-help-and-support.md)
 
 ## See also
