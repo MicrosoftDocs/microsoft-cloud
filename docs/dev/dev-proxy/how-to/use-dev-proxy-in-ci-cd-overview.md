@@ -3,7 +3,7 @@ title: Use Dev Proxy in CI/CD scenarios
 description: How to use Dev Proxy in continuous integration and continuous deployment (CI/CD) scenarios
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 03/26/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Integrate Dev Proxy in CI/CD -->
@@ -149,10 +149,10 @@ export https_proxy=http://127.0.0.1:8000
 
 When you run Dev Proxy in a CI/CD pipeline, you can't control it interactively. Instead, you can control it by sending requests to the [Dev Proxy API](../technical-reference/proxy-api.md).
 
-If you want to analyze API requests issued by your app, you can send a `POST` request to the `/record` endpoint:
+If you want to analyze API requests issued by your app, you can send a `POST` request to the `/proxy` endpoint:
 
 ```bash
-curl -X POST http://localhost:8897/proxy/record -H "Content-Type: application/json" -d '{"recording": true}'
+curl -X POST http://localhost:8897/proxy -H "Content-Type: application/json" -d '{"recording": true}'
 ```
 
 To stop Dev Proxy, you can send a `POST` request to the `/stop` endpoint:
