@@ -3,7 +3,7 @@ title: HttpFileGeneratorPlugin
 description: HttpFileGeneratorPlugin reference
 author: waldekmastykarz
 ms.author: wmastyka
-ms.date: 09/23/2026
+ms.date: 10/21/2026
 ---
 
 <!-- INTENT: Generate HTTP files from intercepted requests -->
@@ -70,7 +70,7 @@ GET https://jsonplaceholder.typicode.com/posts?api-key={{jsonplaceholder_typicod
 Host: jsonplaceholder.typicode.com
 User-Agent: curl/8.6.0
 Accept: */*
-Via: 1.1 dev-proxy/0.27.0
+Via: 1.1 dev-proxy/3.3.1
 ```
 
 The plugin creates variables for each combination of hostname and request header/query string parameter. If multiple requests use the same combination, the plugin reuses the variable.
